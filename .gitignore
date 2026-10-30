@@ -1,0 +1,27 @@
+# Scratch and test output
+.tmp/
+**/__pycache__/
+*.pyc
+*.pyo
+
+# Model-answer caches: exact prompts and answers, including verbatim source
+# excerpts. Large, and not needed to read or rerun anything (the local engine is
+# deterministic; rerunning a stage asks it again for free).
+**/cache/
+
+# Hashed releases duplicate the run folders and their caches.
+**/04_RELEASES/
+
+# Third-party source corpus: 111 published papers. Not redistributed here.
+# The manifests and provenance records that describe this corpus ARE committed.
+# (The synthetic corpora under projects/DEMO and projects/WORKED are committed.)
+projects/PTX/01_CORPUS/source-files/
+projects/PTX-LOCAL/01_CORPUS/source-files/
+
+# The previous build's 9 MB model-call/release archive.
+projects/PTX/*.zip
+
+# OS noise
+Thumbs.db
+desktop.ini
+.DS_Store

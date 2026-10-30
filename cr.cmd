@@ -1,0 +1,3 @@
+@echo off
+REM Claim Registry harness launcher for Windows.  Usage:  cr <command> ...
+python "%~dp0cr.py" %*
