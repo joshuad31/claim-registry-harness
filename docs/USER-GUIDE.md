@@ -207,7 +207,8 @@ python cr.py publish projects\PTX       # 04_RELEASES\RELEASE-…: the run, ever
 ```
 
 `verify` makes no model calls. It recomputes completeness and deletion-minimality for every set from
-the saved relations.
+the saved relations. If a run's source corpus is not present (a published clone, for example), its
+quotations are reported as unverifiable with a warning instead of being called mismatches.
 
 ## 8. What a run costs
 
