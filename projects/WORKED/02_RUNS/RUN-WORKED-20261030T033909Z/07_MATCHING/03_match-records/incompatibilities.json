@@ -1,0 +1,743 @@
+{
+  "checked_pairs": 200,
+  "candidate_witnesses": 28,
+  "definition": "SAME_QUANTITY_CONFLICT or OPPOSITE_POLARITY at the same scope, found by both independent passes",
+  "records": [
+    {
+      "a": "W-FRD-Q0001-01-Q0001",
+      "b": "W-FRD-Q0001-03-Q0001",
+      "approved": true,
+      "pass_a": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      },
+      "pass_b": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      }
+    },
+    {
+      "a": "W-FRD-Q0001-01-Q0001",
+      "b": "W-FRD-Q0002-03-Q0002",
+      "approved": true,
+      "pass_a": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      },
+      "pass_b": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      }
+    },
+    {
+      "a": "W-FRD-Q0001-01-Q0001",
+      "b": "W-FRD-Q0003-03-Q0003",
+      "approved": true,
+      "pass_a": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      },
+      "pass_b": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      }
+    },
+    {
+      "a": "W-FRD-Q0001-01-Q0001",
+      "b": "W-FRD-Q0005-01-Q0005",
+      "approved": true,
+      "pass_a": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      },
+      "pass_b": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      }
+    },
+    {
+      "a": "W-FRD-Q0001-01-Q0001",
+      "b": "W-FRD-Q0007-03-Q0007",
+      "approved": true,
+      "pass_a": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      },
+      "pass_b": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      }
+    },
+    {
+      "a": "W-FRD-Q0001-01-Q0001",
+      "b": "W-FRD-Q0008-03-Q0008",
+      "approved": true,
+      "pass_a": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      },
+      "pass_b": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      }
+    },
+    {
+      "a": "W-FRD-Q0001-01-Q0001",
+      "b": "W-FRD-Q0009-03-Q0009",
+      "approved": true,
+      "pass_a": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      },
+      "pass_b": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      }
+    },
+    {
+      "a": "W-FRD-Q0001-03-Q0001",
+      "b": "W-FRD-Q0003-04-Q0003",
+      "approved": true,
+      "pass_a": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      },
+      "pass_b": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      }
+    },
+    {
+      "a": "W-FRD-Q0001-03-Q0001",
+      "b": "W-FRD-Q0004-02-Q0004",
+      "approved": true,
+      "pass_a": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      },
+      "pass_b": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      }
+    },
+    {
+      "a": "W-FRD-Q0001-03-Q0001",
+      "b": "W-FRD-Q0006-04-Q0006",
+      "approved": true,
+      "pass_a": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      },
+      "pass_b": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      }
+    },
+    {
+      "a": "W-FRD-Q0001-03-Q0001",
+      "b": "W-FRD-Q0007-01-Q0007",
+      "approved": true,
+      "pass_a": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      },
+      "pass_b": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      }
+    },
+    {
+      "a": "W-FRD-Q0001-03-Q0001",
+      "b": "W-FRD-Q0009-04-Q0009",
+      "approved": true,
+      "pass_a": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      },
+      "pass_b": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      }
+    },
+    {
+      "a": "W-FRD-Q0001-03-Q0001",
+      "b": "W-FRD-Q0010-02-Q0010",
+      "approved": true,
+      "pass_a": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      },
+      "pass_b": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      }
+    },
+    {
+      "a": "W-FRD-Q0002-03-Q0002",
+      "b": "W-FRD-Q0003-04-Q0003",
+      "approved": true,
+      "pass_a": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      },
+      "pass_b": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      }
+    },
+    {
+      "a": "W-FRD-Q0002-03-Q0002",
+      "b": "W-FRD-Q0004-02-Q0004",
+      "approved": true,
+      "pass_a": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      },
+      "pass_b": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      }
+    },
+    {
+      "a": "W-FRD-Q0002-03-Q0002",
+      "b": "W-FRD-Q0006-04-Q0006",
+      "approved": true,
+      "pass_a": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      },
+      "pass_b": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      }
+    },
+    {
+      "a": "W-FRD-Q0002-03-Q0002",
+      "b": "W-FRD-Q0007-01-Q0007",
+      "approved": true,
+      "pass_a": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      },
+      "pass_b": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      }
+    },
+    {
+      "a": "W-FRD-Q0002-03-Q0002",
+      "b": "W-FRD-Q0009-04-Q0009",
+      "approved": true,
+      "pass_a": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      },
+      "pass_b": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      }
+    },
+    {
+      "a": "W-FRD-Q0002-03-Q0002",
+      "b": "W-FRD-Q0010-02-Q0010",
+      "approved": true,
+      "pass_a": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      },
+      "pass_b": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      }
+    },
+    {
+      "a": "W-FRD-Q0003-03-Q0003",
+      "b": "W-FRD-Q0003-04-Q0003",
+      "approved": true,
+      "pass_a": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      },
+      "pass_b": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      }
+    },
+    {
+      "a": "W-FRD-Q0003-03-Q0003",
+      "b": "W-FRD-Q0004-02-Q0004",
+      "approved": true,
+      "pass_a": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      },
+      "pass_b": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      }
+    },
+    {
+      "a": "W-FRD-Q0003-03-Q0003",
+      "b": "W-FRD-Q0006-04-Q0006",
+      "approved": true,
+      "pass_a": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      },
+      "pass_b": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      }
+    },
+    {
+      "a": "W-FRD-Q0003-03-Q0003",
+      "b": "W-FRD-Q0007-01-Q0007",
+      "approved": true,
+      "pass_a": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      },
+      "pass_b": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      }
+    },
+    {
+      "a": "W-FRD-Q0003-03-Q0003",
+      "b": "W-FRD-Q0009-04-Q0009",
+      "approved": true,
+      "pass_a": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      },
+      "pass_b": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      }
+    },
+    {
+      "a": "W-FRD-Q0003-03-Q0003",
+      "b": "W-FRD-Q0010-02-Q0010",
+      "approved": true,
+      "pass_a": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      },
+      "pass_b": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      }
+    },
+    {
+      "a": "W-FRD-Q0003-04-Q0003",
+      "b": "W-FRD-Q0005-01-Q0005",
+      "approved": true,
+      "pass_a": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      },
+      "pass_b": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      }
+    },
+    {
+      "a": "W-FRD-Q0003-04-Q0003",
+      "b": "W-FRD-Q0007-03-Q0007",
+      "approved": true,
+      "pass_a": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      },
+      "pass_b": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      }
+    },
+    {
+      "a": "W-FRD-Q0003-04-Q0003",
+      "b": "W-FRD-Q0008-03-Q0008",
+      "approved": true,
+      "pass_a": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      },
+      "pass_b": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      }
+    },
+    {
+      "a": "W-FRD-Q0003-04-Q0003",
+      "b": "W-FRD-Q0009-03-Q0009",
+      "approved": true,
+      "pass_a": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      },
+      "pass_b": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      }
+    },
+    {
+      "a": "W-FRD-Q0004-02-Q0004",
+      "b": "W-FRD-Q0005-01-Q0005",
+      "approved": true,
+      "pass_a": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      },
+      "pass_b": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      }
+    },
+    {
+      "a": "W-FRD-Q0004-02-Q0004",
+      "b": "W-FRD-Q0007-03-Q0007",
+      "approved": true,
+      "pass_a": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      },
+      "pass_b": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      }
+    },
+    {
+      "a": "W-FRD-Q0004-02-Q0004",
+      "b": "W-FRD-Q0008-03-Q0008",
+      "approved": true,
+      "pass_a": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      },
+      "pass_b": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      }
+    },
+    {
+      "a": "W-FRD-Q0004-02-Q0004",
+      "b": "W-FRD-Q0009-03-Q0009",
+      "approved": true,
+      "pass_a": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      },
+      "pass_b": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      }
+    },
+    {
+      "a": "W-FRD-Q0005-01-Q0005",
+      "b": "W-FRD-Q0006-04-Q0006",
+      "approved": true,
+      "pass_a": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      },
+      "pass_b": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      }
+    },
+    {
+      "a": "W-FRD-Q0005-01-Q0005",
+      "b": "W-FRD-Q0007-01-Q0007",
+      "approved": true,
+      "pass_a": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      },
+      "pass_b": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      }
+    },
+    {
+      "a": "W-FRD-Q0005-01-Q0005",
+      "b": "W-FRD-Q0009-04-Q0009",
+      "approved": true,
+      "pass_a": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      },
+      "pass_b": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      }
+    },
+    {
+      "a": "W-FRD-Q0005-01-Q0005",
+      "b": "W-FRD-Q0010-02-Q0010",
+      "approved": true,
+      "pass_a": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      },
+      "pass_b": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      }
+    },
+    {
+      "a": "W-FRD-Q0006-04-Q0006",
+      "b": "W-FRD-Q0007-03-Q0007",
+      "approved": true,
+      "pass_a": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      },
+      "pass_b": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      }
+    },
+    {
+      "a": "W-FRD-Q0006-04-Q0006",
+      "b": "W-FRD-Q0008-03-Q0008",
+      "approved": true,
+      "pass_a": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      },
+      "pass_b": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      }
+    },
+    {
+      "a": "W-FRD-Q0006-04-Q0006",
+      "b": "W-FRD-Q0009-03-Q0009",
+      "approved": true,
+      "pass_a": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      },
+      "pass_b": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      }
+    },
+    {
+      "a": "W-FRD-Q0007-01-Q0007",
+      "b": "W-FRD-Q0007-03-Q0007",
+      "approved": true,
+      "pass_a": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      },
+      "pass_b": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      }
+    },
+    {
+      "a": "W-FRD-Q0007-01-Q0007",
+      "b": "W-FRD-Q0008-03-Q0008",
+      "approved": true,
+      "pass_a": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      },
+      "pass_b": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      }
+    },
+    {
+      "a": "W-FRD-Q0007-01-Q0007",
+      "b": "W-FRD-Q0009-03-Q0009",
+      "approved": true,
+      "pass_a": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      },
+      "pass_b": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      }
+    },
+    {
+      "a": "W-FRD-Q0007-03-Q0007",
+      "b": "W-FRD-Q0009-04-Q0009",
+      "approved": true,
+      "pass_a": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      },
+      "pass_b": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      }
+    },
+    {
+      "a": "W-FRD-Q0007-03-Q0007",
+      "b": "W-FRD-Q0010-02-Q0010",
+      "approved": true,
+      "pass_a": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      },
+      "pass_b": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      }
+    },
+    {
+      "a": "W-FRD-Q0008-03-Q0008",
+      "b": "W-FRD-Q0009-04-Q0009",
+      "approved": true,
+      "pass_a": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      },
+      "pass_b": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      }
+    },
+    {
+      "a": "W-FRD-Q0008-03-Q0008",
+      "b": "W-FRD-Q0010-02-Q0010",
+      "approved": true,
+      "pass_a": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      },
+      "pass_b": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      }
+    },
+    {
+      "a": "W-FRD-Q0009-03-Q0009",
+      "b": "W-FRD-Q0009-04-Q0009",
+      "approved": true,
+      "pass_a": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      },
+      "pass_b": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      }
+    },
+    {
+      "a": "W-FRD-Q0009-03-Q0009",
+      "b": "W-FRD-Q0010-02-Q0010",
+      "approved": true,
+      "pass_a": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      },
+      "pass_b": {
+        "incompatible": true,
+        "basis": "OPPOSITE_POLARITY",
+        "trace": "same predicate, opposite polarity"
+      }
+    }
+  ],
+  "time": "2026-10-30T03:39:12+00:00"
+}

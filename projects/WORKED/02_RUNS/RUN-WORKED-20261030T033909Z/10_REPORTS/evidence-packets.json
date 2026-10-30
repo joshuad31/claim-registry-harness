@@ -1,0 +1,426 @@
+[
+  {
+    "hypothesis_id": "A1-H1",
+    "axis_id": "A1",
+    "approval": "UNKNOWN",
+    "title": "Foliar silicate raises field yield under drought",
+    "statement": "Foliar silicate increases grain yield of drought-stressed wheat in field trials. The increase is reported at a foliar rate of two millilitres per litre. The yield increase is larger when drought is severe.",
+    "coverage_status": "NO_COMPLETE_COVERAGE",
+    "required_covered": "2/3",
+    "allocation": 15,
+    "controlling": [
+      {
+        "unit_id": "A1-H1-R1",
+        "unit_type": "REQUIRED_SUPPORT",
+        "unit_text": "Foliar silicate increases grain yield of drought-stressed wheat in field trials",
+        "witnesses": [
+          {
+            "witness_id": "W-FRD-Q0001-01-Q0001",
+            "text": "Foliar silicate increased grain yield of drought-stressed wheat in field trials by eighteen percent (field2023).",
+            "source_file": "field2023.md",
+            "locator": "SYNTHETIC — Field trial of foliar silicate in drought-stressed wheat (field2023",
+            "vfrd_id": "FRD-Q0001-01",
+            "relation": "EQUIVALENT",
+            "basis": "AGREED"
+          },
+          {
+            "witness_id": "W-FRD-Q0003-04-Q0003",
+            "text": "Foliar silicate increased grain yield of drought-stressed wheat in field trials by eighteen percent (field2023).",
+            "source_file": "field2023.md",
+            "locator": "Results",
+            "vfrd_id": "FRD-Q0003-04",
+            "relation": "EQUIVALENT",
+            "basis": "AGREED"
+          }
+        ],
+        "more": 5
+      },
+      {
+        "unit_id": "A1-H1-R2",
+        "unit_type": "REQUIRED_SUPPORT",
+        "unit_text": "The increase is reported at a foliar rate of two millilitres per litre",
+        "witnesses": [
+          {
+            "witness_id": "W-FRD-Q0001-02-Q0001",
+            "text": "The increase was measured at a foliar rate of two millilitres per litre (field2023).",
+            "source_file": "field2023.md",
+            "locator": "SYNTHETIC — Field trial of foliar silicate in drought-stressed wheat (field2023",
+            "vfrd_id": "FRD-Q0001-02",
+            "relation": "EQUIVALENT",
+            "basis": "AGREED"
+          },
+          {
+            "witness_id": "W-FRD-Q0002-01-Q0002",
+            "text": "These field trials at a foliar rate of two millilitres per litre reported no yield difference between silicate and control plots (null2021).",
+            "source_file": "null2021.md",
+            "locator": "SYNTHETIC — Multi-site field trial reporting a null yield result (null2021",
+            "vfrd_id": "FRD-Q0002-01",
+            "relation": "WITNESS_ENTAILS_UNIT",
+            "basis": "AGREED"
+          }
+        ],
+        "more": 8
+      }
+    ],
+    "objections": [
+      {
+        "unit_id": "A1-H1-R1",
+        "unit_type": "REQUIRED_SUPPORT",
+        "unit_text": "Foliar silicate increases grain yield of drought-stressed wheat in field trials",
+        "kind": "contradicts a required part",
+        "rank": 0,
+        "witness_id": "W-FRD-Q0001-03-Q0001",
+        "text": "Foliar silicate did not increase grain yield of drought-stressed wheat in field trials (null2021).",
+        "source_file": "null2021.md",
+        "locator": "Results",
+        "vfrd_id": "FRD-Q0001-03",
+        "basis": "AGREED",
+        "trace": "predicate ['UP'] asserted with opposite polarity (coverage 1.00) [local-rules 1.8 pass A]"
+      },
+      {
+        "unit_id": "A1-H1-R1",
+        "unit_type": "REQUIRED_SUPPORT",
+        "unit_text": "Foliar silicate increases grain yield of drought-stressed wheat in field trials",
+        "kind": "contradicts a required part",
+        "rank": 0,
+        "witness_id": "W-FRD-Q0002-03-Q0002",
+        "text": "Foliar silicate did not increase grain yield of drought-stressed wheat in field trials (null2021).",
+        "source_file": "null2021.md",
+        "locator": "SYNTHETIC — Multi-site field trial reporting a null yield result (null2021",
+        "vfrd_id": "FRD-Q0002-03",
+        "basis": "AGREED",
+        "trace": "predicate ['UP'] asserted with opposite polarity (coverage 1.00) [local-rules 1.8 pass A]"
+      },
+      {
+        "unit_id": "A1-H1-A1",
+        "unit_type": "ADVERSE_TEST",
+        "unit_text": "Field trials at that rate report no yield difference",
+        "kind": "meets an adverse test",
+        "rank": 1,
+        "witness_id": "W-FRD-Q0001-04-Q0001",
+        "text": "Some field trials report a yield increase, while others report no yield difference at the same foliar rate (review2019).",
+        "source_file": "review2019.md",
+        "locator": "Results",
+        "vfrd_id": "FRD-Q0001-04",
+        "basis": "AGREED",
+        "trace": "witness supplies every unit element and adds detail; coverage 1.00 [local-rules 1.8 pass A]"
+      },
+      {
+        "unit_id": "A1-H1-A1",
+        "unit_type": "ADVERSE_TEST",
+        "unit_text": "Field trials at that rate report no yield difference",
+        "kind": "meets an adverse test",
+        "rank": 1,
+        "witness_id": "W-FRD-Q0002-01-Q0002",
+        "text": "These field trials at a foliar rate of two millilitres per litre reported no yield difference between silicate and control plots (null2021).",
+        "source_file": "null2021.md",
+        "locator": "SYNTHETIC — Multi-site field trial reporting a null yield result (null2021",
+        "vfrd_id": "FRD-Q0002-01",
+        "basis": "AGREED",
+        "trace": "witness supplies every unit element and adds detail; coverage 1.00 [local-rules 1.8 pass A]"
+      }
+    ],
+    "qualifications": [
+      {
+        "unit_id": "A1-H1-C1",
+        "unit_type": "CONTEXTUAL_CONSTRAINT",
+        "unit_text": "The foliar rate is two millilitres per litre and the trials are conducted under drought",
+        "supported_by": [],
+        "contradicted_by": []
+      }
+    ],
+    "corroboration": [],
+    "gaps": [
+      {
+        "unit_id": "A1-H1-R3",
+        "unit_type": "REQUIRED_SUPPORT",
+        "unit_text": "The yield increase is larger when drought is severe",
+        "partly": [],
+        "nearest": [
+          {
+            "witness_id": "W-FRD-Q0001-03-Q0001",
+            "text": "Foliar silicate did not increase grain yield of drought-stressed wheat in field trials (null2021).",
+            "source_file": "null2021.md",
+            "locator": "Results",
+            "vfrd_id": "FRD-Q0001-03",
+            "relation": "NO_SEMANTIC_RELATION",
+            "basis": "AGREED",
+            "overlap": 0.4
+          },
+          {
+            "witness_id": "W-FRD-Q0001-04-Q0001",
+            "text": "Some field trials report a yield increase, while others report no yield difference at the same foliar rate (review2019).",
+            "source_file": "review2019.md",
+            "locator": "Results",
+            "vfrd_id": "FRD-Q0001-04",
+            "relation": "NO_SEMANTIC_RELATION",
+            "basis": "AGREED",
+            "overlap": 0.4
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "hypothesis_id": "A1-H2",
+    "axis_id": "A1",
+    "approval": "UNKNOWN",
+    "title": "The field yield effect is absent",
+    "statement": "Foliar silicate does not increase grain yield of drought-stressed wheat in field trials. Field trials at a foliar rate of two millilitres per litre report no yield difference.",
+    "coverage_status": "COMPLETE",
+    "required_covered": "2/2",
+    "allocation": 47,
+    "controlling": [
+      {
+        "unit_id": "A1-H2-R1",
+        "unit_type": "REQUIRED_SUPPORT",
+        "unit_text": "Foliar silicate does not increase grain yield of drought-stressed wheat in field trials",
+        "witnesses": [
+          {
+            "witness_id": "W-FRD-Q0001-03-Q0001",
+            "text": "Foliar silicate did not increase grain yield of drought-stressed wheat in field trials (null2021).",
+            "source_file": "null2021.md",
+            "locator": "Results",
+            "vfrd_id": "FRD-Q0001-03",
+            "relation": "EQUIVALENT",
+            "basis": "AGREED"
+          },
+          {
+            "witness_id": "W-FRD-Q0002-03-Q0002",
+            "text": "Foliar silicate did not increase grain yield of drought-stressed wheat in field trials (null2021).",
+            "source_file": "null2021.md",
+            "locator": "SYNTHETIC — Multi-site field trial reporting a null yield result (null2021",
+            "vfrd_id": "FRD-Q0002-03",
+            "relation": "EQUIVALENT",
+            "basis": "AGREED"
+          }
+        ],
+        "more": 5
+      },
+      {
+        "unit_id": "A1-H2-R2",
+        "unit_type": "REQUIRED_SUPPORT",
+        "unit_text": "Field trials at a foliar rate of two millilitres per litre report no yield difference",
+        "witnesses": [
+          {
+            "witness_id": "W-FRD-Q0002-01-Q0002",
+            "text": "These field trials at a foliar rate of two millilitres per litre reported no yield difference between silicate and control plots (null2021).",
+            "source_file": "null2021.md",
+            "locator": "SYNTHETIC — Multi-site field trial reporting a null yield result (null2021",
+            "vfrd_id": "FRD-Q0002-01",
+            "relation": "EQUIVALENT",
+            "basis": "AGREED"
+          },
+          {
+            "witness_id": "W-FRD-Q0004-03-Q0004",
+            "text": "These field trials at a foliar rate of two millilitres per litre reported no yield difference between silicate and control plots (null2021).",
+            "source_file": "null2021.md",
+            "locator": "Results",
+            "vfrd_id": "FRD-Q0004-03",
+            "relation": "EQUIVALENT",
+            "basis": "AGREED"
+          }
+        ],
+        "more": 4
+      }
+    ],
+    "objections": [
+      {
+        "unit_id": "A1-H2-R1",
+        "unit_type": "REQUIRED_SUPPORT",
+        "unit_text": "Foliar silicate does not increase grain yield of drought-stressed wheat in field trials",
+        "kind": "contradicts a required part",
+        "rank": 0,
+        "witness_id": "W-FRD-Q0001-01-Q0001",
+        "text": "Foliar silicate increased grain yield of drought-stressed wheat in field trials by eighteen percent (field2023).",
+        "source_file": "field2023.md",
+        "locator": "SYNTHETIC — Field trial of foliar silicate in drought-stressed wheat (field2023",
+        "vfrd_id": "FRD-Q0001-01",
+        "basis": "AGREED",
+        "trace": "predicate ['UP'] asserted with opposite polarity (coverage 1.00) [local-rules 1.8 pass A]"
+      },
+      {
+        "unit_id": "A1-H2-R1",
+        "unit_type": "REQUIRED_SUPPORT",
+        "unit_text": "Foliar silicate does not increase grain yield of drought-stressed wheat in field trials",
+        "kind": "contradicts a required part",
+        "rank": 0,
+        "witness_id": "W-FRD-Q0003-04-Q0003",
+        "text": "Foliar silicate increased grain yield of drought-stressed wheat in field trials by eighteen percent (field2023).",
+        "source_file": "field2023.md",
+        "locator": "Results",
+        "vfrd_id": "FRD-Q0003-04",
+        "basis": "AGREED",
+        "trace": "predicate ['UP'] asserted with opposite polarity (coverage 1.00) [local-rules 1.8 pass A]"
+      },
+      {
+        "unit_id": "A1-H2-A1",
+        "unit_type": "ADVERSE_TEST",
+        "unit_text": "A field trial at that rate reports a yield increase",
+        "kind": "meets an adverse test",
+        "rank": 1,
+        "witness_id": "W-FRD-Q0001-04-Q0001",
+        "text": "Some field trials report a yield increase, while others report no yield difference at the same foliar rate (review2019).",
+        "source_file": "review2019.md",
+        "locator": "Results",
+        "vfrd_id": "FRD-Q0001-04",
+        "basis": "AGREED",
+        "trace": "witness supplies every unit element and adds detail; coverage 1.00 [local-rules 1.8 pass A]"
+      },
+      {
+        "unit_id": "A1-H2-A1",
+        "unit_type": "ADVERSE_TEST",
+        "unit_text": "A field trial at that rate reports a yield increase",
+        "kind": "meets an adverse test",
+        "rank": 1,
+        "witness_id": "W-FRD-Q0002-01-Q0002",
+        "text": "These field trials at a foliar rate of two millilitres per litre reported no yield difference between silicate and control plots (null2021).",
+        "source_file": "null2021.md",
+        "locator": "SYNTHETIC — Multi-site field trial reporting a null yield result (null2021",
+        "vfrd_id": "FRD-Q0002-01",
+        "basis": "AGREED",
+        "trace": "witness supplies every unit element and adds detail; coverage 0.79 [local-rules 1.8 pass A]"
+      }
+    ],
+    "qualifications": [
+      {
+        "unit_id": "A1-H2-C1",
+        "unit_type": "CONTEXTUAL_CONSTRAINT",
+        "unit_text": "The null trials used the same foliar rate of two millilitres per litre",
+        "supported_by": [],
+        "contradicted_by": []
+      }
+    ],
+    "corroboration": [
+      {
+        "unit_id": "A1-H2-E1",
+        "unit_type": "CORROBORATING_EXPECTATION",
+        "unit_text": "Multi-site field trials report no yield difference at that rate",
+        "met_by": [
+          {
+            "witness_id": "W-FRD-Q0001-04-Q0001",
+            "text": "Some field trials report a yield increase, while others report no yield difference at the same foliar rate (review2019).",
+            "source_file": "review2019.md",
+            "locator": "Results",
+            "vfrd_id": "FRD-Q0001-04"
+          },
+          {
+            "witness_id": "W-FRD-Q0002-02-Q0002",
+            "text": "Some field trials report a yield increase, while others report no yield difference at the same foliar rate (review2019).",
+            "source_file": "review2019.md",
+            "locator": "SYNTHETIC — Review of foliar silicate and wheat yield (review2019",
+            "vfrd_id": "FRD-Q0002-02"
+          }
+        ],
+        "contradicted_by": []
+      }
+    ],
+    "gaps": []
+  },
+  {
+    "hypothesis_id": "A1-H3",
+    "axis_id": "A1",
+    "approval": "UNKNOWN",
+    "title": "The field evidence is inconsistent",
+    "statement": "Existing field evidence cannot determine whether foliar silicate increases grain yield of drought-stressed wheat under drought. The field findings are inconsistent across trials.",
+    "coverage_status": "NO_COMPLETE_COVERAGE",
+    "required_covered": "1/2",
+    "allocation": 2,
+    "controlling": [
+      {
+        "unit_id": "A1-H3-R2",
+        "unit_type": "REQUIRED_SUPPORT",
+        "unit_text": "The field findings are inconsistent across trials",
+        "witnesses": [
+          {
+            "witness_id": "W-FRD-Q0003-02-Q0003",
+            "text": "Field evidence on foliar silicate and wheat yield is inconsistent across trials (review2019).",
+            "source_file": "review2019.md",
+            "locator": "SYNTHETIC — Review of foliar silicate and wheat yield (review2019",
+            "vfrd_id": "FRD-Q0003-02",
+            "relation": "WITNESS_ENTAILS_UNIT",
+            "basis": "AGREED"
+          },
+          {
+            "witness_id": "W-FRD-Q0005-04-Q0005",
+            "text": "Field evidence on foliar silicate and wheat yield is inconsistent across trials (review2019).",
+            "source_file": "review2019.md",
+            "locator": "SYNTHETIC — Review of foliar silicate and wheat yield (review2019",
+            "vfrd_id": "FRD-Q0005-04",
+            "relation": "WITNESS_ENTAILS_UNIT",
+            "basis": "AGREED"
+          }
+        ],
+        "more": 2
+      }
+    ],
+    "objections": [
+      {
+        "unit_id": "A1-H3-R1",
+        "unit_type": "REQUIRED_SUPPORT",
+        "unit_text": "Existing field evidence cannot determine whether foliar silicate increases grain yield of drought-stressed wheat under drought",
+        "kind": "contradicts a required part",
+        "rank": 0,
+        "witness_id": "W-FRD-Q0001-03-Q0001",
+        "text": "Foliar silicate did not increase grain yield of drought-stressed wheat in field trials (null2021).",
+        "source_file": "null2021.md",
+        "locator": "Results",
+        "vfrd_id": "FRD-Q0001-03",
+        "basis": "AGREED",
+        "trace": "predicate ['UP'] asserted with opposite polarity (coverage 0.65) [local-rules 1.8 pass A]"
+      },
+      {
+        "unit_id": "A1-H3-R1",
+        "unit_type": "REQUIRED_SUPPORT",
+        "unit_text": "Existing field evidence cannot determine whether foliar silicate increases grain yield of drought-stressed wheat under drought",
+        "kind": "contradicts a required part",
+        "rank": 0,
+        "witness_id": "W-FRD-Q0002-03-Q0002",
+        "text": "Foliar silicate did not increase grain yield of drought-stressed wheat in field trials (null2021).",
+        "source_file": "null2021.md",
+        "locator": "SYNTHETIC — Multi-site field trial reporting a null yield result (null2021",
+        "vfrd_id": "FRD-Q0002-03",
+        "basis": "AGREED",
+        "trace": "predicate ['UP'] asserted with opposite polarity (coverage 0.65) [local-rules 1.8 pass A]"
+      }
+    ],
+    "qualifications": [
+      {
+        "unit_id": "A1-H3-C1",
+        "unit_type": "CONTEXTUAL_CONSTRAINT",
+        "unit_text": "Field trials at a comparable rate have been retrieved",
+        "supported_by": [],
+        "contradicted_by": []
+      }
+    ],
+    "corroboration": [],
+    "gaps": [
+      {
+        "unit_id": "A1-H3-R1",
+        "unit_type": "REQUIRED_SUPPORT",
+        "unit_text": "Existing field evidence cannot determine whether foliar silicate increases grain yield of drought-stressed wheat under drought",
+        "partly": [
+          {
+            "witness_id": "W-FRD-Q0001-01-Q0001",
+            "text": "Foliar silicate increased grain yield of drought-stressed wheat in field trials by eighteen percent (field2023).",
+            "source_file": "field2023.md",
+            "locator": "SYNTHETIC — Field trial of foliar silicate in drought-stressed wheat (field2023",
+            "vfrd_id": "FRD-Q0001-01",
+            "relation": "PARTIALLY_COVERS",
+            "basis": "AGREED"
+          },
+          {
+            "witness_id": "W-FRD-Q0003-04-Q0003",
+            "text": "Foliar silicate increased grain yield of drought-stressed wheat in field trials by eighteen percent (field2023).",
+            "source_file": "field2023.md",
+            "locator": "Results",
+            "vfrd_id": "FRD-Q0003-04",
+            "relation": "PARTIALLY_COVERS",
+            "basis": "AGREED"
+          }
+        ],
+        "nearest": []
+      }
+    ]
+  }
+]

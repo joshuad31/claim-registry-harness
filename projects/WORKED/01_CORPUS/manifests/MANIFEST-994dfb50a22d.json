@@ -1,0 +1,42 @@
+{
+  "manifest_id": "MANIFEST-994dfb50a22d",
+  "created": "2026-10-30T03:26:21+00:00",
+  "source_dir": "C:\\Users\\joshu\\Desktop\\FINAL SPECIFICATION DOCUMENTS\\DeepSeek_2 output\\projects\\WORKED\\01_CORPUS\\source-files",
+  "files": 3,
+  "bytes": 2109,
+  "sources": [
+    {
+      "source_id": "SRC-7a084839031a",
+      "filename": "field2023.md",
+      "bytes": 720,
+      "words": 116,
+      "sha256": "7a084839031a2d7a00dc66ba6dd61faca632a2fe8b4c4b029c5665d71a5623f0",
+      "title_guess": "SYNTHETIC — Field trial of foliar silicate in drought-stressed wheat (field2023)",
+      "flags": [
+        "LOW_WORD_COUNT"
+      ]
+    },
+    {
+      "source_id": "SRC-40a4547d5332",
+      "filename": "null2021.md",
+      "bytes": 714,
+      "words": 114,
+      "sha256": "40a4547d5332e43e49b0cb566021472650deb90d4b1f6f8a883cfe1b3358fdc5",
+      "title_guess": "SYNTHETIC — Multi-site field trial reporting a null yield result (null2021)",
+      "flags": [
+        "LOW_WORD_COUNT"
+      ]
+    },
+    {
+      "source_id": "SRC-978ed6d086a1",
+      "filename": "review2019.md",
+      "bytes": 675,
+      "words": 109,
+      "sha256": "978ed6d086a17814c9a159ab7d18a269871379c86aba7065922a0066f3b42098",
+      "title_guess": "SYNTHETIC — Review of foliar silicate and wheat yield (review2019)",
+      "flags": [
+        "LOW_WORD_COUNT"
+      ]
+    }
+  ]
+}

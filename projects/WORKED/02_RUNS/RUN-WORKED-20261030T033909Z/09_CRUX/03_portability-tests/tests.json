@@ -1,0 +1,2525 @@
+[
+  {
+    "witness_id": "W-FRD-Q0001-01-Q0001",
+    "home": "A1-H1",
+    "rival": "A1-H2",
+    "axis": "A1",
+    "kind": "diagnostic",
+    "membership_screen_passes": true,
+    "t1": "FAIL",
+    "t2": "FAIL",
+    "t1_certificate": {
+      "kind": "T1_cannot_be_accommodated",
+      "conflicting_rule_bundle": [
+        {
+          "unit_id": "A1-H2-R1",
+          "unit_group": "required",
+          "relation": "CONTRADICTS",
+          "basis": "AGREED",
+          "trace": "predicate ['UP'] asserted with opposite polarity (coverage 1.00) [local-rules 1.8 pass A]"
+        }
+      ],
+      "why": "the witness contradicts content the rival asserts or realizes one of its recorded falsifiers"
+    },
+    "t2_certificate": {
+      "kind": "T2_cannot_be_accommodated",
+      "required_units_forbidden": [
+        {
+          "unit_id": "A1-H2-R1",
+          "trace": "predicate ['UP'] asserted with opposite polarity (coverage 1.00) [local-rules 1.8 pass A]",
+          "basis": "AGREED"
+        }
+      ],
+      "required_units_blocked_by_incompatibility": [],
+      "rival_units_already_without_options": [],
+      "why": "once the witness is established the rival cannot cover these required units"
+    },
+    "crux": false,
+    "tests_failed": 2,
+    "theory_id": "BTHEORY-b3f5413e511d"
+  },
+  {
+    "witness_id": "W-FRD-Q0001-01-Q0001",
+    "home": "A1-H1",
+    "rival": "A1-H3",
+    "axis": "A1",
+    "kind": "diagnostic",
+    "membership_screen_passes": true,
+    "t1": "PASS",
+    "t2": "PASS",
+    "t1_certificate": {
+      "kind": "T1_accommodated",
+      "units_checked": [
+        "A1-H3-R1",
+        "A1-H3-R2",
+        "A1-H3-C1",
+        "A1-H3-E1",
+        "A1-H3-A1"
+      ],
+      "unjudged_treated_as_no_relation": [],
+      "why": "no CONTRADICTS relation with any asserted unit and no realized falsifier"
+    },
+    "t2_certificate": {
+      "kind": "T2_accommodated",
+      "example_arrangement": {
+        "A1-H3-R1": null,
+        "A1-H3-R2": "OPT-dcd10beb12ca"
+      },
+      "rival_units_already_without_options": [
+        "A1-H3-R1"
+      ],
+      "why": "the witness removes no option the rival needs; the rival is already incomplete on the listed units, independent of this witness"
+    },
+    "crux": false,
+    "tests_failed": 0,
+    "theory_id": "BTHEORY-2bec985c7296"
+  },
+  {
+    "witness_id": "W-FRD-Q0001-02-Q0001",
+    "home": "A1-H1",
+    "rival": "A1-H2",
+    "axis": "A1",
+    "kind": "diagnostic",
+    "membership_screen_passes": true,
+    "t1": "PASS",
+    "t2": "PASS",
+    "t1_certificate": {
+      "kind": "T1_accommodated",
+      "units_checked": [
+        "A1-H2-R1",
+        "A1-H2-R2",
+        "A1-H2-C1",
+        "A1-H2-E1",
+        "A1-H2-A1"
+      ],
+      "unjudged_treated_as_no_relation": [],
+      "why": "no CONTRADICTS relation with any asserted unit and no realized falsifier"
+    },
+    "t2_certificate": {
+      "kind": "T2_accommodated",
+      "example_arrangement": {
+        "A1-H2-R1": "OPT-9eaa08e053bd",
+        "A1-H2-R2": "OPT-0569d5574e6c"
+      },
+      "rival_units_already_without_options": [],
+      "why": "the witness removes no option the rival needs"
+    },
+    "crux": false,
+    "tests_failed": 0,
+    "theory_id": "BTHEORY-b3f5413e511d"
+  },
+  {
+    "witness_id": "W-FRD-Q0001-02-Q0001",
+    "home": "A1-H1",
+    "rival": "A1-H3",
+    "axis": "A1",
+    "kind": "diagnostic",
+    "membership_screen_passes": true,
+    "t1": "PASS",
+    "t2": "PASS",
+    "t1_certificate": {
+      "kind": "T1_accommodated",
+      "units_checked": [
+        "A1-H3-R1",
+        "A1-H3-R2",
+        "A1-H3-C1",
+        "A1-H3-E1",
+        "A1-H3-A1"
+      ],
+      "unjudged_treated_as_no_relation": [],
+      "why": "no CONTRADICTS relation with any asserted unit and no realized falsifier"
+    },
+    "t2_certificate": {
+      "kind": "T2_accommodated",
+      "example_arrangement": {
+        "A1-H3-R1": null,
+        "A1-H3-R2": "OPT-dcd10beb12ca"
+      },
+      "rival_units_already_without_options": [
+        "A1-H3-R1"
+      ],
+      "why": "the witness removes no option the rival needs; the rival is already incomplete on the listed units, independent of this witness"
+    },
+    "crux": false,
+    "tests_failed": 0,
+    "theory_id": "BTHEORY-2bec985c7296"
+  },
+  {
+    "witness_id": "W-FRD-Q0002-01-Q0002",
+    "home": "A1-H1",
+    "rival": "A1-H2",
+    "axis": "A1",
+    "kind": "diagnostic",
+    "membership_screen_passes": false,
+    "t1": "FAIL",
+    "t2": "PASS",
+    "t1_certificate": {
+      "kind": "T1_cannot_be_accommodated",
+      "conflicting_rule_bundle": [
+        {
+          "unit_id": "A1-H2-A1",
+          "unit_group": "adverse_test_realized",
+          "relation": "WITNESS_ENTAILS_UNIT",
+          "basis": "AGREED",
+          "trace": "witness supplies every unit element and adds detail; coverage 0.79 [local-rules 1.8 pass A]"
+        }
+      ],
+      "why": "the witness contradicts content the rival asserts or realizes one of its recorded falsifiers"
+    },
+    "t2_certificate": {
+      "kind": "T2_accommodated",
+      "example_arrangement": {
+        "A1-H2-R1": "OPT-9eaa08e053bd",
+        "A1-H2-R2": "OPT-0569d5574e6c"
+      },
+      "rival_units_already_without_options": [],
+      "why": "the witness removes no option the rival needs"
+    },
+    "crux": false,
+    "tests_failed": 1,
+    "theory_id": "BTHEORY-b3f5413e511d"
+  },
+  {
+    "witness_id": "W-FRD-Q0002-01-Q0002",
+    "home": "A1-H1",
+    "rival": "A1-H3",
+    "axis": "A1",
+    "kind": "diagnostic",
+    "membership_screen_passes": true,
+    "t1": "PASS",
+    "t2": "PASS",
+    "t1_certificate": {
+      "kind": "T1_accommodated",
+      "units_checked": [
+        "A1-H3-R1",
+        "A1-H3-R2",
+        "A1-H3-C1",
+        "A1-H3-E1",
+        "A1-H3-A1"
+      ],
+      "unjudged_treated_as_no_relation": [],
+      "why": "no CONTRADICTS relation with any asserted unit and no realized falsifier"
+    },
+    "t2_certificate": {
+      "kind": "T2_accommodated",
+      "example_arrangement": {
+        "A1-H3-R1": null,
+        "A1-H3-R2": "OPT-dcd10beb12ca"
+      },
+      "rival_units_already_without_options": [
+        "A1-H3-R1"
+      ],
+      "why": "the witness removes no option the rival needs; the rival is already incomplete on the listed units, independent of this witness"
+    },
+    "crux": false,
+    "tests_failed": 0,
+    "theory_id": "BTHEORY-2bec985c7296"
+  },
+  {
+    "witness_id": "W-FRD-Q0003-04-Q0003",
+    "home": "A1-H1",
+    "rival": "A1-H2",
+    "axis": "A1",
+    "kind": "diagnostic",
+    "membership_screen_passes": true,
+    "t1": "FAIL",
+    "t2": "FAIL",
+    "t1_certificate": {
+      "kind": "T1_cannot_be_accommodated",
+      "conflicting_rule_bundle": [
+        {
+          "unit_id": "A1-H2-R1",
+          "unit_group": "required",
+          "relation": "CONTRADICTS",
+          "basis": "AGREED",
+          "trace": "predicate ['UP'] asserted with opposite polarity (coverage 1.00) [local-rules 1.8 pass A]"
+        }
+      ],
+      "why": "the witness contradicts content the rival asserts or realizes one of its recorded falsifiers"
+    },
+    "t2_certificate": {
+      "kind": "T2_cannot_be_accommodated",
+      "required_units_forbidden": [
+        {
+          "unit_id": "A1-H2-R1",
+          "trace": "predicate ['UP'] asserted with opposite polarity (coverage 1.00) [local-rules 1.8 pass A]",
+          "basis": "AGREED"
+        }
+      ],
+      "required_units_blocked_by_incompatibility": [],
+      "rival_units_already_without_options": [],
+      "why": "once the witness is established the rival cannot cover these required units"
+    },
+    "crux": false,
+    "tests_failed": 2,
+    "theory_id": "BTHEORY-b3f5413e511d"
+  },
+  {
+    "witness_id": "W-FRD-Q0003-04-Q0003",
+    "home": "A1-H1",
+    "rival": "A1-H3",
+    "axis": "A1",
+    "kind": "diagnostic",
+    "membership_screen_passes": true,
+    "t1": "PASS",
+    "t2": "PASS",
+    "t1_certificate": {
+      "kind": "T1_accommodated",
+      "units_checked": [
+        "A1-H3-R1",
+        "A1-H3-R2",
+        "A1-H3-C1",
+        "A1-H3-E1",
+        "A1-H3-A1"
+      ],
+      "unjudged_treated_as_no_relation": [],
+      "why": "no CONTRADICTS relation with any asserted unit and no realized falsifier"
+    },
+    "t2_certificate": {
+      "kind": "T2_accommodated",
+      "example_arrangement": {
+        "A1-H3-R1": null,
+        "A1-H3-R2": "OPT-dcd10beb12ca"
+      },
+      "rival_units_already_without_options": [
+        "A1-H3-R1"
+      ],
+      "why": "the witness removes no option the rival needs; the rival is already incomplete on the listed units, independent of this witness"
+    },
+    "crux": false,
+    "tests_failed": 0,
+    "theory_id": "BTHEORY-2bec985c7296"
+  },
+  {
+    "witness_id": "W-FRD-Q0004-01-Q0004",
+    "home": "A1-H1",
+    "rival": "A1-H2",
+    "axis": "A1",
+    "kind": "diagnostic",
+    "membership_screen_passes": true,
+    "t1": "PASS",
+    "t2": "PASS",
+    "t1_certificate": {
+      "kind": "T1_accommodated",
+      "units_checked": [
+        "A1-H2-R1",
+        "A1-H2-R2",
+        "A1-H2-C1",
+        "A1-H2-E1",
+        "A1-H2-A1"
+      ],
+      "unjudged_treated_as_no_relation": [],
+      "why": "no CONTRADICTS relation with any asserted unit and no realized falsifier"
+    },
+    "t2_certificate": {
+      "kind": "T2_accommodated",
+      "example_arrangement": {
+        "A1-H2-R1": "OPT-9eaa08e053bd",
+        "A1-H2-R2": "OPT-0569d5574e6c"
+      },
+      "rival_units_already_without_options": [],
+      "why": "the witness removes no option the rival needs"
+    },
+    "crux": false,
+    "tests_failed": 0,
+    "theory_id": "BTHEORY-b3f5413e511d"
+  },
+  {
+    "witness_id": "W-FRD-Q0004-01-Q0004",
+    "home": "A1-H1",
+    "rival": "A1-H3",
+    "axis": "A1",
+    "kind": "diagnostic",
+    "membership_screen_passes": true,
+    "t1": "PASS",
+    "t2": "PASS",
+    "t1_certificate": {
+      "kind": "T1_accommodated",
+      "units_checked": [
+        "A1-H3-R1",
+        "A1-H3-R2",
+        "A1-H3-C1",
+        "A1-H3-E1",
+        "A1-H3-A1"
+      ],
+      "unjudged_treated_as_no_relation": [],
+      "why": "no CONTRADICTS relation with any asserted unit and no realized falsifier"
+    },
+    "t2_certificate": {
+      "kind": "T2_accommodated",
+      "example_arrangement": {
+        "A1-H3-R1": null,
+        "A1-H3-R2": "OPT-dcd10beb12ca"
+      },
+      "rival_units_already_without_options": [
+        "A1-H3-R1"
+      ],
+      "why": "the witness removes no option the rival needs; the rival is already incomplete on the listed units, independent of this witness"
+    },
+    "crux": false,
+    "tests_failed": 0,
+    "theory_id": "BTHEORY-2bec985c7296"
+  },
+  {
+    "witness_id": "W-FRD-Q0004-02-Q0004",
+    "home": "A1-H1",
+    "rival": "A1-H2",
+    "axis": "A1",
+    "kind": "diagnostic",
+    "membership_screen_passes": true,
+    "t1": "FAIL",
+    "t2": "FAIL",
+    "t1_certificate": {
+      "kind": "T1_cannot_be_accommodated",
+      "conflicting_rule_bundle": [
+        {
+          "unit_id": "A1-H2-R1",
+          "unit_group": "required",
+          "relation": "CONTRADICTS",
+          "basis": "AGREED",
+          "trace": "predicate ['UP'] asserted with opposite polarity (coverage 1.00) [local-rules 1.8 pass A]"
+        }
+      ],
+      "why": "the witness contradicts content the rival asserts or realizes one of its recorded falsifiers"
+    },
+    "t2_certificate": {
+      "kind": "T2_cannot_be_accommodated",
+      "required_units_forbidden": [
+        {
+          "unit_id": "A1-H2-R1",
+          "trace": "predicate ['UP'] asserted with opposite polarity (coverage 1.00) [local-rules 1.8 pass A]",
+          "basis": "AGREED"
+        }
+      ],
+      "required_units_blocked_by_incompatibility": [],
+      "rival_units_already_without_options": [],
+      "why": "once the witness is established the rival cannot cover these required units"
+    },
+    "crux": false,
+    "tests_failed": 2,
+    "theory_id": "BTHEORY-b3f5413e511d"
+  },
+  {
+    "witness_id": "W-FRD-Q0004-02-Q0004",
+    "home": "A1-H1",
+    "rival": "A1-H3",
+    "axis": "A1",
+    "kind": "diagnostic",
+    "membership_screen_passes": true,
+    "t1": "PASS",
+    "t2": "PASS",
+    "t1_certificate": {
+      "kind": "T1_accommodated",
+      "units_checked": [
+        "A1-H3-R1",
+        "A1-H3-R2",
+        "A1-H3-C1",
+        "A1-H3-E1",
+        "A1-H3-A1"
+      ],
+      "unjudged_treated_as_no_relation": [],
+      "why": "no CONTRADICTS relation with any asserted unit and no realized falsifier"
+    },
+    "t2_certificate": {
+      "kind": "T2_accommodated",
+      "example_arrangement": {
+        "A1-H3-R1": null,
+        "A1-H3-R2": "OPT-dcd10beb12ca"
+      },
+      "rival_units_already_without_options": [
+        "A1-H3-R1"
+      ],
+      "why": "the witness removes no option the rival needs; the rival is already incomplete on the listed units, independent of this witness"
+    },
+    "crux": false,
+    "tests_failed": 0,
+    "theory_id": "BTHEORY-2bec985c7296"
+  },
+  {
+    "witness_id": "W-FRD-Q0004-03-Q0004",
+    "home": "A1-H1",
+    "rival": "A1-H2",
+    "axis": "A1",
+    "kind": "diagnostic",
+    "membership_screen_passes": false,
+    "t1": "FAIL",
+    "t2": "PASS",
+    "t1_certificate": {
+      "kind": "T1_cannot_be_accommodated",
+      "conflicting_rule_bundle": [
+        {
+          "unit_id": "A1-H2-A1",
+          "unit_group": "adverse_test_realized",
+          "relation": "WITNESS_ENTAILS_UNIT",
+          "basis": "AGREED",
+          "trace": "witness supplies every unit element and adds detail; coverage 0.79 [local-rules 1.8 pass A]"
+        }
+      ],
+      "why": "the witness contradicts content the rival asserts or realizes one of its recorded falsifiers"
+    },
+    "t2_certificate": {
+      "kind": "T2_accommodated",
+      "example_arrangement": {
+        "A1-H2-R1": "OPT-9eaa08e053bd",
+        "A1-H2-R2": "OPT-0569d5574e6c"
+      },
+      "rival_units_already_without_options": [],
+      "why": "the witness removes no option the rival needs"
+    },
+    "crux": false,
+    "tests_failed": 1,
+    "theory_id": "BTHEORY-b3f5413e511d"
+  },
+  {
+    "witness_id": "W-FRD-Q0004-03-Q0004",
+    "home": "A1-H1",
+    "rival": "A1-H3",
+    "axis": "A1",
+    "kind": "diagnostic",
+    "membership_screen_passes": true,
+    "t1": "PASS",
+    "t2": "PASS",
+    "t1_certificate": {
+      "kind": "T1_accommodated",
+      "units_checked": [
+        "A1-H3-R1",
+        "A1-H3-R2",
+        "A1-H3-C1",
+        "A1-H3-E1",
+        "A1-H3-A1"
+      ],
+      "unjudged_treated_as_no_relation": [],
+      "why": "no CONTRADICTS relation with any asserted unit and no realized falsifier"
+    },
+    "t2_certificate": {
+      "kind": "T2_accommodated",
+      "example_arrangement": {
+        "A1-H3-R1": null,
+        "A1-H3-R2": "OPT-dcd10beb12ca"
+      },
+      "rival_units_already_without_options": [
+        "A1-H3-R1"
+      ],
+      "why": "the witness removes no option the rival needs; the rival is already incomplete on the listed units, independent of this witness"
+    },
+    "crux": false,
+    "tests_failed": 0,
+    "theory_id": "BTHEORY-2bec985c7296"
+  },
+  {
+    "witness_id": "W-FRD-Q0005-02-Q0005",
+    "home": "A1-H1",
+    "rival": "A1-H2",
+    "axis": "A1",
+    "kind": "diagnostic",
+    "membership_screen_passes": false,
+    "t1": "FAIL",
+    "t2": "PASS",
+    "t1_certificate": {
+      "kind": "T1_cannot_be_accommodated",
+      "conflicting_rule_bundle": [
+        {
+          "unit_id": "A1-H2-A1",
+          "unit_group": "adverse_test_realized",
+          "relation": "WITNESS_ENTAILS_UNIT",
+          "basis": "AGREED",
+          "trace": "witness supplies every unit element and adds detail; coverage 0.79 [local-rules 1.8 pass A]"
+        }
+      ],
+      "why": "the witness contradicts content the rival asserts or realizes one of its recorded falsifiers"
+    },
+    "t2_certificate": {
+      "kind": "T2_accommodated",
+      "example_arrangement": {
+        "A1-H2-R1": "OPT-9eaa08e053bd",
+        "A1-H2-R2": "OPT-0569d5574e6c"
+      },
+      "rival_units_already_without_options": [],
+      "why": "the witness removes no option the rival needs"
+    },
+    "crux": false,
+    "tests_failed": 1,
+    "theory_id": "BTHEORY-b3f5413e511d"
+  },
+  {
+    "witness_id": "W-FRD-Q0005-02-Q0005",
+    "home": "A1-H1",
+    "rival": "A1-H3",
+    "axis": "A1",
+    "kind": "diagnostic",
+    "membership_screen_passes": true,
+    "t1": "PASS",
+    "t2": "PASS",
+    "t1_certificate": {
+      "kind": "T1_accommodated",
+      "units_checked": [
+        "A1-H3-R1",
+        "A1-H3-R2",
+        "A1-H3-C1",
+        "A1-H3-E1",
+        "A1-H3-A1"
+      ],
+      "unjudged_treated_as_no_relation": [],
+      "why": "no CONTRADICTS relation with any asserted unit and no realized falsifier"
+    },
+    "t2_certificate": {
+      "kind": "T2_accommodated",
+      "example_arrangement": {
+        "A1-H3-R1": null,
+        "A1-H3-R2": "OPT-dcd10beb12ca"
+      },
+      "rival_units_already_without_options": [
+        "A1-H3-R1"
+      ],
+      "why": "the witness removes no option the rival needs; the rival is already incomplete on the listed units, independent of this witness"
+    },
+    "crux": false,
+    "tests_failed": 0,
+    "theory_id": "BTHEORY-2bec985c7296"
+  },
+  {
+    "witness_id": "W-FRD-Q0006-03-Q0006",
+    "home": "A1-H1",
+    "rival": "A1-H2",
+    "axis": "A1",
+    "kind": "diagnostic",
+    "membership_screen_passes": false,
+    "t1": "FAIL",
+    "t2": "PASS",
+    "t1_certificate": {
+      "kind": "T1_cannot_be_accommodated",
+      "conflicting_rule_bundle": [
+        {
+          "unit_id": "A1-H2-A1",
+          "unit_group": "adverse_test_realized",
+          "relation": "WITNESS_ENTAILS_UNIT",
+          "basis": "AGREED",
+          "trace": "witness supplies every unit element and adds detail; coverage 0.79 [local-rules 1.8 pass A]"
+        }
+      ],
+      "why": "the witness contradicts content the rival asserts or realizes one of its recorded falsifiers"
+    },
+    "t2_certificate": {
+      "kind": "T2_accommodated",
+      "example_arrangement": {
+        "A1-H2-R1": "OPT-9eaa08e053bd",
+        "A1-H2-R2": "OPT-0569d5574e6c"
+      },
+      "rival_units_already_without_options": [],
+      "why": "the witness removes no option the rival needs"
+    },
+    "crux": false,
+    "tests_failed": 1,
+    "theory_id": "BTHEORY-b3f5413e511d"
+  },
+  {
+    "witness_id": "W-FRD-Q0006-03-Q0006",
+    "home": "A1-H1",
+    "rival": "A1-H3",
+    "axis": "A1",
+    "kind": "diagnostic",
+    "membership_screen_passes": true,
+    "t1": "PASS",
+    "t2": "PASS",
+    "t1_certificate": {
+      "kind": "T1_accommodated",
+      "units_checked": [
+        "A1-H3-R1",
+        "A1-H3-R2",
+        "A1-H3-C1",
+        "A1-H3-E1",
+        "A1-H3-A1"
+      ],
+      "unjudged_treated_as_no_relation": [],
+      "why": "no CONTRADICTS relation with any asserted unit and no realized falsifier"
+    },
+    "t2_certificate": {
+      "kind": "T2_accommodated",
+      "example_arrangement": {
+        "A1-H3-R1": null,
+        "A1-H3-R2": "OPT-dcd10beb12ca"
+      },
+      "rival_units_already_without_options": [
+        "A1-H3-R1"
+      ],
+      "why": "the witness removes no option the rival needs; the rival is already incomplete on the listed units, independent of this witness"
+    },
+    "crux": false,
+    "tests_failed": 0,
+    "theory_id": "BTHEORY-2bec985c7296"
+  },
+  {
+    "witness_id": "W-FRD-Q0006-04-Q0006",
+    "home": "A1-H1",
+    "rival": "A1-H2",
+    "axis": "A1",
+    "kind": "diagnostic",
+    "membership_screen_passes": true,
+    "t1": "FAIL",
+    "t2": "FAIL",
+    "t1_certificate": {
+      "kind": "T1_cannot_be_accommodated",
+      "conflicting_rule_bundle": [
+        {
+          "unit_id": "A1-H2-R1",
+          "unit_group": "required",
+          "relation": "CONTRADICTS",
+          "basis": "AGREED",
+          "trace": "predicate ['UP'] asserted with opposite polarity (coverage 1.00) [local-rules 1.8 pass A]"
+        }
+      ],
+      "why": "the witness contradicts content the rival asserts or realizes one of its recorded falsifiers"
+    },
+    "t2_certificate": {
+      "kind": "T2_cannot_be_accommodated",
+      "required_units_forbidden": [
+        {
+          "unit_id": "A1-H2-R1",
+          "trace": "predicate ['UP'] asserted with opposite polarity (coverage 1.00) [local-rules 1.8 pass A]",
+          "basis": "AGREED"
+        }
+      ],
+      "required_units_blocked_by_incompatibility": [],
+      "rival_units_already_without_options": [],
+      "why": "once the witness is established the rival cannot cover these required units"
+    },
+    "crux": false,
+    "tests_failed": 2,
+    "theory_id": "BTHEORY-b3f5413e511d"
+  },
+  {
+    "witness_id": "W-FRD-Q0006-04-Q0006",
+    "home": "A1-H1",
+    "rival": "A1-H3",
+    "axis": "A1",
+    "kind": "diagnostic",
+    "membership_screen_passes": true,
+    "t1": "PASS",
+    "t2": "PASS",
+    "t1_certificate": {
+      "kind": "T1_accommodated",
+      "units_checked": [
+        "A1-H3-R1",
+        "A1-H3-R2",
+        "A1-H3-C1",
+        "A1-H3-E1",
+        "A1-H3-A1"
+      ],
+      "unjudged_treated_as_no_relation": [],
+      "why": "no CONTRADICTS relation with any asserted unit and no realized falsifier"
+    },
+    "t2_certificate": {
+      "kind": "T2_accommodated",
+      "example_arrangement": {
+        "A1-H3-R1": null,
+        "A1-H3-R2": "OPT-dcd10beb12ca"
+      },
+      "rival_units_already_without_options": [
+        "A1-H3-R1"
+      ],
+      "why": "the witness removes no option the rival needs; the rival is already incomplete on the listed units, independent of this witness"
+    },
+    "crux": false,
+    "tests_failed": 0,
+    "theory_id": "BTHEORY-2bec985c7296"
+  },
+  {
+    "witness_id": "W-FRD-Q0007-01-Q0007",
+    "home": "A1-H1",
+    "rival": "A1-H2",
+    "axis": "A1",
+    "kind": "diagnostic",
+    "membership_screen_passes": true,
+    "t1": "FAIL",
+    "t2": "FAIL",
+    "t1_certificate": {
+      "kind": "T1_cannot_be_accommodated",
+      "conflicting_rule_bundle": [
+        {
+          "unit_id": "A1-H2-R1",
+          "unit_group": "required",
+          "relation": "CONTRADICTS",
+          "basis": "AGREED",
+          "trace": "predicate ['UP'] asserted with opposite polarity (coverage 1.00) [local-rules 1.8 pass A]"
+        }
+      ],
+      "why": "the witness contradicts content the rival asserts or realizes one of its recorded falsifiers"
+    },
+    "t2_certificate": {
+      "kind": "T2_cannot_be_accommodated",
+      "required_units_forbidden": [
+        {
+          "unit_id": "A1-H2-R1",
+          "trace": "predicate ['UP'] asserted with opposite polarity (coverage 1.00) [local-rules 1.8 pass A]",
+          "basis": "AGREED"
+        }
+      ],
+      "required_units_blocked_by_incompatibility": [],
+      "rival_units_already_without_options": [],
+      "why": "once the witness is established the rival cannot cover these required units"
+    },
+    "crux": false,
+    "tests_failed": 2,
+    "theory_id": "BTHEORY-b3f5413e511d"
+  },
+  {
+    "witness_id": "W-FRD-Q0007-01-Q0007",
+    "home": "A1-H1",
+    "rival": "A1-H3",
+    "axis": "A1",
+    "kind": "diagnostic",
+    "membership_screen_passes": true,
+    "t1": "PASS",
+    "t2": "PASS",
+    "t1_certificate": {
+      "kind": "T1_accommodated",
+      "units_checked": [
+        "A1-H3-R1",
+        "A1-H3-R2",
+        "A1-H3-C1",
+        "A1-H3-E1",
+        "A1-H3-A1"
+      ],
+      "unjudged_treated_as_no_relation": [],
+      "why": "no CONTRADICTS relation with any asserted unit and no realized falsifier"
+    },
+    "t2_certificate": {
+      "kind": "T2_accommodated",
+      "example_arrangement": {
+        "A1-H3-R1": null,
+        "A1-H3-R2": "OPT-dcd10beb12ca"
+      },
+      "rival_units_already_without_options": [
+        "A1-H3-R1"
+      ],
+      "why": "the witness removes no option the rival needs; the rival is already incomplete on the listed units, independent of this witness"
+    },
+    "crux": false,
+    "tests_failed": 0,
+    "theory_id": "BTHEORY-2bec985c7296"
+  },
+  {
+    "witness_id": "W-FRD-Q0007-02-Q0007",
+    "home": "A1-H1",
+    "rival": "A1-H2",
+    "axis": "A1",
+    "kind": "diagnostic",
+    "membership_screen_passes": true,
+    "t1": "PASS",
+    "t2": "PASS",
+    "t1_certificate": {
+      "kind": "T1_accommodated",
+      "units_checked": [
+        "A1-H2-R1",
+        "A1-H2-R2",
+        "A1-H2-C1",
+        "A1-H2-E1",
+        "A1-H2-A1"
+      ],
+      "unjudged_treated_as_no_relation": [],
+      "why": "no CONTRADICTS relation with any asserted unit and no realized falsifier"
+    },
+    "t2_certificate": {
+      "kind": "T2_accommodated",
+      "example_arrangement": {
+        "A1-H2-R1": "OPT-9eaa08e053bd",
+        "A1-H2-R2": "OPT-0569d5574e6c"
+      },
+      "rival_units_already_without_options": [],
+      "why": "the witness removes no option the rival needs"
+    },
+    "crux": false,
+    "tests_failed": 0,
+    "theory_id": "BTHEORY-b3f5413e511d"
+  },
+  {
+    "witness_id": "W-FRD-Q0007-02-Q0007",
+    "home": "A1-H1",
+    "rival": "A1-H3",
+    "axis": "A1",
+    "kind": "diagnostic",
+    "membership_screen_passes": true,
+    "t1": "PASS",
+    "t2": "PASS",
+    "t1_certificate": {
+      "kind": "T1_accommodated",
+      "units_checked": [
+        "A1-H3-R1",
+        "A1-H3-R2",
+        "A1-H3-C1",
+        "A1-H3-E1",
+        "A1-H3-A1"
+      ],
+      "unjudged_treated_as_no_relation": [],
+      "why": "no CONTRADICTS relation with any asserted unit and no realized falsifier"
+    },
+    "t2_certificate": {
+      "kind": "T2_accommodated",
+      "example_arrangement": {
+        "A1-H3-R1": null,
+        "A1-H3-R2": "OPT-dcd10beb12ca"
+      },
+      "rival_units_already_without_options": [
+        "A1-H3-R1"
+      ],
+      "why": "the witness removes no option the rival needs; the rival is already incomplete on the listed units, independent of this witness"
+    },
+    "crux": false,
+    "tests_failed": 0,
+    "theory_id": "BTHEORY-2bec985c7296"
+  },
+  {
+    "witness_id": "W-FRD-Q0008-01-Q0008",
+    "home": "A1-H1",
+    "rival": "A1-H2",
+    "axis": "A1",
+    "kind": "diagnostic",
+    "membership_screen_passes": false,
+    "t1": "FAIL",
+    "t2": "PASS",
+    "t1_certificate": {
+      "kind": "T1_cannot_be_accommodated",
+      "conflicting_rule_bundle": [
+        {
+          "unit_id": "A1-H2-A1",
+          "unit_group": "adverse_test_realized",
+          "relation": "WITNESS_ENTAILS_UNIT",
+          "basis": "AGREED",
+          "trace": "witness supplies every unit element and adds detail; coverage 0.79 [local-rules 1.8 pass A]"
+        }
+      ],
+      "why": "the witness contradicts content the rival asserts or realizes one of its recorded falsifiers"
+    },
+    "t2_certificate": {
+      "kind": "T2_accommodated",
+      "example_arrangement": {
+        "A1-H2-R1": "OPT-9eaa08e053bd",
+        "A1-H2-R2": "OPT-0569d5574e6c"
+      },
+      "rival_units_already_without_options": [],
+      "why": "the witness removes no option the rival needs"
+    },
+    "crux": false,
+    "tests_failed": 1,
+    "theory_id": "BTHEORY-b3f5413e511d"
+  },
+  {
+    "witness_id": "W-FRD-Q0008-01-Q0008",
+    "home": "A1-H1",
+    "rival": "A1-H3",
+    "axis": "A1",
+    "kind": "diagnostic",
+    "membership_screen_passes": true,
+    "t1": "PASS",
+    "t2": "PASS",
+    "t1_certificate": {
+      "kind": "T1_accommodated",
+      "units_checked": [
+        "A1-H3-R1",
+        "A1-H3-R2",
+        "A1-H3-C1",
+        "A1-H3-E1",
+        "A1-H3-A1"
+      ],
+      "unjudged_treated_as_no_relation": [],
+      "why": "no CONTRADICTS relation with any asserted unit and no realized falsifier"
+    },
+    "t2_certificate": {
+      "kind": "T2_accommodated",
+      "example_arrangement": {
+        "A1-H3-R1": null,
+        "A1-H3-R2": "OPT-dcd10beb12ca"
+      },
+      "rival_units_already_without_options": [
+        "A1-H3-R1"
+      ],
+      "why": "the witness removes no option the rival needs; the rival is already incomplete on the listed units, independent of this witness"
+    },
+    "crux": false,
+    "tests_failed": 0,
+    "theory_id": "BTHEORY-2bec985c7296"
+  },
+  {
+    "witness_id": "W-FRD-Q0009-04-Q0009",
+    "home": "A1-H1",
+    "rival": "A1-H2",
+    "axis": "A1",
+    "kind": "diagnostic",
+    "membership_screen_passes": true,
+    "t1": "FAIL",
+    "t2": "FAIL",
+    "t1_certificate": {
+      "kind": "T1_cannot_be_accommodated",
+      "conflicting_rule_bundle": [
+        {
+          "unit_id": "A1-H2-R1",
+          "unit_group": "required",
+          "relation": "CONTRADICTS",
+          "basis": "AGREED",
+          "trace": "predicate ['UP'] asserted with opposite polarity (coverage 1.00) [local-rules 1.8 pass A]"
+        }
+      ],
+      "why": "the witness contradicts content the rival asserts or realizes one of its recorded falsifiers"
+    },
+    "t2_certificate": {
+      "kind": "T2_cannot_be_accommodated",
+      "required_units_forbidden": [
+        {
+          "unit_id": "A1-H2-R1",
+          "trace": "predicate ['UP'] asserted with opposite polarity (coverage 1.00) [local-rules 1.8 pass A]",
+          "basis": "AGREED"
+        }
+      ],
+      "required_units_blocked_by_incompatibility": [],
+      "rival_units_already_without_options": [],
+      "why": "once the witness is established the rival cannot cover these required units"
+    },
+    "crux": false,
+    "tests_failed": 2,
+    "theory_id": "BTHEORY-b3f5413e511d"
+  },
+  {
+    "witness_id": "W-FRD-Q0009-04-Q0009",
+    "home": "A1-H1",
+    "rival": "A1-H3",
+    "axis": "A1",
+    "kind": "diagnostic",
+    "membership_screen_passes": true,
+    "t1": "PASS",
+    "t2": "PASS",
+    "t1_certificate": {
+      "kind": "T1_accommodated",
+      "units_checked": [
+        "A1-H3-R1",
+        "A1-H3-R2",
+        "A1-H3-C1",
+        "A1-H3-E1",
+        "A1-H3-A1"
+      ],
+      "unjudged_treated_as_no_relation": [],
+      "why": "no CONTRADICTS relation with any asserted unit and no realized falsifier"
+    },
+    "t2_certificate": {
+      "kind": "T2_accommodated",
+      "example_arrangement": {
+        "A1-H3-R1": null,
+        "A1-H3-R2": "OPT-dcd10beb12ca"
+      },
+      "rival_units_already_without_options": [
+        "A1-H3-R1"
+      ],
+      "why": "the witness removes no option the rival needs; the rival is already incomplete on the listed units, independent of this witness"
+    },
+    "crux": false,
+    "tests_failed": 0,
+    "theory_id": "BTHEORY-2bec985c7296"
+  },
+  {
+    "witness_id": "W-FRD-Q0010-01-Q0010",
+    "home": "A1-H1",
+    "rival": "A1-H2",
+    "axis": "A1",
+    "kind": "diagnostic",
+    "membership_screen_passes": true,
+    "t1": "PASS",
+    "t2": "PASS",
+    "t1_certificate": {
+      "kind": "T1_accommodated",
+      "units_checked": [
+        "A1-H2-R1",
+        "A1-H2-R2",
+        "A1-H2-C1",
+        "A1-H2-E1",
+        "A1-H2-A1"
+      ],
+      "unjudged_treated_as_no_relation": [],
+      "why": "no CONTRADICTS relation with any asserted unit and no realized falsifier"
+    },
+    "t2_certificate": {
+      "kind": "T2_accommodated",
+      "example_arrangement": {
+        "A1-H2-R1": "OPT-9eaa08e053bd",
+        "A1-H2-R2": "OPT-0569d5574e6c"
+      },
+      "rival_units_already_without_options": [],
+      "why": "the witness removes no option the rival needs"
+    },
+    "crux": false,
+    "tests_failed": 0,
+    "theory_id": "BTHEORY-b3f5413e511d"
+  },
+  {
+    "witness_id": "W-FRD-Q0010-01-Q0010",
+    "home": "A1-H1",
+    "rival": "A1-H3",
+    "axis": "A1",
+    "kind": "diagnostic",
+    "membership_screen_passes": true,
+    "t1": "PASS",
+    "t2": "PASS",
+    "t1_certificate": {
+      "kind": "T1_accommodated",
+      "units_checked": [
+        "A1-H3-R1",
+        "A1-H3-R2",
+        "A1-H3-C1",
+        "A1-H3-E1",
+        "A1-H3-A1"
+      ],
+      "unjudged_treated_as_no_relation": [],
+      "why": "no CONTRADICTS relation with any asserted unit and no realized falsifier"
+    },
+    "t2_certificate": {
+      "kind": "T2_accommodated",
+      "example_arrangement": {
+        "A1-H3-R1": null,
+        "A1-H3-R2": "OPT-dcd10beb12ca"
+      },
+      "rival_units_already_without_options": [
+        "A1-H3-R1"
+      ],
+      "why": "the witness removes no option the rival needs; the rival is already incomplete on the listed units, independent of this witness"
+    },
+    "crux": false,
+    "tests_failed": 0,
+    "theory_id": "BTHEORY-2bec985c7296"
+  },
+  {
+    "witness_id": "W-FRD-Q0010-02-Q0010",
+    "home": "A1-H1",
+    "rival": "A1-H2",
+    "axis": "A1",
+    "kind": "diagnostic",
+    "membership_screen_passes": true,
+    "t1": "FAIL",
+    "t2": "FAIL",
+    "t1_certificate": {
+      "kind": "T1_cannot_be_accommodated",
+      "conflicting_rule_bundle": [
+        {
+          "unit_id": "A1-H2-R1",
+          "unit_group": "required",
+          "relation": "CONTRADICTS",
+          "basis": "AGREED",
+          "trace": "predicate ['UP'] asserted with opposite polarity (coverage 1.00) [local-rules 1.8 pass A]"
+        }
+      ],
+      "why": "the witness contradicts content the rival asserts or realizes one of its recorded falsifiers"
+    },
+    "t2_certificate": {
+      "kind": "T2_cannot_be_accommodated",
+      "required_units_forbidden": [
+        {
+          "unit_id": "A1-H2-R1",
+          "trace": "predicate ['UP'] asserted with opposite polarity (coverage 1.00) [local-rules 1.8 pass A]",
+          "basis": "AGREED"
+        }
+      ],
+      "required_units_blocked_by_incompatibility": [],
+      "rival_units_already_without_options": [],
+      "why": "once the witness is established the rival cannot cover these required units"
+    },
+    "crux": false,
+    "tests_failed": 2,
+    "theory_id": "BTHEORY-b3f5413e511d"
+  },
+  {
+    "witness_id": "W-FRD-Q0010-02-Q0010",
+    "home": "A1-H1",
+    "rival": "A1-H3",
+    "axis": "A1",
+    "kind": "diagnostic",
+    "membership_screen_passes": true,
+    "t1": "PASS",
+    "t2": "PASS",
+    "t1_certificate": {
+      "kind": "T1_accommodated",
+      "units_checked": [
+        "A1-H3-R1",
+        "A1-H3-R2",
+        "A1-H3-C1",
+        "A1-H3-E1",
+        "A1-H3-A1"
+      ],
+      "unjudged_treated_as_no_relation": [],
+      "why": "no CONTRADICTS relation with any asserted unit and no realized falsifier"
+    },
+    "t2_certificate": {
+      "kind": "T2_accommodated",
+      "example_arrangement": {
+        "A1-H3-R1": null,
+        "A1-H3-R2": "OPT-dcd10beb12ca"
+      },
+      "rival_units_already_without_options": [
+        "A1-H3-R1"
+      ],
+      "why": "the witness removes no option the rival needs; the rival is already incomplete on the listed units, independent of this witness"
+    },
+    "crux": false,
+    "tests_failed": 0,
+    "theory_id": "BTHEORY-2bec985c7296"
+  },
+  {
+    "witness_id": "W-FRD-Q0010-03-Q0010",
+    "home": "A1-H1",
+    "rival": "A1-H2",
+    "axis": "A1",
+    "kind": "diagnostic",
+    "membership_screen_passes": false,
+    "t1": "FAIL",
+    "t2": "PASS",
+    "t1_certificate": {
+      "kind": "T1_cannot_be_accommodated",
+      "conflicting_rule_bundle": [
+        {
+          "unit_id": "A1-H2-A1",
+          "unit_group": "adverse_test_realized",
+          "relation": "WITNESS_ENTAILS_UNIT",
+          "basis": "AGREED",
+          "trace": "witness supplies every unit element and adds detail; coverage 0.79 [local-rules 1.8 pass A]"
+        }
+      ],
+      "why": "the witness contradicts content the rival asserts or realizes one of its recorded falsifiers"
+    },
+    "t2_certificate": {
+      "kind": "T2_accommodated",
+      "example_arrangement": {
+        "A1-H2-R1": "OPT-9eaa08e053bd",
+        "A1-H2-R2": "OPT-0569d5574e6c"
+      },
+      "rival_units_already_without_options": [],
+      "why": "the witness removes no option the rival needs"
+    },
+    "crux": false,
+    "tests_failed": 1,
+    "theory_id": "BTHEORY-b3f5413e511d"
+  },
+  {
+    "witness_id": "W-FRD-Q0010-03-Q0010",
+    "home": "A1-H1",
+    "rival": "A1-H3",
+    "axis": "A1",
+    "kind": "diagnostic",
+    "membership_screen_passes": true,
+    "t1": "PASS",
+    "t2": "PASS",
+    "t1_certificate": {
+      "kind": "T1_accommodated",
+      "units_checked": [
+        "A1-H3-R1",
+        "A1-H3-R2",
+        "A1-H3-C1",
+        "A1-H3-E1",
+        "A1-H3-A1"
+      ],
+      "unjudged_treated_as_no_relation": [],
+      "why": "no CONTRADICTS relation with any asserted unit and no realized falsifier"
+    },
+    "t2_certificate": {
+      "kind": "T2_accommodated",
+      "example_arrangement": {
+        "A1-H3-R1": null,
+        "A1-H3-R2": "OPT-dcd10beb12ca"
+      },
+      "rival_units_already_without_options": [
+        "A1-H3-R1"
+      ],
+      "why": "the witness removes no option the rival needs; the rival is already incomplete on the listed units, independent of this witness"
+    },
+    "crux": false,
+    "tests_failed": 0,
+    "theory_id": "BTHEORY-2bec985c7296"
+  },
+  {
+    "witness_id": "W-FRD-Q0001-03-Q0001",
+    "home": "A1-H2",
+    "rival": "A1-H1",
+    "axis": "A1",
+    "kind": "crux",
+    "membership_screen_passes": true,
+    "t1": "FAIL",
+    "t2": "FAIL",
+    "t1_certificate": {
+      "kind": "T1_cannot_be_accommodated",
+      "conflicting_rule_bundle": [
+        {
+          "unit_id": "A1-H1-R1",
+          "unit_group": "required",
+          "relation": "CONTRADICTS",
+          "basis": "AGREED",
+          "trace": "predicate ['UP'] asserted with opposite polarity (coverage 1.00) [local-rules 1.8 pass A]"
+        }
+      ],
+      "why": "the witness contradicts content the rival asserts or realizes one of its recorded falsifiers"
+    },
+    "t2_certificate": {
+      "kind": "T2_cannot_be_accommodated",
+      "required_units_forbidden": [
+        {
+          "unit_id": "A1-H1-R1",
+          "trace": "predicate ['UP'] asserted with opposite polarity (coverage 1.00) [local-rules 1.8 pass A]",
+          "basis": "AGREED"
+        }
+      ],
+      "required_units_blocked_by_incompatibility": [],
+      "rival_units_already_without_options": [
+        "A1-H1-R3"
+      ],
+      "why": "once the witness is established the rival cannot cover these required units"
+    },
+    "crux": true,
+    "tests_failed": 2,
+    "theory_id": "BTHEORY-74df8e6a4329"
+  },
+  {
+    "witness_id": "W-FRD-Q0001-03-Q0001",
+    "home": "A1-H2",
+    "rival": "A1-H3",
+    "axis": "A1",
+    "kind": "crux",
+    "membership_screen_passes": true,
+    "t1": "FAIL",
+    "t2": "FAIL",
+    "t1_certificate": {
+      "kind": "T1_cannot_be_accommodated",
+      "conflicting_rule_bundle": [
+        {
+          "unit_id": "A1-H3-R1",
+          "unit_group": "required",
+          "relation": "CONTRADICTS",
+          "basis": "AGREED",
+          "trace": "predicate ['UP'] asserted with opposite polarity (coverage 0.65) [local-rules 1.8 pass A]"
+        }
+      ],
+      "why": "the witness contradicts content the rival asserts or realizes one of its recorded falsifiers"
+    },
+    "t2_certificate": {
+      "kind": "T2_cannot_be_accommodated",
+      "required_units_forbidden": [
+        {
+          "unit_id": "A1-H3-R1",
+          "trace": "predicate ['UP'] asserted with opposite polarity (coverage 0.65) [local-rules 1.8 pass A]",
+          "basis": "AGREED"
+        }
+      ],
+      "required_units_blocked_by_incompatibility": [],
+      "rival_units_already_without_options": [],
+      "why": "once the witness is established the rival cannot cover these required units"
+    },
+    "crux": true,
+    "tests_failed": 2,
+    "theory_id": "BTHEORY-2bec985c7296"
+  },
+  {
+    "witness_id": "W-FRD-Q0002-01-Q0002",
+    "home": "A1-H2",
+    "rival": "A1-H1",
+    "axis": "A1",
+    "kind": "crux",
+    "membership_screen_passes": true,
+    "t1": "FAIL",
+    "t2": "PASS",
+    "t1_certificate": {
+      "kind": "T1_cannot_be_accommodated",
+      "conflicting_rule_bundle": [
+        {
+          "unit_id": "A1-H1-A1",
+          "unit_group": "adverse_test_realized",
+          "relation": "WITNESS_ENTAILS_UNIT",
+          "basis": "AGREED",
+          "trace": "witness supplies every unit element and adds detail; coverage 1.00 [local-rules 1.8 pass A]"
+        }
+      ],
+      "why": "the witness contradicts content the rival asserts or realizes one of its recorded falsifiers"
+    },
+    "t2_certificate": {
+      "kind": "T2_accommodated",
+      "example_arrangement": {
+        "A1-H1-R1": "OPT-99609b7d1ca4",
+        "A1-H1-R2": "OPT-6ccddf1c7a3e",
+        "A1-H1-R3": null
+      },
+      "rival_units_already_without_options": [
+        "A1-H1-R3"
+      ],
+      "why": "the witness removes no option the rival needs; the rival is already incomplete on the listed units, independent of this witness"
+    },
+    "crux": false,
+    "tests_failed": 1,
+    "theory_id": "BTHEORY-74df8e6a4329"
+  },
+  {
+    "witness_id": "W-FRD-Q0002-01-Q0002",
+    "home": "A1-H2",
+    "rival": "A1-H3",
+    "axis": "A1",
+    "kind": "crux",
+    "membership_screen_passes": true,
+    "t1": "PASS",
+    "t2": "PASS",
+    "t1_certificate": {
+      "kind": "T1_accommodated",
+      "units_checked": [
+        "A1-H3-R1",
+        "A1-H3-R2",
+        "A1-H3-C1",
+        "A1-H3-E1",
+        "A1-H3-A1"
+      ],
+      "unjudged_treated_as_no_relation": [],
+      "why": "no CONTRADICTS relation with any asserted unit and no realized falsifier"
+    },
+    "t2_certificate": {
+      "kind": "T2_accommodated",
+      "example_arrangement": {
+        "A1-H3-R1": null,
+        "A1-H3-R2": "OPT-dcd10beb12ca"
+      },
+      "rival_units_already_without_options": [
+        "A1-H3-R1"
+      ],
+      "why": "the witness removes no option the rival needs; the rival is already incomplete on the listed units, independent of this witness"
+    },
+    "crux": false,
+    "tests_failed": 0,
+    "theory_id": "BTHEORY-2bec985c7296"
+  },
+  {
+    "witness_id": "W-FRD-Q0002-03-Q0002",
+    "home": "A1-H2",
+    "rival": "A1-H1",
+    "axis": "A1",
+    "kind": "crux",
+    "membership_screen_passes": true,
+    "t1": "FAIL",
+    "t2": "FAIL",
+    "t1_certificate": {
+      "kind": "T1_cannot_be_accommodated",
+      "conflicting_rule_bundle": [
+        {
+          "unit_id": "A1-H1-R1",
+          "unit_group": "required",
+          "relation": "CONTRADICTS",
+          "basis": "AGREED",
+          "trace": "predicate ['UP'] asserted with opposite polarity (coverage 1.00) [local-rules 1.8 pass A]"
+        }
+      ],
+      "why": "the witness contradicts content the rival asserts or realizes one of its recorded falsifiers"
+    },
+    "t2_certificate": {
+      "kind": "T2_cannot_be_accommodated",
+      "required_units_forbidden": [
+        {
+          "unit_id": "A1-H1-R1",
+          "trace": "predicate ['UP'] asserted with opposite polarity (coverage 1.00) [local-rules 1.8 pass A]",
+          "basis": "AGREED"
+        }
+      ],
+      "required_units_blocked_by_incompatibility": [],
+      "rival_units_already_without_options": [
+        "A1-H1-R3"
+      ],
+      "why": "once the witness is established the rival cannot cover these required units"
+    },
+    "crux": true,
+    "tests_failed": 2,
+    "theory_id": "BTHEORY-74df8e6a4329"
+  },
+  {
+    "witness_id": "W-FRD-Q0002-03-Q0002",
+    "home": "A1-H2",
+    "rival": "A1-H3",
+    "axis": "A1",
+    "kind": "crux",
+    "membership_screen_passes": true,
+    "t1": "FAIL",
+    "t2": "FAIL",
+    "t1_certificate": {
+      "kind": "T1_cannot_be_accommodated",
+      "conflicting_rule_bundle": [
+        {
+          "unit_id": "A1-H3-R1",
+          "unit_group": "required",
+          "relation": "CONTRADICTS",
+          "basis": "AGREED",
+          "trace": "predicate ['UP'] asserted with opposite polarity (coverage 0.65) [local-rules 1.8 pass A]"
+        }
+      ],
+      "why": "the witness contradicts content the rival asserts or realizes one of its recorded falsifiers"
+    },
+    "t2_certificate": {
+      "kind": "T2_cannot_be_accommodated",
+      "required_units_forbidden": [
+        {
+          "unit_id": "A1-H3-R1",
+          "trace": "predicate ['UP'] asserted with opposite polarity (coverage 0.65) [local-rules 1.8 pass A]",
+          "basis": "AGREED"
+        }
+      ],
+      "required_units_blocked_by_incompatibility": [],
+      "rival_units_already_without_options": [],
+      "why": "once the witness is established the rival cannot cover these required units"
+    },
+    "crux": true,
+    "tests_failed": 2,
+    "theory_id": "BTHEORY-2bec985c7296"
+  },
+  {
+    "witness_id": "W-FRD-Q0003-03-Q0003",
+    "home": "A1-H2",
+    "rival": "A1-H1",
+    "axis": "A1",
+    "kind": "crux",
+    "membership_screen_passes": true,
+    "t1": "FAIL",
+    "t2": "FAIL",
+    "t1_certificate": {
+      "kind": "T1_cannot_be_accommodated",
+      "conflicting_rule_bundle": [
+        {
+          "unit_id": "A1-H1-R1",
+          "unit_group": "required",
+          "relation": "CONTRADICTS",
+          "basis": "AGREED",
+          "trace": "predicate ['UP'] asserted with opposite polarity (coverage 1.00) [local-rules 1.8 pass A]"
+        }
+      ],
+      "why": "the witness contradicts content the rival asserts or realizes one of its recorded falsifiers"
+    },
+    "t2_certificate": {
+      "kind": "T2_cannot_be_accommodated",
+      "required_units_forbidden": [
+        {
+          "unit_id": "A1-H1-R1",
+          "trace": "predicate ['UP'] asserted with opposite polarity (coverage 1.00) [local-rules 1.8 pass A]",
+          "basis": "AGREED"
+        }
+      ],
+      "required_units_blocked_by_incompatibility": [],
+      "rival_units_already_without_options": [
+        "A1-H1-R3"
+      ],
+      "why": "once the witness is established the rival cannot cover these required units"
+    },
+    "crux": true,
+    "tests_failed": 2,
+    "theory_id": "BTHEORY-74df8e6a4329"
+  },
+  {
+    "witness_id": "W-FRD-Q0003-03-Q0003",
+    "home": "A1-H2",
+    "rival": "A1-H3",
+    "axis": "A1",
+    "kind": "crux",
+    "membership_screen_passes": true,
+    "t1": "FAIL",
+    "t2": "FAIL",
+    "t1_certificate": {
+      "kind": "T1_cannot_be_accommodated",
+      "conflicting_rule_bundle": [
+        {
+          "unit_id": "A1-H3-R1",
+          "unit_group": "required",
+          "relation": "CONTRADICTS",
+          "basis": "AGREED",
+          "trace": "predicate ['UP'] asserted with opposite polarity (coverage 0.65) [local-rules 1.8 pass A]"
+        }
+      ],
+      "why": "the witness contradicts content the rival asserts or realizes one of its recorded falsifiers"
+    },
+    "t2_certificate": {
+      "kind": "T2_cannot_be_accommodated",
+      "required_units_forbidden": [
+        {
+          "unit_id": "A1-H3-R1",
+          "trace": "predicate ['UP'] asserted with opposite polarity (coverage 0.65) [local-rules 1.8 pass A]",
+          "basis": "AGREED"
+        }
+      ],
+      "required_units_blocked_by_incompatibility": [],
+      "rival_units_already_without_options": [],
+      "why": "once the witness is established the rival cannot cover these required units"
+    },
+    "crux": true,
+    "tests_failed": 2,
+    "theory_id": "BTHEORY-2bec985c7296"
+  },
+  {
+    "witness_id": "W-FRD-Q0004-03-Q0004",
+    "home": "A1-H2",
+    "rival": "A1-H1",
+    "axis": "A1",
+    "kind": "crux",
+    "membership_screen_passes": true,
+    "t1": "FAIL",
+    "t2": "PASS",
+    "t1_certificate": {
+      "kind": "T1_cannot_be_accommodated",
+      "conflicting_rule_bundle": [
+        {
+          "unit_id": "A1-H1-A1",
+          "unit_group": "adverse_test_realized",
+          "relation": "WITNESS_ENTAILS_UNIT",
+          "basis": "AGREED",
+          "trace": "witness supplies every unit element and adds detail; coverage 1.00 [local-rules 1.8 pass A]"
+        }
+      ],
+      "why": "the witness contradicts content the rival asserts or realizes one of its recorded falsifiers"
+    },
+    "t2_certificate": {
+      "kind": "T2_accommodated",
+      "example_arrangement": {
+        "A1-H1-R1": "OPT-99609b7d1ca4",
+        "A1-H1-R2": "OPT-6ccddf1c7a3e",
+        "A1-H1-R3": null
+      },
+      "rival_units_already_without_options": [
+        "A1-H1-R3"
+      ],
+      "why": "the witness removes no option the rival needs; the rival is already incomplete on the listed units, independent of this witness"
+    },
+    "crux": false,
+    "tests_failed": 1,
+    "theory_id": "BTHEORY-74df8e6a4329"
+  },
+  {
+    "witness_id": "W-FRD-Q0004-03-Q0004",
+    "home": "A1-H2",
+    "rival": "A1-H3",
+    "axis": "A1",
+    "kind": "crux",
+    "membership_screen_passes": true,
+    "t1": "PASS",
+    "t2": "PASS",
+    "t1_certificate": {
+      "kind": "T1_accommodated",
+      "units_checked": [
+        "A1-H3-R1",
+        "A1-H3-R2",
+        "A1-H3-C1",
+        "A1-H3-E1",
+        "A1-H3-A1"
+      ],
+      "unjudged_treated_as_no_relation": [],
+      "why": "no CONTRADICTS relation with any asserted unit and no realized falsifier"
+    },
+    "t2_certificate": {
+      "kind": "T2_accommodated",
+      "example_arrangement": {
+        "A1-H3-R1": null,
+        "A1-H3-R2": "OPT-dcd10beb12ca"
+      },
+      "rival_units_already_without_options": [
+        "A1-H3-R1"
+      ],
+      "why": "the witness removes no option the rival needs; the rival is already incomplete on the listed units, independent of this witness"
+    },
+    "crux": false,
+    "tests_failed": 0,
+    "theory_id": "BTHEORY-2bec985c7296"
+  },
+  {
+    "witness_id": "W-FRD-Q0005-01-Q0005",
+    "home": "A1-H2",
+    "rival": "A1-H1",
+    "axis": "A1",
+    "kind": "crux",
+    "membership_screen_passes": true,
+    "t1": "FAIL",
+    "t2": "FAIL",
+    "t1_certificate": {
+      "kind": "T1_cannot_be_accommodated",
+      "conflicting_rule_bundle": [
+        {
+          "unit_id": "A1-H1-R1",
+          "unit_group": "required",
+          "relation": "CONTRADICTS",
+          "basis": "AGREED",
+          "trace": "predicate ['UP'] asserted with opposite polarity (coverage 1.00) [local-rules 1.8 pass A]"
+        }
+      ],
+      "why": "the witness contradicts content the rival asserts or realizes one of its recorded falsifiers"
+    },
+    "t2_certificate": {
+      "kind": "T2_cannot_be_accommodated",
+      "required_units_forbidden": [
+        {
+          "unit_id": "A1-H1-R1",
+          "trace": "predicate ['UP'] asserted with opposite polarity (coverage 1.00) [local-rules 1.8 pass A]",
+          "basis": "AGREED"
+        }
+      ],
+      "required_units_blocked_by_incompatibility": [],
+      "rival_units_already_without_options": [
+        "A1-H1-R3"
+      ],
+      "why": "once the witness is established the rival cannot cover these required units"
+    },
+    "crux": true,
+    "tests_failed": 2,
+    "theory_id": "BTHEORY-74df8e6a4329"
+  },
+  {
+    "witness_id": "W-FRD-Q0005-01-Q0005",
+    "home": "A1-H2",
+    "rival": "A1-H3",
+    "axis": "A1",
+    "kind": "crux",
+    "membership_screen_passes": true,
+    "t1": "FAIL",
+    "t2": "FAIL",
+    "t1_certificate": {
+      "kind": "T1_cannot_be_accommodated",
+      "conflicting_rule_bundle": [
+        {
+          "unit_id": "A1-H3-R1",
+          "unit_group": "required",
+          "relation": "CONTRADICTS",
+          "basis": "AGREED",
+          "trace": "predicate ['UP'] asserted with opposite polarity (coverage 0.65) [local-rules 1.8 pass A]"
+        }
+      ],
+      "why": "the witness contradicts content the rival asserts or realizes one of its recorded falsifiers"
+    },
+    "t2_certificate": {
+      "kind": "T2_cannot_be_accommodated",
+      "required_units_forbidden": [
+        {
+          "unit_id": "A1-H3-R1",
+          "trace": "predicate ['UP'] asserted with opposite polarity (coverage 0.65) [local-rules 1.8 pass A]",
+          "basis": "AGREED"
+        }
+      ],
+      "required_units_blocked_by_incompatibility": [],
+      "rival_units_already_without_options": [],
+      "why": "once the witness is established the rival cannot cover these required units"
+    },
+    "crux": true,
+    "tests_failed": 2,
+    "theory_id": "BTHEORY-2bec985c7296"
+  },
+  {
+    "witness_id": "W-FRD-Q0005-02-Q0005",
+    "home": "A1-H2",
+    "rival": "A1-H1",
+    "axis": "A1",
+    "kind": "crux",
+    "membership_screen_passes": true,
+    "t1": "FAIL",
+    "t2": "PASS",
+    "t1_certificate": {
+      "kind": "T1_cannot_be_accommodated",
+      "conflicting_rule_bundle": [
+        {
+          "unit_id": "A1-H1-A1",
+          "unit_group": "adverse_test_realized",
+          "relation": "WITNESS_ENTAILS_UNIT",
+          "basis": "AGREED",
+          "trace": "witness supplies every unit element and adds detail; coverage 1.00 [local-rules 1.8 pass A]"
+        }
+      ],
+      "why": "the witness contradicts content the rival asserts or realizes one of its recorded falsifiers"
+    },
+    "t2_certificate": {
+      "kind": "T2_accommodated",
+      "example_arrangement": {
+        "A1-H1-R1": "OPT-99609b7d1ca4",
+        "A1-H1-R2": "OPT-6ccddf1c7a3e",
+        "A1-H1-R3": null
+      },
+      "rival_units_already_without_options": [
+        "A1-H1-R3"
+      ],
+      "why": "the witness removes no option the rival needs; the rival is already incomplete on the listed units, independent of this witness"
+    },
+    "crux": false,
+    "tests_failed": 1,
+    "theory_id": "BTHEORY-74df8e6a4329"
+  },
+  {
+    "witness_id": "W-FRD-Q0005-02-Q0005",
+    "home": "A1-H2",
+    "rival": "A1-H3",
+    "axis": "A1",
+    "kind": "crux",
+    "membership_screen_passes": true,
+    "t1": "PASS",
+    "t2": "PASS",
+    "t1_certificate": {
+      "kind": "T1_accommodated",
+      "units_checked": [
+        "A1-H3-R1",
+        "A1-H3-R2",
+        "A1-H3-C1",
+        "A1-H3-E1",
+        "A1-H3-A1"
+      ],
+      "unjudged_treated_as_no_relation": [],
+      "why": "no CONTRADICTS relation with any asserted unit and no realized falsifier"
+    },
+    "t2_certificate": {
+      "kind": "T2_accommodated",
+      "example_arrangement": {
+        "A1-H3-R1": null,
+        "A1-H3-R2": "OPT-dcd10beb12ca"
+      },
+      "rival_units_already_without_options": [
+        "A1-H3-R1"
+      ],
+      "why": "the witness removes no option the rival needs; the rival is already incomplete on the listed units, independent of this witness"
+    },
+    "crux": false,
+    "tests_failed": 0,
+    "theory_id": "BTHEORY-2bec985c7296"
+  },
+  {
+    "witness_id": "W-FRD-Q0006-03-Q0006",
+    "home": "A1-H2",
+    "rival": "A1-H1",
+    "axis": "A1",
+    "kind": "crux",
+    "membership_screen_passes": true,
+    "t1": "FAIL",
+    "t2": "PASS",
+    "t1_certificate": {
+      "kind": "T1_cannot_be_accommodated",
+      "conflicting_rule_bundle": [
+        {
+          "unit_id": "A1-H1-A1",
+          "unit_group": "adverse_test_realized",
+          "relation": "WITNESS_ENTAILS_UNIT",
+          "basis": "AGREED",
+          "trace": "witness supplies every unit element and adds detail; coverage 1.00 [local-rules 1.8 pass A]"
+        }
+      ],
+      "why": "the witness contradicts content the rival asserts or realizes one of its recorded falsifiers"
+    },
+    "t2_certificate": {
+      "kind": "T2_accommodated",
+      "example_arrangement": {
+        "A1-H1-R1": "OPT-99609b7d1ca4",
+        "A1-H1-R2": "OPT-6ccddf1c7a3e",
+        "A1-H1-R3": null
+      },
+      "rival_units_already_without_options": [
+        "A1-H1-R3"
+      ],
+      "why": "the witness removes no option the rival needs; the rival is already incomplete on the listed units, independent of this witness"
+    },
+    "crux": false,
+    "tests_failed": 1,
+    "theory_id": "BTHEORY-74df8e6a4329"
+  },
+  {
+    "witness_id": "W-FRD-Q0006-03-Q0006",
+    "home": "A1-H2",
+    "rival": "A1-H3",
+    "axis": "A1",
+    "kind": "crux",
+    "membership_screen_passes": true,
+    "t1": "PASS",
+    "t2": "PASS",
+    "t1_certificate": {
+      "kind": "T1_accommodated",
+      "units_checked": [
+        "A1-H3-R1",
+        "A1-H3-R2",
+        "A1-H3-C1",
+        "A1-H3-E1",
+        "A1-H3-A1"
+      ],
+      "unjudged_treated_as_no_relation": [],
+      "why": "no CONTRADICTS relation with any asserted unit and no realized falsifier"
+    },
+    "t2_certificate": {
+      "kind": "T2_accommodated",
+      "example_arrangement": {
+        "A1-H3-R1": null,
+        "A1-H3-R2": "OPT-dcd10beb12ca"
+      },
+      "rival_units_already_without_options": [
+        "A1-H3-R1"
+      ],
+      "why": "the witness removes no option the rival needs; the rival is already incomplete on the listed units, independent of this witness"
+    },
+    "crux": false,
+    "tests_failed": 0,
+    "theory_id": "BTHEORY-2bec985c7296"
+  },
+  {
+    "witness_id": "W-FRD-Q0007-03-Q0007",
+    "home": "A1-H2",
+    "rival": "A1-H1",
+    "axis": "A1",
+    "kind": "crux",
+    "membership_screen_passes": true,
+    "t1": "FAIL",
+    "t2": "FAIL",
+    "t1_certificate": {
+      "kind": "T1_cannot_be_accommodated",
+      "conflicting_rule_bundle": [
+        {
+          "unit_id": "A1-H1-R1",
+          "unit_group": "required",
+          "relation": "CONTRADICTS",
+          "basis": "AGREED",
+          "trace": "predicate ['UP'] asserted with opposite polarity (coverage 1.00) [local-rules 1.8 pass A]"
+        }
+      ],
+      "why": "the witness contradicts content the rival asserts or realizes one of its recorded falsifiers"
+    },
+    "t2_certificate": {
+      "kind": "T2_cannot_be_accommodated",
+      "required_units_forbidden": [
+        {
+          "unit_id": "A1-H1-R1",
+          "trace": "predicate ['UP'] asserted with opposite polarity (coverage 1.00) [local-rules 1.8 pass A]",
+          "basis": "AGREED"
+        }
+      ],
+      "required_units_blocked_by_incompatibility": [],
+      "rival_units_already_without_options": [
+        "A1-H1-R3"
+      ],
+      "why": "once the witness is established the rival cannot cover these required units"
+    },
+    "crux": true,
+    "tests_failed": 2,
+    "theory_id": "BTHEORY-74df8e6a4329"
+  },
+  {
+    "witness_id": "W-FRD-Q0007-03-Q0007",
+    "home": "A1-H2",
+    "rival": "A1-H3",
+    "axis": "A1",
+    "kind": "crux",
+    "membership_screen_passes": true,
+    "t1": "FAIL",
+    "t2": "FAIL",
+    "t1_certificate": {
+      "kind": "T1_cannot_be_accommodated",
+      "conflicting_rule_bundle": [
+        {
+          "unit_id": "A1-H3-R1",
+          "unit_group": "required",
+          "relation": "CONTRADICTS",
+          "basis": "AGREED",
+          "trace": "predicate ['UP'] asserted with opposite polarity (coverage 0.65) [local-rules 1.8 pass A]"
+        }
+      ],
+      "why": "the witness contradicts content the rival asserts or realizes one of its recorded falsifiers"
+    },
+    "t2_certificate": {
+      "kind": "T2_cannot_be_accommodated",
+      "required_units_forbidden": [
+        {
+          "unit_id": "A1-H3-R1",
+          "trace": "predicate ['UP'] asserted with opposite polarity (coverage 0.65) [local-rules 1.8 pass A]",
+          "basis": "AGREED"
+        }
+      ],
+      "required_units_blocked_by_incompatibility": [],
+      "rival_units_already_without_options": [],
+      "why": "once the witness is established the rival cannot cover these required units"
+    },
+    "crux": true,
+    "tests_failed": 2,
+    "theory_id": "BTHEORY-2bec985c7296"
+  },
+  {
+    "witness_id": "W-FRD-Q0008-01-Q0008",
+    "home": "A1-H2",
+    "rival": "A1-H1",
+    "axis": "A1",
+    "kind": "crux",
+    "membership_screen_passes": true,
+    "t1": "FAIL",
+    "t2": "PASS",
+    "t1_certificate": {
+      "kind": "T1_cannot_be_accommodated",
+      "conflicting_rule_bundle": [
+        {
+          "unit_id": "A1-H1-A1",
+          "unit_group": "adverse_test_realized",
+          "relation": "WITNESS_ENTAILS_UNIT",
+          "basis": "AGREED",
+          "trace": "witness supplies every unit element and adds detail; coverage 1.00 [local-rules 1.8 pass A]"
+        }
+      ],
+      "why": "the witness contradicts content the rival asserts or realizes one of its recorded falsifiers"
+    },
+    "t2_certificate": {
+      "kind": "T2_accommodated",
+      "example_arrangement": {
+        "A1-H1-R1": "OPT-99609b7d1ca4",
+        "A1-H1-R2": "OPT-6ccddf1c7a3e",
+        "A1-H1-R3": null
+      },
+      "rival_units_already_without_options": [
+        "A1-H1-R3"
+      ],
+      "why": "the witness removes no option the rival needs; the rival is already incomplete on the listed units, independent of this witness"
+    },
+    "crux": false,
+    "tests_failed": 1,
+    "theory_id": "BTHEORY-74df8e6a4329"
+  },
+  {
+    "witness_id": "W-FRD-Q0008-01-Q0008",
+    "home": "A1-H2",
+    "rival": "A1-H3",
+    "axis": "A1",
+    "kind": "crux",
+    "membership_screen_passes": true,
+    "t1": "PASS",
+    "t2": "PASS",
+    "t1_certificate": {
+      "kind": "T1_accommodated",
+      "units_checked": [
+        "A1-H3-R1",
+        "A1-H3-R2",
+        "A1-H3-C1",
+        "A1-H3-E1",
+        "A1-H3-A1"
+      ],
+      "unjudged_treated_as_no_relation": [],
+      "why": "no CONTRADICTS relation with any asserted unit and no realized falsifier"
+    },
+    "t2_certificate": {
+      "kind": "T2_accommodated",
+      "example_arrangement": {
+        "A1-H3-R1": null,
+        "A1-H3-R2": "OPT-dcd10beb12ca"
+      },
+      "rival_units_already_without_options": [
+        "A1-H3-R1"
+      ],
+      "why": "the witness removes no option the rival needs; the rival is already incomplete on the listed units, independent of this witness"
+    },
+    "crux": false,
+    "tests_failed": 0,
+    "theory_id": "BTHEORY-2bec985c7296"
+  },
+  {
+    "witness_id": "W-FRD-Q0008-03-Q0008",
+    "home": "A1-H2",
+    "rival": "A1-H1",
+    "axis": "A1",
+    "kind": "crux",
+    "membership_screen_passes": true,
+    "t1": "FAIL",
+    "t2": "FAIL",
+    "t1_certificate": {
+      "kind": "T1_cannot_be_accommodated",
+      "conflicting_rule_bundle": [
+        {
+          "unit_id": "A1-H1-R1",
+          "unit_group": "required",
+          "relation": "CONTRADICTS",
+          "basis": "AGREED",
+          "trace": "predicate ['UP'] asserted with opposite polarity (coverage 1.00) [local-rules 1.8 pass A]"
+        }
+      ],
+      "why": "the witness contradicts content the rival asserts or realizes one of its recorded falsifiers"
+    },
+    "t2_certificate": {
+      "kind": "T2_cannot_be_accommodated",
+      "required_units_forbidden": [
+        {
+          "unit_id": "A1-H1-R1",
+          "trace": "predicate ['UP'] asserted with opposite polarity (coverage 1.00) [local-rules 1.8 pass A]",
+          "basis": "AGREED"
+        }
+      ],
+      "required_units_blocked_by_incompatibility": [],
+      "rival_units_already_without_options": [
+        "A1-H1-R3"
+      ],
+      "why": "once the witness is established the rival cannot cover these required units"
+    },
+    "crux": true,
+    "tests_failed": 2,
+    "theory_id": "BTHEORY-74df8e6a4329"
+  },
+  {
+    "witness_id": "W-FRD-Q0008-03-Q0008",
+    "home": "A1-H2",
+    "rival": "A1-H3",
+    "axis": "A1",
+    "kind": "crux",
+    "membership_screen_passes": true,
+    "t1": "FAIL",
+    "t2": "FAIL",
+    "t1_certificate": {
+      "kind": "T1_cannot_be_accommodated",
+      "conflicting_rule_bundle": [
+        {
+          "unit_id": "A1-H3-R1",
+          "unit_group": "required",
+          "relation": "CONTRADICTS",
+          "basis": "AGREED",
+          "trace": "predicate ['UP'] asserted with opposite polarity (coverage 0.65) [local-rules 1.8 pass A]"
+        }
+      ],
+      "why": "the witness contradicts content the rival asserts or realizes one of its recorded falsifiers"
+    },
+    "t2_certificate": {
+      "kind": "T2_cannot_be_accommodated",
+      "required_units_forbidden": [
+        {
+          "unit_id": "A1-H3-R1",
+          "trace": "predicate ['UP'] asserted with opposite polarity (coverage 0.65) [local-rules 1.8 pass A]",
+          "basis": "AGREED"
+        }
+      ],
+      "required_units_blocked_by_incompatibility": [],
+      "rival_units_already_without_options": [],
+      "why": "once the witness is established the rival cannot cover these required units"
+    },
+    "crux": true,
+    "tests_failed": 2,
+    "theory_id": "BTHEORY-2bec985c7296"
+  },
+  {
+    "witness_id": "W-FRD-Q0009-03-Q0009",
+    "home": "A1-H2",
+    "rival": "A1-H1",
+    "axis": "A1",
+    "kind": "crux",
+    "membership_screen_passes": true,
+    "t1": "FAIL",
+    "t2": "FAIL",
+    "t1_certificate": {
+      "kind": "T1_cannot_be_accommodated",
+      "conflicting_rule_bundle": [
+        {
+          "unit_id": "A1-H1-R1",
+          "unit_group": "required",
+          "relation": "CONTRADICTS",
+          "basis": "AGREED",
+          "trace": "predicate ['UP'] asserted with opposite polarity (coverage 1.00) [local-rules 1.8 pass A]"
+        }
+      ],
+      "why": "the witness contradicts content the rival asserts or realizes one of its recorded falsifiers"
+    },
+    "t2_certificate": {
+      "kind": "T2_cannot_be_accommodated",
+      "required_units_forbidden": [
+        {
+          "unit_id": "A1-H1-R1",
+          "trace": "predicate ['UP'] asserted with opposite polarity (coverage 1.00) [local-rules 1.8 pass A]",
+          "basis": "AGREED"
+        }
+      ],
+      "required_units_blocked_by_incompatibility": [],
+      "rival_units_already_without_options": [
+        "A1-H1-R3"
+      ],
+      "why": "once the witness is established the rival cannot cover these required units"
+    },
+    "crux": true,
+    "tests_failed": 2,
+    "theory_id": "BTHEORY-74df8e6a4329"
+  },
+  {
+    "witness_id": "W-FRD-Q0009-03-Q0009",
+    "home": "A1-H2",
+    "rival": "A1-H3",
+    "axis": "A1",
+    "kind": "crux",
+    "membership_screen_passes": true,
+    "t1": "FAIL",
+    "t2": "FAIL",
+    "t1_certificate": {
+      "kind": "T1_cannot_be_accommodated",
+      "conflicting_rule_bundle": [
+        {
+          "unit_id": "A1-H3-R1",
+          "unit_group": "required",
+          "relation": "CONTRADICTS",
+          "basis": "AGREED",
+          "trace": "predicate ['UP'] asserted with opposite polarity (coverage 0.65) [local-rules 1.8 pass A]"
+        }
+      ],
+      "why": "the witness contradicts content the rival asserts or realizes one of its recorded falsifiers"
+    },
+    "t2_certificate": {
+      "kind": "T2_cannot_be_accommodated",
+      "required_units_forbidden": [
+        {
+          "unit_id": "A1-H3-R1",
+          "trace": "predicate ['UP'] asserted with opposite polarity (coverage 0.65) [local-rules 1.8 pass A]",
+          "basis": "AGREED"
+        }
+      ],
+      "required_units_blocked_by_incompatibility": [],
+      "rival_units_already_without_options": [],
+      "why": "once the witness is established the rival cannot cover these required units"
+    },
+    "crux": true,
+    "tests_failed": 2,
+    "theory_id": "BTHEORY-2bec985c7296"
+  },
+  {
+    "witness_id": "W-FRD-Q0010-03-Q0010",
+    "home": "A1-H2",
+    "rival": "A1-H1",
+    "axis": "A1",
+    "kind": "crux",
+    "membership_screen_passes": true,
+    "t1": "FAIL",
+    "t2": "PASS",
+    "t1_certificate": {
+      "kind": "T1_cannot_be_accommodated",
+      "conflicting_rule_bundle": [
+        {
+          "unit_id": "A1-H1-A1",
+          "unit_group": "adverse_test_realized",
+          "relation": "WITNESS_ENTAILS_UNIT",
+          "basis": "AGREED",
+          "trace": "witness supplies every unit element and adds detail; coverage 1.00 [local-rules 1.8 pass A]"
+        }
+      ],
+      "why": "the witness contradicts content the rival asserts or realizes one of its recorded falsifiers"
+    },
+    "t2_certificate": {
+      "kind": "T2_accommodated",
+      "example_arrangement": {
+        "A1-H1-R1": "OPT-99609b7d1ca4",
+        "A1-H1-R2": "OPT-6ccddf1c7a3e",
+        "A1-H1-R3": null
+      },
+      "rival_units_already_without_options": [
+        "A1-H1-R3"
+      ],
+      "why": "the witness removes no option the rival needs; the rival is already incomplete on the listed units, independent of this witness"
+    },
+    "crux": false,
+    "tests_failed": 1,
+    "theory_id": "BTHEORY-74df8e6a4329"
+  },
+  {
+    "witness_id": "W-FRD-Q0010-03-Q0010",
+    "home": "A1-H2",
+    "rival": "A1-H3",
+    "axis": "A1",
+    "kind": "crux",
+    "membership_screen_passes": true,
+    "t1": "PASS",
+    "t2": "PASS",
+    "t1_certificate": {
+      "kind": "T1_accommodated",
+      "units_checked": [
+        "A1-H3-R1",
+        "A1-H3-R2",
+        "A1-H3-C1",
+        "A1-H3-E1",
+        "A1-H3-A1"
+      ],
+      "unjudged_treated_as_no_relation": [],
+      "why": "no CONTRADICTS relation with any asserted unit and no realized falsifier"
+    },
+    "t2_certificate": {
+      "kind": "T2_accommodated",
+      "example_arrangement": {
+        "A1-H3-R1": null,
+        "A1-H3-R2": "OPT-dcd10beb12ca"
+      },
+      "rival_units_already_without_options": [
+        "A1-H3-R1"
+      ],
+      "why": "the witness removes no option the rival needs; the rival is already incomplete on the listed units, independent of this witness"
+    },
+    "crux": false,
+    "tests_failed": 0,
+    "theory_id": "BTHEORY-2bec985c7296"
+  },
+  {
+    "witness_id": "W-FRD-Q0003-02-Q0003",
+    "home": "A1-H3",
+    "rival": "A1-H1",
+    "axis": "A1",
+    "kind": "diagnostic",
+    "membership_screen_passes": true,
+    "t1": "PASS",
+    "t2": "PASS",
+    "t1_certificate": {
+      "kind": "T1_accommodated",
+      "units_checked": [
+        "A1-H1-R1",
+        "A1-H1-R2",
+        "A1-H1-R3",
+        "A1-H1-C1",
+        "A1-H1-E1",
+        "A1-H1-A1"
+      ],
+      "unjudged_treated_as_no_relation": [],
+      "why": "no CONTRADICTS relation with any asserted unit and no realized falsifier"
+    },
+    "t2_certificate": {
+      "kind": "T2_accommodated",
+      "example_arrangement": {
+        "A1-H1-R1": "OPT-99609b7d1ca4",
+        "A1-H1-R2": "OPT-6ccddf1c7a3e",
+        "A1-H1-R3": null
+      },
+      "rival_units_already_without_options": [
+        "A1-H1-R3"
+      ],
+      "why": "the witness removes no option the rival needs; the rival is already incomplete on the listed units, independent of this witness"
+    },
+    "crux": false,
+    "tests_failed": 0,
+    "theory_id": "BTHEORY-74df8e6a4329"
+  },
+  {
+    "witness_id": "W-FRD-Q0003-02-Q0003",
+    "home": "A1-H3",
+    "rival": "A1-H2",
+    "axis": "A1",
+    "kind": "diagnostic",
+    "membership_screen_passes": true,
+    "t1": "PASS",
+    "t2": "PASS",
+    "t1_certificate": {
+      "kind": "T1_accommodated",
+      "units_checked": [
+        "A1-H2-R1",
+        "A1-H2-R2",
+        "A1-H2-C1",
+        "A1-H2-E1",
+        "A1-H2-A1"
+      ],
+      "unjudged_treated_as_no_relation": [],
+      "why": "no CONTRADICTS relation with any asserted unit and no realized falsifier"
+    },
+    "t2_certificate": {
+      "kind": "T2_accommodated",
+      "example_arrangement": {
+        "A1-H2-R1": "OPT-9eaa08e053bd",
+        "A1-H2-R2": "OPT-0569d5574e6c"
+      },
+      "rival_units_already_without_options": [],
+      "why": "the witness removes no option the rival needs"
+    },
+    "crux": false,
+    "tests_failed": 0,
+    "theory_id": "BTHEORY-b3f5413e511d"
+  },
+  {
+    "witness_id": "W-FRD-Q0005-04-Q0005",
+    "home": "A1-H3",
+    "rival": "A1-H1",
+    "axis": "A1",
+    "kind": "diagnostic",
+    "membership_screen_passes": true,
+    "t1": "PASS",
+    "t2": "PASS",
+    "t1_certificate": {
+      "kind": "T1_accommodated",
+      "units_checked": [
+        "A1-H1-R1",
+        "A1-H1-R2",
+        "A1-H1-R3",
+        "A1-H1-C1",
+        "A1-H1-E1",
+        "A1-H1-A1"
+      ],
+      "unjudged_treated_as_no_relation": [],
+      "why": "no CONTRADICTS relation with any asserted unit and no realized falsifier"
+    },
+    "t2_certificate": {
+      "kind": "T2_accommodated",
+      "example_arrangement": {
+        "A1-H1-R1": "OPT-99609b7d1ca4",
+        "A1-H1-R2": "OPT-6ccddf1c7a3e",
+        "A1-H1-R3": null
+      },
+      "rival_units_already_without_options": [
+        "A1-H1-R3"
+      ],
+      "why": "the witness removes no option the rival needs; the rival is already incomplete on the listed units, independent of this witness"
+    },
+    "crux": false,
+    "tests_failed": 0,
+    "theory_id": "BTHEORY-74df8e6a4329"
+  },
+  {
+    "witness_id": "W-FRD-Q0005-04-Q0005",
+    "home": "A1-H3",
+    "rival": "A1-H2",
+    "axis": "A1",
+    "kind": "diagnostic",
+    "membership_screen_passes": true,
+    "t1": "PASS",
+    "t2": "PASS",
+    "t1_certificate": {
+      "kind": "T1_accommodated",
+      "units_checked": [
+        "A1-H2-R1",
+        "A1-H2-R2",
+        "A1-H2-C1",
+        "A1-H2-E1",
+        "A1-H2-A1"
+      ],
+      "unjudged_treated_as_no_relation": [],
+      "why": "no CONTRADICTS relation with any asserted unit and no realized falsifier"
+    },
+    "t2_certificate": {
+      "kind": "T2_accommodated",
+      "example_arrangement": {
+        "A1-H2-R1": "OPT-9eaa08e053bd",
+        "A1-H2-R2": "OPT-0569d5574e6c"
+      },
+      "rival_units_already_without_options": [],
+      "why": "the witness removes no option the rival needs"
+    },
+    "crux": false,
+    "tests_failed": 0,
+    "theory_id": "BTHEORY-b3f5413e511d"
+  },
+  {
+    "witness_id": "W-FRD-Q0006-01-Q0006",
+    "home": "A1-H3",
+    "rival": "A1-H1",
+    "axis": "A1",
+    "kind": "diagnostic",
+    "membership_screen_passes": true,
+    "t1": "PASS",
+    "t2": "PASS",
+    "t1_certificate": {
+      "kind": "T1_accommodated",
+      "units_checked": [
+        "A1-H1-R1",
+        "A1-H1-R2",
+        "A1-H1-R3",
+        "A1-H1-C1",
+        "A1-H1-E1",
+        "A1-H1-A1"
+      ],
+      "unjudged_treated_as_no_relation": [],
+      "why": "no CONTRADICTS relation with any asserted unit and no realized falsifier"
+    },
+    "t2_certificate": {
+      "kind": "T2_accommodated",
+      "example_arrangement": {
+        "A1-H1-R1": "OPT-99609b7d1ca4",
+        "A1-H1-R2": "OPT-6ccddf1c7a3e",
+        "A1-H1-R3": null
+      },
+      "rival_units_already_without_options": [
+        "A1-H1-R3"
+      ],
+      "why": "the witness removes no option the rival needs; the rival is already incomplete on the listed units, independent of this witness"
+    },
+    "crux": false,
+    "tests_failed": 0,
+    "theory_id": "BTHEORY-74df8e6a4329"
+  },
+  {
+    "witness_id": "W-FRD-Q0006-01-Q0006",
+    "home": "A1-H3",
+    "rival": "A1-H2",
+    "axis": "A1",
+    "kind": "diagnostic",
+    "membership_screen_passes": true,
+    "t1": "PASS",
+    "t2": "PASS",
+    "t1_certificate": {
+      "kind": "T1_accommodated",
+      "units_checked": [
+        "A1-H2-R1",
+        "A1-H2-R2",
+        "A1-H2-C1",
+        "A1-H2-E1",
+        "A1-H2-A1"
+      ],
+      "unjudged_treated_as_no_relation": [],
+      "why": "no CONTRADICTS relation with any asserted unit and no realized falsifier"
+    },
+    "t2_certificate": {
+      "kind": "T2_accommodated",
+      "example_arrangement": {
+        "A1-H2-R1": "OPT-9eaa08e053bd",
+        "A1-H2-R2": "OPT-0569d5574e6c"
+      },
+      "rival_units_already_without_options": [],
+      "why": "the witness removes no option the rival needs"
+    },
+    "crux": false,
+    "tests_failed": 0,
+    "theory_id": "BTHEORY-b3f5413e511d"
+  },
+  {
+    "witness_id": "W-FRD-Q0009-02-Q0009",
+    "home": "A1-H3",
+    "rival": "A1-H1",
+    "axis": "A1",
+    "kind": "diagnostic",
+    "membership_screen_passes": true,
+    "t1": "PASS",
+    "t2": "PASS",
+    "t1_certificate": {
+      "kind": "T1_accommodated",
+      "units_checked": [
+        "A1-H1-R1",
+        "A1-H1-R2",
+        "A1-H1-R3",
+        "A1-H1-C1",
+        "A1-H1-E1",
+        "A1-H1-A1"
+      ],
+      "unjudged_treated_as_no_relation": [],
+      "why": "no CONTRADICTS relation with any asserted unit and no realized falsifier"
+    },
+    "t2_certificate": {
+      "kind": "T2_accommodated",
+      "example_arrangement": {
+        "A1-H1-R1": "OPT-99609b7d1ca4",
+        "A1-H1-R2": "OPT-6ccddf1c7a3e",
+        "A1-H1-R3": null
+      },
+      "rival_units_already_without_options": [
+        "A1-H1-R3"
+      ],
+      "why": "the witness removes no option the rival needs; the rival is already incomplete on the listed units, independent of this witness"
+    },
+    "crux": false,
+    "tests_failed": 0,
+    "theory_id": "BTHEORY-74df8e6a4329"
+  },
+  {
+    "witness_id": "W-FRD-Q0009-02-Q0009",
+    "home": "A1-H3",
+    "rival": "A1-H2",
+    "axis": "A1",
+    "kind": "diagnostic",
+    "membership_screen_passes": true,
+    "t1": "PASS",
+    "t2": "PASS",
+    "t1_certificate": {
+      "kind": "T1_accommodated",
+      "units_checked": [
+        "A1-H2-R1",
+        "A1-H2-R2",
+        "A1-H2-C1",
+        "A1-H2-E1",
+        "A1-H2-A1"
+      ],
+      "unjudged_treated_as_no_relation": [],
+      "why": "no CONTRADICTS relation with any asserted unit and no realized falsifier"
+    },
+    "t2_certificate": {
+      "kind": "T2_accommodated",
+      "example_arrangement": {
+        "A1-H2-R1": "OPT-9eaa08e053bd",
+        "A1-H2-R2": "OPT-0569d5574e6c"
+      },
+      "rival_units_already_without_options": [],
+      "why": "the witness removes no option the rival needs"
+    },
+    "crux": false,
+    "tests_failed": 0,
+    "theory_id": "BTHEORY-b3f5413e511d"
+  }
+]

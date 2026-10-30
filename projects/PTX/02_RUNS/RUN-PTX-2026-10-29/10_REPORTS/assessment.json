@@ -1,0 +1,46 @@
+{
+  "gauge": 64,
+  "allocations": {
+    "A1": {
+      "A1-H1": 29,
+      "A1-H2": 8,
+      "A1-H3": 27
+    },
+    "A2": {
+      "A2-H1": 15,
+      "A2-H2": 13,
+      "A2-H3": 36
+    }
+  },
+  "drivers": {
+    "A1": [
+      "F002.a (W-FRD-SHIRAZI2015-01-Q0002): PTX as treatment of established pBOO raised evoked detrusor tension (P=.023) - the only bladder-specific functional positive; favors H1.",
+      "F030 (W-FRD-Q0046-01) + F031 (W-FRD-Q0047-01/Q0050-01): HIF/ischemia is a reversible BOO target and existing UAB drugs fail - supports an untreated, PTX-plausible target (H1).",
+      "F001.a/b (W-FRD-Q0001-01/-02-r3): human BPH add-on PVR fall and Qmax rise - supports H1 but quarantined (G-01: baseline imbalance, no ANCOVA).",
+      "G-02/G-03/G-04 (no bladder-tissue exposure; no response-predictor; obstruction evidence vs psychogenic/paruresis cohort F032): unresolved links blocking slot (b) - drive H3.",
+      "F033 (W-FRD-Q0019-01) prevention-only + F002.b carbachol-max null: affirmative but transfer-limited/route-specific adverse signals - the only support for H2, insufficient to defeat the shared rationale."
+    ],
+    "A2": [
+      "F003.a (W-FRD-BOWTON-01-Q0006) perfusion within hours + F021/F023 fast in-vivo-dosed engagement + F022 null in healthy bed: fast functional mechanism (A2-H1).",
+      "F006.a/b (W-FRD-Q0009-02/-03): PTX reverses established fibrosis over months with duration-response and partial persistence (A2-H2); needed vitamin E, skin not bladder.",
+      "F002.a single 4-week bladder endpoint with no onset/withdrawal kinetics + F033 prevention-not-rescue conflict: timing undetermined in the bladder - drives A2-H3."
+    ]
+  },
+  "basis_confidence": {
+    "A1": "mixed (validation-grounded witnesses + one bladder-specific preclinical functional positive + confounded human add-on signal + mechanistic perfusion/anti-inflammatory/antifibrotic support); confidence low-to-medium, scoped to trial-warrant not efficacy; H1 leads H3 by only 2 units (co-leading).",
+    "A2": "mixed/mechanistic; medium confidence that timing is undetermined, low confidence in any substantive leader; fast-functional and slow-structural evidence are cross-tissue and never meet in the bladder."
+  },
+  "strongest_objection": {
+    "A1": "The entire bladder-positive evidence base is obstruction/BPH, whereas the target men are defined partly by paruresis (psychogenic, F032) and PFPT-failure with a biofeedback-responsive coordination component (F007/F008); PTX's microcirculatory/antifibrotic mechanism may target the wrong cause in these specific men (G-04), and the strongest human signal is baseline-confounded and unadjusted (G-01).",
+    "A2": "No bladder study measures onset or post-withdrawal kinetics; the fast (perfusion/anti-inflammatory) and slow (antifibrotic) effects are in different tissues, so attributing any voiding benefit to a fast or slow mechanism is presently unsupported."
+  },
+  "reversal_finding": {
+    "A1": "A response-predictor or bladder-tissue exposure study linking a measurable baseline phenotype in this cohort to PTX-induced voiding improvement would fill slot (b) and raise H1; a well-powered PTX-monotherapy voiding null in a specified subgroup would raise H2.",
+    "A2": "A time-course bladder study: early improvement that fades on withdrawal favors A2-H1 (rapid functional); delayed improvement accumulating with duration and persisting after withdrawal favors A2-H2 (slow structural)."
+  },
+  "problems": [],
+  "call_key": "1f6be868486ea12cbf5a0101",
+  "model": "claude-opus-5-5 (fresh subagent context per batch)",
+  "time": "2026-10-29T19:09:04+00:00",
+  "caveat": "Uncalibrated working judgments about what this run's validated record warrants; not probabilities of truth and not validated by the crux result."
+}

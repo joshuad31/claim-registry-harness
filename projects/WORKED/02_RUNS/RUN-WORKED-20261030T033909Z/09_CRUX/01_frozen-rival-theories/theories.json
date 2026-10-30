@@ -1,0 +1,941 @@
+{
+  "A1-H1": {
+    "hypothesis_id": "A1-H1",
+    "required": [
+      "A1-H1-R1",
+      "A1-H1-R2",
+      "A1-H1-R3"
+    ],
+    "constraints": [
+      "A1-H1-C1"
+    ],
+    "corroborating": [
+      "A1-H1-E1"
+    ],
+    "adverse": [
+      "A1-H1-A1"
+    ],
+    "options": {
+      "A1-H1-R1": [
+        {
+          "option_id": "OPT-99609b7d1ca4",
+          "witnesses": [
+            "W-FRD-Q0001-01-Q0001"
+          ],
+          "relation": "EQUIVALENT",
+          "joint": false
+        },
+        {
+          "option_id": "OPT-37c7d96590dc",
+          "witnesses": [
+            "W-FRD-Q0003-04-Q0003"
+          ],
+          "relation": "EQUIVALENT",
+          "joint": false
+        },
+        {
+          "option_id": "OPT-bb2504b6a0cf",
+          "witnesses": [
+            "W-FRD-Q0004-02-Q0004"
+          ],
+          "relation": "EQUIVALENT",
+          "joint": false
+        },
+        {
+          "option_id": "OPT-5ee157ca42e2",
+          "witnesses": [
+            "W-FRD-Q0006-04-Q0006"
+          ],
+          "relation": "EQUIVALENT",
+          "joint": false
+        },
+        {
+          "option_id": "OPT-fd15a92150f4",
+          "witnesses": [
+            "W-FRD-Q0007-01-Q0007"
+          ],
+          "relation": "EQUIVALENT",
+          "joint": false
+        },
+        {
+          "option_id": "OPT-503c842bcd6d",
+          "witnesses": [
+            "W-FRD-Q0009-04-Q0009"
+          ],
+          "relation": "EQUIVALENT",
+          "joint": false
+        },
+        {
+          "option_id": "OPT-860bc417430d",
+          "witnesses": [
+            "W-FRD-Q0010-02-Q0010"
+          ],
+          "relation": "EQUIVALENT",
+          "joint": false
+        }
+      ],
+      "A1-H1-R2": [
+        {
+          "option_id": "OPT-6ccddf1c7a3e",
+          "witnesses": [
+            "W-FRD-Q0001-02-Q0001"
+          ],
+          "relation": "EQUIVALENT",
+          "joint": false
+        },
+        {
+          "option_id": "OPT-30c85effc749",
+          "witnesses": [
+            "W-FRD-Q0002-01-Q0002"
+          ],
+          "relation": "WITNESS_ENTAILS_UNIT",
+          "joint": false
+        },
+        {
+          "option_id": "OPT-9e06e74fd615",
+          "witnesses": [
+            "W-FRD-Q0004-01-Q0004"
+          ],
+          "relation": "EQUIVALENT",
+          "joint": false
+        },
+        {
+          "option_id": "OPT-c680b801c1d1",
+          "witnesses": [
+            "W-FRD-Q0004-03-Q0004"
+          ],
+          "relation": "WITNESS_ENTAILS_UNIT",
+          "joint": false
+        },
+        {
+          "option_id": "OPT-55565e3b9de2",
+          "witnesses": [
+            "W-FRD-Q0005-02-Q0005"
+          ],
+          "relation": "WITNESS_ENTAILS_UNIT",
+          "joint": false
+        },
+        {
+          "option_id": "OPT-f6cbc4105cbf",
+          "witnesses": [
+            "W-FRD-Q0006-03-Q0006"
+          ],
+          "relation": "WITNESS_ENTAILS_UNIT",
+          "joint": false
+        },
+        {
+          "option_id": "OPT-d080520ce4f6",
+          "witnesses": [
+            "W-FRD-Q0007-02-Q0007"
+          ],
+          "relation": "EQUIVALENT",
+          "joint": false
+        },
+        {
+          "option_id": "OPT-c8786d56a682",
+          "witnesses": [
+            "W-FRD-Q0008-01-Q0008"
+          ],
+          "relation": "WITNESS_ENTAILS_UNIT",
+          "joint": false
+        },
+        {
+          "option_id": "OPT-02d52e2d02b1",
+          "witnesses": [
+            "W-FRD-Q0010-01-Q0010"
+          ],
+          "relation": "EQUIVALENT",
+          "joint": false
+        },
+        {
+          "option_id": "OPT-81fb1f09cb8a",
+          "witnesses": [
+            "W-FRD-Q0010-03-Q0010"
+          ],
+          "relation": "WITNESS_ENTAILS_UNIT",
+          "joint": false
+        }
+      ],
+      "A1-H1-R3": []
+    },
+    "incompatibilities": [
+      [
+        "W-FRD-Q0001-01-Q0001",
+        "W-FRD-Q0001-03-Q0001"
+      ],
+      [
+        "W-FRD-Q0001-01-Q0001",
+        "W-FRD-Q0002-03-Q0002"
+      ],
+      [
+        "W-FRD-Q0001-01-Q0001",
+        "W-FRD-Q0003-03-Q0003"
+      ],
+      [
+        "W-FRD-Q0001-01-Q0001",
+        "W-FRD-Q0005-01-Q0005"
+      ],
+      [
+        "W-FRD-Q0001-01-Q0001",
+        "W-FRD-Q0007-03-Q0007"
+      ],
+      [
+        "W-FRD-Q0001-01-Q0001",
+        "W-FRD-Q0008-03-Q0008"
+      ],
+      [
+        "W-FRD-Q0001-01-Q0001",
+        "W-FRD-Q0009-03-Q0009"
+      ],
+      [
+        "W-FRD-Q0001-03-Q0001",
+        "W-FRD-Q0003-04-Q0003"
+      ],
+      [
+        "W-FRD-Q0001-03-Q0001",
+        "W-FRD-Q0004-02-Q0004"
+      ],
+      [
+        "W-FRD-Q0001-03-Q0001",
+        "W-FRD-Q0006-04-Q0006"
+      ],
+      [
+        "W-FRD-Q0001-03-Q0001",
+        "W-FRD-Q0007-01-Q0007"
+      ],
+      [
+        "W-FRD-Q0001-03-Q0001",
+        "W-FRD-Q0009-04-Q0009"
+      ],
+      [
+        "W-FRD-Q0001-03-Q0001",
+        "W-FRD-Q0010-02-Q0010"
+      ],
+      [
+        "W-FRD-Q0002-03-Q0002",
+        "W-FRD-Q0003-04-Q0003"
+      ],
+      [
+        "W-FRD-Q0002-03-Q0002",
+        "W-FRD-Q0004-02-Q0004"
+      ],
+      [
+        "W-FRD-Q0002-03-Q0002",
+        "W-FRD-Q0006-04-Q0006"
+      ],
+      [
+        "W-FRD-Q0002-03-Q0002",
+        "W-FRD-Q0007-01-Q0007"
+      ],
+      [
+        "W-FRD-Q0002-03-Q0002",
+        "W-FRD-Q0009-04-Q0009"
+      ],
+      [
+        "W-FRD-Q0002-03-Q0002",
+        "W-FRD-Q0010-02-Q0010"
+      ],
+      [
+        "W-FRD-Q0003-03-Q0003",
+        "W-FRD-Q0003-04-Q0003"
+      ],
+      [
+        "W-FRD-Q0003-03-Q0003",
+        "W-FRD-Q0004-02-Q0004"
+      ],
+      [
+        "W-FRD-Q0003-03-Q0003",
+        "W-FRD-Q0006-04-Q0006"
+      ],
+      [
+        "W-FRD-Q0003-03-Q0003",
+        "W-FRD-Q0007-01-Q0007"
+      ],
+      [
+        "W-FRD-Q0003-03-Q0003",
+        "W-FRD-Q0009-04-Q0009"
+      ],
+      [
+        "W-FRD-Q0003-03-Q0003",
+        "W-FRD-Q0010-02-Q0010"
+      ],
+      [
+        "W-FRD-Q0003-04-Q0003",
+        "W-FRD-Q0005-01-Q0005"
+      ],
+      [
+        "W-FRD-Q0003-04-Q0003",
+        "W-FRD-Q0007-03-Q0007"
+      ],
+      [
+        "W-FRD-Q0003-04-Q0003",
+        "W-FRD-Q0008-03-Q0008"
+      ],
+      [
+        "W-FRD-Q0003-04-Q0003",
+        "W-FRD-Q0009-03-Q0009"
+      ],
+      [
+        "W-FRD-Q0004-02-Q0004",
+        "W-FRD-Q0005-01-Q0005"
+      ],
+      [
+        "W-FRD-Q0004-02-Q0004",
+        "W-FRD-Q0007-03-Q0007"
+      ],
+      [
+        "W-FRD-Q0004-02-Q0004",
+        "W-FRD-Q0008-03-Q0008"
+      ],
+      [
+        "W-FRD-Q0004-02-Q0004",
+        "W-FRD-Q0009-03-Q0009"
+      ],
+      [
+        "W-FRD-Q0005-01-Q0005",
+        "W-FRD-Q0006-04-Q0006"
+      ],
+      [
+        "W-FRD-Q0005-01-Q0005",
+        "W-FRD-Q0007-01-Q0007"
+      ],
+      [
+        "W-FRD-Q0005-01-Q0005",
+        "W-FRD-Q0009-04-Q0009"
+      ],
+      [
+        "W-FRD-Q0005-01-Q0005",
+        "W-FRD-Q0010-02-Q0010"
+      ],
+      [
+        "W-FRD-Q0006-04-Q0006",
+        "W-FRD-Q0007-03-Q0007"
+      ],
+      [
+        "W-FRD-Q0006-04-Q0006",
+        "W-FRD-Q0008-03-Q0008"
+      ],
+      [
+        "W-FRD-Q0006-04-Q0006",
+        "W-FRD-Q0009-03-Q0009"
+      ],
+      [
+        "W-FRD-Q0007-01-Q0007",
+        "W-FRD-Q0007-03-Q0007"
+      ],
+      [
+        "W-FRD-Q0007-01-Q0007",
+        "W-FRD-Q0008-03-Q0008"
+      ],
+      [
+        "W-FRD-Q0007-01-Q0007",
+        "W-FRD-Q0009-03-Q0009"
+      ],
+      [
+        "W-FRD-Q0007-03-Q0007",
+        "W-FRD-Q0009-04-Q0009"
+      ],
+      [
+        "W-FRD-Q0007-03-Q0007",
+        "W-FRD-Q0010-02-Q0010"
+      ],
+      [
+        "W-FRD-Q0008-03-Q0008",
+        "W-FRD-Q0009-04-Q0009"
+      ],
+      [
+        "W-FRD-Q0008-03-Q0008",
+        "W-FRD-Q0010-02-Q0010"
+      ],
+      [
+        "W-FRD-Q0009-03-Q0009",
+        "W-FRD-Q0009-04-Q0009"
+      ],
+      [
+        "W-FRD-Q0009-03-Q0009",
+        "W-FRD-Q0010-02-Q0010"
+      ]
+    ],
+    "dependencies": [],
+    "theory_id": "BTHEORY-74df8e6a4329"
+  },
+  "A1-H2": {
+    "hypothesis_id": "A1-H2",
+    "required": [
+      "A1-H2-R1",
+      "A1-H2-R2"
+    ],
+    "constraints": [
+      "A1-H2-C1"
+    ],
+    "corroborating": [
+      "A1-H2-E1"
+    ],
+    "adverse": [
+      "A1-H2-A1"
+    ],
+    "options": {
+      "A1-H2-R1": [
+        {
+          "option_id": "OPT-9eaa08e053bd",
+          "witnesses": [
+            "W-FRD-Q0001-03-Q0001"
+          ],
+          "relation": "EQUIVALENT",
+          "joint": false
+        },
+        {
+          "option_id": "OPT-a2fdfb3913d8",
+          "witnesses": [
+            "W-FRD-Q0002-03-Q0002"
+          ],
+          "relation": "EQUIVALENT",
+          "joint": false
+        },
+        {
+          "option_id": "OPT-fd6f67f424e5",
+          "witnesses": [
+            "W-FRD-Q0003-03-Q0003"
+          ],
+          "relation": "EQUIVALENT",
+          "joint": false
+        },
+        {
+          "option_id": "OPT-d695916b96c4",
+          "witnesses": [
+            "W-FRD-Q0005-01-Q0005"
+          ],
+          "relation": "EQUIVALENT",
+          "joint": false
+        },
+        {
+          "option_id": "OPT-c4245e5e4b75",
+          "witnesses": [
+            "W-FRD-Q0007-03-Q0007"
+          ],
+          "relation": "EQUIVALENT",
+          "joint": false
+        },
+        {
+          "option_id": "OPT-d1c6c0c1c738",
+          "witnesses": [
+            "W-FRD-Q0008-03-Q0008"
+          ],
+          "relation": "EQUIVALENT",
+          "joint": false
+        },
+        {
+          "option_id": "OPT-079fbeaac1e7",
+          "witnesses": [
+            "W-FRD-Q0009-03-Q0009"
+          ],
+          "relation": "EQUIVALENT",
+          "joint": false
+        }
+      ],
+      "A1-H2-R2": [
+        {
+          "option_id": "OPT-0569d5574e6c",
+          "witnesses": [
+            "W-FRD-Q0002-01-Q0002"
+          ],
+          "relation": "EQUIVALENT",
+          "joint": false
+        },
+        {
+          "option_id": "OPT-6a5f384db42d",
+          "witnesses": [
+            "W-FRD-Q0004-03-Q0004"
+          ],
+          "relation": "EQUIVALENT",
+          "joint": false
+        },
+        {
+          "option_id": "OPT-f8509ec31e70",
+          "witnesses": [
+            "W-FRD-Q0005-02-Q0005"
+          ],
+          "relation": "EQUIVALENT",
+          "joint": false
+        },
+        {
+          "option_id": "OPT-9d7367567433",
+          "witnesses": [
+            "W-FRD-Q0006-03-Q0006"
+          ],
+          "relation": "EQUIVALENT",
+          "joint": false
+        },
+        {
+          "option_id": "OPT-8d22bf28089f",
+          "witnesses": [
+            "W-FRD-Q0008-01-Q0008"
+          ],
+          "relation": "EQUIVALENT",
+          "joint": false
+        },
+        {
+          "option_id": "OPT-c884ab51581f",
+          "witnesses": [
+            "W-FRD-Q0010-03-Q0010"
+          ],
+          "relation": "EQUIVALENT",
+          "joint": false
+        }
+      ]
+    },
+    "incompatibilities": [
+      [
+        "W-FRD-Q0001-01-Q0001",
+        "W-FRD-Q0001-03-Q0001"
+      ],
+      [
+        "W-FRD-Q0001-01-Q0001",
+        "W-FRD-Q0002-03-Q0002"
+      ],
+      [
+        "W-FRD-Q0001-01-Q0001",
+        "W-FRD-Q0003-03-Q0003"
+      ],
+      [
+        "W-FRD-Q0001-01-Q0001",
+        "W-FRD-Q0005-01-Q0005"
+      ],
+      [
+        "W-FRD-Q0001-01-Q0001",
+        "W-FRD-Q0007-03-Q0007"
+      ],
+      [
+        "W-FRD-Q0001-01-Q0001",
+        "W-FRD-Q0008-03-Q0008"
+      ],
+      [
+        "W-FRD-Q0001-01-Q0001",
+        "W-FRD-Q0009-03-Q0009"
+      ],
+      [
+        "W-FRD-Q0001-03-Q0001",
+        "W-FRD-Q0003-04-Q0003"
+      ],
+      [
+        "W-FRD-Q0001-03-Q0001",
+        "W-FRD-Q0004-02-Q0004"
+      ],
+      [
+        "W-FRD-Q0001-03-Q0001",
+        "W-FRD-Q0006-04-Q0006"
+      ],
+      [
+        "W-FRD-Q0001-03-Q0001",
+        "W-FRD-Q0007-01-Q0007"
+      ],
+      [
+        "W-FRD-Q0001-03-Q0001",
+        "W-FRD-Q0009-04-Q0009"
+      ],
+      [
+        "W-FRD-Q0001-03-Q0001",
+        "W-FRD-Q0010-02-Q0010"
+      ],
+      [
+        "W-FRD-Q0002-03-Q0002",
+        "W-FRD-Q0003-04-Q0003"
+      ],
+      [
+        "W-FRD-Q0002-03-Q0002",
+        "W-FRD-Q0004-02-Q0004"
+      ],
+      [
+        "W-FRD-Q0002-03-Q0002",
+        "W-FRD-Q0006-04-Q0006"
+      ],
+      [
+        "W-FRD-Q0002-03-Q0002",
+        "W-FRD-Q0007-01-Q0007"
+      ],
+      [
+        "W-FRD-Q0002-03-Q0002",
+        "W-FRD-Q0009-04-Q0009"
+      ],
+      [
+        "W-FRD-Q0002-03-Q0002",
+        "W-FRD-Q0010-02-Q0010"
+      ],
+      [
+        "W-FRD-Q0003-03-Q0003",
+        "W-FRD-Q0003-04-Q0003"
+      ],
+      [
+        "W-FRD-Q0003-03-Q0003",
+        "W-FRD-Q0004-02-Q0004"
+      ],
+      [
+        "W-FRD-Q0003-03-Q0003",
+        "W-FRD-Q0006-04-Q0006"
+      ],
+      [
+        "W-FRD-Q0003-03-Q0003",
+        "W-FRD-Q0007-01-Q0007"
+      ],
+      [
+        "W-FRD-Q0003-03-Q0003",
+        "W-FRD-Q0009-04-Q0009"
+      ],
+      [
+        "W-FRD-Q0003-03-Q0003",
+        "W-FRD-Q0010-02-Q0010"
+      ],
+      [
+        "W-FRD-Q0003-04-Q0003",
+        "W-FRD-Q0005-01-Q0005"
+      ],
+      [
+        "W-FRD-Q0003-04-Q0003",
+        "W-FRD-Q0007-03-Q0007"
+      ],
+      [
+        "W-FRD-Q0003-04-Q0003",
+        "W-FRD-Q0008-03-Q0008"
+      ],
+      [
+        "W-FRD-Q0003-04-Q0003",
+        "W-FRD-Q0009-03-Q0009"
+      ],
+      [
+        "W-FRD-Q0004-02-Q0004",
+        "W-FRD-Q0005-01-Q0005"
+      ],
+      [
+        "W-FRD-Q0004-02-Q0004",
+        "W-FRD-Q0007-03-Q0007"
+      ],
+      [
+        "W-FRD-Q0004-02-Q0004",
+        "W-FRD-Q0008-03-Q0008"
+      ],
+      [
+        "W-FRD-Q0004-02-Q0004",
+        "W-FRD-Q0009-03-Q0009"
+      ],
+      [
+        "W-FRD-Q0005-01-Q0005",
+        "W-FRD-Q0006-04-Q0006"
+      ],
+      [
+        "W-FRD-Q0005-01-Q0005",
+        "W-FRD-Q0007-01-Q0007"
+      ],
+      [
+        "W-FRD-Q0005-01-Q0005",
+        "W-FRD-Q0009-04-Q0009"
+      ],
+      [
+        "W-FRD-Q0005-01-Q0005",
+        "W-FRD-Q0010-02-Q0010"
+      ],
+      [
+        "W-FRD-Q0006-04-Q0006",
+        "W-FRD-Q0007-03-Q0007"
+      ],
+      [
+        "W-FRD-Q0006-04-Q0006",
+        "W-FRD-Q0008-03-Q0008"
+      ],
+      [
+        "W-FRD-Q0006-04-Q0006",
+        "W-FRD-Q0009-03-Q0009"
+      ],
+      [
+        "W-FRD-Q0007-01-Q0007",
+        "W-FRD-Q0007-03-Q0007"
+      ],
+      [
+        "W-FRD-Q0007-01-Q0007",
+        "W-FRD-Q0008-03-Q0008"
+      ],
+      [
+        "W-FRD-Q0007-01-Q0007",
+        "W-FRD-Q0009-03-Q0009"
+      ],
+      [
+        "W-FRD-Q0007-03-Q0007",
+        "W-FRD-Q0009-04-Q0009"
+      ],
+      [
+        "W-FRD-Q0007-03-Q0007",
+        "W-FRD-Q0010-02-Q0010"
+      ],
+      [
+        "W-FRD-Q0008-03-Q0008",
+        "W-FRD-Q0009-04-Q0009"
+      ],
+      [
+        "W-FRD-Q0008-03-Q0008",
+        "W-FRD-Q0010-02-Q0010"
+      ],
+      [
+        "W-FRD-Q0009-03-Q0009",
+        "W-FRD-Q0009-04-Q0009"
+      ],
+      [
+        "W-FRD-Q0009-03-Q0009",
+        "W-FRD-Q0010-02-Q0010"
+      ]
+    ],
+    "dependencies": [],
+    "theory_id": "BTHEORY-b3f5413e511d"
+  },
+  "A1-H3": {
+    "hypothesis_id": "A1-H3",
+    "required": [
+      "A1-H3-R1",
+      "A1-H3-R2"
+    ],
+    "constraints": [
+      "A1-H3-C1"
+    ],
+    "corroborating": [
+      "A1-H3-E1"
+    ],
+    "adverse": [
+      "A1-H3-A1"
+    ],
+    "options": {
+      "A1-H3-R1": [],
+      "A1-H3-R2": [
+        {
+          "option_id": "OPT-dcd10beb12ca",
+          "witnesses": [
+            "W-FRD-Q0003-02-Q0003"
+          ],
+          "relation": "WITNESS_ENTAILS_UNIT",
+          "joint": false
+        },
+        {
+          "option_id": "OPT-15eeb568e7f1",
+          "witnesses": [
+            "W-FRD-Q0005-04-Q0005"
+          ],
+          "relation": "WITNESS_ENTAILS_UNIT",
+          "joint": false
+        },
+        {
+          "option_id": "OPT-99e1a5342527",
+          "witnesses": [
+            "W-FRD-Q0006-01-Q0006"
+          ],
+          "relation": "WITNESS_ENTAILS_UNIT",
+          "joint": false
+        },
+        {
+          "option_id": "OPT-2240d7a24346",
+          "witnesses": [
+            "W-FRD-Q0009-02-Q0009"
+          ],
+          "relation": "WITNESS_ENTAILS_UNIT",
+          "joint": false
+        }
+      ]
+    },
+    "incompatibilities": [
+      [
+        "W-FRD-Q0001-01-Q0001",
+        "W-FRD-Q0001-03-Q0001"
+      ],
+      [
+        "W-FRD-Q0001-01-Q0001",
+        "W-FRD-Q0002-03-Q0002"
+      ],
+      [
+        "W-FRD-Q0001-01-Q0001",
+        "W-FRD-Q0003-03-Q0003"
+      ],
+      [
+        "W-FRD-Q0001-01-Q0001",
+        "W-FRD-Q0005-01-Q0005"
+      ],
+      [
+        "W-FRD-Q0001-01-Q0001",
+        "W-FRD-Q0007-03-Q0007"
+      ],
+      [
+        "W-FRD-Q0001-01-Q0001",
+        "W-FRD-Q0008-03-Q0008"
+      ],
+      [
+        "W-FRD-Q0001-01-Q0001",
+        "W-FRD-Q0009-03-Q0009"
+      ],
+      [
+        "W-FRD-Q0001-03-Q0001",
+        "W-FRD-Q0003-04-Q0003"
+      ],
+      [
+        "W-FRD-Q0001-03-Q0001",
+        "W-FRD-Q0004-02-Q0004"
+      ],
+      [
+        "W-FRD-Q0001-03-Q0001",
+        "W-FRD-Q0006-04-Q0006"
+      ],
+      [
+        "W-FRD-Q0001-03-Q0001",
+        "W-FRD-Q0007-01-Q0007"
+      ],
+      [
+        "W-FRD-Q0001-03-Q0001",
+        "W-FRD-Q0009-04-Q0009"
+      ],
+      [
+        "W-FRD-Q0001-03-Q0001",
+        "W-FRD-Q0010-02-Q0010"
+      ],
+      [
+        "W-FRD-Q0002-03-Q0002",
+        "W-FRD-Q0003-04-Q0003"
+      ],
+      [
+        "W-FRD-Q0002-03-Q0002",
+        "W-FRD-Q0004-02-Q0004"
+      ],
+      [
+        "W-FRD-Q0002-03-Q0002",
+        "W-FRD-Q0006-04-Q0006"
+      ],
+      [
+        "W-FRD-Q0002-03-Q0002",
+        "W-FRD-Q0007-01-Q0007"
+      ],
+      [
+        "W-FRD-Q0002-03-Q0002",
+        "W-FRD-Q0009-04-Q0009"
+      ],
+      [
+        "W-FRD-Q0002-03-Q0002",
+        "W-FRD-Q0010-02-Q0010"
+      ],
+      [
+        "W-FRD-Q0003-03-Q0003",
+        "W-FRD-Q0003-04-Q0003"
+      ],
+      [
+        "W-FRD-Q0003-03-Q0003",
+        "W-FRD-Q0004-02-Q0004"
+      ],
+      [
+        "W-FRD-Q0003-03-Q0003",
+        "W-FRD-Q0006-04-Q0006"
+      ],
+      [
+        "W-FRD-Q0003-03-Q0003",
+        "W-FRD-Q0007-01-Q0007"
+      ],
+      [
+        "W-FRD-Q0003-03-Q0003",
+        "W-FRD-Q0009-04-Q0009"
+      ],
+      [
+        "W-FRD-Q0003-03-Q0003",
+        "W-FRD-Q0010-02-Q0010"
+      ],
+      [
+        "W-FRD-Q0003-04-Q0003",
+        "W-FRD-Q0005-01-Q0005"
+      ],
+      [
+        "W-FRD-Q0003-04-Q0003",
+        "W-FRD-Q0007-03-Q0007"
+      ],
+      [
+        "W-FRD-Q0003-04-Q0003",
+        "W-FRD-Q0008-03-Q0008"
+      ],
+      [
+        "W-FRD-Q0003-04-Q0003",
+        "W-FRD-Q0009-03-Q0009"
+      ],
+      [
+        "W-FRD-Q0004-02-Q0004",
+        "W-FRD-Q0005-01-Q0005"
+      ],
+      [
+        "W-FRD-Q0004-02-Q0004",
+        "W-FRD-Q0007-03-Q0007"
+      ],
+      [
+        "W-FRD-Q0004-02-Q0004",
+        "W-FRD-Q0008-03-Q0008"
+      ],
+      [
+        "W-FRD-Q0004-02-Q0004",
+        "W-FRD-Q0009-03-Q0009"
+      ],
+      [
+        "W-FRD-Q0005-01-Q0005",
+        "W-FRD-Q0006-04-Q0006"
+      ],
+      [
+        "W-FRD-Q0005-01-Q0005",
+        "W-FRD-Q0007-01-Q0007"
+      ],
+      [
+        "W-FRD-Q0005-01-Q0005",
+        "W-FRD-Q0009-04-Q0009"
+      ],
+      [
+        "W-FRD-Q0005-01-Q0005",
+        "W-FRD-Q0010-02-Q0010"
+      ],
+      [
+        "W-FRD-Q0006-04-Q0006",
+        "W-FRD-Q0007-03-Q0007"
+      ],
+      [
+        "W-FRD-Q0006-04-Q0006",
+        "W-FRD-Q0008-03-Q0008"
+      ],
+      [
+        "W-FRD-Q0006-04-Q0006",
+        "W-FRD-Q0009-03-Q0009"
+      ],
+      [
+        "W-FRD-Q0007-01-Q0007",
+        "W-FRD-Q0007-03-Q0007"
+      ],
+      [
+        "W-FRD-Q0007-01-Q0007",
+        "W-FRD-Q0008-03-Q0008"
+      ],
+      [
+        "W-FRD-Q0007-01-Q0007",
+        "W-FRD-Q0009-03-Q0009"
+      ],
+      [
+        "W-FRD-Q0007-03-Q0007",
+        "W-FRD-Q0009-04-Q0009"
+      ],
+      [
+        "W-FRD-Q0007-03-Q0007",
+        "W-FRD-Q0010-02-Q0010"
+      ],
+      [
+        "W-FRD-Q0008-03-Q0008",
+        "W-FRD-Q0009-04-Q0009"
+      ],
+      [
+        "W-FRD-Q0008-03-Q0008",
+        "W-FRD-Q0010-02-Q0010"
+      ],
+      [
+        "W-FRD-Q0009-03-Q0009",
+        "W-FRD-Q0009-04-Q0009"
+      ],
+      [
+        "W-FRD-Q0009-03-Q0009",
+        "W-FRD-Q0010-02-Q0010"
+      ]
+    ],
+    "dependencies": [],
+    "theory_id": "BTHEORY-2bec985c7296"
+  }
+}

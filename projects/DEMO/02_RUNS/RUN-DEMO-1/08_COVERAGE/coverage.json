@@ -1,0 +1,96 @@
+{
+  "hypotheses": {
+    "A1-H1": {
+      "status": "NO_COMPLETE_COVERAGE",
+      "sets": [],
+      "uncovered_units": [
+        "A1-H1-R1",
+        "A1-H1-R2",
+        "A1-H1-R3"
+      ],
+      "search_status": "NOT_RUN",
+      "note": "At least one required unit has no coverage option; no complete set can be built.",
+      "hypothesis_id": "A1-H1",
+      "axis_id": "A1",
+      "required_units": [
+        "A1-H1-R1",
+        "A1-H1-R2",
+        "A1-H1-R3"
+      ],
+      "constraints": [
+        "A1-H1-C1",
+        "A1-H1-C2",
+        "A1-H1-C3"
+      ],
+      "options_truncated": {},
+      "options": {
+        "A1-H1-R1": [],
+        "A1-H1-R2": [],
+        "A1-H1-R3": []
+      },
+      "constraint_violators": {},
+      "units_covered": 0
+    },
+    "A1-H2": {
+      "status": "NO_COMPLETE_COVERAGE",
+      "sets": [],
+      "uncovered_units": [
+        "A1-H2-R1",
+        "A1-H2-R2",
+        "A1-H2-R3"
+      ],
+      "search_status": "NOT_RUN",
+      "note": "At least one required unit has no coverage option; no complete set can be built.",
+      "hypothesis_id": "A1-H2",
+      "axis_id": "A1",
+      "required_units": [
+        "A1-H2-R1",
+        "A1-H2-R2",
+        "A1-H2-R3"
+      ],
+      "constraints": [
+        "A1-H2-C1",
+        "A1-H2-C2"
+      ],
+      "options_truncated": {},
+      "options": {
+        "A1-H2-R1": [],
+        "A1-H2-R2": [],
+        "A1-H2-R3": []
+      },
+      "constraint_violators": {},
+      "units_covered": 0
+    },
+    "A1-H3": {
+      "status": "NO_COMPLETE_COVERAGE",
+      "sets": [],
+      "uncovered_units": [
+        "A1-H3-R1",
+        "A1-H3-R2",
+        "A1-H3-R3"
+      ],
+      "search_status": "NOT_RUN",
+      "note": "At least one required unit has no coverage option; no complete set can be built.",
+      "hypothesis_id": "A1-H3",
+      "axis_id": "A1",
+      "required_units": [
+        "A1-H3-R1",
+        "A1-H3-R2",
+        "A1-H3-R3"
+      ],
+      "constraints": [
+        "A1-H3-C1",
+        "A1-H3-C2"
+      ],
+      "options_truncated": {},
+      "options": {
+        "A1-H3-R1": [],
+        "A1-H3-R2": [],
+        "A1-H3-R3": []
+      },
+      "constraint_violators": {},
+      "units_covered": 0
+    }
+  },
+  "time": "2026-10-30T03:39:07+00:00"
+}

@@ -1,0 +1,34 @@
+[
+  {
+    "witness_id": "W-FRD-Q0005-04-Q0005",
+    "unit_id": "A2-H1-A2",
+    "hypothesis_id": "A2-H1",
+    "axis_id": "A2",
+    "unit_type": "ADVERSE_TEST",
+    "a": "PARTIALLY_COVERS",
+    "trace_a": "partial content coverage 0.46; at least one required element missing [local-rules 1.8 pass A]",
+    "b": "NO_SEMANTIC_RELATION",
+    "trace_b": "content coverage 0.46 is too low [local-rules 1.8 pass B]",
+    "stage": "match",
+    "final": "NO_SEMANTIC_RELATION",
+    "basis": "MODEL_ADJUDICATED",
+    "trace": "local adjudicator kept the weaker relation (PARTIALLY_COVERS vs NO_SEMANTIC_RELATION); a conflict outranks an entailment, and the pair is labelled MODEL_ADJUDICATED",
+    "key_adj": "f2b7906ec9de8adffe1adeeb"
+  },
+  {
+    "witness_id": "W-FRD-Q0029-02-Q0029",
+    "unit_id": "A1-H2-E2",
+    "hypothesis_id": "A1-H2",
+    "axis_id": "A1",
+    "unit_type": "CORROBORATING_EXPECTATION",
+    "a": "PARTIALLY_COVERS",
+    "trace_a": "partial content coverage 0.46; at least one required element missing [local-rules 1.8 pass A]",
+    "b": "NO_SEMANTIC_RELATION",
+    "trace_b": "content coverage 0.46 is too low [local-rules 1.8 pass B]",
+    "stage": "match",
+    "final": "NO_SEMANTIC_RELATION",
+    "basis": "MODEL_ADJUDICATED",
+    "trace": "local adjudicator kept the weaker relation (PARTIALLY_COVERS vs NO_SEMANTIC_RELATION); a conflict outranks an entailment, and the pair is labelled MODEL_ADJUDICATED",
+    "key_adj": "a6a7d6a12cb7d2ea2a38af2a"
+  }
+]

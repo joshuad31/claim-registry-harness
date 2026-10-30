@@ -1,0 +1,29 @@
+{
+  "project": {
+    "name": "PTX for urination (offline run)",
+    "run_prefix": "RUN-PTX-LOCAL"
+  },
+  "frame": {
+    "approval_note": "Axis 1 approved by Josh on 2026-09-12 (header v4.1); axis 2 is TEST-ONLY per the header and is reported as such."
+  },
+  "default_provider": "local",
+  "providers": {
+    "local": {
+      "type": "local"
+    }
+  },
+  "matching": {
+    "synonyms": [
+      [
+        "PTX",
+        "pentoxifylline",
+        "oxpentifylline",
+        "Trental"
+      ]
+    ]
+  },
+  "quest": {
+    "round_size": 5,
+    "max_rounds": 8
+  }
+}

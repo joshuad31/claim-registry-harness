@@ -1,0 +1,8 @@
+{
+  "status": "SCIENTIFIC_STOP (imported)",
+  "rounds": 11,
+  "questions_issued": 62,
+  "usable_answers": 61,
+  "note": "Imported from the ChatGPT-era run: the Coordinator's R012 packet directed STOP. Its ACH_Eval fragments were kept private by that run and are not part of this import.",
+  "closed": "2026-10-29T15:13:32+00:00"
+}

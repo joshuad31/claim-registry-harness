@@ -1,0 +1,404 @@
+[
+  {
+    "hypothesis_id": "A1-H1",
+    "axis_id": "A1",
+    "approval": "UNKNOWN",
+    "title": "Foliar silicate raises field yield under drought",
+    "statement": "Foliar silicate treatment increases grain yield of drought-stressed wheat in field conditions. The effect is large enough and repeatable enough to justify a field trial, and the mechanism reported in controlled studies transfers to field-grown wheat.",
+    "coverage_status": "NO_COMPLETE_COVERAGE",
+    "required_covered": "0/3",
+    "allocation": 22,
+    "controlling": [],
+    "objections": [],
+    "qualifications": [
+      {
+        "unit_id": "A1-H1-C1",
+        "unit_type": "CONTEXTUAL_CONSTRAINT",
+        "unit_text": "The applied silicate reaches the leaf surface at a rate used in the reported studies",
+        "supported_by": [],
+        "contradicted_by": []
+      },
+      {
+        "unit_id": "A1-H1-C2",
+        "unit_type": "CONTEXTUAL_CONSTRAINT",
+        "unit_text": "drought stress is severe enough for the mechanism to matter",
+        "supported_by": [],
+        "contradicted_by": []
+      },
+      {
+        "unit_id": "A1-H1-C3",
+        "unit_type": "CONTEXTUAL_CONSTRAINT",
+        "unit_text": "and the greenhouse water-relations effect carries into field-grown wheat",
+        "supported_by": [],
+        "contradicted_by": []
+      }
+    ],
+    "corroboration": [],
+    "gaps": [
+      {
+        "unit_id": "A1-H1-R1",
+        "unit_type": "REQUIRED_SUPPORT",
+        "unit_text": "Foliar silicate treatment increases grain yield of drought-stressed wheat in field conditions",
+        "partly": [
+          {
+            "witness_id": "W-FRD-Q0001-01-Q0001",
+            "text": "We tested whether foliar potassium silicate improves water relations and yield components in drought-stressed wheat grown in a controlled greenhouse (alvarez2021).",
+            "source_file": "alvarez2021.md",
+            "locator": "SYNTHETIC — Foliar silicate and wheat water relations in a controlled pot trial",
+            "vfrd_id": "FRD-Q0001-01",
+            "relation": "PARTIALLY_COVERS",
+            "basis": "AGREED"
+          },
+          {
+            "witness_id": "W-FRD-Q0001-03-Q0001",
+            "text": "Foliar silicate was tested at three rainfed field sites over two seasons to determine whether it improves wheat grain yield under water-limited conditions (okafor2019).",
+            "source_file": "okafor2019.md",
+            "locator": "Results",
+            "vfrd_id": "FRD-Q0001-03",
+            "relation": "PARTIALLY_COVERS",
+            "basis": "AGREED"
+          }
+        ],
+        "nearest": []
+      },
+      {
+        "unit_id": "A1-H1-R2",
+        "unit_type": "REQUIRED_SUPPORT",
+        "unit_text": "The effect is large enough and repeatable enough to justify a field trial",
+        "partly": [],
+        "nearest": [
+          {
+            "witness_id": "W-FRD-Q0002-02-Q0002",
+            "text": "The trial cannot rule out a small yield effect below its detection limit (okafor2019).",
+            "source_file": "okafor2019.md",
+            "locator": "SYNTHETIC — Multi-site field trial of foliar silicate in rainfed wheat (okafor20",
+            "vfrd_id": "FRD-Q0002-02",
+            "relation": "NO_SEMANTIC_RELATION",
+            "basis": "AGREED",
+            "overlap": 0.29
+          },
+          {
+            "witness_id": "W-FRD-Q0006-02-Q0006",
+            "text": "Because the trial used pots and a single cultivar, the yield difference should not be extrapolated to field conditions without a field test (alvarez2021).",
+            "source_file": "alvarez2021.md",
+            "locator": "SYNTHETIC — Foliar silicate and wheat water relations in a controlled pot trial",
+            "vfrd_id": "FRD-Q0006-02",
+            "relation": "NO_SEMANTIC_RELATION",
+            "basis": "AGREED",
+            "overlap": 0.29
+          }
+        ]
+      },
+      {
+        "unit_id": "A1-H1-R3",
+        "unit_type": "REQUIRED_SUPPORT",
+        "unit_text": "the mechanism reported in controlled studies transfers to field-grown wheat",
+        "partly": [],
+        "nearest": [
+          {
+            "witness_id": "W-FRD-Q0004-03-Q0004",
+            "text": "This narrative review summarises reported effects of silicon application on yield and drought tolerance in cereal crops, with attention to the gap between controlled and field studies (brennan2022).",
+            "source_file": "brennan2022.md",
+            "locator": "SYNTHETIC — Silicon in cereals: a narrative review of yield evidence (brennan202",
+            "vfrd_id": "FRD-Q0004-03",
+            "relation": "NO_SEMANTIC_RELATION",
+            "basis": "AGREED",
+            "overlap": 0.43
+          },
+          {
+            "witness_id": "W-FRD-Q0008-01-Q0008",
+            "text": "This narrative review summarises reported effects of silicon application on yield and drought tolerance in cereal crops, with attention to the gap between controlled and field studies (brennan2022).",
+            "source_file": "brennan2022.md",
+            "locator": "SYNTHETIC — Silicon in cereals: a narrative review of yield evidence (brennan202",
+            "vfrd_id": "FRD-Q0008-01",
+            "relation": "NO_SEMANTIC_RELATION",
+            "basis": "AGREED",
+            "overlap": 0.43
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "hypothesis_id": "A1-H2",
+    "axis_id": "A1",
+    "approval": "UNKNOWN",
+    "title": "The yield benefit does not transfer to the field",
+    "statement": "Foliar silicate treatment does not increase grain yield of drought-stressed wheat in the field. The positive results come from greenhouse or model-organism work that does not transfer, and field trials show no yield benefit.",
+    "coverage_status": "NO_COMPLETE_COVERAGE",
+    "required_covered": "0/3",
+    "allocation": 21,
+    "controlling": [],
+    "objections": [
+      {
+        "unit_id": "A1-H2-E1",
+        "unit_type": "CORROBORATING_EXPECTATION",
+        "unit_text": "Multi-site field trials report no significant yield difference",
+        "kind": "contradicts an expected corollary",
+        "rank": 2,
+        "witness_id": "W-FRD-Q0006-02-Q0006",
+        "text": "Because the trial used pots and a single cultivar, the yield difference should not be extrapolated to field conditions without a field test (alvarez2021).",
+        "source_file": "alvarez2021.md",
+        "locator": "SYNTHETIC — Foliar silicate and wheat water relations in a controlled pot trial",
+        "vfrd_id": "FRD-Q0006-02",
+        "basis": "AGREED",
+        "trace": "predicate ['DIFF'] asserted with opposite polarity (coverage 0.66) [local-rules 1.8 pass A]"
+      }
+    ],
+    "qualifications": [
+      {
+        "unit_id": "A1-H2-C1",
+        "unit_type": "CONTEXTUAL_CONSTRAINT",
+        "unit_text": "The field trials that report null results used a comparable rate and application timing",
+        "supported_by": [],
+        "contradicted_by": []
+      },
+      {
+        "unit_id": "A1-H2-C2",
+        "unit_type": "CONTEXTUAL_CONSTRAINT",
+        "unit_text": "they were run in water-limited conditions rather than well-watered ones",
+        "supported_by": [],
+        "contradicted_by": []
+      }
+    ],
+    "corroboration": [
+      {
+        "unit_id": "A1-H2-E1",
+        "unit_type": "CORROBORATING_EXPECTATION",
+        "unit_text": "Multi-site field trials report no significant yield difference",
+        "met_by": [],
+        "contradicted_by": [
+          {
+            "witness_id": "W-FRD-Q0006-02-Q0006",
+            "text": "Because the trial used pots and a single cultivar, the yield difference should not be extrapolated to field conditions without a field test (alvarez2021).",
+            "source_file": "alvarez2021.md",
+            "locator": "SYNTHETIC — Foliar silicate and wheat water relations in a controlled pot trial",
+            "vfrd_id": "FRD-Q0006-02"
+          },
+          {
+            "witness_id": "W-FRD-Q0020-01-Q0020",
+            "text": "Because the trial used pots and a single cultivar, the yield difference should not be extrapolated to field conditions without a field test (alvarez2021).",
+            "source_file": "alvarez2021.md",
+            "locator": "SYNTHETIC — Foliar silicate and wheat water relations in a controlled pot trial",
+            "vfrd_id": "FRD-Q0020-01"
+          }
+        ]
+      },
+      {
+        "unit_id": "A1-H2-E3",
+        "unit_type": "CORROBORATING_EXPECTATION",
+        "unit_text": "and reviews report inconsistent field results",
+        "met_by": [
+          {
+            "witness_id": "W-FRD-Q0009-02-Q0009",
+            "text": "Among the field studies we located, results are inconsistent: some report no yield difference, while others report small increases that were not significant (brennan2022).",
+            "source_file": "brennan2022.md",
+            "locator": "SYNTHETIC — Silicon in cereals: a narrative review of yield evidence (brennan202",
+            "vfrd_id": "FRD-Q0009-02"
+          },
+          {
+            "witness_id": "W-FRD-Q0011-04-Q0011",
+            "text": "Among the field studies we located, results are inconsistent: some report no yield difference, while others report small increases that were not significant (brennan2022).",
+            "source_file": "brennan2022.md",
+            "locator": "Results",
+            "vfrd_id": "FRD-Q0011-04"
+          }
+        ],
+        "contradicted_by": []
+      }
+    ],
+    "gaps": [
+      {
+        "unit_id": "A1-H2-R1",
+        "unit_type": "REQUIRED_SUPPORT",
+        "unit_text": "Foliar silicate treatment does not increase grain yield of drought-stressed wheat in the field",
+        "partly": [
+          {
+            "witness_id": "W-FRD-Q0001-01-Q0001",
+            "text": "We tested whether foliar potassium silicate improves water relations and yield components in drought-stressed wheat grown in a controlled greenhouse (alvarez2021).",
+            "source_file": "alvarez2021.md",
+            "locator": "SYNTHETIC — Foliar silicate and wheat water relations in a controlled pot trial",
+            "vfrd_id": "FRD-Q0001-01",
+            "relation": "PARTIALLY_COVERS",
+            "basis": "AGREED"
+          },
+          {
+            "witness_id": "W-FRD-Q0001-03-Q0001",
+            "text": "Foliar silicate was tested at three rainfed field sites over two seasons to determine whether it improves wheat grain yield under water-limited conditions (okafor2019).",
+            "source_file": "okafor2019.md",
+            "locator": "Results",
+            "vfrd_id": "FRD-Q0001-03",
+            "relation": "PARTIALLY_COVERS",
+            "basis": "AGREED"
+          }
+        ],
+        "nearest": []
+      },
+      {
+        "unit_id": "A1-H2-R2",
+        "unit_type": "REQUIRED_SUPPORT",
+        "unit_text": "The positive results come from greenhouse or model-organism work that does not transfer",
+        "partly": [],
+        "nearest": [
+          {
+            "witness_id": "W-FRD-Q0016-01-Q0016",
+            "text": "The absence of a yield response in the field contrasts with positive greenhouse reports (okafor2019).",
+            "source_file": "okafor2019.md",
+            "locator": "SYNTHETIC — Multi-site field trial of foliar silicate in rainfed wheat (okafor20",
+            "vfrd_id": "FRD-Q0016-01",
+            "relation": "NO_SEMANTIC_RELATION",
+            "basis": "AGREED",
+            "overlap": 0.29
+          },
+          {
+            "witness_id": "W-FRD-Q0001-01-Q0001",
+            "text": "We tested whether foliar potassium silicate improves water relations and yield components in drought-stressed wheat grown in a controlled greenhouse (alvarez2021).",
+            "source_file": "alvarez2021.md",
+            "locator": "SYNTHETIC — Foliar silicate and wheat water relations in a controlled pot trial",
+            "vfrd_id": "FRD-Q0001-01",
+            "relation": "NO_SEMANTIC_RELATION",
+            "basis": "AGREED",
+            "overlap": 0.14
+          }
+        ]
+      },
+      {
+        "unit_id": "A1-H2-R3",
+        "unit_type": "REQUIRED_SUPPORT",
+        "unit_text": "field trials show no yield benefit",
+        "partly": [
+          {
+            "witness_id": "W-FRD-Q0006-02-Q0006",
+            "text": "Because the trial used pots and a single cultivar, the yield difference should not be extrapolated to field conditions without a field test (alvarez2021).",
+            "source_file": "alvarez2021.md",
+            "locator": "SYNTHETIC — Foliar silicate and wheat water relations in a controlled pot trial",
+            "vfrd_id": "FRD-Q0006-02",
+            "relation": "PARTIALLY_COVERS",
+            "basis": "AGREED"
+          },
+          {
+            "witness_id": "W-FRD-Q0008-02-Q0008",
+            "text": "There is plausible mechanistic support for a drought-tolerance effect in wheat, but the field yield evidence is mixed and does not establish a benefit (brennan2022).",
+            "source_file": "brennan2022.md",
+            "locator": "SYNTHETIC — Silicon in cereals: a narrative review of yield evidence (brennan202",
+            "vfrd_id": "FRD-Q0008-02",
+            "relation": "PARTIALLY_COVERS",
+            "basis": "AGREED"
+          }
+        ],
+        "nearest": []
+      }
+    ]
+  },
+  {
+    "hypothesis_id": "A1-H3",
+    "axis_id": "A1",
+    "approval": "UNKNOWN",
+    "title": "The evidence cannot decide the field question",
+    "statement": "Existing evidence cannot determine whether foliar silicate increases field grain yield under drought. Some controlled studies report benefits, field results are mixed or null, and the decisive field comparison has not been made.",
+    "coverage_status": "NO_COMPLETE_COVERAGE",
+    "required_covered": "0/3",
+    "allocation": 21,
+    "controlling": [],
+    "objections": [],
+    "qualifications": [
+      {
+        "unit_id": "A1-H3-C1",
+        "unit_type": "CONTEXTUAL_CONSTRAINT",
+        "unit_text": "Relevant field and controlled studies have been retrieved",
+        "supported_by": [],
+        "contradicted_by": []
+      },
+      {
+        "unit_id": "A1-H3-C2",
+        "unit_type": "CONTEXTUAL_CONSTRAINT",
+        "unit_text": "the gap is not merely an artifact of an unfinished search",
+        "supported_by": [],
+        "contradicted_by": []
+      }
+    ],
+    "corroboration": [],
+    "gaps": [
+      {
+        "unit_id": "A1-H3-R1",
+        "unit_type": "REQUIRED_SUPPORT",
+        "unit_text": "Existing evidence cannot determine whether foliar silicate increases field grain yield under drought",
+        "partly": [
+          {
+            "witness_id": "W-FRD-Q0001-03-Q0001",
+            "text": "Foliar silicate was tested at three rainfed field sites over two seasons to determine whether it improves wheat grain yield under water-limited conditions (okafor2019).",
+            "source_file": "okafor2019.md",
+            "locator": "Results",
+            "vfrd_id": "FRD-Q0001-03",
+            "relation": "PARTIALLY_COVERS",
+            "basis": "AGREED"
+          },
+          {
+            "witness_id": "W-FRD-Q0001-04-Q0001",
+            "text": "A two-season field experiment tested foliar silicate for lodging resistance and grain yield in irrigated wheat (smidt2020).",
+            "source_file": "smidt2020.md",
+            "locator": "Results",
+            "vfrd_id": "FRD-Q0001-04",
+            "relation": "PARTIALLY_COVERS",
+            "basis": "AGREED"
+          }
+        ],
+        "nearest": []
+      },
+      {
+        "unit_id": "A1-H3-R2",
+        "unit_type": "REQUIRED_SUPPORT",
+        "unit_text": "Some controlled studies report benefits, field results are mixed or null",
+        "partly": [
+          {
+            "witness_id": "W-FRD-Q0008-02-Q0008",
+            "text": "There is plausible mechanistic support for a drought-tolerance effect in wheat, but the field yield evidence is mixed and does not establish a benefit (brennan2022).",
+            "source_file": "brennan2022.md",
+            "locator": "SYNTHETIC — Silicon in cereals: a narrative review of yield evidence (brennan202",
+            "vfrd_id": "FRD-Q0008-02",
+            "relation": "PARTIALLY_COVERS",
+            "basis": "AGREED"
+          },
+          {
+            "witness_id": "W-FRD-Q0009-01-Q0009",
+            "text": "There is plausible mechanistic support for a drought-tolerance effect in wheat, but the field yield evidence is mixed and does not establish a benefit (brennan2022).",
+            "source_file": "brennan2022.md",
+            "locator": "SYNTHETIC — Silicon in cereals: a narrative review of yield evidence (brennan202",
+            "vfrd_id": "FRD-Q0009-01",
+            "relation": "PARTIALLY_COVERS",
+            "basis": "AGREED"
+          }
+        ],
+        "nearest": []
+      },
+      {
+        "unit_id": "A1-H3-R3",
+        "unit_type": "REQUIRED_SUPPORT",
+        "unit_text": "the decisive field comparison has not been made",
+        "partly": [],
+        "nearest": [
+          {
+            "witness_id": "W-FRD-Q0001-03-Q0001",
+            "text": "Foliar silicate was tested at three rainfed field sites over two seasons to determine whether it improves wheat grain yield under water-limited conditions (okafor2019).",
+            "source_file": "okafor2019.md",
+            "locator": "Results",
+            "vfrd_id": "FRD-Q0001-03",
+            "relation": "NO_SEMANTIC_RELATION",
+            "basis": "AGREED",
+            "overlap": 0.25
+          },
+          {
+            "witness_id": "W-FRD-Q0001-04-Q0001",
+            "text": "A two-season field experiment tested foliar silicate for lodging resistance and grain yield in irrigated wheat (smidt2020).",
+            "source_file": "smidt2020.md",
+            "locator": "Results",
+            "vfrd_id": "FRD-Q0001-04",
+            "relation": "NO_SEMANTIC_RELATION",
+            "basis": "AGREED",
+            "overlap": 0.25
+          }
+        ]
+      }
+    ]
+  }
+]

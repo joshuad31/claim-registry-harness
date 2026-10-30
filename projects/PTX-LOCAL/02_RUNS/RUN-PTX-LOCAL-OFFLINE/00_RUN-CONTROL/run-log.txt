@@ -1,0 +1,62 @@
+[2026-10-30T03:38:27+00:00] == stage corpus: Ingest, hash and index the corpus
+[2026-10-30T03:38:29+00:00]    corpus: {'manifest_id': 'MANIFEST-222df34dc5f8', 'files': 111, 'bytes': 4923230, 'chunks': 3335, 'flagged_sources': ['hall2018.pdf.md', 'life-15-00613.pdf.md', 's00210-025-03845-1.pdf.md', 'vanreijn-baggen2022.pdf.md']}
+[2026-10-30T03:38:29+00:00] == stage index: Ranked index (supplied or generated)
+[2026-10-30T03:38:29+00:00]    index: {'index': 'supplied', 'path': 'C:\\Users\\joshu\\Desktop\\FINAL SPECIFICATION DOCUMENTS\\DeepSeek_2 output\\projects\\PTX-LOCAL\\01_FRAME\\index.md'}
+[2026-10-30T03:38:29+00:00] == stage archivist_prompt: Archivist custom prompt (supplied or generated)
+[2026-10-30T03:38:29+00:00]    archivist_prompt: {'archivist_prompt': 'supplied'}
+[2026-10-30T03:38:29+00:00] == stage frame: Parse and freeze the header, hypotheses and run configuration
+[2026-10-30T03:38:29+00:00]    frame: {'axes': 2, 'hypotheses': 6, 'decisive_tests': 11, 'gauge': 64, 'approval': {'A1': 'APPROVED', 'A2': 'TEST_ONLY'}}
+[2026-10-30T03:38:29+00:00] == stage units: Internal coverage units (verbatim-anchored)
+[2026-10-30T03:38:30+00:00]    units: {'units': 68, 'active': 65, 'unanchored': 0, 'by_hypothesis': {'A1-H1': {'REQUIRED_SUPPORT': 5, 'CONTEXTUAL_CONSTRAINT': 4, 'ADVERSE_TEST': 3, 'CORROBORATING_EXPECTATION': 3, 'EVALUATIVE_JUDGMENT': 1}, 'A1-H2': {'REQUIRED_SUPPORT': 3, 'CONTEXTUAL_CONSTRAINT': 3, 'ADVERSE_TEST': 1, 'CORROBORATING_EXPECTATION': 3, 'EVALUATIVE_JUDGMENT': 1}, 'A1-H3': {'REQUIRED_SUPPORT': 5, 'CONTEXTUAL_CONSTRAINT': 2, 'ADVERSE_TEST': 1, 'CORROBORATING_EXPECTATION': 3, 'EVALUATIVE_JUDGMENT': 1}, 'A2-H1': {'REQUIRED_SUPPORT': 3, 'CONTEXTUAL_CONSTRAINT': 2, 'ADVERSE_TEST': 3, 'CORROBORATING_EXPECTATION': 2}, 'A2-H2': {'REQUIRED_SUPPORT': 2, 'CONTEXTUAL_CONSTRAINT': 2, 'ADVERSE_TEST': 3, 'CORROBORATING_EXPECTATION': 3}, 'A2-H3': {'REQUIRED_SUPPORT': 4, 'CONTEXTUAL_CONSTRAINT': 2, 'ADVERSE_TEST': 1, 'CORROBORATING_EXPECTATION': 2}}}
+[2026-10-30T03:38:30+00:00] == stage quest: Coordinator-led discovery quest
+[2026-10-30T03:38:30+00:00] quest R1: issued 5 questions
+[2026-10-30T03:38:30+00:00] quest R1: 5 usable answers
+[2026-10-30T03:38:31+00:00] quest R1: assessment {'A1': {'A1-H1': 20, 'A1-H2': 30, 'A1-H3': 14}, 'A2': {'A2-H1': 27, 'A2-H2': 21, 'A2-H3': 16}} stop=False
+[2026-10-30T03:38:31+00:00] quest R2: issued 5 questions
+[2026-10-30T03:38:31+00:00] quest R2: 5 usable answers
+[2026-10-30T03:38:31+00:00] quest R2: assessment {'A1': {'A1-H1': 20, 'A1-H2': 30, 'A1-H3': 14}, 'A2': {'A2-H1': 29, 'A2-H2': 26, 'A2-H3': 9}} stop=False
+[2026-10-30T03:38:31+00:00] quest R3: issued 5 questions
+[2026-10-30T03:38:32+00:00] quest R3: 5 usable answers
+[2026-10-30T03:38:32+00:00] quest R3: assessment {'A1': {'A1-H1': 24, 'A1-H2': 29, 'A1-H3': 11}, 'A2': {'A2-H1': 33, 'A2-H2': 23, 'A2-H3': 8}} stop=False
+[2026-10-30T03:38:32+00:00] quest R4: issued 5 questions
+[2026-10-30T03:38:33+00:00] quest R4: 5 usable answers
+[2026-10-30T03:38:33+00:00] quest R4: assessment {'A1': {'A1-H1': 24, 'A1-H2': 29, 'A1-H3': 11}, 'A2': {'A2-H1': 38, 'A2-H2': 19, 'A2-H3': 7}} stop=False
+[2026-10-30T03:38:33+00:00] quest R5: issued 5 questions
+[2026-10-30T03:38:33+00:00] quest R5: 5 usable answers
+[2026-10-30T03:38:34+00:00] quest R5: assessment {'A1': {'A1-H1': 26, 'A1-H2': 27, 'A1-H3': 11}, 'A2': {'A2-H1': 37, 'A2-H2': 19, 'A2-H3': 8}} stop=False
+[2026-10-30T03:38:34+00:00] quest R6: issued 5 questions
+[2026-10-30T03:38:34+00:00] quest R6: 5 usable answers
+[2026-10-30T03:38:35+00:00] quest R6: assessment {'A1': {'A1-H1': 23, 'A1-H2': 30, 'A1-H3': 11}, 'A2': {'A2-H1': 35, 'A2-H2': 21, 'A2-H3': 8}} stop=False
+[2026-10-30T03:38:35+00:00] quest R7: issued 5 questions
+[2026-10-30T03:38:35+00:00] quest R7: 5 usable answers
+[2026-10-30T03:38:36+00:00] quest R7: assessment {'A1': {'A1-H1': 23, 'A1-H2': 30, 'A1-H3': 11}, 'A2': {'A2-H1': 31, 'A2-H2': 25, 'A2-H3': 8}} stop=False
+[2026-10-30T03:38:36+00:00] quest R8: issued 5 questions
+[2026-10-30T03:38:36+00:00] quest R8: 5 usable answers
+[2026-10-30T03:38:36+00:00] quest R8: assessment {'A1': {'A1-H1': 27, 'A1-H2': 29, 'A1-H3': 8}, 'A2': {'A2-H1': 32, 'A2-H2': 24, 'A2-H3': 8}} stop=False
+[2026-10-30T03:38:36+00:00]    quest: {'status': 'OPERATIONAL_LIMIT', 'rounds': 8, 'questions_issued': 40, 'usable_answers': 40, 'stop_evaluation': {'gauge': 64, 'thresholds': {'branch1_mean3': 0.334, 'branch2_mean4': 0.75}, 'axes': {'A1': {'deltas': [0.0, 4.0, 0.0, 2.0, 3.0, 0.0, 4.0], 'branch1': False, 'branch2': False, 'mean3': 2.333, 'mean4': 2.25}, 'A2': {'deltas': [7.0, 4.0, 5.0, 1.0, 2.0, 4.0, 1.0], 'branch1': False, 'branch2': False, 'mean3': 2.333, 'mean4': 2.0}}, 'numeric_rule_met': False, 'substantive_conditions_met': False, 'ab_covered': False, 'stop': False}, 'note': 'max_rounds=8 reached; this is an operational stop, not a scientific completion finding', 'closed': '2026-10-30T03:38:36+00:00'}
+[2026-10-30T03:38:36+00:00] == stage frd_generate: Candidate FRDs (one response at a time)
+[2026-10-30T03:38:37+00:00]    frd_generate: {'responses': 40, 'candidates': 160, 'over_limit': 0}
+[2026-10-30T03:38:37+00:00] == stage frd_validate: Blind source-only validation + quote check
+[2026-10-30T03:38:50+00:00]    frd_validate: {'candidates': 160, 'validations': 160, 'ready': 160, 'quote_unverified': 0}
+[2026-10-30T03:38:50+00:00] == stage frd_retain: Retention and archival (Problems-note budgets)
+[2026-10-30T03:38:50+00:00]    frd_retain: {'ready': 160, 'retained': 160, 'archived': 0, 'within_budget': True, 'budget_pct': 18.94}
+[2026-10-30T03:38:50+00:00] == stage language: Custom dictionary and canonicalizer
+[2026-10-30T03:38:50+00:00]    language: {'mode': 'off'}
+[2026-10-30T03:38:50+00:00] == stage witnesses: Question-guided witnesses + fidelity audit
+[2026-10-30T03:38:52+00:00]    witnesses: {'applications': 160, 'released': 115, 'held': 45, 'ceiling_exceptions': 0, 'audit_pass_first_round': 115, 'time': '2026-10-30T03:38:52+00:00'}
+[2026-10-30T03:38:52+00:00] == stage transcode: Transcode witnesses and units
+[2026-10-30T03:38:52+00:00]    transcode: {'mode': 'off', 'items': 180}
+[2026-10-30T03:38:52+00:00] == stage qualify: Matcher qualification on adversarial fixtures
+[2026-10-30T03:38:52+00:00]    qualify: {'fixtures': 22, 'pass_a_correct': 22, 'pass_b_correct': 22, 'unqualified_patterns': []}
+[2026-10-30T03:38:52+00:00] == stage match: Two-pass semantic matching
+[2026-10-30T03:38:56+00:00]    match: {'units': 65, 'witnesses': 115, 'pairs_assessed': 1530, 'pairs_not_assessed_prefilter': 5945, 'exhaustive': False, 'agreed': 1528, 'model_adjudicated': 2, 'disputed_abstain': 0, 'missing_both_passes': 0, 'one_pass_only': 0, 'complete_relations': 0, 'contradictions': 0, 'text_mode': 'off', 'review_pairs': 2, 'human_decisions': 0}
+[2026-10-30T03:38:56+00:00] == stage joint: Jointly sufficient groups and incompatibilities
+[2026-10-30T03:38:56+00:00]    joint: {'joint_proposed': 0, 'joint_approved': 0, 'incompat_pairs_checked': 0, 'incompat_approved': 0}
+[2026-10-30T03:38:56+00:00] == stage coverage: Deletion-minimal coverage sets
+[2026-10-30T03:38:56+00:00]    coverage: {'A1-H1': {'status': 'NO_COMPLETE_COVERAGE', 'sets': 0, 'search': 'NOT_RUN', 'covered_units': '0/5'}, 'A1-H2': {'status': 'NO_COMPLETE_COVERAGE', 'sets': 0, 'search': 'NOT_RUN', 'covered_units': '0/3'}, 'A1-H3': {'status': 'NO_COMPLETE_COVERAGE', 'sets': 0, 'search': 'NOT_RUN', 'covered_units': '0/5'}, 'A2-H1': {'status': 'NO_COMPLETE_COVERAGE', 'sets': 0, 'search': 'NOT_RUN', 'covered_units': '0/3'}, 'A2-H2': {'status': 'NO_COMPLETE_COVERAGE', 'sets': 0, 'search': 'NOT_RUN', 'covered_units': '0/2'}, 'A2-H3': {'status': 'NO_COMPLETE_COVERAGE', 'sets': 0, 'search': 'NOT_RUN', 'covered_units': '0/4'}}
+[2026-10-30T03:38:56+00:00] == stage crux: Frozen rival theories, T1/T2, crux candidates
+[2026-10-30T03:38:56+00:00]    crux: {'coverage_recomputed': 0, 'crux_candidates': 0, 'conflict_recorded': 0, 'diagnostic_witnesses': 0, 'tests': 0, 'unknown_tests': 0}
+[2026-10-30T03:38:56+00:00] == stage assess: Final ACH_Eval assessment of the witness registry
+[2026-10-30T03:38:57+00:00]    assess: {'allocations': {'A1': {'A1-H1': 22, 'A1-H2': 21, 'A1-H3': 21}, 'A2': {'A2-H1': 22, 'A2-H2': 21, 'A2-H3': 21}}, 'problems': []}
+[2026-10-30T03:38:57+00:00] == stage report: Crux report and HTML audit browser
+[2026-10-30T03:38:57+00:00]    report: {'report_words': 1536, 'crux_candidates': 0}

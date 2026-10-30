@@ -1,0 +1,1737 @@
+[
+  {
+    "unit_id": "A1-H1-R1",
+    "hypothesis_id": "A1-H1",
+    "axis_id": "A1",
+    "type": "REQUIRED_SUPPORT",
+    "text": "mechanistic evidence supports a coherent causal explanation for why PTX could meaningfully improve voiding in an identifiable subgroup of these men",
+    "source_quote": "mechanistic evidence supports a coherent causal explanation for why PTX could meaningfully improve voiding in an identifiable subgroup of these men",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "mechanistic",
+      "evidence",
+      "supports",
+      "coherent",
+      "causal",
+      "explanation",
+      "ptx",
+      "meaningfully",
+      "improve",
+      "voiding"
+    ],
+    "satisfied_by": "a source-reported finding stating that mechanistic evidence supports a coherent causal explanation for why PTX could meaningfully improve voiding in an identifiable subgroup of these men",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "b5edeb61d06fe365313a761e"
+  },
+  {
+    "unit_id": "A1-H1-R2",
+    "hypothesis_id": "A1-H1",
+    "axis_id": "A1",
+    "type": "REQUIRED_SUPPORT",
+    "text": "Their persistent difficulty includes a reversible physiological component that tamsulosin and their prescribed pelvic-floor intervention do not adequately address",
+    "source_quote": "Their persistent difficulty includes a reversible physiological component that tamsulosin and their prescribed pelvic-floor intervention do not adequately address",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "persistent",
+      "difficulty",
+      "includes",
+      "reversible",
+      "physiological",
+      "component",
+      "tamsulosin",
+      "prescribed",
+      "pelvic-floor",
+      "intervention"
+    ],
+    "satisfied_by": "a source-reported finding stating that Their persistent difficulty includes a reversible physiological component that tamsulosin and their prescribed pelvic-floor intervention do not adequately address",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "b5edeb61d06fe365313a761e"
+  },
+  {
+    "unit_id": "A1-H1-R3",
+    "hypothesis_id": "A1-H1",
+    "axis_id": "A1",
+    "type": "REQUIRED_SUPPORT",
+    "text": "PTX or its metabolites can act on that component at clinically attainable exposures",
+    "source_quote": "PTX or its metabolites can act on that component at clinically attainable exposures",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "ptx",
+      "metabolites",
+      "act",
+      "component",
+      "clinically",
+      "attainable",
+      "exposures"
+    ],
+    "satisfied_by": "a source-reported finding stating that PTX or its metabolites can act on that component at clinically attainable exposures",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "b5edeb61d06fe365313a761e"
+  },
+  {
+    "unit_id": "A1-H1-R4",
+    "hypothesis_id": "A1-H1",
+    "axis_id": "A1",
+    "type": "REQUIRED_SUPPORT",
+    "text": "The supported premises and their discriminating predictions are sufficient to specify intervention, phenotype, measurement",
+    "source_quote": "The supported premises and their discriminating predictions are sufficient to specify intervention, phenotype, measurement",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "supported",
+      "premises",
+      "discriminating",
+      "predictions",
+      "sufficient",
+      "specify",
+      "intervention",
+      "phenotype",
+      "measurement"
+    ],
+    "satisfied_by": "a source-reported finding stating that The supported premises and their discriminating predictions are sufficient to specify intervention, phenotype, measurement",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "b5edeb61d06fe365313a761e"
+  },
+  {
+    "unit_id": "A1-H1-R5",
+    "hypothesis_id": "A1-H1",
+    "axis_id": "A1",
+    "type": "REQUIRED_SUPPORT",
+    "text": "comparator for a targeted clinical trial, whether or not every intermediate link is resolved",
+    "source_quote": "comparator for a targeted clinical trial, whether or not every intermediate link is resolved",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "comparator",
+      "targeted",
+      "clinical",
+      "trial",
+      "whether",
+      "every",
+      "intermediate",
+      "link",
+      "resolved"
+    ],
+    "satisfied_by": "a source-reported finding stating that comparator for a targeted clinical trial, whether or not every intermediate link is resolved",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "b5edeb61d06fe365313a761e"
+  },
+  {
+    "unit_id": "A1-H1-C1",
+    "hypothesis_id": "A1-H1",
+    "axis_id": "A1",
+    "type": "CONTEXTUAL_CONSTRAINT",
+    "text": "The relevant dysfunction occurs in this cohort",
+    "source_quote": "The relevant dysfunction occurs in this cohort",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "relevant",
+      "dysfunction",
+      "occurs",
+      "cohort"
+    ],
+    "satisfied_by": "a source-reported finding stating that The relevant dysfunction occurs in this cohort",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "b5edeb61d06fe365313a761e"
+  },
+  {
+    "unit_id": "A1-H1-C2",
+    "hypothesis_id": "A1-H1",
+    "axis_id": "A1",
+    "type": "CONTEXTUAL_CONSTRAINT",
+    "text": "the proposed drug effects reach the relevant tissue under plausible treatment conditions",
+    "source_quote": "the proposed drug effects reach the relevant tissue under plausible treatment conditions",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "proposed",
+      "drug",
+      "effects",
+      "reach",
+      "relevant",
+      "tissue",
+      "plausible",
+      "treatment",
+      "conditions"
+    ],
+    "satisfied_by": "a source-reported finding stating that the proposed drug effects reach the relevant tissue under plausible treatment conditions",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "b5edeb61d06fe365313a761e"
+  },
+  {
+    "unit_id": "A1-H1-C3",
+    "hypothesis_id": "A1-H1",
+    "axis_id": "A1",
+    "type": "CONTEXTUAL_CONSTRAINT",
+    "text": "and changing those processes can improve urinary function",
+    "source_quote": "and changing those processes can improve urinary function",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "changing",
+      "processes",
+      "improve",
+      "urinary",
+      "function"
+    ],
+    "satisfied_by": "a source-reported finding stating that and changing those processes can improve urinary function",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "b5edeb61d06fe365313a761e"
+  },
+  {
+    "unit_id": "A1-H1-C4",
+    "hypothesis_id": "A1-H1",
+    "axis_id": "A1",
+    "type": "CONTEXTUAL_CONSTRAINT",
+    "text": "Any necessary contribution from vitamin E or another cointervention is explicit",
+    "source_quote": "Any necessary contribution from vitamin E or another cointervention is explicit",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "necessary",
+      "contribution",
+      "vitamine",
+      "another",
+      "cointervention",
+      "explicit"
+    ],
+    "satisfied_by": "a source-reported finding stating that Any necessary contribution from vitamin E or another cointervention is explicit",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "b5edeb61d06fe365313a761e"
+  },
+  {
+    "unit_id": "A1-H1-A1",
+    "hypothesis_id": "A1-H1",
+    "axis_id": "A1",
+    "type": "ADVERSE_TEST",
+    "text": "the proposed target is absent or incidental",
+    "source_quote": "the proposed target is absent or incidental",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "proposed",
+      "target",
+      "incidental"
+    ],
+    "satisfied_by": "a source-reported finding stating that the proposed target is absent or incidental",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "b5edeb61d06fe365313a761e"
+  },
+  {
+    "unit_id": "A1-H1-A2",
+    "hypothesis_id": "A1-H1",
+    "axis_id": "A1",
+    "type": "ADVERSE_TEST",
+    "text": "target modulation fails to improve the relevant function under informative conditions",
+    "source_quote": "target modulation fails to improve the relevant function under informative conditions",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "target",
+      "modulation",
+      "fails",
+      "improve",
+      "relevant",
+      "function",
+      "informative",
+      "conditions"
+    ],
+    "satisfied_by": "a source-reported finding stating that target modulation fails to improve the relevant function under informative conditions",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "b5edeb61d06fe365313a761e"
+  },
+  {
+    "unit_id": "A1-H1-A3",
+    "hypothesis_id": "A1-H1",
+    "axis_id": "A1",
+    "type": "ADVERSE_TEST",
+    "text": "or stronger evidence breaks a link necessary to every route that is not speculative",
+    "source_quote": "or stronger evidence breaks a link necessary to every route that is not speculative",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "stronger",
+      "evidence",
+      "breaks",
+      "link",
+      "necessary",
+      "every",
+      "route",
+      "speculative"
+    ],
+    "satisfied_by": "a source-reported finding stating that or stronger evidence breaks a link necessary to every route that is not speculative",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "b5edeb61d06fe365313a761e"
+  },
+  {
+    "unit_id": "A1-H1-E1",
+    "hypothesis_id": "A1-H1",
+    "axis_id": "A1",
+    "type": "CORROBORATING_EXPECTATION",
+    "text": "Converging findings connect attainable exposure, target engagement, physiological improvement",
+    "source_quote": "Converging findings connect attainable exposure, target engagement, physiological improvement",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "converging",
+      "findings",
+      "connect",
+      "attainable",
+      "exposure",
+      "target",
+      "engagement",
+      "physiological",
+      "improvement"
+    ],
+    "satisfied_by": "a source-reported finding stating that Converging findings connect attainable exposure, target engagement, physiological improvement",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "b5edeb61d06fe365313a761e"
+  },
+  {
+    "unit_id": "A1-H1-E2",
+    "hypothesis_id": "A1-H1",
+    "axis_id": "A1",
+    "type": "CORROBORATING_EXPECTATION",
+    "text": "contrary results discriminate this explanation from alternatives",
+    "source_quote": "contrary results discriminate this explanation from alternatives",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "contrary",
+      "results",
+      "discriminate",
+      "explanation",
+      "alternatives"
+    ],
+    "satisfied_by": "a source-reported finding stating that contrary results discriminate this explanation from alternatives",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "b5edeb61d06fe365313a761e"
+  },
+  {
+    "unit_id": "A1-H1-E3",
+    "hypothesis_id": "A1-H1",
+    "axis_id": "A1",
+    "type": "CORROBORATING_EXPECTATION",
+    "text": "The evidence identifies measurable patient characteristics and trial outcomes that should reveal benefit",
+    "source_quote": "The evidence identifies measurable patient characteristics and trial outcomes that should reveal benefit",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "evidence",
+      "identifies",
+      "measurable",
+      "patient",
+      "characteristics",
+      "trial",
+      "outcomes",
+      "reveal",
+      "benefit"
+    ],
+    "satisfied_by": "a source-reported finding stating that The evidence identifies measurable patient characteristics and trial outcomes that should reveal benefit",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "b5edeb61d06fe365313a761e"
+  },
+  {
+    "unit_id": "A1-H1-J1",
+    "hypothesis_id": "A1-H1",
+    "axis_id": "A1",
+    "type": "EVALUATIVE_JUDGMENT",
+    "text": "The available pharmacological, physiological, and mechanistic evidence supports a coherent causal explanation for why PTX could meaningfully improve voiding in an identifiable subgroup of these men",
+    "source_quote": "The available pharmacological, physiological, and mechanistic evidence supports a coherent causal explanation for why PTX could meaningfully improve voiding in an identifiable subgroup of these men",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "available",
+      "pharmacological",
+      "physiological",
+      "mechanistic",
+      "evidence",
+      "supports",
+      "coherent",
+      "causal",
+      "explanation",
+      "ptx"
+    ],
+    "satisfied_by": "a source-reported finding stating that The available pharmacological, physiological, and mechanistic evidence supports a coherent causal explanation for why PTX could meaningfully improve voiding in an identifiable subgroup of these men",
+    "active": false,
+    "inactive_reason": "evaluative judgment: reported, not matched",
+    "call_key": "b5edeb61d06fe365313a761e"
+  },
+  {
+    "unit_id": "A1-H2-R1",
+    "hypothesis_id": "A1-H2",
+    "axis_id": "A1",
+    "type": "REQUIRED_SUPPORT",
+    "text": "PTX's reported biological effects do not translate into a meaningful remedy for the dysfunction driving impaired voiding in this cohort",
+    "source_quote": "PTX's reported biological effects do not translate into a meaningful remedy for the dysfunction driving impaired voiding in this cohort",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "ptx's",
+      "reported",
+      "biological",
+      "effects",
+      "translate",
+      "meaningful",
+      "remedy",
+      "dysfunction",
+      "driving",
+      "impaired"
+    ],
+    "satisfied_by": "a source-reported finding stating that PTX's reported biological effects do not translate into a meaningful remedy for the dysfunction driving impaired voiding in this cohort",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "98a72ac49925852862a0e60c"
+  },
+  {
+    "unit_id": "A1-H2-R2",
+    "hypothesis_id": "A1-H2",
+    "axis_id": "A1",
+    "type": "REQUIRED_SUPPORT",
+    "text": "Affirmative evidence demonstrates a consequential mismatch in exposure, tissue, disease process, timing, or the relationship between a biological marker and urinary function—and that mismatch defeats the materially supported rationale, not merely one route among many",
+    "source_quote": "Affirmative evidence demonstrates a consequential mismatch in exposure, tissue, disease process, timing, or the relationship between a biological marker and urinary function—and that mismatch defeats the materially supported rationale, not merely one route among many",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "affirmative",
+      "evidence",
+      "demonstrates",
+      "consequential",
+      "mismatch",
+      "exposure",
+      "tissue",
+      "disease",
+      "process",
+      "timing"
+    ],
+    "satisfied_by": "a source-reported finding stating that Affirmative evidence demonstrates a consequential mismatch in exposure, tissue, disease process, timing, or the relationship between a biological marker and urinary function—and that mismatch defeats the …",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "98a72ac49925852862a0e60c"
+  },
+  {
+    "unit_id": "A1-H2-R3",
+    "hypothesis_id": "A1-H2",
+    "axis_id": "A1",
+    "type": "REQUIRED_SUPPORT",
+    "text": "Favorable findings therefore do not provide the proposed causal justification for this intervention",
+    "source_quote": "Favorable findings therefore do not provide the proposed causal justification for this intervention",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "favorable",
+      "findings",
+      "therefore",
+      "provide",
+      "proposed",
+      "causal",
+      "justification",
+      "intervention"
+    ],
+    "satisfied_by": "a source-reported finding stating that Favorable findings therefore do not provide the proposed causal justification for this intervention",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "98a72ac49925852862a0e60c"
+  },
+  {
+    "unit_id": "A1-H2-C1",
+    "hypothesis_id": "A1-H2",
+    "axis_id": "A1",
+    "type": "CONTEXTUAL_CONSTRAINT",
+    "text": "The evidence demonstrating the mismatch is sufficiently relevant to test H1",
+    "source_quote": "The evidence demonstrating the mismatch is sufficiently relevant to test H1",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "evidence",
+      "demonstrating",
+      "mismatch",
+      "sufficiently",
+      "relevant",
+      "test"
+    ],
+    "satisfied_by": "a source-reported finding stating that The evidence demonstrating the mismatch is sufficiently relevant to test H1",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "98a72ac49925852862a0e60c"
+  },
+  {
+    "unit_id": "A1-H2-C2",
+    "hypothesis_id": "A1-H2",
+    "axis_id": "A1",
+    "type": "CONTEXTUAL_CONSTRAINT",
+    "text": "failure in an unrelated model or exposure does not suffice",
+    "source_quote": "failure in an unrelated model or exposure does not suffice",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "failure",
+      "unrelated",
+      "model",
+      "exposure",
+      "suffice"
+    ],
+    "satisfied_by": "a source-reported finding stating that failure in an unrelated model or exposure does not suffice",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "98a72ac49925852862a0e60c"
+  },
+  {
+    "unit_id": "A1-H2-C3",
+    "hypothesis_id": "A1-H2",
+    "axis_id": "A1",
+    "type": "CONTEXTUAL_CONSTRAINT",
+    "text": "H2 targets the materially supported rationale as it currently stands in the ledger, not every route that could be imagined",
+    "source_quote": "H2 targets the materially supported rationale as it currently stands in the ledger, not every route that could be imagined",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "targets",
+      "materially",
+      "supported",
+      "rationale",
+      "currently",
+      "stands",
+      "ledger",
+      "every",
+      "route",
+      "imagined"
+    ],
+    "satisfied_by": "a source-reported finding stating that H2 targets the materially supported rationale as it currently stands in the ledger, not every route that could be imagined",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "98a72ac49925852862a0e60c"
+  },
+  {
+    "unit_id": "A1-H2-A1",
+    "hypothesis_id": "A1-H2",
+    "axis_id": "A1",
+    "type": "ADVERSE_TEST",
+    "text": "A coherent, exposure-compatible causal chain survives the proposed objections and generates supported functional predictions in relevant conditions",
+    "source_quote": "A coherent, exposure-compatible causal chain survives the proposed objections and generates supported functional predictions in relevant conditions",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "coherent",
+      "exposure-compatible",
+      "causal",
+      "chain",
+      "survives",
+      "proposed",
+      "objections",
+      "generates",
+      "supported",
+      "functional"
+    ],
+    "satisfied_by": "a source-reported finding stating that A coherent, exposure-compatible causal chain survives the proposed objections and generates supported functional predictions in relevant conditions",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "98a72ac49925852862a0e60c"
+  },
+  {
+    "unit_id": "A1-H2-E1",
+    "hypothesis_id": "A1-H2",
+    "axis_id": "A1",
+    "type": "CORROBORATING_EXPECTATION",
+    "text": "Relevant experiments demonstrate insufficient exposure, absent target engagement, persistent dysfunction despite target modulation, incompatible timing, or another affirmative failure of a necessary link",
+    "source_quote": "Relevant experiments demonstrate insufficient exposure, absent target engagement, persistent dysfunction despite target modulation, incompatible timing, or another affirmative failure of a necessary link",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "relevant",
+      "experiments",
+      "demonstrate",
+      "insufficient",
+      "exposure",
+      "target",
+      "engagement",
+      "persistent",
+      "dysfunction",
+      "despite"
+    ],
+    "satisfied_by": "a source-reported finding stating that Relevant experiments demonstrate insufficient exposure, absent target engagement, persistent dysfunction despite target modulation, incompatible timing, or another affirmative failure of a necessary link",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "98a72ac49925852862a0e60c"
+  },
+  {
+    "unit_id": "A1-H2-E2",
+    "hypothesis_id": "A1-H2",
+    "axis_id": "A1",
+    "type": "CORROBORATING_EXPECTATION",
+    "text": "Missing clinical trials alone do not corroborate H2",
+    "source_quote": "Missing clinical trials alone do not corroborate H2",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "missing",
+      "clinical",
+      "trials",
+      "alone",
+      "corroborate"
+    ],
+    "satisfied_by": "a source-reported finding stating that Missing clinical trials alone do not corroborate H2",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "98a72ac49925852862a0e60c"
+  },
+  {
+    "unit_id": "A1-H2-E3",
+    "hypothesis_id": "A1-H2",
+    "axis_id": "A1",
+    "type": "CORROBORATING_EXPECTATION",
+    "text": "Breaking one route among several independently supported routes damages that route in proportion to the share of the case it carried",
+    "source_quote": "Breaking one route among several independently supported routes damages that route in proportion to the share of the case it carried",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "breaking",
+      "one",
+      "route",
+      "among",
+      "several",
+      "independently",
+      "supported",
+      "routes",
+      "damages",
+      "proportion"
+    ],
+    "satisfied_by": "a source-reported finding stating that Breaking one route among several independently supported routes damages that route in proportion to the share of the case it carried",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "98a72ac49925852862a0e60c"
+  },
+  {
+    "unit_id": "A1-H2-J1",
+    "hypothesis_id": "A1-H2",
+    "axis_id": "A1",
+    "type": "EVALUATIVE_JUDGMENT",
+    "text": "Affirmative evidence demonstrates a consequential mismatch in exposure, tissue, disease process, timing, or the relationship between a biological marker and urinary function—and that mismatch defeats the materially supported rationale, not merely one route among many",
+    "source_quote": "Affirmative evidence demonstrates a consequential mismatch in exposure, tissue, disease process, timing, or the relationship between a biological marker and urinary function—and that mismatch defeats the materially supported rationale, not merely one route among many",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "affirmative",
+      "evidence",
+      "demonstrates",
+      "consequential",
+      "mismatch",
+      "exposure",
+      "tissue",
+      "disease",
+      "process",
+      "timing"
+    ],
+    "satisfied_by": "a source-reported finding stating that Affirmative evidence demonstrates a consequential mismatch in exposure, tissue, disease process, timing, or the relationship between a biological marker and urinary function—and that mismatch defeats the …",
+    "active": false,
+    "inactive_reason": "evaluative judgment: reported, not matched",
+    "call_key": "98a72ac49925852862a0e60c"
+  },
+  {
+    "unit_id": "A1-H3-R1",
+    "hypothesis_id": "A1-H3",
+    "axis_id": "A1",
+    "type": "REQUIRED_SUPPORT",
+    "text": "Existing evidence supports some components of H1",
+    "source_quote": "Existing evidence supports some components of H1",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "existing",
+      "evidence",
+      "supports",
+      "components"
+    ],
+    "satisfied_by": "a source-reported finding stating that Existing evidence supports some components of H1",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "06fffc02f6100c9ce9946115"
+  },
+  {
+    "unit_id": "A1-H3-R2",
+    "hypothesis_id": "A1-H3",
+    "axis_id": "A1",
+    "type": "REQUIRED_SUPPORT",
+    "text": "cannot distinguish a therapeutically consequential mechanism from the failure described by H2",
+    "source_quote": "cannot distinguish a therapeutically consequential mechanism from the failure described by H2",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "distinguish",
+      "therapeutically",
+      "consequential",
+      "mechanism",
+      "failure",
+      "described"
+    ],
+    "satisfied_by": "a source-reported finding stating that cannot distinguish a therapeutically consequential mechanism from the failure described by H2",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "06fffc02f6100c9ce9946115"
+  },
+  {
+    "unit_id": "A1-H3-R3",
+    "hypothesis_id": "A1-H3",
+    "axis_id": "A1",
+    "type": "REQUIRED_SUPPORT",
+    "text": "The unresolved links prevent the rationale from becoming specific enough to design the trial: at least one of intervention and exposure, phenotype, measurement, or comparator cannot be specified from supported premises",
+    "source_quote": "The unresolved links prevent the rationale from becoming specific enough to design the trial: at least one of intervention and exposure, phenotype, measurement, or comparator cannot be specified from supported premises",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "unresolved",
+      "links",
+      "prevent",
+      "rationale",
+      "becoming",
+      "specific",
+      "enough",
+      "design",
+      "trial",
+      "least"
+    ],
+    "satisfied_by": "a source-reported finding stating that The unresolved links prevent the rationale from becoming specific enough to design the trial: at least one of intervention and exposure, phenotype, measurement, or comparator cannot …",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "06fffc02f6100c9ce9946115"
+  },
+  {
+    "unit_id": "A1-H3-R4",
+    "hypothesis_id": "A1-H3",
+    "axis_id": "A1",
+    "type": "REQUIRED_SUPPORT",
+    "text": "The uncertainty is localized to identified links",
+    "source_quote": "The uncertainty is localized to identified links",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "uncertainty",
+      "localized",
+      "identified",
+      "links"
+    ],
+    "satisfied_by": "a source-reported finding stating that The uncertainty is localized to identified links",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "06fffc02f6100c9ce9946115"
+  },
+  {
+    "unit_id": "A1-H3-R5",
+    "hypothesis_id": "A1-H3",
+    "axis_id": "A1",
+    "type": "REQUIRED_SUPPORT",
+    "text": "neither a compelling mechanistic endorsement nor a mechanistic rejection is presently determined",
+    "source_quote": "neither a compelling mechanistic endorsement nor a mechanistic rejection is presently determined",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "compelling",
+      "mechanistic",
+      "endorsement",
+      "rejection",
+      "presently",
+      "determined"
+    ],
+    "satisfied_by": "a source-reported finding stating that neither a compelling mechanistic endorsement nor a mechanistic rejection is presently determined",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "06fffc02f6100c9ce9946115"
+  },
+  {
+    "unit_id": "A1-H3-C1",
+    "hypothesis_id": "A1-H3",
+    "axis_id": "A1",
+    "type": "CONTEXTUAL_CONSTRAINT",
+    "text": "Meaningful retrieval and adverse testing have been completed",
+    "source_quote": "Meaningful retrieval and adverse testing have been completed",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "meaningful",
+      "retrieval",
+      "adverse",
+      "testing",
+      "completed"
+    ],
+    "satisfied_by": "a source-reported finding stating that Meaningful retrieval and adverse testing have been completed",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "06fffc02f6100c9ce9946115"
+  },
+  {
+    "unit_id": "A1-H3-C2",
+    "hypothesis_id": "A1-H3",
+    "axis_id": "A1",
+    "type": "CONTEXTUAL_CONSTRAINT",
+    "text": "uncertainty is not merely an artifact of an unfinished investigation",
+    "source_quote": "uncertainty is not merely an artifact of an unfinished investigation",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "uncertainty",
+      "merely",
+      "artifact",
+      "unfinished",
+      "investigation"
+    ],
+    "satisfied_by": "a source-reported finding stating that uncertainty is not merely an artifact of an unfinished investigation",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "06fffc02f6100c9ce9946115"
+  },
+  {
+    "unit_id": "A1-H3-A1",
+    "hypothesis_id": "A1-H3",
+    "axis_id": "A1",
+    "type": "ADVERSE_TEST",
+    "text": "Evidence resolves the decisive links sufficiently to fill all four trial-specification slots (favoring H1) or to defeat the supported rationale (favoring H2)",
+    "source_quote": "Evidence resolves the decisive links sufficiently to fill all four trial-specification slots (favoring H1) or to defeat the supported rationale (favoring H2)",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "evidence",
+      "resolves",
+      "decisive",
+      "links",
+      "sufficiently",
+      "fill",
+      "four",
+      "trial-specification",
+      "slots",
+      "favoring"
+    ],
+    "satisfied_by": "a source-reported finding stating that Evidence resolves the decisive links sufficiently to fill all four trial-specification slots (favoring H1) or to defeat the supported rationale (favoring H2)",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "06fffc02f6100c9ce9946115"
+  },
+  {
+    "unit_id": "A1-H3-E1",
+    "hypothesis_id": "A1-H3",
+    "axis_id": "A1",
+    "type": "CORROBORATING_EXPECTATION",
+    "text": "Plausible competing explanations remain compatible with the observations",
+    "source_quote": "Plausible competing explanations remain compatible with the observations",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "plausible",
+      "competing",
+      "explanations",
+      "remain",
+      "compatible",
+      "observations"
+    ],
+    "satisfied_by": "a source-reported finding stating that Plausible competing explanations remain compatible with the observations",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "06fffc02f6100c9ce9946115"
+  },
+  {
+    "unit_id": "A1-H3-E2",
+    "hypothesis_id": "A1-H3",
+    "axis_id": "A1",
+    "type": "CORROBORATING_EXPECTATION",
+    "text": "relevant exposure, tissue effects, functional consequences, or response predictors are unmeasured or inadequately distinguished",
+    "source_quote": "relevant exposure, tissue effects, functional consequences, or response predictors are unmeasured or inadequately distinguished",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "relevant",
+      "exposure",
+      "tissue",
+      "effects",
+      "functional",
+      "consequences",
+      "response",
+      "predictors",
+      "unmeasured",
+      "inadequately"
+    ],
+    "satisfied_by": "a source-reported finding stating that relevant exposure, tissue effects, functional consequences, or response predictors are unmeasured or inadequately distinguished",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "06fffc02f6100c9ce9946115"
+  },
+  {
+    "unit_id": "A1-H3-E3",
+    "hypothesis_id": "A1-H3",
+    "axis_id": "A1",
+    "type": "CORROBORATING_EXPECTATION",
+    "text": "the resulting gap blocks at least one of the four specification slots",
+    "source_quote": "the resulting gap blocks at least one of the four specification slots",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "resulting",
+      "gap",
+      "blocks",
+      "least",
+      "one",
+      "four",
+      "specification",
+      "slots"
+    ],
+    "satisfied_by": "a source-reported finding stating that the resulting gap blocks at least one of the four specification slots",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "06fffc02f6100c9ce9946115"
+  },
+  {
+    "unit_id": "A1-H3-J1",
+    "hypothesis_id": "A1-H3",
+    "axis_id": "A1",
+    "type": "EVALUATIVE_JUDGMENT",
+    "text": "Existing evidence supports some components of H1 but cannot distinguish a therapeutically consequential mechanism from the failure described by H2",
+    "source_quote": "Existing evidence supports some components of H1 but cannot distinguish a therapeutically consequential mechanism from the failure described by H2",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "existing",
+      "evidence",
+      "supports",
+      "components",
+      "distinguish",
+      "therapeutically",
+      "consequential",
+      "mechanism",
+      "failure",
+      "described"
+    ],
+    "satisfied_by": "a source-reported finding stating that Existing evidence supports some components of H1 but cannot distinguish a therapeutically consequential mechanism from the failure described by H2",
+    "active": false,
+    "inactive_reason": "evaluative judgment: reported, not matched",
+    "call_key": "06fffc02f6100c9ce9946115"
+  },
+  {
+    "unit_id": "A2-H1-R1",
+    "hypothesis_id": "A2-H1",
+    "axis_id": "A2",
+    "type": "REQUIRED_SUPPORT",
+    "text": "The materially supported mechanism acts on current physiological function—such as perfusion, microcirculation, smooth-muscle behavior, or neural signaling—rather than on established tissue structure",
+    "source_quote": "The materially supported mechanism acts on current physiological function—such as perfusion, microcirculation, smooth-muscle behavior, or neural signaling—rather than on established tissue structure",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "materially",
+      "supported",
+      "mechanism",
+      "acts",
+      "current",
+      "physiological",
+      "function-such",
+      "perfusion",
+      "microcirculation",
+      "smooth-muscle"
+    ],
+    "satisfied_by": "a source-reported finding stating that The materially supported mechanism acts on current physiological function—such as perfusion, microcirculation, smooth-muscle behavior, or neural signaling—rather than on established tissue structure",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "69ca3d76e15064ade4def02b"
+  },
+  {
+    "unit_id": "A2-H1-R2",
+    "hypothesis_id": "A2-H1",
+    "axis_id": "A2",
+    "type": "REQUIRED_SUPPORT",
+    "text": "At clinically attainable exposures, PTX or its metabolites should produce measurable improvement in voiding within days to a few weeks",
+    "source_quote": "At clinically attainable exposures, PTX or its metabolites should produce measurable improvement in voiding within days to a few weeks",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "clinically",
+      "attainable",
+      "exposures",
+      "ptx",
+      "metabolites",
+      "produce",
+      "measurable",
+      "improvement",
+      "voiding",
+      "within"
+    ],
+    "satisfied_by": "a source-reported finding stating that At clinically attainable exposures, PTX or its metabolites should produce measurable improvement in voiding within days to a few weeks",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "69ca3d76e15064ade4def02b"
+  },
+  {
+    "unit_id": "A2-H1-R3",
+    "hypothesis_id": "A2-H1",
+    "axis_id": "A2",
+    "type": "REQUIRED_SUPPORT",
+    "text": "benefit should diminish if treatment stops",
+    "source_quote": "benefit should diminish if treatment stops",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "benefit",
+      "diminish",
+      "treatment",
+      "stops"
+    ],
+    "satisfied_by": "a source-reported finding stating that benefit should diminish if treatment stops",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "69ca3d76e15064ade4def02b"
+  },
+  {
+    "unit_id": "A2-H1-C1",
+    "hypothesis_id": "A2-H1",
+    "axis_id": "A2",
+    "type": "CONTEXTUAL_CONSTRAINT",
+    "text": "A functional component of impaired voiding is present and modifiable in this cohort",
+    "source_quote": "A functional component of impaired voiding is present and modifiable in this cohort",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "functional",
+      "component",
+      "impaired",
+      "voiding",
+      "present",
+      "modifiable",
+      "cohort"
+    ],
+    "satisfied_by": "a source-reported finding stating that A functional component of impaired voiding is present and modifiable in this cohort",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "69ca3d76e15064ade4def02b"
+  },
+  {
+    "unit_id": "A2-H1-C2",
+    "hypothesis_id": "A2-H1",
+    "axis_id": "A2",
+    "type": "CONTEXTUAL_CONSTRAINT",
+    "text": "attainable exposure reaches the relevant tissue quickly enough to act within the proposed window",
+    "source_quote": "attainable exposure reaches the relevant tissue quickly enough to act within the proposed window",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "attainable",
+      "exposure",
+      "reaches",
+      "relevant",
+      "tissue",
+      "quickly",
+      "enough",
+      "act",
+      "within",
+      "proposed"
+    ],
+    "satisfied_by": "a source-reported finding stating that attainable exposure reaches the relevant tissue quickly enough to act within the proposed window",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "69ca3d76e15064ade4def02b"
+  },
+  {
+    "unit_id": "A2-H1-A1",
+    "hypothesis_id": "A2-H1",
+    "axis_id": "A2",
+    "type": "ADVERSE_TEST",
+    "text": "Relevant models show no early functional change at informative exposures",
+    "source_quote": "Relevant models show no early functional change at informative exposures",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "relevant",
+      "models",
+      "show",
+      "early",
+      "functional",
+      "change",
+      "informative",
+      "exposures"
+    ],
+    "satisfied_by": "a source-reported finding stating that Relevant models show no early functional change at informative exposures",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "69ca3d76e15064ade4def02b"
+  },
+  {
+    "unit_id": "A2-H1-A2",
+    "hypothesis_id": "A2-H1",
+    "axis_id": "A2",
+    "type": "ADVERSE_TEST",
+    "text": "human benefit, where reported, appears only after prolonged treatment",
+    "source_quote": "human benefit, where reported, appears only after prolonged treatment",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "human",
+      "benefit",
+      "reported",
+      "prolonged",
+      "treatment"
+    ],
+    "satisfied_by": "a source-reported finding stating that human benefit, where reported, appears only after prolonged treatment",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "69ca3d76e15064ade4def02b"
+  },
+  {
+    "unit_id": "A2-H1-A3",
+    "hypothesis_id": "A2-H1",
+    "axis_id": "A2",
+    "type": "ADVERSE_TEST",
+    "text": "or the supported route requires structural change before function can improve",
+    "source_quote": "or the supported route requires structural change before function can improve",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "supported",
+      "route",
+      "requires",
+      "structural",
+      "change",
+      "function",
+      "improve"
+    ],
+    "satisfied_by": "a source-reported finding stating that or the supported route requires structural change before function can improve",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "69ca3d76e15064ade4def02b"
+  },
+  {
+    "unit_id": "A2-H1-E1",
+    "hypothesis_id": "A2-H1",
+    "axis_id": "A2",
+    "type": "CORROBORATING_EXPECTATION",
+    "text": "Functional endpoints such as contractility or flow improve early after exposure",
+    "source_quote": "Functional endpoints such as contractility or flow improve early after exposure",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "functional",
+      "endpoints",
+      "contractility",
+      "flow",
+      "improve",
+      "early",
+      "exposure"
+    ],
+    "satisfied_by": "a source-reported finding stating that Functional endpoints such as contractility or flow improve early after exposure",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "69ca3d76e15064ade4def02b"
+  },
+  {
+    "unit_id": "A2-H1-E2",
+    "hypothesis_id": "A2-H1",
+    "axis_id": "A2",
+    "type": "CORROBORATING_EXPECTATION",
+    "text": "and early change is not explained by concurrent structural recovery",
+    "source_quote": "and early change is not explained by concurrent structural recovery",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "early",
+      "change",
+      "explained",
+      "concurrent",
+      "structural",
+      "recovery"
+    ],
+    "satisfied_by": "a source-reported finding stating that and early change is not explained by concurrent structural recovery",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "69ca3d76e15064ade4def02b"
+  },
+  {
+    "unit_id": "A2-H2-R1",
+    "hypothesis_id": "A2-H2",
+    "axis_id": "A2",
+    "type": "REQUIRED_SUPPORT",
+    "text": "The materially supported mechanism acts by reversing or limiting structural change—such as fibrosis, remodeling, or other tissue damage—that contributes to impaired voiding",
+    "source_quote": "The materially supported mechanism acts by reversing or limiting structural change—such as fibrosis, remodeling, or other tissue damage—that contributes to impaired voiding",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "materially",
+      "supported",
+      "mechanism",
+      "acts",
+      "reversing",
+      "limiting",
+      "structural",
+      "change-such",
+      "fibrosis",
+      "remodeling"
+    ],
+    "satisfied_by": "a source-reported finding stating that The materially supported mechanism acts by reversing or limiting structural change—such as fibrosis, remodeling, or other tissue damage—that contributes to impaired voiding",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "c636fc3bd2172b1498fc871a"
+  },
+  {
+    "unit_id": "A2-H2-R2",
+    "hypothesis_id": "A2-H2",
+    "axis_id": "A2",
+    "type": "REQUIRED_SUPPORT",
+    "text": "Meaningful improvement should appear only after weeks to months of treatment, with little early functional change",
+    "source_quote": "Meaningful improvement should appear only after weeks to months of treatment, with little early functional change",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "meaningful",
+      "improvement",
+      "weeks",
+      "months",
+      "treatment",
+      "little",
+      "early",
+      "functional",
+      "change"
+    ],
+    "satisfied_by": "a source-reported finding stating that Meaningful improvement should appear only after weeks to months of treatment, with little early functional change",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "c636fc3bd2172b1498fc871a"
+  },
+  {
+    "unit_id": "A2-H2-C1",
+    "hypothesis_id": "A2-H2",
+    "axis_id": "A2",
+    "type": "CONTEXTUAL_CONSTRAINT",
+    "text": "Structural change contributes consequentially to impaired voiding in this cohort",
+    "source_quote": "Structural change contributes consequentially to impaired voiding in this cohort",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "structural",
+      "change",
+      "contributes",
+      "consequentially",
+      "impaired",
+      "voiding",
+      "cohort"
+    ],
+    "satisfied_by": "a source-reported finding stating that Structural change contributes consequentially to impaired voiding in this cohort",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "c636fc3bd2172b1498fc871a"
+  },
+  {
+    "unit_id": "A2-H2-C2",
+    "hypothesis_id": "A2-H2",
+    "axis_id": "A2",
+    "type": "CONTEXTUAL_CONSTRAINT",
+    "text": "PTX can reverse or limit that change rather than merely prevent it",
+    "source_quote": "PTX can reverse or limit that change rather than merely prevent it",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "ptx",
+      "reverse",
+      "limit",
+      "change",
+      "rather",
+      "merely",
+      "prevent"
+    ],
+    "satisfied_by": "a source-reported finding stating that PTX can reverse or limit that change rather than merely prevent it",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "c636fc3bd2172b1498fc871a"
+  },
+  {
+    "unit_id": "A2-H2-A1",
+    "hypothesis_id": "A2-H2",
+    "axis_id": "A2",
+    "type": "ADVERSE_TEST",
+    "text": "Structural effects appear only when treatment precedes injury (prevention, not reversal)",
+    "source_quote": "Structural effects appear only when treatment precedes injury (prevention, not reversal)",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "structural",
+      "effects",
+      "treatment",
+      "precedes",
+      "injury",
+      "prevention",
+      "reversal"
+    ],
+    "satisfied_by": "a source-reported finding stating that Structural effects appear only when treatment precedes injury (prevention, not reversal)",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "c636fc3bd2172b1498fc871a"
+  },
+  {
+    "unit_id": "A2-H2-A2",
+    "hypothesis_id": "A2-H2",
+    "axis_id": "A2",
+    "type": "ADVERSE_TEST",
+    "text": "structural improvement does not accompany functional improvement",
+    "source_quote": "structural improvement does not accompany functional improvement",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "structural",
+      "improvement",
+      "accompany",
+      "functional"
+    ],
+    "satisfied_by": "a source-reported finding stating that structural improvement does not accompany functional improvement",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "c636fc3bd2172b1498fc871a"
+  },
+  {
+    "unit_id": "A2-H2-A3",
+    "hypothesis_id": "A2-H2",
+    "axis_id": "A2",
+    "type": "ADVERSE_TEST",
+    "text": "or meaningful benefit appears too quickly to be structurally mediated",
+    "source_quote": "or meaningful benefit appears too quickly to be structurally mediated",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "meaningful",
+      "benefit",
+      "quickly",
+      "structurally",
+      "mediated"
+    ],
+    "satisfied_by": "a source-reported finding stating that or meaningful benefit appears too quickly to be structurally mediated",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "c636fc3bd2172b1498fc871a"
+  },
+  {
+    "unit_id": "A2-H2-E1",
+    "hypothesis_id": "A2-H2",
+    "axis_id": "A2",
+    "type": "CORROBORATING_EXPECTATION",
+    "text": "Structural endpoints such as stereology or collagen measures improve with treatment of established dysfunction",
+    "source_quote": "Structural endpoints such as stereology or collagen measures improve with treatment of established dysfunction",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "structural",
+      "endpoints",
+      "stereology",
+      "collagen",
+      "measures",
+      "improve",
+      "treatment",
+      "established",
+      "dysfunction"
+    ],
+    "satisfied_by": "a source-reported finding stating that Structural endpoints such as stereology or collagen measures improve with treatment of established dysfunction",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "c636fc3bd2172b1498fc871a"
+  },
+  {
+    "unit_id": "A2-H2-E2",
+    "hypothesis_id": "A2-H2",
+    "axis_id": "A2",
+    "type": "CORROBORATING_EXPECTATION",
+    "text": "functional improvement follows structural change in time",
+    "source_quote": "functional improvement follows structural change in time",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "functional",
+      "improvement",
+      "follows",
+      "structural",
+      "change",
+      "time"
+    ],
+    "satisfied_by": "a source-reported finding stating that functional improvement follows structural change in time",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "c636fc3bd2172b1498fc871a"
+  },
+  {
+    "unit_id": "A2-H2-E3",
+    "hypothesis_id": "A2-H2",
+    "axis_id": "A2",
+    "type": "CORROBORATING_EXPECTATION",
+    "text": "benefit accumulates with duration and persists after withdrawal",
+    "source_quote": "benefit accumulates with duration and persists after withdrawal",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "benefit",
+      "accumulates",
+      "duration",
+      "persists",
+      "withdrawal"
+    ],
+    "satisfied_by": "a source-reported finding stating that benefit accumulates with duration and persists after withdrawal",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "c636fc3bd2172b1498fc871a"
+  },
+  {
+    "unit_id": "A2-H3-R1",
+    "hypothesis_id": "A2-H3",
+    "axis_id": "A2",
+    "type": "REQUIRED_SUPPORT",
+    "text": "Existing evidence cannot distinguish rapid functional benefit from slow structural recovery",
+    "source_quote": "Existing evidence cannot distinguish rapid functional benefit from slow structural recovery",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "existing",
+      "evidence",
+      "distinguish",
+      "rapid",
+      "functional",
+      "benefit",
+      "slow",
+      "structural",
+      "recovery"
+    ],
+    "satisfied_by": "a source-reported finding stating that Existing evidence cannot distinguish rapid functional benefit from slow structural recovery",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "eba69d30dfa3b33a32dd5144"
+  },
+  {
+    "unit_id": "A2-H3-R2",
+    "hypothesis_id": "A2-H3",
+    "axis_id": "A2",
+    "type": "REQUIRED_SUPPORT",
+    "text": "Timing evidence is unmeasured, conflicting, poorly transferable, or compatible with both",
+    "source_quote": "Timing evidence is unmeasured, conflicting, poorly transferable, or compatible with both",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "timing",
+      "evidence",
+      "unmeasured",
+      "conflicting",
+      "poorly",
+      "transferable",
+      "compatible"
+    ],
+    "satisfied_by": "a source-reported finding stating that Timing evidence is unmeasured, conflicting, poorly transferable, or compatible with both",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "eba69d30dfa3b33a32dd5144"
+  },
+  {
+    "unit_id": "A2-H3-R3",
+    "hypothesis_id": "A2-H3",
+    "axis_id": "A2",
+    "type": "REQUIRED_SUPPORT",
+    "text": "the expected onset and persistence of benefit cannot be specified from supported premises",
+    "source_quote": "the expected onset and persistence of benefit cannot be specified from supported premises",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "expected",
+      "onset",
+      "persistence",
+      "benefit",
+      "specified",
+      "supported",
+      "premises"
+    ],
+    "satisfied_by": "a source-reported finding stating that the expected onset and persistence of benefit cannot be specified from supported premises",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "eba69d30dfa3b33a32dd5144"
+  },
+  {
+    "unit_id": "A2-H3-R4",
+    "hypothesis_id": "A2-H3",
+    "axis_id": "A2",
+    "type": "REQUIRED_SUPPORT",
+    "text": "The uncertainty is localized to identified timing links",
+    "source_quote": "The uncertainty is localized to identified timing links",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "uncertainty",
+      "localized",
+      "identified",
+      "timing",
+      "links"
+    ],
+    "satisfied_by": "a source-reported finding stating that The uncertainty is localized to identified timing links",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "eba69d30dfa3b33a32dd5144"
+  },
+  {
+    "unit_id": "A2-H3-C1",
+    "hypothesis_id": "A2-H3",
+    "axis_id": "A2",
+    "type": "CONTEXTUAL_CONSTRAINT",
+    "text": "Meaningful retrieval and adverse testing of timing evidence have been completed",
+    "source_quote": "Meaningful retrieval and adverse testing of timing evidence have been completed",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "meaningful",
+      "retrieval",
+      "adverse",
+      "testing",
+      "timing",
+      "evidence",
+      "completed"
+    ],
+    "satisfied_by": "a source-reported finding stating that Meaningful retrieval and adverse testing of timing evidence have been completed",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "eba69d30dfa3b33a32dd5144"
+  },
+  {
+    "unit_id": "A2-H3-C2",
+    "hypothesis_id": "A2-H3",
+    "axis_id": "A2",
+    "type": "CONTEXTUAL_CONSTRAINT",
+    "text": "uncertainty is not merely an artifact of an unfinished investigation",
+    "source_quote": "uncertainty is not merely an artifact of an unfinished investigation",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "uncertainty",
+      "merely",
+      "artifact",
+      "unfinished",
+      "investigation"
+    ],
+    "satisfied_by": "a source-reported finding stating that uncertainty is not merely an artifact of an unfinished investigation",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "eba69d30dfa3b33a32dd5144"
+  },
+  {
+    "unit_id": "A2-H3-A1",
+    "hypothesis_id": "A2-H3",
+    "axis_id": "A2",
+    "type": "ADVERSE_TEST",
+    "text": "Evidence establishes onset, duration-response, or persistence clearly enough to favor A2-H1 or A2-H2",
+    "source_quote": "Evidence establishes onset, duration-response, or persistence clearly enough to favor A2-H1 or A2-H2",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "evidence",
+      "establishes",
+      "onset",
+      "duration-response",
+      "persistence",
+      "clearly",
+      "enough",
+      "favor",
+      "a2-h1",
+      "a2-h2"
+    ],
+    "satisfied_by": "a source-reported finding stating that Evidence establishes onset, duration-response, or persistence clearly enough to favor A2-H1 or A2-H2",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "eba69d30dfa3b33a32dd5144"
+  },
+  {
+    "unit_id": "A2-H3-E1",
+    "hypothesis_id": "A2-H3",
+    "axis_id": "A2",
+    "type": "CORROBORATING_EXPECTATION",
+    "text": "Available findings report both functional and structural effects without establishing which carries the benefit, lack onset or withdrawal timing, or rest on models whose timing does not transfer to this cohort",
+    "source_quote": "Available findings report both functional and structural effects without establishing which carries the benefit, lack onset or withdrawal timing, or rest on models whose timing does not transfer to this cohort",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "available",
+      "findings",
+      "report",
+      "functional",
+      "structural",
+      "effects",
+      "establishing",
+      "carries",
+      "benefit",
+      "onset"
+    ],
+    "satisfied_by": "a source-reported finding stating that Available findings report both functional and structural effects without establishing which carries the benefit, lack onset or withdrawal timing, or rest on models whose timing does …",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "eba69d30dfa3b33a32dd5144"
+  },
+  {
+    "unit_id": "A2-H3-E2",
+    "hypothesis_id": "A2-H3",
+    "axis_id": "A2",
+    "type": "CORROBORATING_EXPECTATION",
+    "text": "Record which timing link is unresolved and what measurement would distinguish rapid from slow benefit",
+    "source_quote": "Record which timing link is unresolved and what measurement would distinguish rapid from slow benefit",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "record",
+      "timing",
+      "link",
+      "unresolved",
+      "measurement",
+      "distinguish",
+      "rapid",
+      "slow",
+      "benefit"
+    ],
+    "satisfied_by": "a source-reported finding stating that Record which timing link is unresolved and what measurement would distinguish rapid from slow benefit",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "eba69d30dfa3b33a32dd5144"
+  }
+]

@@ -1,0 +1,1806 @@
+{
+  "mode": "off",
+  "items": [
+    {
+      "item_id": "W-FRD-Q0001-01-Q0001",
+      "type": "WITNESS",
+      "raw": "A review of available studies indicates that Pentoxifylline may have a potentially positive impact on male infertility,<sup>27</sup> Peyronie's disease,<sup>28</sup> regulation of the systemic inflammatory response to bypass surgery,<sup>29</sup> angina symptom,<sup>30</sup> management of intermittent claudication,<sup>31</sup> improvement of cerebral blood flow in patients with cerebrovascular disease, and the progression of vascular dementia.<sup>32</sup> Therefore (Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf).",
+      "transcoded": "A review of available studies indicates that Pentoxifylline may have a potentially positive impact on male infertility,<sup>27</sup> Peyronie's disease,<sup>28</sup> regulation of the systemic inflammatory response to bypass surgery,<sup>29</sup> angina symptom,<sup>30</sup> management of intermittent claudication,<sup>31</sup> improvement of cerebral blood flow in patients with cerebrovascular disease, and the progression of vascular dementia.<sup>32</sup> Therefore (Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0001-02-Q0001",
+      "type": "WITNESS",
+      "raw": "This positive effect may be related to the fact that detrusor muscle contractility of an obstructed bladder improves with Pentoxifylline use.<sup>14</sup> Hence, it makes sense to attribute (Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf).",
+      "transcoded": "This positive effect may be related to the fact that detrusor muscle contractility of an obstructed bladder improves with Pentoxifylline use.<sup>14</sup> Hence, it makes sense to attribute (Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0001-03-Q0001",
+      "type": "WITNESS",
+      "raw": "Barie, MD, New York:** I wonder if you could comment on the temporal relationships between the timing of intervention and the fact that the physiologic responses you observed became meaningful statistically at 7 to as many as 14 days thereafter? (staubach1998.pdf).",
+      "transcoded": "Barie, MD, New York:** I wonder if you could comment on the temporal relationships between the timing of intervention and the fact that the physiologic responses you observed became meaningful statistically at 7 to as many as 14 days thereafter? (staubach1998.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0002-01-Q0002",
+      "type": "WITNESS",
+      "raw": "Captopril is commonly prescribed as an angiotensin-converting enzyme inhibitor for the treatment of some medical conditions, including hypertension and some types of congestive heart failure [10,11] (shirazi2014.pdf).",
+      "transcoded": "Captopril is commonly prescribed as an angiotensin-converting enzyme inhibitor for the treatment of some medical conditions, including hypertension and some types of congestive heart failure [10,11] (shirazi2014.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0002-02-Q0002",
+      "type": "WITNESS",
+      "raw": "[5] indicated that persistent bladder dysfunction in men after transurethral resection of prostate would be associated with long-lasting detrusor ischemia and reduced perfusion (shirazi2015.pdf).",
+      "transcoded": "[5] indicated that persistent bladder dysfunction in men after transurethral resection of prostate would be associated with long-lasting detrusor ischemia and reduced perfusion (shirazi2015.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0002-03-Q0002",
+      "type": "WITNESS",
+      "raw": "It has been reported that an increase in angiotensin II levels in obstructive nephropathy up-regulates the expression of several factors, including transforming growth factor (TGF)- $\\beta$ (shirazi2014.pdf).",
+      "transcoded": "It has been reported that an increase in angiotensin II levels in obstructive nephropathy up-regulates the expression of several factors, including transforming growth factor (TGF)- $\\beta$ (shirazi2014.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0002-04-Q0002",
+      "type": "WITNESS",
+      "raw": "2** The effect of cumulative concentrations of carbachol on the tension of isolated bladder in normal rats (square), rats with partial bladder outlet obstruction (inverted triangle), and rats with partial bladder outlet obstruction that received pentoxifylline (circle) (shirazi2015.pdf).",
+      "transcoded": "2** The effect of cumulative concentrations of carbachol on the tension of isolated bladder in normal rats (square), rats with partial bladder outlet obstruction (inverted triangle), and rats with partial bladder outlet obstruction that received pentoxifylline (circle) (shirazi2015.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0003-01-Q0003",
+      "type": "WITNESS",
+      "raw": "It has been shown that bladder dysfunction secondary to PUO is characterized by bladder wall hypertrophy, decreased capacity and urinary stream, and increased postvoid residual urine [4-6,17,22] (shirazi2014.pdf).",
+      "transcoded": "It has been shown that bladder dysfunction secondary to PUO is characterized by bladder wall hypertrophy, decreased capacity and urinary stream, and increased postvoid residual urine [4-6,17,22] (shirazi2014.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0003-02-Q0003",
+      "type": "WITNESS",
+      "raw": "Although the explanations for bladder dysfunction are not fully understood, fetal urethral obstruction has been reported to result in deposition of an abnormal quantity of collagen in the bladder, which can play a major role in bladder hypocompliance [4] (shirazi2014.pdf).",
+      "transcoded": "Although the explanations for bladder dysfunction are not fully understood, fetal urethral obstruction has been reported to result in deposition of an abnormal quantity of collagen in the bladder, which can play a major role in bladder hypocompliance [4] (shirazi2014.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0003-04-Q0003",
+      "type": "WITNESS",
+      "raw": "The etiology of diabetic bladder dysfunction is multifactorial; both the myogenic and neurogenic effects of diabetic cystopathy cause a decrease in bladder sensation and impairment in voiding function [39] (ladi-seyedian2017.pdf).",
+      "transcoded": "The etiology of diabetic bladder dysfunction is multifactorial; both the myogenic and neurogenic effects of diabetic cystopathy cause a decrease in bladder sensation and impairment in voiding function [39] (ladi-seyedian2017.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0004-01-Q0004",
+      "type": "WITNESS",
+      "raw": "Some risk factors are mentioned in this review and other pathophysiologies are described elsewhere in this issue. **Table 3.** Possible risk factors of detrusor underactivity | Pathological regions | Disease entities | |----------------------|------------------------------------------------------------------------------------------------------------------------------------------| | Idiopathic | Normal ageing process<br>Unknown factors in younger population | | Neurogenic | Parkinson disease<br>Multiple sclerosis<br>Guillain-Barre syndrome<br>Neurosyphilis<br>Diabetes mellitus | | Myogenic | Diabetes mellitus<br>Bladder outlet (2020ICU_icu-58-S68.pdf).",
+      "transcoded": "Some risk factors are mentioned in this review and other pathophysiologies are described elsewhere in this issue. **Table 3.** Possible risk factors of detrusor underactivity | Pathological regions | Disease entities | |----------------------|------------------------------------------------------------------------------------------------------------------------------------------| | Idiopathic | Normal ageing process<br>Unknown factors in younger population | | Neurogenic | Parkinson disease<br>Multiple sclerosis<br>Guillain-Barre syndrome<br>Neurosyphilis<br>Diabetes mellitus | | Myogenic | Diabetes mellitus<br>Bladder outlet (2020ICU_icu-58-S68.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0004-02-Q0004",
+      "type": "WITNESS",
+      "raw": "Especially, the mean PVR measured at the end of the research was 107–125 mL and DU often did not result in chronic urinary retention, which might be generally defined as a $PVR > 300$ mL (2020ICU_icu-58-S68.pdf).",
+      "transcoded": "Especially, the mean PVR measured at the end of the research was 107–125 mL and DU often did not result in chronic urinary retention, which might be generally defined as a $PVR > 300$ mL (2020ICU_icu-58-S68.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0004-04-Q0004",
+      "type": "WITNESS",
+      "raw": "Some progress exists in identifying phenotypes of these pelvic disorders that leads to selection of the most appropriate and effective use of multimodal therapy.<sup>12</sup> Pelvic muscle tenderness is associated with more than 50% of the reported phenotypes and patients with more than 1 phenotype typically have higher pain scores (anderson2011.pdf).",
+      "transcoded": "Some progress exists in identifying phenotypes of these pelvic disorders that leads to selection of the most appropriate and effective use of multimodal therapy.<sup>12</sup> Pelvic muscle tenderness is associated with more than 50% of the reported phenotypes and patients with more than 1 phenotype typically have higher pain scores (anderson2011.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0005-01-Q0005",
+      "type": "WITNESS",
+      "raw": "Some progress exists in identifying phenotypes of these pelvic disorders that leads to selection of the most appropriate and effective use of multimodal therapy.<sup>12</sup> Pelvic muscle tenderness is associated with more than 50% of the reported phenotypes and patients with more than 1 phenotype typically have higher pain scores (anderson2011.pdf).",
+      "transcoded": "Some progress exists in identifying phenotypes of these pelvic disorders that leads to selection of the most appropriate and effective use of multimodal therapy.<sup>12</sup> Pelvic muscle tenderness is associated with more than 50% of the reported phenotypes and patients with more than 1 phenotype typically have higher pain scores (anderson2011.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0005-04-Q0005",
+      "type": "WITNESS",
+      "raw": "Despite these limitations, the consistency of findings across multiple clinical and biochemical outcomes, as well as across subgroup and adjusted analyses, supports the robustness of the observed treatment effect (pharmaceuticals-19-00552.pdf).",
+      "transcoded": "Despite these limitations, the consistency of findings across multiple clinical and biochemical outcomes, as well as across subgroup and adjusted analyses, supports the robustness of the observed treatment effect (pharmaceuticals-19-00552.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0006-01-Q0006",
+      "type": "WITNESS",
+      "raw": "The source of these symptoms is still poorly understood, but pain associated with chronic tension and spasm of the pelvic floor muscles (pelvic floor tension myalgia) has been hypothesized to be a contributing factor.<sup>2,3</sup> We and others have observed that patients with CPPS frequently exhibit tenderness of the levator ani muscles on rectal examination and that measures (clemens2000.pdf).",
+      "transcoded": "The source of these symptoms is still poorly understood, but pain associated with chronic tension and spasm of the pelvic floor muscles (pelvic floor tension myalgia) has been hypothesized to be a contributing factor.<sup>2,3</sup> We and others have observed that patients with CPPS frequently exhibit tenderness of the levator ani muscles on rectal examination and that measures (clemens2000.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0006-02-Q0006",
+      "type": "WITNESS",
+      "raw": "In a recent study of 103 men with pelvic pain, Zermann *et al.*<sup>9</sup> found pathologic tenderness of the pelvic floor muscles associated with the inability to contract and relax the pelvic floor muscles in 88% (clemens2000.pdf).",
+      "transcoded": "In a recent study of 103 men with pelvic pain, Zermann *et al.*<sup>9</sup> found pathologic tenderness of the pelvic floor muscles associated with the inability to contract and relax the pelvic floor muscles in 88% (clemens2000.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0006-04-Q0006",
+      "type": "WITNESS",
+      "raw": "Zeni and coworkers<sup>20</sup> published a study using a higher dose with 1.5 mg/kg of body weight over 48 hours and found a 2-fold increase in serum concentration of pentoxifylline and the first metabolite using a comparable method (staubach1998.pdf).",
+      "transcoded": "Zeni and coworkers<sup>20</sup> published a study using a higher dose with 1.5 mg/kg of body weight over 48 hours and found a 2-fold increase in serum concentration of pentoxifylline and the first metabolite using a comparable method (staubach1998.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0007-01-Q0007",
+      "type": "WITNESS",
+      "raw": "Finally the overall response rate of 57% in the MPT group suggests that MPT represents a clinically meaningful treatment option, supporting the findings of others.<sup>16–20</sup> **Table 4.** Global response assessment by treatment group | | No (fitzgerald2009.pdf).",
+      "transcoded": "Finally the overall response rate of 57% in the MPT group suggests that MPT represents a clinically meaningful treatment option, supporting the findings of others.<sup>16–20</sup> **Table 4.** Global response assessment by treatment group | | No (fitzgerald2009.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0007-02-Q0007",
+      "type": "WITNESS",
+      "raw": "A rectal EMG probe was used to measure resting tone of the pelvic floor muscles and was helpful for instruction pelvic floor muscles contraction and relaxation. **Results:** Two of the 33 men dropped out (cornel2005.pdf).",
+      "transcoded": "A rectal EMG probe was used to measure resting tone of the pelvic floor muscles and was helpful for instruction pelvic floor muscles contraction and relaxation. **Results:** Two of the 33 men dropped out (cornel2005.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0007-03-Q0007",
+      "type": "WITNESS",
+      "raw": "In a study by Clemens in a group of 19 patients a meaningful improvement of symptoms was achieved in only 33% partially due to a high drop out rate [13] (cornel2005.pdf).",
+      "transcoded": "In a study by Clemens in a group of 19 patients a meaningful improvement of symptoms was achieved in only 33% partially due to a high drop out rate [13] (cornel2005.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0007-04-Q0007",
+      "type": "WITNESS",
+      "raw": "Frequently found abnormalities include myofascial trigger points defined as taut bands or tender nodules that evoke twitch responses or reproduce the character and location of symptoms during careful palpation.<sup>21</sup> Importantly there have been several reports of UCPPS symptom relief by therapeutic efforts directed at those muscular abnormalities.<sup>16–20</sup> In practice those therapeutic interventions are typically performed by a physical therapist (fitzgerald2009.pdf).",
+      "transcoded": "Frequently found abnormalities include myofascial trigger points defined as taut bands or tender nodules that evoke twitch responses or reproduce the character and location of symptoms during careful palpation.<sup>21</sup> Importantly there have been several reports of UCPPS symptom relief by therapeutic efforts directed at those muscular abnormalities.<sup>16–20</sup> In practice those therapeutic interventions are typically performed by a physical therapist (fitzgerald2009.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0008-02-Q0008",
+      "type": "WITNESS",
+      "raw": "An analysis comparing response rates between treatment arms using the exact conditional test version of Mantel-Haenszel methods to adjust for within-center clustering was implemented within the Proc-StatXact software system.<sup>28</sup> Outcome measures between treatment arms were analyzed with Wilcoxon rank sum tests, and outcome scores within treatment groups and disease states were determined with paired t tests (fitzgerald2009.pdf).",
+      "transcoded": "An analysis comparing response rates between treatment arms using the exact conditional test version of Mantel-Haenszel methods to adjust for within-center clustering was implemented within the Proc-StatXact software system.<sup>28</sup> Outcome measures between treatment arms were analyzed with Wilcoxon rank sum tests, and outcome scores within treatment groups and disease states were determined with paired t tests (fitzgerald2009.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0008-03-Q0008",
+      "type": "WITNESS",
+      "raw": "finding suggests that PTX may exert an anti-inflammatory effect sufficient to translate into measurable symptom relief (pharmaceuticals-19-00552.pdf).",
+      "transcoded": "finding suggests that PTX may exert an anti-inflammatory effect sufficient to translate into measurable symptom relief (pharmaceuticals-19-00552.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0008-04-Q0008",
+      "type": "WITNESS",
+      "raw": "These findings align with preclinical studies in experimental colitis models, where PTX administration markedly reduced TNF- $\\alpha$ concentrations and ameliorated histopathological inflammation (pharmaceuticals-19-00552.pdf).",
+      "transcoded": "These findings align with preclinical studies in experimental colitis models, where PTX administration markedly reduced TNF- $\\alpha$ concentrations and ameliorated histopathological inflammation (pharmaceuticals-19-00552.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0009-01-Q0009",
+      "type": "WITNESS",
+      "raw": "Our previous research [3] also analysed the possible mechanism that increased the mental burden caused by pelvic floor dysfunction, and then increased the prostatic urethral pressure, which caused LUTS in some patients with CP, manifested as voiding symptoms and mostly classified as IIIB (leukocytosis with no proof of bacterial infection); Hinman and Baumann [4] had a similar view (he2010.pdf).",
+      "transcoded": "Our previous research [3] also analysed the possible mechanism that increased the mental burden caused by pelvic floor dysfunction, and then increased the prostatic urethral pressure, which caused LUTS in some patients with CP, manifested as voiding symptoms and mostly classified as IIIB (leukocytosis with no proof of bacterial infection); Hinman and Baumann [4] had a similar view (he2010.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0009-02-Q0009",
+      "type": "WITNESS",
+      "raw": "Criteria specific to PFMT were developed, based on the Consensus on Exercise Reporting Template, and applied to all studies to measure the comprehensiveness of the PFMT description in the manuscript. **Results:** Results from the 108 included studies indicate substantial heterogeneity in both the content of PFMT and the quality of reporting of the components of the exercise regimes (hall2018.pdf).",
+      "transcoded": "Criteria specific to PFMT were developed, based on the Consensus on Exercise Reporting Template, and applied to all studies to measure the comprehensiveness of the PFMT description in the manuscript. **Results:** Results from the 108 included studies indicate substantial heterogeneity in both the content of PFMT and the quality of reporting of the components of the exercise regimes (hall2018.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0009-03-Q0009",
+      "type": "WITNESS",
+      "raw": "Of those that did provide detail of participant education, either written or verbally, 31 included information related to pelvic floor/bladder anatomy, and/or the physiology of UI, micturition, or lower urinary tract symptoms (hall2018.pdf).",
+      "transcoded": "Of those that did provide detail of participant education, either written or verbally, 31 included information related to pelvic floor/bladder anatomy, and/or the physiology of UI, micturition, or lower urinary tract symptoms (hall2018.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0010-03-Q0010",
+      "type": "WITNESS",
+      "raw": "Long-term follow-up of previous phase II patients, in fact, helped us to understand that improvement under combined PTX/Vit E treatment is slow, progressive, and continuous, with a maximum effect after periods ranging from 18 months to 3 years (Delanian et al, unpublished data, 2003), to take account of patient-to-patient variability (delanian2003.pdf).",
+      "transcoded": "Long-term follow-up of previous phase II patients, in fact, helped us to understand that improvement under combined PTX/Vit E treatment is slow, progressive, and continuous, with a maximum effect after periods ranging from 18 months to 3 years (Delanian et al, unpublished data, 2003), to take account of patient-to-patient variability (delanian2003.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0010-04-Q0010",
+      "type": "WITNESS",
+      "raw": "However, the magnitude of improvement was more pronounced in the PTX group, and the between-group HL confidence interval indicated a meaningful treatment advantage (pharmaceuticals-19-00552.pdf).",
+      "transcoded": "However, the magnitude of improvement was more pronounced in the PTX group, and the between-group HL confidence interval indicated a meaningful treatment advantage (pharmaceuticals-19-00552.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0011-01-Q0011",
+      "type": "WITNESS",
+      "raw": "Given that urological abnormalities are the sole and initial presenting symptoms in approximately 5% of patients with multiple sclerosis, some may benefit from additional neurological evaluation.<sup>20</sup> This fact is particularly true in patients who have concomitant involuntary bladder contractions during voiding (kaplan1997.pdf).",
+      "transcoded": "Given that urological abnormalities are the sole and initial presenting symptoms in approximately 5% of patients with multiple sclerosis, some may benefit from additional neurological evaluation.<sup>20</sup> This fact is particularly true in patients who have concomitant involuntary bladder contractions during voiding (kaplan1997.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0011-04-Q0011",
+      "type": "WITNESS",
+      "raw": "Another study showed lower adiponectin levels in nonobese patients with active CS compared with nonobese controls (18) (Barahona2009_Cushings_Syndrome).",
+      "transcoded": "Another study showed lower adiponectin levels in nonobese patients with active CS compared with nonobese controls (18) (Barahona2009_Cushings_Syndrome).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0012-03-Q0012",
+      "type": "WITNESS",
+      "raw": "This study, which falls into Scenario 1, suggests that we should strive to increase adherence to see if we could achieve better results in terms of effectiveness (life-15-00613.pdf).",
+      "transcoded": "This study, which falls into Scenario 1, suggests that we should strive to increase adherence to see if we could achieve better results in terms of effectiveness (life-15-00613.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0013-01-Q0013",
+      "type": "WITNESS",
+      "raw": "Conclusions The results appear to indicate, with a low level of certainty of evidence, that people with pelvic floor disorders show high rates of adherence to pelvic floor muscle exercise in the short term and experience an improved quality of life with a high level of certainty of evidence (life-15-00613.pdf).",
+      "transcoded": "Conclusions The results appear to indicate, with a low level of certainty of evidence, that people with pelvic floor disorders show high rates of adherence to pelvic floor muscle exercise in the short term and experience an improved quality of life with a high level of certainty of evidence (life-15-00613.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0013-02-Q0013",
+      "type": "WITNESS",
+      "raw": "Pelvic floor muscle training (hereafter PFMT) is a therapy to improve endurance, strength, power, relaxation, or a combination of these, and because of its effectiveness is considered the first line of treatment for stress UI in women [2,6,16,17], and in men [18] (life-15-00613.pdf).",
+      "transcoded": "Pelvic floor muscle training (hereafter PFMT) is a therapy to improve endurance, strength, power, relaxation, or a combination of these, and because of its effectiveness is considered the first line of treatment for stress UI in women [2,6,16,17], and in men [18] (life-15-00613.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0013-04-Q0013",
+      "type": "WITNESS",
+      "raw": "To our knowledge, this study represents one of the first pilot clinical investigations to assess the adjunctive role of PTX in UC, integrating both clinical efficacy endpoints (PMS and IBDQ-32) and mechanistic inflammatory biomarkers such as fecal calprotectin, ESR, and TNF- $\\alpha$ (pharmaceuticals-19-00552.pdf).",
+      "transcoded": "To our knowledge, this study represents one of the first pilot clinical investigations to assess the adjunctive role of PTX in UC, integrating both clinical efficacy endpoints (PMS and IBDQ-32) and mechanistic inflammatory biomarkers such as fecal calprotectin, ESR, and TNF- $\\alpha$ (pharmaceuticals-19-00552.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0014-01-Q0014",
+      "type": "WITNESS",
+      "raw": "In one large study including 138 men with refractory CPPS, 72% reported marked or moderate improvement as measured by NIH-CPSI scores (masterson2017.pdf).",
+      "transcoded": "In one large study including 138 men with refractory CPPS, 72% reported marked or moderate improvement as measured by NIH-CPSI scores (masterson2017.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0014-02-Q0014",
+      "type": "WITNESS",
+      "raw": "Duration from initial evaluation to tenth visit i.e., the longer the interval of therapy appeared to be associated with better response. ## Discussion A comprehensive PFPT program that includes myofascial release, therapeutic exercises, biofeedback and neuromodulation improves symptoms as measured on the GUPI in men with idiopathic CPPS (masterson2017.pdf).",
+      "transcoded": "Duration from initial evaluation to tenth visit i.e., the longer the interval of therapy appeared to be associated with better response. ## Discussion A comprehensive PFPT program that includes myofascial release, therapeutic exercises, biofeedback and neuromodulation improves symptoms as measured on the GUPI in men with idiopathic CPPS (masterson2017.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0014-04-Q0014",
+      "type": "WITNESS",
+      "raw": "Notably, individuals with higher DII scores exhibited a corresponding decrease in UFR levels ( $\\beta = -0.03$ ; 95% CI: [-0.04--0.01]) (MP75-18-RATES-AND-ADHERENCE-TO-PELVIC-FLOOR-PHYSICAL-THERAPY-FOR-MALE-PATIENTS-WITH-BENIGN.pdf).",
+      "transcoded": "Notably, individuals with higher DII scores exhibited a corresponding decrease in UFR levels ( $\\beta = -0.03$ ; 95% CI: [-0.04--0.01]) (MP75-18-RATES-AND-ADHERENCE-TO-PELVIC-FLOOR-PHYSICAL-THERAPY-FOR-MALE-PATIENTS-WITH-BENIGN.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0015-01-Q0015",
+      "type": "WITNESS",
+      "raw": "Casola\\*, Columbus, OH **INTRODUCTION AND OBJECTIVE:** Male patients suffering from benign urological conditions including lower urinary tract symptoms, overactive bladder, pelvic floor dysfunction, and testicular/groin pain may benefit from pelvic floor physical therapy (PT), but the rates at which patients receive referrals for these conditions, and at what rate they follow through with those referrals is unknown (MP75-18-RATES-AND-ADHERENCE-TO-PELVIC-FLOOR-PHYSICAL-THERAPY-FOR-MALE-PATIENTS-WITH-BENIGN.pdf).",
+      "transcoded": "Casola\\*, Columbus, OH **INTRODUCTION AND OBJECTIVE:** Male patients suffering from benign urological conditions including lower urinary tract symptoms, overactive bladder, pelvic floor dysfunction, and testicular/groin pain may benefit from pelvic floor physical therapy (PT), but the rates at which patients receive referrals for these conditions, and at what rate they follow through with those referrals is unknown (MP75-18-RATES-AND-ADHERENCE-TO-PELVIC-FLOOR-PHYSICAL-THERAPY-FOR-MALE-PATIENTS-WITH-BENIGN.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0015-02-Q0015",
+      "type": "WITNESS",
+      "raw": "Based on studies showing elite female athletes are prone to pelvic floor dysfunction evidenced by higher rates of urinary and fecal incontinence and pelvic organ prolapse (Louis-Charles 2019), we hypothesized that elite athletes may also be at increased risk of pelvic floor hypertonicity (MP75-18-RATES-AND-ADHERENCE-TO-PELVIC-FLOOR-PHYSICAL-THERAPY-FOR-MALE-PATIENTS-WITH-BENIGN.pdf).",
+      "transcoded": "Based on studies showing elite female athletes are prone to pelvic floor dysfunction evidenced by higher rates of urinary and fecal incontinence and pelvic organ prolapse (Louis-Charles 2019), we hypothesized that elite athletes may also be at increased risk of pelvic floor hypertonicity (MP75-18-RATES-AND-ADHERENCE-TO-PELVIC-FLOOR-PHYSICAL-THERAPY-FOR-MALE-PATIENTS-WITH-BENIGN.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0015-04-Q0015",
+      "type": "WITNESS",
+      "raw": "The etiology of diabetic bladder dysfunction is multifactorial; both the myogenic and neurogenic effects of diabetic cystopathy cause a decrease in bladder sensation and impairment in voiding function [39] (ladi-seyedian2017.pdf).",
+      "transcoded": "The etiology of diabetic bladder dysfunction is multifactorial; both the myogenic and neurogenic effects of diabetic cystopathy cause a decrease in bladder sensation and impairment in voiding function [39] (ladi-seyedian2017.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0016-01-Q0016",
+      "type": "WITNESS",
+      "raw": "for UAB was recently proposed by an expert consensus group: “...a symptom complex suggestive of detrusor underactivity and is usually characterised by prolonged urination time with or without a sensation of incomplete bladder emptying, usually with hesitancy, reduced sensation on filling, and a slow stream”<sup>2</sup> (osman2018.pdf).",
+      "transcoded": "for UAB was recently proposed by an expert consensus group: “...a symptom complex suggestive of detrusor underactivity and is usually characterised by prolonged urination time with or without a sensation of incomplete bladder emptying, usually with hesitancy, reduced sensation on filling, and a slow stream”<sup>2</sup> (osman2018.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0016-02-Q0016",
+      "type": "WITNESS",
+      "raw": "Rosier PF, de Wildt MJ, de la Rosette JJ, Debruyne FM, et al.: Analysis of maximum detrusor contraction power in relation to bladder emptying in patients with lower urinary tract symptoms and benign prostatic enlargement. *J Urol.* 1995; **154** (6): 2137-42 [PubMed Abstract](#) 3 (osman2018.pdf).",
+      "transcoded": "Rosier PF, de Wildt MJ, de la Rosette JJ, Debruyne FM, et al.: Analysis of maximum detrusor contraction power in relation to bladder emptying in patients with lower urinary tract symptoms and benign prostatic enlargement. *J Urol.* 1995; **154** (6): 2137-42 [PubMed Abstract](#) 3 (osman2018.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0016-04-Q0016",
+      "type": "WITNESS",
+      "raw": "This method could protect the renal function and improve patients' quality of life [6,129] (ladi-seyedian2017.pdf).",
+      "transcoded": "This method could protect the renal function and improve patients' quality of life [6,129] (ladi-seyedian2017.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0017-01-Q0017",
+      "type": "WITNESS",
+      "raw": "However, studies with better methodological quality are needed to obtain a higher level of scientific evidence and to determine the optimal current modality, type, and parameters for each type of UI and OAB [16, 25] (s00345-024-04974-7.pdf).",
+      "transcoded": "However, studies with better methodological quality are needed to obtain a higher level of scientific evidence and to determine the optimal current modality, type, and parameters for each type of UI and OAB [16, 25] (s00345-024-04974-7.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0017-02-Q0017",
+      "type": "WITNESS",
+      "raw": "Noninvasive clinical indicators of detrusor underactivity in adult men: results of a pilot study. *J Urol* 2014; 191 (Suppl.):E887. ■ Description of ultrasound detrusor wall thickness measurement together with bladder capacity for the safe diagnosis of detrusor underactivity (rademakers2016.pdf).",
+      "transcoded": "Noninvasive clinical indicators of detrusor underactivity in adult men: results of a pilot study. *J Urol* 2014; 191 (Suppl.):E887. ■ Description of ultrasound detrusor wall thickness measurement together with bladder capacity for the safe diagnosis of detrusor underactivity (rademakers2016.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0017-03-Q0017",
+      "type": "WITNESS",
+      "raw": "indicators of detrusor underactivity in adult men: results of a pilot study. *J Urol* 2014; 191 (Suppl.):E887. ■ Description of ultrasound detrusor wall thickness measurement together with bladder capacity for the safe diagnosis of detrusor underactivity (rademakers2016.pdf).",
+      "transcoded": "indicators of detrusor underactivity in adult men: results of a pilot study. *J Urol* 2014; 191 (Suppl.):E887. ■ Description of ultrasound detrusor wall thickness measurement together with bladder capacity for the safe diagnosis of detrusor underactivity (rademakers2016.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0018-02-Q0018",
+      "type": "WITNESS",
+      "raw": "However, studies with better methodological quality are needed to obtain a higher level of scientific evidence and to determine the optimal current modality, type, and parameters for each type of UI and OAB [16, 25] (s00345-024-04974-7.pdf).",
+      "transcoded": "However, studies with better methodological quality are needed to obtain a higher level of scientific evidence and to determine the optimal current modality, type, and parameters for each type of UI and OAB [16, 25] (s00345-024-04974-7.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0018-03-Q0018",
+      "type": "WITNESS",
+      "raw": "Deformed cells were observed in the single pentoxifylline-treated rat with glomerular congestion; this finding is consistent with the hemorheologic effects of pentoxifylline on cell deformability (2) (luke1989.pdf).",
+      "transcoded": "Deformed cells were observed in the single pentoxifylline-treated rat with glomerular congestion; this finding is consistent with the hemorheologic effects of pentoxifylline on cell deformability (2) (luke1989.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0018-04-Q0018",
+      "type": "WITNESS",
+      "raw": "The significant differences in education level and hypertension prevalence between groups could have influenced outcomes (11255_2025_Article_4454.pdf).",
+      "transcoded": "The significant differences in education level and hypertension prevalence between groups could have influenced outcomes (11255_2025_Article_4454.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0019-03-Q0019",
+      "type": "WITNESS",
+      "raw": "The 2015 Beers Criteria, an updated list by the American Geriatric Society which aims to catalog medications that may cause side effects in the older adult population due to physiological effects of aging based on evidence-based methodology, recommended than many of the anticholinergics used to treat OAB be avoided in older adults [18] (bortnick2019.pdf).",
+      "transcoded": "The 2015 Beers Criteria, an updated list by the American Geriatric Society which aims to catalog medications that may cause side effects in the older adult population due to physiological effects of aging based on evidence-based methodology, recommended than many of the anticholinergics used to treat OAB be avoided in older adults [18] (bortnick2019.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0019-04-Q0019",
+      "type": "WITNESS",
+      "raw": "An integrated analysis of 12 phase 2–3 randomized trials in 2017 by Oelke et al. compared the efficacy and safety of 5 mg tadalafil in men less than 75 to men greater than 75 and found that tadalafil was not statistically significantly better than placebo for men greater than 75 (bortnick2019.pdf).",
+      "transcoded": "An integrated analysis of 12 phase 2–3 randomized trials in 2017 by Oelke et al. compared the efficacy and safety of 5 mg tadalafil in men less than 75 to men greater than 75 and found that tadalafil was not statistically significantly better than placebo for men greater than 75 (bortnick2019.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0020-01-Q0020",
+      "type": "WITNESS",
+      "raw": "The medical therapy of prostate symptoms (MTOPS) trial studied the combination of finasteride (alpha-blocker) with doxazosin (5-alpha reductase inhibitor) in 3047 men with average age 62.6 years (SD 7.3 years) and found that the combination improved voiding symptoms and maximum urinary flow rate more than either agent alone (bortnick2019.pdf).",
+      "transcoded": "The medical therapy of prostate symptoms (MTOPS) trial studied the combination of finasteride (alpha-blocker) with doxazosin (5-alpha reductase inhibitor) in 3047 men with average age 62.6 years (SD 7.3 years) and found that the combination improved voiding symptoms and maximum urinary flow rate more than either agent alone (bortnick2019.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0020-02-Q0020",
+      "type": "WITNESS",
+      "raw": "overactive bladder symptoms and found that combination therapy resulted in an improved number of nocturia episodes, daytime frequency, and urgency episodes (as measured by bladder diary) after 12 weeks of treatment [25] (bortnick2019.pdf).",
+      "transcoded": "overactive bladder symptoms and found that combination therapy resulted in an improved number of nocturia episodes, daytime frequency, and urgency episodes (as measured by bladder diary) after 12 weeks of treatment [25] (bortnick2019.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0020-03-Q0020",
+      "type": "WITNESS",
+      "raw": "finding suggests that PTX may exert an anti-inflammatory effect sufficient to translate into measurable symptom relief (pharmaceuticals-19-00552.pdf).",
+      "transcoded": "finding suggests that PTX may exert an anti-inflammatory effect sufficient to translate into measurable symptom relief (pharmaceuticals-19-00552.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0020-04-Q0020",
+      "type": "WITNESS",
+      "raw": "These findings align with preclinical studies in experimental colitis models, where PTX administration markedly reduced TNF- $\\alpha$ concentrations and ameliorated histopathological inflammation (pharmaceuticals-19-00552.pdf).",
+      "transcoded": "These findings align with preclinical studies in experimental colitis models, where PTX administration markedly reduced TNF- $\\alpha$ concentrations and ameliorated histopathological inflammation (pharmaceuticals-19-00552.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0021-03-Q0021",
+      "type": "WITNESS",
+      "raw": "Barie, MD, New York:** I wonder if you could comment on the temporal relationships between the timing of intervention and the fact that the physiologic responses you observed became meaningful statistically at 7 to as many as 14 days thereafter? (staubach1998.pdf).",
+      "transcoded": "Barie, MD, New York:** I wonder if you could comment on the temporal relationships between the timing of intervention and the fact that the physiologic responses you observed became meaningful statistically at 7 to as many as 14 days thereafter? (staubach1998.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0022-01-Q0022",
+      "type": "WITNESS",
+      "raw": "However, early in the study, while subjects received intravenous infusion, the pentoxifylline group had significantly higher level of consciousness, motor strength, cranial nerve function, and total neurologic deficit scores than did the control group; CBF was not measured (bowton1989.pdf).",
+      "transcoded": "However, early in the study, while subjects received intravenous infusion, the pentoxifylline group had significantly higher level of consciousness, motor strength, cranial nerve function, and total neurologic deficit scores than did the control group; CBF was not measured (bowton1989.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0022-02-Q0022",
+      "type": "WITNESS",
+      "raw": "There was a trend toward improved level of consciousness in the pentoxifylline group, though this difference did not achieve significance (bowton1989.pdf).",
+      "transcoded": "There was a trend toward improved level of consciousness in the pentoxifylline group, though this difference did not achieve significance (bowton1989.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0022-04-Q0022",
+      "type": "WITNESS",
+      "raw": "observations – first, not all of our advanced cachectic cancer patients had elevated TNF/actin ratios; second, 2 of our patients had an improvement in well-being, together with a weight gain over the 3-week treatment period even though their initial TNF/actin ratios were not elevated (dezube1993.pdf).",
+      "transcoded": "observations – first, not all of our advanced cachectic cancer patients had elevated TNF/actin ratios; second, 2 of our patients had an improvement in well-being, together with a weight gain over the 3-week treatment period even though their initial TNF/actin ratios were not elevated (dezube1993.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0023-02-Q0023",
+      "type": "WITNESS",
+      "raw": "The excessive levels of tumor necrosis factor- $\\alpha$ (TNF)/cachectin reported in 50% of cancer patients exhibiting clinically active disease may therefore mediate, at least in part, the cachexia associated with malignancy (dezube1993.pdf).",
+      "transcoded": "The excessive levels of tumor necrosis factor- $\\alpha$ (TNF)/cachectin reported in 50% of cancer patients exhibiting clinically active disease may therefore mediate, at least in part, the cachexia associated with malignancy (dezube1993.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0023-03-Q0023",
+      "type": "WITNESS",
+      "raw": "[2,3] In this study we add to existing knowledge reported from the RCT, specifically investigating diary entries completed by women in response to their exercise prescription: findings not previously reported (stokes2022.pdf).",
+      "transcoded": "[2,3] In this study we add to existing knowledge reported from the RCT, specifically investigating diary entries completed by women in response to their exercise prescription: findings not previously reported (stokes2022.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0023-04-Q0023",
+      "type": "WITNESS",
+      "raw": "In conclusion, our data suggest that the utility of aminophylline for improving early pathologic manifestations of sepsis should be questioned (fakioglu2004.pdf).",
+      "transcoded": "In conclusion, our data suggest that the utility of aminophylline for improving early pathologic manifestations of sepsis should be questioned (fakioglu2004.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0024-01-Q0024",
+      "type": "WITNESS",
+      "raw": "The decrease of IL-6 levels could be explained by binding of IL-6 to soluble receptors, thus being no longer detectable in the bioassay (immunology00076-0102.pdf).",
+      "transcoded": "The decrease of IL-6 levels could be explained by binding of IL-6 to soluble receptors, thus being no longer detectable in the bioassay (immunology00076-0102.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0024-02-Q0024",
+      "type": "WITNESS",
+      "raw": "A meta-analysis found positive beneficial effects of acupuncture compared with a sham control for short- and medium-term follow-up in both IPSS and urine flow rates in some studies; however, when combining the studies for more statistical power, the benefits were less clear.<sup>12</sup> Physical therapists with specialized training and certification in pelvic health can incorporate certain bladder training techniques (fdp03812573_1.pdf).",
+      "transcoded": "A meta-analysis found positive beneficial effects of acupuncture compared with a sham control for short- and medium-term follow-up in both IPSS and urine flow rates in some studies; however, when combining the studies for more statistical power, the benefits were less clear.<sup>12</sup> Physical therapists with specialized training and certification in pelvic health can incorporate certain bladder training techniques (fdp03812573_1.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0024-03-Q0024",
+      "type": "WITNESS",
+      "raw": "These include voiding positional changes (double voiding and postvoid urethral milking) and timed voiding.<sup>13,14</sup> These interventions often address etiologies of LUTS for which medical therapies are not effective as the sole treatment option (fdp03812573_1.pdf).",
+      "transcoded": "These include voiding positional changes (double voiding and postvoid urethral milking) and timed voiding.<sup>13,14</sup> These interventions often address etiologies of LUTS for which medical therapies are not effective as the sole treatment option (fdp03812573_1.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0025-02-Q0025",
+      "type": "WITNESS",
+      "raw": "For example, it has been reported that IL-6 release is not affected by PTX,<sup>3</sup> while others have observed even an enhancing effect.<sup>17</sup> IL-1, IL-6 and IL-8 represent important inflammatory mediators comparable to TNF- $\\alpha$ ,<sup>21</sup> thus we were interested to study the effect of PTX on the release of these mediators by human peripheral blood mononuclear cells (PBMC) (immunology00076-0102.pdf).",
+      "transcoded": "For example, it has been reported that IL-6 release is not affected by PTX,<sup>3</sup> while others have observed even an enhancing effect.<sup>17</sup> IL-1, IL-6 and IL-8 represent important inflammatory mediators comparable to TNF- $\\alpha$ ,<sup>21</sup> thus we were interested to study the effect of PTX on the release of these mediators by human peripheral blood mononuclear cells (PBMC) (immunology00076-0102.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0025-04-Q0025",
+      "type": "WITNESS",
+      "raw": "To our knowledge, this study represents one of the first pilot clinical investigations to assess the adjunctive role of PTX in UC, integrating both clinical efficacy endpoints (PMS and IBDQ-32) and mechanistic inflammatory biomarkers such as fecal calprotectin, ESR, and TNF- $\\alpha$ (pharmaceuticals-19-00552.pdf).",
+      "transcoded": "To our knowledge, this study represents one of the first pilot clinical investigations to assess the adjunctive role of PTX in UC, integrating both clinical efficacy endpoints (PMS and IBDQ-32) and mechanistic inflammatory biomarkers such as fecal calprotectin, ESR, and TNF- $\\alpha$ (pharmaceuticals-19-00552.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0026-01-Q0026",
+      "type": "WITNESS",
+      "raw": "Contrary to the aforementioned observations in patients with cerebrovascular disease, we did not observe an increase in cerebral blood flow in the territory of the middle cerebral artery (rCBF<sub>mca</sub>) or in global CBF during infusion of 300 mg pentoxifylline in healthy subjects (kruuse2000.pdf).",
+      "transcoded": "Contrary to the aforementioned observations in patients with cerebrovascular disease, we did not observe an increase in cerebral blood flow in the territory of the middle cerebral artery (rCBF<sub>mca</sub>) or in global CBF during infusion of 300 mg pentoxifylline in healthy subjects (kruuse2000.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0026-02-Q0026",
+      "type": "WITNESS",
+      "raw": "Pentoxifylline has been suggested for use in a variety of medical conditions, and clinical trials in peripheral vascular disease have shown an increase in walking distance and peripheral blood flow after administration (Rudofsky *et al.*, 1989; Schweiger and Ortmeier, 1989) (kruuse2000.pdf).",
+      "transcoded": "Pentoxifylline has been suggested for use in a variety of medical conditions, and clinical trials in peripheral vascular disease have shown an increase in walking distance and peripheral blood flow after administration (Rudofsky *et al.*, 1989; Schweiger and Ortmeier, 1989) (kruuse2000.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0026-03-Q0026",
+      "type": "WITNESS",
+      "raw": "Do you have data on the stability of the calcium in these patients, and is it possible that the preferential effects on the cardiopulmonary system may be reflected through a stabilization of calcium levels? **Philip S (staubach1998.pdf).",
+      "transcoded": "Do you have data on the stability of the calcium in these patients, and is it possible that the preferential effects on the cardiopulmonary system may be reflected through a stabilization of calcium levels? **Philip S (staubach1998.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0026-04-Q0026",
+      "type": "WITNESS",
+      "raw": "In conclusion, patients who had surgery and achieved remission for CD had higher incidence of new-onset autoimmune disease than age- and sex-matched patients who underwent surgery for NFPA (Nyanyo2024_Cushings_Disease_A).",
+      "transcoded": "In conclusion, patients who had surgery and achieved remission for CD had higher incidence of new-onset autoimmune disease than age- and sex-matched patients who underwent surgery for NFPA (Nyanyo2024_Cushings_Disease_A).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0027-01-Q0027",
+      "type": "WITNESS",
+      "raw": "Such high concentrations of pentoxifylline increase the resting level of cAMP in unstimulated human neutrophils and monocytes (22) but at lower concentrations (100–500 µmol/l) significant effects of PTX are more easily seen when adenylate cyclase turnover is increased by stimulation with FMLP (18, 38) or Fc receptor engagement (39) (roberts1993.pdf).",
+      "transcoded": "Such high concentrations of pentoxifylline increase the resting level of cAMP in unstimulated human neutrophils and monocytes (22) but at lower concentrations (100–500 µmol/l) significant effects of PTX are more easily seen when adenylate cyclase turnover is increased by stimulation with FMLP (18, 38) or Fc receptor engagement (39) (roberts1993.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0027-02-Q0027",
+      "type": "WITNESS",
+      "raw": "The study confirmed that PTX at clinically achievable concentration (5–10 μmol/l) attenuated the responses of human neutrophils to chemotactic peptide, whereas it did not inhibit the effect of GM-CSF on neutrophil function even at high concentrations (roberts1993.pdf).",
+      "transcoded": "The study confirmed that PTX at clinically achievable concentration (5–10 μmol/l) attenuated the responses of human neutrophils to chemotactic peptide, whereas it did not inhibit the effect of GM-CSF on neutrophil function even at high concentrations (roberts1993.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0027-03-Q0027",
+      "type": "WITNESS",
+      "raw": "At the cellular level, TNF has significant pleomorphic effects on cells which have been shown to orchestrate inflammatory processes; including endothelial cells, fibroblasts, polymorphonuclear leukocytes, blood monocytes and macrophages, adipocytes, lymphocytes, and osteoclasts (2,7,8) (strieter1988.pdf).",
+      "transcoded": "At the cellular level, TNF has significant pleomorphic effects on cells which have been shown to orchestrate inflammatory processes; including endothelial cells, fibroblasts, polymorphonuclear leukocytes, blood monocytes and macrophages, adipocytes, lymphocytes, and osteoclasts (2,7,8) (strieter1988.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0027-04-Q0027",
+      "type": "WITNESS",
+      "raw": "The pharmacologic effects of pentoxifylline may have important implications in clinical disease states where the local and systemic modulation of TNF may be essential for the control of specific inflammatory processes (strieter1988.pdf).",
+      "transcoded": "The pharmacologic effects of pentoxifylline may have important implications in clinical disease states where the local and systemic modulation of TNF may be essential for the control of specific inflammatory processes (strieter1988.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0028-01-Q0028",
+      "type": "WITNESS",
+      "raw": "At the cellular level, TNF has significant pleomorphic effects on cells which have been shown to orchestrate inflammatory processes; including endothelial cells, fibroblasts, polymorphonuclear leukocytes, blood monocytes and macrophages, adipocytes, lymphocytes, and osteoclasts (2,7,8) (strieter1988.pdf).",
+      "transcoded": "At the cellular level, TNF has significant pleomorphic effects on cells which have been shown to orchestrate inflammatory processes; including endothelial cells, fibroblasts, polymorphonuclear leukocytes, blood monocytes and macrophages, adipocytes, lymphocytes, and osteoclasts (2,7,8) (strieter1988.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0028-02-Q0028",
+      "type": "WITNESS",
+      "raw": "As shown in Figure 2, Northern blot analysis demonstrated a reduction in TNF mRNA in response to various concentrations of pentoxifylline (strieter1988.pdf).",
+      "transcoded": "As shown in Figure 2, Northern blot analysis demonstrated a reduction in TNF mRNA in response to various concentrations of pentoxifylline (strieter1988.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0028-03-Q0028",
+      "type": "WITNESS",
+      "raw": "Higher PMS was associated with increased TNF- $\\alpha$ and fecal calprotectin levels and lower IBDQ-32 scores, while higher inflammatory markers were linked to poorer quality of life (pharmaceuticals-19-00552.pdf).",
+      "transcoded": "Higher PMS was associated with increased TNF- $\\alpha$ and fecal calprotectin levels and lower IBDQ-32 scores, while higher inflammatory markers were linked to poorer quality of life (pharmaceuticals-19-00552.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0028-04-Q0028",
+      "type": "WITNESS",
+      "raw": "In dextran sulfate sodium (DSS)-induced colitis, PTX administration reduced disease activity index, histologic damage, and colonic levels of TNF- $\\alpha$ and malondialdehyde (MDA), a marker of lipid peroxidation [15] (pharmaceuticals-19-00552.pdf).",
+      "transcoded": "In dextran sulfate sodium (DSS)-induced colitis, PTX administration reduced disease activity index, histologic damage, and colonic levels of TNF- $\\alpha$ and malondialdehyde (MDA), a marker of lipid peroxidation [15] (pharmaceuticals-19-00552.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0029-01-Q0029",
+      "type": "WITNESS",
+      "raw": "Duncan M, Hasan A, Berman B: Pentoxifylline and interferons decrease type I and III procollagen mRNA levels in dermal fibroblasts: Evidence for mediation by nuclear factor 1 down-regulation (delanian2003.pdf).",
+      "transcoded": "Duncan M, Hasan A, Berman B: Pentoxifylline and interferons decrease type I and III procollagen mRNA levels in dermal fibroblasts: Evidence for mediation by nuclear factor 1 down-regulation (delanian2003.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0029-02-Q0029",
+      "type": "WITNESS",
+      "raw": "fibroblast proliferation and extracellular matrix production<sup>26,27</sup> and increases collagenase activity.<sup>26,27</sup> However, in our experimental pig study, we did not observe any clinical or histologic changes in RIF after 6 months of treatment with PTX alone.<sup>13</sup> The high concentration of PTX necessary to suppress fibroblast collagen synthesis or to increase collagenase activity (delanian2003.pdf).",
+      "transcoded": "fibroblast proliferation and extracellular matrix production<sup>26,27</sup> and increases collagenase activity.<sup>26,27</sup> However, in our experimental pig study, we did not observe any clinical or histologic changes in RIF after 6 months of treatment with PTX alone.<sup>13</sup> The high concentration of PTX necessary to suppress fibroblast collagen synthesis or to increase collagenase activity (delanian2003.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0030-02-Q0030",
+      "type": "WITNESS",
+      "raw": "However, a decrease in DNA strand breaks measured by the comet assay suggests that this combination could interfere with the DNA repair process.<sup>27</sup> Further studies are necessary to understand the immediate and delayed effects of the combined PTX-vitE treatment on irradiated tissues (delanian2005.pdf).",
+      "transcoded": "However, a decrease in DNA strand breaks measured by the comet assay suggests that this combination could interfere with the DNA repair process.<sup>27</sup> Further studies are necessary to understand the immediate and delayed effects of the combined PTX-vitE treatment on irradiated tissues (delanian2005.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0030-03-Q0030",
+      "type": "WITNESS",
+      "raw": "Deformed cells were observed in the single pentoxifylline-treated rat with glomerular congestion; this finding is consistent with the hemorheologic effects of pentoxifylline on cell deformability (2) (luke1989.pdf).",
+      "transcoded": "Deformed cells were observed in the single pentoxifylline-treated rat with glomerular congestion; this finding is consistent with the hemorheologic effects of pentoxifylline on cell deformability (2) (luke1989.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0030-04-Q0030",
+      "type": "WITNESS",
+      "raw": "The significant differences in education level and hypertension prevalence between groups could have influenced outcomes (11255_2025_Article_4454.pdf).",
+      "transcoded": "The significant differences in education level and hypertension prevalence between groups could have influenced outcomes (11255_2025_Article_4454.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0031-02-Q0031",
+      "type": "WITNESS",
+      "raw": "(2024) disagreed with our study as they found that PTX has no antidepressant effect, which may be attributed to their inclusion of patients with treatment-resistant depression and bipolar disorder (Mohammad et al (s00210-025-03845-1.pdf).",
+      "transcoded": "(2024) disagreed with our study as they found that PTX has no antidepressant effect, which may be attributed to their inclusion of patients with treatment-resistant depression and bipolar disorder (Mohammad et al (s00210-025-03845-1.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0031-03-Q0031",
+      "type": "WITNESS",
+      "raw": "The timing of the intervention (starting 6 weeks postoperatively) was dictated by the terms of the Health Technology Assessment commissioning brief, but it could be argued that starting earlier or before surgery would result in unnecessary treatment of men who would become dry spontaneously (glazener2011.pdf).",
+      "transcoded": "The timing of the intervention (starting 6 weeks postoperatively) was dictated by the terms of the Health Technology Assessment commissioning brief, but it could be argued that starting earlier or before surgery would result in unnecessary treatment of men who would become dry spontaneously (glazener2011.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0032-01-Q0032",
+      "type": "WITNESS",
+      "raw": "In a subsequent clinical study in septic patients, the same group observed a similar response to pentoxifylline and noted cardiovascular improvements in those patients given aggressive fluid resuscitation [33] (parker2000.pdf).",
+      "transcoded": "In a subsequent clinical study in septic patients, the same group observed a similar response to pentoxifylline and noted cardiovascular improvements in those patients given aggressive fluid resuscitation [33] (parker2000.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0032-02-Q0032",
+      "type": "WITNESS",
+      "raw": "Cardiac Index fell by a median of 3.9 (0.9) l/min per m<sup>2</sup> during haemorrhage and in all animals it improved to above baseline levels with volume replacement (parker2000.pdf).",
+      "transcoded": "Cardiac Index fell by a median of 3.9 (0.9) l/min per m<sup>2</sup> during haemorrhage and in all animals it improved to above baseline levels with volume replacement (parker2000.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0032-03-Q0032",
+      "type": "WITNESS",
+      "raw": "Hou, Inhibition of tubulointerstitial fibrosis by pentoxifylline is associated with improvement of vascular endothelial growth factor expression, *Acta Pharmacol (ma2018.pdf).",
+      "transcoded": "Hou, Inhibition of tubulointerstitial fibrosis by pentoxifylline is associated with improvement of vascular endothelial growth factor expression, *Acta Pharmacol (ma2018.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0032-04-Q0032",
+      "type": "WITNESS",
+      "raw": "Navarro-Gonzalez, et al., Effect of pentoxifylline on renal function and urinary albumin excretion in patients with diabetic kidney disease: the PREDIAN trial, *J (ma2018.pdf).",
+      "transcoded": "Navarro-Gonzalez, et al., Effect of pentoxifylline on renal function and urinary albumin excretion in patients with diabetic kidney disease: the PREDIAN trial, *J (ma2018.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0033-01-Q0033",
+      "type": "WITNESS",
+      "raw": "In the Pentoxifylline Group graph, there is a single peak at approximately 1.5 hours reaching about 1700 pg/ml, after which the TNF concentration remains significantly lower than in the control group (parker2000.pdf).",
+      "transcoded": "In the Pentoxifylline Group graph, there is a single peak at approximately 1.5 hours reaching about 1700 pg/ml, after which the TNF concentration remains significantly lower than in the control group (parker2000.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0033-02-Q0033",
+      "type": "WITNESS",
+      "raw": "The Pentoxifylline Group shows a single, smaller peak around 1.5 hours, reaching approximately 1700 pg/ml, with much lower concentrations thereafter.](92c6488dfdf125bc1b7bb6a235394652_img.jpg) The figure consists of two side-by-side line graphs (parker2000.pdf).",
+      "transcoded": "The Pentoxifylline Group shows a single, smaller peak around 1.5 hours, reaching approximately 1700 pg/ml, with much lower concentrations thereafter.](92c6488dfdf125bc1b7bb6a235394652_img.jpg) The figure consists of two side-by-side line graphs (parker2000.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0033-03-Q0033",
+      "type": "WITNESS",
+      "raw": "The mechanisms of action of pentoxifylline which contribute to protection of renal PGE<sub>2</sub> release and blood flow during severe splanchnic ischemia/reperfusion injury include decreasing viscosity, increasing deformability of red blood cells and neutrophils, and contributing to the prevention of the activation of neutrophils by cytokines or local tissue factors (myers1995.pdf).",
+      "transcoded": "The mechanisms of action of pentoxifylline which contribute to protection of renal PGE<sub>2</sub> release and blood flow during severe splanchnic ischemia/reperfusion injury include decreasing viscosity, increasing deformability of red blood cells and neutrophils, and contributing to the prevention of the activation of neutrophils by cytokines or local tissue factors (myers1995.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0033-04-Q0033",
+      "type": "WITNESS",
+      "raw": "The latter results suggest that TNF- $\\alpha$ plays a central role in the pathogenesis of Gram-negative shock, as serum levels of TNF- $\\alpha$ are induced early in endotoxaemia or Gram-negative sepsis models (Michie et al., 1988) (wu1999.pdf).",
+      "transcoded": "The latter results suggest that TNF- $\\alpha$ plays a central role in the pathogenesis of Gram-negative shock, as serum levels of TNF- $\\alpha$ are induced early in endotoxaemia or Gram-negative sepsis models (Michie et al., 1988) (wu1999.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0034-01-Q0034",
+      "type": "WITNESS",
+      "raw": "This appears to be in direct conflict with other *in vivo* studies that have reported a significant reduction in TNF levels by pentoxifylline treatment in a variety of models of sepsis.<sup>34-36</sup> These studies, however, all used an ELISA technique to measure TNF rather than a bioassay that measures the bioactivity of TNF rather than absolute concentrations (ridings1994.pdf).",
+      "transcoded": "This appears to be in direct conflict with other *in vivo* studies that have reported a significant reduction in TNF levels by pentoxifylline treatment in a variety of models of sepsis.<sup>34-36</sup> These studies, however, all used an ELISA technique to measure TNF rather than a bioassay that measures the bioactivity of TNF rather than absolute concentrations (ridings1994.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0034-02-Q0034",
+      "type": "WITNESS",
+      "raw": "Demir et al [24] showed reductions of serum proinflammatory cytokine levels and kidney graft resistive index after 3 months of PTX oral treatment at approximately 1 year posttransplantation (wystrychowski2014.pdf).",
+      "transcoded": "Demir et al [24] showed reductions of serum proinflammatory cytokine levels and kidney graft resistive index after 3 months of PTX oral treatment at approximately 1 year posttransplantation (wystrychowski2014.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0034-03-Q0034",
+      "type": "WITNESS",
+      "raw": "However, little data on the delayed treatment of sepsis with pentoxifylline, a more clinically relevant situation, exist.<sup>15</sup> We therefore sought to determine the effects of pretreatment and posttreatment with pentoxifylline in a porcine model of live bacterial sepsis and acute lung injury, determine the size of a potential \"therapeutic window\" for the administration of pentoxifylline in sepsis (ridings1994.pdf).",
+      "transcoded": "However, little data on the delayed treatment of sepsis with pentoxifylline, a more clinically relevant situation, exist.<sup>15</sup> We therefore sought to determine the effects of pretreatment and posttreatment with pentoxifylline in a porcine model of live bacterial sepsis and acute lung injury, determine the size of a potential \"therapeutic window\" for the administration of pentoxifylline in sepsis (ridings1994.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0034-04-Q0034",
+      "type": "WITNESS",
+      "raw": "Superantigen-induced cytokine release from whole-blood cell culture as a functional measure of drug efficacy after oral dosing in nonhuman primates. *Res Vet Sci* 2007;83:182–7. - [19] Voisin L, Breuillé D, Ruot B, et al (wystrychowski2014.pdf).",
+      "transcoded": "Superantigen-induced cytokine release from whole-blood cell culture as a functional measure of drug efficacy after oral dosing in nonhuman primates. *Res Vet Sci* 2007;83:182–7. - [19] Voisin L, Breuillé D, Ruot B, et al (wystrychowski2014.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0035-01-Q0035",
+      "type": "WITNESS",
+      "raw": "Superantigen-induced cytokine release from whole-blood cell culture as a functional measure of drug efficacy after oral dosing in nonhuman primates. *Res Vet Sci* 2007;83:182–7. - [19] Voisin L, Breuillé D, Ruot B, et al (wystrychowski2014.pdf).",
+      "transcoded": "Superantigen-induced cytokine release from whole-blood cell culture as a functional measure of drug efficacy after oral dosing in nonhuman primates. *Res Vet Sci* 2007;83:182–7. - [19] Voisin L, Breuillé D, Ruot B, et al (wystrychowski2014.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0035-03-Q0035",
+      "type": "WITNESS",
+      "raw": "[2,3] In this study we add to existing knowledge reported from the RCT, specifically investigating diary entries completed by women in response to their exercise prescription: findings not previously reported (stokes2022.pdf).",
+      "transcoded": "[2,3] In this study we add to existing knowledge reported from the RCT, specifically investigating diary entries completed by women in response to their exercise prescription: findings not previously reported (stokes2022.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0035-04-Q0035",
+      "type": "WITNESS",
+      "raw": "In conclusion, our data suggest that the utility of aminophylline for improving early pathologic manifestations of sepsis should be questioned (fakioglu2004.pdf).",
+      "transcoded": "In conclusion, our data suggest that the utility of aminophylline for improving early pathologic manifestations of sepsis should be questioned (fakioglu2004.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0036-03-Q0036",
+      "type": "WITNESS",
+      "raw": "These results are in line with previous literature, indicating that key inflammatory pathways in UC, particularly those involving pro-inflammatory cytokines such as TNF- $\\alpha$ , tend to operate independently of demographic variables, and that treatment response is more closely related to modulation of these biological pathways than to baseline patient characteristics [41–43] (pharmaceuticals-19-00552.pdf).",
+      "transcoded": "These results are in line with previous literature, indicating that key inflammatory pathways in UC, particularly those involving pro-inflammatory cytokines such as TNF- $\\alpha$ , tend to operate independently of demographic variables, and that treatment response is more closely related to modulation of these biological pathways than to baseline patient characteristics [41–43] (pharmaceuticals-19-00552.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0036-04-Q0036",
+      "type": "WITNESS",
+      "raw": "Subsequently, a subgroup of these patients were reevaluated 9 months after curative surgery, when no statistical differences were observed between baseline and postsurgery adiponectin and resistin levels (17) (Barahona2009_Cushings_Syndrome).",
+      "transcoded": "Subsequently, a subgroup of these patients were reevaluated 9 months after curative surgery, when no statistical differences were observed between baseline and postsurgery adiponectin and resistin levels (17) (Barahona2009_Cushings_Syndrome).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0037-03-Q0037",
+      "type": "WITNESS",
+      "raw": "An immunologically important and possibly clinically relevant observation of the present study is the finding that pretreatment with ibuprofen, an inhibitor of the cyclooxygenase pathway of arachidonic acid metabolism, enhanced circulating TNF $\\alpha$ and IL-6 levels after endotoxin challenge (spinas1991.pdf).",
+      "transcoded": "An immunologically important and possibly clinically relevant observation of the present study is the finding that pretreatment with ibuprofen, an inhibitor of the cyclooxygenase pathway of arachidonic acid metabolism, enhanced circulating TNF $\\alpha$ and IL-6 levels after endotoxin challenge (spinas1991.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0037-04-Q0037",
+      "type": "WITNESS",
+      "raw": "The peak levels of TNF $\\alpha$ in the present study were considerably higher than those commonly detected in patients with sepsis [9–11] (spinas1991.pdf).",
+      "transcoded": "The peak levels of TNF $\\alpha$ in the present study were considerably higher than those commonly detected in patients with sepsis [9–11] (spinas1991.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0038-03-Q0038",
+      "type": "WITNESS",
+      "raw": "Although we did note differential effects on these, the intervention might also be expected to have wider effects, such as improving the quality rather than the quantity of pelvic-floor muscle contractions, the use of broader behavioural techniques such as bladder training, and generic quality of life, which we did not measure directly (glazener2011.pdf).",
+      "transcoded": "Although we did note differential effects on these, the intervention might also be expected to have wider effects, such as improving the quality rather than the quantity of pelvic-floor muscle contractions, the use of broader behavioural techniques such as bladder training, and generic quality of life, which we did not measure directly (glazener2011.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0038-04-Q0038",
+      "type": "WITNESS",
+      "raw": "Treatment of voiding difficulty in women with 0.2 mg tamsulosin daily for 6 weeks has been reported to improve voiding and storage symptom scores, maximal flow rate, and PVR (ladi-seyedian2017.pdf).",
+      "transcoded": "Treatment of voiding difficulty in women with 0.2 mg tamsulosin daily for 6 weeks has been reported to improve voiding and storage symptom scores, maximal flow rate, and PVR (ladi-seyedian2017.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0039-02-Q0039",
+      "type": "WITNESS",
+      "raw": "Wagenmakers, M.A., et al., *Impaired quality of life in patients in long-term remission of Cushing's syndrome of both adrenal and pituitary origin: a remaining effect of long-standing hypercortisolism?* Eur J Endocrinol, 2012. **167**(5): p (roerink2019.pdf).",
+      "transcoded": "Wagenmakers, M.A., et al., *Impaired quality of life in patients in long-term remission of Cushing's syndrome of both adrenal and pituitary origin: a remaining effect of long-standing hypercortisolism?* Eur J Endocrinol, 2012. **167**(5): p (roerink2019.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0039-03-Q0039",
+      "type": "WITNESS",
+      "raw": "Several mechanisms could explain our finding of the lower aerobic exercise capacity (VO<sub>2peak</sub>) of the patients in long term remission of CS (roerink2019.pdf).",
+      "transcoded": "Several mechanisms could explain our finding of the lower aerobic exercise capacity (VO<sub>2peak</sub>) of the patients in long term remission of CS (roerink2019.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0039-04-Q0039",
+      "type": "WITNESS",
+      "raw": "Thus, despite endocrine remission, elevated plasma IL-6 concentrations in CD patients could contribute to the greater mortality risk observed long term in these patients [10, 11] (shah2016.pdf).",
+      "transcoded": "Thus, despite endocrine remission, elevated plasma IL-6 concentrations in CD patients could contribute to the greater mortality risk observed long term in these patients [10, 11] (shah2016.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0040-02-Q0040",
+      "type": "WITNESS",
+      "raw": "We confirm earlier studies demonstrating that chronic excess GC exposure increases circulating IL-6 and IL-1 $\\beta$ concentrations during active disease (shah2016.pdf).",
+      "transcoded": "We confirm earlier studies demonstrating that chronic excess GC exposure increases circulating IL-6 and IL-1 $\\beta$ concentrations during active disease (shah2016.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0040-03-Q0040",
+      "type": "WITNESS",
+      "raw": "Higher PMS was associated with increased TNF- $\\alpha$ and fecal calprotectin levels and lower IBDQ-32 scores, while higher inflammatory markers were linked to poorer quality of life (pharmaceuticals-19-00552.pdf).",
+      "transcoded": "Higher PMS was associated with increased TNF- $\\alpha$ and fecal calprotectin levels and lower IBDQ-32 scores, while higher inflammatory markers were linked to poorer quality of life (pharmaceuticals-19-00552.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0040-04-Q0040",
+      "type": "WITNESS",
+      "raw": "In dextran sulfate sodium (DSS)-induced colitis, PTX administration reduced disease activity index, histologic damage, and colonic levels of TNF- $\\alpha$ and malondialdehyde (MDA), a marker of lipid peroxidation [15] (pharmaceuticals-19-00552.pdf).",
+      "transcoded": "In dextran sulfate sodium (DSS)-induced colitis, PTX administration reduced disease activity index, histologic damage, and colonic levels of TNF- $\\alpha$ and malondialdehyde (MDA), a marker of lipid peroxidation [15] (pharmaceuticals-19-00552.pdf).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A1-H1-R1",
+      "type": "HYPOTHESIS",
+      "raw": "mechanistic evidence supports a coherent causal explanation for why PTX could meaningfully improve voiding in an identifiable subgroup of these men",
+      "transcoded": "mechanistic evidence supports a coherent causal explanation for why PTX could meaningfully improve voiding in an identifiable subgroup of these men",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A1-H1-R2",
+      "type": "HYPOTHESIS",
+      "raw": "Their persistent difficulty includes a reversible physiological component that tamsulosin and their prescribed pelvic-floor intervention do not adequately address",
+      "transcoded": "Their persistent difficulty includes a reversible physiological component that tamsulosin and their prescribed pelvic-floor intervention do not adequately address",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A1-H1-R3",
+      "type": "HYPOTHESIS",
+      "raw": "PTX or its metabolites can act on that component at clinically attainable exposures",
+      "transcoded": "PTX or its metabolites can act on that component at clinically attainable exposures",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A1-H1-R4",
+      "type": "HYPOTHESIS",
+      "raw": "The supported premises and their discriminating predictions are sufficient to specify intervention, phenotype, measurement",
+      "transcoded": "The supported premises and their discriminating predictions are sufficient to specify intervention, phenotype, measurement",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A1-H1-R5",
+      "type": "HYPOTHESIS",
+      "raw": "comparator for a targeted clinical trial, whether or not every intermediate link is resolved",
+      "transcoded": "comparator for a targeted clinical trial, whether or not every intermediate link is resolved",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A1-H1-C1",
+      "type": "HYPOTHESIS",
+      "raw": "The relevant dysfunction occurs in this cohort",
+      "transcoded": "The relevant dysfunction occurs in this cohort",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A1-H1-C2",
+      "type": "HYPOTHESIS",
+      "raw": "the proposed drug effects reach the relevant tissue under plausible treatment conditions",
+      "transcoded": "the proposed drug effects reach the relevant tissue under plausible treatment conditions",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A1-H1-C3",
+      "type": "HYPOTHESIS",
+      "raw": "and changing those processes can improve urinary function",
+      "transcoded": "and changing those processes can improve urinary function",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A1-H1-C4",
+      "type": "HYPOTHESIS",
+      "raw": "Any necessary contribution from vitamin E or another cointervention is explicit",
+      "transcoded": "Any necessary contribution from vitamin E or another cointervention is explicit",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A1-H1-A1",
+      "type": "HYPOTHESIS",
+      "raw": "the proposed target is absent or incidental",
+      "transcoded": "the proposed target is absent or incidental",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A1-H1-A2",
+      "type": "HYPOTHESIS",
+      "raw": "target modulation fails to improve the relevant function under informative conditions",
+      "transcoded": "target modulation fails to improve the relevant function under informative conditions",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A1-H1-A3",
+      "type": "HYPOTHESIS",
+      "raw": "or stronger evidence breaks a link necessary to every route that is not speculative",
+      "transcoded": "or stronger evidence breaks a link necessary to every route that is not speculative",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A1-H1-E1",
+      "type": "HYPOTHESIS",
+      "raw": "Converging findings connect attainable exposure, target engagement, physiological improvement",
+      "transcoded": "Converging findings connect attainable exposure, target engagement, physiological improvement",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A1-H1-E2",
+      "type": "HYPOTHESIS",
+      "raw": "contrary results discriminate this explanation from alternatives",
+      "transcoded": "contrary results discriminate this explanation from alternatives",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A1-H1-E3",
+      "type": "HYPOTHESIS",
+      "raw": "The evidence identifies measurable patient characteristics and trial outcomes that should reveal benefit",
+      "transcoded": "The evidence identifies measurable patient characteristics and trial outcomes that should reveal benefit",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A1-H2-R1",
+      "type": "HYPOTHESIS",
+      "raw": "PTX's reported biological effects do not translate into a meaningful remedy for the dysfunction driving impaired voiding in this cohort",
+      "transcoded": "PTX's reported biological effects do not translate into a meaningful remedy for the dysfunction driving impaired voiding in this cohort",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A1-H2-R2",
+      "type": "HYPOTHESIS",
+      "raw": "Affirmative evidence demonstrates a consequential mismatch in exposure, tissue, disease process, timing, or the relationship between a biological marker and urinary function—and that mismatch defeats the materially supported rationale, not merely one route among many",
+      "transcoded": "Affirmative evidence demonstrates a consequential mismatch in exposure, tissue, disease process, timing, or the relationship between a biological marker and urinary function—and that mismatch defeats the materially supported rationale, not merely one route among many",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A1-H2-R3",
+      "type": "HYPOTHESIS",
+      "raw": "Favorable findings therefore do not provide the proposed causal justification for this intervention",
+      "transcoded": "Favorable findings therefore do not provide the proposed causal justification for this intervention",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A1-H2-C1",
+      "type": "HYPOTHESIS",
+      "raw": "The evidence demonstrating the mismatch is sufficiently relevant to test H1",
+      "transcoded": "The evidence demonstrating the mismatch is sufficiently relevant to test H1",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A1-H2-C2",
+      "type": "HYPOTHESIS",
+      "raw": "failure in an unrelated model or exposure does not suffice",
+      "transcoded": "failure in an unrelated model or exposure does not suffice",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A1-H2-C3",
+      "type": "HYPOTHESIS",
+      "raw": "H2 targets the materially supported rationale as it currently stands in the ledger, not every route that could be imagined",
+      "transcoded": "H2 targets the materially supported rationale as it currently stands in the ledger, not every route that could be imagined",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A1-H2-A1",
+      "type": "HYPOTHESIS",
+      "raw": "A coherent, exposure-compatible causal chain survives the proposed objections and generates supported functional predictions in relevant conditions",
+      "transcoded": "A coherent, exposure-compatible causal chain survives the proposed objections and generates supported functional predictions in relevant conditions",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A1-H2-E1",
+      "type": "HYPOTHESIS",
+      "raw": "Relevant experiments demonstrate insufficient exposure, absent target engagement, persistent dysfunction despite target modulation, incompatible timing, or another affirmative failure of a necessary link",
+      "transcoded": "Relevant experiments demonstrate insufficient exposure, absent target engagement, persistent dysfunction despite target modulation, incompatible timing, or another affirmative failure of a necessary link",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A1-H2-E2",
+      "type": "HYPOTHESIS",
+      "raw": "Missing clinical trials alone do not corroborate H2",
+      "transcoded": "Missing clinical trials alone do not corroborate H2",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A1-H2-E3",
+      "type": "HYPOTHESIS",
+      "raw": "Breaking one route among several independently supported routes damages that route in proportion to the share of the case it carried",
+      "transcoded": "Breaking one route among several independently supported routes damages that route in proportion to the share of the case it carried",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A1-H3-R1",
+      "type": "HYPOTHESIS",
+      "raw": "Existing evidence supports some components of H1",
+      "transcoded": "Existing evidence supports some components of H1",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A1-H3-R2",
+      "type": "HYPOTHESIS",
+      "raw": "cannot distinguish a therapeutically consequential mechanism from the failure described by H2",
+      "transcoded": "cannot distinguish a therapeutically consequential mechanism from the failure described by H2",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A1-H3-R3",
+      "type": "HYPOTHESIS",
+      "raw": "The unresolved links prevent the rationale from becoming specific enough to design the trial: at least one of intervention and exposure, phenotype, measurement, or comparator cannot be specified from supported premises",
+      "transcoded": "The unresolved links prevent the rationale from becoming specific enough to design the trial: at least one of intervention and exposure, phenotype, measurement, or comparator cannot be specified from supported premises",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A1-H3-R4",
+      "type": "HYPOTHESIS",
+      "raw": "The uncertainty is localized to identified links",
+      "transcoded": "The uncertainty is localized to identified links",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A1-H3-R5",
+      "type": "HYPOTHESIS",
+      "raw": "neither a compelling mechanistic endorsement nor a mechanistic rejection is presently determined",
+      "transcoded": "neither a compelling mechanistic endorsement nor a mechanistic rejection is presently determined",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A1-H3-C1",
+      "type": "HYPOTHESIS",
+      "raw": "Meaningful retrieval and adverse testing have been completed",
+      "transcoded": "Meaningful retrieval and adverse testing have been completed",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A1-H3-C2",
+      "type": "HYPOTHESIS",
+      "raw": "uncertainty is not merely an artifact of an unfinished investigation",
+      "transcoded": "uncertainty is not merely an artifact of an unfinished investigation",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A1-H3-A1",
+      "type": "HYPOTHESIS",
+      "raw": "Evidence resolves the decisive links sufficiently to fill all four trial-specification slots (favoring H1) or to defeat the supported rationale (favoring H2)",
+      "transcoded": "Evidence resolves the decisive links sufficiently to fill all four trial-specification slots (favoring H1) or to defeat the supported rationale (favoring H2)",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A1-H3-E1",
+      "type": "HYPOTHESIS",
+      "raw": "Plausible competing explanations remain compatible with the observations",
+      "transcoded": "Plausible competing explanations remain compatible with the observations",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A1-H3-E2",
+      "type": "HYPOTHESIS",
+      "raw": "relevant exposure, tissue effects, functional consequences, or response predictors are unmeasured or inadequately distinguished",
+      "transcoded": "relevant exposure, tissue effects, functional consequences, or response predictors are unmeasured or inadequately distinguished",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A1-H3-E3",
+      "type": "HYPOTHESIS",
+      "raw": "the resulting gap blocks at least one of the four specification slots",
+      "transcoded": "the resulting gap blocks at least one of the four specification slots",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A2-H1-R1",
+      "type": "HYPOTHESIS",
+      "raw": "The materially supported mechanism acts on current physiological function—such as perfusion, microcirculation, smooth-muscle behavior, or neural signaling—rather than on established tissue structure",
+      "transcoded": "The materially supported mechanism acts on current physiological function—such as perfusion, microcirculation, smooth-muscle behavior, or neural signaling—rather than on established tissue structure",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A2-H1-R2",
+      "type": "HYPOTHESIS",
+      "raw": "At clinically attainable exposures, PTX or its metabolites should produce measurable improvement in voiding within days to a few weeks",
+      "transcoded": "At clinically attainable exposures, PTX or its metabolites should produce measurable improvement in voiding within days to a few weeks",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A2-H1-R3",
+      "type": "HYPOTHESIS",
+      "raw": "benefit should diminish if treatment stops",
+      "transcoded": "benefit should diminish if treatment stops",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A2-H1-C1",
+      "type": "HYPOTHESIS",
+      "raw": "A functional component of impaired voiding is present and modifiable in this cohort",
+      "transcoded": "A functional component of impaired voiding is present and modifiable in this cohort",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A2-H1-C2",
+      "type": "HYPOTHESIS",
+      "raw": "attainable exposure reaches the relevant tissue quickly enough to act within the proposed window",
+      "transcoded": "attainable exposure reaches the relevant tissue quickly enough to act within the proposed window",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A2-H1-A1",
+      "type": "HYPOTHESIS",
+      "raw": "Relevant models show no early functional change at informative exposures",
+      "transcoded": "Relevant models show no early functional change at informative exposures",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A2-H1-A2",
+      "type": "HYPOTHESIS",
+      "raw": "human benefit, where reported, appears only after prolonged treatment",
+      "transcoded": "human benefit, where reported, appears only after prolonged treatment",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A2-H1-A3",
+      "type": "HYPOTHESIS",
+      "raw": "or the supported route requires structural change before function can improve",
+      "transcoded": "or the supported route requires structural change before function can improve",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A2-H1-E1",
+      "type": "HYPOTHESIS",
+      "raw": "Functional endpoints such as contractility or flow improve early after exposure",
+      "transcoded": "Functional endpoints such as contractility or flow improve early after exposure",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A2-H1-E2",
+      "type": "HYPOTHESIS",
+      "raw": "and early change is not explained by concurrent structural recovery",
+      "transcoded": "and early change is not explained by concurrent structural recovery",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A2-H2-R1",
+      "type": "HYPOTHESIS",
+      "raw": "The materially supported mechanism acts by reversing or limiting structural change—such as fibrosis, remodeling, or other tissue damage—that contributes to impaired voiding",
+      "transcoded": "The materially supported mechanism acts by reversing or limiting structural change—such as fibrosis, remodeling, or other tissue damage—that contributes to impaired voiding",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A2-H2-R2",
+      "type": "HYPOTHESIS",
+      "raw": "Meaningful improvement should appear only after weeks to months of treatment, with little early functional change",
+      "transcoded": "Meaningful improvement should appear only after weeks to months of treatment, with little early functional change",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A2-H2-C1",
+      "type": "HYPOTHESIS",
+      "raw": "Structural change contributes consequentially to impaired voiding in this cohort",
+      "transcoded": "Structural change contributes consequentially to impaired voiding in this cohort",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A2-H2-C2",
+      "type": "HYPOTHESIS",
+      "raw": "PTX can reverse or limit that change rather than merely prevent it",
+      "transcoded": "PTX can reverse or limit that change rather than merely prevent it",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A2-H2-A1",
+      "type": "HYPOTHESIS",
+      "raw": "Structural effects appear only when treatment precedes injury (prevention, not reversal)",
+      "transcoded": "Structural effects appear only when treatment precedes injury (prevention, not reversal)",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A2-H2-A2",
+      "type": "HYPOTHESIS",
+      "raw": "structural improvement does not accompany functional improvement",
+      "transcoded": "structural improvement does not accompany functional improvement",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A2-H2-A3",
+      "type": "HYPOTHESIS",
+      "raw": "or meaningful benefit appears too quickly to be structurally mediated",
+      "transcoded": "or meaningful benefit appears too quickly to be structurally mediated",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A2-H2-E1",
+      "type": "HYPOTHESIS",
+      "raw": "Structural endpoints such as stereology or collagen measures improve with treatment of established dysfunction",
+      "transcoded": "Structural endpoints such as stereology or collagen measures improve with treatment of established dysfunction",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A2-H2-E2",
+      "type": "HYPOTHESIS",
+      "raw": "functional improvement follows structural change in time",
+      "transcoded": "functional improvement follows structural change in time",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A2-H2-E3",
+      "type": "HYPOTHESIS",
+      "raw": "benefit accumulates with duration and persists after withdrawal",
+      "transcoded": "benefit accumulates with duration and persists after withdrawal",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A2-H3-R1",
+      "type": "HYPOTHESIS",
+      "raw": "Existing evidence cannot distinguish rapid functional benefit from slow structural recovery",
+      "transcoded": "Existing evidence cannot distinguish rapid functional benefit from slow structural recovery",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A2-H3-R2",
+      "type": "HYPOTHESIS",
+      "raw": "Timing evidence is unmeasured, conflicting, poorly transferable, or compatible with both",
+      "transcoded": "Timing evidence is unmeasured, conflicting, poorly transferable, or compatible with both",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A2-H3-R3",
+      "type": "HYPOTHESIS",
+      "raw": "the expected onset and persistence of benefit cannot be specified from supported premises",
+      "transcoded": "the expected onset and persistence of benefit cannot be specified from supported premises",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A2-H3-R4",
+      "type": "HYPOTHESIS",
+      "raw": "The uncertainty is localized to identified timing links",
+      "transcoded": "The uncertainty is localized to identified timing links",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A2-H3-C1",
+      "type": "HYPOTHESIS",
+      "raw": "Meaningful retrieval and adverse testing of timing evidence have been completed",
+      "transcoded": "Meaningful retrieval and adverse testing of timing evidence have been completed",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A2-H3-C2",
+      "type": "HYPOTHESIS",
+      "raw": "uncertainty is not merely an artifact of an unfinished investigation",
+      "transcoded": "uncertainty is not merely an artifact of an unfinished investigation",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A2-H3-A1",
+      "type": "HYPOTHESIS",
+      "raw": "Evidence establishes onset, duration-response, or persistence clearly enough to favor A2-H1 or A2-H2",
+      "transcoded": "Evidence establishes onset, duration-response, or persistence clearly enough to favor A2-H1 or A2-H2",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A2-H3-E1",
+      "type": "HYPOTHESIS",
+      "raw": "Available findings report both functional and structural effects without establishing which carries the benefit, lack onset or withdrawal timing, or rest on models whose timing does not transfer to this cohort",
+      "transcoded": "Available findings report both functional and structural effects without establishing which carries the benefit, lack onset or withdrawal timing, or rest on models whose timing does not transfer to this cohort",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A2-H3-E2",
+      "type": "HYPOTHESIS",
+      "raw": "Record which timing link is unresolved and what measurement would distinguish rapid from slow benefit",
+      "transcoded": "Record which timing link is unresolved and what measurement would distinguish rapid from slow benefit",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    }
+  ],
+  "time": "2026-10-30T03:38:52+00:00"
+}

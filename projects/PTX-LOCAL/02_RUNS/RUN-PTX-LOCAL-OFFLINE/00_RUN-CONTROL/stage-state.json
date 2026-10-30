@@ -1,0 +1,350 @@
+{
+  "corpus": {
+    "status": "done",
+    "updated": "2026-10-30T03:38:29+00:00",
+    "started": "2026-10-30T03:38:27+00:00",
+    "summary": {
+      "manifest_id": "MANIFEST-222df34dc5f8",
+      "files": 111,
+      "bytes": 4923230,
+      "chunks": 3335,
+      "flagged_sources": [
+        "hall2018.pdf.md",
+        "life-15-00613.pdf.md",
+        "s00210-025-03845-1.pdf.md",
+        "vanreijn-baggen2022.pdf.md"
+      ]
+    }
+  },
+  "index": {
+    "status": "done",
+    "updated": "2026-10-30T03:38:29+00:00",
+    "started": "2026-10-30T03:38:29+00:00",
+    "summary": {
+      "index": "supplied",
+      "path": "C:\\Users\\joshu\\Desktop\\FINAL SPECIFICATION DOCUMENTS\\DeepSeek_2 output\\projects\\PTX-LOCAL\\01_FRAME\\index.md"
+    }
+  },
+  "archivist_prompt": {
+    "status": "done",
+    "updated": "2026-10-30T03:38:29+00:00",
+    "started": "2026-10-30T03:38:29+00:00",
+    "summary": {
+      "archivist_prompt": "supplied"
+    }
+  },
+  "frame": {
+    "status": "done",
+    "updated": "2026-10-30T03:38:29+00:00",
+    "started": "2026-10-30T03:38:29+00:00",
+    "summary": {
+      "axes": 2,
+      "hypotheses": 6,
+      "decisive_tests": 11,
+      "gauge": 64,
+      "approval": {
+        "A1": "APPROVED",
+        "A2": "TEST_ONLY"
+      }
+    }
+  },
+  "units": {
+    "status": "done",
+    "updated": "2026-10-30T03:38:30+00:00",
+    "started": "2026-10-30T03:38:29+00:00",
+    "summary": {
+      "units": 68,
+      "active": 65,
+      "unanchored": 0,
+      "by_hypothesis": {
+        "A1-H1": {
+          "REQUIRED_SUPPORT": 5,
+          "CONTEXTUAL_CONSTRAINT": 4,
+          "ADVERSE_TEST": 3,
+          "CORROBORATING_EXPECTATION": 3,
+          "EVALUATIVE_JUDGMENT": 1
+        },
+        "A1-H2": {
+          "REQUIRED_SUPPORT": 3,
+          "CONTEXTUAL_CONSTRAINT": 3,
+          "ADVERSE_TEST": 1,
+          "CORROBORATING_EXPECTATION": 3,
+          "EVALUATIVE_JUDGMENT": 1
+        },
+        "A1-H3": {
+          "REQUIRED_SUPPORT": 5,
+          "CONTEXTUAL_CONSTRAINT": 2,
+          "ADVERSE_TEST": 1,
+          "CORROBORATING_EXPECTATION": 3,
+          "EVALUATIVE_JUDGMENT": 1
+        },
+        "A2-H1": {
+          "REQUIRED_SUPPORT": 3,
+          "CONTEXTUAL_CONSTRAINT": 2,
+          "ADVERSE_TEST": 3,
+          "CORROBORATING_EXPECTATION": 2
+        },
+        "A2-H2": {
+          "REQUIRED_SUPPORT": 2,
+          "CONTEXTUAL_CONSTRAINT": 2,
+          "ADVERSE_TEST": 3,
+          "CORROBORATING_EXPECTATION": 3
+        },
+        "A2-H3": {
+          "REQUIRED_SUPPORT": 4,
+          "CONTEXTUAL_CONSTRAINT": 2,
+          "ADVERSE_TEST": 1,
+          "CORROBORATING_EXPECTATION": 2
+        }
+      }
+    }
+  },
+  "quest": {
+    "status": "done",
+    "updated": "2026-10-30T03:38:36+00:00",
+    "started": "2026-10-30T03:38:30+00:00",
+    "summary": {
+      "status": "OPERATIONAL_LIMIT",
+      "rounds": 8,
+      "questions_issued": 40,
+      "usable_answers": 40,
+      "stop_evaluation": {
+        "gauge": 64,
+        "thresholds": {
+          "branch1_mean3": 0.334,
+          "branch2_mean4": 0.75
+        },
+        "axes": {
+          "A1": {
+            "deltas": [
+              0.0,
+              4.0,
+              0.0,
+              2.0,
+              3.0,
+              0.0,
+              4.0
+            ],
+            "branch1": false,
+            "branch2": false,
+            "mean3": 2.333,
+            "mean4": 2.25
+          },
+          "A2": {
+            "deltas": [
+              7.0,
+              4.0,
+              5.0,
+              1.0,
+              2.0,
+              4.0,
+              1.0
+            ],
+            "branch1": false,
+            "branch2": false,
+            "mean3": 2.333,
+            "mean4": 2.0
+          }
+        },
+        "numeric_rule_met": false,
+        "substantive_conditions_met": false,
+        "ab_covered": false,
+        "stop": false
+      },
+      "note": "max_rounds=8 reached; this is an operational stop, not a scientific completion finding",
+      "closed": "2026-10-30T03:38:36+00:00"
+    }
+  },
+  "frd_generate": {
+    "status": "done",
+    "updated": "2026-10-30T03:38:37+00:00",
+    "started": "2026-10-30T03:38:36+00:00",
+    "summary": {
+      "responses": 40,
+      "candidates": 160,
+      "over_limit": 0
+    }
+  },
+  "frd_validate": {
+    "status": "done",
+    "updated": "2026-10-30T03:38:50+00:00",
+    "started": "2026-10-30T03:38:37+00:00",
+    "summary": {
+      "candidates": 160,
+      "validations": 160,
+      "ready": 160,
+      "quote_unverified": 0
+    }
+  },
+  "frd_retain": {
+    "status": "done",
+    "updated": "2026-10-30T03:38:50+00:00",
+    "started": "2026-10-30T03:38:50+00:00",
+    "summary": {
+      "ready": 160,
+      "retained": 160,
+      "archived": 0,
+      "within_budget": true,
+      "budget_pct": 18.94
+    }
+  },
+  "language": {
+    "status": "done",
+    "updated": "2026-10-30T03:38:50+00:00",
+    "started": "2026-10-30T03:38:50+00:00",
+    "summary": {
+      "mode": "off"
+    }
+  },
+  "witnesses": {
+    "status": "done",
+    "updated": "2026-10-30T03:38:52+00:00",
+    "started": "2026-10-30T03:38:50+00:00",
+    "summary": {
+      "applications": 160,
+      "released": 115,
+      "held": 45,
+      "ceiling_exceptions": 0,
+      "audit_pass_first_round": 115,
+      "time": "2026-10-30T03:38:52+00:00"
+    }
+  },
+  "transcode": {
+    "status": "done",
+    "updated": "2026-10-30T03:38:52+00:00",
+    "started": "2026-10-30T03:38:52+00:00",
+    "summary": {
+      "mode": "off",
+      "items": 180
+    }
+  },
+  "qualify": {
+    "status": "done",
+    "updated": "2026-10-30T03:38:52+00:00",
+    "started": "2026-10-30T03:38:52+00:00",
+    "summary": {
+      "fixtures": 22,
+      "pass_a_correct": 22,
+      "pass_b_correct": 22,
+      "unqualified_patterns": []
+    }
+  },
+  "match": {
+    "status": "done",
+    "updated": "2026-10-30T03:38:56+00:00",
+    "started": "2026-10-30T03:38:52+00:00",
+    "summary": {
+      "units": 65,
+      "witnesses": 115,
+      "pairs_assessed": 1530,
+      "pairs_not_assessed_prefilter": 5945,
+      "exhaustive": false,
+      "agreed": 1528,
+      "model_adjudicated": 2,
+      "disputed_abstain": 0,
+      "missing_both_passes": 0,
+      "one_pass_only": 0,
+      "complete_relations": 0,
+      "contradictions": 0,
+      "text_mode": "off",
+      "review_pairs": 2,
+      "human_decisions": 0
+    }
+  },
+  "joint": {
+    "status": "done",
+    "updated": "2026-10-30T03:38:56+00:00",
+    "started": "2026-10-30T03:38:56+00:00",
+    "summary": {
+      "joint_proposed": 0,
+      "joint_approved": 0,
+      "incompat_pairs_checked": 0,
+      "incompat_approved": 0
+    }
+  },
+  "coverage": {
+    "status": "done",
+    "updated": "2026-10-30T03:38:56+00:00",
+    "started": "2026-10-30T03:38:56+00:00",
+    "summary": {
+      "A1-H1": {
+        "status": "NO_COMPLETE_COVERAGE",
+        "sets": 0,
+        "search": "NOT_RUN",
+        "covered_units": "0/5"
+      },
+      "A1-H2": {
+        "status": "NO_COMPLETE_COVERAGE",
+        "sets": 0,
+        "search": "NOT_RUN",
+        "covered_units": "0/3"
+      },
+      "A1-H3": {
+        "status": "NO_COMPLETE_COVERAGE",
+        "sets": 0,
+        "search": "NOT_RUN",
+        "covered_units": "0/5"
+      },
+      "A2-H1": {
+        "status": "NO_COMPLETE_COVERAGE",
+        "sets": 0,
+        "search": "NOT_RUN",
+        "covered_units": "0/3"
+      },
+      "A2-H2": {
+        "status": "NO_COMPLETE_COVERAGE",
+        "sets": 0,
+        "search": "NOT_RUN",
+        "covered_units": "0/2"
+      },
+      "A2-H3": {
+        "status": "NO_COMPLETE_COVERAGE",
+        "sets": 0,
+        "search": "NOT_RUN",
+        "covered_units": "0/4"
+      }
+    }
+  },
+  "crux": {
+    "status": "done",
+    "updated": "2026-10-30T03:38:56+00:00",
+    "started": "2026-10-30T03:38:56+00:00",
+    "summary": {
+      "coverage_recomputed": 0,
+      "crux_candidates": 0,
+      "conflict_recorded": 0,
+      "diagnostic_witnesses": 0,
+      "tests": 0,
+      "unknown_tests": 0
+    }
+  },
+  "assess": {
+    "status": "done",
+    "updated": "2026-10-30T03:38:57+00:00",
+    "started": "2026-10-30T03:38:56+00:00",
+    "summary": {
+      "allocations": {
+        "A1": {
+          "A1-H1": 22,
+          "A1-H2": 21,
+          "A1-H3": 21
+        },
+        "A2": {
+          "A2-H1": 22,
+          "A2-H2": 21,
+          "A2-H3": 21
+        }
+      },
+      "problems": []
+    }
+  },
+  "report": {
+    "status": "done",
+    "updated": "2026-10-30T03:38:57+00:00",
+    "started": "2026-10-30T03:38:57+00:00",
+    "summary": {
+      "report_words": 1536,
+      "crux_candidates": 0
+    }
+  }
+}

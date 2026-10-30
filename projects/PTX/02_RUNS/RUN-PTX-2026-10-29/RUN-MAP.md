@@ -1,0 +1,17 @@
+# RUN-MAP — RUN-PTX-2026-10-29
+
+- [RUN-STATUS.md](RUN-STATUS.md)
+- [RUN-CONFIG.json](RUN-CONFIG.json)
+- [Crux report](10_REPORTS/CRUX-REPORT.md) · [Audit browser](10_REPORTS/report.html)
+- [01_FRAME](01_FRAME/README.md)
+- [02_DISCOVERY](02_DISCOVERY/README.md)
+- [03_FRDS](03_FRDS/README.md)
+- [04_LANGUAGE-TOOLS](04_LANGUAGE-TOOLS/README.md)
+- [05_WITNESSES](05_WITNESSES/README.md)
+- [06_TRANSCODING](06_TRANSCODING/README.md)
+- [07_MATCHING](07_MATCHING/README.md)
+- [08_COVERAGE](08_COVERAGE/README.md)
+- [09_CRUX](09_CRUX/README.md)
+- [10_REPORTS](10_REPORTS/README.md)
+- [Model call log](00_RUN-CONTROL/model-and-human-decisions/llm-calls.jsonl)
+- [Artifact registry](00_RUN-CONTROL/artifact-registry.jsonl)

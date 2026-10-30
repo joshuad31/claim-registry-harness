@@ -1,0 +1,1783 @@
+[
+  {
+    "witness_id": "W-FRD-Q0001-01-Q0001",
+    "status": "WITNESS",
+    "text": "We tested whether foliar potassium silicate improves water relations and yield components in drought-stressed wheat grown in a controlled greenhouse (alvarez2021).",
+    "preserved": [
+      "assertion"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "f07e42a450fc11deda7f751c",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 21,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0001-02-Q0001",
+    "status": "WITNESS",
+    "text": "Foliar silicate increased relative water content of flag leaves by 9.4 percentage points compared with the water-sprayed control at 14 days after anthesis (alvarez2021).",
+    "preserved": [
+      "quantities",
+      "timing"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "2b83d441b76ff9c0f5ad6956",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 24,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0001-03-Q0001",
+    "status": "WITNESS",
+    "text": "Foliar silicate was tested at three rainfed field sites over two seasons to determine whether it improves wheat grain yield under water-limited conditions (okafor2019).",
+    "preserved": [
+      "assertion"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "9c9cd8bf3e147516b3bbaacc",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 24,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0001-04-Q0001",
+    "status": "WITNESS",
+    "text": "A two-season field experiment tested foliar silicate for lodging resistance and grain yield in irrigated wheat (smidt2020).",
+    "preserved": [
+      "assertion"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "3c16d47b008ad8ce4e6ea925",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 17,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0002-01-Q0002",
+    "status": "WITNESS",
+    "text": "Possible reasons include lower effective leaf coverage in a field canopy, rain washing the foliar film, and milder drought than in pot experiments (okafor2019).",
+    "preserved": [
+      "modality"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "420966abef52ca42e5fffd43",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 24,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0002-02-Q0002",
+    "status": "WITNESS",
+    "text": "The trial cannot rule out a small yield effect below its detection limit (okafor2019).",
+    "preserved": [
+      "negation"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "2d6c7bddb5a1010240391053",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 14,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0002-03-Q0002",
+    "status": "WITNESS",
+    "text": "The experiment shows a structural effect of foliar silicate on stem strength under irrigated conditions (smidt2020).",
+    "preserved": [
+      "assertion"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "3e2aa93a6afe60dc93eb59c4",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 16,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0002-04-Q0002",
+    "status": "WITNESS",
+    "text": "Grain yield was 8.12 tonnes per hectare in treated plots and 7.94 tonnes per hectare in controls; the difference was not significant (smidt2020).",
+    "preserved": [
+      "negation",
+      "quantities"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "ac1342aee7ddaf586bc96dbb",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 23,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0003-01-Q0003",
+    "status": "WITNESS",
+    "text": "A two-season field experiment tested foliar silicate for lodging resistance and grain yield in irrigated wheat (smidt2020).",
+    "preserved": [
+      "assertion"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "c49a9ff953e1d38cfb5bfd18",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 17,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0003-02-Q0003",
+    "status": "WITNESS",
+    "text": "Grain yield was 8.12 tonnes per hectare in treated plots and 7.94 tonnes per hectare in controls; the difference was not significant (smidt2020).",
+    "preserved": [
+      "negation",
+      "quantities"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "713106c1626e5081d24a040d",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 23,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0003-03-Q0003",
+    "status": "WITNESS",
+    "text": "Foliar silicate was tested at three rainfed field sites over two seasons to determine whether it improves wheat grain yield under water-limited conditions (okafor2019).",
+    "preserved": [
+      "assertion"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "cc48772ec44719931207dd4a",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 24,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0003-04-Q0003",
+    "status": "WITNESS",
+    "text": "We tested whether foliar potassium silicate improves water relations and yield components in drought-stressed wheat grown in a controlled greenhouse (alvarez2021).",
+    "preserved": [
+      "assertion"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "01b751c9862f44ccb2442d81",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 21,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0004-01-Q0004",
+    "status": "WITNESS",
+    "text": "Grain yield responses in pots are frequently positive but vary with rate and timing (brennan2022).",
+    "preserved": [
+      "assertion"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "37e5a7f3674617f531184ce0",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 15,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0004-02-Q0004",
+    "status": "WITNESS",
+    "text": "Shoot dry weight was 12 percent higher in treated stressed seedlings (li2024).",
+    "preserved": [
+      "quantities"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "f661124e9166f1f3beb84998",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 12,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0004-03-Q0004",
+    "status": "WITNESS",
+    "text": "This narrative review summarises reported effects of silicon application on yield and drought tolerance in cereal crops, with attention to the gap between controlled and field studies (brennan2022).",
+    "preserved": [
+      "assertion"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "8eda88399d7d4c66690dced0",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 28,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0004-04-Q0004",
+    "status": "WITNESS",
+    "text": "It does not establish a grain yield effect in any crop, and the model species differs from wheat in root anatomy and silicon accumulation (li2024).",
+    "preserved": [
+      "negation"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "d28e9743e070f4779628c88e",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 25,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0005-01-Q0005",
+    "status": "WITNESS",
+    "text": "It does not establish a grain yield effect in any crop, and the model species differs from wheat in root anatomy and silicon accumulation (li2024).",
+    "preserved": [
+      "negation"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "d41e30265d65f9055e6f6628",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 25,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0005-02-Q0005",
+    "status": "WITNESS",
+    "text": "The result identifies a plausible water-transport mechanism for silicate under osmotic stress (li2024).",
+    "preserved": [
+      "assertion"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "7dab3f2798ae46e00caa8836",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 13,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0005-03-Q0005",
+    "status": "WITNESS",
+    "text": "Foliar silicate was tested at three rainfed field sites over two seasons to determine whether it improves wheat grain yield under water-limited conditions (okafor2019).",
+    "preserved": [
+      "assertion"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "48e365b8f9c3eb45c91e3d60",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 24,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0005-04-Q0005",
+    "status": "WITNESS",
+    "text": "We tested whether foliar potassium silicate improves water relations and yield components in drought-stressed wheat grown in a controlled greenhouse (alvarez2021).",
+    "preserved": [
+      "assertion"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "5289e7b1cdfbdd3152c6537f",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 21,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0006-01-Q0006",
+    "status": "WITNESS",
+    "text": "Possible reasons include lower effective leaf coverage in a field canopy, rain washing the foliar film, and milder drought than in pot experiments (okafor2019).",
+    "preserved": [
+      "modality"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "27e0b9ebac88d251cacf223b",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 24,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0006-02-Q0006",
+    "status": "WITNESS",
+    "text": "Because the trial used pots and a single cultivar, the yield difference should not be extrapolated to field conditions without a field test (alvarez2021).",
+    "preserved": [
+      "negation"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "37fdad269d50f1cd0a20c7eb",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 24,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0006-03-Q0006",
+    "status": "WITNESS",
+    "text": "We tested whether foliar potassium silicate improves water relations and yield components in drought-stressed wheat grown in a controlled greenhouse (alvarez2021).",
+    "preserved": [
+      "assertion"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "f320629b5d5d1823dab4fe6b",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 21,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0006-04-Q0006",
+    "status": "WITNESS",
+    "text": "Foliar silicate was tested at three rainfed field sites over two seasons to determine whether it improves wheat grain yield under water-limited conditions (okafor2019).",
+    "preserved": [
+      "assertion"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "5281941cfae79527a72b8476",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 24,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0007-01-Q0007",
+    "status": "WITNESS",
+    "text": "Foliar silicate was tested at three rainfed field sites over two seasons to determine whether it improves wheat grain yield under water-limited conditions (okafor2019).",
+    "preserved": [
+      "assertion"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "1a235ae6ac6930abf7a7a4f7",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 24,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0007-02-Q0007",
+    "status": "WITNESS",
+    "text": "Possible reasons include lower effective leaf coverage in a field canopy, rain washing the foliar film, and milder drought than in pot experiments (okafor2019).",
+    "preserved": [
+      "modality"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "5c81f2ad7bef892df83f26ce",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 24,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0007-03-Q0007",
+    "status": "WITNESS",
+    "text": "We tested whether foliar potassium silicate improves water relations and yield components in drought-stressed wheat grown in a controlled greenhouse (alvarez2021).",
+    "preserved": [
+      "assertion"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "7c923eb0d35812baca4732fd",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 21,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0007-04-Q0007",
+    "status": "WITNESS",
+    "text": "A two-season field experiment tested foliar silicate for lodging resistance and grain yield in irrigated wheat (smidt2020).",
+    "preserved": [
+      "assertion"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "a8993bb7bbc00b728563a926",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 17,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0008-01-Q0008",
+    "status": "WITNESS",
+    "text": "This narrative review summarises reported effects of silicon application on yield and drought tolerance in cereal crops, with attention to the gap between controlled and field studies (brennan2022).",
+    "preserved": [
+      "assertion"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "2dcc5749b21ec69f00b27563",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 28,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0008-02-Q0008",
+    "status": "WITNESS",
+    "text": "There is plausible mechanistic support for a drought-tolerance effect in wheat, but the field yield evidence is mixed and does not establish a benefit (brennan2022).",
+    "preserved": [
+      "negation"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "405f418bf99888ddc9ae60f4",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 25,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0008-03-Q0008",
+    "status": "WITNESS",
+    "text": "The experiment shows a structural effect of foliar silicate on stem strength under irrigated conditions (smidt2020).",
+    "preserved": [
+      "assertion"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "ef4f6d7d614110b41d3dfe42",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 16,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0008-04-Q0008",
+    "status": "WITNESS",
+    "text": "Grain yield was 8.12 tonnes per hectare in treated plots and 7.94 tonnes per hectare in controls; the difference was not significant (smidt2020).",
+    "preserved": [
+      "negation",
+      "quantities"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "e942433eb694ffdcb86a0b2d",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 23,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0009-01-Q0009",
+    "status": "WITNESS",
+    "text": "There is plausible mechanistic support for a drought-tolerance effect in wheat, but the field yield evidence is mixed and does not establish a benefit (brennan2022).",
+    "preserved": [
+      "negation"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "d14c27e392ed35ad9d451633",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 25,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0009-02-Q0009",
+    "status": "WITNESS",
+    "text": "Among the field studies we located, results are inconsistent: some report no yield difference, while others report small increases that were not significant (brennan2022).",
+    "preserved": [
+      "negation"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "c10bbf8d5b0a79b5faf81186",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 24,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0009-03-Q0009",
+    "status": "WITNESS",
+    "text": "Foliar silicate was tested at three rainfed field sites over two seasons to determine whether it improves wheat grain yield under water-limited conditions (okafor2019).",
+    "preserved": [
+      "assertion"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "ee572f68c2f3eaec2cd4ec81",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 24,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0009-04-Q0009",
+    "status": "WITNESS",
+    "text": "We tested whether foliar potassium silicate improves water relations and yield components in drought-stressed wheat grown in a controlled greenhouse (alvarez2021).",
+    "preserved": [
+      "assertion"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "3fbde90e019aaafc40dc222c",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 21,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0010-01-Q0010",
+    "status": "WITNESS",
+    "text": "We tested whether foliar potassium silicate improves water relations and yield components in drought-stressed wheat grown in a controlled greenhouse (alvarez2021).",
+    "preserved": [
+      "assertion"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "b5c3273b7c3d98733431324d",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 21,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0010-02-Q0010",
+    "status": "WITNESS",
+    "text": "Shoot dry weight was 12 percent higher in treated stressed seedlings (li2024).",
+    "preserved": [
+      "quantities"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "e3590231d22aa43c64a235ca",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 12,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0010-03-Q0010",
+    "status": "WITNESS",
+    "text": "Foliar silicate increased relative water content of flag leaves by 9.4 percentage points compared with the water-sprayed control at 14 days after anthesis (alvarez2021).",
+    "preserved": [
+      "quantities",
+      "timing"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "9b61f4873a904bdc1f3cfb88",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 24,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0010-04-Q0010",
+    "status": "WITNESS",
+    "text": "It does not establish a grain yield effect in any crop, and the model species differs from wheat in root anatomy and silicon accumulation (li2024).",
+    "preserved": [
+      "negation"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "e976c3ef2dbf17d1cdf2bce8",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 25,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0011-01-Q0011",
+    "status": "WITNESS",
+    "text": "We tested whether foliar potassium silicate improves water relations and yield components in drought-stressed wheat grown in a controlled greenhouse (alvarez2021).",
+    "preserved": [
+      "assertion"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "ae73e21376e13274ee6af470",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 21,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0011-02-Q0011",
+    "status": "WITNESS",
+    "text": "Foliar silicate increased relative water content of flag leaves by 9.4 percentage points compared with the water-sprayed control at 14 days after anthesis (alvarez2021).",
+    "preserved": [
+      "quantities",
+      "timing"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "ee30c637d27edaaa9aa6bda0",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 24,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0011-03-Q0011",
+    "status": "WITNESS",
+    "text": "Foliar silicate was tested at three rainfed field sites over two seasons to determine whether it improves wheat grain yield under water-limited conditions (okafor2019).",
+    "preserved": [
+      "assertion"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "9fcae21d01e2786cb15faa9d",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 24,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0011-04-Q0011",
+    "status": "WITNESS",
+    "text": "Among the field studies we located, results are inconsistent: some report no yield difference, while others report small increases that were not significant (brennan2022).",
+    "preserved": [
+      "negation"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "6b030d54fa82c886dd4dd2ec",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 24,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0012-01-Q0012",
+    "status": "WITNESS",
+    "text": "Possible reasons include lower effective leaf coverage in a field canopy, rain washing the foliar film, and milder drought than in pot experiments (okafor2019).",
+    "preserved": [
+      "modality"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "717289267a6265f28a1de56f",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 24,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0012-02-Q0012",
+    "status": "WITNESS",
+    "text": "Foliar silicate was tested at three rainfed field sites over two seasons to determine whether it improves wheat grain yield under water-limited conditions (okafor2019).",
+    "preserved": [
+      "assertion"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "c3898a5ca5f1f4b5c59c4d8d",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 24,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0012-03-Q0012",
+    "status": "WITNESS",
+    "text": "Grain yield was 8.12 tonnes per hectare in treated plots and 7.94 tonnes per hectare in controls; the difference was not significant (smidt2020).",
+    "preserved": [
+      "negation",
+      "quantities"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "498c0e4dcd923fa956b18202",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 23,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0012-04-Q0012",
+    "status": "WITNESS",
+    "text": "Silicate treatment reduced lodging score from 4.1 to 2.3 in the first season (smidt2020).",
+    "preserved": [
+      "quantities"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "44cc55c940211d6d53aedff9",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 14,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0013-01-Q0013",
+    "status": "WITNESS",
+    "text": "A two-season field experiment tested foliar silicate for lodging resistance and grain yield in irrigated wheat (smidt2020).",
+    "preserved": [
+      "assertion"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "8aa1faf4ffb2611da1a060b4",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 17,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0013-02-Q0013",
+    "status": "WITNESS",
+    "text": "The experiment shows a structural effect of foliar silicate on stem strength under irrigated conditions (smidt2020).",
+    "preserved": [
+      "assertion"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "8fb877d24ee9990e1d0f2f5f",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 16,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0013-03-Q0013",
+    "status": "WITNESS",
+    "text": "Foliar silicate was tested at three rainfed field sites over two seasons to determine whether it improves wheat grain yield under water-limited conditions (okafor2019).",
+    "preserved": [
+      "assertion"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "e6b78969ca0a499b905e7dd7",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 24,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0013-04-Q0013",
+    "status": "WITNESS",
+    "text": "We tested whether foliar potassium silicate improves water relations and yield components in drought-stressed wheat grown in a controlled greenhouse (alvarez2021).",
+    "preserved": [
+      "assertion"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "3baa794c515b0ac8c65c4555",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 21,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0014-01-Q0014",
+    "status": "WITNESS",
+    "text": "This narrative review summarises reported effects of silicon application on yield and drought tolerance in cereal crops, with attention to the gap between controlled and field studies (brennan2022).",
+    "preserved": [
+      "assertion"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "f2cdbaecf61311fb4bf8dcf2",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 28,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0014-02-Q0014",
+    "status": "WITNESS",
+    "text": "There is plausible mechanistic support for a drought-tolerance effect in wheat, but the field yield evidence is mixed and does not establish a benefit (brennan2022).",
+    "preserved": [
+      "negation"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "c86aa04bdeaad099427c1f7b",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 25,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0014-03-Q0014",
+    "status": "WITNESS",
+    "text": "It does not establish a grain yield effect in any crop, and the model species differs from wheat in root anatomy and silicon accumulation (li2024).",
+    "preserved": [
+      "negation"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "ee9a09f6f3731a0355e7db44",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 25,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0014-04-Q0014",
+    "status": "WITNESS",
+    "text": "Shoot dry weight was 12 percent higher in treated stressed seedlings (li2024).",
+    "preserved": [
+      "quantities"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "35b640eb980913ac5f57553d",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 12,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0015-01-Q0015",
+    "status": "WITNESS",
+    "text": "It does not establish a grain yield effect in any crop, and the model species differs from wheat in root anatomy and silicon accumulation (li2024).",
+    "preserved": [
+      "negation"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "c4af0c716ba448a030b46fed",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 25,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0015-02-Q0015",
+    "status": "WITNESS",
+    "text": "The result identifies a plausible water-transport mechanism for silicate under osmotic stress (li2024).",
+    "preserved": [
+      "assertion"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "5e9ed25303e2f0a1251257a1",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 13,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0015-03-Q0015",
+    "status": "WITNESS",
+    "text": "Foliar silicate was tested at three rainfed field sites over two seasons to determine whether it improves wheat grain yield under water-limited conditions (okafor2019).",
+    "preserved": [
+      "assertion"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "3dc60ab5c70d0ed588c91dfb",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 24,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0015-04-Q0015",
+    "status": "WITNESS",
+    "text": "We tested whether foliar potassium silicate improves water relations and yield components in drought-stressed wheat grown in a controlled greenhouse (alvarez2021).",
+    "preserved": [
+      "assertion"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "a2483de2984bdab1a7175e04",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 21,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0016-01-Q0016",
+    "status": "WITNESS",
+    "text": "The absence of a yield response in the field contrasts with positive greenhouse reports (okafor2019).",
+    "preserved": [
+      "negation"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "4297ef2cd74cca2121e92b18",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 15,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0016-02-Q0016",
+    "status": "WITNESS",
+    "text": "We tested whether foliar potassium silicate improves water relations and yield components in drought-stressed wheat grown in a controlled greenhouse (alvarez2021).",
+    "preserved": [
+      "assertion"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "72e8b7e1789f921f856d9c2d",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 21,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0016-03-Q0016",
+    "status": "WITNESS",
+    "text": "Foliar silicate increased relative water content of flag leaves by 9.4 percentage points compared with the water-sprayed control at 14 days after anthesis (alvarez2021).",
+    "preserved": [
+      "quantities",
+      "timing"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "86d3d319c247d47e7f001318",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 24,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0016-04-Q0016",
+    "status": "WITNESS",
+    "text": "Stomatal conductance was higher in treated plots at the driest site, by 0.04 mol per square metre per second, but the difference did not translate into a yield difference (okafor2019).",
+    "preserved": [
+      "negation",
+      "quantities"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "1718a8af4b7d5e55d083fadd",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 30,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0017-01-Q0017",
+    "status": "WITNESS",
+    "text": "Foliar silicate was tested at three rainfed field sites over two seasons to determine whether it improves wheat grain yield under water-limited conditions (okafor2019).",
+    "preserved": [
+      "assertion"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "35d897a7ac09e7acc8e5ae3f",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 24,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0017-02-Q0017",
+    "status": "WITNESS",
+    "text": "Possible reasons include lower effective leaf coverage in a field canopy, rain washing the foliar film, and milder drought than in pot experiments (okafor2019).",
+    "preserved": [
+      "modality"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "1cd29784e258e8edd294124c",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 24,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0017-03-Q0017",
+    "status": "WITNESS",
+    "text": "We tested whether foliar potassium silicate improves water relations and yield components in drought-stressed wheat grown in a controlled greenhouse (alvarez2021).",
+    "preserved": [
+      "assertion"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "e49209d816080dc9a2800a82",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 21,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0017-04-Q0017",
+    "status": "WITNESS",
+    "text": "Among the field studies we located, results are inconsistent: some report no yield difference, while others report small increases that were not significant (brennan2022).",
+    "preserved": [
+      "negation"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "18ad183e5d69c85674e75cae",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 24,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0018-01-Q0018",
+    "status": "WITNESS",
+    "text": "There is plausible mechanistic support for a drought-tolerance effect in wheat, but the field yield evidence is mixed and does not establish a benefit (brennan2022).",
+    "preserved": [
+      "negation"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "0eb17446a488df251b9c9118",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 25,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0018-02-Q0018",
+    "status": "WITNESS",
+    "text": "This narrative review summarises reported effects of silicon application on yield and drought tolerance in cereal crops, with attention to the gap between controlled and field studies (brennan2022).",
+    "preserved": [
+      "assertion"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "8b6ea26ae4a4beb23a4efabd",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 28,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0018-03-Q0018",
+    "status": "WITNESS",
+    "text": "Grain yield was 8.12 tonnes per hectare in treated plots and 7.94 tonnes per hectare in controls; the difference was not significant (smidt2020).",
+    "preserved": [
+      "negation",
+      "quantities"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "3e16441705108784f88f6e43",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 23,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0018-04-Q0018",
+    "status": "WITNESS",
+    "text": "Silicate treatment reduced lodging score from 4.1 to 2.3 in the first season (smidt2020).",
+    "preserved": [
+      "quantities"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "f5018ef1d5b3c5ef901e4628",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 14,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0019-01-Q0019",
+    "status": "WITNESS",
+    "text": "There is plausible mechanistic support for a drought-tolerance effect in wheat, but the field yield evidence is mixed and does not establish a benefit (brennan2022).",
+    "preserved": [
+      "negation"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "e9168e94ac52333b3edbb2c6",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 25,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0019-02-Q0019",
+    "status": "WITNESS",
+    "text": "Among the field studies we located, results are inconsistent: some report no yield difference, while others report small increases that were not significant (brennan2022).",
+    "preserved": [
+      "negation"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "5a38bb3548b4482ad02a5e11",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 24,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0019-03-Q0019",
+    "status": "WITNESS",
+    "text": "Foliar silicate was tested at three rainfed field sites over two seasons to determine whether it improves wheat grain yield under water-limited conditions (okafor2019).",
+    "preserved": [
+      "assertion"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "55d688ab48b9d50b5cfefd8a",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 24,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0019-04-Q0019",
+    "status": "WITNESS",
+    "text": "We tested whether foliar potassium silicate improves water relations and yield components in drought-stressed wheat grown in a controlled greenhouse (alvarez2021).",
+    "preserved": [
+      "assertion"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "04f2e7353ce9838fab9cd6ea",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 21,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0020-01-Q0020",
+    "status": "WITNESS",
+    "text": "Because the trial used pots and a single cultivar, the yield difference should not be extrapolated to field conditions without a field test (alvarez2021).",
+    "preserved": [
+      "negation"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "bbb859090f1cba3f892594fe",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 24,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  }
+]

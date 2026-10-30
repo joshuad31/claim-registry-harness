@@ -1,0 +1,2665 @@
+[
+  {
+    "response_id": "R-Q0001-A01",
+    "qid": "Q0001",
+    "attempt": "A01",
+    "outcome": "COMPLETE",
+    "usable": true,
+    "text": "[SOURCE] \"A review of available studies indicates that Pentoxifylline may have a potentially positive impact on male infertility,<sup>27</sup> Peyronie's disease,<sup>28</sup> regulation of the systemic inflammatory response to bypass surgery,<sup>29</sup> angina symptom,<sup>30</sup> management of intermittent claudication,<sup>31</sup> improvement of cerebral blood flow in patients with cerebrovascular disease, and the progression of vascular dementia.<sup>32</sup> Therefore, the results of this trial could add another beneficial effect to many other PTX applications for various medical problems.\" (Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md, Comparison between combination of tamsulosin and Pentoxifylline versus tamsulosi)\n[SOURCE] \"This positive effect may be related to the fact that detrusor muscle contractility of an obstructed bladder improves with Pentoxifylline use.<sup>14</sup> Hence, it makes sense to attribute\" (Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md, Comparison between combination of tamsulosin and Pentoxifylline versus tamsulosi)\n[SOURCE] \"Barie, MD, New York:** I wonder if you could comment on the temporal relationships between the timing of intervention and the fact that the physiologic responses you observed became meaningful statistically at 7 to as many as 14 days thereafter?\" (staubach1998.pdf.md, Results)\n[SOURCE] \"Underactive bladder (UAB) focuses on symptoms that patients find bothersome and raises the profile of the important clinical condition.<sup>[3]</sup> Chapple et al proposed that a definition of a symptom complex for UAB analogous to the ICS definition of overactive bladder (OAB) syndrome would be of potential clinical value: UAB is a symptom complex suggestive of DU and is usually characterized by a prolonged urination time with or without a sensation of incomplete bladder emptying, usually with hesitancy, reduced sensation on filling, and a slow stream.<sup>[4]</sup> Because the underlying pathophysiology of UAB is multifactorial, a single medication that focuses on a single mechanism could not be effective for others.\" (li2018.pdf.md, Results)\n[SOURCE] \"This may indicate that pentoxifylline in high doses has a direct vasodilating effect on large cerebral arteries, which could be a result of its PDE-inhibiting actions (Kamphuis *et al.*, 1994).\" (kruuse2000.pdf.md, Results)\n[SOURCE] \"Although this is a highly conservative approach that may bias the results toward the null, it was selected to maintain the integrity of randomization and to prevent overestimation of treatment effects in this pilot study.\" (pharmaceuticals-19-00552.pdf.md, Results)\n\n[INFERRED] The quoted passages are what this notebook contains on the question. Each quotation is attributed above to its file and section; no finding outside these passages is asserted. Sources quoted: Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md, kruuse2000.pdf.md, li2018.pdf.md, pharmaceuticals-19-00552.pdf.md, staubach1998.pdf.md.",
+    "cited_sources": [
+      "Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md",
+      "staubach1998.pdf.md",
+      "li2018.pdf.md",
+      "kruuse2000.pdf.md",
+      "pharmaceuticals-19-00552.pdf.md"
+    ],
+    "requested_sources_cited": [
+      "Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md"
+    ],
+    "requested_sources_absent": [],
+    "retrieval": {
+      "named": [
+        {
+          "filename": "Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md",
+          "complete": false,
+          "words": 4025
+        }
+      ],
+      "other": [
+        {
+          "filename": "glazener2011.pdf.md",
+          "heading": "Contributors",
+          "score": 18.36
+        },
+        {
+          "filename": "Nyanyo2024_Cushings_Disease_A.md",
+          "heading": "Role of the Funding Source",
+          "score": 16.38
+        },
+        {
+          "filename": "staubach1998.pdf.md",
+          "heading": "DISCUSSION",
+          "score": 16.22
+        },
+        {
+          "filename": "li2018.pdf.md",
+          "heading": "1. Introduction",
+          "score": 15.93
+        },
+        {
+          "filename": "kruuse2000.pdf.md",
+          "heading": "**Present results**",
+          "score": 15.28
+        },
+        {
+          "filename": "pharmaceuticals-19-00552.pdf.md",
+          "heading": "4.11. Handling of Missing Data",
+          "score": 15.02
+        }
+      ],
+      "unresolved": [],
+      "words": 5550
+    },
+    "call_key": "d7d266dab453ebe0bf2ce47a",
+    "model": "local-rules-v1.8",
+    "captured": "2026-10-30T03:38:30+00:00"
+  },
+  {
+    "response_id": "R-Q0002-A01",
+    "qid": "Q0002",
+    "attempt": "A01",
+    "outcome": "COMPLETE",
+    "usable": true,
+    "text": "[SOURCE] \"Captopril is commonly prescribed as an angiotensin-converting enzyme inhibitor for the treatment of some medical conditions, including hypertension and some types of congestive heart failure [10,11].\" (shirazi2014.pdf.md, Stereological Comparison of the Effects of Pentoxifylline, Captopril, Simvastati)\n[SOURCE] \"[5] indicated that persistent bladder dysfunction in men after transurethral resection of prostate would be associated with long-lasting detrusor ischemia and reduced perfusion.\" (shirazi2015.pdf.md, The effect of pentoxifylline on detrusor muscle contractility after partial uret)\n[SOURCE] \"It has been reported that an increase in angiotensin II levels in obstructive nephropathy up-regulates the expression of several factors, including transforming growth factor (TGF)- $\\beta$ .\" (shirazi2014.pdf.md, Stereological Comparison of the Effects of Pentoxifylline, Captopril, Simvastati)\n[SOURCE] \"2** The effect of cumulative concentrations of carbachol on the tension of isolated bladder in normal rats (square), rats with partial bladder outlet obstruction (inverted triangle), and rats with partial bladder outlet obstruction that received pentoxifylline (circle)\" (shirazi2015.pdf.md, The effect of pentoxifylline on detrusor muscle contractility after partial uret)\n[SOURCE] \"Although we did note differential effects on these, the intervention might also be expected to have wider effects, such as improving the quality rather than the quantity of pelvic-floor muscle contractions, the use of broader behavioural techniques such as bladder training, and generic quality of life, which we did not measure directly.\" (glazener2011.pdf.md, Results)\n[SOURCE] \"Treatment of voiding difficulty in women with 0.2 mg tamsulosin daily for 6 weeks has been reported to improve voiding and storage symptom scores, maximal flow rate, and PVR.\" (ladi-seyedian2017.pdf.md, Results)\n\n[INFERRED] The quoted passages are what this notebook contains on the question. Each quotation is attributed above to its file and section; no finding outside these passages is asserted. Sources quoted: glazener2011.pdf.md, ladi-seyedian2017.pdf.md, shirazi2014.pdf.md, shirazi2015.pdf.md.",
+    "cited_sources": [
+      "shirazi2014.pdf.md",
+      "shirazi2015.pdf.md",
+      "glazener2011.pdf.md",
+      "ladi-seyedian2017.pdf.md"
+    ],
+    "requested_sources_cited": [
+      "shirazi2015.pdf.md",
+      "shirazi2014.pdf.md"
+    ],
+    "requested_sources_absent": [],
+    "retrieval": {
+      "named": [
+        {
+          "filename": "shirazi2015.pdf.md",
+          "complete": true,
+          "words": 3447
+        },
+        {
+          "filename": "shirazi2014.pdf.md",
+          "complete": false,
+          "words": 2749
+        }
+      ],
+      "other": [
+        {
+          "filename": "ladi-seyedian2017.pdf.md",
+          "heading": "7.3.2. *Alpha-adrenoreceptor antagonists*",
+          "score": 22.33
+        },
+        {
+          "filename": "glazener2011.pdf.md",
+          "heading": "Interpretation",
+          "score": 21.62
+        },
+        {
+          "filename": "glazener2011.pdf.md",
+          "heading": "Interpretation",
+          "score": 21.59
+        },
+        {
+          "filename": "MS patients and PTX.pdf.md",
+          "heading": "5. Discussion",
+          "score": 21.0
+        },
+        {
+          "filename": "glazener2011.pdf.md",
+          "heading": "Discussion",
+          "score": 19.99
+        },
+        {
+          "filename": "Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md",
+          "heading": "2.3 | Study design",
+          "score": 18.26
+        }
+      ],
+      "unresolved": [],
+      "words": 7733
+    },
+    "call_key": "f92e2684708881e2a08d8a1d",
+    "model": "local-rules-v1.8",
+    "captured": "2026-10-30T03:38:30+00:00"
+  },
+  {
+    "response_id": "R-Q0003-A01",
+    "qid": "Q0003",
+    "attempt": "A01",
+    "outcome": "COMPLETE",
+    "usable": true,
+    "text": "[SOURCE] \"It has been shown that bladder dysfunction secondary to PUO is characterized by bladder wall hypertrophy, decreased capacity and urinary stream, and increased postvoid residual urine [4-6,17,22].\" (shirazi2014.pdf.md, Stereological Comparison of the Effects of Pentoxifylline, Captopril, Simvastati)\n[SOURCE] \"Although the explanations for bladder dysfunction are not fully understood, fetal urethral obstruction has been reported to result in deposition of an abnormal quantity of collagen in the bladder, which can play a major role in bladder hypocompliance [4].\" (shirazi2014.pdf.md, Stereological Comparison of the Effects of Pentoxifylline, Captopril, Simvastati)\n[SOURCE] \"This eventuates in BOO, which shows voiding dysfunction.<sup>18</sup> The clinical presentation is in the form of LUTS, including weak urinary stream, urgency, nocturia, urinary retention, straining, and frequency.<sup>19</sup> Currently, several drug modalities are recommended to treat the symptoms of BPH, including 5-alpha reductase inhibitors, $\\alpha$ 1-adrenoceptor antagonists, and phosphodiesterase five inhibitors.<sup>20</sup> Transurethral prostatectomy and open prostatectomy are non-pharmacological choices; nevertheless, there are risks related to prostatic surgery, including bleeding, retrograde ejaculation, and further surgical operations.<sup>21</sup>\" (Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md, Results)\n[SOURCE] \"The etiology of diabetic bladder dysfunction is multifactorial; both the myogenic and neurogenic effects of diabetic cystopathy cause a decrease in bladder sensation and impairment in voiding function [39].\" (ladi-seyedian2017.pdf.md, Results)\n[SOURCE] \"finding suggests that PTX may exert an anti-inflammatory effect sufficient to translate into measurable symptom relief.\" (pharmaceuticals-19-00552.pdf.md, Results)\n[SOURCE] \"By reducing blood viscosity, PTX’s therapeutic effects in this disorder have been linked to an improvement in blood’s rheological characteristics, principally as a result of a drop in plasma fibrinogen content.\" (Pentoxifylline-in-patients-with-ulcerative-colitis-treated-with-mesalamine-by-modulation.pdf.md, Results)\n\n[INFERRED] The quoted passages are what this notebook contains on the question. Each quotation is attributed above to its file and section; no finding outside these passages is asserted. Sources quoted: Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md, Pentoxifylline-in-patients-with-ulcerative-colitis-treated-with-mesalamine-by-modulation.pdf.md, ladi-seyedian2017.pdf.md, pharmaceuticals-19-00552.pdf.md, shirazi2014.pdf.md.",
+    "cited_sources": [
+      "shirazi2014.pdf.md",
+      "Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md",
+      "ladi-seyedian2017.pdf.md",
+      "pharmaceuticals-19-00552.pdf.md",
+      "Pentoxifylline-in-patients-with-ulcerative-colitis-treated-with-mesalamine-by-modulation.pdf.md"
+    ],
+    "requested_sources_cited": [
+      "shirazi2014.pdf.md"
+    ],
+    "requested_sources_absent": [],
+    "retrieval": {
+      "named": [
+        {
+          "filename": "shirazi2014.pdf.md",
+          "complete": false,
+          "words": 3587
+        }
+      ],
+      "other": [
+        {
+          "filename": "pharmaceuticals-19-00552.pdf.md",
+          "heading": "3. Discussion",
+          "score": 28.15
+        },
+        {
+          "filename": "MS patients and PTX.pdf.md",
+          "heading": "5. Discussion",
+          "score": 22.42
+        },
+        {
+          "filename": "Pentoxifylline-in-patients-with-ulcerative-colitis-treated-with-mesalamine-by-modulation.pdf.md",
+          "heading": "Discussion",
+          "score": 22.23
+        },
+        {
+          "filename": "11255_2025_Article_4454.pdf.md",
+          "heading": "Discussion",
+          "score": 18.38
+        },
+        {
+          "filename": "Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md",
+          "heading": "4 | DISCUSSION",
+          "score": 17.93
+        },
+        {
+          "filename": "ladi-seyedian2017.pdf.md",
+          "heading": "6. Risk factors",
+          "score": 17.85
+        }
+      ],
+      "unresolved": [],
+      "words": 5427
+    },
+    "call_key": "5d7ca2ec6ba0feff2946275a",
+    "model": "local-rules-v1.8",
+    "captured": "2026-10-30T03:38:30+00:00"
+  },
+  {
+    "response_id": "R-Q0004-A01",
+    "qid": "Q0004",
+    "attempt": "A01",
+    "outcome": "COMPLETE",
+    "usable": true,
+    "text": "[SOURCE] \"Some risk factors are mentioned in this review and other pathophysiologies are described elsewhere in this issue. **Table 3.** Possible risk factors of detrusor underactivity | Pathological regions | Disease entities | |----------------------|------------------------------------------------------------------------------------------------------------------------------------------| | Idiopathic | Normal ageing process<br>Unknown factors in younger population | | Neurogenic | Parkinson disease<br>Multiple sclerosis<br>Guillain-Barre syndrome<br>Neurosyphilis<br>Diabetes mellitus | | Myogenic | Diabetes mellitus<br>Bladder outlet obstructions | | Iatrogenic | Pelvic surgeries<br>Pelvic radiation therapy | | Functional | Folwer's syndrome<br>Dysfunctional voiding | | Pharmacologic | Antimuscarinics<br>Antihistamines<br>Blood pressure lowering agents (e.g., calcium channel blockers)<br>Antipsychotics<br>Antispasmodics |\" (2020ICU_icu-58-S68.pdf.md, Epidemiology of underactive bladder: Common but underresearched)\n[SOURCE] \"Especially, the mean PVR measured at the end of the research was 107–125 mL and DU often did not result in chronic urinary retention, which might be generally defined as a $PVR > 300$ mL.\" (2020ICU_icu-58-S68.pdf.md, Epidemiology of underactive bladder: Common but underresearched)\n[SOURCE] \"Instead, much of this pain emanates from myofascial trigger points (TrPs) that when palpated are tender and reproduce the specific anatomic location of pain described by the patient.<sup>2</sup> TrPs are defined as hyperirritable areas in skeletal muscles that are associated with palpable nodules in taut bands of muscle fiber.<sup>3</sup> TrPs may refer pain either locally or to another location in the body along a nerve pathway.\" (anderson2011.pdf.md, Safety and Effectiveness of an Internal Pelvic Myofascial Trigger Point Wand for)\n[SOURCE] \"Some progress exists in identifying phenotypes of these pelvic disorders that leads to selection of the most appropriate and effective use of multimodal therapy.<sup>12</sup> Pelvic muscle tenderness is associated with more than 50% of the reported phenotypes and patients with more than 1 phenotype typically have higher pain scores.\" (anderson2011.pdf.md, Safety and Effectiveness of an Internal Pelvic Myofascial Trigger Point Wand for)\n[SOURCE] \"Higher PMS was associated with increased TNF- $\\alpha$ and fecal calprotectin levels and lower IBDQ-32 scores, while higher inflammatory markers were linked to poorer quality of life.\" (pharmaceuticals-19-00552.pdf.md, Results)\n[SOURCE] \"In dextran sulfate sodium (DSS)-induced colitis, PTX administration reduced disease activity index, histologic damage, and colonic levels of TNF- $\\alpha$ and malondialdehyde (MDA), a marker of lipid peroxidation [15].\" (pharmaceuticals-19-00552.pdf.md, Results)\n\n[INFERRED] The quoted passages are what this notebook contains on the question. Each quotation is attributed above to its file and section; no finding outside these passages is asserted. Sources quoted: 2020ICU_icu-58-S68.pdf.md, anderson2011.pdf.md, pharmaceuticals-19-00552.pdf.md.",
+    "cited_sources": [
+      "2020ICU_icu-58-S68.pdf.md",
+      "anderson2011.pdf.md",
+      "pharmaceuticals-19-00552.pdf.md"
+    ],
+    "requested_sources_cited": [
+      "2020ICU_icu-58-S68.pdf.md",
+      "anderson2011.pdf.md"
+    ],
+    "requested_sources_absent": [],
+    "retrieval": {
+      "named": [
+        {
+          "filename": "2020ICU_icu-58-S68.pdf.md",
+          "complete": false,
+          "words": 4428
+        },
+        {
+          "filename": "anderson2011.pdf.md",
+          "complete": false,
+          "words": 4318
+        }
+      ],
+      "other": [
+        {
+          "filename": "pharmaceuticals-19-00552.pdf.md",
+          "heading": "1. Introduction",
+          "score": 27.26
+        },
+        {
+          "filename": "pharmaceuticals-19-00552.pdf.md",
+          "heading": "3. Discussion",
+          "score": 27.21
+        },
+        {
+          "filename": "MP75-18-RATES-AND-ADHERENCE-TO-PELVIC-FLOOR-PHYSICAL-THERAPY-FOR-MALE-PATIENTS-WITH-BENIGN.pdf.md",
+          "heading": "EXAMINING THE RELATIONSHIP BETWEEN DIETARY INFLAMMATORY INDEX AND URINARY FLOW RATE: RESULTS FROM A NATIONWIDE STUDY",
+          "score": 23.02
+        },
+        {
+          "filename": "MS patients and PTX.pdf.md",
+          "heading": "5. Discussion",
+          "score": 23.01
+        },
+        {
+          "filename": "parker2000.pdf.md",
+          "heading": "4. Discussion",
+          "score": 22.54
+        },
+        {
+          "filename": "roerink2019.pdf.md",
+          "heading": "Discussion",
+          "score": 22.46
+        }
+      ],
+      "unresolved": [],
+      "words": 10666
+    },
+    "call_key": "038ca5d23b5dfad5a60a69b7",
+    "model": "local-rules-v1.8",
+    "captured": "2026-10-30T03:38:30+00:00"
+  },
+  {
+    "response_id": "R-Q0005-A01",
+    "qid": "Q0005",
+    "attempt": "A01",
+    "outcome": "COMPLETE",
+    "usable": true,
+    "text": "[SOURCE] \"Some progress exists in identifying phenotypes of these pelvic disorders that leads to selection of the most appropriate and effective use of multimodal therapy.<sup>12</sup> Pelvic muscle tenderness is associated with more than 50% of the reported phenotypes and patients with more than 1 phenotype typically have higher pain scores.\" (anderson2011.pdf.md, Safety and Effectiveness of an Internal Pelvic Myofascial Trigger Point Wand for)\n[SOURCE] \"did not need to use wand | 5 | | Preferred internal massage with finger | 5 | | Difficulty finding trigger points | 1 | | Technical difficulty with wand | 2 | | Difficulty using wand, felt clumsy using or intimidated by wand | 3 | | Wand not effective for pain relief | 3 | patients had missing data) and 109 at 6 months (4 patients had missing data).\" (anderson2011.pdf.md, Safety and Effectiveness of an Internal Pelvic Myofascial Trigger Point Wand for)\n[SOURCE] \"There is evidence from preclinical data that the sequelae of events provoked by endotoxin can be overcome, at least partially, by oxpentifylline.<sup>22</sup> This drug inhibits various leucocyte functions after activation by different pathophysiological stimuli in vitro.<sup>13,23,24</sup> In vivo, oxpentifylline protected from increased pulmonary vascular permeability and sequestration of neutrophils in the lung in different animal models of acute lung injury.<sup>10,25,26</sup> Moreover, in pigs with induced faecal peritonitis the drug improved haemodynamic variables as well as pulmonary compliance and reduced the number of pulmonary neutrophils and lymphocytes.<sup>27</sup> Consequently, as a general outcome, oxpentifylline could be found to improve survival in different models of haemorrhagic<sup>28</sup> and endotoxic shock.<sup>11</sup> Our study shows that the positive findings from animal models may possibly apply also to human beings.\" (zabel1989.pdf.md, Results)\n[SOURCE] \"Despite these limitations, the consistency of findings across multiple clinical and biochemical outcomes, as well as across subgroup and adjusted analyses, supports the robustness of the observed treatment effect.\" (pharmaceuticals-19-00552.pdf.md, Results)\n[SOURCE] \"However, a slight but significant decrease of blood flow velocity in the middle cerebral artery (*V*<sub>mca</sub>) was measured compared with baseline during infusion of pentoxifylline, which was not measured during placebo.\" (kruuse2000.pdf.md, Results)\n[SOURCE] \"2001), whereas a rise in gastric blood circulation has been associated with the preservation and repair of the gastric mucosa (Dembiński et al.\" (Pentoxifylline-in-patients-with-ulcerative-colitis-treated-with-mesalamine-by-modulation.pdf.md, Results)\n\n[INFERRED] The quoted passages are what this notebook contains on the question. Each quotation is attributed above to its file and section; no finding outside these passages is asserted. Sources quoted: Pentoxifylline-in-patients-with-ulcerative-colitis-treated-with-mesalamine-by-modulation.pdf.md, anderson2011.pdf.md, kruuse2000.pdf.md, pharmaceuticals-19-00552.pdf.md, zabel1989.pdf.md.",
+    "cited_sources": [
+      "anderson2011.pdf.md",
+      "zabel1989.pdf.md",
+      "pharmaceuticals-19-00552.pdf.md",
+      "kruuse2000.pdf.md",
+      "Pentoxifylline-in-patients-with-ulcerative-colitis-treated-with-mesalamine-by-modulation.pdf.md"
+    ],
+    "requested_sources_cited": [
+      "anderson2011.pdf.md"
+    ],
+    "requested_sources_absent": [],
+    "retrieval": {
+      "named": [
+        {
+          "filename": "anderson2011.pdf.md",
+          "complete": false,
+          "words": 3998
+        }
+      ],
+      "other": [
+        {
+          "filename": "MS patients and PTX.pdf.md",
+          "heading": "5. Discussion",
+          "score": 21.0
+        },
+        {
+          "filename": "pharmaceuticals-19-00552.pdf.md",
+          "heading": "3. Discussion",
+          "score": 20.65
+        },
+        {
+          "filename": "pharmaceuticals-19-00552.pdf.md",
+          "heading": "4.11. Handling of Missing Data",
+          "score": 20.27
+        },
+        {
+          "filename": "Pentoxifylline-in-patients-with-ulcerative-colitis-treated-with-mesalamine-by-modulation.pdf.md",
+          "heading": "Discussion",
+          "score": 18.34
+        },
+        {
+          "filename": "kruuse2000.pdf.md",
+          "heading": "**Present results**",
+          "score": 17.24
+        },
+        {
+          "filename": "zabel1989.pdf.md",
+          "heading": "Discussion",
+          "score": 17.08
+        }
+      ],
+      "unresolved": [],
+      "words": 5702
+    },
+    "call_key": "907fd4cc6efc8be1de4ec55b",
+    "model": "local-rules-v1.8",
+    "captured": "2026-10-30T03:38:30+00:00"
+  },
+  {
+    "response_id": "R-Q0006-A01",
+    "qid": "Q0006",
+    "attempt": "A01",
+    "outcome": "COMPLETE",
+    "usable": true,
+    "text": "[SOURCE] \"The source of these symptoms is still poorly understood, but pain associated with chronic tension and spasm of the pelvic floor muscles (pelvic floor tension myalgia) has been hypothesized to be a contributing factor.<sup>2,3</sup> We and others have observed that patients with CPPS frequently exhibit tenderness of the levator ani muscles on rectal examination and that measures that decrease pelvic floor muscle tension, such as sitz baths and relaxation techniques, may be used to treat CPPS with anecdotal success.\" (clemens2000.pdf.md, BIOFEEDBACK, PELVIC FLOOR RE-EDUCATION, AND BLADDER TRAINING FOR MALE CHRONIC PE)\n[SOURCE] \"In a recent study of 103 men with pelvic pain, Zermann *et al.*<sup>9</sup> found pathologic tenderness of the pelvic floor muscles associated with the inability to contract and relax the pelvic floor muscles in 88%.\" (clemens2000.pdf.md, BIOFEEDBACK, PELVIC FLOOR RE-EDUCATION, AND BLADDER TRAINING FOR MALE CHRONIC PE)\n[SOURCE] \"Therefore, serum levels of TNF-α may not reflect TNF-α bioactivity.<sup>36</sup> Our study again highlighted the difficulties of designing anti-TNF-α strategies based on circulating TNF-α levels because it was difficult to correlate serum or plasma levels of a particular proinflammatory cytokine with the overall extent of tissue damage.<sup>37</sup> In experimental studies, the timing of pentoxifylline administration was important for the therapeutic effect and adverse events.<sup>38</sup> In the clinical setting for this study, the administration of pentoxifylline to patients with sepsis started after the initial insult of organ dysfunction without adverse effects, especially in terms of cardiopulmonary function.\" (staubach1998.pdf.md, Results)\n[SOURCE] \"Zeni and coworkers<sup>20</sup> published a study using a higher dose with 1.5 mg/kg of body weight over 48 hours and found a 2-fold increase in serum concentration of pentoxifylline and the first metabolite using a comparable method.\" (staubach1998.pdf.md, Results)\n[SOURCE] \"This may indicate that pentoxifylline in high doses has a direct vasodilating effect on large cerebral arteries, which could be a result of its PDE-inhibiting actions (Kamphuis *et al.*, 1994).\" (kruuse2000.pdf.md, Results)\n[SOURCE] \"First, the 24-week duration limits the assessment of long-term outcomes, including durability of response, maintenance of remission, and long-term safety of PTX.\" (pharmaceuticals-19-00552.pdf.md, Results)\n\n[INFERRED] The quoted passages are what this notebook contains on the question. Each quotation is attributed above to its file and section; no finding outside these passages is asserted. Sources quoted: clemens2000.pdf.md, kruuse2000.pdf.md, pharmaceuticals-19-00552.pdf.md, staubach1998.pdf.md.",
+    "cited_sources": [
+      "clemens2000.pdf.md",
+      "staubach1998.pdf.md",
+      "kruuse2000.pdf.md",
+      "pharmaceuticals-19-00552.pdf.md"
+    ],
+    "requested_sources_cited": [
+      "clemens2000.pdf.md"
+    ],
+    "requested_sources_absent": [],
+    "retrieval": {
+      "named": [
+        {
+          "filename": "clemens2000.pdf.md",
+          "complete": true,
+          "words": 3529
+        }
+      ],
+      "other": [
+        {
+          "filename": "staubach1998.pdf.md",
+          "heading": "DISCUSSION",
+          "score": 26.05
+        },
+        {
+          "filename": "pharmaceuticals-19-00552.pdf.md",
+          "heading": "3. Discussion",
+          "score": 24.81
+        },
+        {
+          "filename": "luke1989.pdf.md",
+          "heading": "DISCUSSION",
+          "score": 22.1
+        },
+        {
+          "filename": "lauterbach1995.pdf.md",
+          "heading": "Results",
+          "score": 21.03
+        },
+        {
+          "filename": "kruuse2000.pdf.md",
+          "heading": "**Present results**",
+          "score": 21.0
+        },
+        {
+          "filename": "staubach1998.pdf.md",
+          "heading": "RESULTS",
+          "score": 21.0
+        }
+      ],
+      "unresolved": [],
+      "words": 5150
+    },
+    "call_key": "13c64f444e5113bbc61e54a8",
+    "model": "local-rules-v1.8",
+    "captured": "2026-10-30T03:38:31+00:00"
+  },
+  {
+    "response_id": "R-Q0007-A01",
+    "qid": "Q0007",
+    "attempt": "A01",
+    "outcome": "COMPLETE",
+    "usable": true,
+    "text": "[SOURCE] \"Finally the overall response rate of 57% in the MPT group suggests that MPT represents a clinically meaningful treatment option, supporting the findings of others.<sup>16–20</sup> **Table 4.** Global response assessment by treatment group | | No.\" (fitzgerald2009.pdf.md, Randomized Multicenter Feasibility Trial of Myofascial Physical Therapy for the )\n[SOURCE] \"A rectal EMG probe was used to measure resting tone of the pelvic floor muscles and was helpful for instruction pelvic floor muscles contraction and relaxation. **Results:** Two of the 33 men dropped out.\" (cornel2005.pdf.md, The Effect of Biofeedback Physical Therapy in Men with Chronic Pelvic Pain Syndr)\n[SOURCE] \"In a study by Clemens in a group of 19 patients a meaningful improvement of symptoms was achieved in only 33% partially due to a high drop out rate [13].\" (cornel2005.pdf.md, The Effect of Biofeedback Physical Therapy in Men with Chronic Pelvic Pain Syndr)\n[SOURCE] \"Frequently found abnormalities include myofascial trigger points defined as taut bands or tender nodules that evoke twitch responses or reproduce the character and location of symptoms during careful palpation.<sup>21</sup> Importantly there have been several reports of UCPPS symptom relief by therapeutic efforts directed at those muscular abnormalities.<sup>16–20</sup> In practice those therapeutic interventions are typically performed by a physical therapist skilled in manual therapy techniques.\" (fitzgerald2009.pdf.md, Randomized Multicenter Feasibility Trial of Myofascial Physical Therapy for the )\n[SOURCE] \"However, the potential psychological and quality of life improvements from such interventions, particularly when guided by an established health behavior framework, remain underexplored [16].\" (11255_2025_Article_4454.pdf.md, Results)\n[SOURCE] \"Moreover, PTX inhibits neutrophil activation and decreases platelet aggregation, promoting tissue oxygenation and blood flow via the microcirculation in the organs of the digestive system (González-Pacheco et al.\" (Pentoxifylline-in-patients-with-ulcerative-colitis-treated-with-mesalamine-by-modulation.pdf.md, Results)\n\n[INFERRED] The quoted passages are what this notebook contains on the question. Each quotation is attributed above to its file and section; no finding outside these passages is asserted. Sources quoted: 11255_2025_Article_4454.pdf.md, Pentoxifylline-in-patients-with-ulcerative-colitis-treated-with-mesalamine-by-modulation.pdf.md, cornel2005.pdf.md, fitzgerald2009.pdf.md.",
+    "cited_sources": [
+      "fitzgerald2009.pdf.md",
+      "cornel2005.pdf.md",
+      "11255_2025_Article_4454.pdf.md",
+      "Pentoxifylline-in-patients-with-ulcerative-colitis-treated-with-mesalamine-by-modulation.pdf.md"
+    ],
+    "requested_sources_cited": [
+      "cornel2005.pdf.md",
+      "fitzgerald2009.pdf.md"
+    ],
+    "requested_sources_absent": [],
+    "retrieval": {
+      "named": [
+        {
+          "filename": "cornel2005.pdf.md",
+          "complete": true,
+          "words": 3115
+        },
+        {
+          "filename": "fitzgerald2009.pdf.md",
+          "complete": false,
+          "words": 4416
+        }
+      ],
+      "other": [
+        {
+          "filename": "Pentoxifylline-in-patients-with-ulcerative-colitis-treated-with-mesalamine-by-modulation.pdf.md",
+          "heading": "Discussion",
+          "score": 22.22
+        },
+        {
+          "filename": "luke1989.pdf.md",
+          "heading": "DISCUSSION",
+          "score": 21.71
+        },
+        {
+          "filename": "11255_2025_Article_4454.pdf.md",
+          "heading": "Introduction",
+          "score": 21.11
+        },
+        {
+          "filename": "MS patients and PTX.pdf.md",
+          "heading": "5. Discussion",
+          "score": 21.0
+        },
+        {
+          "filename": "VanHouten2026_Cushings_syndrome.md",
+          "heading": "Discussion",
+          "score": 20.47
+        },
+        {
+          "filename": "vadiei1996.pdf.md",
+          "heading": "Discussion",
+          "score": 20.02
+        }
+      ],
+      "unresolved": [],
+      "words": 9263
+    },
+    "call_key": "bfb8e4714e5526eb7a95d122",
+    "model": "local-rules-v1.8",
+    "captured": "2026-10-30T03:38:31+00:00"
+  },
+  {
+    "response_id": "R-Q0008-A01",
+    "qid": "Q0008",
+    "attempt": "A01",
+    "outcome": "COMPLETE",
+    "usable": true,
+    "text": "[SOURCE] \"Importantly the GTM treatment used in this trial does not represent the standard of care for massage treatment and the results of this study should not be taken to mean that MPT is superior to massage therapy as would be practiced by an expert for UCPPS. **Table 6.** Comparison within and between treatment groups of baseline and end point symptom scores of patients with CP/CPSS | | Mean $\\pm$ SD MPT | | | | Mean $\\pm$ SD GTM | | | | MPT vs GTM<br>p Value<sup>†</sup> | |---------------------------------|----------------------|--------------------|--------------------|----------|----------------------|-------------------|--------------------|----------|-----------------------------------| | | Baseline<br>(11 pts) | 12 Wks<br>(11 pts) | Mean Change<br>(%) | p Value* | Baseline<br>(10 pts) | 12 Wks<br>(9 pts) | Mean Change<br>(%) | p Value* | | | NIH-CPSI Total (0–43) | 33.5 $\\pm$ 4.3 | 19.2 $\\pm$ 11.1 | –14.4 (–43.0) | 0.0003 | 25.8 $\\pm$ 5.7 | 18.2 $\\pm$ 9.6 | –6.8 (–26.4) | 0.03 | 0.07 | | Pain (0–21) | 14.2 $\\pm$ 2.5 | 8.0 $\\pm$ 5.7 | –6.2 (–43.7) | 0.0007 | 12.7 $\\pm$ 2.8 | 8.2 $\\pm$ 5.6 | –4.4 (–34.6) | 0.03 | 0.39 | | Urinary (0–10) | 8.9 $\\pm$ 1.4 | 5.0 $\\pm$ 2.8 | –3.9 (–43.8) | 0.0002 | 4.6 $\\pm$ 2.7 | 3.9\" (fitzgerald2009.pdf.md, Randomized Multicenter Feasibility Trial of Myofascial Physical Therapy for the )\n[SOURCE] \"An analysis comparing response rates between treatment arms using the exact conditional test version of Mantel-Haenszel methods to adjust for within-center clustering was implemented within the Proc-StatXact software system.<sup>28</sup> Outcome measures between treatment arms were analyzed with Wilcoxon rank sum tests, and outcome scores within treatment groups and disease states were determined with paired t tests.\" (fitzgerald2009.pdf.md, Randomized Multicenter Feasibility Trial of Myofascial Physical Therapy for the )\n[SOURCE] \"finding suggests that PTX may exert an anti-inflammatory effect sufficient to translate into measurable symptom relief.\" (pharmaceuticals-19-00552.pdf.md, Results)\n[SOURCE] \"These findings align with preclinical studies in experimental colitis models, where PTX administration markedly reduced TNF- $\\alpha$ concentrations and ameliorated histopathological inflammation\" (pharmaceuticals-19-00552.pdf.md, Results)\n[SOURCE] \"(2024) reported a reduction in CRP within the PTX group compared to the placebo group (MD = −0.53, 95% CI [−0.89, −0.17]) and in IL-1- $\\beta$ within the PTX group compared to the placebo group (MD = −0.61, 95% CI [−0.87, −0.35]) (Merza Mohammad et al.\" (s00210-025-03845-1.pdf.md, Results)\n[SOURCE] \"This may indicate that pentoxifylline in high doses has a direct vasodilating effect on large cerebral arteries, which could be a result of its PDE-inhibiting actions (Kamphuis *et al.*, 1994).\" (kruuse2000.pdf.md, Results)\n\n[INFERRED] The quoted passages are what this notebook contains on the question. Each quotation is attributed above to its file and section; no finding outside these passages is asserted. Sources quoted: fitzgerald2009.pdf.md, kruuse2000.pdf.md, pharmaceuticals-19-00552.pdf.md, s00210-025-03845-1.pdf.md.",
+    "cited_sources": [
+      "fitzgerald2009.pdf.md",
+      "pharmaceuticals-19-00552.pdf.md",
+      "s00210-025-03845-1.pdf.md",
+      "kruuse2000.pdf.md"
+    ],
+    "requested_sources_cited": [
+      "fitzgerald2009.pdf.md"
+    ],
+    "requested_sources_absent": [],
+    "retrieval": {
+      "named": [
+        {
+          "filename": "fitzgerald2009.pdf.md",
+          "complete": false,
+          "words": 4338
+        }
+      ],
+      "other": [
+        {
+          "filename": "pharmaceuticals-19-00552.pdf.md",
+          "heading": "3. Discussion",
+          "score": 25.49
+        },
+        {
+          "filename": "pharmaceuticals-19-00552.pdf.md",
+          "heading": "3. Discussion",
+          "score": 22.15
+        },
+        {
+          "filename": "MS patients and PTX.pdf.md",
+          "heading": "5. Discussion",
+          "score": 21.0
+        },
+        {
+          "filename": "kruuse2000.pdf.md",
+          "heading": "**Present results**",
+          "score": 20.27
+        },
+        {
+          "filename": "Pentoxifylline-in-patients-with-ulcerative-colitis-treated-with-mesalamine-by-modulation.pdf.md",
+          "heading": "Discussion",
+          "score": 20.1
+        },
+        {
+          "filename": "s00210-025-03845-1.pdf.md",
+          "heading": "Biological markers",
+          "score": 19.95
+        }
+      ],
+      "unresolved": [],
+      "words": 6258
+    },
+    "call_key": "22814d4db79edf5d5e6bbadc",
+    "model": "local-rules-v1.8",
+    "captured": "2026-10-30T03:38:31+00:00"
+  },
+  {
+    "response_id": "R-Q0009-A01",
+    "qid": "Q0009",
+    "attempt": "A01",
+    "outcome": "COMPLETE",
+    "usable": true,
+    "text": "[SOURCE] \"Our previous research [3] also analysed the possible mechanism that increased the mental burden caused by pelvic floor dysfunction, and then increased the prostatic urethral pressure, which caused LUTS in some patients with CP, manifested as voiding symptoms and mostly classified as IIIB (leukocytosis with no proof of bacterial infection); Hinman and Baumann [4] had a similar view.\" (he2010.pdf.md, Chronic prostatitis presenting with dysfunctional voiding and effects of pelvic )\n[SOURCE] \"Criteria specific to PFMT were developed, based on the Consensus on Exercise Reporting Template, and applied to all studies to measure the comprehensiveness of the PFMT description in the manuscript. **Results:** Results from the 108 included studies indicate substantial heterogeneity in both the content of PFMT and the quality of reporting of the components of the exercise regimes.\" (hall2018.pdf.md, Design of programs to train pelvic floor muscles in men with urinary dysfunction)\n[SOURCE] \"Of those that did provide detail of participant education, either written or verbally, 31 included information related to pelvic floor/bladder anatomy, and/or the physiology of UI, micturition, or lower urinary tract symptoms.\" (hall2018.pdf.md, Design of programs to train pelvic floor muscles in men with urinary dysfunction)\n[SOURCE] \"The NIH-CPSI scores in the CP group were evaluated using the Wilcoxon matched-pairs signed-ranks test; in all tests, $P < 0.05$ was considered to indicate statistically significant differences. ## RESULTS The comparison of the urodynamic results in the 21 patients before and after PFB is shown in Table 1; all variables were significantly | Mean (SD) variable | Before | After | |---------------------------------|--------------|-------------| | <b>Urodynamics</b> | | | | $Q_{max}$, mL/s | 8.2 (4.1) | 15.1 (7.3) | | $P_{det.max}$, cmH<sub>2</sub>O | 125.1 (75.3) | 86.3 (54.2) | | MUP, cmH<sub>2</sub>O | 124.3 (23.3) | 65.4 (23.0) | | MUCP, cmH<sub>2</sub>O | 101.5 (43.6) | 43.5 (16.7) | | <b>NIH-CPSI scores</b> | | | | Discomfort | 4.0 (2.0) | 2.2 (1.7) | | Urination | 7.9 (2.1) | 2.2 (1.9) | | Life impact | 9.6 (2.7) | 2.9 (2.6) | | Total | 21.7 (4.8) | 8.4 (4.6) | TABLE 1 The urodynamic variables and NIH-CPSI scores before and after PFB; all differences were significant ( $P < 0.05$ ) different ( $P < 0.05$ ) with a clear increase in $Q_{max}$ and clear decrease in $P_{det.max}$ , MUP and MUCP, indicating a relief of LUTS.\" (he2010.pdf.md, Chronic prostatitis presenting with dysfunctional voiding and effects of pelvic )\n[SOURCE] \"The mechanisms of action of pentoxifylline which contribute to protection of renal PGE<sub>2</sub> release and blood flow during severe splanchnic ischemia/reperfusion injury include decreasing viscosity, increasing deformability of red blood cells and neutrophils, and contributing to the prevention of the activation of neutrophils by cytokines or local tissue factors.\" (myers1995.pdf.md, Results)\n[SOURCE] \"The latter results suggest that TNF- $\\alpha$ plays a central role in the pathogenesis of Gram-negative shock, as serum levels of TNF- $\\alpha$ are induced early in endotoxaemia or Gram-negative sepsis models (Michie et al., 1988).\" (wu1999.pdf.md, Results)\n\n[INFERRED] The quoted passages are what this notebook contains on the question. Each quotation is attributed above to its file and section; no finding outside these passages is asserted. Sources quoted: hall2018.pdf.md, he2010.pdf.md, myers1995.pdf.md, wu1999.pdf.md.",
+    "cited_sources": [
+      "he2010.pdf.md",
+      "hall2018.pdf.md",
+      "myers1995.pdf.md",
+      "wu1999.pdf.md"
+    ],
+    "requested_sources_cited": [
+      "hall2018.pdf.md",
+      "he2010.pdf.md"
+    ],
+    "requested_sources_absent": [],
+    "retrieval": {
+      "named": [
+        {
+          "filename": "hall2018.pdf.md",
+          "complete": false,
+          "words": 4277
+        },
+        {
+          "filename": "he2010.pdf.md",
+          "complete": true,
+          "words": 2411
+        }
+      ],
+      "other": [
+        {
+          "filename": "MS patients and PTX.pdf.md",
+          "heading": "5. Discussion",
+          "score": 21.0
+        },
+        {
+          "filename": "wu1999.pdf.md",
+          "heading": "4. Discussion",
+          "score": 19.73
+        },
+        {
+          "filename": "myers1995.pdf.md",
+          "heading": "DISCUSSION",
+          "score": 19.72
+        },
+        {
+          "filename": "vadiei1996.pdf.md",
+          "heading": "Discussion",
+          "score": 17.8
+        },
+        {
+          "filename": "pharmaceuticals-19-00552.pdf.md",
+          "heading": "3. Discussion",
+          "score": 17.41
+        },
+        {
+          "filename": "kruuse2000.pdf.md",
+          "heading": "**Present results**",
+          "score": 17.24
+        }
+      ],
+      "unresolved": [],
+      "words": 8608
+    },
+    "call_key": "5a1fe437be50e306ec11c418",
+    "model": "local-rules-v1.8",
+    "captured": "2026-10-30T03:38:31+00:00"
+  },
+  {
+    "response_id": "R-Q0010-A01",
+    "qid": "Q0010",
+    "attempt": "A01",
+    "outcome": "COMPLETE",
+    "usable": true,
+    "text": "[SOURCE] \"PFB was carried out in patients with non-neurogenic detrusor sphincter dyssynergia, and the effects evaluated after 10 weeks. ## RESULTS Before and after PFB treatment the mean (SD) $Q_{max}$ , $P_{det.max}$ , MUP, MUCP were 8.2 (4.1) vs 15.1 (7.3) mL/s, 125.1 (75.3) vs 86.3 (54.2) cmH<sub>2</sub>O, 124.3 (23.3) vs 65.4 (23.0) cmH<sub>2</sub>O and 101.5 (43.6) vs 43.5 (16.7) cmH<sub>2</sub>O, all significantly different ( $P < 0.05$ ).\" (he2010.pdf.md, Chronic prostatitis presenting with dysfunctional voiding and effects of pelvic )\n[SOURCE] \"The diagnosis of CP conformed to the recommendations of the National Institutes of Health (NIH) criteria: symptoms for >3 months, including urinary frequency and urgency, voiding difficulty, upper abdominal or perineal discomfort, etc.; scores of ≥1 for the first and second part of NIH CP Symptom Index (CPSI); treated once by antibiotics and $\\alpha$ -blockers for >6 months, with poor effects [1].\" (he2010.pdf.md, Chronic prostatitis presenting with dysfunctional voiding and effects of pelvic )\n[SOURCE] \"Long-term follow-up of previous phase II patients, in fact, helped us to understand that improvement under combined PTX/Vit E treatment is slow, progressive, and continuous, with a maximum effect after periods ranging from 18 months to 3 years (Delanian et al, unpublished data, 2003), to take account of patient-to-patient variability.\" (delanian2003.pdf.md, Results)\n[SOURCE] \"However, the magnitude of improvement was more pronounced in the PTX group, and the between-group HL confidence interval indicated a meaningful treatment advantage.\" (pharmaceuticals-19-00552.pdf.md, Results)\n[SOURCE] \"Although data on PTX in UC are scarce, similar benefits in health-related quality of life have been documented in other chronic inflammatory conditions, such as Crohn's disease [26], and rheumatoid arthritis [27], where PTX reduced systemic inflammation and improved functional status.\" (pharmaceuticals-19-00552.pdf.md, Results)\n[SOURCE] \"Eleven of 16 patients reported improvement by more than five points, and the median symptom scores decreased from 15.0 before treatment to 7.5 at follow-up.\" (clemens2000.pdf.md, Results)\n\n[INFERRED] The quoted passages are what this notebook contains on the question. Each quotation is attributed above to its file and section; no finding outside these passages is asserted. Sources quoted: clemens2000.pdf.md, delanian2003.pdf.md, he2010.pdf.md, pharmaceuticals-19-00552.pdf.md.",
+    "cited_sources": [
+      "he2010.pdf.md",
+      "delanian2003.pdf.md",
+      "pharmaceuticals-19-00552.pdf.md",
+      "clemens2000.pdf.md"
+    ],
+    "requested_sources_cited": [
+      "he2010.pdf.md"
+    ],
+    "requested_sources_absent": [],
+    "retrieval": {
+      "named": [
+        {
+          "filename": "he2010.pdf.md",
+          "complete": true,
+          "words": 2411
+        }
+      ],
+      "other": [
+        {
+          "filename": "pharmaceuticals-19-00552.pdf.md",
+          "heading": "3. Discussion",
+          "score": 23.16
+        },
+        {
+          "filename": "MS patients and PTX.pdf.md",
+          "heading": "5. Discussion",
+          "score": 22.65
+        },
+        {
+          "filename": "pharmaceuticals-19-00552.pdf.md",
+          "heading": "3. Discussion",
+          "score": 20.57
+        },
+        {
+          "filename": "clemens2000.pdf.md",
+          "heading": "RESULTS",
+          "score": 20.38
+        },
+        {
+          "filename": "delanian2003.pdf.md",
+          "heading": "DISCUSSION",
+          "score": 20.33
+        },
+        {
+          "filename": "pharmaceuticals-19-00552.pdf.md",
+          "heading": "4.11. Handling of Missing Data",
+          "score": 19.86
+        }
+      ],
+      "unresolved": [],
+      "words": 4249
+    },
+    "call_key": "ccf628aa11a1d30ec32b055d",
+    "model": "local-rules-v1.8",
+    "captured": "2026-10-30T03:38:31+00:00"
+  },
+  {
+    "response_id": "R-Q0011-A01",
+    "qid": "Q0011",
+    "attempt": "A01",
+    "outcome": "COMPLETE",
+    "usable": true,
+    "text": "[SOURCE] \"Given that urological abnormalities are the sole and initial presenting symptoms in approximately 5% of patients with multiple sclerosis, some may benefit from additional neurological evaluation.<sup>20</sup> This fact is particularly true in patients who have concomitant involuntary bladder contractions during voiding.\" (kaplan1997.pdf.md, PSEUDODYSSYNERGIA (CONTRACTION OF THE EXTERNAL SPHINCTER DURING VOIDING) MISDIAG)\n[SOURCE] \"Primary vesical neck obstruction has been widely reported as a potential cause of chronic voiding complaints.<sup>1-3</sup> The etiology of vesical neck obstruction in these men has been reported as secondary to fibrous narrowing of the bladder neck, abnormalities of bladder neck musculature or neurological dysfunction.<sup>7,8</sup> Previously we reported that 31 of 34 men misdiagnosed with chronic prostatitis had evidence of vesical neck obstruction on urodynamic evaluation.<sup>1</sup> Several investigators described the clinical entity of primary bladder neck obstruction with clinically significant improvement in symptoms after bladder neck incision.\" (kaplan1997.pdf.md, PSEUDODYSSYNERGIA (CONTRACTION OF THE EXTERNAL SPHINCTER DURING VOIDING) MISDIAG)\n[SOURCE] \"Underactive bladder (UAB) focuses on symptoms that patients find bothersome and raises the profile of the important clinical condition.<sup>[3]</sup> Chapple et al proposed that a definition of a symptom complex for UAB analogous to the ICS definition of overactive bladder (OAB) syndrome would be of potential clinical value: UAB is a symptom complex suggestive of DU and is usually characterized by a prolonged urination time with or without a sensation of incomplete bladder emptying, usually with hesitancy, reduced sensation on filling, and a slow stream.<sup>[4]</sup> Because the underlying pathophysiology of UAB is multifactorial, a single medication that focuses on a single mechanism could not be effective for others.\" (li2018.pdf.md, Results)\n[SOURCE] \"Another study showed lower adiponectin levels in nonobese patients with active CS compared with nonobese controls (18).\" (Barahona2009_Cushings_Syndrome.md, Results)\n[SOURCE] \"Subsequent to the accrual and treatment of our patient cohort, a validated quality-of-life instrument for male CPPS has been developed and published.<sup>17</sup> We encourage the use of this instrument in future analyses of treatment results for this enigmatic condition.\" (clemens2000.pdf.md, Results)\n[SOURCE] \"Contrary to the aforementioned observations in patients with cerebrovascular disease, we did not observe an increase in cerebral blood flow in the territory of the middle cerebral artery (rCBF<sub>mca</sub>) or in global CBF during infusion of 300 mg pentoxifylline in healthy subjects.\" (kruuse2000.pdf.md, Results)\n\n[INFERRED] The quoted passages are what this notebook contains on the question. Each quotation is attributed above to its file and section; no finding outside these passages is asserted. Sources quoted: Barahona2009_Cushings_Syndrome.md, clemens2000.pdf.md, kaplan1997.pdf.md, kruuse2000.pdf.md, li2018.pdf.md.",
+    "cited_sources": [
+      "kaplan1997.pdf.md",
+      "li2018.pdf.md",
+      "Barahona2009_Cushings_Syndrome.md",
+      "clemens2000.pdf.md",
+      "kruuse2000.pdf.md"
+    ],
+    "requested_sources_cited": [
+      "kaplan1997.pdf.md"
+    ],
+    "requested_sources_absent": [],
+    "retrieval": {
+      "named": [
+        {
+          "filename": "kaplan1997.pdf.md",
+          "complete": true,
+          "words": 3392
+        }
+      ],
+      "other": [
+        {
+          "filename": "li2018.pdf.md",
+          "heading": "1. Introduction",
+          "score": 22.01
+        },
+        {
+          "filename": "clemens2000.pdf.md",
+          "heading": "COMMENT",
+          "score": 18.89
+        },
+        {
+          "filename": "kruuse2000.pdf.md",
+          "heading": "**Present results**",
+          "score": 18.54
+        },
+        {
+          "filename": "glazener2011.pdf.md",
+          "heading": "Contributors",
+          "score": 18.36
+        },
+        {
+          "filename": "parker2000.pdf.md",
+          "heading": "4. Discussion",
+          "score": 17.25
+        },
+        {
+          "filename": "Barahona2009_Cushings_Syndrome.md",
+          "heading": "Discussion",
+          "score": 17.24
+        }
+      ],
+      "unresolved": [],
+      "words": 5122
+    },
+    "call_key": "0436dbd8114ea25ba2b67f46",
+    "model": "local-rules-v1.8",
+    "captured": "2026-10-30T03:38:32+00:00"
+  },
+  {
+    "response_id": "R-Q0012-A01",
+    "qid": "Q0012",
+    "attempt": "A01",
+    "outcome": "COMPLETE",
+    "usable": true,
+    "text": "[SOURCE] \"Secondary Outcomes The results in terms of the severity of pelvic floor disorders and the quality of life and its relation to sexual health outcomes of the included studies are shown in detail in Table 6. **Table 6.** Results Secondary outcomes: Symptomatic Severity–Quality of life and direct or indirect relationship with sexual health outcomes. | Study | Symptomatic Severity<br>Pre- and Post-Data in the<br>Intervention/Follow-Up Period | Quality of Life Pre- and<br>Post-Data in The<br>Intervention/Follow-Up Period | Results in Terms of Sexual Health | |-----------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------| | Glazener et al.<br>(2011) [47] | $p > 0.05$ between groups in both interventions.<br>Decreased improvement. | $p > 0.05$<br>between groups | There was no evidence from MAPS that PFMT was effective for treating sexual dysfunction. | | | $p > 0.05$ between groups in both interventions.<br>Decreased improvement. | $p > 0.05$<br>Improved QoL (because of the recovery from surgery) | | | Glazener et al.<br>(2001) [48] | No data collected in this period | No data collected in this period | Possible improvement of sexual health indirectly through improvement of IU-FI severity. | | | Significant difference in favor of EG<br>UI severity ($X^2 = 9.49, p = 0.002$).<br>Use of sanitary towels ($X^2 = 4.49, p = 0.034$).<br>Mean pad changes ($t = -2.65, p = 0.008$).<br>Severity of FI ($X^2 = 3.17, p = 0.075$). | $p > 0.05$ in general well-being or depression.<br>EG showed lower levels of anxiety ($t = -2.08, p = 0.038$). | | | Jaffar et al.<br>(2022) [49] | UI severity: EG improves severity in the first month<br>($\\beta = -4.748, p = 0.049$), but this improvement does not persist in the 2nd mo. | QoL: no improvement is shown in participants in the 1st and 2nd mo. | Possibly no improvement in sexual health. | | | No follow-up | No follow-up | | | Sacomori et al.<br>(2020) [50] | $p > 0.05$ All urinary functions declined in 3rd trimester compared with before pregnancy. |\" (life-15-00613.pdf.md, Compliance and Adherence to Pelvic Floor Exercise Therapy in People with Pelvic )\n[SOURCE] \"Underactive bladder (UAB) focuses on symptoms that patients find bothersome and raises the profile of the important clinical condition.<sup>[3]</sup> Chapple et al proposed that a definition of a symptom complex for UAB analogous to the ICS definition of overactive bladder (OAB) syndrome would be of potential clinical value: UAB is a symptom complex suggestive of DU and is usually characterized by a prolonged urination time with or without a sensation of incomplete bladder emptying, usually with hesitancy, reduced sensation on filling, and a slow stream.<sup>[4]</sup> Because the underlying pathophysiology of UAB is multifactorial, a single medication that focuses on a single mechanism could not be effective for others.\" (li2018.pdf.md, Clinical and urodynamic characteristics of underactive bladder)\n[SOURCE] \"This study, which falls into Scenario 1, suggests that we should strive to increase adherence to see if we could achieve better results in terms of effectiveness.\" (life-15-00613.pdf.md, Compliance and Adherence to Pelvic Floor Exercise Therapy in People with Pelvic )\n[SOURCE] \"Introduction Detrusor underactivity (DU) is a form of common lower urinary tract dysfunction (LUTD) that occurs in approximately 20% to 25% of all patients with lower urinary tract symptoms (LUTS).<sup>[1]</sup> Although the International Continence Society (ICS) standardization report defines DU as “a contraction of reduced strength and/or duration, resulting in prolonged bladder emptying and/or failure to achieve complete bladder emptying within a normal time span,”<sup>[2]</sup> it is a urodynamic definition not based on symptoms.\" (li2018.pdf.md, Clinical and urodynamic characteristics of underactive bladder)\n[SOURCE] \"There is evidence from preclinical data that the sequelae of events provoked by endotoxin can be overcome, at least partially, by oxpentifylline.<sup>22</sup> This drug inhibits various leucocyte functions after activation by different pathophysiological stimuli in vitro.<sup>13,23,24</sup> In vivo, oxpentifylline protected from increased pulmonary vascular permeability and sequestration of neutrophils in the lung in different animal models of acute lung injury.<sup>10,25,26</sup> Moreover, in pigs with induced faecal peritonitis the drug improved haemodynamic variables as well as pulmonary compliance and reduced the number of pulmonary neutrophils and lymphocytes.<sup>27</sup> Consequently, as a general outcome, oxpentifylline could be found to improve survival in different models of haemorrhagic<sup>28</sup> and endotoxic shock.<sup>11</sup> Our study shows that the positive findings from animal models may possibly apply also to human beings.\" (zabel1989.pdf.md, Results)\n[SOURCE] \"The significant differences in education level and hypertension prevalence between groups could have influenced outcomes.\" (11255_2025_Article_4454.pdf.md, Results)\n\n[INFERRED] The quoted passages are what this notebook contains on the question. Each quotation is attributed above to its file and section; no finding outside these passages is asserted. Sources quoted: 11255_2025_Article_4454.pdf.md, li2018.pdf.md, life-15-00613.pdf.md, zabel1989.pdf.md.",
+    "cited_sources": [
+      "life-15-00613.pdf.md",
+      "li2018.pdf.md",
+      "zabel1989.pdf.md",
+      "11255_2025_Article_4454.pdf.md"
+    ],
+    "requested_sources_cited": [
+      "li2018.pdf.md",
+      "life-15-00613.pdf.md"
+    ],
+    "requested_sources_absent": [],
+    "retrieval": {
+      "named": [
+        {
+          "filename": "li2018.pdf.md",
+          "complete": true,
+          "words": 3601
+        },
+        {
+          "filename": "life-15-00613.pdf.md",
+          "complete": false,
+          "words": 4303
+        }
+      ],
+      "other": [
+        {
+          "filename": "pharmaceuticals-19-00552.pdf.md",
+          "heading": "3. Discussion",
+          "score": 22.65
+        },
+        {
+          "filename": "MS patients and PTX.pdf.md",
+          "heading": "5. Discussion",
+          "score": 21.0
+        },
+        {
+          "filename": "kruuse2000.pdf.md",
+          "heading": "**Present results**",
+          "score": 17.24
+        },
+        {
+          "filename": "zabel1989.pdf.md",
+          "heading": "Discussion",
+          "score": 17.08
+        },
+        {
+          "filename": "parker2000.pdf.md",
+          "heading": "4. Discussion",
+          "score": 17.01
+        },
+        {
+          "filename": "11255_2025_Article_4454.pdf.md",
+          "heading": "Discussion",
+          "score": 16.87
+        }
+      ],
+      "unresolved": [],
+      "words": 9610
+    },
+    "call_key": "1e80a4e6742eca7966b4cbda",
+    "model": "local-rules-v1.8",
+    "captured": "2026-10-30T03:38:32+00:00"
+  },
+  {
+    "response_id": "R-Q0013-A01",
+    "qid": "Q0013",
+    "attempt": "A01",
+    "outcome": "COMPLETE",
+    "usable": true,
+    "text": "[SOURCE] \"Conclusions The results appear to indicate, with a low level of certainty of evidence, that people with pelvic floor disorders show high rates of adherence to pelvic floor muscle exercise in the short term and experience an improved quality of life with a high level of certainty of evidence.\" (life-15-00613.pdf.md, Compliance and Adherence to Pelvic Floor Exercise Therapy in People with Pelvic )\n[SOURCE] \"Pelvic floor muscle training (hereafter PFMT) is a therapy to improve endurance, strength, power, relaxation, or a combination of these, and because of its effectiveness is considered the first line of treatment for stress UI in women [2,6,16,17], and in men [18].\" (life-15-00613.pdf.md, Compliance and Adherence to Pelvic Floor Exercise Therapy in People with Pelvic )\n[SOURCE] \"There is evidence from preclinical data that the sequelae of events provoked by endotoxin can be overcome, at least partially, by oxpentifylline.<sup>22</sup> This drug inhibits various leucocyte functions after activation by different pathophysiological stimuli in vitro.<sup>13,23,24</sup> In vivo, oxpentifylline protected from increased pulmonary vascular permeability and sequestration of neutrophils in the lung in different animal models of acute lung injury.<sup>10,25,26</sup> Moreover, in pigs with induced faecal peritonitis the drug improved haemodynamic variables as well as pulmonary compliance and reduced the number of pulmonary neutrophils and lymphocytes.<sup>27</sup> Consequently, as a general outcome, oxpentifylline could be found to improve survival in different models of haemorrhagic<sup>28</sup> and endotoxic shock.<sup>11</sup> Our study shows that the positive findings from animal models may possibly apply also to human beings.\" (zabel1989.pdf.md, Results)\n[SOURCE] \"To our knowledge, this study represents one of the first pilot clinical investigations to assess the adjunctive role of PTX in UC, integrating both clinical efficacy endpoints (PMS and IBDQ-32) and mechanistic inflammatory biomarkers such as fecal calprotectin, ESR, and TNF- $\\alpha$ .\" (pharmaceuticals-19-00552.pdf.md, Results)\n[SOURCE] \"These findings suggest that PTX may exert its therapeutic effects independently of baseline treatment status, supporting its role as a promising adjunctive therapy in patients with mild-to-moderate ulcerative colitis.\" (pharmaceuticals-19-00552.pdf.md, Results)\n[SOURCE] \"Despite these limitations, the consistency of findings across multiple clinical and biochemical outcomes, as well as across subgroup and adjusted analyses, supports the robustness of the observed treatment effect.\" (pharmaceuticals-19-00552.pdf.md, Results)\n\n[INFERRED] The quoted passages are what this notebook contains on the question. Each quotation is attributed above to its file and section; no finding outside these passages is asserted. Sources quoted: life-15-00613.pdf.md, pharmaceuticals-19-00552.pdf.md, zabel1989.pdf.md.",
+    "cited_sources": [
+      "life-15-00613.pdf.md",
+      "zabel1989.pdf.md",
+      "pharmaceuticals-19-00552.pdf.md"
+    ],
+    "requested_sources_cited": [
+      "life-15-00613.pdf.md"
+    ],
+    "requested_sources_absent": [],
+    "retrieval": {
+      "named": [
+        {
+          "filename": "life-15-00613.pdf.md",
+          "complete": false,
+          "words": 4298
+        }
+      ],
+      "other": [
+        {
+          "filename": "pharmaceuticals-19-00552.pdf.md",
+          "heading": "3. Discussion",
+          "score": 28.34
+        },
+        {
+          "filename": "pharmaceuticals-19-00552.pdf.md",
+          "heading": "3. Discussion",
+          "score": 25.38
+        },
+        {
+          "filename": "pharmaceuticals-19-00552.pdf.md",
+          "heading": "3. Discussion",
+          "score": 21.62
+        },
+        {
+          "filename": "MS patients and PTX.pdf.md",
+          "heading": "5. Discussion",
+          "score": 21.0
+        },
+        {
+          "filename": "pharmaceuticals-19-00552.pdf.md",
+          "heading": "4.11. Handling of Missing Data",
+          "score": 20.27
+        },
+        {
+          "filename": "zabel1989.pdf.md",
+          "heading": "Discussion",
+          "score": 19.55
+        }
+      ],
+      "unresolved": [],
+      "words": 6002
+    },
+    "call_key": "7d0ca318dd35097a0aa5bd45",
+    "model": "local-rules-v1.8",
+    "captured": "2026-10-30T03:38:32+00:00"
+  },
+  {
+    "response_id": "R-Q0014-A01",
+    "qid": "Q0014",
+    "attempt": "A01",
+    "outcome": "COMPLETE",
+    "usable": true,
+    "text": "[SOURCE] \"In one large study including 138 men with refractory CPPS, 72% reported marked or moderate improvement as measured by NIH-CPSI scores.\" (masterson2017.pdf.md, Comprehensive pelvic floor physical therapy program for men with idiopathic chro)\n[SOURCE] \"Duration from initial evaluation to tenth visit i.e., the longer the interval of therapy appeared to be associated with better response. ## Discussion A comprehensive PFPT program that includes myofascial release, therapeutic exercises, biofeedback and neuromodulation improves symptoms as measured on the GUPI in men with idiopathic CPPS.\" (masterson2017.pdf.md, Comprehensive pelvic floor physical therapy program for men with idiopathic chro)\n[SOURCE] \"Comparison of median (IQR) scores on LURN-29 for elite athletes with vs without PVD or dyspareunia** | | All elite athletes (n=67) | Athletes with PVD or dyspareunia (n=11) | Athletes without PVD or dyspareunia (n=56) | Mann-Whitney test<sup>1</sup> result | |-------------------------------------|---------------------------|-----------------------------------------|--------------------------------------------|--------------------------------------| | Total LURN-29 (max 100) | 14 (9-21) | 20 (11-27) | 13 (7-18) | <b>p = 0.033</b> | | LURN-29 Incontinence (max 24) | 0 (0-1) | 1 (0-2) | 0 (0-1) | <b>p = 0.011</b> | | LURN-29 Pain (max 16) | 1 (0-1) | 1 (0-3) | 0 (0-1) | <b>p = 0.046</b> | | LURN-29 Voiding difficulty (max 20) | 3 (1-5) | 5 (4-6) | 3 (1-5) | <b>p = 0.010</b> | | LURN-29 Nocturia (max 8) | 1 (0-3) | 3 (1-5) | 1 (0-2) | <b>p = 0.044</b> | | LURN-29 Urgency (max 16) | 2 (0-4) | 2 (0-3) | 2 (0-4) | p = 0.610 | <sup>1</sup>Two-sided, two-sample Wilcoxon rank-sum (Mann-Whitney) test to determine if the two samples (those with pain vs without) are likely to derive from the same population.\" (MP75-18-RATES-AND-ADHERENCE-TO-PELVIC-FLOOR-PHYSICAL-THERAPY-FOR-MALE-PATIENTS-WITH-BENIGN.pdf.md, MP75-17)\n[SOURCE] \"Notably, individuals with higher DII scores exhibited a corresponding decrease in UFR levels ( $\\beta = -0.03$ ; 95% CI: [-0.04--0.01]).\" (MP75-18-RATES-AND-ADHERENCE-TO-PELVIC-FLOOR-PHYSICAL-THERAPY-FOR-MALE-PATIENTS-WITH-BENIGN.pdf.md, MP75-17)\n[SOURCE] \"Although we did note differential effects on these, the intervention might also be expected to have wider effects, such as improving the quality rather than the quantity of pelvic-floor muscle contractions, the use of broader behavioural techniques such as bladder training, and generic quality of life, which we did not measure directly.\" (glazener2011.pdf.md, Results)\n[SOURCE] \"Treatment of voiding difficulty in women with 0.2 mg tamsulosin daily for 6 weeks has been reported to improve voiding and storage symptom scores, maximal flow rate, and PVR.\" (ladi-seyedian2017.pdf.md, Results)\n\n[INFERRED] The quoted passages are what this notebook contains on the question. Each quotation is attributed above to its file and section; no finding outside these passages is asserted. Sources quoted: MP75-18-RATES-AND-ADHERENCE-TO-PELVIC-FLOOR-PHYSICAL-THERAPY-FOR-MALE-PATIENTS-WITH-BENIGN.pdf.md, glazener2011.pdf.md, ladi-seyedian2017.pdf.md, masterson2017.pdf.md.",
+    "cited_sources": [
+      "masterson2017.pdf.md",
+      "MP75-18-RATES-AND-ADHERENCE-TO-PELVIC-FLOOR-PHYSICAL-THERAPY-FOR-MALE-PATIENTS-WITH-BENIGN.pdf.md",
+      "glazener2011.pdf.md",
+      "ladi-seyedian2017.pdf.md"
+    ],
+    "requested_sources_cited": [
+      "masterson2017.pdf.md",
+      "MP75-18-RATES-AND-ADHERENCE-TO-PELVIC-FLOOR-PHYSICAL-THERAPY-FOR-MALE-PATIENTS-WITH-BENIGN.pdf.md"
+    ],
+    "requested_sources_absent": [],
+    "retrieval": {
+      "named": [
+        {
+          "filename": "masterson2017.pdf.md",
+          "complete": true,
+          "words": 3595
+        },
+        {
+          "filename": "MP75-18-RATES-AND-ADHERENCE-TO-PELVIC-FLOOR-PHYSICAL-THERAPY-FOR-MALE-PATIENTS-WITH-BENIGN.pdf.md",
+          "complete": true,
+          "words": 2446
+        }
+      ],
+      "other": [
+        {
+          "filename": "ladi-seyedian2017.pdf.md",
+          "heading": "7.3.2. *Alpha-adrenoreceptor antagonists*",
+          "score": 22.33
+        },
+        {
+          "filename": "glazener2011.pdf.md",
+          "heading": "Interpretation",
+          "score": 21.62
+        },
+        {
+          "filename": "glazener2011.pdf.md",
+          "heading": "Interpretation",
+          "score": 21.59
+        },
+        {
+          "filename": "MS patients and PTX.pdf.md",
+          "heading": "5. Discussion",
+          "score": 21.0
+        },
+        {
+          "filename": "glazener2011.pdf.md",
+          "heading": "Discussion",
+          "score": 19.99
+        },
+        {
+          "filename": "Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md",
+          "heading": "2.3 | Study design",
+          "score": 18.26
+        }
+      ],
+      "unresolved": [],
+      "words": 7578
+    },
+    "call_key": "197f4ea8bd4796c958c82549",
+    "model": "local-rules-v1.8",
+    "captured": "2026-10-30T03:38:32+00:00"
+  },
+  {
+    "response_id": "R-Q0015-A01",
+    "qid": "Q0015",
+    "attempt": "A01",
+    "outcome": "COMPLETE",
+    "usable": true,
+    "text": "[SOURCE] \"Casola\\*, Columbus, OH **INTRODUCTION AND OBJECTIVE:** Male patients suffering from benign urological conditions including lower urinary tract symptoms, overactive bladder, pelvic floor dysfunction, and testicular/groin pain may benefit from pelvic floor physical therapy (PT), but the rates at which patients receive referrals for these conditions, and at what rate they follow through with those referrals is unknown.\" (MP75-18-RATES-AND-ADHERENCE-TO-PELVIC-FLOOR-PHYSICAL-THERAPY-FOR-MALE-PATIENTS-WITH-BENIGN.pdf.md, MP75-17)\n[SOURCE] \"Based on studies showing elite female athletes are prone to pelvic floor dysfunction evidenced by higher rates of urinary and fecal incontinence and pelvic organ prolapse (Louis-Charles 2019), we hypothesized that elite athletes may also be at increased risk of pelvic floor hypertonicity.\" (MP75-18-RATES-AND-ADHERENCE-TO-PELVIC-FLOOR-PHYSICAL-THERAPY-FOR-MALE-PATIENTS-WITH-BENIGN.pdf.md, MP75-17)\n[SOURCE] \"This eventuates in BOO, which shows voiding dysfunction.<sup>18</sup> The clinical presentation is in the form of LUTS, including weak urinary stream, urgency, nocturia, urinary retention, straining, and frequency.<sup>19</sup> Currently, several drug modalities are recommended to treat the symptoms of BPH, including 5-alpha reductase inhibitors, $\\alpha$ 1-adrenoceptor antagonists, and phosphodiesterase five inhibitors.<sup>20</sup> Transurethral prostatectomy and open prostatectomy are non-pharmacological choices; nevertheless, there are risks related to prostatic surgery, including bleeding, retrograde ejaculation, and further surgical operations.<sup>21</sup>\" (Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md, Results)\n[SOURCE] \"The etiology of diabetic bladder dysfunction is multifactorial; both the myogenic and neurogenic effects of diabetic cystopathy cause a decrease in bladder sensation and impairment in voiding function [39].\" (ladi-seyedian2017.pdf.md, Results)\n[SOURCE] \"finding suggests that PTX may exert an anti-inflammatory effect sufficient to translate into measurable symptom relief.\" (pharmaceuticals-19-00552.pdf.md, Results)\n[SOURCE] \"By reducing blood viscosity, PTX’s therapeutic effects in this disorder have been linked to an improvement in blood’s rheological characteristics, principally as a result of a drop in plasma fibrinogen content.\" (Pentoxifylline-in-patients-with-ulcerative-colitis-treated-with-mesalamine-by-modulation.pdf.md, Results)\n\n[INFERRED] The quoted passages are what this notebook contains on the question. Each quotation is attributed above to its file and section; no finding outside these passages is asserted. Sources quoted: Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md, MP75-18-RATES-AND-ADHERENCE-TO-PELVIC-FLOOR-PHYSICAL-THERAPY-FOR-MALE-PATIENTS-WITH-BENIGN.pdf.md, Pentoxifylline-in-patients-with-ulcerative-colitis-treated-with-mesalamine-by-modulation.pdf.md, ladi-seyedian2017.pdf.md, pharmaceuticals-19-00552.pdf.md.",
+    "cited_sources": [
+      "MP75-18-RATES-AND-ADHERENCE-TO-PELVIC-FLOOR-PHYSICAL-THERAPY-FOR-MALE-PATIENTS-WITH-BENIGN.pdf.md",
+      "Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md",
+      "ladi-seyedian2017.pdf.md",
+      "pharmaceuticals-19-00552.pdf.md",
+      "Pentoxifylline-in-patients-with-ulcerative-colitis-treated-with-mesalamine-by-modulation.pdf.md"
+    ],
+    "requested_sources_cited": [
+      "MP75-18-RATES-AND-ADHERENCE-TO-PELVIC-FLOOR-PHYSICAL-THERAPY-FOR-MALE-PATIENTS-WITH-BENIGN.pdf.md"
+    ],
+    "requested_sources_absent": [],
+    "retrieval": {
+      "named": [
+        {
+          "filename": "MP75-18-RATES-AND-ADHERENCE-TO-PELVIC-FLOOR-PHYSICAL-THERAPY-FOR-MALE-PATIENTS-WITH-BENIGN.pdf.md",
+          "complete": true,
+          "words": 2446
+        }
+      ],
+      "other": [
+        {
+          "filename": "pharmaceuticals-19-00552.pdf.md",
+          "heading": "3. Discussion",
+          "score": 28.15
+        },
+        {
+          "filename": "MS patients and PTX.pdf.md",
+          "heading": "5. Discussion",
+          "score": 22.42
+        },
+        {
+          "filename": "Pentoxifylline-in-patients-with-ulcerative-colitis-treated-with-mesalamine-by-modulation.pdf.md",
+          "heading": "Discussion",
+          "score": 22.23
+        },
+        {
+          "filename": "11255_2025_Article_4454.pdf.md",
+          "heading": "Discussion",
+          "score": 18.38
+        },
+        {
+          "filename": "Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md",
+          "heading": "4 | DISCUSSION",
+          "score": 17.93
+        },
+        {
+          "filename": "ladi-seyedian2017.pdf.md",
+          "heading": "6. Risk factors",
+          "score": 17.85
+        }
+      ],
+      "unresolved": [],
+      "words": 4286
+    },
+    "call_key": "a20bdab659d2b5c84455f6c9",
+    "model": "local-rules-v1.8",
+    "captured": "2026-10-30T03:38:32+00:00"
+  },
+  {
+    "response_id": "R-Q0016-A01",
+    "qid": "Q0016",
+    "attempt": "A01",
+    "outcome": "COMPLETE",
+    "usable": true,
+    "text": "[SOURCE] \"for UAB was recently proposed by an expert consensus group: “...a symptom complex suggestive of detrusor underactivity and is usually characterised by prolonged urination time with or without a sensation of incomplete bladder emptying, usually with hesitancy, reduced sensation on filling, and a slow stream”<sup>2</sup>.\" (osman2018.pdf.md, REVIEW)\n[SOURCE] \"Rosier PF, de Wildt MJ, de la Rosette JJ, Debruyne FM, et al.: Analysis of maximum detrusor contraction power in relation to bladder emptying in patients with lower urinary tract symptoms and benign prostatic enlargement. *J Urol.* 1995; **154** (6): 2137-42 [PubMed Abstract](#) 3.\" (osman2018.pdf.md, REVIEW)\n[SOURCE] \"Underactive bladder (UAB) focuses on symptoms that patients find bothersome and raises the profile of the important clinical condition.<sup>[3]</sup> Chapple et al proposed that a definition of a symptom complex for UAB analogous to the ICS definition of overactive bladder (OAB) syndrome would be of potential clinical value: UAB is a symptom complex suggestive of DU and is usually characterized by a prolonged urination time with or without a sensation of incomplete bladder emptying, usually with hesitancy, reduced sensation on filling, and a slow stream.<sup>[4]</sup> Because the underlying pathophysiology of UAB is multifactorial, a single medication that focuses on a single mechanism could not be effective for others.\" (li2018.pdf.md, Results)\n[SOURCE] \"This method could protect the renal function and improve patients' quality of life [6,129].\" (ladi-seyedian2017.pdf.md, Results)\n[SOURCE] \"In contrast, the overactive bladder (OAB) syndrome is defined as urinary urgency, usually accompanied by frequency and nocturia, with or without urgency urinary incontinence, and is often synonymous with the urodynamic term detrusor overactivity (DO), the observation of involuntary contractions during bladder filling that is commonly associated with a corresponding sensation of urgency [5].\" (chung2014.pdf.md, Results)\n[SOURCE] \"It is mandatory to perform invasive pressure flow studies in order to detect reduced strength and/or duration of bladder contraction and also to differentiate with LUTS secondary to BOO [3].\" (ladi-seyedian2017.pdf.md, Results)\n\n[INFERRED] The quoted passages are what this notebook contains on the question. Each quotation is attributed above to its file and section; no finding outside these passages is asserted. Sources quoted: chung2014.pdf.md, ladi-seyedian2017.pdf.md, li2018.pdf.md, osman2018.pdf.md.",
+    "cited_sources": [
+      "osman2018.pdf.md",
+      "li2018.pdf.md",
+      "ladi-seyedian2017.pdf.md",
+      "chung2014.pdf.md"
+    ],
+    "requested_sources_cited": [
+      "osman2018.pdf.md"
+    ],
+    "requested_sources_absent": [],
+    "retrieval": {
+      "named": [
+        {
+          "filename": "osman2018.pdf.md",
+          "complete": false,
+          "words": 4375
+        }
+      ],
+      "other": [
+        {
+          "filename": "li2018.pdf.md",
+          "heading": "1. Introduction",
+          "score": 26.93
+        },
+        {
+          "filename": "ladi-seyedian2017.pdf.md",
+          "heading": "7.5. Surgical interventions",
+          "score": 25.29
+        },
+        {
+          "filename": "chung2014.pdf.md",
+          "heading": "Exact Definition and Proposed Pathophysiologic Mechanisms",
+          "score": 24.05
+        },
+        {
+          "filename": "ladi-seyedian2017.pdf.md",
+          "heading": "1. Introduction",
+          "score": 23.88
+        },
+        {
+          "filename": "ladi-seyedian2017.pdf.md",
+          "heading": "4. Signs and symptoms",
+          "score": 23.07
+        },
+        {
+          "filename": "11255_2025_Article_4454.pdf.md",
+          "heading": "Conclusion",
+          "score": 22.88
+        }
+      ],
+      "unresolved": [],
+      "words": 6194
+    },
+    "call_key": "3d6b370fd5d2bab19b62ff8f",
+    "model": "local-rules-v1.8",
+    "captured": "2026-10-30T03:38:33+00:00"
+  },
+  {
+    "response_id": "R-Q0017-A01",
+    "qid": "Q0017",
+    "attempt": "A01",
+    "outcome": "COMPLETE",
+    "usable": true,
+    "text": "[SOURCE] \"However, studies with better methodological quality are needed to obtain a higher level of scientific evidence and to determine the optimal current modality, type, and parameters for each type of UI and OAB [16, 25].\" (s00345-024-04974-7.pdf.md, The effect of pelvic floor muscle training in men with benign prostatic hyperpla)\n[SOURCE] \"Noninvasive clinical indicators of detrusor underactivity in adult men: results of a pilot study. *J Urol* 2014; 191 (Suppl.):E887. ■ Description of ultrasound detrusor wall thickness measurement together with bladder capacity for the safe diagnosis of detrusor underactivity.\" (rademakers2016.pdf.md, Detrusor underactivity in men with lower urinary tract symptoms/benign prostatic)\n[SOURCE] \"indicators of detrusor underactivity in adult men: results of a pilot study. *J Urol* 2014; 191 (Suppl.):E887. ■ Description of ultrasound detrusor wall thickness measurement together with bladder capacity for the safe diagnosis of detrusor underactivity.\" (rademakers2016.pdf.md, Detrusor underactivity in men with lower urinary tract symptoms/benign prostatic)\n[SOURCE] \"In comparing the parameters of the micturition diary, we found the following differences compared to other studies: a decrease in the number of voids per 24 h in the experimental group compared to the control group (– 1.95 vs. – 0.90), mean voided volume per 24 h increased by about 30.99 in the experimental group and in 18.56 in the control group; the Patient Perception of Intensity of Urgency Scale score decreased by – 0.97 in the experimental group and increased by + 0.24 in the control group.\" (s00345-024-04974-7.pdf.md, The effect of pelvic floor muscle training in men with benign prostatic hyperpla)\n[SOURCE] \"There is evidence from preclinical data that the sequelae of events provoked by endotoxin can be overcome, at least partially, by oxpentifylline.<sup>22</sup> This drug inhibits various leucocyte functions after activation by different pathophysiological stimuli in vitro.<sup>13,23,24</sup> In vivo, oxpentifylline protected from increased pulmonary vascular permeability and sequestration of neutrophils in the lung in different animal models of acute lung injury.<sup>10,25,26</sup> Moreover, in pigs with induced faecal peritonitis the drug improved haemodynamic variables as well as pulmonary compliance and reduced the number of pulmonary neutrophils and lymphocytes.<sup>27</sup> Consequently, as a general outcome, oxpentifylline could be found to improve survival in different models of haemorrhagic<sup>28</sup> and endotoxic shock.<sup>11</sup> Our study shows that the positive findings from animal models may possibly apply also to human beings.\" (zabel1989.pdf.md, Results)\n[SOURCE] \"Despite these limitations, the consistency of findings across multiple clinical and biochemical outcomes, as well as across subgroup and adjusted analyses, supports the robustness of the observed treatment effect.\" (pharmaceuticals-19-00552.pdf.md, Results)\n\n[INFERRED] The quoted passages are what this notebook contains on the question. Each quotation is attributed above to its file and section; no finding outside these passages is asserted. Sources quoted: pharmaceuticals-19-00552.pdf.md, rademakers2016.pdf.md, s00345-024-04974-7.pdf.md, zabel1989.pdf.md.",
+    "cited_sources": [
+      "s00345-024-04974-7.pdf.md",
+      "rademakers2016.pdf.md",
+      "zabel1989.pdf.md",
+      "pharmaceuticals-19-00552.pdf.md"
+    ],
+    "requested_sources_cited": [
+      "rademakers2016.pdf.md",
+      "s00345-024-04974-7.pdf.md"
+    ],
+    "requested_sources_absent": [],
+    "retrieval": {
+      "named": [
+        {
+          "filename": "rademakers2016.pdf.md",
+          "complete": false,
+          "words": 3445
+        },
+        {
+          "filename": "s00345-024-04974-7.pdf.md",
+          "complete": false,
+          "words": 3601
+        }
+      ],
+      "other": [
+        {
+          "filename": "MS patients and PTX.pdf.md",
+          "heading": "5. Discussion",
+          "score": 21.0
+        },
+        {
+          "filename": "pharmaceuticals-19-00552.pdf.md",
+          "heading": "3. Discussion",
+          "score": 20.65
+        },
+        {
+          "filename": "pharmaceuticals-19-00552.pdf.md",
+          "heading": "4.11. Handling of Missing Data",
+          "score": 20.27
+        },
+        {
+          "filename": "Pentoxifylline-in-patients-with-ulcerative-colitis-treated-with-mesalamine-by-modulation.pdf.md",
+          "heading": "Discussion",
+          "score": 18.34
+        },
+        {
+          "filename": "kruuse2000.pdf.md",
+          "heading": "**Present results**",
+          "score": 17.24
+        },
+        {
+          "filename": "zabel1989.pdf.md",
+          "heading": "Discussion",
+          "score": 17.08
+        }
+      ],
+      "unresolved": [],
+      "words": 8750
+    },
+    "call_key": "df6ccde3d87ba92ff3076a0b",
+    "model": "local-rules-v1.8",
+    "captured": "2026-10-30T03:38:33+00:00"
+  },
+  {
+    "response_id": "R-Q0018-A01",
+    "qid": "Q0018",
+    "attempt": "A01",
+    "outcome": "COMPLETE",
+    "usable": true,
+    "text": "[SOURCE] \"In comparing the parameters of the micturition diary, we found the following differences compared to other studies: a decrease in the number of voids per 24 h in the experimental group compared to the control group (– 1.95 vs. – 0.90), mean voided volume per 24 h increased by about 30.99 in the experimental group and in 18.56 in the control group; the Patient Perception of Intensity of Urgency Scale score decreased by – 0.97 in the experimental group and increased by + 0.24 in the control group.\" (s00345-024-04974-7.pdf.md, The effect of pelvic floor muscle training in men with benign prostatic hyperpla)\n[SOURCE] \"However, studies with better methodological quality are needed to obtain a higher level of scientific evidence and to determine the optimal current modality, type, and parameters for each type of UI and OAB [16, 25].\" (s00345-024-04974-7.pdf.md, The effect of pelvic floor muscle training in men with benign prostatic hyperpla)\n[SOURCE] \"Deformed cells were observed in the single pentoxifylline-treated rat with glomerular congestion; this finding is consistent with the hemorheologic effects of pentoxifylline on cell deformability (2).\" (luke1989.pdf.md, Results)\n[SOURCE] \"The significant differences in education level and hypertension prevalence between groups could have influenced outcomes.\" (11255_2025_Article_4454.pdf.md, Results)\n[SOURCE] \"However, a slight but significant decrease of blood flow velocity in the middle cerebral artery (*V*<sub>mca</sub>) was measured compared with baseline during infusion of pentoxifylline, which was not measured during placebo.\" (kruuse2000.pdf.md, Results)\n[SOURCE] \"In order to provide higher and potentially pharmacologically beneficial doses of aminophylline without concerns of hypoxemia, it might be warranted to provide artificial ventilation for the study animals of which may also allow for determination of dose response curves of aminophylline in such critical care conditions.\" (fakioglu2004.pdf.md, Results)\n\n[INFERRED] The quoted passages are what this notebook contains on the question. Each quotation is attributed above to its file and section; no finding outside these passages is asserted. Sources quoted: 11255_2025_Article_4454.pdf.md, fakioglu2004.pdf.md, kruuse2000.pdf.md, luke1989.pdf.md, s00345-024-04974-7.pdf.md.",
+    "cited_sources": [
+      "s00345-024-04974-7.pdf.md",
+      "luke1989.pdf.md",
+      "11255_2025_Article_4454.pdf.md",
+      "kruuse2000.pdf.md",
+      "fakioglu2004.pdf.md"
+    ],
+    "requested_sources_cited": [
+      "s00345-024-04974-7.pdf.md"
+    ],
+    "requested_sources_absent": [],
+    "retrieval": {
+      "named": [
+        {
+          "filename": "s00345-024-04974-7.pdf.md",
+          "complete": false,
+          "words": 3601
+        }
+      ],
+      "other": [
+        {
+          "filename": "MS patients and PTX.pdf.md",
+          "heading": "5. Discussion",
+          "score": 26.9
+        },
+        {
+          "filename": "kruuse2000.pdf.md",
+          "heading": "**Present results**",
+          "score": 20.9
+        },
+        {
+          "filename": "luke1989.pdf.md",
+          "heading": "DISCUSSION",
+          "score": 20.3
+        },
+        {
+          "filename": "fitzgerald2009.pdf.md",
+          "heading": "DISCUSSION",
+          "score": 18.9
+        },
+        {
+          "filename": "fakioglu2004.pdf.md",
+          "heading": "*4.1. Study limitations*",
+          "score": 18.88
+        },
+        {
+          "filename": "11255_2025_Article_4454.pdf.md",
+          "heading": "Discussion",
+          "score": 16.87
+        }
+      ],
+      "unresolved": [],
+      "words": 4976
+    },
+    "call_key": "190de66535762239f02e857e",
+    "model": "local-rules-v1.8",
+    "captured": "2026-10-30T03:38:33+00:00"
+  },
+  {
+    "response_id": "R-Q0019-A01",
+    "qid": "Q0019",
+    "attempt": "A01",
+    "outcome": "COMPLETE",
+    "usable": true,
+    "text": "[SOURCE] \"(2011) | Prospective cohort study<br>N = 116 | Men with CP/PPS<br>PFPT: 48 (19–80) | PFPT<br>Internal manual techniques<br>PF home exercises<br>Psychologist daily instructions on reducing nervous system | VAS pelvic pain | Pre-to post treatment<br>($P < .001$) | (continued) **Table 2.** Continued | Study | Design/N | Population/ mean age SD/ range) | Interventions/duration | Outcome Measures (muscle tone/ function, pain, sexual function, pelvic floor symptoms, QoL, PPE) | Results | |-----------------------|-----------------------|----------------------------------------|------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------| | | | | No control group | PPSS sexuality<br>PPSS symptom severity | Pre-to post treatment ($P < .001$)<br>Pre-to post treatment ($P < .001$) | | | | | 5 (30 to 60 min) sessions for 6 days | NIH-CPSI Total Score<br>NIH-CPSI QoL | Pre-to post treatment ($P < .001$)<br>Pretreatment-to follow up ($P < .001$)<br>Pre-to post treatment ($P < .001$) | | | | | | GRA | 59% of patients reported symptoms as moderately or markedly improved | | Anderson et al.(2005) | Case study<br>N = 138 | Men with CP/CPPS<br>PFPT: 40.5 (16–79) | PFPT<br>Internal manual techniques<br>Deep tissue mobilisation<br>Relaxation exercises<br>Daily PF home relaxation exercises | VAS-pelvic pain | Pre- to post treatment:<br>Markedly improved group ($P < .01$)<br>Moderately improved group ns | | | | | No control group | PPSS pain | Pre- to post treatment:<br>Markedly improved group ($P < .001$)<br>Moderately improved group ns | | | | | 8 biweekly sessions and 4 weekly sessions | NIH CPSI pain | Pre- to post treatment:<br>Markedly improved group ($P < .001$)<br>Moderately improved group ($P < .05$) | | | | | | PPSS sexual function | 63% of the patients had a 25% or greater improvement in sexual function; 56 (43%) achieved a 50% or greater response after PFPT | (continued) **Table 2.** Continued\" (vanreijn-baggen2022.pdf.md, Pelvic Floor Physical Therapy for Pelvic Floor Hypertonicity: A Systematic Revie)\n[SOURCE] \"Currently, the International Urogynecological Association (IUGA)/International Continence Society (ICS) defines the term “non-neurogenic hypertonicity” as an increase in muscle tone related to the contractile or viscoelastic components that can be associated with either elevated contractile activity and/or passive stiffness in the muscle.<sup>13</sup> In addition, the hypertonic muscle tissue may contain myofascial trigger points (MTrPs).<sup>14</sup> A MTrP is a discrete, hyperirritable nodule in a taut band of a skeletal muscle which is palpable and tender during physical examination.\" (vanreijn-baggen2022.pdf.md, Pelvic Floor Physical Therapy for Pelvic Floor Hypertonicity: A Systematic Revie)\n[SOURCE] \"The 2015 Beers Criteria, an updated list by the American Geriatric Society which aims to catalog medications that may cause side effects in the older adult population due to physiological effects of aging based on evidence-based methodology, recommended than many of the anticholinergics used to treat OAB be avoided in older adults [18].\" (bortnick2019.pdf.md, Medical Therapies for Treatment of BPH: Special Considerations in Elderly Men)\n[SOURCE] \"An integrated analysis of 12 phase 2–3 randomized trials in 2017 by Oelke et al. compared the efficacy and safety of 5 mg tadalafil in men less than 75 to men greater than 75 and found that tadalafil was not statistically significantly better than placebo for men greater than 75, which they attributed to the older population having more concomitant diseases and using more medications, possibly leading to reduced efficacy.\" (bortnick2019.pdf.md, Medical Therapies for Treatment of BPH: Special Considerations in Elderly Men)\n[SOURCE] \"However, the potential psychological and quality of life improvements from such interventions, particularly when guided by an established health behavior framework, remain underexplored [16].\" (11255_2025_Article_4454.pdf.md, Results)\n[SOURCE] \"Moreover, PTX inhibits neutrophil activation and decreases platelet aggregation, promoting tissue oxygenation and blood flow via the microcirculation in the organs of the digestive system (González-Pacheco et al.\" (Pentoxifylline-in-patients-with-ulcerative-colitis-treated-with-mesalamine-by-modulation.pdf.md, Results)\n\n[INFERRED] The quoted passages are what this notebook contains on the question. Each quotation is attributed above to its file and section; no finding outside these passages is asserted. Sources quoted: 11255_2025_Article_4454.pdf.md, Pentoxifylline-in-patients-with-ulcerative-colitis-treated-with-mesalamine-by-modulation.pdf.md, bortnick2019.pdf.md, vanreijn-baggen2022.pdf.md.",
+    "cited_sources": [
+      "vanreijn-baggen2022.pdf.md",
+      "bortnick2019.pdf.md",
+      "11255_2025_Article_4454.pdf.md",
+      "Pentoxifylline-in-patients-with-ulcerative-colitis-treated-with-mesalamine-by-modulation.pdf.md"
+    ],
+    "requested_sources_cited": [
+      "vanreijn-baggen2022.pdf.md",
+      "bortnick2019.pdf.md"
+    ],
+    "requested_sources_absent": [],
+    "retrieval": {
+      "named": [
+        {
+          "filename": "vanreijn-baggen2022.pdf.md",
+          "complete": false,
+          "words": 4299
+        },
+        {
+          "filename": "bortnick2019.pdf.md",
+          "complete": true,
+          "words": 4133
+        }
+      ],
+      "other": [
+        {
+          "filename": "Pentoxifylline-in-patients-with-ulcerative-colitis-treated-with-mesalamine-by-modulation.pdf.md",
+          "heading": "Discussion",
+          "score": 22.22
+        },
+        {
+          "filename": "luke1989.pdf.md",
+          "heading": "DISCUSSION",
+          "score": 21.71
+        },
+        {
+          "filename": "11255_2025_Article_4454.pdf.md",
+          "heading": "Introduction",
+          "score": 21.11
+        },
+        {
+          "filename": "MS patients and PTX.pdf.md",
+          "heading": "5. Discussion",
+          "score": 21.0
+        },
+        {
+          "filename": "VanHouten2026_Cushings_syndrome.md",
+          "heading": "Discussion",
+          "score": 20.47
+        },
+        {
+          "filename": "vadiei1996.pdf.md",
+          "heading": "Discussion",
+          "score": 20.02
+        }
+      ],
+      "unresolved": [],
+      "words": 10164
+    },
+    "call_key": "5643a05e5a2bce9f4da8ca32",
+    "model": "local-rules-v1.8",
+    "captured": "2026-10-30T03:38:33+00:00"
+  },
+  {
+    "response_id": "R-Q0020-A01",
+    "qid": "Q0020",
+    "attempt": "A01",
+    "outcome": "COMPLETE",
+    "usable": true,
+    "text": "[SOURCE] \"The medical therapy of prostate symptoms (MTOPS) trial studied the combination of finasteride (alpha-blocker) with doxazosin (5-alpha reductase inhibitor) in 3047 men with average age 62.6 years (SD 7.3 years) and found that the combination improved voiding symptoms and maximum urinary flow rate more than either agent alone.\" (bortnick2019.pdf.md, Medical Therapies for Treatment of BPH: Special Considerations in Elderly Men)\n[SOURCE] \"overactive bladder symptoms and found that combination therapy resulted in an improved number of nocturia episodes, daytime frequency, and urgency episodes (as measured by bladder diary) after 12 weeks of treatment [25].\" (bortnick2019.pdf.md, Medical Therapies for Treatment of BPH: Special Considerations in Elderly Men)\n[SOURCE] \"finding suggests that PTX may exert an anti-inflammatory effect sufficient to translate into measurable symptom relief.\" (pharmaceuticals-19-00552.pdf.md, Results)\n[SOURCE] \"These findings align with preclinical studies in experimental colitis models, where PTX administration markedly reduced TNF- $\\alpha$ concentrations and ameliorated histopathological inflammation\" (pharmaceuticals-19-00552.pdf.md, Results)\n[SOURCE] \"(2024) reported a reduction in CRP within the PTX group compared to the placebo group (MD = −0.53, 95% CI [−0.89, −0.17]) and in IL-1- $\\beta$ within the PTX group compared to the placebo group (MD = −0.61, 95% CI [−0.87, −0.35]) (Merza Mohammad et al.\" (s00210-025-03845-1.pdf.md, Results)\n[SOURCE] \"This may indicate that pentoxifylline in high doses has a direct vasodilating effect on large cerebral arteries, which could be a result of its PDE-inhibiting actions (Kamphuis *et al.*, 1994).\" (kruuse2000.pdf.md, Results)\n\n[INFERRED] The quoted passages are what this notebook contains on the question. Each quotation is attributed above to its file and section; no finding outside these passages is asserted. Sources quoted: bortnick2019.pdf.md, kruuse2000.pdf.md, pharmaceuticals-19-00552.pdf.md, s00210-025-03845-1.pdf.md.",
+    "cited_sources": [
+      "bortnick2019.pdf.md",
+      "pharmaceuticals-19-00552.pdf.md",
+      "s00210-025-03845-1.pdf.md",
+      "kruuse2000.pdf.md"
+    ],
+    "requested_sources_cited": [
+      "bortnick2019.pdf.md"
+    ],
+    "requested_sources_absent": [],
+    "retrieval": {
+      "named": [
+        {
+          "filename": "bortnick2019.pdf.md",
+          "complete": true,
+          "words": 4133
+        }
+      ],
+      "other": [
+        {
+          "filename": "pharmaceuticals-19-00552.pdf.md",
+          "heading": "3. Discussion",
+          "score": 25.49
+        },
+        {
+          "filename": "pharmaceuticals-19-00552.pdf.md",
+          "heading": "3. Discussion",
+          "score": 22.15
+        },
+        {
+          "filename": "MS patients and PTX.pdf.md",
+          "heading": "5. Discussion",
+          "score": 21.0
+        },
+        {
+          "filename": "kruuse2000.pdf.md",
+          "heading": "**Present results**",
+          "score": 20.27
+        },
+        {
+          "filename": "Pentoxifylline-in-patients-with-ulcerative-colitis-treated-with-mesalamine-by-modulation.pdf.md",
+          "heading": "Discussion",
+          "score": 20.1
+        },
+        {
+          "filename": "s00210-025-03845-1.pdf.md",
+          "heading": "Biological markers",
+          "score": 19.95
+        }
+      ],
+      "unresolved": [],
+      "words": 6053
+    },
+    "call_key": "00229dd81f916eb923b6123d",
+    "model": "local-rules-v1.8",
+    "captured": "2026-10-30T03:38:33+00:00"
+  },
+  {
+    "response_id": "R-Q0021-A01",
+    "qid": "Q0021",
+    "attempt": "A01",
+    "outcome": "COMPLETE",
+    "usable": true,
+    "text": "[SOURCE] \"In 2006, the TIMES trial was a randomized, double-blind, placebo controlled trial of 879 men aged 40–92 that looked at the combination of alpha-blockers with anticholinergics as compared with either alone or placebo for the treatment of LUTS with OAB symptoms and found that combination therapy resulted in an improved number of nocturia episodes, daytime frequency, and urgency episodes (as measured by bladder diary) after 12 weeks of treatment.<sup>20</sup> In the more recent NEPTUNE II extension study reported by Drake *et al.*, 1066 men (mean age 65.1) with both storage and voiding LUTS were given a fixed-dose combination therapy of solifenacin and tamsulosin and followed for 52 weeks.<sup>21</sup> Over the study period, the mean total IPSS score was reduced and maintained by 9.0 points.\" (bortnick2020.pdf.md, Modern best practice in the management of benign prostatic hyperplasia in the el)\n[SOURCE] \"A prospective, randomized, and controlled clinical trial by Gao et al. compared improvement of IPSS, QoL, peak urinary flow, PVR urine volume, prostate-specific antigen (PSA) level, and prostate volume at 1-, 3-, 6-, 12-, and 24-month follow up in 57 men who underwent PAE with 57 men who underwent TURP.<sup>37</sup> Whereas both techniques showed an improvement in the six functional outcomes assessed ( $p=0.001$ ), the TURP group showed greater degrees of improvement in the IPSS, QoL, peak urinary flow, and PVR urine volume at 1 and 3 months, as well as greater reductions in the PSA level and prostate volume at all follow-up time points, when compared with the PAE group ( $p<0.05$ ).\" (bortnick2020.pdf.md, Modern best practice in the management of benign prostatic hyperplasia in the el)\n[SOURCE] \"Barie, MD, New York:** I wonder if you could comment on the temporal relationships between the timing of intervention and the fact that the physiologic responses you observed became meaningful statistically at 7 to as many as 14 days thereafter?\" (staubach1998.pdf.md, Results)\n[SOURCE] \"This trend, however, was not significant in this small trial, but further studies with enrollment of a higher number of patients are needed to evaluate improvement of survival. lating TNF-α could be demonstrated in contrast with experimental human studies<sup>11</sup> and animal studies in which a dose-dependent effect on TNF-α activity was shown.<sup>17</sup> In comparison with this study, Zeni et al<sup>20</sup> found a significant reduction of TNF-α immunoreactivity in humans with a higher dose of pentoxifylline (1.5 mg/kg of body weight per hour) associated with a 2-fold increased plasma concentration of pentoxifylline after 24 hours.\" (staubach1998.pdf.md, Results)\n[SOURCE] \"Introduction Detrusor underactivity (DU) is a form of common lower urinary tract dysfunction (LUTD) that occurs in approximately 20% to 25% of all patients with lower urinary tract symptoms (LUTS).<sup>[1]</sup> Although the International Continence Society (ICS) standardization report defines DU as “a contraction of reduced strength and/or duration, resulting in prolonged bladder emptying and/or failure to achieve complete bladder emptying within a normal time span,”<sup>[2]</sup> it is a urodynamic definition not based on symptoms.\" (li2018.pdf.md, Results)\n[SOURCE] \"With respect to ICU stay or hospital stay, no significant difference with a median ICU stay of 26 days for patients receiving pentoxifylline and 21 days for patients receiving placebo, and 41 vs 40 days for hospital stay could be demonstrated.\" (staubach1998.pdf.md, Results)\n\n[INFERRED] The quoted passages are what this notebook contains on the question. Each quotation is attributed above to its file and section; no finding outside these passages is asserted. Sources quoted: bortnick2020.pdf.md, li2018.pdf.md, staubach1998.pdf.md.",
+    "cited_sources": [
+      "bortnick2020.pdf.md",
+      "staubach1998.pdf.md",
+      "li2018.pdf.md"
+    ],
+    "requested_sources_cited": [
+      "bortnick2020.pdf.md"
+    ],
+    "requested_sources_absent": [],
+    "retrieval": {
+      "named": [
+        {
+          "filename": "bortnick2020.pdf.md",
+          "complete": false,
+          "words": 4413
+        }
+      ],
+      "other": [
+        {
+          "filename": "staubach1998.pdf.md",
+          "heading": "DISCUSSION",
+          "score": 27.36
+        },
+        {
+          "filename": "li2018.pdf.md",
+          "heading": "1. Introduction",
+          "score": 22.31
+        },
+        {
+          "filename": "staubach1998.pdf.md",
+          "heading": "RESULTS",
+          "score": 20.49
+        },
+        {
+          "filename": "staubach1998.pdf.md",
+          "heading": "DISCUSSION",
+          "score": 19.52
+        },
+        {
+          "filename": "glazener2011.pdf.md",
+          "heading": "Contributors",
+          "score": 18.36
+        },
+        {
+          "filename": "10.1016@s0041-13450001266-5.pdf.md",
+          "heading": "DISCUSSION",
+          "score": 18.15
+        }
+      ],
+      "unresolved": [],
+      "words": 6216
+    },
+    "call_key": "883f32eb423c1e7f73cebc2f",
+    "model": "local-rules-v1.8",
+    "captured": "2026-10-30T03:38:33+00:00"
+  },
+  {
+    "response_id": "R-Q0022-A01",
+    "qid": "Q0022",
+    "attempt": "A01",
+    "outcome": "COMPLETE",
+    "usable": true,
+    "text": "[SOURCE] \"However, early in the study, while subjects received intravenous infusion, the pentoxifylline group had significantly higher level of consciousness, motor strength, cranial nerve function, and total neurologic deficit scores than did the control group; CBF was not measured.\" (bowton1989.pdf.md, Pentoxifylline Increases Cerebral Blood Flow in Patients With Cerebrovascular Di)\n[SOURCE] \"There was a trend toward improved level of consciousness in the pentoxifylline group, though this difference did not achieve significance.\" (bowton1989.pdf.md, Pentoxifylline Increases Cerebral Blood Flow in Patients With Cerebrovascular Di)\n[SOURCE] \"Our observation of increased TNF/actin ratios in 8 of 15 patients (53%) is consistent with other investigators who determined that 50% of 226 serum samples from cancer patients had increased TNF as measured by an enzyme-linked immunosorbent assay, and that 8 of 11 RNA samples from peripheral blood mononuclear cells from these patients had increased TNF RNA levels as measured in an assay similar to the one in this report [2].\" (dezube1993.pdf.md, Short communication)\n[SOURCE] \"observations – first, not all of our advanced cachectic cancer patients had elevated TNF/actin ratios; second, 2 of our patients had an improvement in well-being, together with a weight gain over the 3-week treatment period even though their initial TNF/actin ratios were not elevated.\" (dezube1993.pdf.md, Short communication)\n[SOURCE] \"Long-term follow-up of previous phase II patients, in fact, helped us to understand that improvement under combined PTX/Vit E treatment is slow, progressive, and continuous, with a maximum effect after periods ranging from 18 months to 3 years (Delanian et al, unpublished data, 2003), to take account of patient-to-patient variability.\" (delanian2003.pdf.md, Results)\n[SOURCE] \"However, the magnitude of improvement was more pronounced in the PTX group, and the between-group HL confidence interval indicated a meaningful treatment advantage.\" (pharmaceuticals-19-00552.pdf.md, Results)\n\n[INFERRED] The quoted passages are what this notebook contains on the question. Each quotation is attributed above to its file and section; no finding outside these passages is asserted. Sources quoted: bowton1989.pdf.md, delanian2003.pdf.md, dezube1993.pdf.md, pharmaceuticals-19-00552.pdf.md.",
+    "cited_sources": [
+      "bowton1989.pdf.md",
+      "dezube1993.pdf.md",
+      "delanian2003.pdf.md",
+      "pharmaceuticals-19-00552.pdf.md"
+    ],
+    "requested_sources_cited": [
+      "bowton1989.pdf.md",
+      "dezube1993.pdf.md"
+    ],
+    "requested_sources_absent": [],
+    "retrieval": {
+      "named": [
+        {
+          "filename": "bowton1989.pdf.md",
+          "complete": true,
+          "words": 3910
+        },
+        {
+          "filename": "dezube1993.pdf.md",
+          "complete": true,
+          "words": 4023
+        }
+      ],
+      "other": [
+        {
+          "filename": "pharmaceuticals-19-00552.pdf.md",
+          "heading": "3. Discussion",
+          "score": 23.16
+        },
+        {
+          "filename": "MS patients and PTX.pdf.md",
+          "heading": "5. Discussion",
+          "score": 22.65
+        },
+        {
+          "filename": "pharmaceuticals-19-00552.pdf.md",
+          "heading": "3. Discussion",
+          "score": 20.57
+        },
+        {
+          "filename": "clemens2000.pdf.md",
+          "heading": "RESULTS",
+          "score": 20.38
+        },
+        {
+          "filename": "delanian2003.pdf.md",
+          "heading": "DISCUSSION",
+          "score": 20.33
+        },
+        {
+          "filename": "pharmaceuticals-19-00552.pdf.md",
+          "heading": "4.11. Handling of Missing Data",
+          "score": 19.86
+        }
+      ],
+      "unresolved": [],
+      "words": 9771
+    },
+    "call_key": "5e008ce9312eb4588f2f5924",
+    "model": "local-rules-v1.8",
+    "captured": "2026-10-30T03:38:33+00:00"
+  },
+  {
+    "response_id": "R-Q0023-A01",
+    "qid": "Q0023",
+    "attempt": "A01",
+    "outcome": "COMPLETE",
+    "usable": true,
+    "text": "[SOURCE] \"Our observation of increased TNF/actin ratios in 8 of 15 patients (53%) is consistent with other investigators who determined that 50% of 226 serum samples from cancer patients had increased TNF as measured by an enzyme-linked immunosorbent assay, and that 8 of 11 RNA samples from peripheral blood mononuclear cells from these patients had increased TNF RNA levels as measured in an assay similar to the one in this report [2].\" (dezube1993.pdf.md, Short communication)\n[SOURCE] \"The excessive levels of tumor necrosis factor- $\\alpha$ (TNF)/cachectin reported in 50% of cancer patients exhibiting clinically active disease may therefore mediate, at least in part, the cachexia associated with malignancy.\" (dezube1993.pdf.md, Short communication)\n[SOURCE] \"[2,3] In this study we add to existing knowledge reported from the RCT, specifically investigating diary entries completed by women in response to their exercise prescription: findings not previously reported.\" (stokes2022.pdf.md, Results)\n[SOURCE] \"In conclusion, our data suggest that the utility of aminophylline for improving early pathologic manifestations of sepsis should be questioned.\" (fakioglu2004.pdf.md, Results)\n[SOURCE] \"This may indicate that pentoxifylline in high doses has a direct vasodilating effect on large cerebral arteries, which could be a result of its PDE-inhibiting actions (Kamphuis *et al.*, 1994).\" (kruuse2000.pdf.md, Results)\n[SOURCE] \"Therefore, the reported remission rates reflect clinical and biochemical improvements but may not fully capture mucosal healing, which should be considered in interpreting the results.\" (pharmaceuticals-19-00552.pdf.md, Results)\n\n[INFERRED] The quoted passages are what this notebook contains on the question. Each quotation is attributed above to its file and section; no finding outside these passages is asserted. Sources quoted: dezube1993.pdf.md, fakioglu2004.pdf.md, kruuse2000.pdf.md, pharmaceuticals-19-00552.pdf.md, stokes2022.pdf.md.",
+    "cited_sources": [
+      "dezube1993.pdf.md",
+      "stokes2022.pdf.md",
+      "fakioglu2004.pdf.md",
+      "kruuse2000.pdf.md",
+      "pharmaceuticals-19-00552.pdf.md"
+    ],
+    "requested_sources_cited": [
+      "dezube1993.pdf.md"
+    ],
+    "requested_sources_absent": [],
+    "retrieval": {
+      "named": [
+        {
+          "filename": "dezube1993.pdf.md",
+          "complete": true,
+          "words": 4023
+        }
+      ],
+      "other": [
+        {
+          "filename": "MS patients and PTX.pdf.md",
+          "heading": "5. Discussion",
+          "score": 21.0
+        },
+        {
+          "filename": "kruuse2000.pdf.md",
+          "heading": "**Present results**",
+          "score": 20.9
+        },
+        {
+          "filename": "stokes2022.pdf.md",
+          "heading": "**HYPOTHESIS / AIMS OF STUDY**",
+          "score": 20.32
+        },
+        {
+          "filename": "pharmaceuticals-19-00552.pdf.md",
+          "heading": "3. Discussion",
+          "score": 19.57
+        },
+        {
+          "filename": "fitzgerald2009.pdf.md",
+          "heading": "DISCUSSION",
+          "score": 18.9
+        },
+        {
+          "filename": "fakioglu2004.pdf.md",
+          "heading": "*4.1. Study limitations*",
+          "score": 18.88
+        }
+      ],
+      "unresolved": [],
+      "words": 5191
+    },
+    "call_key": "27266f79dafc171847d5e59c",
+    "model": "local-rules-v1.8",
+    "captured": "2026-10-30T03:38:33+00:00"
+  },
+  {
+    "response_id": "R-Q0024-A01",
+    "qid": "Q0024",
+    "attempt": "A01",
+    "outcome": "COMPLETE",
+    "usable": true,
+    "text": "[SOURCE] \"The decrease of IL-6 levels could be explained by binding of IL-6 to soluble receptors, thus being no longer detectable in the bioassay.\" (immunology00076-0102.pdf.md, Pentoxifylline *in vivo* down-regulates the release of IL-1 $\\beta$ , IL-6, IL-8)\n[SOURCE] \"A meta-analysis found positive beneficial effects of acupuncture compared with a sham control for short- and medium-term follow-up in both IPSS and urine flow rates in some studies; however, when combining the studies for more statistical power, the benefits were less clear.<sup>12</sup> Physical therapists with specialized training and certification in pelvic health can incorporate certain bladder training techniques.\" (fdp03812573_1.pdf.md, A Practical Approach for Primary Care Practitioners to Evaluate and Manage Lower)\n[SOURCE] \"These include voiding positional changes (double voiding and postvoid urethral milking) and timed voiding.<sup>13,14</sup> These interventions often address etiologies of LUTS for which medical therapies are not effective as the sole treatment option.\" (fdp03812573_1.pdf.md, A Practical Approach for Primary Care Practitioners to Evaluate and Manage Lower)\n[SOURCE] \"or to attenuate the release of tumour necrosis factor- $\\alpha$ (TNF- $\\alpha$ ) induced by lipopolysaccharide (LPS) *in vitro* and *in vivo*.<sup>2–4</sup> Studies on murine macrophage cell lines revealed that this effect was exerted at the transcriptional level.<sup>5,6</sup> Since TNF- $\\alpha$ is an important inflammatory mediator and obviously pathogenically important in a variety of disorders, including graft versus host disease, pulmonary fibrosis, cerebral malaria and septic shock,<sup>7–11</sup> this observation had potential clinical implications, suggesting PTX as a drug with potential anti-inflammatory capacity.\" (immunology00076-0102.pdf.md, Pentoxifylline *in vivo* down-regulates the release of IL-1 $\\beta$ , IL-6, IL-8)\n[SOURCE] \"There is evidence from preclinical data that the sequelae of events provoked by endotoxin can be overcome, at least partially, by oxpentifylline.<sup>22</sup> This drug inhibits various leucocyte functions after activation by different pathophysiological stimuli in vitro.<sup>13,23,24</sup> In vivo, oxpentifylline protected from increased pulmonary vascular permeability and sequestration of neutrophils in the lung in different animal models of acute lung injury.<sup>10,25,26</sup> Moreover, in pigs with induced faecal peritonitis the drug improved haemodynamic variables as well as pulmonary compliance and reduced the number of pulmonary neutrophils and lymphocytes.<sup>27</sup> Consequently, as a general outcome, oxpentifylline could be found to improve survival in different models of haemorrhagic<sup>28</sup> and endotoxic shock.<sup>11</sup> Our study shows that the positive findings from animal models may possibly apply also to human beings.\" (zabel1989.pdf.md, Results)\n[SOURCE] \"The significant differences in education level and hypertension prevalence between groups could have influenced outcomes.\" (11255_2025_Article_4454.pdf.md, Results)\n\n[INFERRED] The quoted passages are what this notebook contains on the question. Each quotation is attributed above to its file and section; no finding outside these passages is asserted. Sources quoted: 11255_2025_Article_4454.pdf.md, fdp03812573_1.pdf.md, immunology00076-0102.pdf.md, zabel1989.pdf.md.",
+    "cited_sources": [
+      "immunology00076-0102.pdf.md",
+      "fdp03812573_1.pdf.md",
+      "zabel1989.pdf.md",
+      "11255_2025_Article_4454.pdf.md"
+    ],
+    "requested_sources_cited": [
+      "fdp03812573_1.pdf.md",
+      "immunology00076-0102.pdf.md"
+    ],
+    "requested_sources_absent": [],
+    "retrieval": {
+      "named": [
+        {
+          "filename": "fdp03812573_1.pdf.md",
+          "complete": false,
+          "words": 4003
+        },
+        {
+          "filename": "immunology00076-0102.pdf.md",
+          "complete": false,
+          "words": 3078
+        }
+      ],
+      "other": [
+        {
+          "filename": "pharmaceuticals-19-00552.pdf.md",
+          "heading": "3. Discussion",
+          "score": 22.65
+        },
+        {
+          "filename": "MS patients and PTX.pdf.md",
+          "heading": "5. Discussion",
+          "score": 21.0
+        },
+        {
+          "filename": "kruuse2000.pdf.md",
+          "heading": "**Present results**",
+          "score": 17.24
+        },
+        {
+          "filename": "zabel1989.pdf.md",
+          "heading": "Discussion",
+          "score": 17.08
+        },
+        {
+          "filename": "parker2000.pdf.md",
+          "heading": "4. Discussion",
+          "score": 17.01
+        },
+        {
+          "filename": "11255_2025_Article_4454.pdf.md",
+          "heading": "Discussion",
+          "score": 16.87
+        }
+      ],
+      "unresolved": [],
+      "words": 8787
+    },
+    "call_key": "d27aef4d6bf719dd8ef3d981",
+    "model": "local-rules-v1.8",
+    "captured": "2026-10-30T03:38:33+00:00"
+  },
+  {
+    "response_id": "R-Q0025-A01",
+    "qid": "Q0025",
+    "attempt": "A01",
+    "outcome": "COMPLETE",
+    "usable": true,
+    "text": "[SOURCE] \"or to attenuate the release of tumour necrosis factor- $\\alpha$ (TNF- $\\alpha$ ) induced by lipopolysaccharide (LPS) *in vitro* and *in vivo*.<sup>2–4</sup> Studies on murine macrophage cell lines revealed that this effect was exerted at the transcriptional level.<sup>5,6</sup> Since TNF- $\\alpha$ is an important inflammatory mediator and obviously pathogenically important in a variety of disorders, including graft versus host disease, pulmonary fibrosis, cerebral malaria and septic shock,<sup>7–11</sup> this observation had potential clinical implications, suggesting PTX as a drug with potential anti-inflammatory capacity.\" (immunology00076-0102.pdf.md, Pentoxifylline *in vivo* down-regulates the release of IL-1 $\\beta$ , IL-6, IL-8)\n[SOURCE] \"For example, it has been reported that IL-6 release is not affected by PTX,<sup>3</sup> while others have observed even an enhancing effect.<sup>17</sup> IL-1, IL-6 and IL-8 represent important inflammatory mediators comparable to TNF- $\\alpha$ ,<sup>21</sup> thus we were interested to study the effect of PTX on the release of these mediators by human peripheral blood mononuclear cells (PBMC).\" (immunology00076-0102.pdf.md, Pentoxifylline *in vivo* down-regulates the release of IL-1 $\\beta$ , IL-6, IL-8)\n[SOURCE] \"There is evidence from preclinical data that the sequelae of events provoked by endotoxin can be overcome, at least partially, by oxpentifylline.<sup>22</sup> This drug inhibits various leucocyte functions after activation by different pathophysiological stimuli in vitro.<sup>13,23,24</sup> In vivo, oxpentifylline protected from increased pulmonary vascular permeability and sequestration of neutrophils in the lung in different animal models of acute lung injury.<sup>10,25,26</sup> Moreover, in pigs with induced faecal peritonitis the drug improved haemodynamic variables as well as pulmonary compliance and reduced the number of pulmonary neutrophils and lymphocytes.<sup>27</sup> Consequently, as a general outcome, oxpentifylline could be found to improve survival in different models of haemorrhagic<sup>28</sup> and endotoxic shock.<sup>11</sup> Our study shows that the positive findings from animal models may possibly apply also to human beings.\" (zabel1989.pdf.md, Results)\n[SOURCE] \"To our knowledge, this study represents one of the first pilot clinical investigations to assess the adjunctive role of PTX in UC, integrating both clinical efficacy endpoints (PMS and IBDQ-32) and mechanistic inflammatory biomarkers such as fecal calprotectin, ESR, and TNF- $\\alpha$ .\" (pharmaceuticals-19-00552.pdf.md, Results)\n[SOURCE] \"These findings suggest that PTX may exert its therapeutic effects independently of baseline treatment status, supporting its role as a promising adjunctive therapy in patients with mild-to-moderate ulcerative colitis.\" (pharmaceuticals-19-00552.pdf.md, Results)\n[SOURCE] \"Despite these limitations, the consistency of findings across multiple clinical and biochemical outcomes, as well as across subgroup and adjusted analyses, supports the robustness of the observed treatment effect.\" (pharmaceuticals-19-00552.pdf.md, Results)\n\n[INFERRED] The quoted passages are what this notebook contains on the question. Each quotation is attributed above to its file and section; no finding outside these passages is asserted. Sources quoted: immunology00076-0102.pdf.md, pharmaceuticals-19-00552.pdf.md, zabel1989.pdf.md.",
+    "cited_sources": [
+      "immunology00076-0102.pdf.md",
+      "zabel1989.pdf.md",
+      "pharmaceuticals-19-00552.pdf.md"
+    ],
+    "requested_sources_cited": [
+      "immunology00076-0102.pdf.md"
+    ],
+    "requested_sources_absent": [],
+    "retrieval": {
+      "named": [
+        {
+          "filename": "immunology00076-0102.pdf.md",
+          "complete": false,
+          "words": 4299
+        }
+      ],
+      "other": [
+        {
+          "filename": "pharmaceuticals-19-00552.pdf.md",
+          "heading": "3. Discussion",
+          "score": 28.34
+        },
+        {
+          "filename": "pharmaceuticals-19-00552.pdf.md",
+          "heading": "3. Discussion",
+          "score": 25.38
+        },
+        {
+          "filename": "pharmaceuticals-19-00552.pdf.md",
+          "heading": "3. Discussion",
+          "score": 21.62
+        },
+        {
+          "filename": "MS patients and PTX.pdf.md",
+          "heading": "5. Discussion",
+          "score": 21.0
+        },
+        {
+          "filename": "pharmaceuticals-19-00552.pdf.md",
+          "heading": "4.11. Handling of Missing Data",
+          "score": 20.27
+        },
+        {
+          "filename": "zabel1989.pdf.md",
+          "heading": "Discussion",
+          "score": 19.55
+        }
+      ],
+      "unresolved": [],
+      "words": 6003
+    },
+    "call_key": "c2513cab2283af3e4b5d0734",
+    "model": "local-rules-v1.8",
+    "captured": "2026-10-30T03:38:33+00:00"
+  },
+  {
+    "response_id": "R-Q0026-A01",
+    "qid": "Q0026",
+    "attempt": "A01",
+    "outcome": "COMPLETE",
+    "usable": true,
+    "text": "[SOURCE] \"Contrary to the aforementioned observations in patients with cerebrovascular disease, we did not observe an increase in cerebral blood flow in the territory of the middle cerebral artery (rCBF<sub>mca</sub>) or in global CBF during infusion of 300 mg pentoxifylline in healthy subjects.\" (kruuse2000.pdf.md, Effects of the non-selective phosphodiesterase inhibitor pentoxifylline on regio)\n[SOURCE] \"Pentoxifylline has been suggested for use in a variety of medical conditions, and clinical trials in peripheral vascular disease have shown an increase in walking distance and peripheral blood flow after administration (Rudofsky *et al.*, 1989; Schweiger and Ortmeier, 1989).\" (kruuse2000.pdf.md, Effects of the non-selective phosphodiesterase inhibitor pentoxifylline on regio)\n[SOURCE] \"Do you have data on the stability of the calcium in these patients, and is it possible that the preferential effects on the cardiopulmonary system may be reflected through a stabilization of calcium levels? **Philip S.\" (staubach1998.pdf.md, Results)\n[SOURCE] \"In conclusion, patients who had surgery and achieved remission for CD had higher incidence of new-onset autoimmune disease than age- and sex-matched patients who underwent surgery for NFPA.\" (Nyanyo2024_Cushings_Disease_A.md, Results)\n[SOURCE] \"In a subsequent clinical study in septic patients, the same group observed a similar response to pentoxifylline and noted cardiovascular improvements in those patients given aggressive fluid resuscitation [33].\" (parker2000.pdf.md, Results)\n[SOURCE] \"A much smaller dose will be effective, and this has also been shown from Hoffman and coworkers with 3 mg/kg body weight or even with 1.5 mg/kg body weight, which is also the dose that we use in humans.\" (ridings1994.pdf.md, Results)\n\n[INFERRED] The quoted passages are what this notebook contains on the question. Each quotation is attributed above to its file and section; no finding outside these passages is asserted. Sources quoted: Nyanyo2024_Cushings_Disease_A.md, kruuse2000.pdf.md, parker2000.pdf.md, ridings1994.pdf.md, staubach1998.pdf.md.",
+    "cited_sources": [
+      "kruuse2000.pdf.md",
+      "staubach1998.pdf.md",
+      "Nyanyo2024_Cushings_Disease_A.md",
+      "parker2000.pdf.md",
+      "ridings1994.pdf.md"
+    ],
+    "requested_sources_cited": [
+      "kruuse2000.pdf.md"
+    ],
+    "requested_sources_absent": [],
+    "retrieval": {
+      "named": [
+        {
+          "filename": "kruuse2000.pdf.md",
+          "complete": false,
+          "words": 4212
+        }
+      ],
+      "other": [
+        {
+          "filename": "staubach1998.pdf.md",
+          "heading": "DISCUSSION",
+          "score": 23.87
+        },
+        {
+          "filename": "pharmaceuticals-19-00552.pdf.md",
+          "heading": "4.11. Handling of Missing Data",
+          "score": 22.78
+        },
+        {
+          "filename": "parker2000.pdf.md",
+          "heading": "4. Discussion",
+          "score": 19.89
+        },
+        {
+          "filename": "luke1989.pdf.md",
+          "heading": "DISCUSSION",
+          "score": 19.44
+        },
+        {
+          "filename": "ridings1994.pdf.md",
+          "heading": "REFERENCES",
+          "score": 19.42
+        },
+        {
+          "filename": "Nyanyo2024_Cushings_Disease_A.md",
+          "heading": "DISCUSSION",
+          "score": 19.22
+        }
+      ],
+      "unresolved": [],
+      "words": 6050
+    },
+    "call_key": "d92c404f4ecfbe1019d8165b",
+    "model": "local-rules-v1.8",
+    "captured": "2026-10-30T03:38:34+00:00"
+  },
+  {
+    "response_id": "R-Q0027-A01",
+    "qid": "Q0027",
+    "attempt": "A01",
+    "outcome": "COMPLETE",
+    "usable": true,
+    "text": "[SOURCE] \"Such high concentrations of pentoxifylline increase the resting level of cAMP in unstimulated human neutrophils and monocytes (22) but at lower concentrations (100–500 µmol/l) significant effects of PTX are more easily seen when adenylate cyclase turnover is increased by stimulation with FMLP (18, 38) or Fc receptor engagement (39).\" (roberts1993.pdf.md, Pentoxifylline at clinically achievable levels inhibits FMLP-induced neutrophil )\n[SOURCE] \"The study confirmed that PTX at clinically achievable concentration (5–10 μmol/l) attenuated the responses of human neutrophils to chemotactic peptide, whereas it did not inhibit the effect of GM-CSF on neutrophil function even at high concentrations.\" (roberts1993.pdf.md, Pentoxifylline at clinically achievable levels inhibits FMLP-induced neutrophil )\n[SOURCE] \"At the cellular level, TNF has significant pleomorphic effects on cells which have been shown to orchestrate inflammatory processes; including endothelial cells, fibroblasts, polymorphonuclear leukocytes, blood monocytes and macrophages, adipocytes, lymphocytes, and osteoclasts (2,7,8).\" (strieter1988.pdf.md, CELLULAR AND MOLECULAR REGULATION OF TUMOR NECROSIS FACTOR- ALPHA PRODUCTION BY )\n[SOURCE] \"The pharmacologic effects of pentoxifylline may have important implications in clinical disease states where the local and systemic modulation of TNF may be essential for the control of specific inflammatory processes.\" (strieter1988.pdf.md, CELLULAR AND MOLECULAR REGULATION OF TUMOR NECROSIS FACTOR- ALPHA PRODUCTION BY )\n[SOURCE] \"This eventuates in BOO, which shows voiding dysfunction.<sup>18</sup> The clinical presentation is in the form of LUTS, including weak urinary stream, urgency, nocturia, urinary retention, straining, and frequency.<sup>19</sup> Currently, several drug modalities are recommended to treat the symptoms of BPH, including 5-alpha reductase inhibitors, $\\alpha$ 1-adrenoceptor antagonists, and phosphodiesterase five inhibitors.<sup>20</sup> Transurethral prostatectomy and open prostatectomy are non-pharmacological choices; nevertheless, there are risks related to prostatic surgery, including bleeding, retrograde ejaculation, and further surgical operations.<sup>21</sup>\" (Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md, Results)\n[SOURCE] \"The etiology of diabetic bladder dysfunction is multifactorial; both the myogenic and neurogenic effects of diabetic cystopathy cause a decrease in bladder sensation and impairment in voiding function [39].\" (ladi-seyedian2017.pdf.md, Results)\n\n[INFERRED] The quoted passages are what this notebook contains on the question. Each quotation is attributed above to its file and section; no finding outside these passages is asserted. Sources quoted: Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md, ladi-seyedian2017.pdf.md, roberts1993.pdf.md, strieter1988.pdf.md.",
+    "cited_sources": [
+      "roberts1993.pdf.md",
+      "strieter1988.pdf.md",
+      "Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md",
+      "ladi-seyedian2017.pdf.md"
+    ],
+    "requested_sources_cited": [
+      "roberts1993.pdf.md",
+      "strieter1988.pdf.md"
+    ],
+    "requested_sources_absent": [],
+    "retrieval": {
+      "named": [
+        {
+          "filename": "roberts1993.pdf.md",
+          "complete": false,
+          "words": 4369
+        },
+        {
+          "filename": "strieter1988.pdf.md",
+          "complete": true,
+          "words": 2682
+        }
+      ],
+      "other": [
+        {
+          "filename": "pharmaceuticals-19-00552.pdf.md",
+          "heading": "3. Discussion",
+          "score": 28.15
+        },
+        {
+          "filename": "MS patients and PTX.pdf.md",
+          "heading": "5. Discussion",
+          "score": 22.42
+        },
+        {
+          "filename": "Pentoxifylline-in-patients-with-ulcerative-colitis-treated-with-mesalamine-by-modulation.pdf.md",
+          "heading": "Discussion",
+          "score": 22.23
+        },
+        {
+          "filename": "11255_2025_Article_4454.pdf.md",
+          "heading": "Discussion",
+          "score": 18.38
+        },
+        {
+          "filename": "Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md",
+          "heading": "4 | DISCUSSION",
+          "score": 17.93
+        },
+        {
+          "filename": "ladi-seyedian2017.pdf.md",
+          "heading": "6. Risk factors",
+          "score": 17.85
+        }
+      ],
+      "unresolved": [],
+      "words": 8891
+    },
+    "call_key": "e6d784efaa8c88ab1ebbb62f",
+    "model": "local-rules-v1.8",
+    "captured": "2026-10-30T03:38:34+00:00"
+  },
+  {
+    "response_id": "R-Q0028-A01",
+    "qid": "Q0028",
+    "attempt": "A01",
+    "outcome": "COMPLETE",
+    "usable": true,
+    "text": "[SOURCE] \"At the cellular level, TNF has significant pleomorphic effects on cells which have been shown to orchestrate inflammatory processes; including endothelial cells, fibroblasts, polymorphonuclear leukocytes, blood monocytes and macrophages, adipocytes, lymphocytes, and osteoclasts (2,7,8).\" (strieter1988.pdf.md, CELLULAR AND MOLECULAR REGULATION OF TUMOR NECROSIS FACTOR- ALPHA PRODUCTION BY )\n[SOURCE] \"As shown in Figure 2, Northern blot analysis demonstrated a reduction in TNF mRNA in response to various concentrations of pentoxifylline.\" (strieter1988.pdf.md, CELLULAR AND MOLECULAR REGULATION OF TUMOR NECROSIS FACTOR- ALPHA PRODUCTION BY )\n[SOURCE] \"Higher PMS was associated with increased TNF- $\\alpha$ and fecal calprotectin levels and lower IBDQ-32 scores, while higher inflammatory markers were linked to poorer quality of life.\" (pharmaceuticals-19-00552.pdf.md, Results)\n[SOURCE] \"In dextran sulfate sodium (DSS)-induced colitis, PTX administration reduced disease activity index, histologic damage, and colonic levels of TNF- $\\alpha$ and malondialdehyde (MDA), a marker of lipid peroxidation [15].\" (pharmaceuticals-19-00552.pdf.md, Results)\n[SOURCE] \"Moreover, there was a significant and progressive increase in the risk of UFR decline observed across the tertiles of DII scores (p for trend <0.001). **CONCLUSIONS:** Our results indicate that a greater consumption of a pro-inflammatory diet, as indicated by higher DII scores, is associated with a reduction in urinary flow rate.\" (MP75-18-RATES-AND-ADHERENCE-TO-PELVIC-FLOOR-PHYSICAL-THERAPY-FOR-MALE-PATIENTS-WITH-BENIGN.pdf.md, Results)\n[SOURCE] \"This is supported by the responses to pentoxifylline seen in an aggressively resuscitated canine endotoxemia model [34].\" (parker2000.pdf.md, Results)\n\n[INFERRED] The quoted passages are what this notebook contains on the question. Each quotation is attributed above to its file and section; no finding outside these passages is asserted. Sources quoted: MP75-18-RATES-AND-ADHERENCE-TO-PELVIC-FLOOR-PHYSICAL-THERAPY-FOR-MALE-PATIENTS-WITH-BENIGN.pdf.md, parker2000.pdf.md, pharmaceuticals-19-00552.pdf.md, strieter1988.pdf.md.",
+    "cited_sources": [
+      "strieter1988.pdf.md",
+      "pharmaceuticals-19-00552.pdf.md",
+      "MP75-18-RATES-AND-ADHERENCE-TO-PELVIC-FLOOR-PHYSICAL-THERAPY-FOR-MALE-PATIENTS-WITH-BENIGN.pdf.md",
+      "parker2000.pdf.md"
+    ],
+    "requested_sources_cited": [
+      "strieter1988.pdf.md"
+    ],
+    "requested_sources_absent": [],
+    "retrieval": {
+      "named": [
+        {
+          "filename": "strieter1988.pdf.md",
+          "complete": true,
+          "words": 2682
+        }
+      ],
+      "other": [
+        {
+          "filename": "pharmaceuticals-19-00552.pdf.md",
+          "heading": "1. Introduction",
+          "score": 27.26
+        },
+        {
+          "filename": "pharmaceuticals-19-00552.pdf.md",
+          "heading": "3. Discussion",
+          "score": 27.21
+        },
+        {
+          "filename": "MP75-18-RATES-AND-ADHERENCE-TO-PELVIC-FLOOR-PHYSICAL-THERAPY-FOR-MALE-PATIENTS-WITH-BENIGN.pdf.md",
+          "heading": "EXAMINING THE RELATIONSHIP BETWEEN DIETARY INFLAMMATORY INDEX AND URINARY FLOW RATE: RESULTS FROM A NATIONWIDE STUDY",
+          "score": 23.02
+        },
+        {
+          "filename": "MS patients and PTX.pdf.md",
+          "heading": "5. Discussion",
+          "score": 23.01
+        },
+        {
+          "filename": "parker2000.pdf.md",
+          "heading": "4. Discussion",
+          "score": 22.54
+        },
+        {
+          "filename": "roerink2019.pdf.md",
+          "heading": "Discussion",
+          "score": 22.46
+        }
+      ],
+      "unresolved": [],
+      "words": 4602
+    },
+    "call_key": "ad938746bbda7b2499234f08",
+    "model": "local-rules-v1.8",
+    "captured": "2026-10-30T03:38:34+00:00"
+  },
+  {
+    "response_id": "R-Q0029-A01",
+    "qid": "Q0029",
+    "attempt": "A01",
+    "outcome": "COMPLETE",
+    "usable": true,
+    "text": "[SOURCE] \"Duncan M, Hasan A, Berman B: Pentoxifylline and interferons decrease type I and III procollagen mRNA levels in dermal fibroblasts: Evidence for mediation by nuclear factor 1 down-regulation.\" (delanian2003.pdf.md, Randomized, Placebo-Controlled Trial of Combined Pentoxifylline and Tocopherol f)\n[SOURCE] \"fibroblast proliferation and extracellular matrix production<sup>26,27</sup> and increases collagenase activity.<sup>26,27</sup> However, in our experimental pig study, we did not observe any clinical or histologic changes in RIF after 6 months of treatment with PTX alone.<sup>13</sup> The high concentration of PTX necessary to suppress fibroblast collagen synthesis or to increase collagenase activity, deduced by extrapolating the results of *in vitro* studies, might be extremely toxic and suggests that administration of PTX alone does not constitute an antifibrotic treatment.\" (delanian2003.pdf.md, Randomized, Placebo-Controlled Trial of Combined Pentoxifylline and Tocopherol f)\n[SOURCE] \"VitE is usually considered relatively safe.<sup>24</sup> It may reduce free radical–induced chromosomal damage by increasing the rate of removal of damaged DNA.<sup>30</sup> A recent meta-analysis of various randomized trials in the treatment and prevention of cardiovascular disease found no beneficial or adverse effect of vitE on survival.<sup>31,32</sup> However, another meta-analysis<sup>33</sup> of randomized trials<sup>34</sup> that considered the dose-response relationship between vitE supplementation and total mortality showed that high-dose ( $\\geq 400$ U/d) vitE supplements administered for longer than 1 year in chronic cardiovascular disease may increase all-cause mortality.\" (delanian2005.pdf.md, Kinetics of Response to Long-Term Treatment Combining Pentoxifylline and Tocophe)\n[SOURCE] \"- Delanian S, Lefaix J-L: The radiation-induced fibro-atrophic process: Therapeutic perspective via the antioxidant pathway. *Radiother Oncol* 73:119-131, 2004 - Hill C, Rodemann H, Hendry J, et al: Normal tissue radiobiology: From the laboratory to the clinic. *Int J Radiat Oncol Biol Phys* 49:353-365, 2001 - Burger A, Loffler H, Bamberg M, et al: Molecular and cellular basis of radiation fibrosis. *Int J Radiat Biol* 73:401-408, 1998 - Denham J, Hauer-Jensen M: The radiotherapeutic injury: A complex wound. *Radiother Oncol* 63:129-145, 2002 - Martin M, Lefaix J-L, Delanian S: TGF-beta1 and radiation fibrosis: A master switch and a specific therapeutic target? *Int J Radiat Oncol Biol Phys* 47:277-290, 2000 - Stone H, Coleman N, Ansher M, et al: Effects of radiation on normal tissue: Consequences and mechanisms. *Lancet Oncol* 4:529-536, 2003 - Delanian S: Striking regression of radiation-induced fibrosis by a combination of pentoxifylline and tocopherol (case report). *Br J Radiol* 71:892-894, 1998 - Delanian S, Balla-Mekias S, Lefaix J-L: Striking regression of chronic radiotherapy damage in a clinical trial of combined pentoxifylline and tocopherol. *J Clin Oncol* 17:3283-3290, 1999 - Delanian S, Porcher R, Balla-Mekias S, et al: Randomized placebo-controlled trial of combined pentoxifylline and tocopherol for regression of superficial radiation-induced fibrosis. *J Clin Oncol* 21:2545-2550, 2003 - Radiotherapy Oncology Group and European Organisation for Research and Treatment of Cancer: Late effects consensus conference: RTOG/EORTC. *Radiother Oncol* 35:5-7, 1995 - Stone H, McBride W, Coleman N: Modifying normal tissue damage post-irradiation: Report of a workshop sponsored by the Radiation Research Program, NCI, Bethesda, Maryland, September 6-8, 2000. *Radiat Res* 157:204-223, 2002 - Davidian M, Giltinan DM: Nonlinear Models for Repeated Measurement Data: Monographs on Statistics and Applied Probability.\" (delanian2005.pdf.md, Kinetics of Response to Long-Term Treatment Combining Pentoxifylline and Tocophe)\n[SOURCE] \"There is evidence from preclinical data that the sequelae of events provoked by endotoxin can be overcome, at least partially, by oxpentifylline.<sup>22</sup> This drug inhibits various leucocyte functions after activation by different pathophysiological stimuli in vitro.<sup>13,23,24</sup> In vivo, oxpentifylline protected from increased pulmonary vascular permeability and sequestration of neutrophils in the lung in different animal models of acute lung injury.<sup>10,25,26</sup> Moreover, in pigs with induced faecal peritonitis the drug improved haemodynamic variables as well as pulmonary compliance and reduced the number of pulmonary neutrophils and lymphocytes.<sup>27</sup> Consequently, as a general outcome, oxpentifylline could be found to improve survival in different models of haemorrhagic<sup>28</sup> and endotoxic shock.<sup>11</sup> Our study shows that the positive findings from animal models may possibly apply also to human beings.\" (zabel1989.pdf.md, Results)\n[SOURCE] \"Despite these limitations, the consistency of findings across multiple clinical and biochemical outcomes, as well as across subgroup and adjusted analyses, supports the robustness of the observed treatment effect.\" (pharmaceuticals-19-00552.pdf.md, Results)\n\n[INFERRED] The quoted passages are what this notebook contains on the question. Each quotation is attributed above to its file and section; no finding outside these passages is asserted. Sources quoted: delanian2003.pdf.md, delanian2005.pdf.md, pharmaceuticals-19-00552.pdf.md, zabel1989.pdf.md.",
+    "cited_sources": [
+      "delanian2003.pdf.md",
+      "delanian2005.pdf.md",
+      "zabel1989.pdf.md",
+      "pharmaceuticals-19-00552.pdf.md"
+    ],
+    "requested_sources_cited": [
+      "delanian2003.pdf.md",
+      "delanian2005.pdf.md"
+    ],
+    "requested_sources_absent": [],
+    "retrieval": {
+      "named": [
+        {
+          "filename": "delanian2003.pdf.md",
+          "complete": false,
+          "words": 3980
+        },
+        {
+          "filename": "delanian2005.pdf.md",
+          "complete": false,
+          "words": 4454
+        }
+      ],
+      "other": [
+        {
+          "filename": "MS patients and PTX.pdf.md",
+          "heading": "5. Discussion",
+          "score": 21.0
+        },
+        {
+          "filename": "pharmaceuticals-19-00552.pdf.md",
+          "heading": "3. Discussion",
+          "score": 20.65
+        },
+        {
+          "filename": "pharmaceuticals-19-00552.pdf.md",
+          "heading": "4.11. Handling of Missing Data",
+          "score": 20.27
+        },
+        {
+          "filename": "Pentoxifylline-in-patients-with-ulcerative-colitis-treated-with-mesalamine-by-modulation.pdf.md",
+          "heading": "Discussion",
+          "score": 18.34
+        },
+        {
+          "filename": "kruuse2000.pdf.md",
+          "heading": "**Present results**",
+          "score": 17.24
+        },
+        {
+          "filename": "zabel1989.pdf.md",
+          "heading": "Discussion",
+          "score": 17.08
+        }
+      ],
+      "unresolved": [],
+      "words": 10138
+    },
+    "call_key": "42139f40b60da843548ebd4d",
+    "model": "local-rules-v1.8",
+    "captured": "2026-10-30T03:38:34+00:00"
+  },
+  {
+    "response_id": "R-Q0030-A01",
+    "qid": "Q0030",
+    "attempt": "A01",
+    "outcome": "COMPLETE",
+    "usable": true,
+    "text": "[SOURCE] \"VitE is usually considered relatively safe.<sup>24</sup> It may reduce free radical–induced chromosomal damage by increasing the rate of removal of damaged DNA.<sup>30</sup> A recent meta-analysis of various randomized trials in the treatment and prevention of cardiovascular disease found no beneficial or adverse effect of vitE on survival.<sup>31,32</sup> However, another meta-analysis<sup>33</sup> of randomized trials<sup>34</sup> that considered the dose-response relationship between vitE supplementation and total mortality showed that high-dose ( $\\geq 400$ U/d) vitE supplements administered for longer than 1 year in chronic cardiovascular disease may increase all-cause mortality.\" (delanian2005.pdf.md, Kinetics of Response to Long-Term Treatment Combining Pentoxifylline and Tocophe)\n[SOURCE] \"However, a decrease in DNA strand breaks measured by the comet assay suggests that this combination could interfere with the DNA repair process.<sup>27</sup> Further studies are necessary to understand the immediate and delayed effects of the combined PTX-vitE treatment on irradiated tissues.\" (delanian2005.pdf.md, Kinetics of Response to Long-Term Treatment Combining Pentoxifylline and Tocophe)\n[SOURCE] \"Deformed cells were observed in the single pentoxifylline-treated rat with glomerular congestion; this finding is consistent with the hemorheologic effects of pentoxifylline on cell deformability (2).\" (luke1989.pdf.md, Results)\n[SOURCE] \"The significant differences in education level and hypertension prevalence between groups could have influenced outcomes.\" (11255_2025_Article_4454.pdf.md, Results)\n[SOURCE] \"However, a slight but significant decrease of blood flow velocity in the middle cerebral artery (*V*<sub>mca</sub>) was measured compared with baseline during infusion of pentoxifylline, which was not measured during placebo.\" (kruuse2000.pdf.md, Results)\n[SOURCE] \"In order to provide higher and potentially pharmacologically beneficial doses of aminophylline without concerns of hypoxemia, it might be warranted to provide artificial ventilation for the study animals of which may also allow for determination of dose response curves of aminophylline in such critical care conditions.\" (fakioglu2004.pdf.md, Results)\n\n[INFERRED] The quoted passages are what this notebook contains on the question. Each quotation is attributed above to its file and section; no finding outside these passages is asserted. Sources quoted: 11255_2025_Article_4454.pdf.md, delanian2005.pdf.md, fakioglu2004.pdf.md, kruuse2000.pdf.md, luke1989.pdf.md.",
+    "cited_sources": [
+      "delanian2005.pdf.md",
+      "luke1989.pdf.md",
+      "11255_2025_Article_4454.pdf.md",
+      "kruuse2000.pdf.md",
+      "fakioglu2004.pdf.md"
+    ],
+    "requested_sources_cited": [
+      "delanian2005.pdf.md"
+    ],
+    "requested_sources_absent": [],
+    "retrieval": {
+      "named": [
+        {
+          "filename": "delanian2005.pdf.md",
+          "complete": false,
+          "words": 4454
+        }
+      ],
+      "other": [
+        {
+          "filename": "MS patients and PTX.pdf.md",
+          "heading": "5. Discussion",
+          "score": 26.9
+        },
+        {
+          "filename": "kruuse2000.pdf.md",
+          "heading": "**Present results**",
+          "score": 20.9
+        },
+        {
+          "filename": "luke1989.pdf.md",
+          "heading": "DISCUSSION",
+          "score": 20.3
+        },
+        {
+          "filename": "fitzgerald2009.pdf.md",
+          "heading": "DISCUSSION",
+          "score": 18.9
+        },
+        {
+          "filename": "fakioglu2004.pdf.md",
+          "heading": "*4.1. Study limitations*",
+          "score": 18.88
+        },
+        {
+          "filename": "11255_2025_Article_4454.pdf.md",
+          "heading": "Discussion",
+          "score": 16.87
+        }
+      ],
+      "unresolved": [],
+      "words": 5829
+    },
+    "call_key": "990a850b27d2bbf66edebdb9",
+    "model": "local-rules-v1.8",
+    "captured": "2026-10-30T03:38:34+00:00"
+  },
+  {
+    "response_id": "R-Q0031-A01",
+    "qid": "Q0031",
+    "attempt": "A01",
+    "outcome": "COMPLETE",
+    "usable": true,
+    "text": "[SOURCE] \"a promising adjunct to antidepressants in the treatment of MDD patients | | <a href=\"#\">Yasrebi et al 2021</a> | Iran | 2020 | RCT | Mild to moderate MDD Patients with CAD | 70 | PTX | 400 mg BID | Placebo | 6 weeks | baseline,2,4,6 weeks | HAM-D score | Patients receiving pentoxifylline had greater improvement in HAM-D scores from baseline, Rate of remission, treatment response, and adverse effects did not differ between the two groups | | <a href=\"#\">Farajollahi-Moghadam et al 2021</a> | Iran | 2019– 2020 | RCT | Severe MDD patients | 68 | PTX plus sertraline 100 mg/day | 400 mg TID | Placebo plus sertraline 100 mg/day | 6 weeks | baseline,2,4,6 weeks | HAM-D score | The findings support the efficacy and safety of pentoxifylline combination therapy in depression patients with MDD |\" (s00210-025-03845-1.pdf.md, Efficacy, safety and mechanistic insights of pentoxifylline in major depressive )\n[SOURCE] \"(2024) disagreed with our study as they found that PTX has no antidepressant effect, which may be attributed to their inclusion of patients with treatment-resistant depression and bipolar disorder (Mohammad et al.\" (s00210-025-03845-1.pdf.md, Efficacy, safety and mechanistic insights of pentoxifylline in major depressive )\n[SOURCE] \"The timing of the intervention (starting 6 weeks postoperatively) was dictated by the terms of the Health Technology Assessment commissioning brief, but it could be argued that starting earlier or before surgery would result in unnecessary treatment of men who would become dry spontaneously.\" (glazener2011.pdf.md, Results)\n[SOURCE] \"Studies of short-term adherence to PFMT programs in women have identified poor adherence as a potential barrier to treatment effectiveness.<sup>24,25</sup> It has been recommended that adherence be continually monitored and reported in research and clinical settings.<sup>26</sup> As adherence may contribute to the difference in efficacy of PFMT studies, absence of this information could compromise interpretation of the results of individual clinical trials.\" (hall2018.pdf.md, Results)\n[SOURCE] \"Barie, MD, New York:** I wonder if you could comment on the temporal relationships between the timing of intervention and the fact that the physiologic responses you observed became meaningful statistically at 7 to as many as 14 days thereafter?\" (staubach1998.pdf.md, Results)\n[SOURCE] \"Although this is a highly conservative approach that may bias the results toward the null, it was selected to maintain the integrity of randomization and to prevent overestimation of treatment effects in this pilot study.\" (pharmaceuticals-19-00552.pdf.md, Results)\n\n[INFERRED] The quoted passages are what this notebook contains on the question. Each quotation is attributed above to its file and section; no finding outside these passages is asserted. Sources quoted: glazener2011.pdf.md, hall2018.pdf.md, pharmaceuticals-19-00552.pdf.md, s00210-025-03845-1.pdf.md, staubach1998.pdf.md.",
+    "cited_sources": [
+      "s00210-025-03845-1.pdf.md",
+      "glazener2011.pdf.md",
+      "hall2018.pdf.md",
+      "staubach1998.pdf.md",
+      "pharmaceuticals-19-00552.pdf.md"
+    ],
+    "requested_sources_cited": [
+      "s00210-025-03845-1.pdf.md"
+    ],
+    "requested_sources_absent": [],
+    "retrieval": {
+      "named": [
+        {
+          "filename": "s00210-025-03845-1.pdf.md",
+          "complete": false,
+          "words": 4409
+        }
+      ],
+      "other": [
+        {
+          "filename": "Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md",
+          "heading": "2.3 | Study design",
+          "score": 25.66
+        },
+        {
+          "filename": "hall2018.pdf.md",
+          "heading": "4.2 | Heterogeneity in the content of PFMT programs",
+          "score": 23.47
+        },
+        {
+          "filename": "glazener2011.pdf.md",
+          "heading": "Contributors",
+          "score": 23.42
+        },
+        {
+          "filename": "glazener2011.pdf.md",
+          "heading": "Interpretation",
+          "score": 22.97
+        },
+        {
+          "filename": "staubach1998.pdf.md",
+          "heading": "DISCUSSION",
+          "score": 22.27
+        },
+        {
+          "filename": "pharmaceuticals-19-00552.pdf.md",
+          "heading": "4.11. Handling of Missing Data",
+          "score": 22.0
+        }
+      ],
+      "unresolved": [],
+      "words": 6208
+    },
+    "call_key": "82b60b8ebf68168c29c39c7a",
+    "model": "local-rules-v1.8",
+    "captured": "2026-10-30T03:38:35+00:00"
+  },
+  {
+    "response_id": "R-Q0032-A01",
+    "qid": "Q0032",
+    "attempt": "A01",
+    "outcome": "COMPLETE",
+    "usable": true,
+    "text": "[SOURCE] \"In a subsequent clinical study in septic patients, the same group observed a similar response to pentoxifylline and noted cardiovascular improvements in those patients given aggressive fluid resuscitation [33].\" (parker2000.pdf.md, Pentoxifylline fails to improve organ dysfunction and survival when used in the )\n[SOURCE] \"Cardiac Index fell by a median of 3.9 (0.9) l/min per m<sup>2</sup> during haemorrhage and in all animals it improved to above baseline levels with volume replacement.\" (parker2000.pdf.md, Pentoxifylline fails to improve organ dysfunction and survival when used in the )\n[SOURCE] \"Hou, Inhibition of tubulointerstitial fibrosis by pentoxifylline is associated with improvement of vascular endothelial growth factor expression, *Acta Pharmacol.\" (ma2018.pdf.md, Pentoxifylline protects against loss of function and renal interstitial fibrosis)\n[SOURCE] \"Navarro-Gonzalez, et al., Effect of pentoxifylline on renal function and urinary albumin excretion in patients with diabetic kidney disease: the PREDIAN trial, *J.\" (ma2018.pdf.md, Pentoxifylline protects against loss of function and renal interstitial fibrosis)\n[SOURCE] \"finding suggests that PTX may exert an anti-inflammatory effect sufficient to translate into measurable symptom relief.\" (pharmaceuticals-19-00552.pdf.md, Results)\n[SOURCE] \"These findings align with preclinical studies in experimental colitis models, where PTX administration markedly reduced TNF- $\\alpha$ concentrations and ameliorated histopathological inflammation\" (pharmaceuticals-19-00552.pdf.md, Results)\n\n[INFERRED] The quoted passages are what this notebook contains on the question. Each quotation is attributed above to its file and section; no finding outside these passages is asserted. Sources quoted: ma2018.pdf.md, parker2000.pdf.md, pharmaceuticals-19-00552.pdf.md.",
+    "cited_sources": [
+      "parker2000.pdf.md",
+      "ma2018.pdf.md",
+      "pharmaceuticals-19-00552.pdf.md"
+    ],
+    "requested_sources_cited": [
+      "ma2018.pdf.md",
+      "parker2000.pdf.md"
+    ],
+    "requested_sources_absent": [],
+    "retrieval": {
+      "named": [
+        {
+          "filename": "ma2018.pdf.md",
+          "complete": false,
+          "words": 3718
+        },
+        {
+          "filename": "parker2000.pdf.md",
+          "complete": false,
+          "words": 4200
+        }
+      ],
+      "other": [
+        {
+          "filename": "pharmaceuticals-19-00552.pdf.md",
+          "heading": "3. Discussion",
+          "score": 25.49
+        },
+        {
+          "filename": "pharmaceuticals-19-00552.pdf.md",
+          "heading": "3. Discussion",
+          "score": 22.15
+        },
+        {
+          "filename": "MS patients and PTX.pdf.md",
+          "heading": "5. Discussion",
+          "score": 21.0
+        },
+        {
+          "filename": "kruuse2000.pdf.md",
+          "heading": "**Present results**",
+          "score": 20.27
+        },
+        {
+          "filename": "Pentoxifylline-in-patients-with-ulcerative-colitis-treated-with-mesalamine-by-modulation.pdf.md",
+          "heading": "Discussion",
+          "score": 20.1
+        },
+        {
+          "filename": "s00210-025-03845-1.pdf.md",
+          "heading": "Biological markers",
+          "score": 19.95
+        }
+      ],
+      "unresolved": [],
+      "words": 9838
+    },
+    "call_key": "2e3bb3df13f1b40a763e5e39",
+    "model": "local-rules-v1.8",
+    "captured": "2026-10-30T03:38:35+00:00"
+  },
+  {
+    "response_id": "R-Q0033-A01",
+    "qid": "Q0033",
+    "attempt": "A01",
+    "outcome": "COMPLETE",
+    "usable": true,
+    "text": "[SOURCE] \"In the Pentoxifylline Group graph, there is a single peak at approximately 1.5 hours reaching about 1700 pg/ml, after which the TNF concentration remains significantly lower than in the control group.\" (parker2000.pdf.md, Pentoxifylline fails to improve organ dysfunction and survival when used in the )\n[SOURCE] \"The Pentoxifylline Group shows a single, smaller peak around 1.5 hours, reaching approximately 1700 pg/ml, with much lower concentrations thereafter.](92c6488dfdf125bc1b7bb6a235394652_img.jpg) The figure consists of two side-by-side line graphs.\" (parker2000.pdf.md, Pentoxifylline fails to improve organ dysfunction and survival when used in the )\n[SOURCE] \"The mechanisms of action of pentoxifylline which contribute to protection of renal PGE<sub>2</sub> release and blood flow during severe splanchnic ischemia/reperfusion injury include decreasing viscosity, increasing deformability of red blood cells and neutrophils, and contributing to the prevention of the activation of neutrophils by cytokines or local tissue factors.\" (myers1995.pdf.md, Results)\n[SOURCE] \"The latter results suggest that TNF- $\\alpha$ plays a central role in the pathogenesis of Gram-negative shock, as serum levels of TNF- $\\alpha$ are induced early in endotoxaemia or Gram-negative sepsis models (Michie et al., 1988).\" (wu1999.pdf.md, Results)\n[SOURCE] \"Pentoxifylline is known to act as an inhibitor of phosphodiesterase thereby raising cAMP levels, which is associated with down-regulation of macrophage activity.\" (vadiei1996.pdf.md, Results)\n[SOURCE] \"This may indicate that pentoxifylline in high doses has a direct vasodilating effect on large cerebral arteries, which could be a result of its PDE-inhibiting actions (Kamphuis *et al.*, 1994).\" (kruuse2000.pdf.md, Results)\n\n[INFERRED] The quoted passages are what this notebook contains on the question. Each quotation is attributed above to its file and section; no finding outside these passages is asserted. Sources quoted: kruuse2000.pdf.md, myers1995.pdf.md, parker2000.pdf.md, vadiei1996.pdf.md, wu1999.pdf.md.",
+    "cited_sources": [
+      "parker2000.pdf.md",
+      "myers1995.pdf.md",
+      "wu1999.pdf.md",
+      "vadiei1996.pdf.md",
+      "kruuse2000.pdf.md"
+    ],
+    "requested_sources_cited": [
+      "parker2000.pdf.md"
+    ],
+    "requested_sources_absent": [],
+    "retrieval": {
+      "named": [
+        {
+          "filename": "parker2000.pdf.md",
+          "complete": false,
+          "words": 3997
+        }
+      ],
+      "other": [
+        {
+          "filename": "MS patients and PTX.pdf.md",
+          "heading": "5. Discussion",
+          "score": 21.0
+        },
+        {
+          "filename": "wu1999.pdf.md",
+          "heading": "4. Discussion",
+          "score": 19.73
+        },
+        {
+          "filename": "myers1995.pdf.md",
+          "heading": "DISCUSSION",
+          "score": 19.72
+        },
+        {
+          "filename": "vadiei1996.pdf.md",
+          "heading": "Discussion",
+          "score": 17.8
+        },
+        {
+          "filename": "pharmaceuticals-19-00552.pdf.md",
+          "heading": "3. Discussion",
+          "score": 17.41
+        },
+        {
+          "filename": "kruuse2000.pdf.md",
+          "heading": "**Present results**",
+          "score": 17.24
+        }
+      ],
+      "unresolved": [],
+      "words": 5917
+    },
+    "call_key": "a55bce79b2a2318caf79586e",
+    "model": "local-rules-v1.8",
+    "captured": "2026-10-30T03:38:35+00:00"
+  },
+  {
+    "response_id": "R-Q0034-A01",
+    "qid": "Q0034",
+    "attempt": "A01",
+    "outcome": "COMPLETE",
+    "usable": true,
+    "text": "[SOURCE] \"This appears to be in direct conflict with other *in vivo* studies that have reported a significant reduction in TNF levels by pentoxifylline treatment in a variety of models of sepsis.<sup>34-36</sup> These studies, however, all used an ELISA technique to measure TNF rather than a bioassay that measures the bioactivity of TNF rather than absolute concentrations.\" (ridings1994.pdf.md, Beneficial Cardiopulmonary Effects of Pentoxifylline in Experimental Sepsis Are )\n[SOURCE] \"Demir et al [24] showed reductions of serum proinflammatory cytokine levels and kidney graft resistive index after 3 months of PTX oral treatment at approximately 1 year posttransplantation.\" (wystrychowski2014.pdf.md, Nephroprotective Effect of Pentoxifylline in Renal Ischemia–Reperfusion in Rat D)\n[SOURCE] \"However, little data on the delayed treatment of sepsis with pentoxifylline, a more clinically relevant situation, exist.<sup>15</sup> We therefore sought to determine the effects of pretreatment and posttreatment with pentoxifylline in a porcine model of live bacterial sepsis and acute lung injury, determine the size of a potential \"therapeutic window\" for the administration of pentoxifylline in sepsis, and further elucidate the mechanism of action of pentoxifylline in vivo.\" (ridings1994.pdf.md, Beneficial Cardiopulmonary Effects of Pentoxifylline in Experimental Sepsis Are )\n[SOURCE] \"Superantigen-induced cytokine release from whole-blood cell culture as a functional measure of drug efficacy after oral dosing in nonhuman primates. *Res Vet Sci* 2007;83:182–7. - [19] Voisin L, Breuillé D, Ruot B, et al.\" (wystrychowski2014.pdf.md, Nephroprotective Effect of Pentoxifylline in Renal Ischemia–Reperfusion in Rat D)\n[SOURCE] \"Long-term follow-up of previous phase II patients, in fact, helped us to understand that improvement under combined PTX/Vit E treatment is slow, progressive, and continuous, with a maximum effect after periods ranging from 18 months to 3 years (Delanian et al, unpublished data, 2003), to take account of patient-to-patient variability.\" (delanian2003.pdf.md, Results)\n[SOURCE] \"However, the magnitude of improvement was more pronounced in the PTX group, and the between-group HL confidence interval indicated a meaningful treatment advantage.\" (pharmaceuticals-19-00552.pdf.md, Results)\n\n[INFERRED] The quoted passages are what this notebook contains on the question. Each quotation is attributed above to its file and section; no finding outside these passages is asserted. Sources quoted: delanian2003.pdf.md, pharmaceuticals-19-00552.pdf.md, ridings1994.pdf.md, wystrychowski2014.pdf.md.",
+    "cited_sources": [
+      "ridings1994.pdf.md",
+      "wystrychowski2014.pdf.md",
+      "delanian2003.pdf.md",
+      "pharmaceuticals-19-00552.pdf.md"
+    ],
+    "requested_sources_cited": [
+      "ridings1994.pdf.md",
+      "wystrychowski2014.pdf.md"
+    ],
+    "requested_sources_absent": [],
+    "retrieval": {
+      "named": [
+        {
+          "filename": "ridings1994.pdf.md",
+          "complete": false,
+          "words": 4288
+        },
+        {
+          "filename": "wystrychowski2014.pdf.md",
+          "complete": true,
+          "words": 2446
+        }
+      ],
+      "other": [
+        {
+          "filename": "pharmaceuticals-19-00552.pdf.md",
+          "heading": "3. Discussion",
+          "score": 23.16
+        },
+        {
+          "filename": "MS patients and PTX.pdf.md",
+          "heading": "5. Discussion",
+          "score": 22.65
+        },
+        {
+          "filename": "pharmaceuticals-19-00552.pdf.md",
+          "heading": "3. Discussion",
+          "score": 20.57
+        },
+        {
+          "filename": "clemens2000.pdf.md",
+          "heading": "RESULTS",
+          "score": 20.38
+        },
+        {
+          "filename": "delanian2003.pdf.md",
+          "heading": "DISCUSSION",
+          "score": 20.33
+        },
+        {
+          "filename": "pharmaceuticals-19-00552.pdf.md",
+          "heading": "4.11. Handling of Missing Data",
+          "score": 19.86
+        }
+      ],
+      "unresolved": [],
+      "words": 8572
+    },
+    "call_key": "2c40468f22162de8b981860a",
+    "model": "local-rules-v1.8",
+    "captured": "2026-10-30T03:38:35+00:00"
+  },
+  {
+    "response_id": "R-Q0035-A01",
+    "qid": "Q0035",
+    "attempt": "A01",
+    "outcome": "COMPLETE",
+    "usable": true,
+    "text": "[SOURCE] \"Superantigen-induced cytokine release from whole-blood cell culture as a functional measure of drug efficacy after oral dosing in nonhuman primates. *Res Vet Sci* 2007;83:182–7. - [19] Voisin L, Breuillé D, Ruot B, et al.\" (wystrychowski2014.pdf.md, Nephroprotective Effect of Pentoxifylline in Renal Ischemia–Reperfusion in Rat D)\n[SOURCE] \"This implicates usefulness of PTX in the clinical settings of expected renal ischemia, like kidney transplantation, and suggests potential benefits of PTX in peritransplant period foremost with donor pretreatment. **R**ENAL ISCHEMIA–REPERFUSION INJURY (IRI) causes glomerular capillary endothelial dysfunction and tubular epithelial necrosis leading to ischemic acute kidney injury (iAKI) with activation of inflammatory reaction mediated by increased cytokine and adhesion molecule expression, macrophage recruitment as well as reactive oxygen species synthesis and neutrophil activation [1].\" (wystrychowski2014.pdf.md, Nephroprotective Effect of Pentoxifylline in Renal Ischemia–Reperfusion in Rat D)\n[SOURCE] \"[2,3] In this study we add to existing knowledge reported from the RCT, specifically investigating diary entries completed by women in response to their exercise prescription: findings not previously reported.\" (stokes2022.pdf.md, Results)\n[SOURCE] \"In conclusion, our data suggest that the utility of aminophylline for improving early pathologic manifestations of sepsis should be questioned.\" (fakioglu2004.pdf.md, Results)\n[SOURCE] \"This may indicate that pentoxifylline in high doses has a direct vasodilating effect on large cerebral arteries, which could be a result of its PDE-inhibiting actions (Kamphuis *et al.*, 1994).\" (kruuse2000.pdf.md, Results)\n[SOURCE] \"Therefore, the reported remission rates reflect clinical and biochemical improvements but may not fully capture mucosal healing, which should be considered in interpreting the results.\" (pharmaceuticals-19-00552.pdf.md, Results)\n\n[INFERRED] The quoted passages are what this notebook contains on the question. Each quotation is attributed above to its file and section; no finding outside these passages is asserted. Sources quoted: fakioglu2004.pdf.md, kruuse2000.pdf.md, pharmaceuticals-19-00552.pdf.md, stokes2022.pdf.md, wystrychowski2014.pdf.md.",
+    "cited_sources": [
+      "wystrychowski2014.pdf.md",
+      "stokes2022.pdf.md",
+      "fakioglu2004.pdf.md",
+      "kruuse2000.pdf.md",
+      "pharmaceuticals-19-00552.pdf.md"
+    ],
+    "requested_sources_cited": [
+      "wystrychowski2014.pdf.md"
+    ],
+    "requested_sources_absent": [],
+    "retrieval": {
+      "named": [
+        {
+          "filename": "wystrychowski2014.pdf.md",
+          "complete": true,
+          "words": 2446
+        }
+      ],
+      "other": [
+        {
+          "filename": "MS patients and PTX.pdf.md",
+          "heading": "5. Discussion",
+          "score": 21.0
+        },
+        {
+          "filename": "kruuse2000.pdf.md",
+          "heading": "**Present results**",
+          "score": 20.9
+        },
+        {
+          "filename": "stokes2022.pdf.md",
+          "heading": "**HYPOTHESIS / AIMS OF STUDY**",
+          "score": 20.32
+        },
+        {
+          "filename": "pharmaceuticals-19-00552.pdf.md",
+          "heading": "3. Discussion",
+          "score": 19.57
+        },
+        {
+          "filename": "fitzgerald2009.pdf.md",
+          "heading": "DISCUSSION",
+          "score": 18.9
+        },
+        {
+          "filename": "fakioglu2004.pdf.md",
+          "heading": "*4.1. Study limitations*",
+          "score": 18.88
+        }
+      ],
+      "unresolved": [],
+      "words": 3614
+    },
+    "call_key": "be0951e92b21ccbe1e2a6d34",
+    "model": "local-rules-v1.8",
+    "captured": "2026-10-30T03:38:35+00:00"
+  },
+  {
+    "response_id": "R-Q0036-A01",
+    "qid": "Q0036",
+    "attempt": "A01",
+    "outcome": "COMPLETE",
+    "usable": true,
+    "text": "[SOURCE] \"Although a pathophysiological role of TNF- $\\alpha$ in chronic CHF has been postulated, 2 clinical trials failed to demonstrate the beneficial effect of anti-TNF- $\\alpha$ drugs,<sup>20</sup> and 1 trial even envisaged a possible detrimental effect.<sup>21</sup> It has been suggested that a complete block of circulating TNF- $\\alpha$ also suppresses the beneficial cardiac effects associated with low, physiological levels of TNF- $\\alpha$ (eg, cytoprotection of ischemic myocardium).<sup>22</sup> The favorable, although preliminary, results so far reported with PTX in CHF treatment may be due to its ability to modulate—rather than to block—the TNF- $\\alpha$ response.\" (nisi2013.pdf.md, Pharmacokinetics of Pentoxifylline and Its Main Metabolites in Patients With Dif)\n[SOURCE] \"Conversely, renal dysfunction does not cause accumulation of PTX and M1 but does increase M4 and M5 AUCs and the M4/PTX and M5/PTX AUC ratios.<sup>16</sup> Although no analogous studies have been performed in cardiac patients, pharmacokinetic alterations are expected because reduced cardiac output determines a reduction in perfusion and oxygenation of both liver and kidney, with possible secondary impairment of their metabolic and excretory functions.<sup>17</sup> The aim of our study was to investigate the time course of plasma concentrations of PTX and its main plasma metabolites (M1, M4, M5) following single 600-mg oral administration of a modified-release formulation in patients with various degrees of cardiac failure and to also investigate whether any demographic or biological variable is correlated with pharmacokinetic changes.\" (nisi2013.pdf.md, Pharmacokinetics of Pentoxifylline and Its Main Metabolites in Patients With Dif)\n[SOURCE] \"These results are in line with previous literature, indicating that key inflammatory pathways in UC, particularly those involving pro-inflammatory cytokines such as TNF- $\\alpha$ , tend to operate independently of demographic variables, and that treatment response is more closely related to modulation of these biological pathways than to baseline patient characteristics [41–43].\" (pharmaceuticals-19-00552.pdf.md, Results)\n[SOURCE] \"Subsequently, a subgroup of these patients were reevaluated 9 months after curative surgery, when no statistical differences were observed between baseline and postsurgery adiponectin and resistin levels (17).\" (Barahona2009_Cushings_Syndrome.md, Results)\n[SOURCE] \"Patient characteristics, including age, race, medical comorbidities, time from initial to tenth evaluation, and severity of symptoms at initial evaluation were assessed to identify predictors of response to therapy.\" (masterson2017.pdf.md, Results)\n[SOURCE] \"In a subsequent clinical study in septic patients, the same group observed a similar response to pentoxifylline and noted cardiovascular improvements in those patients given aggressive fluid resuscitation [33].\" (parker2000.pdf.md, Results)\n\n[INFERRED] The quoted passages are what this notebook contains on the question. Each quotation is attributed above to its file and section; no finding outside these passages is asserted. Sources quoted: Barahona2009_Cushings_Syndrome.md, masterson2017.pdf.md, nisi2013.pdf.md, parker2000.pdf.md, pharmaceuticals-19-00552.pdf.md.",
+    "cited_sources": [
+      "nisi2013.pdf.md",
+      "pharmaceuticals-19-00552.pdf.md",
+      "Barahona2009_Cushings_Syndrome.md",
+      "masterson2017.pdf.md",
+      "parker2000.pdf.md"
+    ],
+    "requested_sources_cited": [
+      "nisi2013.pdf.md"
+    ],
+    "requested_sources_absent": [],
+    "retrieval": {
+      "named": [
+        {
+          "filename": "nisi2013.pdf.md",
+          "complete": false,
+          "words": 3940
+        }
+      ],
+      "other": [
+        {
+          "filename": "pharmaceuticals-19-00552.pdf.md",
+          "heading": "3. Discussion",
+          "score": 25.69
+        },
+        {
+          "filename": "parker2000.pdf.md",
+          "heading": "4. Discussion",
+          "score": 20.3
+        },
+        {
+          "filename": "Barahona2009_Cushings_Syndrome.md",
+          "heading": "Discussion",
+          "score": 20.01
+        },
+        {
+          "filename": "masterson2017.pdf.md",
+          "heading": "Methods",
+          "score": 19.16
+        },
+        {
+          "filename": "glazener2011.pdf.md",
+          "heading": "Contributors",
+          "score": 18.36
+        },
+        {
+          "filename": "staubach1998.pdf.md",
+          "heading": "DISCUSSION",
+          "score": 18.22
+        }
+      ],
+      "unresolved": [],
+      "words": 5574
+    },
+    "call_key": "28c2ff6f691868e1d1cf7db9",
+    "model": "local-rules-v1.8",
+    "captured": "2026-10-30T03:38:36+00:00"
+  },
+  {
+    "response_id": "R-Q0037-A01",
+    "qid": "Q0037",
+    "attempt": "A01",
+    "outcome": "COMPLETE",
+    "usable": true,
+    "text": "[SOURCE] \"Tumor necrosis factor has been reliably shown to be elevated in depressed patients.<sup>23</sup> Moreover, increases in TNF have been associated with depressive symptoms during chronic exposure to interferon alpha.<sup>24</sup> In addition, peripheral administration of a TNF antagonist has been shown to improve depressed mood in patients with psoriasis.<sup>25</sup> Tumor necrosis factor antagonism has also been found to resolve major depression in patients with Crohn disease<sup>26</sup> and to reduce fatigue in patients with advanced cancer.<sup>27</sup> Moreover, gene-targeted deletion of TNF receptors in mice leads to an antidepressant-like phenotype and reduced anxiety-like behavior during immune activation.<sup>28,29</sup> Nevertheless, to our knowledge, no previous study has tested whether the administration of a peripherally active cytokine antagonist to otherwise healthy patients with TRD might reverse depressive symptoms.\" (raison2013.pdf.md, A Randomized Controlled Trial of the Tumor Necrosis Factor Antagonist Infliximab)\n[SOURCE] \"It is becoming increasingly apparent that low, physiologic levels of cytokine activity are essential for a number of brain processes associated with protection from depression, including neuroplasticity and neurogenesis.<sup>66</sup> Moreover, recent data indicate that the behavioral effects of serotonergic antidepressants are dependent on TNF and IFN- $\\gamma$ -mediated upregulation of p11, a biochemical marker of antidepressant response, in the central nervous system (CNS).<sup>67</sup> In keeping with this finding, studies in animals and observational data in humans suggest that nonsteroidal anti-inflammatory drugs may interfere with the behavioral effects of serotonergic antidepressants through their disruption of antidepressant-induced cytokine effects on p11.<sup>67</sup> Taken together, these data suggest that caution may be warranted in the use of anti-inflammatory strategies for patients with depression without evidence of increased inflammation, and they provide a counterbalance to prevailing views of inflammatory processes as primarily depressogenic.\" (raison2013.pdf.md, A Randomized Controlled Trial of the Tumor Necrosis Factor Antagonist Infliximab)\n[SOURCE] \"An immunologically important and possibly clinically relevant observation of the present study is the finding that pretreatment with ibuprofen, an inhibitor of the cyclooxygenase pathway of arachidonic acid metabolism, enhanced circulating TNF $\\alpha$ and IL-6 levels after endotoxin challenge.\" (spinas1991.pdf.md, Pretreatment with Ibuprofen Augments Circulating Tumor Necrosis Factor- $\\alpha$)\n[SOURCE] \"The peak levels of TNF $\\alpha$ in the present study were considerably higher than those commonly detected in patients with sepsis [9–11].\" (spinas1991.pdf.md, Pretreatment with Ibuprofen Augments Circulating Tumor Necrosis Factor- $\\alpha$)\n[SOURCE] \"There is evidence from preclinical data that the sequelae of events provoked by endotoxin can be overcome, at least partially, by oxpentifylline.<sup>22</sup> This drug inhibits various leucocyte functions after activation by different pathophysiological stimuli in vitro.<sup>13,23,24</sup> In vivo, oxpentifylline protected from increased pulmonary vascular permeability and sequestration of neutrophils in the lung in different animal models of acute lung injury.<sup>10,25,26</sup> Moreover, in pigs with induced faecal peritonitis the drug improved haemodynamic variables as well as pulmonary compliance and reduced the number of pulmonary neutrophils and lymphocytes.<sup>27</sup> Consequently, as a general outcome, oxpentifylline could be found to improve survival in different models of haemorrhagic<sup>28</sup> and endotoxic shock.<sup>11</sup> Our study shows that the positive findings from animal models may possibly apply also to human beings.\" (zabel1989.pdf.md, Results)\n[SOURCE] \"To our knowledge, this study represents one of the first pilot clinical investigations to assess the adjunctive role of PTX in UC, integrating both clinical efficacy endpoints (PMS and IBDQ-32) and mechanistic inflammatory biomarkers such as fecal calprotectin, ESR, and TNF- $\\alpha$ .\" (pharmaceuticals-19-00552.pdf.md, Results)\n\n[INFERRED] The quoted passages are what this notebook contains on the question. Each quotation is attributed above to its file and section; no finding outside these passages is asserted. Sources quoted: pharmaceuticals-19-00552.pdf.md, raison2013.pdf.md, spinas1991.pdf.md, zabel1989.pdf.md.",
+    "cited_sources": [
+      "raison2013.pdf.md",
+      "spinas1991.pdf.md",
+      "zabel1989.pdf.md",
+      "pharmaceuticals-19-00552.pdf.md"
+    ],
+    "requested_sources_cited": [
+      "spinas1991.pdf.md",
+      "raison2013.pdf.md"
+    ],
+    "requested_sources_absent": [],
+    "retrieval": {
+      "named": [
+        {
+          "filename": "spinas1991.pdf.md",
+          "complete": false,
+          "words": 4422
+        },
+        {
+          "filename": "raison2013.pdf.md",
+          "complete": false,
+          "words": 4436
+        }
+      ],
+      "other": [
+        {
+          "filename": "pharmaceuticals-19-00552.pdf.md",
+          "heading": "3. Discussion",
+          "score": 28.34
+        },
+        {
+          "filename": "pharmaceuticals-19-00552.pdf.md",
+          "heading": "3. Discussion",
+          "score": 25.38
+        },
+        {
+          "filename": "pharmaceuticals-19-00552.pdf.md",
+          "heading": "3. Discussion",
+          "score": 21.62
+        },
+        {
+          "filename": "MS patients and PTX.pdf.md",
+          "heading": "5. Discussion",
+          "score": 21.0
+        },
+        {
+          "filename": "pharmaceuticals-19-00552.pdf.md",
+          "heading": "4.11. Handling of Missing Data",
+          "score": 20.27
+        },
+        {
+          "filename": "zabel1989.pdf.md",
+          "heading": "Discussion",
+          "score": 19.55
+        }
+      ],
+      "unresolved": [],
+      "words": 10562
+    },
+    "call_key": "b4b8bd72f6a07ce7dc7c4ef1",
+    "model": "local-rules-v1.8",
+    "captured": "2026-10-30T03:38:36+00:00"
+  },
+  {
+    "response_id": "R-Q0038-A01",
+    "qid": "Q0038",
+    "attempt": "A01",
+    "outcome": "COMPLETE",
+    "usable": true,
+    "text": "[SOURCE] \"It is becoming increasingly apparent that low, physiologic levels of cytokine activity are essential for a number of brain processes associated with protection from depression, including neuroplasticity and neurogenesis.<sup>66</sup> Moreover, recent data indicate that the behavioral effects of serotonergic antidepressants are dependent on TNF and IFN- $\\gamma$ -mediated upregulation of p11, a biochemical marker of antidepressant response, in the central nervous system (CNS).<sup>67</sup> In keeping with this finding, studies in animals and observational data in humans suggest that nonsteroidal anti-inflammatory drugs may interfere with the behavioral effects of serotonergic antidepressants through their disruption of antidepressant-induced cytokine effects on p11.<sup>67</sup> Taken together, these data suggest that caution may be warranted in the use of anti-inflammatory strategies for patients with depression without evidence of increased inflammation, and they provide a counterbalance to prevailing views of inflammatory processes as primarily depressogenic.\" (raison2013.pdf.md, A Randomized Controlled Trial of the Tumor Necrosis Factor Antagonist Infliximab)\n[SOURCE] \"addition, inflammatory cytokines can reduce the concentration of monoamine precursors through the activation of enzymes such as indoleamine 2,3-dioxygenase, which breaks down tryptophan, the primary amino acid precursor for serotonin, into kynurenine.<sup>14</sup> Inflammation can also reduce the availability of the enzyme cofactor, tetrahydrobiopterin, which is essential for activities of tryptophan hydroxylase and tyrosine hydroxylase, which are rate-limiting enzymes for synthesis of serotonin, norepinephrine, and dopamine.<sup>15,16</sup> Inflammatory cytokines have also been shown to inhibit neurogenesis through the activation of nuclear factor κB.<sup>17</sup> Neurogenesis is an important component of the salutary effects of conventional antidepressants in several depressive-like behaviors in animal models of depression, including anhedonia.<sup>18-20</sup> Finally, inflammatory cytokines can reduce the number of glutamate transporters that are expressed and increase the amount of glutamate that is released from astrocytes, thereby activating pathophysiologic mechanisms (eg, glutamate excitotoxicity) that are not primary targets of conventional antidepressant medications.<sup>2,15,21,22</sup>\" (raison2013.pdf.md, A Randomized Controlled Trial of the Tumor Necrosis Factor Antagonist Infliximab)\n[SOURCE] \"Although we did note differential effects on these, the intervention might also be expected to have wider effects, such as improving the quality rather than the quantity of pelvic-floor muscle contractions, the use of broader behavioural techniques such as bladder training, and generic quality of life, which we did not measure directly.\" (glazener2011.pdf.md, Results)\n[SOURCE] \"Treatment of voiding difficulty in women with 0.2 mg tamsulosin daily for 6 weeks has been reported to improve voiding and storage symptom scores, maximal flow rate, and PVR.\" (ladi-seyedian2017.pdf.md, Results)\n[SOURCE] \"Nevertheless, we did not find evidence of benefit of the intervention for either clinical group.\" (glazener2011.pdf.md, Results)\n[SOURCE] \"extrapolated to the original populations of men having prostatectomy (20% severe after radical prostatectomy and 10% after TURP) accord with those reported in recent surveys of quality of life after radical prostatectomy<sup>4,5</sup> and the 9% reported in a meta-analysis of randomised controlled trials of TURP compared with alternative surgical treatments for benign prostatic enlargement.<sup>1</sup> In settings where information about pelvic-floor exercises is widely available, the provision of one-to-one conservative therapy for men with urinary incontinence after radical prostatectomy or TURP is unlikely to be effective or cost effective.\" (glazener2011.pdf.md, Results)\n\n[INFERRED] The quoted passages are what this notebook contains on the question. Each quotation is attributed above to its file and section; no finding outside these passages is asserted. Sources quoted: glazener2011.pdf.md, ladi-seyedian2017.pdf.md, raison2013.pdf.md.",
+    "cited_sources": [
+      "raison2013.pdf.md",
+      "glazener2011.pdf.md",
+      "ladi-seyedian2017.pdf.md"
+    ],
+    "requested_sources_cited": [
+      "raison2013.pdf.md"
+    ],
+    "requested_sources_absent": [],
+    "retrieval": {
+      "named": [
+        {
+          "filename": "raison2013.pdf.md",
+          "complete": false,
+          "words": 4370
+        }
+      ],
+      "other": [
+        {
+          "filename": "ladi-seyedian2017.pdf.md",
+          "heading": "7.3.2. *Alpha-adrenoreceptor antagonists*",
+          "score": 22.33
+        },
+        {
+          "filename": "glazener2011.pdf.md",
+          "heading": "Interpretation",
+          "score": 21.62
+        },
+        {
+          "filename": "glazener2011.pdf.md",
+          "heading": "Interpretation",
+          "score": 21.59
+        },
+        {
+          "filename": "MS patients and PTX.pdf.md",
+          "heading": "5. Discussion",
+          "score": 21.0
+        },
+        {
+          "filename": "glazener2011.pdf.md",
+          "heading": "Discussion",
+          "score": 19.99
+        },
+        {
+          "filename": "Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md",
+          "heading": "2.3 | Study design",
+          "score": 18.26
+        }
+      ],
+      "unresolved": [],
+      "words": 5907
+    },
+    "call_key": "28939e931c3e91a0315f542e",
+    "model": "local-rules-v1.8",
+    "captured": "2026-10-30T03:38:36+00:00"
+  },
+  {
+    "response_id": "R-Q0039-A01",
+    "qid": "Q0039",
+    "attempt": "A01",
+    "outcome": "COMPLETE",
+    "usable": true,
+    "text": "[SOURCE] \"In addition, while patients and controls were matched by age and BMI, mean WC was higher, as expected, in CD patients compared to controls; the effect this may have had on circulating inflammatory cytokine concentrations is unknown, but of note we did not find any significant relationships between WC and any inflammatory cytokine, suggesting the elevated WC in CD patients did not play a role in the elevated IL-6 and IL-1 $\\beta$ values.\" (shah2016.pdf.md, **Pro-inflammatory cytokines remain elevated despite long-term remission in Cush)\n[SOURCE] \"Wagenmakers, M.A., et al., *Impaired quality of life in patients in long-term remission of Cushing's syndrome of both adrenal and pituitary origin: a remaining effect of long-standing hypercortisolism?* Eur J Endocrinol, 2012. **167**(5): p.\" (roerink2019.pdf.md, **Decreased aerobic exercise capacity after long-term remission from Cushing's s)\n[SOURCE] \"Several mechanisms could explain our finding of the lower aerobic exercise capacity (VO<sub>2peak</sub>) of the patients in long term remission of CS.\" (roerink2019.pdf.md, **Decreased aerobic exercise capacity after long-term remission from Cushing's s)\n[SOURCE] \"Thus, despite endocrine remission, elevated plasma IL-6 concentrations in CD patients could contribute to the greater mortality risk observed long term in these patients [10, 11].\" (shah2016.pdf.md, **Pro-inflammatory cytokines remain elevated despite long-term remission in Cush)\n[SOURCE] \"This eventuates in BOO, which shows voiding dysfunction.<sup>18</sup> The clinical presentation is in the form of LUTS, including weak urinary stream, urgency, nocturia, urinary retention, straining, and frequency.<sup>19</sup> Currently, several drug modalities are recommended to treat the symptoms of BPH, including 5-alpha reductase inhibitors, $\\alpha$ 1-adrenoceptor antagonists, and phosphodiesterase five inhibitors.<sup>20</sup> Transurethral prostatectomy and open prostatectomy are non-pharmacological choices; nevertheless, there are risks related to prostatic surgery, including bleeding, retrograde ejaculation, and further surgical operations.<sup>21</sup>\" (Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md, Results)\n[SOURCE] \"The etiology of diabetic bladder dysfunction is multifactorial; both the myogenic and neurogenic effects of diabetic cystopathy cause a decrease in bladder sensation and impairment in voiding function [39].\" (ladi-seyedian2017.pdf.md, Results)\n\n[INFERRED] The quoted passages are what this notebook contains on the question. Each quotation is attributed above to its file and section; no finding outside these passages is asserted. Sources quoted: Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md, ladi-seyedian2017.pdf.md, roerink2019.pdf.md, shah2016.pdf.md.",
+    "cited_sources": [
+      "shah2016.pdf.md",
+      "roerink2019.pdf.md",
+      "Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md",
+      "ladi-seyedian2017.pdf.md"
+    ],
+    "requested_sources_cited": [
+      "roerink2019.pdf.md",
+      "shah2016.pdf.md"
+    ],
+    "requested_sources_absent": [],
+    "retrieval": {
+      "named": [
+        {
+          "filename": "roerink2019.pdf.md",
+          "complete": false,
+          "words": 4470
+        },
+        {
+          "filename": "shah2016.pdf.md",
+          "complete": false,
+          "words": 4096
+        }
+      ],
+      "other": [
+        {
+          "filename": "pharmaceuticals-19-00552.pdf.md",
+          "heading": "3. Discussion",
+          "score": 28.15
+        },
+        {
+          "filename": "MS patients and PTX.pdf.md",
+          "heading": "5. Discussion",
+          "score": 22.42
+        },
+        {
+          "filename": "Pentoxifylline-in-patients-with-ulcerative-colitis-treated-with-mesalamine-by-modulation.pdf.md",
+          "heading": "Discussion",
+          "score": 22.23
+        },
+        {
+          "filename": "11255_2025_Article_4454.pdf.md",
+          "heading": "Discussion",
+          "score": 18.38
+        },
+        {
+          "filename": "Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md",
+          "heading": "4 | DISCUSSION",
+          "score": 17.93
+        },
+        {
+          "filename": "ladi-seyedian2017.pdf.md",
+          "heading": "6. Risk factors",
+          "score": 17.85
+        }
+      ],
+      "unresolved": [],
+      "words": 10406
+    },
+    "call_key": "12b113a86d245025e48ff405",
+    "model": "local-rules-v1.8",
+    "captured": "2026-10-30T03:38:36+00:00"
+  },
+  {
+    "response_id": "R-Q0040-A01",
+    "qid": "Q0040",
+    "attempt": "A01",
+    "outcome": "COMPLETE",
+    "usable": true,
+    "text": "[SOURCE] \"In addition, while patients and controls were matched by age and BMI, mean WC was higher, as expected, in CD patients compared to controls; the effect this may have had on circulating inflammatory cytokine concentrations is unknown, but of note we did not find any significant relationships between WC and any inflammatory cytokine, suggesting the elevated WC in CD patients did not play a role in the elevated IL-6 and IL-1 $\\beta$ values.\" (shah2016.pdf.md, **Pro-inflammatory cytokines remain elevated despite long-term remission in Cush)\n[SOURCE] \"We confirm earlier studies demonstrating that chronic excess GC exposure increases circulating IL-6 and IL-1 $\\beta$ concentrations during active disease.\" (shah2016.pdf.md, **Pro-inflammatory cytokines remain elevated despite long-term remission in Cush)\n[SOURCE] \"Higher PMS was associated with increased TNF- $\\alpha$ and fecal calprotectin levels and lower IBDQ-32 scores, while higher inflammatory markers were linked to poorer quality of life.\" (pharmaceuticals-19-00552.pdf.md, Results)\n[SOURCE] \"In dextran sulfate sodium (DSS)-induced colitis, PTX administration reduced disease activity index, histologic damage, and colonic levels of TNF- $\\alpha$ and malondialdehyde (MDA), a marker of lipid peroxidation [15].\" (pharmaceuticals-19-00552.pdf.md, Results)\n[SOURCE] \"Moreover, there was a significant and progressive increase in the risk of UFR decline observed across the tertiles of DII scores (p for trend <0.001). **CONCLUSIONS:** Our results indicate that a greater consumption of a pro-inflammatory diet, as indicated by higher DII scores, is associated with a reduction in urinary flow rate.\" (MP75-18-RATES-AND-ADHERENCE-TO-PELVIC-FLOOR-PHYSICAL-THERAPY-FOR-MALE-PATIENTS-WITH-BENIGN.pdf.md, Results)\n[SOURCE] \"This is supported by the responses to pentoxifylline seen in an aggressively resuscitated canine endotoxemia model [34].\" (parker2000.pdf.md, Results)\n\n[INFERRED] The quoted passages are what this notebook contains on the question. Each quotation is attributed above to its file and section; no finding outside these passages is asserted. Sources quoted: MP75-18-RATES-AND-ADHERENCE-TO-PELVIC-FLOOR-PHYSICAL-THERAPY-FOR-MALE-PATIENTS-WITH-BENIGN.pdf.md, parker2000.pdf.md, pharmaceuticals-19-00552.pdf.md, shah2016.pdf.md.",
+    "cited_sources": [
+      "shah2016.pdf.md",
+      "pharmaceuticals-19-00552.pdf.md",
+      "MP75-18-RATES-AND-ADHERENCE-TO-PELVIC-FLOOR-PHYSICAL-THERAPY-FOR-MALE-PATIENTS-WITH-BENIGN.pdf.md",
+      "parker2000.pdf.md"
+    ],
+    "requested_sources_cited": [
+      "shah2016.pdf.md"
+    ],
+    "requested_sources_absent": [],
+    "retrieval": {
+      "named": [
+        {
+          "filename": "shah2016.pdf.md",
+          "complete": false,
+          "words": 4342
+        }
+      ],
+      "other": [
+        {
+          "filename": "pharmaceuticals-19-00552.pdf.md",
+          "heading": "1. Introduction",
+          "score": 27.26
+        },
+        {
+          "filename": "pharmaceuticals-19-00552.pdf.md",
+          "heading": "3. Discussion",
+          "score": 27.21
+        },
+        {
+          "filename": "MP75-18-RATES-AND-ADHERENCE-TO-PELVIC-FLOOR-PHYSICAL-THERAPY-FOR-MALE-PATIENTS-WITH-BENIGN.pdf.md",
+          "heading": "EXAMINING THE RELATIONSHIP BETWEEN DIETARY INFLAMMATORY INDEX AND URINARY FLOW RATE: RESULTS FROM A NATIONWIDE STUDY",
+          "score": 23.02
+        },
+        {
+          "filename": "MS patients and PTX.pdf.md",
+          "heading": "5. Discussion",
+          "score": 23.01
+        },
+        {
+          "filename": "parker2000.pdf.md",
+          "heading": "4. Discussion",
+          "score": 22.54
+        },
+        {
+          "filename": "roerink2019.pdf.md",
+          "heading": "Discussion",
+          "score": 22.46
+        }
+      ],
+      "unresolved": [],
+      "words": 6262
+    },
+    "call_key": "a7c9e48eda759ef70fd7eef5",
+    "model": "local-rules-v1.8",
+    "captured": "2026-10-30T03:38:36+00:00"
+  }
+]

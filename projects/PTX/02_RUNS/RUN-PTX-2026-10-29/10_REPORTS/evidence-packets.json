@@ -1,0 +1,832 @@
+[
+  {
+    "hypothesis_id": "A1-H1",
+    "axis_id": "A1",
+    "approval": "APPROVED",
+    "title": "PTX addresses a consequential, treatable mechanism that existing interventions leave unresolved",
+    "statement": "The available pharmacological, physiological, and mechanistic evidence supports a coherent causal explanation for why PTX could meaningfully improve voiding in an identifiable subgroup of these men. Their persistent difficulty includes a reversible physiological component that tamsulosin and their prescribed pelvic-floor intervention do not adequately address. PTX or its metabolites can act on that component at clinically attainable exposures. The supported premises and their discriminating predictions are sufficient to specify intervention, phenotype, measurement, and comparator for a targeted clinical trial, whether or not every intermediate link is resolved.",
+    "coverage_status": "NO_COMPLETE_COVERAGE",
+    "required_covered": "0/9",
+    "allocation": 29,
+    "controlling": [],
+    "objections": [],
+    "qualifications": [
+      {
+        "unit_id": "A1-H1-C1",
+        "unit_type": "CONTEXTUAL_CONSTRAINT",
+        "unit_text": "The relevant dysfunction occurs in this cohort.",
+        "supported_by": [],
+        "contradicted_by": []
+      },
+      {
+        "unit_id": "A1-H1-C2",
+        "unit_type": "CONTEXTUAL_CONSTRAINT",
+        "unit_text": "The proposed drug effects reach the relevant tissue under plausible treatment conditions.",
+        "supported_by": [],
+        "contradicted_by": []
+      },
+      {
+        "unit_id": "A1-H1-C3",
+        "unit_type": "CONTEXTUAL_CONSTRAINT",
+        "unit_text": "Changing those processes can improve urinary function.",
+        "supported_by": [],
+        "contradicted_by": []
+      },
+      {
+        "unit_id": "A1-H1-C4",
+        "unit_type": "CONTEXTUAL_CONSTRAINT",
+        "unit_text": "Any necessary contribution from vitamin E or another cointervention is made explicit rather than folded into the PTX rationale.",
+        "supported_by": [],
+        "contradicted_by": []
+      }
+    ],
+    "corroboration": [],
+    "gaps": [
+      {
+        "unit_id": "A1-H1-R1",
+        "unit_type": "REQUIRED_SUPPORT",
+        "unit_text": "In these men (BPH, shy bladder and difficulty voiding, with inadequate benefit from tamsulosin and failed or abandoned prescribed pelvic-floor treatment), the persistent voiding difficulty includes a reversible physiological component.",
+        "partly": [
+          {
+            "witness_id": "W-FRD-Q0001-01-Q0001",
+            "text": "Shirazi et al. (Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md): single-center randomized double-blind trial, 30 men per arm (all analyzed) with BPH/LUTS, giving pentoxifylline 400 mg every eight hours plus tamsulosin 0.4 mg/day or placebo plus tamsulosin, 12 weeks. Post-void residual fell more with combination (−32.93±16.33 versus −13.17±9.23 mL; p<.001), but baseline residual differed (77.27 versus 50.37 mL; p=.18). Reported values, not validated or baseline-equivalent.",
+            "source_file": "Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md",
+            "locator": "Abstract, Materials and Methods; 2 | METHODS; 2.3 | Study design; FIGURE 1; TABLE 1, PVR row; TABLE 4, PVR row",
+            "vfrd_id": "FRD-Q0001-01",
+            "relation": "PARTIALLY_COVERS",
+            "basis": "ONE_PASS_ONLY"
+          },
+          {
+            "witness_id": "W-FRD-Q0001-02-r3-Q0001",
+            "text": "Shirazi et al. (2024, Lower Urinary Tract Symptoms) reported mean Qmax changes of 4.48 versus 2.67 mL/s; their arithmetic difference, 1.81 mL/s, is an analyst-derived unadjusted contrast favoring pentoxifylline-plus-tamsulosin over placebo-plus-tamsulosin, not a separately reported adjusted estimate. This BPH add-on trial does not establish pentoxifylline monotherapy or psychogenic-voiding efficacy.",
+            "source_file": "Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md",
+            "locator": "Shirazi M et al. Lower Urinary Tract Symptoms. 2024;16(1):e12509. doi:10.1111/luts.12509. Exact source filename: `Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md`. Locations: TABLE 4; 2 | METHODS; 2.3 | Study design. Original locator: TABLE 4. Page numbers are unavailable in the supplied text.",
+            "vfrd_id": "FRD-Q0001-02-r3",
+            "relation": "PARTIALLY_COVERS",
+            "basis": "ONE_PASS_ONLY"
+          }
+        ]
+      },
+      {
+        "unit_id": "A1-H1-R2",
+        "unit_type": "REQUIRED_SUPPORT",
+        "unit_text": "That reversible physiological component is one that tamsulosin does not adequately address in these men.",
+        "partly": [
+          {
+            "witness_id": "W-FRD-Q0040-01-Q0040",
+            "text": "Bortnick et al. (bortnick2020.pdf.md, Medical therapy → Alpha blockers), a review, describe alpha-adrenergic antagonists as relaxing prostate and bladder-neck smooth muscle (which contains alpha-1a receptors) to relieve bladder outlet obstruction. This source states the mechanism only; it does not supply treatment-onset, duration, or prostate-size criteria distinguishing alpha-blocker therapy from 5-alpha-reductase inhibition or procedures.",
+            "source_file": "bortnick2020.pdf.md",
+            "locator": "Medical therapy → Alpha blockers, opening paragraph",
+            "vfrd_id": "FRD-Q0040-01",
+            "relation": "PARTIALLY_COVERS",
+            "basis": "AGREED"
+          },
+          {
+            "witness_id": "W-FRD-Q0001-01-Q0001",
+            "text": "Shirazi et al. (Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md): single-center randomized double-blind trial, 30 men per arm (all analyzed) with BPH/LUTS, giving pentoxifylline 400 mg every eight hours plus tamsulosin 0.4 mg/day or placebo plus tamsulosin, 12 weeks. Post-void residual fell more with combination (−32.93±16.33 versus −13.17±9.23 mL; p<.001), but baseline residual differed (77.27 versus 50.37 mL; p=.18). Reported values, not validated or baseline-equivalent.",
+            "source_file": "Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md",
+            "locator": "Abstract, Materials and Methods; 2 | METHODS; 2.3 | Study design; FIGURE 1; TABLE 1, PVR row; TABLE 4, PVR row",
+            "vfrd_id": "FRD-Q0001-01",
+            "relation": "PARTIALLY_COVERS",
+            "basis": "ONE_PASS_ONLY"
+          }
+        ]
+      },
+      {
+        "unit_id": "A1-H1-R3",
+        "unit_type": "REQUIRED_SUPPORT",
+        "unit_text": "The same component is one that their prescribed pelvic-floor intervention does not adequately address.",
+        "partly": [
+          {
+            "witness_id": "W-FRD-Q0004-03-r2-Q0004",
+            "text": "Kaplan et al. (kaplan1997.pdf.md): retrospective series of 43 men with urodynamically diagnosed pseudodyssynergia, previously treated as chronic nonbacterial prostatitis. Success was ≥50% symptom reduction on two consecutive visits. After behavior modification and biofeedback, 35 (printed 83%) responded; responders' mean AUA score fell 18.4→7.6 (three months), 8.1 (six months). RESULTS gives the three-month count; the abstract reports six-month success.",
+            "source_file": "kaplan1997.pdf.md",
+            "locator": "Kaplan et al., “Pseudodyssynergia (Contraction of the External Sphincter During Voiding) Misdiagnosed as Chronic Nonbacterial Prostatitis and the Role of Biofeedback as a Therapeutic Option”; `kaplan1997.pdf.md`, MATERIALS AND METHODS, RESULTS, and ABSTRACT—Results. The supplied text does not provide the article’s journal volume, issue, or page range. Original locator: RESULTS; repaired locator adds MATERIALS AND METHODS and ABSTRACT—Results.",
+            "vfrd_id": "FRD-Q0004-03-r2",
+            "relation": "PARTIALLY_COVERS",
+            "basis": "ONE_PASS_ONLY"
+          },
+          {
+            "witness_id": "W-FRD-Q0055-01-Q0055",
+            "text": "Glazener et al. 2011, UK randomized TURP trial: 442 men with incontinence six weeks post-surgery were offered four one-to-one PFMT (plus bladder training) sessions (n=220) or standard care (n=222). At 12 months, self-reported any incontinence (ICIQ-UI SF) was 126/194 (65%) versus 125/203 (62%); adjusted intention-to-treat risk ratio 1.06 (95% CI 0.91–1.23; p=0.47)—no significant benefit. Post-surgical leakage, not difficult emptying.",
+            "source_file": "glazener2011.pdf.md",
+            "locator": "Table 3: Outcomes at 12 months, Trial 2, Men with any incontinence and footnotes; Table 4, adjusted intention-to-treat row; Figure 1B; Methods—Procedures; Summary—Methods",
+            "vfrd_id": "FRD-Q0055-01",
+            "relation": "PARTIALLY_COVERS",
+            "basis": "ONE_PASS_ONLY"
+          }
+        ]
+      },
+      {
+        "unit_id": "A1-H1-R4",
+        "unit_type": "REQUIRED_SUPPORT",
+        "unit_text": "PTX or its metabolites can act on that reversible physiological component at clinically attainable exposures.",
+        "partly": [
+          {
+            "witness_id": "W-FRD-Q0027-01-Q0027",
+            "text": "Neuner et al. (immunology00076-0102.pdf.md) studied four healthy volunteers overall; the two-day-regimen subgroup size is unspecified. Oral PTX 5×400 mg/day for two days significantly suppressed TNF-α, IL-1β, IL-6 and IL-8 release from day-7 PBMC cultured 24 hours, with or without LPS 1 µg/mL. These are ex-vivo endpoints after in-vivo dosing; plasma/tissue exposure and clinical urinary efficacy were unmeasured.",
+            "source_file": "immunology00076-0102.pdf.md",
+            "locator": "P. Neuner et al., “Pentoxifylline in vivo down-regulates the release of IL-1 β, IL-6, IL-8 and tumour necrosis factor-α by human peripheral blood mononuclear cells.” Exact source: `immunology00076-0102.pdf.md`; MATERIALS AND METHODS → Human volunteers; Preparation of PBMC; RESULTS → In vivo effects of orally applied PTX on cytokine production by PBMC, first paragraph; Figure 1 original caption. The original results locator is correct. Journal, volume, pagination and publication date are not established by the supplied article metadata; receipt and acceptance dates are supplied but are not publication dates.",
+            "vfrd_id": "FRD-Q0027-01",
+            "relation": "PARTIALLY_COVERS",
+            "basis": "AGREED"
+          },
+          {
+            "witness_id": "W-FRD-Q0029-01-Q0029",
+            "text": "Dezube et al. 1993, pilot study of seven adult cancer patients treated on eight occasions for 1–3 weeks with oral controlled-release pentoxifylline 400 mg every eight hours. On all three occasions when baseline PBMC TNF/β-actin RNA ratios exceeded the healthy-volunteer normal range, ratios fell within one week; on five occasions within normal range, no reduction. Target-engagement, not clinical benefit.",
+            "source_file": "dezube1993.pdf.md",
+            "locator": "Materials and methods → Patient characteristics, Treatment plan, TNF RNA assay; Results → TNF/actin ratios in vivo → Normal volunteers; Results → Suppression of TNF/actin ratios by pentoxifylline in vivo; Fig. 3 caption; Discussion, paragraph beginning “In this pilot study, TNF was measured”",
+            "vfrd_id": "FRD-Q0029-01",
+            "relation": "PARTIALLY_COVERS",
+            "basis": "AGREED"
+          }
+        ]
+      },
+      {
+        "unit_id": "A1-H1-R5",
+        "unit_type": "REQUIRED_SUPPORT",
+        "unit_text": "PTX could meaningfully improve voiding in an identifiable subgroup of these men: acting on the reversible component changes a relevant urinary function (for example contractility, outlet behavior, coordination, initiation, flow, or emptying).",
+        "partly": [
+          {
+            "witness_id": "W-FRD-BOWTON-01-Q0006",
+            "text": "Bowton et al. (bowton1989.pdf.md): in a ten-patient study of prior cerebrovascular disease, six given single oral 800 mg sustained-release pentoxifylline showed increased normocarbic global cerebral blood flow (xenon-133) from 52.5±15.2 to 59.4, 58.2, 62.4 mL/100g/min at 2, 4, 6 hours (p≤0.01–0.02; overall p=0.017). No concurrent placebo arm. Cerebral measured flow, not pelvic tissue function.",
+            "source_file": "bowton1989.pdf.md",
+            "locator": "TABLE 1, high-dose (800 mg), Air rows and statistical footnote; Subjects and Methods; Results; Discussion",
+            "vfrd_id": "FRD-BOWTON-01",
+            "relation": "PARTIALLY_COVERS",
+            "basis": "ONE_PASS_ONLY"
+          },
+          {
+            "witness_id": "W-FRD-Q0001-01-Q0001",
+            "text": "Shirazi et al. (Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md): single-center randomized double-blind trial, 30 men per arm (all analyzed) with BPH/LUTS, giving pentoxifylline 400 mg every eight hours plus tamsulosin 0.4 mg/day or placebo plus tamsulosin, 12 weeks. Post-void residual fell more with combination (−32.93±16.33 versus −13.17±9.23 mL; p<.001), but baseline residual differed (77.27 versus 50.37 mL; p=.18). Reported values, not validated or baseline-equivalent.",
+            "source_file": "Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md",
+            "locator": "Abstract, Materials and Methods; 2 | METHODS; 2.3 | Study design; FIGURE 1; TABLE 1, PVR row; TABLE 4, PVR row",
+            "vfrd_id": "FRD-Q0001-01",
+            "relation": "PARTIALLY_COVERS",
+            "basis": "ONE_PASS_ONLY"
+          }
+        ]
+      },
+      {
+        "unit_id": "A1-H1-R6",
+        "unit_type": "REQUIRED_SUPPORT",
+        "unit_text": "Trial slot (a), intervention and exposure, is specifiable from supported premises: agent, any required cointervention, route, dose, and duration at a clinically attainable exposure.",
+        "partly": [
+          {
+            "witness_id": "W-FRD-BOWTON-01-Q0006",
+            "text": "Bowton et al. (bowton1989.pdf.md): in a ten-patient study of prior cerebrovascular disease, six given single oral 800 mg sustained-release pentoxifylline showed increased normocarbic global cerebral blood flow (xenon-133) from 52.5±15.2 to 59.4, 58.2, 62.4 mL/100g/min at 2, 4, 6 hours (p≤0.01–0.02; overall p=0.017). No concurrent placebo arm. Cerebral measured flow, not pelvic tissue function.",
+            "source_file": "bowton1989.pdf.md",
+            "locator": "TABLE 1, high-dose (800 mg), Air rows and statistical footnote; Subjects and Methods; Results; Discussion",
+            "vfrd_id": "FRD-BOWTON-01",
+            "relation": "PARTIALLY_COVERS",
+            "basis": "AGREED"
+          },
+          {
+            "witness_id": "W-FRD-Q0001-02-r3-Q0001",
+            "text": "Shirazi et al. (2024, Lower Urinary Tract Symptoms) reported mean Qmax changes of 4.48 versus 2.67 mL/s; their arithmetic difference, 1.81 mL/s, is an analyst-derived unadjusted contrast favoring pentoxifylline-plus-tamsulosin over placebo-plus-tamsulosin, not a separately reported adjusted estimate. This BPH add-on trial does not establish pentoxifylline monotherapy or psychogenic-voiding efficacy.",
+            "source_file": "Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md",
+            "locator": "Shirazi M et al. Lower Urinary Tract Symptoms. 2024;16(1):e12509. doi:10.1111/luts.12509. Exact source filename: `Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md`. Locations: TABLE 4; 2 | METHODS; 2.3 | Study design. Original locator: TABLE 4. Page numbers are unavailable in the supplied text.",
+            "vfrd_id": "FRD-Q0001-02-r3",
+            "relation": "PARTIALLY_COVERS",
+            "basis": "AGREED"
+          }
+        ]
+      },
+      {
+        "unit_id": "A1-H1-R7",
+        "unit_type": "REQUIRED_SUPPORT",
+        "unit_text": "Trial slot (b), phenotype, is specifiable from supported premises: measurable baseline characteristics, ascertainable before treatment, that identify the subgroup of these men proposed to respond.",
+        "partly": [
+          {
+            "witness_id": "W-FRD-Q0029-01-Q0029",
+            "text": "Dezube et al. 1993, pilot study of seven adult cancer patients treated on eight occasions for 1–3 weeks with oral controlled-release pentoxifylline 400 mg every eight hours. On all three occasions when baseline PBMC TNF/β-actin RNA ratios exceeded the healthy-volunteer normal range, ratios fell within one week; on five occasions within normal range, no reduction. Target-engagement, not clinical benefit.",
+            "source_file": "dezube1993.pdf.md",
+            "locator": "Materials and methods → Patient characteristics, Treatment plan, TNF RNA assay; Results → TNF/actin ratios in vivo → Normal volunteers; Results → Suppression of TNF/actin ratios by pentoxifylline in vivo; Fig. 3 caption; Discussion, paragraph beginning “In this pilot study, TNF was measured”",
+            "vfrd_id": "FRD-Q0029-01",
+            "relation": "PARTIALLY_COVERS",
+            "basis": "AGREED"
+          },
+          {
+            "witness_id": "W-FRD-RADEMAKERS-01-Q0003",
+            "text": "Rademakers et al.'s review (rademakers2016.pdf.md, Preoperative characterization; Figure 1) reports a retrospective urodynamic analysis attributed to Oelke et al. of 786 treatment-naïve men ≥40 with LUTS: median BCI rose with obstruction grade from 73 (Schäfer 0) to 188 (grade 6), median Wmax from 9.6 to 23 W/m². The review suggests thresholds BCI<100 and Wmax<7 be grade-adjusted—cross-sectional association, not within-man change.",
+            "source_file": "rademakers2016.pdf.md",
+            "locator": "PREOPERATIVE CHARACTERIZATION OF PATIENTS WITH VOIDING DYSFUNCTION, paragraphs beginning “Three urodynamic parameters” and “Oelke”; FIGURE 1 caption; REFERENCES AND RECOMMENDED READING, reference 22 and annotation",
+            "vfrd_id": "FRD-RADEMAKERS-01",
+            "relation": "PARTIALLY_COVERS",
+            "basis": "AGREED"
+          }
+        ]
+      },
+      {
+        "unit_id": "A1-H1-R8",
+        "unit_type": "REQUIRED_SUPPORT",
+        "unit_text": "Trial slot (c), measurement, is specifiable from supported premises: the primary functional voiding outcome, its expected direction, and its expected timing.",
+        "partly": [
+          {
+            "witness_id": "W-FRD-Q0001-01-Q0001",
+            "text": "Shirazi et al. (Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md): single-center randomized double-blind trial, 30 men per arm (all analyzed) with BPH/LUTS, giving pentoxifylline 400 mg every eight hours plus tamsulosin 0.4 mg/day or placebo plus tamsulosin, 12 weeks. Post-void residual fell more with combination (−32.93±16.33 versus −13.17±9.23 mL; p<.001), but baseline residual differed (77.27 versus 50.37 mL; p=.18). Reported values, not validated or baseline-equivalent.",
+            "source_file": "Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md",
+            "locator": "Abstract, Materials and Methods; 2 | METHODS; 2.3 | Study design; FIGURE 1; TABLE 1, PVR row; TABLE 4, PVR row",
+            "vfrd_id": "FRD-Q0001-01",
+            "relation": "PARTIALLY_COVERS",
+            "basis": "ONE_PASS_ONLY"
+          },
+          {
+            "witness_id": "W-FRD-Q0001-02-r3-Q0001",
+            "text": "Shirazi et al. (2024, Lower Urinary Tract Symptoms) reported mean Qmax changes of 4.48 versus 2.67 mL/s; their arithmetic difference, 1.81 mL/s, is an analyst-derived unadjusted contrast favoring pentoxifylline-plus-tamsulosin over placebo-plus-tamsulosin, not a separately reported adjusted estimate. This BPH add-on trial does not establish pentoxifylline monotherapy or psychogenic-voiding efficacy.",
+            "source_file": "Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md",
+            "locator": "Shirazi M et al. Lower Urinary Tract Symptoms. 2024;16(1):e12509. doi:10.1111/luts.12509. Exact source filename: `Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md`. Locations: TABLE 4; 2 | METHODS; 2.3 | Study design. Original locator: TABLE 4. Page numbers are unavailable in the supplied text.",
+            "vfrd_id": "FRD-Q0001-02-r3",
+            "relation": "PARTIALLY_COVERS",
+            "basis": "ONE_PASS_ONLY"
+          }
+        ]
+      },
+      {
+        "unit_id": "A1-H1-R9",
+        "unit_type": "REQUIRED_SUPPORT",
+        "unit_text": "Trial slot (d), comparator, is specifiable from supported premises: a control or contrast that would distinguish the proposed PTX mechanism from the leading alternative explanation (for example tamsulosin, vitamin E, pelvic-floor treatment, combination effects, adherence, or contextual change).",
+        "partly": [
+          {
+            "witness_id": "W-FRD-Q0048-01-Q0048",
+            "text": "Shirazi et al.'s double-blind randomized 12-week BPH trial reports comparisons by t-test, Wilcoxon, and Mann–Whitney tests, with significance at p≤0.05; no ANCOVA or baseline-PVR-adjusted model is reported. The analysis set was participants receiving medication throughout (60 randomized, 30 per group, no exclusions). Whether change dispersion is SD or SE is not stated in this methods text.",
+            "source_file": "Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md",
+            "locator": "§2.4 | Statistical analyses; §2.3 | Study design, Figure 1; §3 | RESULTS; Abstract, Materials and Methods",
+            "vfrd_id": "FRD-Q0048-01",
+            "relation": "PARTIALLY_COVERS",
+            "basis": "ONE_PASS_ONLY"
+          },
+          {
+            "witness_id": "W-FRD-SHIRAZI2015-02-Q0002",
+            "text": "Shirazi 2015: in male Sprague-Dawley rats with partial bladder outlet obstruction, pentoxifylline 100 mg/kg/day by oral gavage for four weeks, begun after obstruction induction, produced no significant improvement in maximum carbachol-induced detrusor-strip contractile tension versus water-treated obstructed controls (20 animals per group; all completed). Treatment addressed established obstruction, not prevention; this is a functional contractility null.",
+            "source_file": "shirazi2015.pdf.md",
+            "locator": "Animals and methods → Study design; Surgical technique; Evaluation of detrusor muscle contractility; Statistical analysis; Abstract → Results; Results and Fig. 2",
+            "vfrd_id": "FRD-SHIRAZI2015-02",
+            "relation": "PARTIALLY_COVERS",
+            "basis": "ONE_PASS_ONLY"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "hypothesis_id": "A1-H2",
+    "axis_id": "A1",
+    "approval": "APPROVED",
+    "title": "The proposed therapeutic mechanism fails at a necessary causal link",
+    "statement": "H1 is wrong because PTX's reported biological effects do not translate into a meaningful remedy for the dysfunction driving impaired voiding in this cohort. Affirmative evidence demonstrates a consequential mismatch in exposure, tissue, disease process, timing, or the relationship between a biological marker and urinary function—and that mismatch defeats the materially supported rationale, not merely one route among many. Favorable findings therefore do not provide the proposed causal justification for this intervention.",
+    "coverage_status": "NO_COMPLETE_COVERAGE",
+    "required_covered": "0/2",
+    "allocation": 8,
+    "controlling": [],
+    "objections": [],
+    "qualifications": [
+      {
+        "unit_id": "A1-H2-C1",
+        "unit_type": "CONTEXTUAL_CONSTRAINT",
+        "unit_text": "The evidence demonstrating the mismatch is sufficiently relevant to test H1; failure in an unrelated model or exposure does not suffice.",
+        "supported_by": [],
+        "contradicted_by": []
+      },
+      {
+        "unit_id": "A1-H2-C2",
+        "unit_type": "CONTEXTUAL_CONSTRAINT",
+        "unit_text": "H2 targets the materially supported rationale as it currently stands in the ledger, not every route that could be imagined.",
+        "supported_by": [],
+        "contradicted_by": []
+      },
+      {
+        "unit_id": "A1-H2-C3",
+        "unit_type": "CONTEXTUAL_CONSTRAINT",
+        "unit_text": "The absence of clinical trials alone does not corroborate H2.",
+        "supported_by": [],
+        "contradicted_by": []
+      },
+      {
+        "unit_id": "A1-H2-C4",
+        "unit_type": "CONTEXTUAL_CONSTRAINT",
+        "unit_text": "Breaking one route among several independently supported routes damages that route only in proportion to the share of the case it carried and does not by itself corroborate H2.",
+        "supported_by": [],
+        "contradicted_by": []
+      }
+    ],
+    "corroboration": [],
+    "gaps": [
+      {
+        "unit_id": "A1-H2-R1",
+        "unit_type": "REQUIRED_SUPPORT",
+        "unit_text": "Affirmative evidence demonstrates a consequential mismatch between PTX's reported biological effects and the dysfunction driving impaired voiding in this cohort, in at least one of: exposure, tissue, disease process, timing, or the relationship between a biological marker and urinary function.",
+        "partly": [
+          {
+            "witness_id": "W-FRD-Q0028-01-Q0028",
+            "text": "Kruuse 2000, double-blind crossover in 10 healthy subjects: pentoxifylline 300 mg intravenously over 60 minutes versus saline, SPECT before and 55 and 115 minutes after infusion began. No significant over-time change in middle-cerebral-artery or global cerebral blood flow, corrected or uncorrected. pCO2-corrected changes did not differ between treatments; uncorrected changes did. Tests healthy cerebral perfusion, not ischemic bladder.",
+            "source_file": "kruuse2000.pdf.md",
+            "locator": "Material and methods; Procedure on the day of the study (Table 1); Results → Main study; Statistics; Figure 1 caption",
+            "vfrd_id": "FRD-Q0028-01",
+            "relation": "PARTIALLY_COVERS",
+            "basis": "ONE_PASS_ONLY"
+          },
+          {
+            "witness_id": "W-FRD-Q0029-01-Q0029",
+            "text": "Dezube et al. 1993, pilot study of seven adult cancer patients treated on eight occasions for 1–3 weeks with oral controlled-release pentoxifylline 400 mg every eight hours. On all three occasions when baseline PBMC TNF/β-actin RNA ratios exceeded the healthy-volunteer normal range, ratios fell within one week; on five occasions within normal range, no reduction. Target-engagement, not clinical benefit.",
+            "source_file": "dezube1993.pdf.md",
+            "locator": "Materials and methods → Patient characteristics, Treatment plan, TNF RNA assay; Results → TNF/actin ratios in vivo → Normal volunteers; Results → Suppression of TNF/actin ratios by pentoxifylline in vivo; Fig. 3 caption; Discussion, paragraph beginning “In this pilot study, TNF was measured”",
+            "vfrd_id": "FRD-Q0029-01",
+            "relation": "PARTIALLY_COVERS",
+            "basis": "ONE_PASS_ONLY"
+          }
+        ]
+      },
+      {
+        "unit_id": "A1-H2-R2",
+        "unit_type": "REQUIRED_SUPPORT",
+        "unit_text": "The mismatched link is necessary to the materially supported rationale as it stands in the ledger (shared by or required for its supported routes), so the failure reaches that rationale and not merely one route among many.",
+        "partly": [
+          {
+            "witness_id": "W-FRD-Q0019-01-Q0019",
+            "text": "Wystrychowski et al. (wystrychowski2014.pdf.md, Table 1; RESULTS) randomized 58 male Sprague-Dawley rats; after right nephrectomy, solitary left pedicle was clamped 45 minutes. Subcutaneous pentoxifylline 100 mg/kg versus saline improved 48-hour creatinine clearance only when given 60 minutes before ischemia (10/arm; P<.001), not 1 minute into ischemia or 60 minutes post-release. These within-timing acute-model results don't transfer to chronic bladder disease.",
+            "source_file": "wystrychowski2014.pdf.md",
+            "locator": "ABSTRACT (Methods); METHODS; RESULTS; Table 1, “Renal Function Parameters at 48 Hours After Ischemia/Reperfusion of the Solitary Left Kidney”; DISCUSSION",
+            "vfrd_id": "FRD-Q0019-01",
+            "relation": "PARTIALLY_COVERS",
+            "basis": "ONE_PASS_ONLY"
+          },
+          {
+            "witness_id": "W-FRD-Q0027-01-Q0027",
+            "text": "Neuner et al. (immunology00076-0102.pdf.md) studied four healthy volunteers overall; the two-day-regimen subgroup size is unspecified. Oral PTX 5×400 mg/day for two days significantly suppressed TNF-α, IL-1β, IL-6 and IL-8 release from day-7 PBMC cultured 24 hours, with or without LPS 1 µg/mL. These are ex-vivo endpoints after in-vivo dosing; plasma/tissue exposure and clinical urinary efficacy were unmeasured.",
+            "source_file": "immunology00076-0102.pdf.md",
+            "locator": "P. Neuner et al., “Pentoxifylline in vivo down-regulates the release of IL-1 β, IL-6, IL-8 and tumour necrosis factor-α by human peripheral blood mononuclear cells.” Exact source: `immunology00076-0102.pdf.md`; MATERIALS AND METHODS → Human volunteers; Preparation of PBMC; RESULTS → In vivo effects of orally applied PTX on cytokine production by PBMC, first paragraph; Figure 1 original caption. The original results locator is correct. Journal, volume, pagination and publication date are not established by the supplied article metadata; receipt and acceptance dates are supplied but are not publication dates.",
+            "vfrd_id": "FRD-Q0027-01",
+            "relation": "PARTIALLY_COVERS",
+            "basis": "ONE_PASS_ONLY"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "hypothesis_id": "A1-H3",
+    "axis_id": "A1",
+    "approval": "APPROVED",
+    "title": "The evidence leaves the decisive mechanistic link unresolved",
+    "statement": "Existing evidence supports some components of H1 but cannot distinguish a therapeutically consequential mechanism from the failure described by H2. The unresolved links prevent the rationale from becoming specific enough to design the trial: at least one of intervention and exposure, phenotype, measurement, or comparator cannot be specified from supported premises. The uncertainty is localized to identified links, and neither a compelling mechanistic endorsement nor a mechanistic rejection is presently determined.",
+    "coverage_status": "NO_COMPLETE_COVERAGE",
+    "required_covered": "1/3",
+    "allocation": 27,
+    "controlling": [
+      {
+        "unit_id": "A1-H3-R1",
+        "unit_type": "REQUIRED_SUPPORT",
+        "unit_text": "Existing evidence affirmatively supports some components of H1, that is, at least one link in the chain from clinically attainable PTX or metabolite exposure, through a relevant biological target and tissue effect, to changed voiding function, an identifiable patient subgroup, and a measurable trial prediction.",
+        "witnesses": [
+          {
+            "witness_id": "W-FRD-Q0001-01-Q0001",
+            "text": "Shirazi et al. (Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md): single-center randomized double-blind trial, 30 men per arm (all analyzed) with BPH/LUTS, giving pentoxifylline 400 mg every eight hours plus tamsulosin 0.4 mg/day or placebo plus tamsulosin, 12 weeks. Post-void residual fell more with combination (−32.93±16.33 versus −13.17±9.23 mL; p<.001), but baseline residual differed (77.27 versus 50.37 mL; p=.18). Reported values, not validated or baseline-equivalent.",
+            "source_file": "Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md",
+            "locator": "Abstract, Materials and Methods; 2 | METHODS; 2.3 | Study design; FIGURE 1; TABLE 1, PVR row; TABLE 4, PVR row",
+            "vfrd_id": "FRD-Q0001-01",
+            "relation": "WITNESS_ENTAILS_UNIT",
+            "basis": "MODEL_ADJUDICATED"
+          }
+        ],
+        "more": 0
+      }
+    ],
+    "objections": [],
+    "qualifications": [
+      {
+        "unit_id": "A1-H3-C1",
+        "unit_type": "CONTEXTUAL_CONSTRAINT",
+        "unit_text": "Meaningful retrieval and adverse testing have been completed; the uncertainty is not merely an artifact of an unfinished investigation.",
+        "supported_by": [],
+        "contradicted_by": []
+      },
+      {
+        "unit_id": "A1-H3-C2",
+        "unit_type": "CONTEXTUAL_CONSTRAINT",
+        "unit_text": "An uncertainty that the proposed trial can legitimately test does not by itself favor H3; the blocking gap must prevent a defensible trial rationale rather than be a question the trial itself would resolve.",
+        "supported_by": [],
+        "contradicted_by": []
+      }
+    ],
+    "corroboration": [],
+    "gaps": [
+      {
+        "unit_id": "A1-H3-R2",
+        "unit_type": "REQUIRED_SUPPORT",
+        "unit_text": "A named causal link remains unresolved after meaningful retrieval and adverse testing (for example, relevant exposure, tissue effects, functional consequences, or response predictors are unmeasured or inadequately distinguished), and that unresolved issue prevents a defensible trial rationale.",
+        "partly": [
+          {
+            "witness_id": "W-FRD-BOWTON-01-Q0006",
+            "text": "Bowton et al. (bowton1989.pdf.md): in a ten-patient study of prior cerebrovascular disease, six given single oral 800 mg sustained-release pentoxifylline showed increased normocarbic global cerebral blood flow (xenon-133) from 52.5±15.2 to 59.4, 58.2, 62.4 mL/100g/min at 2, 4, 6 hours (p≤0.01–0.02; overall p=0.017). No concurrent placebo arm. Cerebral measured flow, not pelvic tissue function.",
+            "source_file": "bowton1989.pdf.md",
+            "locator": "TABLE 1, high-dose (800 mg), Air rows and statistical footnote; Subjects and Methods; Results; Discussion",
+            "vfrd_id": "FRD-BOWTON-01",
+            "relation": "PARTIALLY_COVERS",
+            "basis": "ONE_PASS_ONLY"
+          },
+          {
+            "witness_id": "W-FRD-BOWTON-02-Q0006",
+            "text": "Bowton et al. (bowton1989.pdf.md): in a randomized two-dose study of 10 patients with prior cerebrovascular disease, four given single oral 400 mg sustained-release pentoxifylline showed no statistically significant overall increase in normocarbic global cerebral blood flow across 2, 4, 6 hours (p=0.29); means were 101±8%, 101±15%, 110±15% of baseline (baseline 55.5±13.9 ml/100g/min). Cerebral bed, measured flow—not pelvic tissue function.",
+            "source_file": "bowton1989.pdf.md",
+            "locator": "Subjects and Methods; Results; TABLE 1, low-dose Air and CO₂ rows and footnotes",
+            "vfrd_id": "FRD-BOWTON-02",
+            "relation": "PARTIALLY_COVERS",
+            "basis": "ONE_PASS_ONLY"
+          }
+        ]
+      },
+      {
+        "unit_id": "A1-H3-R3",
+        "unit_type": "REQUIRED_SUPPORT",
+        "unit_text": "Because of the unresolved link, at least one of the four section 1 trial-specification slots, (a) intervention and exposure, (b) phenotype, (c) measurement, or (d) comparator, cannot be specified from supported premises.",
+        "partly": [
+          {
+            "witness_id": "W-FRD-Q0001-02-r3-Q0001",
+            "text": "Shirazi et al. (2024, Lower Urinary Tract Symptoms) reported mean Qmax changes of 4.48 versus 2.67 mL/s; their arithmetic difference, 1.81 mL/s, is an analyst-derived unadjusted contrast favoring pentoxifylline-plus-tamsulosin over placebo-plus-tamsulosin, not a separately reported adjusted estimate. This BPH add-on trial does not establish pentoxifylline monotherapy or psychogenic-voiding efficacy.",
+            "source_file": "Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md",
+            "locator": "Shirazi M et al. Lower Urinary Tract Symptoms. 2024;16(1):e12509. doi:10.1111/luts.12509. Exact source filename: `Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md`. Locations: TABLE 4; 2 | METHODS; 2.3 | Study design. Original locator: TABLE 4. Page numbers are unavailable in the supplied text.",
+            "vfrd_id": "FRD-Q0001-02-r3",
+            "relation": "PARTIALLY_COVERS",
+            "basis": "ONE_PASS_ONLY"
+          },
+          {
+            "witness_id": "W-FRD-Q0007-01-Q0007",
+            "text": "Nisi et al. (nisi2013.pdf.md, Table 2; Methods) gave 20 chronic-heart-failure patients one sustained-release 600-mg oral PTX tablet fasting. Parent-PTX plasma Tpeak was 1.64 ± 0.92 versus 3.89 ± 1.90 h (NYHA II, n=11; III/IV, n=9; P=.0077); Cmax 719 ± 403 versus 833 ± 524 ng/mL (NS), mean ± SD. Plasma values only—no tissue, unbound, metabolite or half-life—not urinary-benefit timing.",
+            "source_file": "nisi2013.pdf.md",
+            "locator": "Results, Table 2, PTX block, Tpeak row and Mean/SD headers; Methods → Patients and Treatments, Pharmacokinetic Study; Methods, Pharmacokinetic Analysis",
+            "vfrd_id": "FRD-Q0007-01",
+            "relation": "PARTIALLY_COVERS",
+            "basis": "ONE_PASS_ONLY"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "hypothesis_id": "A2-H1",
+    "axis_id": "A2",
+    "approval": "TEST_ONLY",
+    "title": "PTX benefit is a rapid functional effect",
+    "statement": "The materially supported mechanism acts on current physiological function—such as perfusion, microcirculation, smooth-muscle behavior, or neural signaling—rather than on established tissue structure. At clinically attainable exposures, PTX or its metabolites should produce measurable improvement in voiding within days to a few weeks, and benefit should diminish if treatment stops.",
+    "coverage_status": "NO_COMPLETE_COVERAGE",
+    "required_covered": "0/4",
+    "allocation": 15,
+    "controlling": [],
+    "objections": [],
+    "qualifications": [
+      {
+        "unit_id": "A2-H1-C1",
+        "unit_type": "CONTEXTUAL_CONSTRAINT",
+        "unit_text": "A functional component of impaired voiding is present and modifiable in this cohort.",
+        "supported_by": [],
+        "contradicted_by": []
+      },
+      {
+        "unit_id": "A2-H1-C2",
+        "unit_type": "CONTEXTUAL_CONSTRAINT",
+        "unit_text": "Attainable exposure reaches the relevant tissue quickly enough to act within the proposed days-to-few-weeks window.",
+        "supported_by": [],
+        "contradicted_by": []
+      }
+    ],
+    "corroboration": [],
+    "gaps": [
+      {
+        "unit_id": "A2-H1-R1",
+        "unit_type": "REQUIRED_SUPPORT",
+        "unit_text": "PTX's materially supported mechanism acts on current physiological function, such as perfusion, microcirculation, smooth-muscle behavior, or neural signaling (examples, not an exhaustive list).",
+        "partly": [
+          {
+            "witness_id": "W-FRD-Q0029-01-Q0029",
+            "text": "Dezube et al. 1993, pilot study of seven adult cancer patients treated on eight occasions for 1–3 weeks with oral controlled-release pentoxifylline 400 mg every eight hours. On all three occasions when baseline PBMC TNF/β-actin RNA ratios exceeded the healthy-volunteer normal range, ratios fell within one week; on five occasions within normal range, no reduction. Target-engagement, not clinical benefit.",
+            "source_file": "dezube1993.pdf.md",
+            "locator": "Materials and methods → Patient characteristics, Treatment plan, TNF RNA assay; Results → TNF/actin ratios in vivo → Normal volunteers; Results → Suppression of TNF/actin ratios by pentoxifylline in vivo; Fig. 3 caption; Discussion, paragraph beginning “In this pilot study, TNF was measured”",
+            "vfrd_id": "FRD-Q0029-01",
+            "relation": "PARTIALLY_COVERS",
+            "basis": "AGREED"
+          },
+          {
+            "witness_id": "W-FRD-Q0044-01-Q0044",
+            "text": "Fukabori-1996-uninhibited-bladder.pdf.md (English abstract, 'A CASE OF UNINHIBITED BLADDER...') reports one 60-year-old woman with pollakisuria, urge incontinence and urodynamic uninhibited contractions; after a failed anticholinergic, pentoxifylline (dose/route unstated) resolved incontinence and reduced pollakisuria by two weeks, with contractions absent and increased capacity by four weeks. Storage symptoms only; single case, not comparative efficacy.",
+            "source_file": "Fukabori-1996-uninhibited-bladder.pdf.md",
+            "locator": "English abstract under “A CASE OF UNINHIBITED BLADDER SUCCESSFULLY TREATED WITH PENTOXIFYLLINE”, paragraph beginning “A 60-year-old woman with pollakisuria and urge incontinence”",
+            "vfrd_id": "FRD-Q0044-01",
+            "relation": "PARTIALLY_COVERS",
+            "basis": "AGREED"
+          }
+        ]
+      },
+      {
+        "unit_id": "A2-H1-R2",
+        "unit_type": "REQUIRED_SUPPORT",
+        "unit_text": "The mechanism acts on current function rather than on established tissue structure: its benefit does not run through altering established structure.",
+        "partly": [
+          {
+            "witness_id": "W-FRD-BOWTON-01-Q0006",
+            "text": "Bowton et al. (bowton1989.pdf.md): in a ten-patient study of prior cerebrovascular disease, six given single oral 800 mg sustained-release pentoxifylline showed increased normocarbic global cerebral blood flow (xenon-133) from 52.5±15.2 to 59.4, 58.2, 62.4 mL/100g/min at 2, 4, 6 hours (p≤0.01–0.02; overall p=0.017). No concurrent placebo arm. Cerebral measured flow, not pelvic tissue function.",
+            "source_file": "bowton1989.pdf.md",
+            "locator": "TABLE 1, high-dose (800 mg), Air rows and statistical footnote; Subjects and Methods; Results; Discussion",
+            "vfrd_id": "FRD-BOWTON-01",
+            "relation": "PARTIALLY_COVERS",
+            "basis": "ONE_PASS_ONLY"
+          },
+          {
+            "witness_id": "W-FRD-Q0001-01-Q0001",
+            "text": "Shirazi et al. (Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md): single-center randomized double-blind trial, 30 men per arm (all analyzed) with BPH/LUTS, giving pentoxifylline 400 mg every eight hours plus tamsulosin 0.4 mg/day or placebo plus tamsulosin, 12 weeks. Post-void residual fell more with combination (−32.93±16.33 versus −13.17±9.23 mL; p<.001), but baseline residual differed (77.27 versus 50.37 mL; p=.18). Reported values, not validated or baseline-equivalent.",
+            "source_file": "Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md",
+            "locator": "Abstract, Materials and Methods; 2 | METHODS; 2.3 | Study design; FIGURE 1; TABLE 1, PVR row; TABLE 4, PVR row",
+            "vfrd_id": "FRD-Q0001-01",
+            "relation": "PARTIALLY_COVERS",
+            "basis": "ONE_PASS_ONLY"
+          }
+        ]
+      },
+      {
+        "unit_id": "A2-H1-R3",
+        "unit_type": "REQUIRED_SUPPORT",
+        "unit_text": "At clinically attainable exposures, PTX or its metabolites produce measurable improvement in voiding within days to a few weeks.",
+        "partly": [
+          {
+            "witness_id": "W-FRD-BOWTON-01-Q0006",
+            "text": "Bowton et al. (bowton1989.pdf.md): in a ten-patient study of prior cerebrovascular disease, six given single oral 800 mg sustained-release pentoxifylline showed increased normocarbic global cerebral blood flow (xenon-133) from 52.5±15.2 to 59.4, 58.2, 62.4 mL/100g/min at 2, 4, 6 hours (p≤0.01–0.02; overall p=0.017). No concurrent placebo arm. Cerebral measured flow, not pelvic tissue function.",
+            "source_file": "bowton1989.pdf.md",
+            "locator": "TABLE 1, high-dose (800 mg), Air rows and statistical footnote; Subjects and Methods; Results; Discussion",
+            "vfrd_id": "FRD-BOWTON-01",
+            "relation": "PARTIALLY_COVERS",
+            "basis": "ONE_PASS_ONLY"
+          },
+          {
+            "witness_id": "W-FRD-Q0001-01-Q0001",
+            "text": "Shirazi et al. (Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md): single-center randomized double-blind trial, 30 men per arm (all analyzed) with BPH/LUTS, giving pentoxifylline 400 mg every eight hours plus tamsulosin 0.4 mg/day or placebo plus tamsulosin, 12 weeks. Post-void residual fell more with combination (−32.93±16.33 versus −13.17±9.23 mL; p<.001), but baseline residual differed (77.27 versus 50.37 mL; p=.18). Reported values, not validated or baseline-equivalent.",
+            "source_file": "Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md",
+            "locator": "Abstract, Materials and Methods; 2 | METHODS; 2.3 | Study design; FIGURE 1; TABLE 1, PVR row; TABLE 4, PVR row",
+            "vfrd_id": "FRD-Q0001-01",
+            "relation": "PARTIALLY_COVERS",
+            "basis": "ONE_PASS_ONLY"
+          }
+        ]
+      },
+      {
+        "unit_id": "A2-H1-R4",
+        "unit_type": "REQUIRED_SUPPORT",
+        "unit_text": "Benefit diminishes if treatment stops.",
+        "partly": [
+          {
+            "witness_id": "W-FRD-Q0009-03-Q0009",
+            "text": "Delanian et al.'s follow-up of women with superficial breast radiation-induced fibrosis on pentoxifylline 800 mg/day plus vitamin E 1,000 U/day found that, after stopping, fibrosis surface area rebounded more after short (6-12-month) treatment than long (24-48-month) treatment: 40%/year (95% CI 24-56) versus 8.5%/year (95% CI 1-16); P=.0012. Duration was not randomized; follow-up lasted two years (delanian2005.pdf.md).",
+            "source_file": "delanian2005.pdf.md",
+            "locator": "Modalities of Combined PTX-vitE Treatment; Statistical Analysis; Primary Analyses, paragraph beginning “After stopping PTX-vitE: Rebound effect”; DISCUSSION, paragraph beginning “Long-term follow-up of our patients”",
+            "vfrd_id": "FRD-Q0009-03",
+            "relation": "PARTIALLY_COVERS",
+            "basis": "AGREED"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "hypothesis_id": "A2-H2",
+    "axis_id": "A2",
+    "approval": "TEST_ONLY",
+    "title": "PTX benefit is a slow structural recovery",
+    "statement": "The materially supported mechanism acts by reversing or limiting structural change—such as fibrosis, remodeling, or other tissue damage—that contributes to impaired voiding. Meaningful improvement should appear only after weeks to months of treatment, with little early functional change, and may persist after treatment stops.",
+    "coverage_status": "NO_COMPLETE_COVERAGE",
+    "required_covered": "0/4",
+    "allocation": 13,
+    "controlling": [],
+    "objections": [],
+    "qualifications": [
+      {
+        "unit_id": "A2-H2-C1",
+        "unit_type": "CONTEXTUAL_CONSTRAINT",
+        "unit_text": "Structural change contributes consequentially to impaired voiding in this cohort.",
+        "supported_by": [],
+        "contradicted_by": []
+      },
+      {
+        "unit_id": "A2-H2-C2",
+        "unit_type": "CONTEXTUAL_CONSTRAINT",
+        "unit_text": "PTX can reverse or limit that structural change rather than merely prevent it.",
+        "supported_by": [],
+        "contradicted_by": [
+          {
+            "witness_id": "W-FRD-Q0019-01-Q0019",
+            "text": "Wystrychowski et al. (wystrychowski2014.pdf.md, Table 1; RESULTS) randomized 58 male Sprague-Dawley rats; after right nephrectomy, solitary left pedicle was clamped 45 minutes. Subcutaneous pentoxifylline 100 mg/kg versus saline improved 48-hour creatinine clearance only when given 60 minutes before ischemia (10/arm; P<.001), not 1 minute into ischemia or 60 minutes post-release. These within-timing acute-model results don't transfer to chronic bladder disease.",
+            "source_file": "wystrychowski2014.pdf.md",
+            "locator": "ABSTRACT (Methods); METHODS; RESULTS; Table 1, “Renal Function Parameters at 48 Hours After Ischemia/Reperfusion of the Solitary Left Kidney”; DISCUSSION",
+            "vfrd_id": "FRD-Q0019-01"
+          }
+        ]
+      },
+      {
+        "unit_id": "A2-H2-C3",
+        "unit_type": "CONTEXTUAL_CONSTRAINT",
+        "unit_text": "Evidence limited to prevention models does not by itself support A2-H2.",
+        "supported_by": [],
+        "contradicted_by": []
+      }
+    ],
+    "corroboration": [],
+    "gaps": [
+      {
+        "unit_id": "A2-H2-R1",
+        "unit_type": "REQUIRED_SUPPORT",
+        "unit_text": "PTX's materially supported mechanism acts by reversing or limiting structural change, such as fibrosis, remodeling, or other tissue damage (examples, not an exhaustive list), rather than merely preventing it.",
+        "partly": [
+          {
+            "witness_id": "W-FRD-SHIRAZI2015-01-Q0002",
+            "text": "In male Sprague-Dawley rats with surgically induced partial bladder outlet obstruction, Shirazi et al. gave pentoxifylline 100 mg/kg/day by oral gavage for four weeks after obstruction induction, associated with higher electrically evoked isolated-detrusor-strip tension than water controls (approximately 4.0 ± 1.0 versus 1.8 ± 0.4 g per 100 mg tissue; reported P=0.023). These figure-derived values are approximate (shirazi2015.pdf.md, Results).",
+            "source_file": "shirazi2015.pdf.md",
+            "locator": "Animals and methods → Study design; Surgical technique; Evaluation of detrusor muscle contractility; Statistical analysis; Results; Fig. 3",
+            "vfrd_id": "FRD-SHIRAZI2015-01",
+            "relation": "PARTIALLY_COVERS",
+            "basis": "AGREED"
+          },
+          {
+            "witness_id": "W-FRD-Q0009-02-Q0009",
+            "text": "Delanian et al. 2003, single-center randomized double-blind placebo-controlled 2×2 factorial trial in women with superficial radiation-induced fibrosis >6 months after breast radiotherapy (24 eligible, 22 with 6-month data). Combination pentoxifylline 800 mg/day plus vitamin E 1000 U/day gave −60.2% versus double-placebo −42.6% surface-area change (P=.038, Wilcoxon). Two-way ANOVA found no significant main effects, only a PTX×vitamin-E interaction trend (P=.09).",
+            "source_file": "delanian2003.pdf.md",
+            "locator": "PATIENTS AND METHODS; Randomization; Outcome Measures; Statistical Analysis; RESULTS; Primary Analyses; Table 3, surface Index 6 months, % row and boxhead note",
+            "vfrd_id": "FRD-Q0009-02",
+            "relation": "PARTIALLY_COVERS",
+            "basis": "ONE_PASS_ONLY"
+          }
+        ]
+      },
+      {
+        "unit_id": "A2-H2-R2",
+        "unit_type": "REQUIRED_SUPPORT",
+        "unit_text": "Structural change of this kind (fibrosis, remodeling, or other tissue damage) contributes to the impaired voiding at issue.",
+        "partly": [
+          {
+            "witness_id": "W-FRD-Q0046-01-Q0046",
+            "text": "Vale et al. (vale2019.pdf.md, §3.1.4 Bladder outlet obstruction), a review, reports that in mice with bladder outlet obstruction, daily 17-DMAG (described as pharmacological HIF-pathway inhibition) improved BOO-induced morphology, suppressed HIF target-gene upregulation, and seemed to improve stimulated contractility (attributed to Iguchi, Malykhina, Wilcox 2016, ref 55). This is review-transmitted preclinical evidence implicating HIF/ischemia, not direct pentoxifylline data.",
+            "source_file": "vale2019.pdf.md",
+            "locator": "§3.1.4 | Bladder outlet obstruction, paragraph beginning “These findings are supported by a recent study”; REFERENCES, reference 55",
+            "vfrd_id": "FRD-Q0046-01",
+            "relation": "PARTIALLY_COVERS",
+            "basis": "AGREED"
+          }
+        ]
+      },
+      {
+        "unit_id": "A2-H2-R3",
+        "unit_type": "REQUIRED_SUPPORT",
+        "unit_text": "Meaningful improvement appears only after weeks to months of treatment.",
+        "partly": [
+          {
+            "witness_id": "W-FRD-Q0001-01-Q0001",
+            "text": "Shirazi et al. (Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md): single-center randomized double-blind trial, 30 men per arm (all analyzed) with BPH/LUTS, giving pentoxifylline 400 mg every eight hours plus tamsulosin 0.4 mg/day or placebo plus tamsulosin, 12 weeks. Post-void residual fell more with combination (−32.93±16.33 versus −13.17±9.23 mL; p<.001), but baseline residual differed (77.27 versus 50.37 mL; p=.18). Reported values, not validated or baseline-equivalent.",
+            "source_file": "Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md",
+            "locator": "Abstract, Materials and Methods; 2 | METHODS; 2.3 | Study design; FIGURE 1; TABLE 1, PVR row; TABLE 4, PVR row",
+            "vfrd_id": "FRD-Q0001-01",
+            "relation": "PARTIALLY_COVERS",
+            "basis": "ONE_PASS_ONLY"
+          },
+          {
+            "witness_id": "W-FRD-Q0001-02-r3-Q0001",
+            "text": "Shirazi et al. (2024, Lower Urinary Tract Symptoms) reported mean Qmax changes of 4.48 versus 2.67 mL/s; their arithmetic difference, 1.81 mL/s, is an analyst-derived unadjusted contrast favoring pentoxifylline-plus-tamsulosin over placebo-plus-tamsulosin, not a separately reported adjusted estimate. This BPH add-on trial does not establish pentoxifylline monotherapy or psychogenic-voiding efficacy.",
+            "source_file": "Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md",
+            "locator": "Shirazi M et al. Lower Urinary Tract Symptoms. 2024;16(1):e12509. doi:10.1111/luts.12509. Exact source filename: `Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md`. Locations: TABLE 4; 2 | METHODS; 2.3 | Study design. Original locator: TABLE 4. Page numbers are unavailable in the supplied text.",
+            "vfrd_id": "FRD-Q0001-02-r3",
+            "relation": "PARTIALLY_COVERS",
+            "basis": "ONE_PASS_ONLY"
+          }
+        ]
+      },
+      {
+        "unit_id": "A2-H2-R4",
+        "unit_type": "REQUIRED_SUPPORT",
+        "unit_text": "There is little early functional change during treatment.",
+        "partly": [
+          {
+            "witness_id": "W-FRD-Q0011-01-Q0011",
+            "text": "In Shirazi et al.'s single-center, randomized, double-blind 12-week BPH trial (60 men, 30/group), pentoxifylline 400 mg every eight hours plus tamsulosin 0.4 mg/day versus placebo plus tamsulosin showed no significant between-group voided-volume change (0.80 versus +1.34 mL; p=.22) and no statistically significant within-group change (p=.90, .89). Baseline-to-endpoint voided-volume only—not residual or flow; visit schedule, onset, post-withdrawal persistence unestablished (Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md, §3.3).",
+            "source_file": "Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md",
+            "locator": "Abstract, Materials and Methods; §2.3 Study design; §3 Results; §3.3 Voided volume; Tables 2–4, voided-volume rows",
+            "vfrd_id": "FRD-Q0011-01",
+            "relation": "PARTIALLY_COVERS",
+            "basis": "ONE_PASS_ONLY"
+          },
+          {
+            "witness_id": "W-FRD-SHIRAZI2015-02-Q0002",
+            "text": "Shirazi 2015: in male Sprague-Dawley rats with partial bladder outlet obstruction, pentoxifylline 100 mg/kg/day by oral gavage for four weeks, begun after obstruction induction, produced no significant improvement in maximum carbachol-induced detrusor-strip contractile tension versus water-treated obstructed controls (20 animals per group; all completed). Treatment addressed established obstruction, not prevention; this is a functional contractility null.",
+            "source_file": "shirazi2015.pdf.md",
+            "locator": "Animals and methods → Study design; Surgical technique; Evaluation of detrusor muscle contractility; Statistical analysis; Abstract → Results; Results and Fig. 2",
+            "vfrd_id": "FRD-SHIRAZI2015-02",
+            "relation": "PARTIALLY_COVERS",
+            "basis": "ONE_PASS_ONLY"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "hypothesis_id": "A2-H3",
+    "axis_id": "A2",
+    "approval": "TEST_ONLY",
+    "title": "The evidence cannot determine the time course of benefit",
+    "statement": "Existing evidence cannot distinguish rapid functional benefit from slow structural recovery. Timing evidence is unmeasured, conflicting, poorly transferable, or compatible with both, so the expected onset and persistence of benefit cannot be specified from supported premises. The uncertainty is localized to identified timing links.",
+    "coverage_status": "NO_COMPLETE_COVERAGE",
+    "required_covered": "1/2",
+    "allocation": 36,
+    "controlling": [
+      {
+        "unit_id": "A2-H3-R2",
+        "unit_type": "REQUIRED_SUPPORT",
+        "unit_text": "As a result, the expected onset and persistence of benefit cannot be specified from supported premises.",
+        "witnesses": [
+          {
+            "witness_id": "W-FRD-Q0001-01-Q0001",
+            "text": "Shirazi et al. (Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md): single-center randomized double-blind trial, 30 men per arm (all analyzed) with BPH/LUTS, giving pentoxifylline 400 mg every eight hours plus tamsulosin 0.4 mg/day or placebo plus tamsulosin, 12 weeks. Post-void residual fell more with combination (−32.93±16.33 versus −13.17±9.23 mL; p<.001), but baseline residual differed (77.27 versus 50.37 mL; p=.18). Reported values, not validated or baseline-equivalent.",
+            "source_file": "Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md",
+            "locator": "Abstract, Materials and Methods; 2 | METHODS; 2.3 | Study design; FIGURE 1; TABLE 1, PVR row; TABLE 4, PVR row",
+            "vfrd_id": "FRD-Q0001-01",
+            "relation": "WITNESS_ENTAILS_UNIT",
+            "basis": "ONE_PASS_ONLY"
+          },
+          {
+            "witness_id": "W-FRD-Q0001-02-r3-Q0001",
+            "text": "Shirazi et al. (2024, Lower Urinary Tract Symptoms) reported mean Qmax changes of 4.48 versus 2.67 mL/s; their arithmetic difference, 1.81 mL/s, is an analyst-derived unadjusted contrast favoring pentoxifylline-plus-tamsulosin over placebo-plus-tamsulosin, not a separately reported adjusted estimate. This BPH add-on trial does not establish pentoxifylline monotherapy or psychogenic-voiding efficacy.",
+            "source_file": "Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md",
+            "locator": "Shirazi M et al. Lower Urinary Tract Symptoms. 2024;16(1):e12509. doi:10.1111/luts.12509. Exact source filename: `Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md`. Locations: TABLE 4; 2 | METHODS; 2.3 | Study design. Original locator: TABLE 4. Page numbers are unavailable in the supplied text.",
+            "vfrd_id": "FRD-Q0001-02-r3",
+            "relation": "WITNESS_ENTAILS_UNIT",
+            "basis": "ONE_PASS_ONLY"
+          }
+        ],
+        "more": 1
+      }
+    ],
+    "objections": [],
+    "qualifications": [
+      {
+        "unit_id": "A2-H3-C1",
+        "unit_type": "CONTEXTUAL_CONSTRAINT",
+        "unit_text": "Meaningful retrieval and adverse testing of timing evidence have been completed; the uncertainty is not merely an artifact of an unfinished investigation.",
+        "supported_by": [],
+        "contradicted_by": []
+      }
+    ],
+    "corroboration": [
+      {
+        "unit_id": "A2-H3-E2",
+        "unit_type": "CORROBORATING_EXPECTATION",
+        "unit_text": "Available findings lack onset or withdrawal timing.",
+        "met_by": [
+          {
+            "witness_id": "W-FRD-Q0001-02-r3-Q0001",
+            "text": "Shirazi et al. (2024, Lower Urinary Tract Symptoms) reported mean Qmax changes of 4.48 versus 2.67 mL/s; their arithmetic difference, 1.81 mL/s, is an analyst-derived unadjusted contrast favoring pentoxifylline-plus-tamsulosin over placebo-plus-tamsulosin, not a separately reported adjusted estimate. This BPH add-on trial does not establish pentoxifylline monotherapy or psychogenic-voiding efficacy.",
+            "source_file": "Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md",
+            "locator": "Shirazi M et al. Lower Urinary Tract Symptoms. 2024;16(1):e12509. doi:10.1111/luts.12509. Exact source filename: `Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md`. Locations: TABLE 4; 2 | METHODS; 2.3 | Study design. Original locator: TABLE 4. Page numbers are unavailable in the supplied text.",
+            "vfrd_id": "FRD-Q0001-02-r3"
+          }
+        ],
+        "contradicted_by": []
+      },
+      {
+        "unit_id": "A2-H3-E3",
+        "unit_type": "CORROBORATING_EXPECTATION",
+        "unit_text": "Available findings rest on models whose timing does not transfer to this cohort.",
+        "met_by": [
+          {
+            "witness_id": "W-FRD-Q0019-01-Q0019",
+            "text": "Wystrychowski et al. (wystrychowski2014.pdf.md, Table 1; RESULTS) randomized 58 male Sprague-Dawley rats; after right nephrectomy, solitary left pedicle was clamped 45 minutes. Subcutaneous pentoxifylline 100 mg/kg versus saline improved 48-hour creatinine clearance only when given 60 minutes before ischemia (10/arm; P<.001), not 1 minute into ischemia or 60 minutes post-release. These within-timing acute-model results don't transfer to chronic bladder disease.",
+            "source_file": "wystrychowski2014.pdf.md",
+            "locator": "ABSTRACT (Methods); METHODS; RESULTS; Table 1, “Renal Function Parameters at 48 Hours After Ischemia/Reperfusion of the Solitary Left Kidney”; DISCUSSION",
+            "vfrd_id": "FRD-Q0019-01"
+          }
+        ],
+        "contradicted_by": []
+      }
+    ],
+    "gaps": [
+      {
+        "unit_id": "A2-H3-R1",
+        "unit_type": "REQUIRED_SUPPORT",
+        "unit_text": "For at least one identified timing link (onset, duration-response, persistence after withdrawal, or which effect carries the benefit), the timing evidence is unmeasured, conflicting, poorly transferable, or compatible with both rapid functional benefit and slow structural recovery.",
+        "partly": [
+          {
+            "witness_id": "W-FRD-Q0027-01-Q0027",
+            "text": "Neuner et al. (immunology00076-0102.pdf.md) studied four healthy volunteers overall; the two-day-regimen subgroup size is unspecified. Oral PTX 5×400 mg/day for two days significantly suppressed TNF-α, IL-1β, IL-6 and IL-8 release from day-7 PBMC cultured 24 hours, with or without LPS 1 µg/mL. These are ex-vivo endpoints after in-vivo dosing; plasma/tissue exposure and clinical urinary efficacy were unmeasured.",
+            "source_file": "immunology00076-0102.pdf.md",
+            "locator": "P. Neuner et al., “Pentoxifylline in vivo down-regulates the release of IL-1 β, IL-6, IL-8 and tumour necrosis factor-α by human peripheral blood mononuclear cells.” Exact source: `immunology00076-0102.pdf.md`; MATERIALS AND METHODS → Human volunteers; Preparation of PBMC; RESULTS → In vivo effects of orally applied PTX on cytokine production by PBMC, first paragraph; Figure 1 original caption. The original results locator is correct. Journal, volume, pagination and publication date are not established by the supplied article metadata; receipt and acceptance dates are supplied but are not publication dates.",
+            "vfrd_id": "FRD-Q0027-01",
+            "relation": "PARTIALLY_COVERS",
+            "basis": "MODEL_ADJUDICATED"
+          },
+          {
+            "witness_id": "W-FRD-Q0029-01-Q0029",
+            "text": "Dezube et al. 1993, pilot study of seven adult cancer patients treated on eight occasions for 1–3 weeks with oral controlled-release pentoxifylline 400 mg every eight hours. On all three occasions when baseline PBMC TNF/β-actin RNA ratios exceeded the healthy-volunteer normal range, ratios fell within one week; on five occasions within normal range, no reduction. Target-engagement, not clinical benefit.",
+            "source_file": "dezube1993.pdf.md",
+            "locator": "Materials and methods → Patient characteristics, Treatment plan, TNF RNA assay; Results → TNF/actin ratios in vivo → Normal volunteers; Results → Suppression of TNF/actin ratios by pentoxifylline in vivo; Fig. 3 caption; Discussion, paragraph beginning “In this pilot study, TNF was measured”",
+            "vfrd_id": "FRD-Q0029-01",
+            "relation": "PARTIALLY_COVERS",
+            "basis": "MODEL_ADJUDICATED"
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,20 @@
+# Q0009 - R-Q0009-A01
+
+Usable: True
+
+Cited: he2010.pdf.md, hall2018.pdf.md, myers1995.pdf.md, wu1999.pdf.md
+
+## Exact question
+
+In hall2018.pdf.md, he2010.pdf.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about The materially supported mechanism acts by reversing or limiting structural change—such as fibrosis, remodeling, or other tissue damage—that contributes to impaired voiding? Cite the exact passage for each finding.
+
+## Exact answer
+
+[SOURCE] "Our previous research [3] also analysed the possible mechanism that increased the mental burden caused by pelvic floor dysfunction, and then increased the prostatic urethral pressure, which caused LUTS in some patients with CP, manifested as voiding symptoms and mostly classified as IIIB (leukocytosis with no proof of bacterial infection); Hinman and Baumann [4] had a similar view." (he2010.pdf.md, Chronic prostatitis presenting with dysfunctional voiding and effects of pelvic )
+[SOURCE] "Criteria specific to PFMT were developed, based on the Consensus on Exercise Reporting Template, and applied to all studies to measure the comprehensiveness of the PFMT description in the manuscript. **Results:** Results from the 108 included studies indicate substantial heterogeneity in both the content of PFMT and the quality of reporting of the components of the exercise regimes." (hall2018.pdf.md, Design of programs to train pelvic floor muscles in men with urinary dysfunction)
+[SOURCE] "Of those that did provide detail of participant education, either written or verbally, 31 included information related to pelvic floor/bladder anatomy, and/or the physiology of UI, micturition, or lower urinary tract symptoms." (hall2018.pdf.md, Design of programs to train pelvic floor muscles in men with urinary dysfunction)
+[SOURCE] "The NIH-CPSI scores in the CP group were evaluated using the Wilcoxon matched-pairs signed-ranks test; in all tests, $P < 0.05$ was considered to indicate statistically significant differences. ## RESULTS The comparison of the urodynamic results in the 21 patients before and after PFB is shown in Table 1; all variables were significantly | Mean (SD) variable | Before | After | |---------------------------------|--------------|-------------| | <b>Urodynamics</b> | | | | $Q_{max}$, mL/s | 8.2 (4.1) | 15.1 (7.3) | | $P_{det.max}$, cmH<sub>2</sub>O | 125.1 (75.3) | 86.3 (54.2) | | MUP, cmH<sub>2</sub>O | 124.3 (23.3) | 65.4 (23.0) | | MUCP, cmH<sub>2</sub>O | 101.5 (43.6) | 43.5 (16.7) | | <b>NIH-CPSI scores</b> | | | | Discomfort | 4.0 (2.0) | 2.2 (1.7) | | Urination | 7.9 (2.1) | 2.2 (1.9) | | Life impact | 9.6 (2.7) | 2.9 (2.6) | | Total | 21.7 (4.8) | 8.4 (4.6) | TABLE 1 The urodynamic variables and NIH-CPSI scores before and after PFB; all differences were significant ( $P < 0.05$ ) different ( $P < 0.05$ ) with a clear increase in $Q_{max}$ and clear decrease in $P_{det.max}$ , MUP and MUCP, indicating a relief of LUTS." (he2010.pdf.md, Chronic prostatitis presenting with dysfunctional voiding and effects of pelvic )
+[SOURCE] "The mechanisms of action of pentoxifylline which contribute to protection of renal PGE<sub>2</sub> release and blood flow during severe splanchnic ischemia/reperfusion injury include decreasing viscosity, increasing deformability of red blood cells and neutrophils, and contributing to the prevention of the activation of neutrophils by cytokines or local tissue factors." (myers1995.pdf.md, Results)
+[SOURCE] "The latter results suggest that TNF- $\alpha$ plays a central role in the pathogenesis of Gram-negative shock, as serum levels of TNF- $\alpha$ are induced early in endotoxaemia or Gram-negative sepsis models (Michie et al., 1988)." (wu1999.pdf.md, Results)
+
+[INFERRED] The quoted passages are what this notebook contains on the question. Each quotation is attributed above to its file and section; no finding outside these passages is asserted. Sources quoted: hall2018.pdf.md, he2010.pdf.md, myers1995.pdf.md, wu1999.pdf.md.

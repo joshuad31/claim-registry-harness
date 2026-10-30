@@ -1,0 +1,44 @@
+{
+  "title": "Foliar silicate and drought-stressed wheat (SYNTHETIC DEMO)",
+  "gauge": 64,
+  "axes": [
+    {
+      "axis_id": "A1",
+      "question": "Does foliar silicate treatment improve grain yield of drought-stressed wheat in the field?",
+      "boundary": "H1 requires field evidence of a yield benefit at a stated rate. H2 requires field evidence that the yield benefit is absent or does not transfer. H3 applies when the field evidence is mixed, indirect or too thin to decide.",
+      "scope": "Wheat grown under water-limited field conditions.",
+      "approval": "UNKNOWN",
+      "hypotheses": [
+        {
+          "id": "A1-H1",
+          "title": "Foliar silicate raises field yield under drought",
+          "statement": "Foliar silicate treatment increases grain yield of drought-stressed wheat in field conditions. The effect is large enough and repeatable enough to justify a field trial, and the mechanism reported in controlled studies transfers to field-grown wheat.",
+          "assumptions": "The applied silicate reaches the leaf surface at a rate used in the reported studies; drought stress is severe enough for the mechanism to matter; and the greenhouse water-relations effect carries into field-grown wheat.",
+          "falsification": "Field trials at comparable rates report no yield benefit; the greenhouse benefit disappears without controlled pots; or the reported mechanism is specific to a model organism.",
+          "corroboration": "Field trials at comparable rates report a yield increase with a stated denominator and season; the benefit grows with drought severity; and the water-relations mechanism is measured in field-grown wheat."
+        },
+        {
+          "id": "A1-H2",
+          "title": "The yield benefit does not transfer to the field",
+          "statement": "Foliar silicate treatment does not increase grain yield of drought-stressed wheat in the field. The positive results come from greenhouse or model-organism work that does not transfer, and field trials show no yield benefit.",
+          "assumptions": "The field trials that report null results used a comparable rate and application timing, and they were run in water-limited conditions rather than well-watered ones.",
+          "falsification": "A well-powered field trial at a comparable rate reports a clear yield increase under drought.",
+          "corroboration": "Multi-site field trials report no significant yield difference; the positive findings are confined to pots or model organisms; and reviews report inconsistent field results."
+        },
+        {
+          "id": "A1-H3",
+          "title": "The evidence cannot decide the field question",
+          "statement": "Existing evidence cannot determine whether foliar silicate increases field grain yield under drought. Some controlled studies report benefits, field results are mixed or null, and the decisive field comparison has not been made.",
+          "assumptions": "Relevant field and controlled studies have been retrieved, and the gap is not merely an artifact of an unfinished search.",
+          "falsification": "Consistent field evidence at a comparable rate establishes either a yield benefit or its absence.",
+          "corroboration": "Field results conflict across sites or seasons; rates and application timing differ between studies; and no study measures both the water-relations mechanism and grain yield in the field."
+        }
+      ]
+    }
+  ],
+  "decisive_tests": [],
+  "mission": "## 1. Mission\n\nDecide whether the existing evidence is enough to justify a field trial of foliar\nsilicate treatment in drought-stressed wheat. The answer must be built only from\nsource-attributed findings in the five supplied sources.",
+  "header_sha256": "45251880481bd824bd8448469265122f8807426fc79f7a819bc5924b64f53966",
+  "parsed": "2026-10-30T03:39:03+00:00",
+  "source": "C:\\Users\\joshu\\Desktop\\FINAL SPECIFICATION DOCUMENTS\\DeepSeek_2 output\\projects\\DEMO\\01_FRAME\\header.md"
+}

@@ -1,0 +1,1542 @@
+[
+  {
+    "frd_id": "FRD-BOWTON-01",
+    "qid": "Q0006",
+    "response_id": "R-Q0006-A01",
+    "origin_ref": "RESPONSE-ea87089a7301",
+    "ordinal": 1,
+    "cluster": "",
+    "label": "Bowton reports global cerebral clearance after acute oral PTX.",
+    "source_files": [
+      "bowton1989.pdf.md"
+    ],
+    "locator": "TABLE 1",
+    "claim": "In Bowton's six patients receiving a single 800 mg oral sustained-release PTX dose, normocarbic global cerebral blood flow increased from 52.5±15.2 mL/100 g/min at baseline to 59.4±12.9 at 2 hours, 58.2±12.3 at 4 hours, and 62.4±10.7 at 6 hours, with reported statistical significance at each time point.",
+    "verification_instruction": "Check [CLINICAL] TABLE 1 values, dispersion, paired tests and percentages without recomputing them from group means; confirm p≤0.02 at 2/4 hours and p=0.017 at 6 hours. Check formulation, allocation, preceding-day baseline, historical rather than concurrent placebo comparator, and Xenon methodology.",
+    "evidence_label": "[CLINICAL]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "Bowton 1989",
+    "imported_id": "CANDIDATE-4c5db63aea65"
+  },
+  {
+    "frd_id": "FRD-BOWTON-02",
+    "qid": "Q0006",
+    "response_id": "R-Q0006-A01",
+    "origin_ref": "RESPONSE-ea87089a7301",
+    "ordinal": 2,
+    "cluster": "",
+    "label": "Bowton reports a nonsignificant global-flow result.",
+    "source_files": [
+      "bowton1989.pdf.md"
+    ],
+    "locator": "TABLE 1",
+    "claim": "In Bowton's four patients receiving a single 400 mg oral sustained-release PTX dose, global cerebral blood flow did not change significantly at any measured post-dose time point (2, 4, or 6 hours).",
+    "verification_instruction": "Verify [CLINICAL] null tests at all times, n=4, sustained-release dosing, baseline/2-hour values and p=0.29, and 4/6-hour percentages. Do not extend global nonsignificance to regional effects or pelvic tissues.",
+    "evidence_label": "[CLINICAL]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "Bowton 1989",
+    "imported_id": "CANDIDATE-5a51ba9d80c1"
+  },
+  {
+    "frd_id": "FRD-SHIRAZI2014-01",
+    "qid": "Q0002",
+    "response_id": "R-Q0002-A01",
+    "origin_ref": "RESPONSE-b563ae0c3239",
+    "ordinal": 1,
+    "cluster": "",
+    "label": "Shirazi 2014 reports stereological tissue volume under obstruction.",
+    "source_files": [
+      "shirazi2014.pdf.md"
+    ],
+    "locator": "TABLE 3",
+    "claim": "In male Sprague-Dawley rats with partial urethral obstruction, PTX 100 mg/kg/day by oral gavage beginning immediately after surgery and continuing for 28 days was reported to reduce bladder interstitial/fibrous volume to 59.1±51.1 mm3 versus 345.4±239.2 mm3 in saline-treated obstructed controls (p<0.05; n=7/group).",
+    "verification_instruction": "Verify [PRECLINICAL] TABLE 3 label, units, columns, dispersion and significance; control interstitial volume exceeds separately reported total volume 327.5±84.2 mm3, so inspect transcription without guessing a repair. Confirm n=7 and immediate postoperative gavage for 28 days.",
+    "evidence_label": "[PRECLINICAL]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "Shirazi et al. 2014",
+    "imported_id": "CANDIDATE-c0e37c17d9b2"
+  },
+  {
+    "frd_id": "FRD-SHIRAZI2015-01",
+    "qid": "Q0002",
+    "response_id": "R-Q0002-A01",
+    "origin_ref": "RESPONSE-b563ae0c3239",
+    "ordinal": 2,
+    "cluster": "",
+    "label": "Shirazi 2015 reports EFS-evoked isolated-strip tension.",
+    "source_files": [
+      "shirazi2015.pdf.md"
+    ],
+    "locator": "Fig. 3",
+    "claim": "After four weeks of surgically induced bladder outlet obstruction in male Sprague-Dawley rats, PTX 100 mg/kg/day by oral gavage from the day of surgery was reported to increase ex vivo EFS-evoked detrusor tension to 4.0±1.0 g/100 mg tissue versus 1.8±0.4 in water-treated obstructed controls (p=0.023).",
+    "verification_instruction": "Check [PRECLINICAL] Fig. 3 values, units, dispersion, EFS settings and actual assay denominator; verify Day-0 dosing for 28 days. Do not infer equivalence from similar sham means or claim measured neural preservation, tissue exposure or in vivo emptying.",
+    "evidence_label": "[PRECLINICAL]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "Shirazi et al. 2015",
+    "imported_id": "CANDIDATE-4f83ebe3b62f"
+  },
+  {
+    "frd_id": "FRD-SHIRAZI2015-02",
+    "qid": "Q0002",
+    "response_id": "R-Q0002-A01",
+    "origin_ref": "RESPONSE-b563ae0c3239",
+    "ordinal": 3,
+    "cluster": "",
+    "label": "Shirazi 2015 reports a null direct-agonist maximum-tension comparison.",
+    "source_files": [
+      "shirazi2015.pdf.md"
+    ],
+    "locator": "Fig. 2",
+    "claim": "In the same four-week male-rat bladder outlet obstruction protocol, oral PTX 100 mg/kg/day initiated at surgery did not significantly improve maximum carbachol-induced detrusor-strip tension compared with water-treated obstructed controls (p>0.05).",
+    "verification_instruction": "Verify [PRECLINICAL] maximum-tension comparison, denominator, cumulative concentration notation 10−7–10−4 M, and sham comparison p<0.001. Keep maximum tension separate from sensitivity and EFS; do not silently repair notation or infer a neural mechanism.",
+    "evidence_label": "[PRECLINICAL]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "Shirazi et al. 2015",
+    "imported_id": "CANDIDATE-3b412c8b585b"
+  },
+  {
+    "frd_id": "FRD-RADEMAKERS-01",
+    "qid": "Q0003",
+    "response_id": "R-Q0003-A01",
+    "origin_ref": "RESPONSE-931daa4daf26",
+    "ordinal": 1,
+    "cluster": "",
+    "label": "Rademakers reports a clinical database relationship and interprets fixed cutoffs in its light.",
+    "source_files": [
+      "rademakers2016.pdf.md"
+    ],
+    "locator": "PREOPERATIVE CHARACTERIZATION OF PATIENTS WITH VOIDING DYSFUNCTION",
+    "claim": "Rademakers reports that, among 786 treatment-naïve men with LUTS, median BCI increased from 73 at Schäfer obstruction grade 0 to 188 at grade 6, and median Wmax from 9.6 to 23.0 W/m2; the authors use this obstruction dependence to question fixed contractility cutoffs for identifying underactivity in obstructed men.",
+    "verification_instruction": "Check [CLINICAL] n=786, medians, grades, units, and original dataset attribution in FIGURE 1/context. Verify the authors' exact criticism of BCI<100 and Wmax<7 without adopting categorical invalidity or complete-failure language.",
+    "evidence_label": "[CLINICAL]",
+    "provenance": "DERIVATIVE_UNKNOWN",
+    "status": "ordinary",
+    "speaker": "Rademakers 2016",
+    "imported_id": "CANDIDATE-2f28b626e1e5"
+  },
+  {
+    "frd_id": "FRD-RADEMAKERS-02",
+    "qid": "Q0003",
+    "response_id": "R-Q0003-A01",
+    "origin_ref": "RESPONSE-931daa4daf26",
+    "ordinal": 2,
+    "cluster": "",
+    "label": "Rademakers describes a resistance-relative contractility nomogram.",
+    "source_files": [
+      "rademakers2016.pdf.md"
+    ],
+    "locator": "FIGURE 2",
+    "claim": "Rademakers describes the Hannover–Maastricht nomogram as relating Wmax to BOOI using data from 822 men, with a below-25th-percentile contractility boundary proposed to identify detrusor underactivity relative to outlet resistance, including in men with coexisting obstruction.",
+    "verification_instruction": "Check [CLINICAL] FIGURE 2/3, n=822 attribution, axes, intended diagnostic status and boundary signs. Resolve < versus ≤ from the source; verify strata and equivocal handling. Do not adopt 'true DUA,' unique reliability or mandatory trial enrollment without explicit support.",
+    "evidence_label": "[CLINICAL]",
+    "provenance": "DERIVATIVE_UNKNOWN",
+    "status": "ordinary",
+    "speaker": "Rademakers 2016",
+    "imported_id": "CANDIDATE-fd22cb7596c0"
+  },
+  {
+    "frd_id": "FRD-OSMAN-01",
+    "qid": "Q0003",
+    "response_id": "R-Q0003-A01",
+    "origin_ref": "RESPONSE-931daa4daf26",
+    "ordinal": 3,
+    "cluster": "",
+    "label": "Osman is attributed a diagnostic requirement in a joint-source response statement.",
+    "source_files": [
+      "osman2018.pdf.md"
+    ],
+    "locator": "Diagnostic aspects",
+    "claim": "Osman describes invasive pressure-flow assessment as necessary for diagnosing detrusor underactivity in patients with voiding dysfunction, rather than establishing the diagnosis from symptoms alone.",
+    "verification_instruction": "Verify [CLINICAL] diagnostic requirement in Osman's Diagnostic aspects alone; retain exact certainty, scope and qualifications about standardization. Do not treat the joint citation as independently verified attribution or as a new trial.",
+    "evidence_label": "[CLINICAL]",
+    "provenance": "DERIVATIVE_UNKNOWN",
+    "status": "ordinary",
+    "speaker": "Osman 2018",
+    "imported_id": "CANDIDATE-4e797146a61b"
+  },
+  {
+    "frd_id": "FRD-Q0004-01",
+    "qid": "Q0004",
+    "response_id": "R-Q0004-A01",
+    "origin_ref": "RESPONSE-c4276cdb3165",
+    "ordinal": 1,
+    "cluster": "",
+    "label": "He et al. report diagnostic selection in their own retrospective cohort; NotebookLM transmits it provisionally.",
+    "source_files": [
+      "he2010.pdf.md"
+    ],
+    "locator": "PATIENTS AND METHODS",
+    "claim": "He et al. describe a retrospectively selected series of 21 men with nonbacterial chronic prostatitis symptoms and dysfunctional voiding, diagnosed by detrusor contraction with increased perianal EMG activity without abdominal straining and fluoroscopic membranous urethral narrowing or closure. These were selected patients with persistent symptoms despite more than six months of antibiotics and α-blockers, not an unselected prostatitis population.",
+    "verification_instruction": "Check he2010.pdf.md PATIENTS AND METHODS and TABLE 1 for N=21, prior-treatment duration, exclusions and actual diagnostic requirements. Original label [CLINICAL]. Distinguish required criteria from performed tests and baseline values; inspect the potentially erroneous maximum-storage-pressure label for Pdet.max without silently correcting it.",
+    "evidence_label": "[CLINICAL]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "He et al. 2010",
+    "imported_id": "CANDIDATE-e7c5011d66d7"
+  },
+  {
+    "frd_id": "FRD-Q0004-02",
+    "qid": "Q0004",
+    "response_id": "R-Q0004-A01",
+    "origin_ref": "RESPONSE-c4276cdb3165",
+    "ordinal": 2,
+    "cluster": "",
+    "label": "He et al. report a within-cohort flow outcome; NotebookLM transmits it provisionally.",
+    "source_files": [
+      "he2010.pdf.md"
+    ],
+    "locator": "TABLE 1",
+    "claim": "In He et al.'s retrospective series of 21 men with chronic prostatitis symptoms and dysfunctional voiding, mean Qmax increased from 8.2±4.1 to 15.1±7.3 mL/s after ten weeks of relaxation/coordination biofeedback (reported P<0.05). This uncontrolled before–after finding concerns a relaxation program, with antibiotics, α-blockers and anticholinergics suspended, not pelvic-floor strengthening or a controlled treatment effect.",
+    "verification_instruction": "Check he2010.pdf.md TABLE 1 for Qmax values, units, dispersion, paired p-value, timing and analyzed denominator; PATIENTS AND METHODS for relaxation rather than strengthening and medication suspension. Original label [CLINICAL]. Do not infer individual response or PVR improvement.",
+    "evidence_label": "[CLINICAL]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "He et al. 2010",
+    "imported_id": "CANDIDATE-04a31752c6a4"
+  },
+  {
+    "frd_id": "FRD-Q0004-03",
+    "qid": "Q0004",
+    "response_id": "R-Q0004-A01",
+    "origin_ref": "RESPONSE-c4276cdb3165",
+    "ordinal": 3,
+    "cluster": "",
+    "label": "Kaplan et al. report symptom-defined treatment success; NotebookLM transmits conflicting count/percentage information.",
+    "source_files": [
+      "kaplan1997.pdf.md"
+    ],
+    "locator": "RESULTS",
+    "claim": "In Kaplan et al.'s retrospective series of 43 men with urodynamically identified pseudodyssynergia previously treated as chronic nonbacterial prostatitis, the response reports 35 treatment successes using a ≥50% AUA symptom-score reduction criterion at three and six months. The supplied numerator and denominator yield 81.4%, whereas the response says the source text gives 83%; this discrepancy requires validation, and symptom success does not itself establish post-treatment relief of obstruction.",
+    "verification_instruction": "Check kaplan1997.pdf.md MATERIALS AND METHODS and RESULTS for success definition, counts, percentage and whether criterion applies at both follow-ups. Original label [CLINICAL]. Preserve the 35/43 versus 83% discrepancy; distinguish responder from whole-cohort scores and symptom success from unmeasured post-treatment obstruction.",
+    "evidence_label": "[CLINICAL]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "Kaplan et al. 1997",
+    "imported_id": "CANDIDATE-bd83fea8cf3a"
+  },
+  {
+    "frd_id": "FRD-Q0001-01",
+    "qid": "Q0001",
+    "response_id": "R-Q0001-A01",
+    "origin_ref": "RESPONSE-9fd5c84de335",
+    "ordinal": 1,
+    "cluster": "",
+    "label": "Shirazi et al. report their randomized trial's residual-volume outcome; NotebookLM transmits it provisionally.",
+    "source_files": [
+      "Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md"
+    ],
+    "locator": "TABLE 4",
+    "claim": "In Shirazi et al.'s single-center randomized double-blind BPH/LUTS trial, 30 men per arm received oral pentoxifylline 400 mg three times daily plus tamsulosin 0.4 mg daily or placebo plus tamsulosin for twelve weeks; reported PVR changes were −32.93±16.33 versus −13.17±9.23 mL (reported between-group p<0.001). Baseline PVR was reported as 77.27±38.26 versus 50.37±27.35 mL with p=0.18, a numerical/statistical pairing requiring source verification rather than acceptance as baseline equivalence.",
+    "verification_instruction": "Inspect exact filename's TABLE 1 and TABLE 4 PVR cells, signs, group order, dispersion and p-values, especially the suspicious baseline p=0.18. Original label [CLINICAL]. Confirm dosing and analyzed denominators in 2.3 Study design and FIGURE 1. Do not correct numbers by inference or transfer the result to monotherapy, proven obstruction or prior tamsulosin nonresponders.",
+    "evidence_label": "[CLINICAL]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "Shirazi et al. 2024",
+    "imported_id": "CANDIDATE-acc1ad63c64e"
+  },
+  {
+    "frd_id": "FRD-Q0001-02",
+    "qid": "Q0001",
+    "response_id": "R-Q0001-A01",
+    "origin_ref": "RESPONSE-9fd5c84de335",
+    "ordinal": 2,
+    "cluster": "",
+    "label": "Shirazi et al. report their trial's peak-flow outcome; NotebookLM transmits values and a difference of changes.",
+    "source_files": [
+      "Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md"
+    ],
+    "locator": "TABLE 4",
+    "claim": "In Shirazi et al.'s twelve-week randomized double-blind trial of 60 men with BPH-associated LUTS, Qmax increased by 4.48±1.03 mL/s with oral pentoxifylline 400 mg three times daily plus tamsulosin 0.4 mg daily versus 2.67±0.57 mL/s with placebo plus tamsulosin, with reported p<0.001 between groups. The difference between those reported changes is 1.81 mL/s and concerns PTX add-on, not monotherapy or a demonstrated effect in psychogenic voiding dysfunction.",
+    "verification_instruction": "Inspect exact filename's TABLE 4 for Qmax changes, units, dispersion and between-group p-value; TABLE 1 for baseline flow; 2.3 Study design for oral dose and duration. Original label [CLINICAL]. Confirm 30 analyzed per arm and distinguish arithmetic net change from adjusted estimates; do not extrapolate to psychogenic voiding dysfunction.",
+    "evidence_label": "[CLINICAL]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "Shirazi et al. 2024",
+    "imported_id": "CANDIDATE-93a29912381e"
+  },
+  {
+    "frd_id": "FRD-Q0005-01",
+    "qid": "Q0005",
+    "response_id": "R-Q0005-A01",
+    "origin_ref": "RESPONSE-2f6fd7cea530",
+    "ordinal": 1,
+    "cluster": "",
+    "label": "Masterson et al. report attendance status in their pilot cohort; NotebookLM transmits it provisionally.",
+    "source_files": [
+      "masterson2017.pdf.md"
+    ],
+    "locator": "Results",
+    "claim": "In Masterson et al.'s uncontrolled pilot of a ten-visit multimodal PFPT program for 14 men with idiopathic CPPS, ten had completed all ten visits at data cutoff and four had completed five to nine visits and remained in treatment. Thus the four incomplete courses were reported as ongoing treatment, not established abandonment or completed-treatment failure.",
+    "verification_instruction": "Check masterson2017.pdf.md Results for counts and explicit ongoing-treatment status, Methods for multimodal treatment, and visit spacing. Original label [CLINICAL]. Do not infer home adherence or zero abandonment from absence of symptom worsening; require explicit dropout documentation.",
+    "evidence_label": "[CLINICAL]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "Masterson et al. 2017",
+    "imported_id": "CANDIDATE-6347b6c329a1"
+  },
+  {
+    "frd_id": "FRD-Q0005-02",
+    "qid": "Q0005",
+    "response_id": "R-Q0005-A01",
+    "origin_ref": "RESPONSE-2f6fd7cea530",
+    "ordinal": 2,
+    "cluster": "",
+    "label": "Anderson et al. report wand-use completion in their own cohort; NotebookLM transmits it provisionally.",
+    "source_files": [
+      "anderson2011.pdf.md"
+    ],
+    "locator": "TABLE 2",
+    "claim": "Anderson et al. report that 113 of 157 enrolled patients completed six months of pelvic therapeutic-wand use, including 106 men and seven women. This 72.0% completion proportion pertains to a highly selected, predominantly male cohort receiving wand self-treatment after a six-day immersion program with additional home techniques, not to male-only conventional clinic PFPT or verified adherence to every prescribed session.",
+    "verification_instruction": "Check anderson2011.pdf.md RESULTS, TABLE 2 and MATERIALS AND METHODS for enrollment, sex counts, completion definition and minimum-use versus prescribed-frequency criteria. Original label [CLINICAL]. Resolve the response's withdrawal categories summing to 56 versus stated 44 without inventing a disjoint partition.",
+    "evidence_label": "[CLINICAL]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "Anderson et al. 2011",
+    "imported_id": "CANDIDATE-bbcbaa730f87"
+  },
+  {
+    "frd_id": "FRD-Q0005-03",
+    "qid": "Q0005",
+    "response_id": "R-Q0005-A01",
+    "origin_ref": "RESPONSE-2f6fd7cea530",
+    "ordinal": 3,
+    "cluster": "",
+    "label": "Anderson et al. report patients' stated reason for stopping; NotebookLM transmits the wording and count provisionally.",
+    "source_files": [
+      "anderson2011.pdf.md"
+    ],
+    "locator": "TABLE 2",
+    "claim": "Anderson et al.'s TABLE 2 is reported to identify three of 157 enrolled patients as stopping wand self-treatment because it was “not effective for pain relief” (1.9%). That is a reason-specific discontinuation count in a predominantly male mixed-sex cohort, not a total nonresponse rate or a male-specific estimate.",
+    "verification_instruction": "Check anderson2011.pdf.md TABLE 2 for exact wording, count, enrollment versus dispensing denominator and overlapping reason categories. Original label [CLINICAL]. Keep separate five-of-111 effectiveness ratings, fourteen-of-109 sensitivity nonresponse, hypersensitivity withdrawal and adjudicated adverse events.",
+    "evidence_label": "[CLINICAL]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "Anderson et al. 2011",
+    "imported_id": "CANDIDATE-dbc168e4d4ed"
+  },
+  {
+    "frd_id": "FRD-Q0011-01",
+    "qid": "Q0011",
+    "response_id": "R-Q0011-A01",
+    "origin_ref": "RESPONSE-ef5bcc531c15",
+    "ordinal": 1,
+    "cluster": "",
+    "label": "Trial authors report voided-volume outcomes, as provisionally transmitted by NotebookLM.",
+    "source_files": [
+      "Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md"
+    ],
+    "locator": "3.3 Voided volume; TABLE 4",
+    "claim": "In Shirazi et al.'s twelve-week combination-versus-tamsulosin-alone trial, reported voided-volume changes were +0.80±35.81 versus +1.34±50.79 mL (p=0.22); the response reports no significant within- or between-group change. This finding concerns voided volume, not measured residual or flow rate.",
+    "verification_instruction": "Check TABLE 4 and section 3.3 for group order, change-score dispersion, and whether p=0.22 tests between-group change; independently check the within-group null attribution. Original label: [CLINICAL]. Verify trial population, sample size and treatment regimen in the primary source before attaching details not supplied in this response.",
+    "evidence_label": "[CLINICAL]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "Shirazi et al.",
+    "imported_id": "CANDIDATE-f4b71002aeb6"
+  },
+  {
+    "frd_id": "FRD-Q0007-01",
+    "qid": "Q0007",
+    "response_id": "R-Q0007-A01",
+    "origin_ref": "RESPONSE-67b58d8790a1",
+    "ordinal": 1,
+    "cluster": "",
+    "label": "Study authors report severity-stratified parent PTX pharmacokinetics, provisionally transmitted by NotebookLM.",
+    "source_files": [
+      "nisi2013.pdf.md"
+    ],
+    "locator": "Results, Table 2",
+    "claim": "Nisi et al. report parent pentoxifylline Tpeak of 1.64±0.92 h in NYHA II patients (n=11) versus 3.89±1.90 h in NYHA III/IV patients (n=9), P=.0077, after a single fasting 600-mg sustained-release oral dose in patients with chronic heart failure. These are plasma pharmacokinetic timings, not demonstrated times to urinary benefit.",
+    "verification_instruction": "Check Table 2 for parent PTX row, dispersion convention and severity comparison; confirm fasting dose/formulation in Methods. Original label: [CLINICAL]. Do not substitute metabolite timing or infer acute voiding effects.",
+    "evidence_label": "[CLINICAL]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "Nisi et al.",
+    "imported_id": "CANDIDATE-fbf2c48a443f"
+  },
+  {
+    "frd_id": "FRD-Q0007-02",
+    "qid": "Q0007",
+    "response_id": "R-Q0007-A01",
+    "origin_ref": "RESPONSE-67b58d8790a1",
+    "ordinal": 2,
+    "cluster": "",
+    "label": "NotebookLM attributes assay classification to the study methods; explicit versus inferred classification requires checking.",
+    "source_files": [
+      "nisi2013.pdf.md"
+    ],
+    "locator": "Methods | Drug Assay",
+    "claim": "The response attributes total-plasma PTX/metabolite concentration measurements to Nisi et al.'s HPLC assay following organic solvent extraction; these measurements should not be treated as measured unbound concentrations.",
+    "verification_instruction": "Inspect sample preparation and assay description to establish whether total rather than unbound concentration is supported explicitly or inferred from extraction. Original labels: [CLINICAL] for assay classification and [NO SOURCE] for free concentration. Check for any binding-separation procedure; do not promote the retrieval gap into a measured free fraction.",
+    "evidence_label": "[CLINICAL]; [NO SOURCE]",
+    "provenance": "DERIVATIVE_UNKNOWN",
+    "status": "ordinary",
+    "speaker": "Nisi et al.",
+    "imported_id": "CANDIDATE-fa95799ec5eb"
+  },
+  {
+    "frd_id": "FRD-Q0008-01",
+    "qid": "Q0008",
+    "response_id": "R-Q0008-A01",
+    "origin_ref": "RESPONSE-d278400e7cb9",
+    "ordinal": 1,
+    "cluster": "",
+    "label": "Roberts reports human exposure; original measurement versus citation unresolved.",
+    "source_files": [
+      "roberts1993.pdf.md"
+    ],
+    "locator": "UNKNOWN",
+    "claim": "Roberts et al. report that standard oral sustained-release PTX produces peak parent plasma concentrations below 5 μmol/L, while the combined concentration of parent PTX and active metabolites M1, M4 and M5 rarely exceeds 10 μmol/L. These are plasma exposure statements, not evidence that parent PTX alone reaches 5–10 μmol/L in bladder tissue.",
+    "verification_instruction": "Locate actual pharmacokinetic discussion, not acceptance date; verify speaker, formulation, dose, plasma concentration basis and metabolites. Do not conflate combined exposure with parent exposure or transfer plasma numbers to bladder.",
+    "evidence_label": "[CLINICAL]",
+    "provenance": "DERIVATIVE_UNKNOWN",
+    "status": "ordinary",
+    "speaker": "Roberts et al. (1993)",
+    "imported_id": "CANDIDATE-dba41216c04d"
+  },
+  {
+    "frd_id": "FRD-Q0008-02",
+    "qid": "Q0008",
+    "response_id": "R-Q0008-A01",
+    "origin_ref": "RESPONSE-d278400e7cb9",
+    "ordinal": 2,
+    "cluster": "",
+    "label": "Roberts reports experimental whole-blood oxidative response.",
+    "source_files": [
+      "roberts1993.pdf.md"
+    ],
+    "locator": "b) Neutrophil oxidative activity measured in whole blood",
+    "claim": "Roberts et al. report that parent PTX at an assay concentration of 5 μmol/L, after 30 minutes of whole-blood incubation at 37°C, reduced FMLP-stimulated intracellular H2O2 production to 76±5% of control (p<0.025). This is a human-cell assay result, not a demonstrated oral-treatment or bladder response.",
+    "verification_instruction": "Check human-cell attribution, stimulus, incubation, assay, control denominator, variability and p value; verify added parent concentration rather than measured plasma or metabolite exposure.",
+    "evidence_label": "[PRECLINICAL]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "Roberts et al. (1993)",
+    "imported_id": "CANDIDATE-8e10a06fb705"
+  },
+  {
+    "frd_id": "FRD-Q0008-03",
+    "qid": "Q0008",
+    "response_id": "R-Q0008-A01",
+    "origin_ref": "RESPONSE-d278400e7cb9",
+    "ordinal": 3,
+    "cluster": "",
+    "label": "Strieter reports macrophage TNF bioactivity dose response.",
+    "source_files": [
+      "strieter1988.pdf.md"
+    ],
+    "locator": "Pentoxifylline Suppression of LPS-induced MØ-Derived TNF Bioactivity",
+    "claim": "Strieter et al. report dose-dependent suppression of 18-hour LPS-induced TNF bioactivity in supernatants from activated CBA/J mouse peritoneal macrophages co-incubated with parent PTX: approximately 44% suppression at 5 μmol/L, 84% at 50 μmol/L and 93% at 500 μmol/L, with no suppression at 0.5 μmol/L. The cells were recruited with Freund's complete adjuvant 14 days earlier and challenged with LPS at 10 μg/mL; these assay concentrations are not human tissue exposures.",
+    "verification_instruction": "Check Materials and Methods for CBA/J, adjuvant recruitment, 14-day interval and LPS 10 μg/mL. Inspect dose-response values, timing, control and macrophage unit typography; distinguish calculated percentages from source-reported percentages and avoid an exact inferred IC50.",
+    "evidence_label": "[PRECLINICAL]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "Strieter et al. (1988)",
+    "imported_id": "CANDIDATE-086458155476"
+  },
+  {
+    "frd_id": "FRD-Q0009-01",
+    "qid": "Q0009",
+    "response_id": "R-Q0009-A01",
+    "origin_ref": "RESPONSE-5ce6de16469f",
+    "ordinal": 1,
+    "cluster": "",
+    "label": "Delanian reports factorial trial outcomes; response adds overstrong universal interpretation.",
+    "source_files": [
+      "delanian2003.pdf.md"
+    ],
+    "locator": "Table 3",
+    "claim": "In Delanian et al.'s six-month randomized double-blind factorial trial of established superficial breast radiation fibrosis, PTX monotherapy at 800 mg/day did not demonstrate superiority over double placebo for surface-area regression: −39.1% ± 37.4% versus −42.6% ± 17.4%, respectively. The analyzed arms comprised five patients/five areas and six patients/seven areas; this small trial does not establish universal PTX monotherapy inefficacy or directly test bladder fibrosis.",
+    "verification_instruction": "Check Table 3 for dispersion and denominators and Randomization for dose/design. Distinguish marginal ANOVA effect from direct comparison; verify P=NS. Preserve failure to demonstrate superiority, not equivalence or universal inefficacy.",
+    "evidence_label": "[CLINICAL]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "Delanian et al. (2003)",
+    "imported_id": "CANDIDATE-dc3560e643bb"
+  },
+  {
+    "frd_id": "FRD-Q0009-02",
+    "qid": "Q0009",
+    "response_id": "R-Q0009-A01",
+    "origin_ref": "RESPONSE-5ce6de16469f",
+    "ordinal": 2,
+    "cluster": "",
+    "label": "Delanian reports primary combination-treatment surface-area comparison.",
+    "source_files": [
+      "delanian2003.pdf.md"
+    ],
+    "locator": "Primary Analyses",
+    "claim": "Delanian et al.'s randomized double-blind factorial trial reported greater six-month surface-area regression of established superficial breast radiation fibrosis with PTX 800 mg/day plus vitamin E 1,000 U/day than with double placebo: −60.2% ± 10.7% versus −42.6% ± 17.4% (P=.038). The comparison involved five patients/six fibrosis areas versus six patients/seven areas within a trial of 24 eligible and 22 assessable women.",
+    "verification_instruction": "Verify Randomization doses and Table 3 dispersion and denominators; inspect primary comparison, analysis unit, signs and P=.038. Do not conflate surface area with volume, symptoms, safety or monotherapy.",
+    "evidence_label": "[CLINICAL]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "Delanian et al. (2003)",
+    "imported_id": "CANDIDATE-7d830923c1d5"
+  },
+  {
+    "frd_id": "FRD-Q0009-03",
+    "qid": "Q0009",
+    "response_id": "R-Q0009-A01",
+    "origin_ref": "RESPONSE-5ce6de16469f",
+    "ordinal": 3,
+    "cluster": "",
+    "label": "Delanian reports withdrawal-associated surface-area changes in duration groups.",
+    "source_files": [
+      "delanian2005.pdf.md"
+    ],
+    "locator": "Primary Analyses",
+    "claim": "In Delanian et al.'s follow-up of women receiving PTX 800 mg/day plus vitamin E 1,000 U/day for superficial breast radiation fibrosis, withdrawal after short treatment (7 patients/8 sites; 6–12 months) was associated with reported surface-area rebound of +40%/year (95% CI 24%–56%; P=.0012), compared with +8.5%/year (95% CI 1%–16%) after long treatment (37 patients/47 sites; 24–48 months). This duration-group comparison should not be treated as randomized proof that a particular minimum treatment duration prevents rebound.",
+    "verification_instruction": "Check withdrawal-analysis denominators versus treatment-cohort totals, annualized baseline/CI units, follow-up and allocation. Reconcile 24–48 months with ≥24–36 wording; inspect overlap with earlier reports without assuming shared participants. Do not promote association to causal prevention.",
+    "evidence_label": "[CLINICAL]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "Delanian et al. (2005)",
+    "imported_id": "CANDIDATE-4a8867758e77"
+  },
+  {
+    "frd_id": "FRD-Q0012-01",
+    "qid": "Q0012",
+    "response_id": "R-Q0012-A01",
+    "origin_ref": "RESPONSE-d44753c76e93",
+    "ordinal": 1,
+    "cluster": "",
+    "label": "MP75-18 abstract reports initial PFPT attendance after referral.",
+    "source_files": [
+      "MP75-18-RATES-AND-ADHERENCE-TO-PELVIC-FLOOR-PHYSICAL-THERAPY-FOR-MALE-PATIENTS-WITH-BENIGN.pdf.md"
+    ],
+    "locator": "RESULTS",
+    "claim": "The MP75-18 retrospective male benign-urology cohort reports that 52 of 120 patients referred for pelvic floor physical therapy attended at least one visit (43.3% of referrals). This is initial attendance, not treatment completion, abandonment or clinical response.",
+    "verification_instruction": "Inspect MP75-18 only, excluding neighboring abstracts; verify 52 attendees and 120 referrals. Use Figure 1 only if actually available within scope. Resolve 73–74 scheduled discrepancy before quoting scheduled percentages; do not infer completion, abandonment or efficacy.",
+    "evidence_label": "[CLINICAL]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "MP75-18 study; authors not supplied",
+    "imported_id": "CANDIDATE-c7ee164bb4a5"
+  },
+  {
+    "frd_id": "FRD-Q0013-01",
+    "qid": "Q0013",
+    "response_id": "R-Q0013-A01",
+    "origin_ref": "RESPONSE-ab71171c85b5",
+    "ordinal": 1,
+    "cluster": "",
+    "label": "Review pools four trials; NotebookLM transmits its discontinuation estimate.",
+    "source_files": [
+      "s00210-025-03845-1.pdf.md"
+    ],
+    "locator": "Fig. 6",
+    "claim": "The review reports no statistically significant difference in pooled all-cause discontinuation between PTX and placebo across four depression RCTs (14/159 vs. 16/159; RR 0.88, 95% CI 0.45–1.74). Trials lasted 6–12 weeks and included adjunctive SSRI treatment or PTX monotherapy; this is not evidence of long-term safety or safety with alpha-blockers.",
+    "verification_instruction": "Check Fig. 6 totals, RR, interval and trial attribution against the review, preserving [CLINICAL]. Confirm follow-up and treatment context; do not interpret nonsignificance as equivalence or count pooled and constituent reports independently.",
+    "evidence_label": "[CLINICAL]",
+    "provenance": "DERIVATIVE_UNKNOWN",
+    "status": "ordinary",
+    "speaker": "Review in s00210-025-03845-1.pdf.md (authors unspecified)",
+    "imported_id": "CANDIDATE-57fa53e2e7f1"
+  },
+  {
+    "frd_id": "FRD-Q0014-01",
+    "qid": "Q0014",
+    "response_id": "R-Q0014-A01",
+    "origin_ref": "RESPONSE-02da8ef00576",
+    "ordinal": 1,
+    "cluster": "",
+    "label": "Ma2018 reports experimental renal filtration outcomes; NotebookLM transmits them.",
+    "source_files": [
+      "ma2018.pdf.md"
+    ],
+    "locator": "3. Results, Table 1",
+    "claim": "In male Sprague-Dawley rats with left partial ureteral obstruction and right nephrectomy, PTX in drinking water (40 mg/dl), started at surgery, was associated with higher inulin GFR than vehicle at day 30 (0.89±0.04 vs. 0.24±0.09 mL/min/g; P<0.01), but not significantly at day 14 (0.48±0.02 vs. 0.41±0.06). This concurrent-treatment result does not establish reversal of established injury or improved bladder function.",
+    "verification_instruction": "Check Table 1 units, dispersion, comparisons and significance; confirm regimen and surgical timing. Preserve [PRECLINICAL]; the response's [NO SOURCE] delayed-treatment statement and [INFERRED] slow-restoration interpretation are not demonstrated outcomes.",
+    "evidence_label": "[PRECLINICAL]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "Ma2018 study",
+    "imported_id": "CANDIDATE-3126d62fa736"
+  },
+  {
+    "frd_id": "FRD-Q0015-01",
+    "qid": "Q0015",
+    "response_id": "R-Q0015-A01",
+    "origin_ref": "RESPONSE-4d6f6b74204a",
+    "ordinal": 1,
+    "cluster": "",
+    "label": "Parker et al. report experimental hemodynamics; NotebookLM transmits them.",
+    "source_files": [
+      "parker2000.pdf.md"
+    ],
+    "locator": "3.1. Cardiovascular parameters",
+    "claim": "Parker et al.'s randomized, blinded trial in female pigs with 40% hemorrhage and E. coli peritonitis reported lower MAP at 2 hours with IV PTX plus colloid than colloid control (62 vs. 92 mmHg; P<0.01; n=5/group). PTX was given one hour post-insult as a 20 mg/kg bolus plus 20 mg/kg one-hour infusion; this acute shock exposure is not a chronic oral regimen.",
+    "verification_instruction": "Verify MAP values, time origin, comparison and dosing in the cited sections, preserving [PRECLINICAL]. Do not infer bladder perfusion or oral-treatment effects.",
+    "evidence_label": "[PRECLINICAL]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "Parker et al. 2000",
+    "imported_id": "CANDIDATE-a6c5b7dee544"
+  },
+  {
+    "frd_id": "FRD-Q0016-01",
+    "qid": "Q0016",
+    "response_id": "R-Q0016-A01",
+    "origin_ref": "RESPONSE-060ae7da7dd8",
+    "ordinal": 1,
+    "cluster": "",
+    "label": "Ridings reports an animal experimental outcome; NotebookLM transmits it provisionally.",
+    "source_files": [
+      "ridings1994.pdf.md"
+    ],
+    "locator": "RESULTS; COMMENT; EXPERIMENTAL DESIGN",
+    "claim": "Ridings reports that delaying PTX (20 mg/kg IV bolus plus 6 mg/kg/h infusion) until 2 hours after sepsis onset in ventilated swine challenged with a 1-hour Pseudomonas aeruginosa infusion caused fatal systemic hypotension: 2 of 4 animals died within 1 hour of treatment.",
+    "verification_instruction": "Check [PRECLINICAL] timing, regimen, denominator, death interval and causal wording against RESULTS and COMMENT. Distinguish established acute septic shock from chronic disease; do not generalize this IV result to oral PTX.",
+    "evidence_label": "[PRECLINICAL]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "Ridings study",
+    "imported_id": "CANDIDATE-ea04d5c2b15a"
+  },
+  {
+    "frd_id": "FRD-Q0017-01",
+    "qid": "Q0017",
+    "response_id": "R-Q0017-A01",
+    "origin_ref": "RESPONSE-ce8e0b8d438b",
+    "ordinal": 1,
+    "cluster": "",
+    "label": "Kaplan states the study's operational definition; NotebookLM transmits the quoted wording provisionally.",
+    "source_files": [
+      "kaplan1997.pdf.md"
+    ],
+    "locator": "MATERIALS AND METHODS",
+    "claim": "Kaplan defines treatment success as “a decrease in symptoms of at least 50% on 2 consecutive office visits.” This is a symptom-response criterion, not an attendance or completion measure.",
+    "verification_instruction": "Verify the exact [CLINICAL] definition and symptom instrument. Do not substitute the discrepant three- versus six-month success summaries for the consecutive-visit requirement.",
+    "evidence_label": "[CLINICAL]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "Kaplan study",
+    "imported_id": "CANDIDATE-16e13d35a226"
+  },
+  {
+    "frd_id": "FRD-Q0019-01",
+    "qid": "Q0019",
+    "response_id": "R-Q0019-A01",
+    "origin_ref": "RESPONSE-5a35b02b774c",
+    "ordinal": 1,
+    "cluster": "",
+    "label": "Wystrychowski reports animal experimental comparisons; NotebookLM transmits them provisionally.",
+    "source_files": [
+      "wystrychowski2014.pdf.md"
+    ],
+    "locator": "ABSTRACT; METHODS",
+    "claim": "In male Sprague-Dawley rats undergoing 45-minute solitary renal pedicle clamping, Wystrychowski reports that subcutaneous PTX (100 mg/kg versus 1 mL 0.9% NaCl) significantly improved creatinine clearance at 48 hours only when given 60 minutes before ischemia; administration 1 minute into ischemia or 60 minutes after reperfusion did not significantly improve that endpoint.",
+    "verification_instruction": "Check [PRECLINICAL] group comparisons and timing in Table 1; verify pre-ischemia clearance of 2.10±0.44 versus 1.03±0.18 mL/min (P<.001). Nonsignificance is not proof of no effect or universal inability to reverse injury.",
+    "evidence_label": "[PRECLINICAL]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "Wystrychowski study",
+    "imported_id": "CANDIDATE-2ac484e3a773"
+  },
+  {
+    "frd_id": "FRD-Q0020-01",
+    "qid": "Q0020",
+    "response_id": "R-Q0020-A01",
+    "origin_ref": "RESPONSE-4525ca1fbe7f",
+    "ordinal": 1,
+    "cluster": "",
+    "label": "Review reports a sampling limitation in published prevalence literature; NotebookLM transmits it.",
+    "source_files": [
+      "2020ICU_icu-58-S68.pdf.md"
+    ],
+    "locator": "PREVALENCE AND EPIDEMIOLOGY OF DETRUSOR UNDERACTIVITY",
+    "claim": "The review reports that published detrusor-underactivity prevalence estimates derive from referred LUTS cohorts undergoing invasive pressure-flow studies rather than true community-based epidemiological surveys.",
+    "verification_instruction": "Verify the review's explicit sampling limitation and scope of its survey-absence statement; do not treat NotebookLM's corpus-wide absence claims as evidence. Original label: [CLINICAL]. Establish the review authors' identity from the source.",
+    "evidence_label": "[CLINICAL]",
+    "provenance": "DERIVATIVE_UNKNOWN",
+    "status": "ordinary",
+    "speaker": "2020ICU review; authors not supplied",
+    "imported_id": "CANDIDATE-a6ab9f1c141b"
+  },
+  {
+    "frd_id": "FRD-Q0021-01",
+    "qid": "Q0021",
+    "response_id": "R-Q0021-A01",
+    "origin_ref": "RESPONSE-a06952b177bd",
+    "ordinal": 1,
+    "cluster": "",
+    "label": "Li 2018 reports cohort etiologies; NotebookLM adds a causal referral-bias characterization that is not adopted.",
+    "source_files": [
+      "li2018.pdf.md"
+    ],
+    "locator": "Table 1",
+    "claim": "Li 2018 reports that neurogenic cases constituted 84.6% (1,460/1,726) of its UAB cohort drawn from consecutive LUTS patients evaluated at the China Rehabilitation Research Centre; this is a tertiary rehabilitation cohort, not a community prevalence estimate.",
+    "verification_instruction": "Check Table 1's numerator, denominator and etiologic classification, and patient-selection setting. Original label: [CLINICAL]. Separate the reported case mix from NotebookLM's causal characterization of referral bias.",
+    "evidence_label": "[CLINICAL]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "Li 2018",
+    "imported_id": "CANDIDATE-59fadcea8a6b"
+  },
+  {
+    "frd_id": "FRD-Q0022-01",
+    "qid": "Q0022",
+    "response_id": "R-Q0022-A01",
+    "origin_ref": "RESPONSE-87de37a0d494",
+    "ordinal": 1,
+    "cluster": "",
+    "label": "Clemens 2000 reports attendance distribution and reasons for fewer than three sessions; NotebookLM transmits these findings.",
+    "source_files": [
+      "clemens2000.pdf.md"
+    ],
+    "locator": "RESULTS",
+    "claim": "Among 19 enrolled male CPPS patients, Clemens 2000 reports that 10 completed all six biweekly treatment sessions, five completed three to five, and four completed fewer than three; the last group's reported reasons were sufficient early improvement (two), insurance barriers (one), and unknown (one).",
+    "verification_instruction": "Verify attendance denominators and stated reasons in RESULTS. Original label: [CLINICAL]. Do not equate low attendance with nonresponse or confuse attendance with the 16 patients having complete post-treatment follow-up.",
+    "evidence_label": "[CLINICAL]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "Clemens 2000",
+    "imported_id": "CANDIDATE-3342c6267f52"
+  },
+  {
+    "frd_id": "FRD-Q0023-01",
+    "qid": "Q0023",
+    "response_id": "R-Q0023-A01",
+    "origin_ref": "RESPONSE-ccc15d4340e6",
+    "ordinal": 1,
+    "cluster": "",
+    "label": "Cornel study reports symptom change; NotebookLM transmits the finding, pending primary-source validation.",
+    "source_files": [
+      "cornel2005.pdf.md"
+    ],
+    "locator": "Table 1",
+    "claim": "Cornel’s study of men with type III CP/CPPS reported that the NIH-CPSI micturition score decreased from 5.1 (range 0–10) to 2.2 (range 0–6; p<0.001) after pelvic-floor EMG biofeedback training; 31 of 33 enrolled men completed treatment and were analyzed. This is a symptom-score finding, not evidence of improved measured flow or residual volume.",
+    "verification_instruction": "Check [CLINICAL] Table 1 values, analysis denominator and Methods: anal-probe contraction/relaxation training, 6–8 sessions, initially weekly then every 2–4 weeks. Verify whether the score comparison was uncontrolled; do not infer objective emptying improvement from the response’s [NO SOURCE] statement.",
+    "evidence_label": "[CLINICAL]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "Cornel study",
+    "imported_id": "CANDIDATE-176daaab6462"
+  },
+  {
+    "frd_id": "FRD-Q0024-01",
+    "qid": "Q0024",
+    "response_id": "R-Q0024-A01",
+    "origin_ref": "RESPONSE-7633477248e1",
+    "ordinal": 1,
+    "cluster": "",
+    "label": "Hagovska et al. report a randomized add-on comparison; NotebookLM transmits the finding, pending primary-source validation.",
+    "source_files": [
+      "s00345-024-04974-7.pdf.md"
+    ],
+    "locator": "Table 4",
+    "claim": "Hagovska et al. reported a greater 12-week reduction in 24-hour voiding frequency with pelvic-floor muscle training plus urgency suppression and silodosin than with silodosin alone (−1.95 ± 1.94 versus −0.90 ± 1.44; p=0.003) in men over 50 with BPH and persistent OAB symptoms after four weeks of silodosin. Both groups received oral silodosin 8 mg daily; this was an add-on treatment comparison, not pelvic-floor monotherapy.",
+    "verification_instruction": "Check [CLINICAL] Abstract/Table 4 endpoint units and change statistics. Resolve the response’s designation of 142 completers (72/70) as an ITT analysis despite 158 randomized (79/79); inspect Fig. 1 and missing-data handling. Training was prescribed 30 minutes/day, five days/week with weekly supervision; prescription does not establish adherence.",
+    "evidence_label": "[CLINICAL]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "Hagovska et al. 2024",
+    "imported_id": "CANDIDATE-e7935dc6a3e1"
+  },
+  {
+    "frd_id": "FRD-Q0025-01",
+    "qid": "Q0025",
+    "response_id": "R-Q0025-A01",
+    "origin_ref": "RESPONSE-1ded104c5248",
+    "ordinal": 1,
+    "cluster": "",
+    "label": "Fitzgerald study reports subgroup symptom comparisons; NotebookLM transmits the finding, pending primary-source validation.",
+    "source_files": [
+      "fitzgerald2009.pdf.md"
+    ],
+    "locator": "Table 6",
+    "claim": "Fitzgerald’s randomized study reported a between-group NIH-CPSI urinary-subscore difference favoring myofascial physical therapy over global therapeutic massage in the male CP/CPPS subgroup (11 versus 10 men; p=0.007) at 12 weeks. Baseline urinary scores differed substantially (8.9 ± 1.4 versus 4.6 ± 2.7), limiting interpretation of the small subgroup comparison.",
+    "verification_instruction": "Check [CLINICAL] Table 6 subgroup denominators, baseline imbalance and between-group test. Resolve the response’s GTM arithmetic discrepancy: 4.6 to 3.9 is paired with −0.3 [−6.5%]; do not silently repair it. Verify treatment modes and scheduled ten weekly one-hour sessions versus actual exposure.",
+    "evidence_label": "[CLINICAL]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "Fitzgerald study",
+    "imported_id": "CANDIDATE-61ac97b120f8"
+  },
+  {
+    "frd_id": "FRD-Q0026-01",
+    "qid": "Q0026",
+    "response_id": "R-Q0026-A01",
+    "origin_ref": "RESPONSE-446f07c3bc3c",
+    "ordinal": 1,
+    "cluster": "",
+    "label": "Hall review reports frequency of adherence measurement across included studies; primary text not yet validated.",
+    "source_files": [
+      "hall2018.pdf.md"
+    ],
+    "locator": "3.2 | HEP details",
+    "claim": "Hall's systematic review of 108 studies of male PFMT for urinary dysfunction reported that only 19% (n=20) measured exercise adherence; this does not establish actual adherence or adequate treatment exposure.",
+    "verification_instruction": "Check [CLINICAL] denominator and definition of measured adherence, distinguishing measurement from attendance, completion and treatment response.",
+    "evidence_label": "[CLINICAL]",
+    "provenance": "DERIVATIVE_UNKNOWN",
+    "status": "ordinary",
+    "speaker": "Hall systematic review",
+    "imported_id": "CANDIDATE-bbc4a2b4724d"
+  },
+  {
+    "frd_id": "FRD-Q0027-01",
+    "qid": "Q0027",
+    "response_id": "R-Q0027-A01",
+    "origin_ref": "RESPONSE-16f42cf26305",
+    "ordinal": 1,
+    "cluster": "",
+    "label": "Study authors report delayed cytokine-release suppression; author names are not supplied and primary-source validation remains pending.",
+    "source_files": [
+      "immunology00076-0102.pdf.md"
+    ],
+    "locator": "RESULTS | In vivo effects of orally applied PTX on cytokine production by PBMC",
+    "claim": "In the reported four-healthy-volunteer study, after oral PTX 2,000 mg/day for two days, ex-vivo PBMC release of TNF-α, IL-1β, IL-6 and IL-8 was significantly suppressed on Day 7, five days after withdrawal, returning to baseline by Day 14.",
+    "verification_instruction": "Check original [CLINICAL] attribution, regimen-specific participant denominator, withdrawal timing and LPS-stimulated assay (1 µg/mL, 24 hours). Human dosing followed by ex-vivo testing is not a clinical urinary endpoint; verify without treating oral dose as measured tissue exposure or adding the transcription mechanism.",
+    "evidence_label": "[CLINICAL]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "Unidentified authors of immunology00076-0102.pdf.md",
+    "imported_id": "CANDIDATE-c3c2023229a4"
+  },
+  {
+    "frd_id": "FRD-Q0028-01",
+    "qid": "Q0028",
+    "response_id": "R-Q0028-A01",
+    "origin_ref": "RESPONSE-ee62c4c38770",
+    "ordinal": 1,
+    "cluster": "",
+    "label": "Kruuse study reports a null cerebral perfusion result; provisional pending primary-source checking.",
+    "source_files": [
+      "kruuse2000.pdf.md"
+    ],
+    "locator": "Results, Main study",
+    "claim": "Kruuse's double-blind randomized crossover study in 10 healthy subjects (7 women, 3 men; nine analyzed for rCBF because of an input artifact) found no significant change in middle-cerebral-territory rCBF or global CBF at 55 or 115 minutes with PTX 300 mg IV over 60 minutes versus saline placebo.",
+    "verification_instruction": "Check [CLINICAL] null result, analysis denominator, timings and comparator; confirm pCO2-corrected peak baseline changes (+0.2% PTX versus +9.6% placebo; P>0.05). Do not transfer cerebral results to ischemic bladder perfusion.",
+    "evidence_label": "[CLINICAL]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "Kruuse study",
+    "imported_id": "CANDIDATE-166c0af3da98"
+  },
+  {
+    "frd_id": "FRD-Q0029-01",
+    "qid": "Q0029",
+    "response_id": "R-Q0029-A01",
+    "origin_ref": "RESPONSE-6ec7334b4ffb",
+    "ordinal": 1,
+    "cluster": "",
+    "label": "Dezube reports a PBMC molecular response during PTX treatment.",
+    "source_files": [
+      "dezube1993.pdf.md"
+    ],
+    "locator": "Results",
+    "claim": "Dezube 1993 reports suppression of elevated PBMC TNF mRNA within one week on all three treatment occasions with baseline TNF RNA >1.0 during oral controlled-release PTX 400 mg every eight hours in adult cancer patients. This molecular endpoint does not establish circulating TNF protein suppression or urinary functional benefit.",
+    "verification_instruction": "Check [CLINICAL] baseline threshold, TNF/β-actin normalization, timing and occasion-level denominator; seven patients received treatment on eight occasions for 1–3 weeks. Validate against the English source; NotebookLM provenance is provisional.",
+    "evidence_label": "[CLINICAL]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "Dezube 1993",
+    "imported_id": "CANDIDATE-7cea07f3084b"
+  },
+  {
+    "frd_id": "FRD-Q0030-01",
+    "qid": "Q0030",
+    "response_id": "R-Q0030-A01",
+    "origin_ref": "RESPONSE-1b343d805436",
+    "ordinal": 1,
+    "cluster": "",
+    "label": "Review summarizes adherence ascertainment across included trials.",
+    "source_files": [
+      "life-15-00613.pdf.md"
+    ],
+    "locator": "3.4 Main Outcome",
+    "claim": "The systematic review reports adherence using heterogeneous self-reported measures, including clinic attendance, visual analog scales, EARS and KAP questionnaires; these measures should not be treated as a standardized objective compliance endpoint.",
+    "verification_instruction": "Check [CLINICAL] which studies used each measure and whether attendance was self-reported or independently recorded; verify whether pooling is justified. Preserve treatment mode and attendance versus home-exercise adherence distinctions. NotebookLM provenance is provisional; author identity is not supplied.",
+    "evidence_label": "[CLINICAL]",
+    "provenance": "DERIVATIVE_UNKNOWN",
+    "status": "ordinary",
+    "speaker": "Systematic review in life-15-00613.pdf.md; author identity not supplied",
+    "imported_id": "CANDIDATE-84bd28913742"
+  },
+  {
+    "frd_id": "FRD-Q0031-01",
+    "qid": "Q0031",
+    "response_id": "R-Q0031-A01",
+    "origin_ref": "RESPONSE-9df5b9894945",
+    "ordinal": 1,
+    "cluster": "",
+    "label": "Review transmits a male-subgroup trial result attributed to FitzGerald 2009.",
+    "source_files": [
+      "vanreijn-baggen2022.pdf.md"
+    ],
+    "locator": "Table 2. Study characteristics of the included studies",
+    "claim": "The review reports that FitzGerald 2009 found a NIH-CPSI urinary subscore difference favoring myofascial physical therapy over global therapeutic massage (p < 0.01) in men with CP/CPPS. The male subgroup comprised 21 of 47 randomized participants, and this was a subjective symptom endpoint, not measured bladder emptying.",
+    "verification_instruction": "Check [CLINICAL] whether p < 0.01 actually denotes a between-group male-subgroup comparison, rather than within-group change; verify subgroup denominators and attribution. The review transmits the trial result, not independent replication; NotebookLM provenance is provisional.",
+    "evidence_label": "[CLINICAL]",
+    "provenance": "DERIVED_FROM(FitzGerald 2009)",
+    "status": "ordinary",
+    "speaker": "van Reijn-Baggen 2022 review transmitting FitzGerald 2009",
+    "imported_id": "CANDIDATE-3290da1f0b26"
+  },
+  {
+    "frd_id": "FRD-Q0033-01",
+    "qid": "Q0033",
+    "response_id": "R-Q0033-A01",
+    "origin_ref": "RESPONSE-3178fd368a16",
+    "ordinal": 1,
+    "cluster": "",
+    "label": "Raison et al. report their trial's overall depression outcome; NotebookLM transmits the finding provisionally.",
+    "source_files": [
+      "raison2013.pdf.md"
+    ],
+    "locator": "Abstract; Results",
+    "claim": "In Raison et al.'s 12-week trial of 60 outpatients with treatment-resistant depression, infliximab (5 mg/kg IV; n=30) showed no overall benefit over placebo (n=30) in HAM-D score reduction (P=.92).",
+    "verification_instruction": "Check the [CLINICAL] Abstract/Results passage for population, allocation, dosing and the endpoint/test associated with P=.92. Preserve the overall null result without treating it as proof of no subgroup effect or transferring it to oral PTX or urinary outcomes.",
+    "evidence_label": "[CLINICAL]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "Raison et al.",
+    "imported_id": "CANDIDATE-7a826663999d"
+  },
+  {
+    "frd_id": "FRD-Q0034-01",
+    "qid": "Q0034",
+    "response_id": "R-Q0034-A01",
+    "origin_ref": "RESPONSE-94557d16c1fa",
+    "ordinal": 1,
+    "cluster": "",
+    "label": "Roerink et al. report their matched case-control exercise comparison; NotebookLM transmits the finding provisionally.",
+    "source_files": [
+      "roerink2019.pdf.md"
+    ],
+    "locator": "Abstract; Table 2",
+    "claim": "In Roerink et al.'s matched case-control study, 17 patients in long-term Cushing's syndrome remission (>4 years) had lower peak aerobic exercise capacity than 17 individually matched healthy controls (VO2peak 28.0 versus 34.8 mL O2/kg/min, P<0.01).",
+    "verification_instruction": "Verify the [CLINICAL] remission definition, matched sample, Table 2 values, units and comparison. This observational exercise-capacity finding does not establish a mechanism, urinary dysfunction or a PTX treatment effect.",
+    "evidence_label": "[CLINICAL]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "Roerink et al.",
+    "imported_id": "CANDIDATE-02f13e27efb6"
+  },
+  {
+    "frd_id": "FRD-Q0035-01",
+    "qid": "Q0035",
+    "response_id": "R-Q0035-A01",
+    "origin_ref": "RESPONSE-657983cb80ee",
+    "ordinal": 1,
+    "cluster": "",
+    "label": "Shah reports regression findings; NotebookLM additionally supplies an unwarranted causal interpretation.",
+    "source_files": [
+      "shah2016.pdf.md"
+    ],
+    "locator": "RESULTS > Regression Analysis",
+    "claim": "Shah reports that neither circulating IL-6 nor IL-1β predicted or correlated with measured fat depots or HOMA-IR during active Cushing's disease or surgical remission. This regression finding does not establish absence of causal tissue effects.",
+    "verification_instruction": "Check [CLINICAL] regression results, modeled depots and covariates in the 31-patient prospective cohort, evaluated before and 19.5±12.9 months after remission. Separate the reported statistical null from NotebookLM's unsupported “rather than an active cause” conclusion.",
+    "evidence_label": "[CLINICAL]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "Shah study",
+    "imported_id": "CANDIDATE-2cfaa44a8d12"
+  },
+  {
+    "frd_id": "FRD-Q0036-01",
+    "qid": "Q0036",
+    "response_id": "R-Q0036-A01",
+    "origin_ref": "RESPONSE-6b4dcae27678",
+    "ordinal": 1,
+    "cluster": "",
+    "label": "Unidentified review author describes limitations of IPSS, as transmitted by NotebookLM.",
+    "source_files": [
+      "fdp03812573_1.pdf.md"
+    ],
+    "locator": "EVALUATION OF LUTS AND BPH",
+    "claim": "The review states that IPSS measures subjective symptom severity and quality-of-life impact but cannot establish etiology or distinguish outlet obstruction from impaired detrusor contraction.",
+    "verification_instruction": "Verify the [CLINICAL] attribution and exact scope of the IPSS limitation; confirm that both diagnostic distinctions are explicitly stated rather than inferred by NotebookLM. Review authorship is not supplied.",
+    "evidence_label": "[CLINICAL]",
+    "provenance": "DERIVATIVE_UNKNOWN",
+    "status": "ordinary",
+    "speaker": "Review in fdp03812573_1.pdf.md; author identity not supplied",
+    "imported_id": "CANDIDATE-626e954a53f2"
+  },
+  {
+    "frd_id": "FRD-Q0037-01",
+    "qid": "Q0037",
+    "response_id": "R-Q0037-A01",
+    "origin_ref": "RESPONSE-06f6a9cdbbc6",
+    "ordinal": 1,
+    "cluster": "",
+    "label": "Bortnick's review presents medication contraindication guidance, as transmitted by NotebookLM.",
+    "source_files": [
+      "bortnick2019.pdf.md"
+    ],
+    "locator": "Phosphodiesterase Inhibitors",
+    "claim": "Bortnick's review states that tadalafil is contraindicated with nitrates because of severe hypotension risk.",
+    "verification_instruction": "Verify the [CLINICAL] contraindication wording and whether its scope is tadalafil or the PDE5-inhibitor class; do not treat review guidance as an observed adverse-event rate.",
+    "evidence_label": "[CLINICAL]",
+    "provenance": "DERIVATIVE_UNKNOWN",
+    "status": "ordinary",
+    "speaker": "Bortnick review",
+    "imported_id": "CANDIDATE-fb25d7c7940d"
+  },
+  {
+    "frd_id": "FRD-Q0038-01",
+    "qid": "Q0038",
+    "response_id": "R-Q0038-A01",
+    "origin_ref": "RESPONSE-db0548ed66b1",
+    "ordinal": 1,
+    "cluster": "",
+    "label": "Study authors report postoperative plasma IL-6 measurements.",
+    "source_files": [
+      "Papanicolaou1996_Withdrawal_Syndrome_and.md"
+    ],
+    "locator": "Table 2",
+    "claim": "Papanicolaou et al. report that in 15 hypocortisolemic patients among 19 surgical Cushing’s patients, plasma IL-6 rose from 1.98±0.44 pg/mL preoperatively to 9.38±0.58 pg/mL on postoperative days 4–5, when morning cortisol was <2 μg/dL (P<0.0001).",
+    "verification_instruction": "Check [CLINICAL] values, units, comparison and sampling denominator against Tables 1–2; do not substitute the later n=17 replacement sample.",
+    "evidence_label": "[CLINICAL]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "Papanicolaou et al.",
+    "imported_id": "CANDIDATE-c243d1aa8738"
+  },
+  {
+    "frd_id": "FRD-Q0039-01",
+    "qid": "Q0039",
+    "response_id": "R-Q0039-A01",
+    "origin_ref": "RESPONSE-d166988119ea",
+    "ordinal": 1,
+    "cluster": "",
+    "label": "Study authors report null biomarker associations with cortisol severity measures.",
+    "source_files": [
+      "Ueland2023_Cortisol_Secretion.md"
+    ],
+    "locator": "Results | Variation of biomarkers according to degree of hypercortisolism",
+    "claim": "Ueland et al. report that none of the 49 differential biomarkers correlated with hypercortisolism severity assessed by post-dexamethasone cortisol, 24-hour urinary free cortisol or morning cortisol in their patient cohort (63 ACS, 10 Cushing syndrome).",
+    "verification_instruction": "Check [CLINICAL] scope of “none,” tested markers, cortisol measures and statistical criteria; do not equate absent correlation with absent biological causation.",
+    "evidence_label": "[CLINICAL]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "Ueland et al.",
+    "imported_id": "CANDIDATE-d60bf5368972"
+  },
+  {
+    "frd_id": "FRD-Q0040-01",
+    "qid": "Q0040",
+    "response_id": "R-Q0040-A01",
+    "origin_ref": "RESPONSE-68036ff7caf3",
+    "ordinal": 1,
+    "cluster": "",
+    "label": "Review describes alpha-blocker action and onset; underlying study attribution is not supplied.",
+    "source_files": [
+      "bortnick2020.pdf.md"
+    ],
+    "locator": "Medical therapy",
+    "claim": "Bortnick’s review describes alpha-blockers as relaxing prostatic/bladder-neck smooth muscle without reducing prostate volume, with rapid onset but several weeks required for maximal symptom relief.",
+    "verification_instruction": "Verify [CLINICAL] attribution and timing, especially “work immediately”; this is review testimony, not an identified trial result.",
+    "evidence_label": "[CLINICAL]",
+    "provenance": "DERIVATIVE_UNKNOWN",
+    "status": "ordinary",
+    "speaker": "Bortnick review",
+    "imported_id": "CANDIDATE-357d81c8c0f0"
+  },
+  {
+    "frd_id": "FRD-Q0041-01",
+    "qid": "Q0041",
+    "response_id": "R-Q0041-A01",
+    "origin_ref": "RESPONSE-b473d7a10e38",
+    "ordinal": 1,
+    "cluster": "",
+    "label": "Vogel et al. report a postoperative biomarker–function association; NotebookLM transmits it provisionally.",
+    "source_files": [
+      "Vogel2023_Glucocorticoid_Withdrawal.md"
+    ],
+    "locator": "Figure 4",
+    "claim": "Vogel et al. reported that 3-month CRP was inversely associated with 12-month normalized grip strength after curative surgery in their Cushing's cohort (rs=−0.371, P=.008); this observational association does not establish causal mediation.",
+    "verification_instruction": "Check Figure 4 for timing, correlation sign, normalization and analyzed denominator; inspect Discussion > Limitations, strengths, and outlook for causal limitations. Original label: [CLINICAL]. Do not substitute the overall 80-patient cohort for the correlation denominator.",
+    "evidence_label": "[CLINICAL]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "Vogel et al.",
+    "imported_id": "CANDIDATE-d2566989620f"
+  },
+  {
+    "frd_id": "FRD-Q0042-01",
+    "qid": "Q0042",
+    "response_id": "R-Q0042-A01",
+    "origin_ref": "RESPONSE-4ae1bd6f2418",
+    "ordinal": 1,
+    "cluster": "",
+    "label": "Fakioglu et al. report an experimental pulmonary-edema outcome; NotebookLM transmits it provisionally.",
+    "source_files": [
+      "fakioglu2004.pdf.md"
+    ],
+    "locator": "3.3. Development of multiple organ edema",
+    "claim": "In anesthetized, spontaneously breathing endotoxemic rats, post-endotoxin IV aminophylline significantly increased pulmonary water content versus endotoxin alone (81.41% vs 79.40%; P<0.05), using a 1 mg/kg loading dose over 30 minutes beginning 30 minutes after endotoxin, followed by 0.5 mg/kg/h for 6 hours.",
+    "verification_instruction": "Verify pulmonary rather than renal values, comparator ordering, measurement timing and group denominators (reported n=9 versus n=10). Original label: [PRECLINICAL]. This is aminophylline exposure, not oral PTX or a bladder endpoint.",
+    "evidence_label": "[PRECLINICAL]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "Fakioglu et al.",
+    "imported_id": "CANDIDATE-dca12776e9d7"
+  },
+  {
+    "frd_id": "FRD-Q0043-01",
+    "qid": "Q0043",
+    "response_id": "R-Q0043-A01",
+    "origin_ref": "RESPONSE-0e0ff36d0e6e",
+    "ordinal": 1,
+    "cluster": "",
+    "label": "Van Houten et al. report basal circulating-marker findings; NotebookLM transmits them provisionally.",
+    "source_files": [
+      "VanHouten2026_Cushings_syndrome.md"
+    ],
+    "locator": "Circulating inflammatory proteome after remission of CS",
+    "claim": "Van Houten et al. reported no change in basal circulating plasma IL-6, IL-8 and CRP after remission in nine Cushing's syndrome patients (six adrenal, three Cushing's disease), evaluated at diagnosis and after complete tapering of glucocorticoid replacement.",
+    "verification_instruction": "Check paired sampling, marker-specific denominators and whether “no change” means no statistically significant change. Original label: [CLINICAL]. Keep plasma results separate from ex vivo PBMC stimulation findings.",
+    "evidence_label": "[CLINICAL]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "Van Houten et al.",
+    "imported_id": "CANDIDATE-76f9c03e6227"
+  },
+  {
+    "frd_id": "FRD-Q0044-01",
+    "qid": "Q0044",
+    "response_id": "R-Q0044-A01",
+    "origin_ref": "RESPONSE-5a37bebc1dbe",
+    "ordinal": 1,
+    "cluster": "",
+    "label": "Fukabori reports a clinical case; discovered through NotebookLM, pending abstract validation.",
+    "source_files": [
+      "Fukabori-1996-uninhibited-bladder.pdf.md"
+    ],
+    "locator": "A CASE OF UNINHIBITED BLADDER SUCCESSFULLY TREATED WITH PENTOXIFYLLINE",
+    "claim": "Fukabori reports resolution of incontinence after two weeks of pentoxifylline monotherapy following anticholinergic failure in a 60-year-old woman with uninhibited bladder attributed to latent cerebrovascular dysfunction. This single case does not establish comparative efficacy or improvement in difficult emptying.",
+    "verification_instruction": "[CLINICAL]: Inspect only the originally published English abstract; verify monotherapy, prior failure, attribution and timing. Do not infer dose, route or emptying outcomes.",
+    "evidence_label": "[CLINICAL]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "Fukabori",
+    "imported_id": "CANDIDATE-dc9de1b9eece"
+  },
+  {
+    "frd_id": "FRD-Q0045-01",
+    "qid": "Q0045",
+    "response_id": "R-Q0045-A01",
+    "origin_ref": "RESPONSE-34d133290f51",
+    "ordinal": 1,
+    "cluster": "",
+    "label": "Gulen presents consensus diagnostic guidance; underlying attribution awaits source validation.",
+    "source_files": [
+      "Gulen2024_MCAS.md"
+    ],
+    "locator": "Diagnosis of MCAS",
+    "claim": "Gulen describes an event-linked serum tryptase increase exceeding 1.2 times baseline plus 2 ng/mL as biochemical evidence within the three-part MCAS diagnostic framework, with acute sampling 1–4 hours after onset and baseline sampling more than 24 hours after recovery.",
+    "verification_instruction": "[CLINICAL]: Check the exact inequality, units and sampling windows; confirm this is one criterion, not a standalone diagnosis. Resolve the response’s potentially redundant “exceeding >” against the source.",
+    "evidence_label": "[CLINICAL]",
+    "provenance": "DERIVATIVE_UNKNOWN",
+    "status": "ordinary",
+    "speaker": "Gulen",
+    "imported_id": "CANDIDATE-1a514a5b2770"
+  },
+  {
+    "frd_id": "FRD-Q0046-01",
+    "qid": "Q0046",
+    "response_id": "R-Q0046-A01",
+    "origin_ref": "RESPONSE-147a4b059999",
+    "ordinal": 1,
+    "cluster": "",
+    "label": "Vale transmits experimental findings; original experimenter attribution is not supplied.",
+    "source_files": [
+      "vale2019.pdf.md"
+    ],
+    "locator": "3.1.4 | Bladder outlet obstruction",
+    "claim": "Vale’s review reports that HIF-1α inhibition with 17-DMAG rescues detrusor contractility in mice with bladder outlet obstruction. This is not direct evidence for pentoxifylline.",
+    "verification_instruction": "[PRECLINICAL]: Check intervention identity, species, obstruction model and the actual contractility endpoint/comparator; trace the review’s attribution without treating it as its own experiment.",
+    "evidence_label": "[PRECLINICAL]",
+    "provenance": "DERIVATIVE_UNKNOWN",
+    "status": "ordinary",
+    "speaker": "Vale review",
+    "imported_id": "CANDIDATE-f6e88fa1021c"
+  },
+  {
+    "frd_id": "FRD-Q0047-01",
+    "qid": "Q0047",
+    "response_id": "R-Q0047-A01",
+    "origin_ref": "RESPONSE-0fccdef92340",
+    "ordinal": 1,
+    "cluster": "",
+    "label": "Kim review summarizes clinical trial efficacy evidence.",
+    "source_files": [
+      "kim2017.pdf.md"
+    ],
+    "locator": "PHARMACOLOGICAL THERAPY > 1. Parasympathomimetics",
+    "claim": "Kim's review reports that clinical trial evidence does not support functional benefit from parasympathomimetics for underactive bladder.",
+    "verification_instruction": "Check the [CLINICAL] efficacy summary, endpoints and trial qualifications; distinguish unsupported benefit from proof of no effect. This is review-transmitted evidence, not a new trial.",
+    "evidence_label": "[CLINICAL]",
+    "provenance": "DERIVATIVE_UNKNOWN",
+    "status": "ordinary",
+    "speaker": "Kim review",
+    "imported_id": "CANDIDATE-8aa76d1e7b69"
+  },
+  {
+    "frd_id": "FRD-Q0048-01",
+    "qid": "Q0048",
+    "response_id": "R-Q0048-A01",
+    "origin_ref": "RESPONSE-366cb6b452be",
+    "ordinal": 1,
+    "cluster": "",
+    "label": "Trial authors describe their analysis inclusion rule.",
+    "source_files": [
+      "Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md"
+    ],
+    "locator": "2.4 | Statistical analyses",
+    "claim": "Shirazi et al.'s trial analysis included only participants who received medication throughout the study; the response identifies 30 completers per group.",
+    "verification_instruction": "Verify the [CLINICAL] quoted inclusion rule and denominators against participant flow; confirm whether “per-protocol” is the authors' term or the Archivist's characterization.",
+    "evidence_label": "[CLINICAL]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "Shirazi et al. trial",
+    "imported_id": "CANDIDATE-419b9556869b"
+  },
+  {
+    "frd_id": "FRD-Q0049-01",
+    "qid": "Q0049",
+    "response_id": "R-Q0049-A01",
+    "origin_ref": "RESPONSE-c4b8cee92f82",
+    "ordinal": 1,
+    "cluster": "",
+    "label": "Chung review presents a definition and proposed psychogenic explanation.",
+    "source_files": [
+      "chung2014.pdf.md"
+    ],
+    "locator": "Exact Definition and Proposed Pathophysiologic Mechanisms",
+    "claim": "Chung's review characterizes paruresis as psychogenic inhibition of micturition involving difficulty or inability to urinate when others are present.",
+    "verification_instruction": "Check the [MECHANISM] definition and attribution; retain proposed psychogenic explanation rather than treating it as demonstrated causation or treatment evidence.",
+    "evidence_label": "[MECHANISM]",
+    "provenance": "DERIVATIVE_UNKNOWN",
+    "status": "ordinary",
+    "speaker": "Chung review",
+    "imported_id": "CANDIDATE-ab233fbdf3b0"
+  },
+  {
+    "frd_id": "FRD-Q0050-01",
+    "qid": "Q0050",
+    "response_id": "R-Q0050-A01",
+    "origin_ref": "RESPONSE-bd9c27f147bb",
+    "ordinal": 1,
+    "cluster": "",
+    "label": "Review reports negative placebo comparisons; primary trial attribution remains unvalidated.",
+    "source_files": [
+      "ladi-seyedian2017.pdf.md"
+    ],
+    "locator": "7.3.1. Parasympathomimetics",
+    "claim": "The review reports that parasympathomimetics failed to improve detrusor contractility or emptying over placebo in the reviewed trials; this is review-level testimony, not a verified pooled result.",
+    "verification_instruction": "Check [CLINICAL] trial-specific agents, populations, endpoints, durations and dosing. Verify whether the negative comparison applies to bethanechol, carbachol and distigmine individually; do not assume the response's proposed failure mechanisms were demonstrated.",
+    "evidence_label": "[CLINICAL]",
+    "provenance": "DERIVATIVE_UNKNOWN",
+    "status": "ordinary",
+    "speaker": "Ladi-Seyedian review",
+    "imported_id": "CANDIDATE-7d7012db0615"
+  },
+  {
+    "frd_id": "FRD-Q0051-01",
+    "qid": "Q0051",
+    "response_id": "R-Q0051-A01",
+    "origin_ref": "RESPONSE-a22241fcdcb1",
+    "ordinal": 1,
+    "cluster": "",
+    "label": "Lee transmits a primary clinical study result; primary attribution requires inspection.",
+    "source_files": [
+      "lee2018.pdf.md"
+    ],
+    "locator": "New management strategies for underactive bladder",
+    "claim": "Lee's review reports elimination of catheterization in 69% of sacral-neuromodulation patients versus 9% of controls at six months; this endpoint does not itself establish detrusor recovery.",
+    "verification_instruction": "Check the [CLINICAL] percentages, denominators, comparator, patient selection and cited primary trial. Establish whether results concern implanted responders or all randomized participants; retain review-to-primary dependence.",
+    "evidence_label": "[CLINICAL]",
+    "provenance": "DERIVATIVE_UNKNOWN",
+    "status": "ordinary",
+    "speaker": "Lee review",
+    "imported_id": "CANDIDATE-3f35f84b3fe6"
+  },
+  {
+    "frd_id": "FRD-Q0052-01",
+    "qid": "Q0052",
+    "response_id": "R-Q0052-A01",
+    "origin_ref": "RESPONSE-184e8a85523d",
+    "ordinal": 1,
+    "cluster": "",
+    "label": "Spinas study reports its experimental plasma cytokine comparison.",
+    "source_files": [
+      "spinas1991.pdf.md"
+    ],
+    "locator": "Effects of ibuprofen pretreatment on plasma cytokine concentrations",
+    "claim": "In the reported randomized healthy-male endotoxin trial, ibuprofen pretreatment (n=6; 800 mg orally at −120 and 0 minutes) increased peak plasma TNF-α to 627 ± 136 pg/mL at 120 minutes versus 369 ± 44 pg/mL at 90 minutes with endotoxin alone (n=7; P=0.003).",
+    "verification_instruction": "Verify [CLINICAL] randomization, dosing, peak times, statistical comparison and meaning of ±; this acute systemic exposure is not PTX or bladder-disease evidence.",
+    "evidence_label": "[CLINICAL]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "Spinas study",
+    "imported_id": "CANDIDATE-cf852c0e6a0c"
+  },
+  {
+    "frd_id": "FRD-Q0053-01",
+    "qid": "Q0053",
+    "response_id": "R-Q0053-A01",
+    "origin_ref": "RESPONSE-ed979fb4af8e",
+    "ordinal": 1,
+    "cluster": "",
+    "label": "Chuang's review transmits a prevalence finding attributed to Jeong et al.; NotebookLM supplies the provisional retrieval.",
+    "source_files": [
+      "chuang2015.pdf.md"
+    ],
+    "locator": "EPIDEMIOLOGY",
+    "claim": "Chuang's review reports that Jeong et al. found detrusor underactivity in 40.2% of men within a study of 1,179 adults older than 65 years; 1,179 is the total study sample, not the male denominator.",
+    "verification_instruction": "Check the transmitted [CLINICAL] prevalence, age criterion, sex-specific denominator and diagnostic/selection context. Identify the cited Jeong study; do not treat this review as its primary report or infer population prevalence.",
+    "evidence_label": "[CLINICAL]",
+    "provenance": "DERIVATIVE_UNKNOWN",
+    "status": "ordinary",
+    "speaker": "Jeong et al., transmitted by Chuang's review",
+    "imported_id": "CANDIDATE-8ebed93d8f55"
+  },
+  {
+    "frd_id": "FRD-Q0054-01",
+    "qid": "Q0054",
+    "response_id": "R-Q0054-A01",
+    "origin_ref": "RESPONSE-12022e5a9a06",
+    "ordinal": 1,
+    "cluster": "",
+    "label": "Chung's review reports a longitudinal PVR estimate; underlying study attribution requires checking.",
+    "source_files": [
+      "chung2016.pdf.md"
+    ],
+    "locator": "Bladder outlet obstruction and underactive bladder",
+    "claim": "Chung's review reports a nonsignificant annual PVR change of −3% in men in their 70s.",
+    "verification_instruction": "Check the [CLINICAL] estimate, minus sign, age range, follow-up and underlying cohort attribution. Verify whether −3% is annual change and how nonsignificance was assessed; do not interpret it as treatment response or individual recovery.",
+    "evidence_label": "[CLINICAL]",
+    "provenance": "DERIVATIVE_UNKNOWN",
+    "status": "ordinary",
+    "speaker": "Chung review, transmitting an unidentified longitudinal cohort",
+    "imported_id": "CANDIDATE-b6f9557ed4b9"
+  },
+  {
+    "frd_id": "FRD-Q0055-01",
+    "qid": "Q0055",
+    "response_id": "R-Q0055-A01",
+    "origin_ref": "RESPONSE-f755a08fd7b6",
+    "ordinal": 1,
+    "cluster": "",
+    "label": "Glazener et al. report their randomized TURP trial's 12-month incontinence endpoint; provisional NotebookLM retrieval.",
+    "source_files": [
+      "glazener2011.pdf.md"
+    ],
+    "locator": "Table 3",
+    "claim": "In Glazener et al.'s randomized trial of 442 men incontinent six weeks after TURP, four formal one-to-one PFMT sessions versus standard care produced 12-month any-incontinence rates of 65% (126/194) versus 62% (125/203), respectively (RR 1.06, 95% CI 0.91–1.23; p = 0.47).",
+    "verification_instruction": "Verify [CLINICAL] endpoint definition, allocation (220/222), respondent denominators and statistics. Distinguish follow-up from attendance or exercise adherence; this endpoint concerns postoperative leakage, not difficult emptying.",
+    "evidence_label": "[CLINICAL]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "Glazener et al. (2011)",
+    "imported_id": "CANDIDATE-11981e473f8f"
+  },
+  {
+    "frd_id": "FRD-Q0056-01",
+    "qid": "Q0056",
+    "response_id": "R-Q0056-A01",
+    "origin_ref": "RESPONSE-375c367cee3b",
+    "ordinal": 1,
+    "cluster": "",
+    "label": "Study authors report a postoperative continence comparison; retrieved through NotebookLM, not primary-source validated.",
+    "source_files": [
+      "11255_2025_Article_4454.pdf.md"
+    ],
+    "locator": "Table 6",
+    "claim": "In the retrospective study of 180 men with BPH after TURP, basic urinary control (<1 pad/day) at six months was reported in 31/83 (37.35%) receiving HBM-guided PFMT plus standard care versus 24/97 (24.74%) receiving standard care alone; the between-group comparison was not statistically significant (P=0.067).",
+    "verification_instruction": "Check [CLINICAL] Table 6 for the pad threshold, time point, denominators and between-group P value; distinguish the reported within-group P<0.001. Confirm retrospective design and the 12-week postoperative combination program. Do not interpret this as measured emptying or PFMT monotherapy efficacy.",
+    "evidence_label": "[CLINICAL]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "11255_2025_Article_4454 study authors",
+    "imported_id": "CANDIDATE-49e2d6c43056"
+  },
+  {
+    "frd_id": "FRD-Q0057-01",
+    "qid": "Q0057",
+    "response_id": "R-Q0057-A01",
+    "origin_ref": "RESPONSE-cde8198c04f3",
+    "ordinal": 1,
+    "cluster": "",
+    "label": "Alewijnse study reports a longitudinal regression association; retrieved through NotebookLM, not primary-source validated.",
+    "source_files": [
+      "alewijnse2003.pdf.md"
+    ],
+    "locator": "Table III",
+    "claim": "In Alewijnse's female urinary-incontinence cohort, short-term post-test adherence predicted 12-month exercise persistence in the final longitudinal regression model (n=75; β=0.428, P<0.001). This is an adherence association, not evidence of treatment failure or male voiding response.",
+    "verification_instruction": "Check [CLINICAL] Table III for coefficient, outcome coding and analytic denominator; distinguish 129 enrolled from 103 follow-up completers. Verify adherence's 4–7-days/week diary definition and protocol with or without self-help guide; do not infer causation.",
+    "evidence_label": "[CLINICAL]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "Alewijnse study",
+    "imported_id": "CANDIDATE-c19a298c50b7"
+  },
+  {
+    "frd_id": "FRD-Q0058-01",
+    "qid": "Q0058",
+    "response_id": "R-Q0058-A01",
+    "origin_ref": "RESPONSE-61ba385d7735",
+    "ordinal": 1,
+    "cluster": "",
+    "label": "Chen study describes the scale construct; NotebookLM attributes the measurement exclusions to its Discussion, requiring attribution checking.",
+    "source_files": [
+      "chen2004.pdf.md"
+    ],
+    "locator": "Discussion",
+    "claim": "Chen's PFMSE scale, validated in 106 Taiwanese women with urinary incontinence, assesses perceived confidence in performing pelvic floor exercises and maintaining the schedule, rather than actual exercise frequency, technique correctness or clinical voiding response.",
+    "verification_instruction": "Check the [CLINICAL] construct description and items against the Discussion: distinguish explicit author statements from NotebookLM's negative measurement claims. Do not turn female validation into a corpus-wide claim of absent male validation.",
+    "evidence_label": "[CLINICAL]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "Chen scale-validation study",
+    "imported_id": "CANDIDATE-670f204882b9"
+  },
+  {
+    "frd_id": "FRD-Q0059-01",
+    "qid": "Q0059",
+    "response_id": "R-Q0059-A01",
+    "origin_ref": "RESPONSE-64af82d241af",
+    "ordinal": 1,
+    "cluster": "",
+    "label": "NotebookLM attributes the retrospective completion comparison to the cohort study; primary-source validation pending.",
+    "source_files": [
+      "nihms-1048633.pdf.md"
+    ],
+    "locator": "Results",
+    "claim": "In the retrospective female urogynecology cohort, same-day multidisciplinary PFPT consultation was not associated with a statistically significant difference in completion: 49% (36/74) versus 41% (105/259), p=0.15; completion meant ≥3 visits or discharge.",
+    "verification_instruction": "Check [CLINICAL] comparator assignment, completion definition and denominators. The attendance denominators total 333 despite 335 referrals; preserve the discrepancy pending validation. Nonsignificance does not establish equivalence.",
+    "evidence_label": "[CLINICAL]",
+    "provenance": "DERIVATIVE_UNKNOWN",
+    "status": "ordinary",
+    "speaker": "Urogynecology cohort study; authors not supplied",
+    "imported_id": "CANDIDATE-ef6c6c9b5583"
+  },
+  {
+    "frd_id": "FRD-Q0060-01",
+    "qid": "Q0060",
+    "response_id": "R-Q0060-A01",
+    "origin_ref": "RESPONSE-d9516452c9eb",
+    "ordinal": 1,
+    "cluster": "",
+    "label": "NotebookLM attributes scale composition and validation-sample characteristics to the scale study; primary-source validation pending.",
+    "source_files": [
+      "s12912-023-01326-5.pdf.md"
+    ],
+    "locator": "Construct validity",
+    "claim": "The rehabilitation training compliance study reports a 12-item scale comprising pelvic floor muscle training compliance (5 items), bladder training compliance (5 items), and urination diary recording (2 items), studied in 123 urinary-incontinence patients, 99.2% with prior pelvic surgery.",
+    "verification_instruction": "Check [CLINICAL] item allocation and validation population, including whether items measure self-reported behavior rather than confidence or measured muscle exposure; do not infer validation in nonsurgical male voiding disorders.",
+    "evidence_label": "[CLINICAL]",
+    "provenance": "DERIVATIVE_UNKNOWN",
+    "status": "ordinary",
+    "speaker": "Rehabilitation training compliance scale study; authors not supplied",
+    "imported_id": "CANDIDATE-e49948016b92"
+  },
+  {
+    "frd_id": "FRD-Q0061-01",
+    "qid": "Q0061",
+    "response_id": "R-Q0061-A01",
+    "origin_ref": "RESPONSE-7f9514849c39",
+    "ordinal": 1,
+    "cluster": "",
+    "label": "NotebookLM attributes the baseline dropout/completer comparison to Siu et al.; primary-source validation pending.",
+    "source_files": [
+      "siu2003.pdf.md"
+    ],
+    "locator": "Table I",
+    "claim": "In Siu et al.'s four-month prospective cohort of 214 Chinese women with stress urinary incontinence, dropouts had lower baseline pelvic muscle strength than completers (1.67 versus 1.84, p<0.05).",
+    "verification_instruction": "Check [CLINICAL] group ordering, strength scale and units, and dropout definition; units are not supplied in the response. This baseline association does not establish why participants abandoned treatment.",
+    "evidence_label": "[CLINICAL]",
+    "provenance": "DERIVATIVE_UNKNOWN",
+    "status": "ordinary",
+    "speaker": "Siu et al. (2003)",
+    "imported_id": "CANDIDATE-9302b5a896cd"
+  },
+  {
+    "frd_id": "FRD-Q0062-01",
+    "qid": "Q0062",
+    "response_id": "R-Q0062-A01",
+    "origin_ref": "RESPONSE-aac716105efe",
+    "ordinal": 1,
+    "cluster": "",
+    "label": "Stokes study reports OPAL diary-return counts, provisionally relayed by NotebookLM pending primary Markdown validation.",
+    "source_files": [
+      "stokes2022.pdf.md"
+    ],
+    "locator": "RESULTS",
+    "claim": "In the female OPAL trial population with stress or mixed urinary incontinence, 409 of 600 randomized participants returned a usable first home-exercise diary at their second appointment; this is diary return, not a measure of treatment completion or nonresponse.",
+    "verification_instruction": "Check [CLINICAL] counts, appointment timing and usable-diary definition in RESULTS; distinguish return from adherence and the separately reported 395-person analysis denominator.",
+    "evidence_label": "[CLINICAL]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "Stokes study",
+    "imported_id": "CANDIDATE-0e0afd7bba63"
+  },
+  {
+    "frd_id": "FRD-Q0001-02-r2",
+    "qid": "Q0001",
+    "response_id": "R-Q0001-A01",
+    "origin_ref": "RESPONSE-9fd5c84de335",
+    "ordinal": 2,
+    "cluster": "",
+    "label": "Shirazi et al. report their trial's peak-flow outcome; NotebookLM transmits values and a difference of changes.",
+    "source_files": [
+      "Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md"
+    ],
+    "locator": "TABLE 4",
+    "claim": "[CLINICAL] In Shirazi et al.’s single-center, randomized, double-blind, 12-week trial of 60 men with BPH, 30 were analyzed per arm. The capsule regimen was pentoxifylline 400 mg every eight hours plus tamsulosin 0.4 mg/day versus placebo plus tamsulosin 0.4 mg/day. TABLE 4 reports mean Qmax increases of 4.48 ± 1.03 versus 2.67 ± 0.57 mL/s, respectively, with between-group p < .001. TABLE 4 does not explicitly identify what its ± values represent. Baseline Qmax was 10.54 ± 2.68 versus 10.64 ± 2.11 mL/s, respectively; TABLE 1 identifies those baseline dispersions as SD. These are results for pentoxifylline added to tamsulosin in BPH-associated LUTS, not for pentoxifylline monotherapy. [Source: `Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md`, Abstract, 2 | METHODS, 2.3 | Study design, FIGURE 1, TABLE 1, TABLE 4.]",
+    "verification_instruction": "Inspect exact filename's TABLE 4 for Qmax changes, units, dispersion and between-group p-value; TABLE 1 for baseline flow; 2.3 Study design for oral dose and duration. Original label [CLINICAL]. Confirm 30 analyzed per arm and distinguish arithmetic net change from adjusted estimates; do not extrapolate to psychogenic voiding dysfunction.",
+    "evidence_label": "[CLINICAL]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "Shirazi et al. 2024",
+    "imported_id": "CANDIDATE-bdf0e1718874"
+  },
+  {
+    "frd_id": "FRD-Q0001-02-r3",
+    "qid": "Q0001",
+    "response_id": "R-Q0001-A01",
+    "origin_ref": "RESPONSE-9fd5c84de335",
+    "ordinal": 2,
+    "cluster": "",
+    "label": "Shirazi et al. report their trial's peak-flow outcome; NotebookLM transmits values and a difference of changes.",
+    "source_files": [
+      "Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md"
+    ],
+    "locator": "TABLE 4",
+    "claim": "[INFERRED] Subtracting the reported mean Qmax changes gives an unadjusted arithmetic difference of 1.81 mL/s (4.48 − 2.67) favoring pentoxifylline plus tamsulosin over placebo plus tamsulosin. This calculation is an analyst-derived contrast, not a separately reported adjusted treatment estimate. The trial’s BPH population and combination-versus-placebo-add-on design do not establish pentoxifylline monotherapy efficacy or efficacy in psychogenic voiding dysfunction. This is a limit on what this trial establishes, not evidence that pentoxifylline has no effect in those settings. [Source premises: `Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md`, TABLE 4, 2 | METHODS, 2.3 | Study design.]",
+    "verification_instruction": "Inspect exact filename's TABLE 4 for Qmax changes, units, dispersion and between-group p-value; TABLE 1 for baseline flow; 2.3 Study design for oral dose and duration. Original label [CLINICAL]. Confirm 30 analyzed per arm and distinguish arithmetic net change from adjusted estimates; do not extrapolate to psychogenic voiding dysfunction.",
+    "evidence_label": "[INFERRED]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "Shirazi et al. 2024",
+    "imported_id": "CANDIDATE-8d7919bdb1a3"
+  },
+  {
+    "frd_id": "FRD-Q0004-03-r2",
+    "qid": "Q0004",
+    "response_id": "R-Q0004-A01",
+    "origin_ref": "RESPONSE-c4276cdb3165",
+    "ordinal": 3,
+    "cluster": "",
+    "label": "Kaplan et al. report symptom-defined treatment success; NotebookLM transmits conflicting count/percentage information.",
+    "source_files": [
+      "kaplan1997.pdf.md"
+    ],
+    "locator": "RESULTS",
+    "claim": "[CLINICAL] In this retrospective series of 43 men with urodynamically diagnosed pseudodyssynergia previously treated as having chronic nonbacterial prostatitis, success was defined as a decrease in symptoms of at least 50% on two consecutive office visits. Symptoms were evaluated using the AUA symptom score. The RESULTS section reports symptom reduction of 50% in 35 patients, printed as 83%, at three months after behavior modification and biofeedback; for these responders, mean AUA symptom scores were 18.4 before treatment, 7.6 at three months, and 8.1 at six months. The abstract instead reports 35 patients (83%) successfully treated at six months. The text does not explicitly identify the two consecutive qualifying visits as the three- and six-month assessments or separately enumerate six-month responders in RESULTS. These scores concern responders, not the entire cohort. (`kaplan1997.pdf.md`, MATERIALS AND METHODS; RESULTS; ABSTRACT—Results.)",
+    "verification_instruction": "Check kaplan1997.pdf.md MATERIALS AND METHODS and RESULTS for success definition, counts, percentage and whether criterion applies at both follow-ups. Original label [CLINICAL]. Preserve the 35/43 versus 83% discrepancy; distinguish responder from whole-cohort scores and symptom success from unmeasured post-treatment obstruction.",
+    "evidence_label": "[CLINICAL]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "Kaplan et al. 1997",
+    "imported_id": "CANDIDATE-5eeb5ac73eb1"
+  }
+]

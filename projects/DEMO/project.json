@@ -1,0 +1,17 @@
+{
+  "project": {
+    "name": "DEMO - synthetic silicate/wheat corpus",
+    "run_prefix": "RUN-DEMO"
+  },
+  "default_provider": "local",
+  "providers": {
+    "local": {
+      "type": "local",
+      "model": "local-rules-v1.8"
+    }
+  },
+  "quest": {
+    "round_size": 4,
+    "max_rounds": 6
+  }
+}

@@ -1,0 +1,247 @@
+{
+  "round": 8,
+  "phase": "done",
+  "status": "stopped",
+  "history": [
+    {
+      "round": 1,
+      "allocations": {
+        "A1": {
+          "A1-H1": 20,
+          "A1-H2": 30,
+          "A1-H3": 14
+        },
+        "A2": {
+          "A2-H1": 27,
+          "A2-H2": 21,
+          "A2-H3": 16
+        }
+      },
+      "problems": [],
+      "direction": "CONTINUE",
+      "qids": [
+        "Q0001",
+        "Q0002",
+        "Q0003",
+        "Q0004",
+        "Q0005"
+      ]
+    },
+    {
+      "round": 2,
+      "allocations": {
+        "A1": {
+          "A1-H1": 20,
+          "A1-H2": 30,
+          "A1-H3": 14
+        },
+        "A2": {
+          "A2-H1": 29,
+          "A2-H2": 26,
+          "A2-H3": 9
+        }
+      },
+      "problems": [],
+      "direction": "CONTINUE",
+      "qids": [
+        "Q0006",
+        "Q0007",
+        "Q0008",
+        "Q0009",
+        "Q0010"
+      ]
+    },
+    {
+      "round": 3,
+      "allocations": {
+        "A1": {
+          "A1-H1": 24,
+          "A1-H2": 29,
+          "A1-H3": 11
+        },
+        "A2": {
+          "A2-H1": 33,
+          "A2-H2": 23,
+          "A2-H3": 8
+        }
+      },
+      "problems": [],
+      "direction": "CONTINUE",
+      "qids": [
+        "Q0011",
+        "Q0012",
+        "Q0013",
+        "Q0014",
+        "Q0015"
+      ]
+    },
+    {
+      "round": 4,
+      "allocations": {
+        "A1": {
+          "A1-H1": 24,
+          "A1-H2": 29,
+          "A1-H3": 11
+        },
+        "A2": {
+          "A2-H1": 38,
+          "A2-H2": 19,
+          "A2-H3": 7
+        }
+      },
+      "problems": [],
+      "direction": "CONTINUE",
+      "qids": [
+        "Q0016",
+        "Q0017",
+        "Q0018",
+        "Q0019",
+        "Q0020"
+      ]
+    },
+    {
+      "round": 5,
+      "allocations": {
+        "A1": {
+          "A1-H1": 26,
+          "A1-H2": 27,
+          "A1-H3": 11
+        },
+        "A2": {
+          "A2-H1": 37,
+          "A2-H2": 19,
+          "A2-H3": 8
+        }
+      },
+      "problems": [],
+      "direction": "CONTINUE",
+      "qids": [
+        "Q0021",
+        "Q0022",
+        "Q0023",
+        "Q0024",
+        "Q0025"
+      ]
+    },
+    {
+      "round": 6,
+      "allocations": {
+        "A1": {
+          "A1-H1": 23,
+          "A1-H2": 30,
+          "A1-H3": 11
+        },
+        "A2": {
+          "A2-H1": 35,
+          "A2-H2": 21,
+          "A2-H3": 8
+        }
+      },
+      "problems": [],
+      "direction": "CONTINUE",
+      "qids": [
+        "Q0026",
+        "Q0027",
+        "Q0028",
+        "Q0029",
+        "Q0030"
+      ]
+    },
+    {
+      "round": 7,
+      "allocations": {
+        "A1": {
+          "A1-H1": 23,
+          "A1-H2": 30,
+          "A1-H3": 11
+        },
+        "A2": {
+          "A2-H1": 31,
+          "A2-H2": 25,
+          "A2-H3": 8
+        }
+      },
+      "problems": [],
+      "direction": "CONTINUE",
+      "qids": [
+        "Q0031",
+        "Q0032",
+        "Q0033",
+        "Q0034",
+        "Q0035"
+      ]
+    },
+    {
+      "round": 8,
+      "allocations": {
+        "A1": {
+          "A1-H1": 27,
+          "A1-H2": 29,
+          "A1-H3": 8
+        },
+        "A2": {
+          "A2-H1": 32,
+          "A2-H2": 24,
+          "A2-H3": 8
+        }
+      },
+      "problems": [],
+      "direction": "CONTINUE",
+      "qids": [
+        "Q0036",
+        "Q0037",
+        "Q0038",
+        "Q0039",
+        "Q0040"
+      ]
+    }
+  ],
+  "next_qid": 41,
+  "created": "2026-10-30T03:38:30+00:00",
+  "stop_basis": "OPERATIONAL_LIMIT",
+  "stop_evaluation": {
+    "gauge": 64,
+    "thresholds": {
+      "branch1_mean3": 0.334,
+      "branch2_mean4": 0.75
+    },
+    "axes": {
+      "A1": {
+        "deltas": [
+          0.0,
+          4.0,
+          0.0,
+          2.0,
+          3.0,
+          0.0,
+          4.0
+        ],
+        "branch1": false,
+        "branch2": false,
+        "mean3": 2.333,
+        "mean4": 2.25
+      },
+      "A2": {
+        "deltas": [
+          7.0,
+          4.0,
+          5.0,
+          1.0,
+          2.0,
+          4.0,
+          1.0
+        ],
+        "branch1": false,
+        "branch2": false,
+        "mean3": 2.333,
+        "mean4": 2.0
+      }
+    },
+    "numeric_rule_met": false,
+    "substantive_conditions_met": false,
+    "ab_covered": false,
+    "stop": false
+  },
+  "stopped": "2026-10-30T03:38:36+00:00",
+  "note": "max_rounds=8 reached; this is an operational stop, not a scientific completion finding"
+}

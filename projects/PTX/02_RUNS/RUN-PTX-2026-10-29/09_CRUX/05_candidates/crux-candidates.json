@@ -1,0 +1,11 @@
+{
+  "candidates": [],
+  "conflict_recorded": [],
+  "diagnostic_witnesses": [],
+  "cost": {
+    "formula": "C = 2 x sum_h W_h x (H_axis - 1)",
+    "tests": 0
+  },
+  "definitions": "see claimreg/crux.py module docstring",
+  "time": "2026-10-29T19:09:04+00:00"
+}

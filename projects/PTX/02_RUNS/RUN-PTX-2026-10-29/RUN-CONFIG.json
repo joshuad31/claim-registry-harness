@@ -1,0 +1,270 @@
+{
+  "run_id": "RUN-PTX-2026-10-29",
+  "manifest_id": "MANIFEST-222df34dc5f8",
+  "frame_sha256": "82d89acb3212b566fbfbdc47a6cd8df53ff45cecb6ff386c12c8fbb4285cb2ae",
+  "scientific_config": {
+    "quest": {
+      "round_size": 5,
+      "max_rounds": 12,
+      "gauge": 64,
+      "axes": "header",
+      "feedback_deadline_qids": 8,
+      "archivist_context_words": 9000,
+      "named_source_words": 4500,
+      "other_chunks": 6,
+      "require_ab_coverage_for_branch2": true
+    },
+    "frd": {
+      "max_per_response": 4,
+      "validator_source_words": 14000,
+      "quote_min_ratio": 0.92,
+      "quote_gate": "block"
+    },
+    "retention": {
+      "keep_fraction": 0.8,
+      "small_corpus_mb": 1.0,
+      "large_corpus_mb": 12.0,
+      "small_budget_pct": 25.0,
+      "large_budget_pct": 8.0,
+      "archive_redundant_first": true
+    },
+    "witness": {
+      "raw_ceiling": 60,
+      "transcoded_ceiling": 80,
+      "allow_ceiling_exception": true,
+      "exception_ceiling": 80,
+      "max_revisions": 1,
+      "cluster_best": false
+    },
+    "language": {
+      "mode": "off",
+      "min_sentences": 3,
+      "max_candidates": 40,
+      "dictionary_file": null
+    },
+    "units": null,
+    "matching": {
+      "shortlist_k": 30,
+      "shortlist_k_secondary": 15,
+      "batch_size": 15,
+      "exhaustive_threshold": 45,
+      "dispute_policy": "adjudicate",
+      "synonyms": [
+        [
+          "PTX",
+          "pentoxifylline",
+          "oxpentifylline",
+          "Trental"
+        ]
+      ],
+      "one_pass_policy": "accept",
+      "qualify": true
+    },
+    "coverage": {
+      "max_sets": 200,
+      "max_states": 3000,
+      "max_options_per_unit": 12,
+      "max_group_size": 3,
+      "max_joint_candidates": 10,
+      "max_incompat_pairs": 200,
+      "constraint_veto": true
+    },
+    "crux": {
+      "diagnostic_top_n": 15,
+      "completion_matching": true,
+      "diagnostic_units_per_rival": 8
+    },
+    "assess": {
+      "enabled": true
+    },
+    "report": {
+      "max_words": 3900,
+      "llm_summary": true
+    },
+    "roles": {
+      "indexer": "queue",
+      "archivist_writer": "queue",
+      "investigator": "queue",
+      "archivist": "queue",
+      "coordinator": "queue",
+      "frd_generator": "queue",
+      "frd_validator": "queue",
+      "unit_deriver": "queue",
+      "dictionary_reviewer": "queue",
+      "transcoder": "queue",
+      "witness_constructor": "queue",
+      "witness_auditor": "queue",
+      "matcher_a": "queue",
+      "matcher_b": "queue",
+      "match_adjudicator": "queue",
+      "joint_checker": "queue",
+      "incompat_checker": "queue",
+      "assessor": "queue",
+      "reporter": "queue"
+    },
+    "providers": {
+      "openai": {
+        "type": "openai",
+        "base_url": "https://api.openai.com/v1",
+        "model": "gpt-5.5",
+        "max_output_tokens": 16000,
+        "temperature": null,
+        "timeout_s": 900,
+        "json_mode": false,
+        "price_per_mtok_in": 2.0,
+        "price_per_mtok_out": 10.0
+      },
+      "deepseek": {
+        "type": "openai",
+        "base_url": "https://api.deepseek.com/v1",
+        "model": "deepseek-chat",
+        "max_output_tokens": 8000,
+        "temperature": 0.2,
+        "timeout_s": 900,
+        "json_mode": false,
+        "price_per_mtok_in": 0.3,
+        "price_per_mtok_out": 1.2
+      },
+      "anthropic": {
+        "type": "anthropic",
+        "base_url": "https://api.anthropic.com/v1",
+        "model": "claude-opus-5-5",
+        "max_output_tokens": 16000,
+        "temperature": null,
+        "timeout_s": 900,
+        "price_per_mtok_in": 5.0,
+        "price_per_mtok_out": 25.0
+      },
+      "queue": {
+        "type": "queue",
+        "dir": "queue",
+        "model": "claude-opus-5-5 (Claude, operating the file queue through fresh subagent contexts; 2026-10-29 session)",
+        "operator_note": ""
+      },
+      "mock": {
+        "type": "mock",
+        "model": "mock-deterministic"
+      },
+      "replay": {
+        "type": "replay",
+        "model": "replay-cache-only"
+      }
+    }
+  },
+  "frozen": "2026-10-29T15:13:32+00:00",
+  "approval": {
+    "A1": "APPROVED",
+    "A2": "TEST_ONLY"
+  },
+  "approval_note": "Axis 1 approved by Josh on 2026-09-12 (header v4.1); axis 2 is TEST-ONLY per the header and is reported as such.",
+  "amendments": [
+    {
+      "time": "2026-10-29T15:45:42+00:00",
+      "changed": {
+        "coverage.constraint_veto": {
+          "before": null,
+          "after": true
+        },
+        "coverage.max_incompat_pairs": {
+          "before": null,
+          "after": 200
+        },
+        "matching.synonyms": {
+          "before": null,
+          "after": [
+            [
+              "PTX",
+              "pentoxifylline",
+              "oxpentifylline",
+              "Trental"
+            ]
+          ]
+        },
+        "providers.queue.model": {
+          "before": "queue-operator",
+          "after": "claude-opus-5-5 (Claude, operating the file queue through fresh subagent contexts; 2026-10-29 session)"
+        }
+      },
+      "stage_status_at_amendment": {
+        "corpus": "done",
+        "index": "done",
+        "archivist_prompt": "done",
+        "frame": "done",
+        "quest": "imported",
+        "frd_generate": "imported",
+        "frd_validate": "imported",
+        "units": "done",
+        "frd_retain": "done",
+        "language": "done",
+        "witnesses": "waiting",
+        "qualify": "done"
+      },
+      "note": "configuration changed after the run was frozen; stages finished before this time used the earlier values"
+    },
+    {
+      "time": "2026-10-29T17:32:52+00:00",
+      "changed": {
+        "matching.one_pass_policy": {
+          "before": null,
+          "after": "accept"
+        }
+      },
+      "stage_status_at_amendment": {
+        "corpus": "done",
+        "index": "done",
+        "archivist_prompt": "done",
+        "frame": "done",
+        "quest": "imported",
+        "frd_generate": "imported",
+        "frd_validate": "imported",
+        "units": "done",
+        "frd_retain": "done",
+        "language": "done",
+        "witnesses": "done",
+        "qualify": "done",
+        "transcode": "done",
+        "match": "waiting"
+      },
+      "note": "configuration changed after the run was frozen; stages finished before this time used the earlier values"
+    },
+    {
+      "time": "2026-10-29T19:09:04+00:00",
+      "changed": {
+        "frd.quote_check": {
+          "before": true,
+          "after": null
+        },
+        "frd.quote_gate": {
+          "before": null,
+          "after": "block"
+        },
+        "units.allow_evaluative": {
+          "before": true,
+          "after": null
+        }
+      },
+      "stage_status_at_amendment": {
+        "corpus": "done",
+        "index": "done",
+        "archivist_prompt": "done",
+        "frame": "done",
+        "quest": "imported",
+        "frd_generate": "imported",
+        "frd_validate": "imported",
+        "units": "done",
+        "frd_retain": "done",
+        "language": "done",
+        "witnesses": "done",
+        "qualify": "done",
+        "transcode": "done",
+        "match": "done",
+        "joint": "done",
+        "coverage": "done",
+        "crux": "done",
+        "assess": "done",
+        "report": "done"
+      },
+      "note": "configuration changed after the run was frozen; stages finished before this time used the earlier values"
+    }
+  ]
+}

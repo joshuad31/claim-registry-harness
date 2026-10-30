@@ -1,0 +1,490 @@
+{
+  "responses_processed": 24,
+  "candidates": 96,
+  "over_limit_not_extracted": [],
+  "sources_cited_in_answers": 5,
+  "sources_producing_frds": 5,
+  "under_harvested_sources": [],
+  "per_response": [
+    {
+      "qid": "Q0001",
+      "response_id": "R-Q0001-A01",
+      "origin_ref": "RESP-c74a3782",
+      "frds": 4,
+      "over_limit": 0,
+      "review": {
+        "sources_cited_in_response": [
+          "alvarez2021.md",
+          "okafor2019.md",
+          "smidt2020.md",
+          "brennan2022.md"
+        ],
+        "cited_sources_without_frd": [],
+        "not_extracted": [],
+        "unresolved_citations_or_labels": [],
+        "gaps_and_unsupported_synthesis": []
+      },
+      "parse_error": ""
+    },
+    {
+      "qid": "Q0002",
+      "response_id": "R-Q0002-A01",
+      "origin_ref": "RESP-339109b8",
+      "frds": 4,
+      "over_limit": 0,
+      "review": {
+        "sources_cited_in_response": [
+          "okafor2019.md",
+          "smidt2020.md",
+          "brennan2022.md"
+        ],
+        "cited_sources_without_frd": [],
+        "not_extracted": [],
+        "unresolved_citations_or_labels": [],
+        "gaps_and_unsupported_synthesis": []
+      },
+      "parse_error": ""
+    },
+    {
+      "qid": "Q0003",
+      "response_id": "R-Q0003-A01",
+      "origin_ref": "RESP-2fd3d8d5",
+      "frds": 4,
+      "over_limit": 0,
+      "review": {
+        "sources_cited_in_response": [
+          "smidt2020.md",
+          "okafor2019.md",
+          "alvarez2021.md",
+          "brennan2022.md"
+        ],
+        "cited_sources_without_frd": [],
+        "not_extracted": [],
+        "unresolved_citations_or_labels": [],
+        "gaps_and_unsupported_synthesis": []
+      },
+      "parse_error": ""
+    },
+    {
+      "qid": "Q0004",
+      "response_id": "R-Q0004-A01",
+      "origin_ref": "RESP-cf36c70b",
+      "frds": 4,
+      "over_limit": 0,
+      "review": {
+        "sources_cited_in_response": [
+          "brennan2022.md",
+          "li2024.md",
+          "okafor2019.md",
+          "smidt2020.md"
+        ],
+        "cited_sources_without_frd": [],
+        "not_extracted": [],
+        "unresolved_citations_or_labels": [],
+        "gaps_and_unsupported_synthesis": []
+      },
+      "parse_error": ""
+    },
+    {
+      "qid": "Q0005",
+      "response_id": "R-Q0005-A01",
+      "origin_ref": "RESP-fd91201c",
+      "frds": 4,
+      "over_limit": 0,
+      "review": {
+        "sources_cited_in_response": [
+          "li2024.md",
+          "okafor2019.md",
+          "alvarez2021.md",
+          "brennan2022.md"
+        ],
+        "cited_sources_without_frd": [],
+        "not_extracted": [],
+        "unresolved_citations_or_labels": [],
+        "gaps_and_unsupported_synthesis": []
+      },
+      "parse_error": ""
+    },
+    {
+      "qid": "Q0006",
+      "response_id": "R-Q0006-A01",
+      "origin_ref": "RESP-67761fde",
+      "frds": 4,
+      "over_limit": 0,
+      "review": {
+        "sources_cited_in_response": [
+          "okafor2019.md",
+          "alvarez2021.md",
+          "brennan2022.md"
+        ],
+        "cited_sources_without_frd": [],
+        "not_extracted": [],
+        "unresolved_citations_or_labels": [],
+        "gaps_and_unsupported_synthesis": []
+      },
+      "parse_error": ""
+    },
+    {
+      "qid": "Q0007",
+      "response_id": "R-Q0007-A01",
+      "origin_ref": "RESP-38ebdf8f",
+      "frds": 4,
+      "over_limit": 0,
+      "review": {
+        "sources_cited_in_response": [
+          "okafor2019.md",
+          "alvarez2021.md",
+          "smidt2020.md",
+          "brennan2022.md"
+        ],
+        "cited_sources_without_frd": [],
+        "not_extracted": [],
+        "unresolved_citations_or_labels": [],
+        "gaps_and_unsupported_synthesis": []
+      },
+      "parse_error": ""
+    },
+    {
+      "qid": "Q0008",
+      "response_id": "R-Q0008-A01",
+      "origin_ref": "RESP-778fff1e",
+      "frds": 4,
+      "over_limit": 0,
+      "review": {
+        "sources_cited_in_response": [
+          "brennan2022.md",
+          "smidt2020.md",
+          "okafor2019.md",
+          "alvarez2021.md"
+        ],
+        "cited_sources_without_frd": [],
+        "not_extracted": [],
+        "unresolved_citations_or_labels": [],
+        "gaps_and_unsupported_synthesis": []
+      },
+      "parse_error": ""
+    },
+    {
+      "qid": "Q0009",
+      "response_id": "R-Q0009-A01",
+      "origin_ref": "RESP-8556f658",
+      "frds": 4,
+      "over_limit": 0,
+      "review": {
+        "sources_cited_in_response": [
+          "brennan2022.md",
+          "okafor2019.md",
+          "alvarez2021.md",
+          "smidt2020.md"
+        ],
+        "cited_sources_without_frd": [],
+        "not_extracted": [],
+        "unresolved_citations_or_labels": [],
+        "gaps_and_unsupported_synthesis": []
+      },
+      "parse_error": ""
+    },
+    {
+      "qid": "Q0010",
+      "response_id": "R-Q0010-A01",
+      "origin_ref": "RESP-cd291e8f",
+      "frds": 4,
+      "over_limit": 0,
+      "review": {
+        "sources_cited_in_response": [
+          "alvarez2021.md",
+          "li2024.md",
+          "okafor2019.md",
+          "brennan2022.md"
+        ],
+        "cited_sources_without_frd": [],
+        "not_extracted": [],
+        "unresolved_citations_or_labels": [],
+        "gaps_and_unsupported_synthesis": []
+      },
+      "parse_error": ""
+    },
+    {
+      "qid": "Q0011",
+      "response_id": "R-Q0011-A01",
+      "origin_ref": "RESP-d927db5a",
+      "frds": 4,
+      "over_limit": 0,
+      "review": {
+        "sources_cited_in_response": [
+          "alvarez2021.md",
+          "okafor2019.md",
+          "brennan2022.md",
+          "smidt2020.md"
+        ],
+        "cited_sources_without_frd": [],
+        "not_extracted": [],
+        "unresolved_citations_or_labels": [],
+        "gaps_and_unsupported_synthesis": []
+      },
+      "parse_error": ""
+    },
+    {
+      "qid": "Q0012",
+      "response_id": "R-Q0012-A01",
+      "origin_ref": "RESP-7800d9d1",
+      "frds": 4,
+      "over_limit": 0,
+      "review": {
+        "sources_cited_in_response": [
+          "okafor2019.md",
+          "smidt2020.md",
+          "brennan2022.md"
+        ],
+        "cited_sources_without_frd": [],
+        "not_extracted": [],
+        "unresolved_citations_or_labels": [],
+        "gaps_and_unsupported_synthesis": []
+      },
+      "parse_error": ""
+    },
+    {
+      "qid": "Q0013",
+      "response_id": "R-Q0013-A01",
+      "origin_ref": "RESP-7606dbcb",
+      "frds": 4,
+      "over_limit": 0,
+      "review": {
+        "sources_cited_in_response": [
+          "smidt2020.md",
+          "okafor2019.md",
+          "alvarez2021.md",
+          "brennan2022.md"
+        ],
+        "cited_sources_without_frd": [],
+        "not_extracted": [],
+        "unresolved_citations_or_labels": [],
+        "gaps_and_unsupported_synthesis": []
+      },
+      "parse_error": ""
+    },
+    {
+      "qid": "Q0014",
+      "response_id": "R-Q0014-A01",
+      "origin_ref": "RESP-f83d396c",
+      "frds": 4,
+      "over_limit": 0,
+      "review": {
+        "sources_cited_in_response": [
+          "brennan2022.md",
+          "li2024.md",
+          "okafor2019.md",
+          "alvarez2021.md"
+        ],
+        "cited_sources_without_frd": [],
+        "not_extracted": [],
+        "unresolved_citations_or_labels": [],
+        "gaps_and_unsupported_synthesis": []
+      },
+      "parse_error": ""
+    },
+    {
+      "qid": "Q0015",
+      "response_id": "R-Q0015-A01",
+      "origin_ref": "RESP-8e042dcc",
+      "frds": 4,
+      "over_limit": 0,
+      "review": {
+        "sources_cited_in_response": [
+          "li2024.md",
+          "okafor2019.md",
+          "alvarez2021.md",
+          "smidt2020.md",
+          "brennan2022.md"
+        ],
+        "cited_sources_without_frd": [],
+        "not_extracted": [],
+        "unresolved_citations_or_labels": [],
+        "gaps_and_unsupported_synthesis": []
+      },
+      "parse_error": ""
+    },
+    {
+      "qid": "Q0016",
+      "response_id": "R-Q0016-A01",
+      "origin_ref": "RESP-61903385",
+      "frds": 4,
+      "over_limit": 0,
+      "review": {
+        "sources_cited_in_response": [
+          "okafor2019.md",
+          "alvarez2021.md",
+          "brennan2022.md",
+          "li2024.md"
+        ],
+        "cited_sources_without_frd": [],
+        "not_extracted": [],
+        "unresolved_citations_or_labels": [],
+        "gaps_and_unsupported_synthesis": []
+      },
+      "parse_error": ""
+    },
+    {
+      "qid": "Q0017",
+      "response_id": "R-Q0017-A01",
+      "origin_ref": "RESP-f1002051",
+      "frds": 4,
+      "over_limit": 0,
+      "review": {
+        "sources_cited_in_response": [
+          "okafor2019.md",
+          "alvarez2021.md",
+          "brennan2022.md",
+          "smidt2020.md"
+        ],
+        "cited_sources_without_frd": [],
+        "not_extracted": [],
+        "unresolved_citations_or_labels": [],
+        "gaps_and_unsupported_synthesis": []
+      },
+      "parse_error": ""
+    },
+    {
+      "qid": "Q0018",
+      "response_id": "R-Q0018-A01",
+      "origin_ref": "RESP-154b7baa",
+      "frds": 4,
+      "over_limit": 0,
+      "review": {
+        "sources_cited_in_response": [
+          "brennan2022.md",
+          "smidt2020.md",
+          "alvarez2021.md",
+          "li2024.md"
+        ],
+        "cited_sources_without_frd": [],
+        "not_extracted": [],
+        "unresolved_citations_or_labels": [],
+        "gaps_and_unsupported_synthesis": []
+      },
+      "parse_error": ""
+    },
+    {
+      "qid": "Q0019",
+      "response_id": "R-Q0019-A01",
+      "origin_ref": "RESP-53782f74",
+      "frds": 4,
+      "over_limit": 0,
+      "review": {
+        "sources_cited_in_response": [
+          "brennan2022.md",
+          "okafor2019.md",
+          "alvarez2021.md",
+          "smidt2020.md"
+        ],
+        "cited_sources_without_frd": [],
+        "not_extracted": [],
+        "unresolved_citations_or_labels": [],
+        "gaps_and_unsupported_synthesis": []
+      },
+      "parse_error": ""
+    },
+    {
+      "qid": "Q0020",
+      "response_id": "R-Q0020-A01",
+      "origin_ref": "RESP-1ea9a0c0",
+      "frds": 4,
+      "over_limit": 0,
+      "review": {
+        "sources_cited_in_response": [
+          "alvarez2021.md",
+          "li2024.md",
+          "brennan2022.md"
+        ],
+        "cited_sources_without_frd": [],
+        "not_extracted": [],
+        "unresolved_citations_or_labels": [],
+        "gaps_and_unsupported_synthesis": []
+      },
+      "parse_error": ""
+    },
+    {
+      "qid": "Q0021",
+      "response_id": "R-Q0021-A01",
+      "origin_ref": "RESP-5f82823b",
+      "frds": 4,
+      "over_limit": 0,
+      "review": {
+        "sources_cited_in_response": [
+          "alvarez2021.md",
+          "okafor2019.md",
+          "smidt2020.md",
+          "brennan2022.md"
+        ],
+        "cited_sources_without_frd": [],
+        "not_extracted": [],
+        "unresolved_citations_or_labels": [],
+        "gaps_and_unsupported_synthesis": []
+      },
+      "parse_error": ""
+    },
+    {
+      "qid": "Q0022",
+      "response_id": "R-Q0022-A01",
+      "origin_ref": "RESP-0cadac02",
+      "frds": 4,
+      "over_limit": 0,
+      "review": {
+        "sources_cited_in_response": [
+          "okafor2019.md",
+          "smidt2020.md",
+          "brennan2022.md",
+          "li2024.md"
+        ],
+        "cited_sources_without_frd": [],
+        "not_extracted": [],
+        "unresolved_citations_or_labels": [],
+        "gaps_and_unsupported_synthesis": []
+      },
+      "parse_error": ""
+    },
+    {
+      "qid": "Q0023",
+      "response_id": "R-Q0023-A01",
+      "origin_ref": "RESP-af215d33",
+      "frds": 4,
+      "over_limit": 0,
+      "review": {
+        "sources_cited_in_response": [
+          "smidt2020.md",
+          "okafor2019.md",
+          "alvarez2021.md",
+          "brennan2022.md"
+        ],
+        "cited_sources_without_frd": [],
+        "not_extracted": [],
+        "unresolved_citations_or_labels": [],
+        "gaps_and_unsupported_synthesis": []
+      },
+      "parse_error": ""
+    },
+    {
+      "qid": "Q0024",
+      "response_id": "R-Q0024-A01",
+      "origin_ref": "RESP-934146db",
+      "frds": 4,
+      "over_limit": 0,
+      "review": {
+        "sources_cited_in_response": [
+          "brennan2022.md",
+          "li2024.md",
+          "alvarez2021.md",
+          "smidt2020.md"
+        ],
+        "cited_sources_without_frd": [],
+        "not_extracted": [],
+        "unresolved_citations_or_labels": [],
+        "gaps_and_unsupported_synthesis": []
+      },
+      "parse_error": ""
+    }
+  ],
+  "provenance_counts": {
+    "OWN_RESULT": 96
+  }
+}

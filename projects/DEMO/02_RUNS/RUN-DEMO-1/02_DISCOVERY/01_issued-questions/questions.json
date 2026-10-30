@@ -1,0 +1,722 @@
+[
+  {
+    "qid": "Q0001",
+    "run_id": "RUN-DEMO-1",
+    "round": 1,
+    "order_in_round": 1,
+    "text": "In alvarez2021.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about Foliar silicate treatment increases grain yield of drought-stressed wheat in field conditions? Cite the exact passage for each finding.",
+    "firewall": {
+      "status": "PASS",
+      "repairs": [],
+      "original_text": "In alvarez2021.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about Foliar silicate treatment increases grain yield of drought-stressed wheat in field conditions? Cite the exact passage for each finding."
+    },
+    "sources_as_sent": [
+      "alvarez2021.md"
+    ],
+    "sources_resolved": {
+      "alvarez2021.md": "alvarez2021.md"
+    },
+    "target": "coverage of: Foliar silicate treatment increases grain yield of drought-stressed wheat in fie",
+    "packet_priority_id": null,
+    "rationale": "The local engine rotates the ranked sources across the hypothesis clauses and decisive tests so that every source and every required part is queried at least once.",
+    "header_version": "45251880481bd824",
+    "issued": "2026-10-30T03:39:03+00:00",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0001-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": []
+  },
+  {
+    "qid": "Q0002",
+    "run_id": "RUN-DEMO-1",
+    "round": 1,
+    "order_in_round": 2,
+    "text": "In okafor2019.md, smidt2020.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about The effect is large enough and repeatable enough to justify a field trial? Cite the exact passage for each finding.",
+    "firewall": {
+      "status": "PASS",
+      "repairs": [],
+      "original_text": "In okafor2019.md, smidt2020.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about The effect is large enough and repeatable enough to justify a field trial? Cite the exact passage for each finding."
+    },
+    "sources_as_sent": [
+      "okafor2019.md",
+      "smidt2020.md"
+    ],
+    "sources_resolved": {
+      "okafor2019.md": "okafor2019.md",
+      "smidt2020.md": "smidt2020.md"
+    },
+    "target": "coverage of: The effect is large enough and repeatable enough to justify a field trial",
+    "packet_priority_id": null,
+    "rationale": "The local engine rotates the ranked sources across the hypothesis clauses and decisive tests so that every source and every required part is queried at least once.",
+    "header_version": "45251880481bd824",
+    "issued": "2026-10-30T03:39:03+00:00",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0002-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": []
+  },
+  {
+    "qid": "Q0003",
+    "run_id": "RUN-DEMO-1",
+    "round": 1,
+    "order_in_round": 3,
+    "text": "In smidt2020.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about Foliar silicate treatment does not increase grain yield of drought-stressed wheat in the field? Cite the exact passage for each finding.",
+    "firewall": {
+      "status": "PASS",
+      "repairs": [],
+      "original_text": "In smidt2020.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about Foliar silicate treatment does not increase grain yield of drought-stressed wheat in the field? Cite the exact passage for each finding."
+    },
+    "sources_as_sent": [
+      "smidt2020.md"
+    ],
+    "sources_resolved": {
+      "smidt2020.md": "smidt2020.md"
+    },
+    "target": "coverage of: Foliar silicate treatment does not increase grain yield of drought-stressed whea",
+    "packet_priority_id": null,
+    "rationale": "The local engine rotates the ranked sources across the hypothesis clauses and decisive tests so that every source and every required part is queried at least once.",
+    "header_version": "45251880481bd824",
+    "issued": "2026-10-30T03:39:03+00:00",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0003-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": []
+  },
+  {
+    "qid": "Q0004",
+    "run_id": "RUN-DEMO-1",
+    "round": 1,
+    "order_in_round": 4,
+    "text": "In brennan2022.md, li2024.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about The positive results come from greenhouse or model-organism work that does not transfer? Cite the exact passage for each finding.",
+    "firewall": {
+      "status": "PASS",
+      "repairs": [],
+      "original_text": "In brennan2022.md, li2024.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about The positive results come from greenhouse or model-organism work that does not transfer? Cite the exact passage for each finding."
+    },
+    "sources_as_sent": [
+      "brennan2022.md",
+      "li2024.md"
+    ],
+    "sources_resolved": {
+      "brennan2022.md": "brennan2022.md",
+      "li2024.md": "li2024.md"
+    },
+    "target": "coverage of: The positive results come from greenhouse or model-organism work that does not t",
+    "packet_priority_id": null,
+    "rationale": "The local engine rotates the ranked sources across the hypothesis clauses and decisive tests so that every source and every required part is queried at least once.",
+    "header_version": "45251880481bd824",
+    "issued": "2026-10-30T03:39:03+00:00",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0004-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": []
+  },
+  {
+    "qid": "Q0005",
+    "run_id": "RUN-DEMO-1",
+    "round": 2,
+    "order_in_round": 1,
+    "text": "In li2024.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about Existing evidence cannot determine whether foliar silicate increases field grain yield under drought? Cite the exact passage for each finding.",
+    "firewall": {
+      "status": "PASS",
+      "repairs": [],
+      "original_text": "In li2024.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about Existing evidence cannot determine whether foliar silicate increases field grain yield under drought? Cite the exact passage for each finding."
+    },
+    "sources_as_sent": [
+      "li2024.md"
+    ],
+    "sources_resolved": {
+      "li2024.md": "li2024.md"
+    },
+    "target": "coverage of: Existing evidence cannot determine whether foliar silicate increases field grain",
+    "packet_priority_id": null,
+    "rationale": "The local engine rotates the ranked sources across the hypothesis clauses and decisive tests so that every source and every required part is queried at least once.",
+    "header_version": "45251880481bd824",
+    "issued": "2026-10-30T03:39:03+00:00",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0005-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": []
+  },
+  {
+    "qid": "Q0006",
+    "run_id": "RUN-DEMO-1",
+    "round": 2,
+    "order_in_round": 2,
+    "text": "In alvarez2021.md, okafor2019.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about Some controlled studies report benefits, field results are mixed or null? Cite the exact passage for each finding.",
+    "firewall": {
+      "status": "PASS",
+      "repairs": [],
+      "original_text": "In alvarez2021.md, okafor2019.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about Some controlled studies report benefits, field results are mixed or null? Cite the exact passage for each finding."
+    },
+    "sources_as_sent": [
+      "alvarez2021.md",
+      "okafor2019.md"
+    ],
+    "sources_resolved": {
+      "alvarez2021.md": "alvarez2021.md",
+      "okafor2019.md": "okafor2019.md"
+    },
+    "target": "coverage of: Some controlled studies report benefits, field results are mixed or null",
+    "packet_priority_id": null,
+    "rationale": "The local engine rotates the ranked sources across the hypothesis clauses and decisive tests so that every source and every required part is queried at least once.",
+    "header_version": "45251880481bd824",
+    "issued": "2026-10-30T03:39:03+00:00",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0006-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": []
+  },
+  {
+    "qid": "Q0007",
+    "run_id": "RUN-DEMO-1",
+    "round": 2,
+    "order_in_round": 3,
+    "text": "In okafor2019.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about Foliar silicate treatment increases grain yield of drought-stressed wheat in field conditions? Cite the exact passage for each finding.",
+    "firewall": {
+      "status": "PASS",
+      "repairs": [],
+      "original_text": "In okafor2019.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about Foliar silicate treatment increases grain yield of drought-stressed wheat in field conditions? Cite the exact passage for each finding."
+    },
+    "sources_as_sent": [
+      "okafor2019.md"
+    ],
+    "sources_resolved": {
+      "okafor2019.md": "okafor2019.md"
+    },
+    "target": "coverage of: Foliar silicate treatment increases grain yield of drought-stressed wheat in fie",
+    "packet_priority_id": null,
+    "rationale": "The local engine rotates the ranked sources across the hypothesis clauses and decisive tests so that every source and every required part is queried at least once.",
+    "header_version": "45251880481bd824",
+    "issued": "2026-10-30T03:39:03+00:00",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0007-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": []
+  },
+  {
+    "qid": "Q0008",
+    "run_id": "RUN-DEMO-1",
+    "round": 2,
+    "order_in_round": 4,
+    "text": "In smidt2020.md, brennan2022.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about The effect is large enough and repeatable enough to justify a field trial? Cite the exact passage for each finding.",
+    "firewall": {
+      "status": "PASS",
+      "repairs": [],
+      "original_text": "In smidt2020.md, brennan2022.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about The effect is large enough and repeatable enough to justify a field trial? Cite the exact passage for each finding."
+    },
+    "sources_as_sent": [
+      "smidt2020.md",
+      "brennan2022.md"
+    ],
+    "sources_resolved": {
+      "smidt2020.md": "smidt2020.md",
+      "brennan2022.md": "brennan2022.md"
+    },
+    "target": "coverage of: The effect is large enough and repeatable enough to justify a field trial",
+    "packet_priority_id": null,
+    "rationale": "The local engine rotates the ranked sources across the hypothesis clauses and decisive tests so that every source and every required part is queried at least once.",
+    "header_version": "45251880481bd824",
+    "issued": "2026-10-30T03:39:03+00:00",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0008-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": []
+  },
+  {
+    "qid": "Q0009",
+    "run_id": "RUN-DEMO-1",
+    "round": 3,
+    "order_in_round": 1,
+    "text": "In brennan2022.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about Foliar silicate treatment does not increase grain yield of drought-stressed wheat in the field? Cite the exact passage for each finding.",
+    "firewall": {
+      "status": "PASS",
+      "repairs": [],
+      "original_text": "In brennan2022.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about Foliar silicate treatment does not increase grain yield of drought-stressed wheat in the field? Cite the exact passage for each finding."
+    },
+    "sources_as_sent": [
+      "brennan2022.md"
+    ],
+    "sources_resolved": {
+      "brennan2022.md": "brennan2022.md"
+    },
+    "target": "coverage of: Foliar silicate treatment does not increase grain yield of drought-stressed whea",
+    "packet_priority_id": null,
+    "rationale": "The local engine rotates the ranked sources across the hypothesis clauses and decisive tests so that every source and every required part is queried at least once.",
+    "header_version": "45251880481bd824",
+    "issued": "2026-10-30T03:39:04+00:00",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0009-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": []
+  },
+  {
+    "qid": "Q0010",
+    "run_id": "RUN-DEMO-1",
+    "round": 3,
+    "order_in_round": 2,
+    "text": "In li2024.md, alvarez2021.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about The positive results come from greenhouse or model-organism work that does not transfer? Cite the exact passage for each finding.",
+    "firewall": {
+      "status": "PASS",
+      "repairs": [],
+      "original_text": "In li2024.md, alvarez2021.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about The positive results come from greenhouse or model-organism work that does not transfer? Cite the exact passage for each finding."
+    },
+    "sources_as_sent": [
+      "li2024.md",
+      "alvarez2021.md"
+    ],
+    "sources_resolved": {
+      "li2024.md": "li2024.md",
+      "alvarez2021.md": "alvarez2021.md"
+    },
+    "target": "coverage of: The positive results come from greenhouse or model-organism work that does not t",
+    "packet_priority_id": null,
+    "rationale": "The local engine rotates the ranked sources across the hypothesis clauses and decisive tests so that every source and every required part is queried at least once.",
+    "header_version": "45251880481bd824",
+    "issued": "2026-10-30T03:39:04+00:00",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0010-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": []
+  },
+  {
+    "qid": "Q0011",
+    "run_id": "RUN-DEMO-1",
+    "round": 3,
+    "order_in_round": 3,
+    "text": "In alvarez2021.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about Existing evidence cannot determine whether foliar silicate increases field grain yield under drought? Cite the exact passage for each finding.",
+    "firewall": {
+      "status": "PASS",
+      "repairs": [],
+      "original_text": "In alvarez2021.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about Existing evidence cannot determine whether foliar silicate increases field grain yield under drought? Cite the exact passage for each finding."
+    },
+    "sources_as_sent": [
+      "alvarez2021.md"
+    ],
+    "sources_resolved": {
+      "alvarez2021.md": "alvarez2021.md"
+    },
+    "target": "coverage of: Existing evidence cannot determine whether foliar silicate increases field grain",
+    "packet_priority_id": null,
+    "rationale": "The local engine rotates the ranked sources across the hypothesis clauses and decisive tests so that every source and every required part is queried at least once.",
+    "header_version": "45251880481bd824",
+    "issued": "2026-10-30T03:39:04+00:00",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0011-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": []
+  },
+  {
+    "qid": "Q0012",
+    "run_id": "RUN-DEMO-1",
+    "round": 3,
+    "order_in_round": 4,
+    "text": "In okafor2019.md, smidt2020.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about Some controlled studies report benefits, field results are mixed or null? Cite the exact passage for each finding.",
+    "firewall": {
+      "status": "PASS",
+      "repairs": [],
+      "original_text": "In okafor2019.md, smidt2020.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about Some controlled studies report benefits, field results are mixed or null? Cite the exact passage for each finding."
+    },
+    "sources_as_sent": [
+      "okafor2019.md",
+      "smidt2020.md"
+    ],
+    "sources_resolved": {
+      "okafor2019.md": "okafor2019.md",
+      "smidt2020.md": "smidt2020.md"
+    },
+    "target": "coverage of: Some controlled studies report benefits, field results are mixed or null",
+    "packet_priority_id": null,
+    "rationale": "The local engine rotates the ranked sources across the hypothesis clauses and decisive tests so that every source and every required part is queried at least once.",
+    "header_version": "45251880481bd824",
+    "issued": "2026-10-30T03:39:04+00:00",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0012-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": []
+  },
+  {
+    "qid": "Q0013",
+    "run_id": "RUN-DEMO-1",
+    "round": 4,
+    "order_in_round": 1,
+    "text": "In smidt2020.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about Foliar silicate treatment increases grain yield of drought-stressed wheat in field conditions? Cite the exact passage for each finding.",
+    "firewall": {
+      "status": "PASS",
+      "repairs": [],
+      "original_text": "In smidt2020.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about Foliar silicate treatment increases grain yield of drought-stressed wheat in field conditions? Cite the exact passage for each finding."
+    },
+    "sources_as_sent": [
+      "smidt2020.md"
+    ],
+    "sources_resolved": {
+      "smidt2020.md": "smidt2020.md"
+    },
+    "target": "coverage of: Foliar silicate treatment increases grain yield of drought-stressed wheat in fie",
+    "packet_priority_id": null,
+    "rationale": "The local engine rotates the ranked sources across the hypothesis clauses and decisive tests so that every source and every required part is queried at least once.",
+    "header_version": "45251880481bd824",
+    "issued": "2026-10-30T03:39:04+00:00",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0013-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": []
+  },
+  {
+    "qid": "Q0014",
+    "run_id": "RUN-DEMO-1",
+    "round": 4,
+    "order_in_round": 2,
+    "text": "In brennan2022.md, li2024.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about The effect is large enough and repeatable enough to justify a field trial? Cite the exact passage for each finding.",
+    "firewall": {
+      "status": "PASS",
+      "repairs": [],
+      "original_text": "In brennan2022.md, li2024.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about The effect is large enough and repeatable enough to justify a field trial? Cite the exact passage for each finding."
+    },
+    "sources_as_sent": [
+      "brennan2022.md",
+      "li2024.md"
+    ],
+    "sources_resolved": {
+      "brennan2022.md": "brennan2022.md",
+      "li2024.md": "li2024.md"
+    },
+    "target": "coverage of: The effect is large enough and repeatable enough to justify a field trial",
+    "packet_priority_id": null,
+    "rationale": "The local engine rotates the ranked sources across the hypothesis clauses and decisive tests so that every source and every required part is queried at least once.",
+    "header_version": "45251880481bd824",
+    "issued": "2026-10-30T03:39:04+00:00",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0014-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": []
+  },
+  {
+    "qid": "Q0015",
+    "run_id": "RUN-DEMO-1",
+    "round": 4,
+    "order_in_round": 3,
+    "text": "In li2024.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about Foliar silicate treatment does not increase grain yield of drought-stressed wheat in the field? Cite the exact passage for each finding.",
+    "firewall": {
+      "status": "PASS",
+      "repairs": [],
+      "original_text": "In li2024.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about Foliar silicate treatment does not increase grain yield of drought-stressed wheat in the field? Cite the exact passage for each finding."
+    },
+    "sources_as_sent": [
+      "li2024.md"
+    ],
+    "sources_resolved": {
+      "li2024.md": "li2024.md"
+    },
+    "target": "coverage of: Foliar silicate treatment does not increase grain yield of drought-stressed whea",
+    "packet_priority_id": null,
+    "rationale": "The local engine rotates the ranked sources across the hypothesis clauses and decisive tests so that every source and every required part is queried at least once.",
+    "header_version": "45251880481bd824",
+    "issued": "2026-10-30T03:39:04+00:00",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0015-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": []
+  },
+  {
+    "qid": "Q0016",
+    "run_id": "RUN-DEMO-1",
+    "round": 4,
+    "order_in_round": 4,
+    "text": "In alvarez2021.md, okafor2019.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about The positive results come from greenhouse or model-organism work that does not transfer? Cite the exact passage for each finding.",
+    "firewall": {
+      "status": "PASS",
+      "repairs": [],
+      "original_text": "In alvarez2021.md, okafor2019.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about The positive results come from greenhouse or model-organism work that does not transfer? Cite the exact passage for each finding."
+    },
+    "sources_as_sent": [
+      "alvarez2021.md",
+      "okafor2019.md"
+    ],
+    "sources_resolved": {
+      "alvarez2021.md": "alvarez2021.md",
+      "okafor2019.md": "okafor2019.md"
+    },
+    "target": "coverage of: The positive results come from greenhouse or model-organism work that does not t",
+    "packet_priority_id": null,
+    "rationale": "The local engine rotates the ranked sources across the hypothesis clauses and decisive tests so that every source and every required part is queried at least once.",
+    "header_version": "45251880481bd824",
+    "issued": "2026-10-30T03:39:04+00:00",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0016-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": []
+  },
+  {
+    "qid": "Q0017",
+    "run_id": "RUN-DEMO-1",
+    "round": 5,
+    "order_in_round": 1,
+    "text": "In okafor2019.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about Existing evidence cannot determine whether foliar silicate increases field grain yield under drought? Cite the exact passage for each finding.",
+    "firewall": {
+      "status": "PASS",
+      "repairs": [],
+      "original_text": "In okafor2019.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about Existing evidence cannot determine whether foliar silicate increases field grain yield under drought? Cite the exact passage for each finding."
+    },
+    "sources_as_sent": [
+      "okafor2019.md"
+    ],
+    "sources_resolved": {
+      "okafor2019.md": "okafor2019.md"
+    },
+    "target": "coverage of: Existing evidence cannot determine whether foliar silicate increases field grain",
+    "packet_priority_id": null,
+    "rationale": "The local engine rotates the ranked sources across the hypothesis clauses and decisive tests so that every source and every required part is queried at least once.",
+    "header_version": "45251880481bd824",
+    "issued": "2026-10-30T03:39:04+00:00",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0017-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": []
+  },
+  {
+    "qid": "Q0018",
+    "run_id": "RUN-DEMO-1",
+    "round": 5,
+    "order_in_round": 2,
+    "text": "In smidt2020.md, brennan2022.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about Some controlled studies report benefits, field results are mixed or null? Cite the exact passage for each finding.",
+    "firewall": {
+      "status": "PASS",
+      "repairs": [],
+      "original_text": "In smidt2020.md, brennan2022.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about Some controlled studies report benefits, field results are mixed or null? Cite the exact passage for each finding."
+    },
+    "sources_as_sent": [
+      "smidt2020.md",
+      "brennan2022.md"
+    ],
+    "sources_resolved": {
+      "smidt2020.md": "smidt2020.md",
+      "brennan2022.md": "brennan2022.md"
+    },
+    "target": "coverage of: Some controlled studies report benefits, field results are mixed or null",
+    "packet_priority_id": null,
+    "rationale": "The local engine rotates the ranked sources across the hypothesis clauses and decisive tests so that every source and every required part is queried at least once.",
+    "header_version": "45251880481bd824",
+    "issued": "2026-10-30T03:39:04+00:00",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0018-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": []
+  },
+  {
+    "qid": "Q0019",
+    "run_id": "RUN-DEMO-1",
+    "round": 5,
+    "order_in_round": 3,
+    "text": "In brennan2022.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about Foliar silicate treatment increases grain yield of drought-stressed wheat in field conditions? Cite the exact passage for each finding.",
+    "firewall": {
+      "status": "PASS",
+      "repairs": [],
+      "original_text": "In brennan2022.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about Foliar silicate treatment increases grain yield of drought-stressed wheat in field conditions? Cite the exact passage for each finding."
+    },
+    "sources_as_sent": [
+      "brennan2022.md"
+    ],
+    "sources_resolved": {
+      "brennan2022.md": "brennan2022.md"
+    },
+    "target": "coverage of: Foliar silicate treatment increases grain yield of drought-stressed wheat in fie",
+    "packet_priority_id": null,
+    "rationale": "The local engine rotates the ranked sources across the hypothesis clauses and decisive tests so that every source and every required part is queried at least once.",
+    "header_version": "45251880481bd824",
+    "issued": "2026-10-30T03:39:04+00:00",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0019-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": []
+  },
+  {
+    "qid": "Q0020",
+    "run_id": "RUN-DEMO-1",
+    "round": 5,
+    "order_in_round": 4,
+    "text": "In li2024.md, alvarez2021.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about The effect is large enough and repeatable enough to justify a field trial? Cite the exact passage for each finding.",
+    "firewall": {
+      "status": "PASS",
+      "repairs": [],
+      "original_text": "In li2024.md, alvarez2021.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about The effect is large enough and repeatable enough to justify a field trial? Cite the exact passage for each finding."
+    },
+    "sources_as_sent": [
+      "li2024.md",
+      "alvarez2021.md"
+    ],
+    "sources_resolved": {
+      "li2024.md": "li2024.md",
+      "alvarez2021.md": "alvarez2021.md"
+    },
+    "target": "coverage of: The effect is large enough and repeatable enough to justify a field trial",
+    "packet_priority_id": null,
+    "rationale": "The local engine rotates the ranked sources across the hypothesis clauses and decisive tests so that every source and every required part is queried at least once.",
+    "header_version": "45251880481bd824",
+    "issued": "2026-10-30T03:39:04+00:00",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0020-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": []
+  },
+  {
+    "qid": "Q0021",
+    "run_id": "RUN-DEMO-1",
+    "round": 6,
+    "order_in_round": 1,
+    "text": "In alvarez2021.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about Foliar silicate treatment does not increase grain yield of drought-stressed wheat in the field? Cite the exact passage for each finding.",
+    "firewall": {
+      "status": "PASS",
+      "repairs": [],
+      "original_text": "In alvarez2021.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about Foliar silicate treatment does not increase grain yield of drought-stressed wheat in the field? Cite the exact passage for each finding."
+    },
+    "sources_as_sent": [
+      "alvarez2021.md"
+    ],
+    "sources_resolved": {
+      "alvarez2021.md": "alvarez2021.md"
+    },
+    "target": "coverage of: Foliar silicate treatment does not increase grain yield of drought-stressed whea",
+    "packet_priority_id": null,
+    "rationale": "The local engine rotates the ranked sources across the hypothesis clauses and decisive tests so that every source and every required part is queried at least once.",
+    "header_version": "45251880481bd824",
+    "issued": "2026-10-30T03:39:04+00:00",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0021-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": []
+  },
+  {
+    "qid": "Q0022",
+    "run_id": "RUN-DEMO-1",
+    "round": 6,
+    "order_in_round": 2,
+    "text": "In okafor2019.md, smidt2020.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about The positive results come from greenhouse or model-organism work that does not transfer? Cite the exact passage for each finding.",
+    "firewall": {
+      "status": "PASS",
+      "repairs": [],
+      "original_text": "In okafor2019.md, smidt2020.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about The positive results come from greenhouse or model-organism work that does not transfer? Cite the exact passage for each finding."
+    },
+    "sources_as_sent": [
+      "okafor2019.md",
+      "smidt2020.md"
+    ],
+    "sources_resolved": {
+      "okafor2019.md": "okafor2019.md",
+      "smidt2020.md": "smidt2020.md"
+    },
+    "target": "coverage of: The positive results come from greenhouse or model-organism work that does not t",
+    "packet_priority_id": null,
+    "rationale": "The local engine rotates the ranked sources across the hypothesis clauses and decisive tests so that every source and every required part is queried at least once.",
+    "header_version": "45251880481bd824",
+    "issued": "2026-10-30T03:39:04+00:00",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0022-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": []
+  },
+  {
+    "qid": "Q0023",
+    "run_id": "RUN-DEMO-1",
+    "round": 6,
+    "order_in_round": 3,
+    "text": "In smidt2020.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about Existing evidence cannot determine whether foliar silicate increases field grain yield under drought? Cite the exact passage for each finding.",
+    "firewall": {
+      "status": "PASS",
+      "repairs": [],
+      "original_text": "In smidt2020.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about Existing evidence cannot determine whether foliar silicate increases field grain yield under drought? Cite the exact passage for each finding."
+    },
+    "sources_as_sent": [
+      "smidt2020.md"
+    ],
+    "sources_resolved": {
+      "smidt2020.md": "smidt2020.md"
+    },
+    "target": "coverage of: Existing evidence cannot determine whether foliar silicate increases field grain",
+    "packet_priority_id": null,
+    "rationale": "The local engine rotates the ranked sources across the hypothesis clauses and decisive tests so that every source and every required part is queried at least once.",
+    "header_version": "45251880481bd824",
+    "issued": "2026-10-30T03:39:04+00:00",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0023-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": []
+  },
+  {
+    "qid": "Q0024",
+    "run_id": "RUN-DEMO-1",
+    "round": 6,
+    "order_in_round": 4,
+    "text": "In brennan2022.md, li2024.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about Some controlled studies report benefits, field results are mixed or null? Cite the exact passage for each finding.",
+    "firewall": {
+      "status": "PASS",
+      "repairs": [],
+      "original_text": "In brennan2022.md, li2024.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about Some controlled studies report benefits, field results are mixed or null? Cite the exact passage for each finding."
+    },
+    "sources_as_sent": [
+      "brennan2022.md",
+      "li2024.md"
+    ],
+    "sources_resolved": {
+      "brennan2022.md": "brennan2022.md",
+      "li2024.md": "li2024.md"
+    },
+    "target": "coverage of: Some controlled studies report benefits, field results are mixed or null",
+    "packet_priority_id": null,
+    "rationale": "The local engine rotates the ranked sources across the hypothesis clauses and decisive tests so that every source and every required part is queried at least once.",
+    "header_version": "45251880481bd824",
+    "issued": "2026-10-30T03:39:04+00:00",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0024-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": []
+  }
+]

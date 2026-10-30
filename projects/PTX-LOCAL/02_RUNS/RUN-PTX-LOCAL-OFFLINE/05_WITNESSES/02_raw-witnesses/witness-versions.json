@@ -1,0 +1,5109 @@
+[
+  {
+    "witness_id": "W-FRD-Q0001-01-Q0001",
+    "status": "WITNESS",
+    "text": "A review of available studies indicates that Pentoxifylline may have a potentially positive impact on male infertility,<sup>27</sup> Peyronie's disease,<sup>28</sup> regulation of the systemic inflammatory response to bypass surgery,<sup>29</sup> angina symptom,<sup>30</sup> management of intermittent claudication,<sup>31</sup> improvement of cerebral blood flow in patients with cerebrovascular disease, and the progression of vascular dementia.<sup>32</sup> Therefore (Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf).",
+    "preserved": [
+      "quantities",
+      "modality",
+      "population/model"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "e1f4d2bad126f2499ff0f3ff",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 52,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0001-02-Q0001",
+    "status": "WITNESS",
+    "text": "This positive effect may be related to the fact that detrusor muscle contractility of an obstructed bladder improves with Pentoxifylline use.<sup>14</sup> Hence, it makes sense to attribute (Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf).",
+    "preserved": [
+      "quantities",
+      "modality"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "8d8724608254ee7be2bcf934",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 28,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0001-03-Q0001",
+    "status": "WITNESS",
+    "text": "Barie, MD, New York:** I wonder if you could comment on the temporal relationships between the timing of intervention and the fact that the physiologic responses you observed became meaningful statistically at 7 to as many as 14 days thereafter? (staubach1998.pdf).",
+    "preserved": [
+      "quantities",
+      "modality",
+      "timing"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "6f7563c8885f6b4f00b96af0",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 41,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0001-04-Q0001",
+    "status": "WITNESS",
+    "text": "Underactive bladder (UAB) focuses on symptoms that patients find bothersome and raises the profile of the important clinical condition.<sup>[3]</sup> Chapple et al proposed that a definition of a symptom complex for UAB analogous to the ICS definition of overactive bladder (OAB) syndrome would be of potential clinical value: UAB is a symptom complex suggestive of DU (li2018.pdf).",
+    "preserved": [
+      "negation",
+      "quantities",
+      "modality",
+      "population/model"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "dcd77b0c96c1705d2304dca5",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 57,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": true,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0001-04-Q0001",
+    "status": "WITNESS",
+    "text": "Underactive bladder (UAB) focuses on symptoms that patients find bothersome and raises the profile of the important clinical condition.<sup>[3]</sup> Chapple et al proposed that a definition of a symptom complex for UAB analogous to the ICS definition of overactive bladder (OAB) syndrome would be of potential clinical value: UAB is a symptom complex suggestive of DU (li2018.pdf).",
+    "preserved": [
+      "negation",
+      "quantities",
+      "modality",
+      "population/model"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "d25fcd403c2dc8174a69726a",
+    "parse_error": "",
+    "version": 2,
+    "ceiling": 60,
+    "ceiling_exception": false,
+    "revision_of": 1,
+    "mechanical": {
+      "words": 57,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": true,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0002-01-Q0002",
+    "status": "WITNESS",
+    "text": "Captopril is commonly prescribed as an angiotensin-converting enzyme inhibitor for the treatment of some medical conditions, including hypertension and some types of congestive heart failure [10,11] (shirazi2014.pdf).",
+    "preserved": [
+      "quantities"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "308882c1cdc5b61b7ad88412",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 27,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0002-02-Q0002",
+    "status": "WITNESS",
+    "text": "[5] indicated that persistent bladder dysfunction in men after transurethral resection of prostate would be associated with long-lasting detrusor ischemia and reduced perfusion (shirazi2015.pdf).",
+    "preserved": [
+      "quantities",
+      "population/model",
+      "timing"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "959092ac6d29d0ff86c5a558",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 24,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0002-03-Q0002",
+    "status": "WITNESS",
+    "text": "It has been reported that an increase in angiotensin II levels in obstructive nephropathy up-regulates the expression of several factors, including transforming growth factor (TGF)- $\\beta$ (shirazi2014.pdf).",
+    "preserved": [
+      "assertion"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "3e212ff807f66c2a9b3fb3f8",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 27,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0002-04-Q0002",
+    "status": "WITNESS",
+    "text": "2** The effect of cumulative concentrations of carbachol on the tension of isolated bladder in normal rats (square), rats with partial bladder outlet obstruction (inverted triangle), and rats with partial bladder outlet obstruction that received pentoxifylline (circle) (shirazi2015.pdf).",
+    "preserved": [
+      "quantities",
+      "population/model"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "4339c9a63188a0adca189176",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 38,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0003-01-Q0003",
+    "status": "WITNESS",
+    "text": "It has been shown that bladder dysfunction secondary to PUO is characterized by bladder wall hypertrophy, decreased capacity and urinary stream, and increased postvoid residual urine [4-6,17,22] (shirazi2014.pdf).",
+    "preserved": [
+      "quantities"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "f792a958f4ea65bfa44822fc",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 28,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0003-02-Q0003",
+    "status": "WITNESS",
+    "text": "Although the explanations for bladder dysfunction are not fully understood, fetal urethral obstruction has been reported to result in deposition of an abnormal quantity of collagen in the bladder, which can play a major role in bladder hypocompliance [4] (shirazi2014.pdf).",
+    "preserved": [
+      "negation",
+      "quantities"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "12ce887d665d0b4f59b7ba98",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 40,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0003-03-Q0003",
+    "status": "WITNESS",
+    "text": "This eventuates in BOO, which shows voiding dysfunction.<sup>18</sup> The clinical presentation is in the form of LUTS, including weak urinary stream, urgency, nocturia, urinary retention, straining, and frequency.<sup>19</sup> Currently, several drug modalities are recommended to treat the symptoms of BPH, including 5-alpha reductase inhibitors, $\\alpha$ 1-adrenoceptor antagonists (Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf).",
+    "preserved": [
+      "quantities"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "b079900034bb78883ae01fe5",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 48,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0003-03-Q0003",
+    "status": "WITNESS",
+    "text": "This eventuates in BOO, which shows voiding dysfunction.<sup>18</sup> The clinical presentation is in the form of LUTS, including weak urinary stream, urgency, nocturia, urinary retention, straining, and frequency.<sup>19</sup> Currently, several drug modalities are recommended to treat the symptoms of BPH, including 5-alpha reductase inhibitors, $\\alpha$ 1-adrenoceptor antagonists (Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf).",
+    "preserved": [
+      "quantities"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "3a11474b15b4c3191a25537b",
+    "parse_error": "",
+    "version": 2,
+    "ceiling": 60,
+    "ceiling_exception": false,
+    "revision_of": 1,
+    "mechanical": {
+      "words": 48,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0003-04-Q0003",
+    "status": "WITNESS",
+    "text": "The etiology of diabetic bladder dysfunction is multifactorial; both the myogenic and neurogenic effects of diabetic cystopathy cause a decrease in bladder sensation and impairment in voiding function [39] (ladi-seyedian2017.pdf).",
+    "preserved": [
+      "quantities"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "4c065629e009361f87c6f992",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 30,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0004-01-Q0004",
+    "status": "WITNESS",
+    "text": "Some risk factors are mentioned in this review and other pathophysiologies are described elsewhere in this issue. **Table 3.** Possible risk factors of detrusor underactivity | Pathological regions | Disease entities | |----------------------|------------------------------------------------------------------------------------------------------------------------------------------| | Idiopathic | Normal ageing process<br>Unknown factors in younger population | | Neurogenic | Parkinson disease<br>Multiple sclerosis<br>Guillain-Barre syndrome<br>Neurosyphilis<br>Diabetes mellitus | | Myogenic | Diabetes mellitus<br>Bladder outlet (2020ICU_icu-58-S68.pdf).",
+    "preserved": [
+      "quantities",
+      "modality"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "27ba710399c568bb1952b7e8",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 60,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0004-02-Q0004",
+    "status": "WITNESS",
+    "text": "Especially, the mean PVR measured at the end of the research was 107–125 mL and DU often did not result in chronic urinary retention, which might be generally defined as a $PVR > 300$ mL (2020ICU_icu-58-S68.pdf).",
+    "preserved": [
+      "negation",
+      "quantities",
+      "modality"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "8903e5b4f0104d6641653553",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 36,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0004-03-Q0004",
+    "status": "WITNESS",
+    "text": "Instead, much of this pain emanates from myofascial trigger points (TrPs) that when palpated are tender and reproduce the specific anatomic location of pain described by the patient.<sup>2</sup> TrPs are defined as hyperirritable areas in skeletal muscles (anderson2011.pdf).",
+    "preserved": [
+      "quantities",
+      "modality",
+      "population/model"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "b495d98f9ae698c0cac94ace",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 38,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0004-03-Q0004",
+    "status": "WITNESS",
+    "text": "Instead, much of this pain emanates from myofascial trigger points (TrPs) that when palpated are tender and reproduce the specific anatomic location of pain described by the patient.<sup>2</sup> TrPs are defined as hyperirritable areas in skeletal muscles (anderson2011.pdf).",
+    "preserved": [
+      "quantities",
+      "modality",
+      "population/model"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "46aadf8a134e2aa7fcda78fe",
+    "parse_error": "",
+    "version": 2,
+    "ceiling": 60,
+    "ceiling_exception": false,
+    "revision_of": 1,
+    "mechanical": {
+      "words": 38,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0004-04-Q0004",
+    "status": "WITNESS",
+    "text": "Some progress exists in identifying phenotypes of these pelvic disorders that leads to selection of the most appropriate and effective use of multimodal therapy.<sup>12</sup> Pelvic muscle tenderness is associated with more than 50% of the reported phenotypes and patients with more than 1 phenotype typically have higher pain scores (anderson2011.pdf).",
+    "preserved": [
+      "quantities",
+      "population/model"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "d1635c141ecc7e841dfaf315",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 50,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0005-01-Q0005",
+    "status": "WITNESS",
+    "text": "Some progress exists in identifying phenotypes of these pelvic disorders that leads to selection of the most appropriate and effective use of multimodal therapy.<sup>12</sup> Pelvic muscle tenderness is associated with more than 50% of the reported phenotypes and patients with more than 1 phenotype typically have higher pain scores (anderson2011.pdf).",
+    "preserved": [
+      "quantities",
+      "population/model"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "a54ad662f34358277b528b5c",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 50,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0005-02-Q0005",
+    "status": "WITNESS",
+    "text": "did not need to use wand | 5 | | Preferred internal massage with finger | 5 | | Difficulty finding trigger points | 1 | | Technical difficulty with wand | 2 | | Difficulty using wand (anderson2011.pdf).",
+    "preserved": [
+      "negation",
+      "quantities",
+      "population/model",
+      "timing"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "6d8e8d90d0a0f41f3f700221",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 39,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0005-02-Q0005",
+    "status": "WITNESS",
+    "text": "did not need to use wand | 5 | | Preferred internal massage with finger | 5 | | Difficulty finding trigger points | 1 | | Technical difficulty with wand | 2 | | Difficulty using wand (anderson2011.pdf).",
+    "preserved": [
+      "negation",
+      "quantities",
+      "population/model",
+      "timing"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "28e2a241e8ccab54d7bcdf47",
+    "parse_error": "",
+    "version": 2,
+    "ceiling": 60,
+    "ceiling_exception": false,
+    "revision_of": 1,
+    "mechanical": {
+      "words": 39,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0005-03-Q0005",
+    "status": "WITNESS",
+    "text": "There is evidence from preclinical data that the sequelae of events provoked by endotoxin can be overcome, at least partially, by oxpentifylline.<sup>22</sup> This drug inhibits various leucocyte functions after activation by different pathophysiological stimuli in vitro.<sup>13,23,24</sup> In vivo (zabel1989.pdf).",
+    "preserved": [
+      "quantities",
+      "modality",
+      "population/model",
+      "timing"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "b294aee70572ab62a7fa3868",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 39,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0005-03-Q0005",
+    "status": "WITNESS",
+    "text": "There is evidence from preclinical data that the sequelae of events provoked by endotoxin can be overcome, at least partially, by oxpentifylline.<sup>22</sup> This drug inhibits various leucocyte functions after activation by different pathophysiological stimuli in vitro.<sup>13,23,24</sup> In vivo (zabel1989.pdf).",
+    "preserved": [
+      "quantities",
+      "modality",
+      "population/model",
+      "timing"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "dbe7484f7b4798777dd22240",
+    "parse_error": "",
+    "version": 2,
+    "ceiling": 60,
+    "ceiling_exception": false,
+    "revision_of": 1,
+    "mechanical": {
+      "words": 39,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0005-04-Q0005",
+    "status": "WITNESS",
+    "text": "Despite these limitations, the consistency of findings across multiple clinical and biochemical outcomes, as well as across subgroup and adjusted analyses, supports the robustness of the observed treatment effect (pharmaceuticals-19-00552.pdf).",
+    "preserved": [
+      "assertion"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "c72f8c857b76359edaaf2db9",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 30,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0006-01-Q0006",
+    "status": "WITNESS",
+    "text": "The source of these symptoms is still poorly understood, but pain associated with chronic tension and spasm of the pelvic floor muscles (pelvic floor tension myalgia) has been hypothesized to be a contributing factor.<sup>2,3</sup> We and others have observed that patients with CPPS frequently exhibit tenderness of the levator ani muscles on rectal examination and that measures (clemens2000.pdf).",
+    "preserved": [
+      "quantities",
+      "modality",
+      "population/model"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "e5a35090830b43cdfb19ca4c",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 58,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0006-02-Q0006",
+    "status": "WITNESS",
+    "text": "In a recent study of 103 men with pelvic pain, Zermann *et al.*<sup>9</sup> found pathologic tenderness of the pelvic floor muscles associated with the inability to contract and relax the pelvic floor muscles in 88% (clemens2000.pdf).",
+    "preserved": [
+      "quantities",
+      "population/model"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "a29a1ac9ebd173a93a630e4d",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 36,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0006-03-Q0006",
+    "status": "WITNESS",
+    "text": "Therefore, serum levels of TNF-α may not reflect TNF-α bioactivity.<sup>36</sup> Our study again highlighted the difficulties of designing anti-TNF-α strategies based on circulating TNF-α levels because it was difficult to correlate serum or plasma levels of a particular proinflammatory cytokine with the overall extent of tissue damage.<sup>37</sup> In experimental studies (staubach1998.pdf).",
+    "preserved": [
+      "negation",
+      "quantities",
+      "modality",
+      "population/model",
+      "timing"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "e85cd63366656e2b69b1f05e",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 51,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0006-03-Q0006",
+    "status": "WITNESS",
+    "text": "Therefore, serum levels of TNF-α may not reflect TNF-α bioactivity.<sup>36</sup> Our study again highlighted the difficulties of designing anti-TNF-α strategies based on circulating TNF-α levels because it was difficult to correlate serum or plasma levels of a particular proinflammatory cytokine with the overall extent of tissue damage.<sup>37</sup> In experimental studies (staubach1998.pdf).",
+    "preserved": [
+      "negation",
+      "quantities",
+      "modality",
+      "population/model",
+      "timing"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "d7a3a0d0aefa05471f2cef05",
+    "parse_error": "",
+    "version": 2,
+    "ceiling": 60,
+    "ceiling_exception": false,
+    "revision_of": 1,
+    "mechanical": {
+      "words": 51,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0006-04-Q0006",
+    "status": "WITNESS",
+    "text": "Zeni and coworkers<sup>20</sup> published a study using a higher dose with 1.5 mg/kg of body weight over 48 hours and found a 2-fold increase in serum concentration of pentoxifylline and the first metabolite using a comparable method (staubach1998.pdf).",
+    "preserved": [
+      "quantities",
+      "timing"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "1aaaf760416eced575b42c24",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 38,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0007-01-Q0007",
+    "status": "WITNESS",
+    "text": "Finally the overall response rate of 57% in the MPT group suggests that MPT represents a clinically meaningful treatment option, supporting the findings of others.<sup>16–20</sup> **Table 4.** Global response assessment by treatment group | | No (fitzgerald2009.pdf).",
+    "preserved": [
+      "negation",
+      "quantities"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "134752ccf758058b3069e699",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 37,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0007-02-Q0007",
+    "status": "WITNESS",
+    "text": "A rectal EMG probe was used to measure resting tone of the pelvic floor muscles and was helpful for instruction pelvic floor muscles contraction and relaxation. **Results:** Two of the 33 men dropped out (cornel2005.pdf).",
+    "preserved": [
+      "quantities",
+      "population/model"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "93e5d17d549a9704b2a3f251",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 35,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0007-03-Q0007",
+    "status": "WITNESS",
+    "text": "In a study by Clemens in a group of 19 patients a meaningful improvement of symptoms was achieved in only 33% partially due to a high drop out rate [13] (cornel2005.pdf).",
+    "preserved": [
+      "quantities",
+      "population/model"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "ccb4ea845f8dad9a6a4e8084",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 31,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0007-04-Q0007",
+    "status": "WITNESS",
+    "text": "Frequently found abnormalities include myofascial trigger points defined as taut bands or tender nodules that evoke twitch responses or reproduce the character and location of symptoms during careful palpation.<sup>21</sup> Importantly there have been several reports of UCPPS symptom relief by therapeutic efforts directed at those muscular abnormalities.<sup>16–20</sup> In practice those therapeutic interventions are typically performed by a physical therapist (fitzgerald2009.pdf).",
+    "preserved": [
+      "quantities",
+      "timing"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "0408529b2cde993cb8807f38",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 60,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0008-01-Q0008",
+    "status": "WITNESS",
+    "text": "Importantly the GTM treatment used in this trial does not represent the standard of care for massage treatment and the results of this study should not be taken to mean that MPT is superior to massage therapy as would be practiced by an expert for UCPPS (fitzgerald2009.pdf).",
+    "preserved": [
+      "negation",
+      "quantities",
+      "population/model"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "f9c3ad2bc594ad75831a0eaa",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 47,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0008-01-Q0008",
+    "status": "WITNESS",
+    "text": "Importantly the GTM treatment used in this trial does not represent the standard of care for massage treatment and the results of this study should not be taken to mean that MPT is superior to massage therapy as would be practiced by an expert for UCPPS (fitzgerald2009.pdf).",
+    "preserved": [
+      "negation",
+      "quantities",
+      "population/model"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "fd5f2cd5dc3397eab4e984a5",
+    "parse_error": "",
+    "version": 2,
+    "ceiling": 60,
+    "ceiling_exception": false,
+    "revision_of": 1,
+    "mechanical": {
+      "words": 47,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0008-02-Q0008",
+    "status": "WITNESS",
+    "text": "An analysis comparing response rates between treatment arms using the exact conditional test version of Mantel-Haenszel methods to adjust for within-center clustering was implemented within the Proc-StatXact software system.<sup>28</sup> Outcome measures between treatment arms were analyzed with Wilcoxon rank sum tests, and outcome scores within treatment groups and disease states were determined with paired t tests (fitzgerald2009.pdf).",
+    "preserved": [
+      "quantities"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "cc225b6b86f4a18aa5239739",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 57,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0008-03-Q0008",
+    "status": "WITNESS",
+    "text": "finding suggests that PTX may exert an anti-inflammatory effect sufficient to translate into measurable symptom relief (pharmaceuticals-19-00552.pdf).",
+    "preserved": [
+      "modality"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "c22473fc90f3b0aa89c18870",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 17,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0008-04-Q0008",
+    "status": "WITNESS",
+    "text": "These findings align with preclinical studies in experimental colitis models, where PTX administration markedly reduced TNF- $\\alpha$ concentrations and ameliorated histopathological inflammation (pharmaceuticals-19-00552.pdf).",
+    "preserved": [
+      "assertion"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "14b9a85d922805f735ecc493",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 23,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0009-01-Q0009",
+    "status": "WITNESS",
+    "text": "Our previous research [3] also analysed the possible mechanism that increased the mental burden caused by pelvic floor dysfunction, and then increased the prostatic urethral pressure, which caused LUTS in some patients with CP, manifested as voiding symptoms and mostly classified as IIIB (leukocytosis with no proof of bacterial infection); Hinman and Baumann [4] had a similar view (he2010.pdf).",
+    "preserved": [
+      "negation",
+      "quantities",
+      "modality",
+      "population/model"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "6b6b00d81f2a96c25d78a3a9",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 59,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0009-02-Q0009",
+    "status": "WITNESS",
+    "text": "Criteria specific to PFMT were developed, based on the Consensus on Exercise Reporting Template, and applied to all studies to measure the comprehensiveness of the PFMT description in the manuscript. **Results:** Results from the 108 included studies indicate substantial heterogeneity in both the content of PFMT and the quality of reporting of the components of the exercise regimes (hall2018.pdf).",
+    "preserved": [
+      "quantities"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "eaa37cec323fcfac89ffd98c",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 59,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0009-03-Q0009",
+    "status": "WITNESS",
+    "text": "Of those that did provide detail of participant education, either written or verbally, 31 included information related to pelvic floor/bladder anatomy, and/or the physiology of UI, micturition, or lower urinary tract symptoms (hall2018.pdf).",
+    "preserved": [
+      "quantities"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "e531249a492d4391e1e0352c",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 33,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0009-04-Q0009",
+    "status": "WITNESS",
+    "text": "The NIH-CPSI scores in the CP group were evaluated using the Wilcoxon matched-pairs signed-ranks test; in all tests, $P < 0.05$ was considered to indicate statistically significant differences (he2010.pdf).",
+    "preserved": [
+      "quantities",
+      "population/model",
+      "timing"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "5aeb2adc5a8e1f00379d1fed",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 29,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0009-04-Q0009",
+    "status": "WITNESS",
+    "text": "The NIH-CPSI scores in the CP group were evaluated using the Wilcoxon matched-pairs signed-ranks test; in all tests, $P < 0.05$ was considered to indicate statistically significant differences (he2010.pdf).",
+    "preserved": [
+      "quantities",
+      "population/model",
+      "timing"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "c51775612fbdbe3ced32624c",
+    "parse_error": "",
+    "version": 2,
+    "ceiling": 60,
+    "ceiling_exception": false,
+    "revision_of": 1,
+    "mechanical": {
+      "words": 29,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0010-01-Q0010",
+    "status": "WITNESS",
+    "text": "PFB was carried out in patients with non-neurogenic detrusor sphincter dyssynergia, and the effects evaluated after 10 weeks. ## RESULTS Before and after PFB treatment the mean (SD) $Q_{max}$ , $P_{det.max}$ , MUP, MUCP were 8.2 (4.1) vs 15.1 (7.3) mL/s, 125.1 (75.3) vs 86.3 (54.2) cmH<sub>2</sub>O (he2010.pdf).",
+    "preserved": [
+      "quantities",
+      "population/model",
+      "timing"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "915fa14eceacad9d4bfe033e",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 48,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0010-01-Q0010",
+    "status": "WITNESS",
+    "text": "PFB was carried out in patients with non-neurogenic detrusor sphincter dyssynergia, and the effects evaluated after 10 weeks. ## RESULTS Before and after PFB treatment the mean (SD) $Q_{max}$ , $P_{det.max}$ , MUP, MUCP were 8.2 (4.1) vs 15.1 (7.3) mL/s, 125.1 (75.3) vs 86.3 (54.2) cmH<sub>2</sub>O (he2010.pdf).",
+    "preserved": [
+      "quantities",
+      "population/model",
+      "timing"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "74cd5643d5f564a84ea5590b",
+    "parse_error": "",
+    "version": 2,
+    "ceiling": 60,
+    "ceiling_exception": false,
+    "revision_of": 1,
+    "mechanical": {
+      "words": 48,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0010-02-Q0010",
+    "status": "WITNESS",
+    "text": "The diagnosis of CP conformed to the recommendations of the National Institutes of Health (NIH) criteria: symptoms for >3 months, including urinary frequency and urgency, voiding difficulty, upper abdominal or perineal discomfort, etc.; scores of ≥1 for the first and second part of NIH CP Symptom Index (CPSI) (he2010.pdf).",
+    "preserved": [
+      "quantities",
+      "timing"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "a9dde15f5774dc00c00eb508",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 49,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0010-02-Q0010",
+    "status": "WITNESS",
+    "text": "The diagnosis of CP conformed to the recommendations of the National Institutes of Health (NIH) criteria: symptoms for >3 months, including urinary frequency and urgency, voiding difficulty, upper abdominal or perineal discomfort, etc.; scores of ≥1 for the first and second part of NIH CP Symptom Index (CPSI) (he2010.pdf).",
+    "preserved": [
+      "quantities",
+      "timing"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "ff5462b578844beeebbc70e5",
+    "parse_error": "",
+    "version": 2,
+    "ceiling": 60,
+    "ceiling_exception": false,
+    "revision_of": 1,
+    "mechanical": {
+      "words": 49,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0010-03-Q0010",
+    "status": "WITNESS",
+    "text": "Long-term follow-up of previous phase II patients, in fact, helped us to understand that improvement under combined PTX/Vit E treatment is slow, progressive, and continuous, with a maximum effect after periods ranging from 18 months to 3 years (Delanian et al, unpublished data, 2003), to take account of patient-to-patient variability (delanian2003.pdf).",
+    "preserved": [
+      "quantities",
+      "population/model",
+      "timing"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "7204b023effd69941523604a",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 51,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0010-04-Q0010",
+    "status": "WITNESS",
+    "text": "However, the magnitude of improvement was more pronounced in the PTX group, and the between-group HL confidence interval indicated a meaningful treatment advantage (pharmaceuticals-19-00552.pdf).",
+    "preserved": [
+      "assertion"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "f33a9a991c0e3ff542cd3b13",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 24,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0011-01-Q0011",
+    "status": "WITNESS",
+    "text": "Given that urological abnormalities are the sole and initial presenting symptoms in approximately 5% of patients with multiple sclerosis, some may benefit from additional neurological evaluation.<sup>20</sup> This fact is particularly true in patients who have concomitant involuntary bladder contractions during voiding (kaplan1997.pdf).",
+    "preserved": [
+      "quantities",
+      "modality",
+      "population/model",
+      "timing"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "80d587e88fbeb8511b35e7de",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 42,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0011-02-Q0011",
+    "status": "WITNESS",
+    "text": "Primary vesical neck obstruction has been widely reported as a potential cause of chronic voiding complaints.<sup>1-3</sup> The etiology of vesical neck obstruction in these men has been reported as secondary to fibrous narrowing of the bladder neck (kaplan1997.pdf).",
+    "preserved": [
+      "quantities",
+      "population/model",
+      "timing"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "30fc8a8c3f515cf541052dbb",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 38,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0011-02-Q0011",
+    "status": "WITNESS",
+    "text": "Primary vesical neck obstruction has been widely reported as a potential cause of chronic voiding complaints.<sup>1-3</sup> The etiology of vesical neck obstruction in these men has been reported as secondary to fibrous narrowing of the bladder neck (kaplan1997.pdf).",
+    "preserved": [
+      "quantities",
+      "population/model",
+      "timing"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "cd51b6e996c44e7b66bc5c39",
+    "parse_error": "",
+    "version": 2,
+    "ceiling": 60,
+    "ceiling_exception": false,
+    "revision_of": 1,
+    "mechanical": {
+      "words": 38,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0011-03-Q0011",
+    "status": "WITNESS",
+    "text": "Underactive bladder (UAB) focuses on symptoms that patients find bothersome and raises the profile of the important clinical condition.<sup>[3]</sup> Chapple et al proposed that a definition of a symptom complex for UAB analogous to the ICS definition of overactive bladder (OAB) syndrome would be of potential clinical value: UAB is a symptom complex suggestive of DU (li2018.pdf).",
+    "preserved": [
+      "negation",
+      "quantities",
+      "modality",
+      "population/model"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "ad1d105595a11d779a48a315",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 57,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": true,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0011-03-Q0011",
+    "status": "WITNESS",
+    "text": "Underactive bladder (UAB) focuses on symptoms that patients find bothersome and raises the profile of the important clinical condition.<sup>[3]</sup> Chapple et al proposed that a definition of a symptom complex for UAB analogous to the ICS definition of overactive bladder (OAB) syndrome would be of potential clinical value: UAB is a symptom complex suggestive of DU (li2018.pdf).",
+    "preserved": [
+      "negation",
+      "quantities",
+      "modality",
+      "population/model"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "3309b7587666496f4a349361",
+    "parse_error": "",
+    "version": 2,
+    "ceiling": 60,
+    "ceiling_exception": false,
+    "revision_of": 1,
+    "mechanical": {
+      "words": 57,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": true,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0011-04-Q0011",
+    "status": "WITNESS",
+    "text": "Another study showed lower adiponectin levels in nonobese patients with active CS compared with nonobese controls (18) (Barahona2009_Cushings_Syndrome).",
+    "preserved": [
+      "quantities",
+      "population/model"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "763655433b98cbe4fc6e2869",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 18,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0012-01-Q0012",
+    "status": "WITNESS",
+    "text": "Secondary Outcomes The results in terms of the severity of pelvic floor disorders and the quality of life and its relation to sexual health outcomes of the included studies are shown in detail in Table 6. **Table 6.** Results Secondary outcomes: Symptomatic Severity–Quality of life and direct or indirect relationship with sexual health outcomes (life-15-00613.pdf).",
+    "preserved": [
+      "negation",
+      "quantities",
+      "modality",
+      "timing"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "dd92697017f0709749ab1652",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 55,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": true,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0012-01-Q0012",
+    "status": "WITNESS",
+    "text": "Secondary Outcomes The results in terms of the severity of pelvic floor disorders and the quality of life and its relation to sexual health outcomes of the included studies are shown in detail in Table 6. **Table 6.** Results Secondary outcomes: Symptomatic Severity–Quality of life and direct or indirect relationship with sexual health outcomes (life-15-00613.pdf).",
+    "preserved": [
+      "negation",
+      "quantities",
+      "modality",
+      "timing"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "31e9f208ba7055d741fe74e1",
+    "parse_error": "",
+    "version": 2,
+    "ceiling": 60,
+    "ceiling_exception": false,
+    "revision_of": 1,
+    "mechanical": {
+      "words": 55,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": true,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0012-02-Q0012",
+    "status": "WITNESS",
+    "text": "Underactive bladder (UAB) focuses on symptoms that patients find bothersome and raises the profile of the important clinical condition.<sup>[3]</sup> Chapple et al proposed that a definition of a symptom complex for UAB analogous to the ICS definition of overactive bladder (OAB) syndrome would be of potential clinical value: UAB is a symptom complex suggestive of DU (li2018.pdf).",
+    "preserved": [
+      "negation",
+      "quantities",
+      "modality",
+      "population/model"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "f8982aa0d9c01e492b4c178d",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 57,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": true,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0012-02-Q0012",
+    "status": "WITNESS",
+    "text": "Underactive bladder (UAB) focuses on symptoms that patients find bothersome and raises the profile of the important clinical condition.<sup>[3]</sup> Chapple et al proposed that a definition of a symptom complex for UAB analogous to the ICS definition of overactive bladder (OAB) syndrome would be of potential clinical value: UAB is a symptom complex suggestive of DU (li2018.pdf).",
+    "preserved": [
+      "negation",
+      "quantities",
+      "modality",
+      "population/model"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "45fe93bab51c6ef2fc156015",
+    "parse_error": "",
+    "version": 2,
+    "ceiling": 60,
+    "ceiling_exception": false,
+    "revision_of": 1,
+    "mechanical": {
+      "words": 57,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": true,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0012-03-Q0012",
+    "status": "WITNESS",
+    "text": "This study, which falls into Scenario 1, suggests that we should strive to increase adherence to see if we could achieve better results in terms of effectiveness (life-15-00613.pdf).",
+    "preserved": [
+      "quantities",
+      "modality"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "2d6c2d5cba94316a40dd9403",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 28,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0012-04-Q0012",
+    "status": "WITNESS",
+    "text": "Introduction Detrusor underactivity (DU) is a form of common lower urinary tract dysfunction (LUTD) that occurs in approximately 20% to 25% of all patients with lower urinary tract symptoms (LUTS).<sup>[1]</sup> Although the International Continence Society (ICS) standardization report defines DU as “a contraction of reduced strength and/or duration (li2018.pdf).",
+    "preserved": [
+      "negation",
+      "quantities",
+      "population/model"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "56ff66a403f173f189bdebb4",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 49,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": true,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0012-04-Q0012",
+    "status": "WITNESS",
+    "text": "Introduction Detrusor underactivity (DU) is a form of common lower urinary tract dysfunction (LUTD) that occurs in approximately 20% to 25% of all patients with lower urinary tract symptoms (LUTS).<sup>[1]</sup> Although the International Continence Society (ICS) standardization report defines DU as “a contraction of reduced strength and/or duration (li2018.pdf).",
+    "preserved": [
+      "negation",
+      "quantities",
+      "population/model"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "1b5d8c99c271ffd0ebe7270b",
+    "parse_error": "",
+    "version": 2,
+    "ceiling": 60,
+    "ceiling_exception": false,
+    "revision_of": 1,
+    "mechanical": {
+      "words": 49,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": true,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0013-01-Q0013",
+    "status": "WITNESS",
+    "text": "Conclusions The results appear to indicate, with a low level of certainty of evidence, that people with pelvic floor disorders show high rates of adherence to pelvic floor muscle exercise in the short term and experience an improved quality of life with a high level of certainty of evidence (life-15-00613.pdf).",
+    "preserved": [
+      "modality"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "56182f19e68ef530dfe82641",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 50,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0013-02-Q0013",
+    "status": "WITNESS",
+    "text": "Pelvic floor muscle training (hereafter PFMT) is a therapy to improve endurance, strength, power, relaxation, or a combination of these, and because of its effectiveness is considered the first line of treatment for stress UI in women [2,6,16,17], and in men [18] (life-15-00613.pdf).",
+    "preserved": [
+      "quantities",
+      "population/model"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "0419228ac35e592ab32924ce",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 43,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0013-03-Q0013",
+    "status": "WITNESS",
+    "text": "There is evidence from preclinical data that the sequelae of events provoked by endotoxin can be overcome, at least partially, by oxpentifylline.<sup>22</sup> This drug inhibits various leucocyte functions after activation by different pathophysiological stimuli in vitro.<sup>13,23,24</sup> In vivo (zabel1989.pdf).",
+    "preserved": [
+      "quantities",
+      "modality",
+      "population/model",
+      "timing"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "a66af0494708af849e00a687",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 39,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0013-03-Q0013",
+    "status": "WITNESS",
+    "text": "There is evidence from preclinical data that the sequelae of events provoked by endotoxin can be overcome, at least partially, by oxpentifylline.<sup>22</sup> This drug inhibits various leucocyte functions after activation by different pathophysiological stimuli in vitro.<sup>13,23,24</sup> In vivo (zabel1989.pdf).",
+    "preserved": [
+      "quantities",
+      "modality",
+      "population/model",
+      "timing"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "25c7471a4361076449e074d3",
+    "parse_error": "",
+    "version": 2,
+    "ceiling": 60,
+    "ceiling_exception": false,
+    "revision_of": 1,
+    "mechanical": {
+      "words": 39,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0013-04-Q0013",
+    "status": "WITNESS",
+    "text": "To our knowledge, this study represents one of the first pilot clinical investigations to assess the adjunctive role of PTX in UC, integrating both clinical efficacy endpoints (PMS and IBDQ-32) and mechanistic inflammatory biomarkers such as fecal calprotectin, ESR, and TNF- $\\alpha$ (pharmaceuticals-19-00552.pdf).",
+    "preserved": [
+      "quantities"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "c95c335a12241bdd8552e5c9",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 43,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0014-01-Q0014",
+    "status": "WITNESS",
+    "text": "In one large study including 138 men with refractory CPPS, 72% reported marked or moderate improvement as measured by NIH-CPSI scores (masterson2017.pdf).",
+    "preserved": [
+      "quantities",
+      "population/model"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "23333dfe6536e61e0ed44ecd",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 22,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0014-02-Q0014",
+    "status": "WITNESS",
+    "text": "Duration from initial evaluation to tenth visit i.e., the longer the interval of therapy appeared to be associated with better response. ## Discussion A comprehensive PFPT program that includes myofascial release, therapeutic exercises, biofeedback and neuromodulation improves symptoms as measured on the GUPI in men with idiopathic CPPS (masterson2017.pdf).",
+    "preserved": [
+      "population/model"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "3b117ed54d1105a499671eeb",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 49,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0014-03-Q0014",
+    "status": "WITNESS",
+    "text": "Comparison of median (IQR) scores on LURN-29 for elite athletes with vs without PVD or dyspareunia** | | All elite athletes (n=67) | Athletes with PVD or dyspareunia (n=11) | Athletes without PVD or dyspareunia (n=56) | Mann-Whitney test<sup>1</sup> result | |-------------------------------------|---------------------------|-----------------------------------------|--------------------------------------------|--------------------------------------| | Total LURN-29 (max 100) | 14 (9-21) | 20 (11-27) | 13 (7-18) | <b>p = (MP75-18-RATES-AND-ADHERENCE-TO-PELVIC-FLOOR-PHYSICAL-THERAPY-FOR-MALE-PATIENTS-WITH-BENIGN.pdf).",
+    "preserved": [
+      "negation",
+      "quantities",
+      "modality"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "d72d715d5c1ed3e83a626915",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 60,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0014-03-Q0014",
+    "status": "WITNESS",
+    "text": "Comparison of median (IQR) scores on LURN-29 for elite athletes with vs without PVD or dyspareunia** | | All elite athletes (n=67) | Athletes with PVD or dyspareunia (n=11) | Athletes without PVD or dyspareunia (n=56) | Mann-Whitney test<sup>1</sup> result | |-------------------------------------|---------------------------|-----------------------------------------|--------------------------------------------|--------------------------------------| | Total LURN-29 (max 100) | 14 (9-21) | 20 (11-27) | 13 (7-18) | <b>p = (MP75-18-RATES-AND-ADHERENCE-TO-PELVIC-FLOOR-PHYSICAL-THERAPY-FOR-MALE-PATIENTS-WITH-BENIGN.pdf).",
+    "preserved": [
+      "negation",
+      "quantities",
+      "modality"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "b479c103566a4893ea20b39c",
+    "parse_error": "",
+    "version": 2,
+    "ceiling": 60,
+    "ceiling_exception": false,
+    "revision_of": 1,
+    "mechanical": {
+      "words": 60,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0014-04-Q0014",
+    "status": "WITNESS",
+    "text": "Notably, individuals with higher DII scores exhibited a corresponding decrease in UFR levels ( $\\beta = -0.03$ ; 95% CI: [-0.04--0.01]) (MP75-18-RATES-AND-ADHERENCE-TO-PELVIC-FLOOR-PHYSICAL-THERAPY-FOR-MALE-PATIENTS-WITH-BENIGN.pdf).",
+    "preserved": [
+      "quantities"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "0fd53aad18af2c782628c46b",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 22,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0015-01-Q0015",
+    "status": "WITNESS",
+    "text": "Casola\\*, Columbus, OH **INTRODUCTION AND OBJECTIVE:** Male patients suffering from benign urological conditions including lower urinary tract symptoms, overactive bladder, pelvic floor dysfunction, and testicular/groin pain may benefit from pelvic floor physical therapy (PT), but the rates at which patients receive referrals for these conditions, and at what rate they follow through with those referrals is unknown (MP75-18-RATES-AND-ADHERENCE-TO-PELVIC-FLOOR-PHYSICAL-THERAPY-FOR-MALE-PATIENTS-WITH-BENIGN.pdf).",
+    "preserved": [
+      "modality",
+      "population/model"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "38e11dba53eda8d469ee91a0",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 58,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0015-02-Q0015",
+    "status": "WITNESS",
+    "text": "Based on studies showing elite female athletes are prone to pelvic floor dysfunction evidenced by higher rates of urinary and fecal incontinence and pelvic organ prolapse (Louis-Charles 2019), we hypothesized that elite athletes may also be at increased risk of pelvic floor hypertonicity (MP75-18-RATES-AND-ADHERENCE-TO-PELVIC-FLOOR-PHYSICAL-THERAPY-FOR-MALE-PATIENTS-WITH-BENIGN.pdf).",
+    "preserved": [
+      "quantities",
+      "modality"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "4433d955dec45ec68ba68320",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 44,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0015-03-Q0015",
+    "status": "WITNESS",
+    "text": "This eventuates in BOO, which shows voiding dysfunction.<sup>18</sup> The clinical presentation is in the form of LUTS, including weak urinary stream, urgency, nocturia, urinary retention, straining, and frequency.<sup>19</sup> Currently, several drug modalities are recommended to treat the symptoms of BPH, including 5-alpha reductase inhibitors, $\\alpha$ 1-adrenoceptor antagonists (Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf).",
+    "preserved": [
+      "quantities"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "f1948e2eb0356b58391d5b43",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 48,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0015-03-Q0015",
+    "status": "WITNESS",
+    "text": "This eventuates in BOO, which shows voiding dysfunction.<sup>18</sup> The clinical presentation is in the form of LUTS, including weak urinary stream, urgency, nocturia, urinary retention, straining, and frequency.<sup>19</sup> Currently, several drug modalities are recommended to treat the symptoms of BPH, including 5-alpha reductase inhibitors, $\\alpha$ 1-adrenoceptor antagonists (Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf).",
+    "preserved": [
+      "quantities"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "55a65acf208031b0c7fbf09d",
+    "parse_error": "",
+    "version": 2,
+    "ceiling": 60,
+    "ceiling_exception": false,
+    "revision_of": 1,
+    "mechanical": {
+      "words": 48,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0015-04-Q0015",
+    "status": "WITNESS",
+    "text": "The etiology of diabetic bladder dysfunction is multifactorial; both the myogenic and neurogenic effects of diabetic cystopathy cause a decrease in bladder sensation and impairment in voiding function [39] (ladi-seyedian2017.pdf).",
+    "preserved": [
+      "quantities"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "4debf2058e5ae2ce0e04aabd",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 30,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0016-01-Q0016",
+    "status": "WITNESS",
+    "text": "for UAB was recently proposed by an expert consensus group: “...a symptom complex suggestive of detrusor underactivity and is usually characterised by prolonged urination time with or without a sensation of incomplete bladder emptying, usually with hesitancy, reduced sensation on filling, and a slow stream”<sup>2</sup> (osman2018.pdf).",
+    "preserved": [
+      "negation",
+      "quantities"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "964bf992528eea6b5728671b",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 46,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0016-02-Q0016",
+    "status": "WITNESS",
+    "text": "Rosier PF, de Wildt MJ, de la Rosette JJ, Debruyne FM, et al.: Analysis of maximum detrusor contraction power in relation to bladder emptying in patients with lower urinary tract symptoms and benign prostatic enlargement. *J Urol.* 1995; **154** (6): 2137-42 [PubMed Abstract](#) 3 (osman2018.pdf).",
+    "preserved": [
+      "quantities",
+      "population/model"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "030f515e1bea4ff1ad899509",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 45,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0016-03-Q0016",
+    "status": "WITNESS",
+    "text": "Underactive bladder (UAB) focuses on symptoms that patients find bothersome and raises the profile of the important clinical condition.<sup>[3]</sup> Chapple et al proposed that a definition of a symptom complex for UAB analogous to the ICS definition of overactive bladder (OAB) syndrome would be of potential clinical value: UAB is a symptom complex suggestive of DU (li2018.pdf).",
+    "preserved": [
+      "negation",
+      "quantities",
+      "modality",
+      "population/model"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "77c4276ac4e4d3591cda8b18",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 57,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": true,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0016-03-Q0016",
+    "status": "WITNESS",
+    "text": "Underactive bladder (UAB) focuses on symptoms that patients find bothersome and raises the profile of the important clinical condition.<sup>[3]</sup> Chapple et al proposed that a definition of a symptom complex for UAB analogous to the ICS definition of overactive bladder (OAB) syndrome would be of potential clinical value: UAB is a symptom complex suggestive of DU (li2018.pdf).",
+    "preserved": [
+      "negation",
+      "quantities",
+      "modality",
+      "population/model"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "b983047d1acbb526ea387bfe",
+    "parse_error": "",
+    "version": 2,
+    "ceiling": 60,
+    "ceiling_exception": false,
+    "revision_of": 1,
+    "mechanical": {
+      "words": 57,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": true,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0016-04-Q0016",
+    "status": "WITNESS",
+    "text": "This method could protect the renal function and improve patients' quality of life [6,129] (ladi-seyedian2017.pdf).",
+    "preserved": [
+      "quantities",
+      "modality",
+      "population/model"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "50ffb9f4dbcad8468da0944a",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 15,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0017-01-Q0017",
+    "status": "WITNESS",
+    "text": "However, studies with better methodological quality are needed to obtain a higher level of scientific evidence and to determine the optimal current modality, type, and parameters for each type of UI and OAB [16, 25] (s00345-024-04974-7.pdf).",
+    "preserved": [
+      "quantities"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "29d7f27d5fbc6c6a38a70a34",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 36,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0017-02-Q0017",
+    "status": "WITNESS",
+    "text": "Noninvasive clinical indicators of detrusor underactivity in adult men: results of a pilot study. *J Urol* 2014; 191 (Suppl.):E887. ■ Description of ultrasound detrusor wall thickness measurement together with bladder capacity for the safe diagnosis of detrusor underactivity (rademakers2016.pdf).",
+    "preserved": [
+      "quantities",
+      "population/model"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "db2adc1a1d8e55b9f7bfb464",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 39,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0017-03-Q0017",
+    "status": "WITNESS",
+    "text": "indicators of detrusor underactivity in adult men: results of a pilot study. *J Urol* 2014; 191 (Suppl.):E887. ■ Description of ultrasound detrusor wall thickness measurement together with bladder capacity for the safe diagnosis of detrusor underactivity (rademakers2016.pdf).",
+    "preserved": [
+      "quantities",
+      "population/model"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "137f8ce8ed097b1c3b23f4aa",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 37,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0017-04-Q0017",
+    "status": "WITNESS",
+    "text": "In comparing the parameters of the micturition diary, we found the following differences compared to other studies: a decrease in the number of voids per 24 h in the experimental group compared to the control group (– 1.95 vs (s00345-024-04974-7.pdf).",
+    "preserved": [
+      "quantities",
+      "population/model"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "e38da551873fa04c0eed632f",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 40,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0017-04-Q0017",
+    "status": "WITNESS",
+    "text": "In comparing the parameters of the micturition diary, we found the following differences compared to other studies: a decrease in the number of voids per 24 h in the experimental group compared to the control group (– 1.95 vs (s00345-024-04974-7.pdf).",
+    "preserved": [
+      "quantities",
+      "population/model"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "0f7fba608a0905a65cc94db2",
+    "parse_error": "",
+    "version": 2,
+    "ceiling": 60,
+    "ceiling_exception": false,
+    "revision_of": 1,
+    "mechanical": {
+      "words": 40,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0018-01-Q0018",
+    "status": "WITNESS",
+    "text": "In comparing the parameters of the micturition diary, we found the following differences compared to other studies: a decrease in the number of voids per 24 h in the experimental group compared to the control group (– 1.95 vs (s00345-024-04974-7.pdf).",
+    "preserved": [
+      "quantities",
+      "population/model"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "b1a68f253e9866929041c505",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 40,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0018-01-Q0018",
+    "status": "WITNESS",
+    "text": "In comparing the parameters of the micturition diary, we found the following differences compared to other studies: a decrease in the number of voids per 24 h in the experimental group compared to the control group (– 1.95 vs (s00345-024-04974-7.pdf).",
+    "preserved": [
+      "quantities",
+      "population/model"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "48730707c949e8dd8c71a314",
+    "parse_error": "",
+    "version": 2,
+    "ceiling": 60,
+    "ceiling_exception": false,
+    "revision_of": 1,
+    "mechanical": {
+      "words": 40,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0018-02-Q0018",
+    "status": "WITNESS",
+    "text": "However, studies with better methodological quality are needed to obtain a higher level of scientific evidence and to determine the optimal current modality, type, and parameters for each type of UI and OAB [16, 25] (s00345-024-04974-7.pdf).",
+    "preserved": [
+      "quantities"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "00df6ffdabc2ebf091ffffe5",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 36,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0018-03-Q0018",
+    "status": "WITNESS",
+    "text": "Deformed cells were observed in the single pentoxifylline-treated rat with glomerular congestion; this finding is consistent with the hemorheologic effects of pentoxifylline on cell deformability (2) (luke1989.pdf).",
+    "preserved": [
+      "quantities",
+      "population/model"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "443eb3f894de4244809abbb1",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 27,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0018-04-Q0018",
+    "status": "WITNESS",
+    "text": "The significant differences in education level and hypertension prevalence between groups could have influenced outcomes (11255_2025_Article_4454.pdf).",
+    "preserved": [
+      "modality"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "ce3b31e5b364c02a47364e71",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 16,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0019-01-Q0019",
+    "status": "WITNESS",
+    "text": "(2011) | Prospective cohort study<br>N = 116 | Men with CP/PPS<br>PFPT: 48 (19–80) | PFPT<br>Internal manual techniques<br>PF home exercises<br>Psychologist daily instructions on reducing nervous system | VAS pelvic pain | Pre-to post treatment<br>($P < .001$) | (continued) **Table 2.** Continued | Study | Design/N | Population/ mean age SD/ range) | Interventions/duration | Outcome Measures (muscle tone/ function (vanreijn-baggen2022.pdf).",
+    "preserved": [
+      "negation",
+      "quantities",
+      "population/model",
+      "timing"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "3463768c486cf814480cf1b5",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 59,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": true,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0019-01-Q0019",
+    "status": "WITNESS",
+    "text": "(2011) | Prospective cohort study<br>N = 116 | Men with CP/PPS<br>PFPT: 48 (19–80) | PFPT<br>Internal manual techniques<br>PF home exercises<br>Psychologist daily instructions on reducing nervous system | VAS pelvic pain | Pre-to post treatment<br>($P < .001$) | (continued) **Table 2.** Continued | Study | Design/N | Population/ mean age SD/ range) | Interventions/duration | Outcome Measures (muscle tone/ function (vanreijn-baggen2022.pdf).",
+    "preserved": [
+      "negation",
+      "quantities",
+      "population/model",
+      "timing"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "3b67ecd494f0f0b4ce7ffa65",
+    "parse_error": "",
+    "version": 2,
+    "ceiling": 60,
+    "ceiling_exception": false,
+    "revision_of": 1,
+    "mechanical": {
+      "words": 59,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": true,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0019-02-Q0019",
+    "status": "WITNESS",
+    "text": "Currently, the International Urogynecological Association (IUGA)/International Continence Society (ICS) defines the term “non-neurogenic hypertonicity” as an increase in muscle tone related to the contractile or viscoelastic components that can be associated with either elevated contractile activity and/or passive stiffness in the muscle.<sup>13</sup> In addition (vanreijn-baggen2022.pdf).",
+    "preserved": [
+      "quantities",
+      "modality",
+      "timing"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "cbaef9272edcd8669bb1a240",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 45,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0019-02-Q0019",
+    "status": "WITNESS",
+    "text": "Currently, the International Urogynecological Association (IUGA)/International Continence Society (ICS) defines the term “non-neurogenic hypertonicity” as an increase in muscle tone related to the contractile or viscoelastic components that can be associated with either elevated contractile activity and/or passive stiffness in the muscle.<sup>13</sup> In addition (vanreijn-baggen2022.pdf).",
+    "preserved": [
+      "quantities",
+      "modality",
+      "timing"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "a8d40d39ac01a00abe01975c",
+    "parse_error": "",
+    "version": 2,
+    "ceiling": 60,
+    "ceiling_exception": false,
+    "revision_of": 1,
+    "mechanical": {
+      "words": 45,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0019-03-Q0019",
+    "status": "WITNESS",
+    "text": "The 2015 Beers Criteria, an updated list by the American Geriatric Society which aims to catalog medications that may cause side effects in the older adult population due to physiological effects of aging based on evidence-based methodology, recommended than many of the anticholinergics used to treat OAB be avoided in older adults [18] (bortnick2019.pdf).",
+    "preserved": [
+      "quantities",
+      "modality"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "43da53962aaa194f78ec3400",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 54,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0019-04-Q0019",
+    "status": "WITNESS",
+    "text": "An integrated analysis of 12 phase 2–3 randomized trials in 2017 by Oelke et al. compared the efficacy and safety of 5 mg tadalafil in men less than 75 to men greater than 75 and found that tadalafil was not statistically significantly better than placebo for men greater than 75 (bortnick2019.pdf).",
+    "preserved": [
+      "negation",
+      "quantities",
+      "population/model"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "94f05a60af0992caff1c5452",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 51,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0020-01-Q0020",
+    "status": "WITNESS",
+    "text": "The medical therapy of prostate symptoms (MTOPS) trial studied the combination of finasteride (alpha-blocker) with doxazosin (5-alpha reductase inhibitor) in 3047 men with average age 62.6 years (SD 7.3 years) and found that the combination improved voiding symptoms and maximum urinary flow rate more than either agent alone (bortnick2019.pdf).",
+    "preserved": [
+      "quantities",
+      "population/model"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "7f016ab26cce2d87c65137d0",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 49,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0020-02-Q0020",
+    "status": "WITNESS",
+    "text": "overactive bladder symptoms and found that combination therapy resulted in an improved number of nocturia episodes, daytime frequency, and urgency episodes (as measured by bladder diary) after 12 weeks of treatment [25] (bortnick2019.pdf).",
+    "preserved": [
+      "quantities",
+      "timing"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "74ed77815e7d13bc018e63a1",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 33,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0020-03-Q0020",
+    "status": "WITNESS",
+    "text": "finding suggests that PTX may exert an anti-inflammatory effect sufficient to translate into measurable symptom relief (pharmaceuticals-19-00552.pdf).",
+    "preserved": [
+      "modality"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "27e163b1e360648721e79f31",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 17,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0020-04-Q0020",
+    "status": "WITNESS",
+    "text": "These findings align with preclinical studies in experimental colitis models, where PTX administration markedly reduced TNF- $\\alpha$ concentrations and ameliorated histopathological inflammation (pharmaceuticals-19-00552.pdf).",
+    "preserved": [
+      "assertion"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "96f4bfa2a606fd684a9f0c41",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 23,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0021-01-Q0021",
+    "status": "WITNESS",
+    "text": "In 2006, the TIMES trial was a randomized, double-blind, placebo controlled trial of 879 men aged 40–92 that looked at the combination of alpha-blockers with anticholinergics as compared with either alone or placebo for the treatment of LUTS with OAB symptoms and found that combination therapy resulted in an improved number of nocturia episodes, daytime frequency (bortnick2020.pdf).",
+    "preserved": [
+      "quantities",
+      "population/model",
+      "timing"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "d4a99b2b20f918343a604bd1",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 57,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0021-01-Q0021",
+    "status": "WITNESS",
+    "text": "In 2006, the TIMES trial was a randomized, double-blind, placebo controlled trial of 879 men aged 40–92 that looked at the combination of alpha-blockers with anticholinergics as compared with either alone or placebo for the treatment of LUTS with OAB symptoms and found that combination therapy resulted in an improved number of nocturia episodes, daytime frequency (bortnick2020.pdf).",
+    "preserved": [
+      "quantities",
+      "population/model",
+      "timing"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "d336b0857f786a959d16beb6",
+    "parse_error": "",
+    "version": 2,
+    "ceiling": 60,
+    "ceiling_exception": false,
+    "revision_of": 1,
+    "mechanical": {
+      "words": 57,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0021-02-Q0021",
+    "status": "WITNESS",
+    "text": "A prospective, randomized, and controlled clinical trial by Gao et al. compared improvement of IPSS, QoL, peak urinary flow, PVR urine volume, prostate-specific antigen (PSA) level, and prostate volume at 1-, 3-, 6-, 12- (bortnick2020.pdf).",
+    "preserved": [
+      "quantities",
+      "population/model",
+      "timing"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "d369d4751ba9190d14973dff",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 35,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0021-02-Q0021",
+    "status": "WITNESS",
+    "text": "A prospective, randomized, and controlled clinical trial by Gao et al. compared improvement of IPSS, QoL, peak urinary flow, PVR urine volume, prostate-specific antigen (PSA) level, and prostate volume at 1-, 3-, 6-, 12- (bortnick2020.pdf).",
+    "preserved": [
+      "quantities",
+      "population/model",
+      "timing"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "24fa71858c6fe70216415368",
+    "parse_error": "",
+    "version": 2,
+    "ceiling": 60,
+    "ceiling_exception": false,
+    "revision_of": 1,
+    "mechanical": {
+      "words": 35,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0021-03-Q0021",
+    "status": "WITNESS",
+    "text": "Barie, MD, New York:** I wonder if you could comment on the temporal relationships between the timing of intervention and the fact that the physiologic responses you observed became meaningful statistically at 7 to as many as 14 days thereafter? (staubach1998.pdf).",
+    "preserved": [
+      "quantities",
+      "modality",
+      "timing"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "05236d3e4794c87507c3db93",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 41,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0021-04-Q0021",
+    "status": "WITNESS",
+    "text": "This trend, however, was not significant in this small trial, but further studies with enrollment of a higher number of patients are needed to evaluate improvement of survival. lating TNF-α could be demonstrated in contrast with experimental human studies<sup>11</sup> and animal studies in which a dose-dependent effect on TNF-α activity was shown.<sup>17</sup> In comparison with this study (staubach1998.pdf).",
+    "preserved": [
+      "negation",
+      "quantities",
+      "modality",
+      "population/model",
+      "timing"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "fdf66899a2e99babdb1690ff",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 58,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0021-04-Q0021",
+    "status": "WITNESS",
+    "text": "This trend, however, was not significant in this small trial, but further studies with enrollment of a higher number of patients are needed to evaluate improvement of survival. lating TNF-α could be demonstrated in contrast with experimental human studies<sup>11</sup> and animal studies in which a dose-dependent effect on TNF-α activity was shown.<sup>17</sup> In comparison with this study (staubach1998.pdf).",
+    "preserved": [
+      "negation",
+      "quantities",
+      "modality",
+      "population/model",
+      "timing"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "3c2cf7d993946c1f6a862744",
+    "parse_error": "",
+    "version": 2,
+    "ceiling": 60,
+    "ceiling_exception": false,
+    "revision_of": 1,
+    "mechanical": {
+      "words": 58,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0022-01-Q0022",
+    "status": "WITNESS",
+    "text": "However, early in the study, while subjects received intravenous infusion, the pentoxifylline group had significantly higher level of consciousness, motor strength, cranial nerve function, and total neurologic deficit scores than did the control group; CBF was not measured (bowton1989.pdf).",
+    "preserved": [
+      "negation"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "dad4cfeab1c34160584c170b",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 39,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0022-02-Q0022",
+    "status": "WITNESS",
+    "text": "There was a trend toward improved level of consciousness in the pentoxifylline group, though this difference did not achieve significance (bowton1989.pdf).",
+    "preserved": [
+      "negation"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "8b035189e88ee153023b83be",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 21,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0022-03-Q0022",
+    "status": "WITNESS",
+    "text": "Our observation of increased TNF/actin ratios in 8 of 15 patients (53%) is consistent with other investigators who determined that 50% of 226 serum samples from cancer patients had increased TNF as measured by an enzyme-linked immunosorbent assay (dezube1993.pdf).",
+    "preserved": [
+      "quantities",
+      "population/model"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "9634c854ab938e2fdf3579fb",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 39,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0022-03-Q0022",
+    "status": "WITNESS",
+    "text": "Our observation of increased TNF/actin ratios in 8 of 15 patients (53%) is consistent with other investigators who determined that 50% of 226 serum samples from cancer patients had increased TNF as measured by an enzyme-linked immunosorbent assay (dezube1993.pdf).",
+    "preserved": [
+      "quantities",
+      "population/model"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "0b295bb73c3abe7e28010bf1",
+    "parse_error": "",
+    "version": 2,
+    "ceiling": 60,
+    "ceiling_exception": false,
+    "revision_of": 1,
+    "mechanical": {
+      "words": 39,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0022-04-Q0022",
+    "status": "WITNESS",
+    "text": "observations – first, not all of our advanced cachectic cancer patients had elevated TNF/actin ratios; second, 2 of our patients had an improvement in well-being, together with a weight gain over the 3-week treatment period even though their initial TNF/actin ratios were not elevated (dezube1993.pdf).",
+    "preserved": [
+      "negation",
+      "quantities",
+      "population/model",
+      "timing"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "0f5ab4b7f5320074f0f21a3d",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 45,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0023-01-Q0023",
+    "status": "WITNESS",
+    "text": "Our observation of increased TNF/actin ratios in 8 of 15 patients (53%) is consistent with other investigators who determined that 50% of 226 serum samples from cancer patients had increased TNF as measured by an enzyme-linked immunosorbent assay (dezube1993.pdf).",
+    "preserved": [
+      "quantities",
+      "population/model"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "dd99a600e05bde45050ad47e",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 39,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0023-01-Q0023",
+    "status": "WITNESS",
+    "text": "Our observation of increased TNF/actin ratios in 8 of 15 patients (53%) is consistent with other investigators who determined that 50% of 226 serum samples from cancer patients had increased TNF as measured by an enzyme-linked immunosorbent assay (dezube1993.pdf).",
+    "preserved": [
+      "quantities",
+      "population/model"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "27f281aa725fa98d56b6825f",
+    "parse_error": "",
+    "version": 2,
+    "ceiling": 60,
+    "ceiling_exception": false,
+    "revision_of": 1,
+    "mechanical": {
+      "words": 39,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0023-02-Q0023",
+    "status": "WITNESS",
+    "text": "The excessive levels of tumor necrosis factor- $\\alpha$ (TNF)/cachectin reported in 50% of cancer patients exhibiting clinically active disease may therefore mediate, at least in part, the cachexia associated with malignancy (dezube1993.pdf).",
+    "preserved": [
+      "quantities",
+      "modality",
+      "population/model"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "6a9bfaec80c4b3e367cb3987",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 32,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0023-03-Q0023",
+    "status": "WITNESS",
+    "text": "[2,3] In this study we add to existing knowledge reported from the RCT, specifically investigating diary entries completed by women in response to their exercise prescription: findings not previously reported (stokes2022.pdf).",
+    "preserved": [
+      "negation",
+      "quantities"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "010534221787a9e97053e514",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 31,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0023-04-Q0023",
+    "status": "WITNESS",
+    "text": "In conclusion, our data suggest that the utility of aminophylline for improving early pathologic manifestations of sepsis should be questioned (fakioglu2004.pdf).",
+    "preserved": [
+      "modality"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "72355c0933e38361e92dde78",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 21,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0024-01-Q0024",
+    "status": "WITNESS",
+    "text": "The decrease of IL-6 levels could be explained by binding of IL-6 to soluble receptors, thus being no longer detectable in the bioassay (immunology00076-0102.pdf).",
+    "preserved": [
+      "negation",
+      "quantities",
+      "modality"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "5f2c535359ff7b60e0777d3d",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 24,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0024-02-Q0024",
+    "status": "WITNESS",
+    "text": "A meta-analysis found positive beneficial effects of acupuncture compared with a sham control for short- and medium-term follow-up in both IPSS and urine flow rates in some studies; however, when combining the studies for more statistical power, the benefits were less clear.<sup>12</sup> Physical therapists with specialized training and certification in pelvic health can incorporate certain bladder training techniques (fdp03812573_1.pdf).",
+    "preserved": [
+      "quantities"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "d244ccec0f8cd0a701ba529a",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 59,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0024-03-Q0024",
+    "status": "WITNESS",
+    "text": "These include voiding positional changes (double voiding and postvoid urethral milking) and timed voiding.<sup>13,14</sup> These interventions often address etiologies of LUTS for which medical therapies are not effective as the sole treatment option (fdp03812573_1.pdf).",
+    "preserved": [
+      "negation",
+      "quantities"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "9bc70a0238236e8a34f878a5",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 34,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0024-04-Q0024",
+    "status": "WITNESS",
+    "text": "or to attenuate the release of tumour necrosis factor- $\\alpha$ (TNF- $\\alpha$ ) induced by lipopolysaccharide (LPS) *in vitro* and *in vivo*.<sup>2–4</sup> Studies on murine macrophage cell lines revealed that this effect was exerted at the transcriptional level.<sup>5,6</sup> Since TNF- $\\alpha$ is an important inflammatory mediator and obviously pathogenically important in a variety of disorders (immunology00076-0102.pdf).",
+    "preserved": [
+      "quantities",
+      "population/model"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "7d4abb46618b965ed4b71607",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 56,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0024-04-Q0024",
+    "status": "WITNESS",
+    "text": "or to attenuate the release of tumour necrosis factor- $\\alpha$ (TNF- $\\alpha$ ) induced by lipopolysaccharide (LPS) *in vitro* and *in vivo*.<sup>2–4</sup> Studies on murine macrophage cell lines revealed that this effect was exerted at the transcriptional level.<sup>5,6</sup> Since TNF- $\\alpha$ is an important inflammatory mediator and obviously pathogenically important in a variety of disorders (immunology00076-0102.pdf).",
+    "preserved": [
+      "quantities",
+      "population/model"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "1d8ea3df8006f0e2ab9ca513",
+    "parse_error": "",
+    "version": 2,
+    "ceiling": 60,
+    "ceiling_exception": false,
+    "revision_of": 1,
+    "mechanical": {
+      "words": 56,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0025-01-Q0025",
+    "status": "WITNESS",
+    "text": "or to attenuate the release of tumour necrosis factor- $\\alpha$ (TNF- $\\alpha$ ) induced by lipopolysaccharide (LPS) *in vitro* and *in vivo*.<sup>2–4</sup> Studies on murine macrophage cell lines revealed that this effect was exerted at the transcriptional level.<sup>5,6</sup> Since TNF- $\\alpha$ is an important inflammatory mediator and obviously pathogenically important in a variety of disorders (immunology00076-0102.pdf).",
+    "preserved": [
+      "quantities",
+      "population/model"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "89b438222425c0e0661514fb",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 56,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0025-01-Q0025",
+    "status": "WITNESS",
+    "text": "or to attenuate the release of tumour necrosis factor- $\\alpha$ (TNF- $\\alpha$ ) induced by lipopolysaccharide (LPS) *in vitro* and *in vivo*.<sup>2–4</sup> Studies on murine macrophage cell lines revealed that this effect was exerted at the transcriptional level.<sup>5,6</sup> Since TNF- $\\alpha$ is an important inflammatory mediator and obviously pathogenically important in a variety of disorders (immunology00076-0102.pdf).",
+    "preserved": [
+      "quantities",
+      "population/model"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "51c42c9b052ec89232af2140",
+    "parse_error": "",
+    "version": 2,
+    "ceiling": 60,
+    "ceiling_exception": false,
+    "revision_of": 1,
+    "mechanical": {
+      "words": 56,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0025-02-Q0025",
+    "status": "WITNESS",
+    "text": "For example, it has been reported that IL-6 release is not affected by PTX,<sup>3</sup> while others have observed even an enhancing effect.<sup>17</sup> IL-1, IL-6 and IL-8 represent important inflammatory mediators comparable to TNF- $\\alpha$ ,<sup>21</sup> thus we were interested to study the effect of PTX on the release of these mediators by human peripheral blood mononuclear cells (PBMC) (immunology00076-0102.pdf).",
+    "preserved": [
+      "negation",
+      "quantities",
+      "population/model"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "2cd11e4c8fa60419b92dbfae",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 59,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0025-03-Q0025",
+    "status": "WITNESS",
+    "text": "There is evidence from preclinical data that the sequelae of events provoked by endotoxin can be overcome, at least partially, by oxpentifylline.<sup>22</sup> This drug inhibits various leucocyte functions after activation by different pathophysiological stimuli in vitro.<sup>13,23,24</sup> In vivo (zabel1989.pdf).",
+    "preserved": [
+      "quantities",
+      "modality",
+      "population/model",
+      "timing"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "dde67e7d0beaf6d18a527f85",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 39,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0025-03-Q0025",
+    "status": "WITNESS",
+    "text": "There is evidence from preclinical data that the sequelae of events provoked by endotoxin can be overcome, at least partially, by oxpentifylline.<sup>22</sup> This drug inhibits various leucocyte functions after activation by different pathophysiological stimuli in vitro.<sup>13,23,24</sup> In vivo (zabel1989.pdf).",
+    "preserved": [
+      "quantities",
+      "modality",
+      "population/model",
+      "timing"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "d5994e5524a2b8a56e1a8c3b",
+    "parse_error": "",
+    "version": 2,
+    "ceiling": 60,
+    "ceiling_exception": false,
+    "revision_of": 1,
+    "mechanical": {
+      "words": 39,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0025-04-Q0025",
+    "status": "WITNESS",
+    "text": "To our knowledge, this study represents one of the first pilot clinical investigations to assess the adjunctive role of PTX in UC, integrating both clinical efficacy endpoints (PMS and IBDQ-32) and mechanistic inflammatory biomarkers such as fecal calprotectin, ESR, and TNF- $\\alpha$ (pharmaceuticals-19-00552.pdf).",
+    "preserved": [
+      "quantities"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "ca2c0d56dd47461cf526a5f5",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 43,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0026-01-Q0026",
+    "status": "WITNESS",
+    "text": "Contrary to the aforementioned observations in patients with cerebrovascular disease, we did not observe an increase in cerebral blood flow in the territory of the middle cerebral artery (rCBF<sub>mca</sub>) or in global CBF during infusion of 300 mg pentoxifylline in healthy subjects (kruuse2000.pdf).",
+    "preserved": [
+      "negation",
+      "quantities",
+      "population/model",
+      "timing"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "99d70afe1c11546f71bb3356",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 43,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0026-02-Q0026",
+    "status": "WITNESS",
+    "text": "Pentoxifylline has been suggested for use in a variety of medical conditions, and clinical trials in peripheral vascular disease have shown an increase in walking distance and peripheral blood flow after administration (Rudofsky *et al.*, 1989; Schweiger and Ortmeier, 1989) (kruuse2000.pdf).",
+    "preserved": [
+      "quantities",
+      "timing"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "1e65a02aa9cdb11a0a813439",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 41,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0026-03-Q0026",
+    "status": "WITNESS",
+    "text": "Do you have data on the stability of the calcium in these patients, and is it possible that the preferential effects on the cardiopulmonary system may be reflected through a stabilization of calcium levels? **Philip S (staubach1998.pdf).",
+    "preserved": [
+      "modality",
+      "population/model"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "9a2fc5477959d2c7bb6acab0",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 37,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0026-04-Q0026",
+    "status": "WITNESS",
+    "text": "In conclusion, patients who had surgery and achieved remission for CD had higher incidence of new-onset autoimmune disease than age- and sex-matched patients who underwent surgery for NFPA (Nyanyo2024_Cushings_Disease_A).",
+    "preserved": [
+      "population/model"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "a5f264c40fbf94c1d861bfa0",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 29,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0027-01-Q0027",
+    "status": "WITNESS",
+    "text": "Such high concentrations of pentoxifylline increase the resting level of cAMP in unstimulated human neutrophils and monocytes (22) but at lower concentrations (100–500 µmol/l) significant effects of PTX are more easily seen when adenylate cyclase turnover is increased by stimulation with FMLP (18, 38) or Fc receptor engagement (39) (roberts1993.pdf).",
+    "preserved": [
+      "quantities",
+      "population/model"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "cb4d4e81613549f30bb2dab4",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 50,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0027-02-Q0027",
+    "status": "WITNESS",
+    "text": "The study confirmed that PTX at clinically achievable concentration (5–10 μmol/l) attenuated the responses of human neutrophils to chemotactic peptide, whereas it did not inhibit the effect of GM-CSF on neutrophil function even at high concentrations (roberts1993.pdf).",
+    "preserved": [
+      "negation",
+      "quantities",
+      "population/model"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "fecf549b8f6752860c94e662",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 37,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0027-03-Q0027",
+    "status": "WITNESS",
+    "text": "At the cellular level, TNF has significant pleomorphic effects on cells which have been shown to orchestrate inflammatory processes; including endothelial cells, fibroblasts, polymorphonuclear leukocytes, blood monocytes and macrophages, adipocytes, lymphocytes, and osteoclasts (2,7,8) (strieter1988.pdf).",
+    "preserved": [
+      "quantities",
+      "population/model"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "2f94718dac83d20e603a9a28",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 35,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0027-04-Q0027",
+    "status": "WITNESS",
+    "text": "The pharmacologic effects of pentoxifylline may have important implications in clinical disease states where the local and systemic modulation of TNF may be essential for the control of specific inflammatory processes (strieter1988.pdf).",
+    "preserved": [
+      "modality"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "2f06e6ac4b2f67306cdc5fa5",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 32,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0028-01-Q0028",
+    "status": "WITNESS",
+    "text": "At the cellular level, TNF has significant pleomorphic effects on cells which have been shown to orchestrate inflammatory processes; including endothelial cells, fibroblasts, polymorphonuclear leukocytes, blood monocytes and macrophages, adipocytes, lymphocytes, and osteoclasts (2,7,8) (strieter1988.pdf).",
+    "preserved": [
+      "quantities",
+      "population/model"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "dd3960f6270403c32dd18e17",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 35,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0028-02-Q0028",
+    "status": "WITNESS",
+    "text": "As shown in Figure 2, Northern blot analysis demonstrated a reduction in TNF mRNA in response to various concentrations of pentoxifylline (strieter1988.pdf).",
+    "preserved": [
+      "quantities"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "4e627b922a58756928ca8ecd",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 22,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0028-03-Q0028",
+    "status": "WITNESS",
+    "text": "Higher PMS was associated with increased TNF- $\\alpha$ and fecal calprotectin levels and lower IBDQ-32 scores, while higher inflammatory markers were linked to poorer quality of life (pharmaceuticals-19-00552.pdf).",
+    "preserved": [
+      "quantities"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "5949ac0a38b3092aab4fe604",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 28,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0028-04-Q0028",
+    "status": "WITNESS",
+    "text": "In dextran sulfate sodium (DSS)-induced colitis, PTX administration reduced disease activity index, histologic damage, and colonic levels of TNF- $\\alpha$ and malondialdehyde (MDA), a marker of lipid peroxidation [15] (pharmaceuticals-19-00552.pdf).",
+    "preserved": [
+      "quantities"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "034942b6ccf009020c5c0949",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 30,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0029-01-Q0029",
+    "status": "WITNESS",
+    "text": "Duncan M, Hasan A, Berman B: Pentoxifylline and interferons decrease type I and III procollagen mRNA levels in dermal fibroblasts: Evidence for mediation by nuclear factor 1 down-regulation (delanian2003.pdf).",
+    "preserved": [
+      "quantities"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "9b33cf50deb9be25e022cef1",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 29,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0029-02-Q0029",
+    "status": "WITNESS",
+    "text": "fibroblast proliferation and extracellular matrix production<sup>26,27</sup> and increases collagenase activity.<sup>26,27</sup> However, in our experimental pig study, we did not observe any clinical or histologic changes in RIF after 6 months of treatment with PTX alone.<sup>13</sup> The high concentration of PTX necessary to suppress fibroblast collagen synthesis or to increase collagenase activity (delanian2003.pdf).",
+    "preserved": [
+      "negation",
+      "quantities",
+      "modality",
+      "timing"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "6da8854e00aa8b195e64c791",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 52,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0029-03-Q0029",
+    "status": "WITNESS",
+    "text": "VitE is usually considered relatively safe.<sup>24</sup> It may reduce free radical–induced chromosomal damage by increasing the rate of removal of damaged DNA.<sup>30</sup> A recent meta-analysis of various randomized trials in the treatment and prevention of cardiovascular disease found no beneficial or adverse effect of vitE on survival.<sup>31,32</sup> However (delanian2005.pdf).",
+    "preserved": [
+      "negation",
+      "quantities",
+      "modality"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "bfc34113aaf84e55aaa4f502",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 49,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0029-03-Q0029",
+    "status": "WITNESS",
+    "text": "VitE is usually considered relatively safe.<sup>24</sup> It may reduce free radical–induced chromosomal damage by increasing the rate of removal of damaged DNA.<sup>30</sup> A recent meta-analysis of various randomized trials in the treatment and prevention of cardiovascular disease found no beneficial or adverse effect of vitE on survival.<sup>31,32</sup> However (delanian2005.pdf).",
+    "preserved": [
+      "negation",
+      "quantities",
+      "modality"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "4b2f73efa891b1ac2204933f",
+    "parse_error": "",
+    "version": 2,
+    "ceiling": 60,
+    "ceiling_exception": false,
+    "revision_of": 1,
+    "mechanical": {
+      "words": 49,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0029-04-Q0029",
+    "status": "WITNESS",
+    "text": "- Delanian S, Lefaix J-L: The radiation-induced fibro-atrophic process: Therapeutic perspective via the antioxidant pathway. *Radiother Oncol* 73:119-131, 2004 - Hill C, Rodemann H, Hendry J, et al: Normal tissue radiobiology: From the laboratory to the clinic (delanian2005.pdf).",
+    "preserved": [
+      "quantities"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "757a68f0961f5523a8aee961",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 38,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0029-04-Q0029",
+    "status": "WITNESS",
+    "text": "- Delanian S, Lefaix J-L: The radiation-induced fibro-atrophic process: Therapeutic perspective via the antioxidant pathway. *Radiother Oncol* 73:119-131, 2004 - Hill C, Rodemann H, Hendry J, et al: Normal tissue radiobiology: From the laboratory to the clinic (delanian2005.pdf).",
+    "preserved": [
+      "quantities"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "965b48a3e6bb3c253e5a9250",
+    "parse_error": "",
+    "version": 2,
+    "ceiling": 60,
+    "ceiling_exception": false,
+    "revision_of": 1,
+    "mechanical": {
+      "words": 38,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0030-01-Q0030",
+    "status": "WITNESS",
+    "text": "VitE is usually considered relatively safe.<sup>24</sup> It may reduce free radical–induced chromosomal damage by increasing the rate of removal of damaged DNA.<sup>30</sup> A recent meta-analysis of various randomized trials in the treatment and prevention of cardiovascular disease found no beneficial or adverse effect of vitE on survival.<sup>31,32</sup> However (delanian2005.pdf).",
+    "preserved": [
+      "negation",
+      "quantities",
+      "modality"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "aed27b205b917d2b71370f28",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 49,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0030-01-Q0030",
+    "status": "WITNESS",
+    "text": "VitE is usually considered relatively safe.<sup>24</sup> It may reduce free radical–induced chromosomal damage by increasing the rate of removal of damaged DNA.<sup>30</sup> A recent meta-analysis of various randomized trials in the treatment and prevention of cardiovascular disease found no beneficial or adverse effect of vitE on survival.<sup>31,32</sup> However (delanian2005.pdf).",
+    "preserved": [
+      "negation",
+      "quantities",
+      "modality"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "bdd5a3071f6ea63863141582",
+    "parse_error": "",
+    "version": 2,
+    "ceiling": 60,
+    "ceiling_exception": false,
+    "revision_of": 1,
+    "mechanical": {
+      "words": 49,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0030-02-Q0030",
+    "status": "WITNESS",
+    "text": "However, a decrease in DNA strand breaks measured by the comet assay suggests that this combination could interfere with the DNA repair process.<sup>27</sup> Further studies are necessary to understand the immediate and delayed effects of the combined PTX-vitE treatment on irradiated tissues (delanian2005.pdf).",
+    "preserved": [
+      "quantities",
+      "modality"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "f352c9b52bc301a4dc61a93f",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 43,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0030-03-Q0030",
+    "status": "WITNESS",
+    "text": "Deformed cells were observed in the single pentoxifylline-treated rat with glomerular congestion; this finding is consistent with the hemorheologic effects of pentoxifylline on cell deformability (2) (luke1989.pdf).",
+    "preserved": [
+      "quantities",
+      "population/model"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "854450676d61607dc72a6b43",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 27,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0030-04-Q0030",
+    "status": "WITNESS",
+    "text": "The significant differences in education level and hypertension prevalence between groups could have influenced outcomes (11255_2025_Article_4454.pdf).",
+    "preserved": [
+      "modality"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "b66ba1cc41a6e9ed1741e9be",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 16,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0031-01-Q0031",
+    "status": "WITNESS",
+    "text": "a promising adjunct to antidepressants in the treatment of MDD patients | | <a href=\"#\">Yasrebi et al 2021</a> | Iran | 2020 | RCT | Mild to moderate MDD Patients with CAD | 70 | PTX | 400 mg BID | Placebo | 6 weeks | baseline,2,4,6 weeks | HAM-D score | Patients receiving pentoxifylline had greater improvement in (s00210-025-03845-1.pdf).",
+    "preserved": [
+      "negation",
+      "quantities",
+      "population/model",
+      "timing"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "e5abafa6ee0302f9cdd1a3f3",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 60,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": true,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0031-01-Q0031",
+    "status": "WITNESS",
+    "text": "a promising adjunct to antidepressants in the treatment of MDD patients | | <a href=\"#\">Yasrebi et al 2021</a> | Iran | 2020 | RCT | Mild to moderate MDD Patients with CAD | 70 | PTX | 400 mg BID | Placebo | 6 weeks | baseline,2,4,6 weeks | HAM-D score | Patients receiving pentoxifylline had greater improvement in (s00210-025-03845-1.pdf).",
+    "preserved": [
+      "negation",
+      "quantities",
+      "population/model",
+      "timing"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "ce1f6916aa1c9214aa8afbfb",
+    "parse_error": "",
+    "version": 2,
+    "ceiling": 60,
+    "ceiling_exception": false,
+    "revision_of": 1,
+    "mechanical": {
+      "words": 60,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": true,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0031-02-Q0031",
+    "status": "WITNESS",
+    "text": "(2024) disagreed with our study as they found that PTX has no antidepressant effect, which may be attributed to their inclusion of patients with treatment-resistant depression and bipolar disorder (Mohammad et al (s00210-025-03845-1.pdf).",
+    "preserved": [
+      "negation",
+      "quantities",
+      "modality",
+      "population/model"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "94e7dc5d1d12ec620c4fe8c1",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 33,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0031-03-Q0031",
+    "status": "WITNESS",
+    "text": "The timing of the intervention (starting 6 weeks postoperatively) was dictated by the terms of the Health Technology Assessment commissioning brief, but it could be argued that starting earlier or before surgery would result in unnecessary treatment of men who would become dry spontaneously (glazener2011.pdf).",
+    "preserved": [
+      "quantities",
+      "modality",
+      "population/model",
+      "timing"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "851753e37375fa4c7dd45ead",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 45,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0031-04-Q0031",
+    "status": "WITNESS",
+    "text": "Studies of short-term adherence to PFMT programs in women have identified poor adherence as a potential barrier to treatment effectiveness.<sup>24,25</sup> It has been recommended that adherence be continually monitored and reported in research and clinical settings.<sup>26</sup> As adherence may contribute to the difference in efficacy of PFMT studies (hall2018.pdf).",
+    "preserved": [
+      "negation",
+      "quantities",
+      "modality"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "75ff58713a522c65e1db57d4",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 49,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": true,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0031-04-Q0031",
+    "status": "WITNESS",
+    "text": "Studies of short-term adherence to PFMT programs in women have identified poor adherence as a potential barrier to treatment effectiveness.<sup>24,25</sup> It has been recommended that adherence be continually monitored and reported in research and clinical settings.<sup>26</sup> As adherence may contribute to the difference in efficacy of PFMT studies (hall2018.pdf).",
+    "preserved": [
+      "negation",
+      "quantities",
+      "modality"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "e7939744ca22ed6e9635444c",
+    "parse_error": "",
+    "version": 2,
+    "ceiling": 60,
+    "ceiling_exception": false,
+    "revision_of": 1,
+    "mechanical": {
+      "words": 49,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": true,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0032-01-Q0032",
+    "status": "WITNESS",
+    "text": "In a subsequent clinical study in septic patients, the same group observed a similar response to pentoxifylline and noted cardiovascular improvements in those patients given aggressive fluid resuscitation [33] (parker2000.pdf).",
+    "preserved": [
+      "quantities",
+      "population/model"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "fa53fe006594fc86c9c24de1",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 30,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0032-02-Q0032",
+    "status": "WITNESS",
+    "text": "Cardiac Index fell by a median of 3.9 (0.9) l/min per m<sup>2</sup> during haemorrhage and in all animals it improved to above baseline levels with volume replacement (parker2000.pdf).",
+    "preserved": [
+      "quantities",
+      "timing"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "c901f4d9560d2c6ec147b92c",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 28,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0032-03-Q0032",
+    "status": "WITNESS",
+    "text": "Hou, Inhibition of tubulointerstitial fibrosis by pentoxifylline is associated with improvement of vascular endothelial growth factor expression, *Acta Pharmacol (ma2018.pdf).",
+    "preserved": [
+      "assertion"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "3872393f0e581739678e8afb",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 20,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0032-04-Q0032",
+    "status": "WITNESS",
+    "text": "Navarro-Gonzalez, et al., Effect of pentoxifylline on renal function and urinary albumin excretion in patients with diabetic kidney disease: the PREDIAN trial, *J (ma2018.pdf).",
+    "preserved": [
+      "population/model"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "20fcf92227a5156a65e8c915",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 24,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0033-01-Q0033",
+    "status": "WITNESS",
+    "text": "In the Pentoxifylline Group graph, there is a single peak at approximately 1.5 hours reaching about 1700 pg/ml, after which the TNF concentration remains significantly lower than in the control group (parker2000.pdf).",
+    "preserved": [
+      "quantities",
+      "timing"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "ef3a2fd7cd4c4b0a03cf775a",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 32,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0033-02-Q0033",
+    "status": "WITNESS",
+    "text": "The Pentoxifylline Group shows a single, smaller peak around 1.5 hours, reaching approximately 1700 pg/ml, with much lower concentrations thereafter.](92c6488dfdf125bc1b7bb6a235394652_img.jpg) The figure consists of two side-by-side line graphs (parker2000.pdf).",
+    "preserved": [
+      "quantities",
+      "timing"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "6fa37636c7b12ace1f38a9a5",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 29,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0033-03-Q0033",
+    "status": "WITNESS",
+    "text": "The mechanisms of action of pentoxifylline which contribute to protection of renal PGE<sub>2</sub> release and blood flow during severe splanchnic ischemia/reperfusion injury include decreasing viscosity, increasing deformability of red blood cells and neutrophils, and contributing to the prevention of the activation of neutrophils by cytokines or local tissue factors (myers1995.pdf).",
+    "preserved": [
+      "quantities",
+      "population/model",
+      "timing"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "596094b31b8fb072decbb5df",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 50,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0033-04-Q0033",
+    "status": "WITNESS",
+    "text": "The latter results suggest that TNF- $\\alpha$ plays a central role in the pathogenesis of Gram-negative shock, as serum levels of TNF- $\\alpha$ are induced early in endotoxaemia or Gram-negative sepsis models (Michie et al., 1988) (wu1999.pdf).",
+    "preserved": [
+      "quantities",
+      "modality"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "680f927a7c53bd681274319d",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 37,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0034-01-Q0034",
+    "status": "WITNESS",
+    "text": "This appears to be in direct conflict with other *in vivo* studies that have reported a significant reduction in TNF levels by pentoxifylline treatment in a variety of models of sepsis.<sup>34-36</sup> These studies, however, all used an ELISA technique to measure TNF rather than a bioassay that measures the bioactivity of TNF rather than absolute concentrations (ridings1994.pdf).",
+    "preserved": [
+      "quantities",
+      "modality"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "66e89d8e173383d2f5b0cba4",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 57,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0034-02-Q0034",
+    "status": "WITNESS",
+    "text": "Demir et al [24] showed reductions of serum proinflammatory cytokine levels and kidney graft resistive index after 3 months of PTX oral treatment at approximately 1 year posttransplantation (wystrychowski2014.pdf).",
+    "preserved": [
+      "quantities",
+      "timing"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "40a97289cec35c8114b2b64d",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 29,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0034-03-Q0034",
+    "status": "WITNESS",
+    "text": "However, little data on the delayed treatment of sepsis with pentoxifylline, a more clinically relevant situation, exist.<sup>15</sup> We therefore sought to determine the effects of pretreatment and posttreatment with pentoxifylline in a porcine model of live bacterial sepsis and acute lung injury, determine the size of a potential \"therapeutic window\" for the administration of pentoxifylline in sepsis (ridings1994.pdf).",
+    "preserved": [
+      "quantities"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "32459881acf8e46ccc95dbad",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 58,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0034-04-Q0034",
+    "status": "WITNESS",
+    "text": "Superantigen-induced cytokine release from whole-blood cell culture as a functional measure of drug efficacy after oral dosing in nonhuman primates. *Res Vet Sci* 2007;83:182–7. - [19] Voisin L, Breuillé D, Ruot B, et al (wystrychowski2014.pdf).",
+    "preserved": [
+      "quantities",
+      "population/model",
+      "timing"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "5537cedec1beed00b4e4cd6d",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 35,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0035-01-Q0035",
+    "status": "WITNESS",
+    "text": "Superantigen-induced cytokine release from whole-blood cell culture as a functional measure of drug efficacy after oral dosing in nonhuman primates. *Res Vet Sci* 2007;83:182–7. - [19] Voisin L, Breuillé D, Ruot B, et al (wystrychowski2014.pdf).",
+    "preserved": [
+      "quantities",
+      "population/model",
+      "timing"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "abddff80e3be90a28335988f",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 35,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0035-02-Q0035",
+    "status": "WITNESS",
+    "text": "This implicates usefulness of PTX in the clinical settings of expected renal ischemia, like kidney transplantation, and suggests potential benefits of PTX in peritransplant period foremost with donor pretreatment (wystrychowski2014.pdf).",
+    "preserved": [
+      "quantities"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "84d3ebae3faf92ac3d017a34",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 30,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0035-02-Q0035",
+    "status": "WITNESS",
+    "text": "This implicates usefulness of PTX in the clinical settings of expected renal ischemia, like kidney transplantation, and suggests potential benefits of PTX in peritransplant period foremost with donor pretreatment (wystrychowski2014.pdf).",
+    "preserved": [
+      "quantities"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "47884744a6f09e28232a055e",
+    "parse_error": "",
+    "version": 2,
+    "ceiling": 60,
+    "ceiling_exception": false,
+    "revision_of": 1,
+    "mechanical": {
+      "words": 30,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0035-03-Q0035",
+    "status": "WITNESS",
+    "text": "[2,3] In this study we add to existing knowledge reported from the RCT, specifically investigating diary entries completed by women in response to their exercise prescription: findings not previously reported (stokes2022.pdf).",
+    "preserved": [
+      "negation",
+      "quantities"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "c8e371267f22d5140fc8e405",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 31,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0035-04-Q0035",
+    "status": "WITNESS",
+    "text": "In conclusion, our data suggest that the utility of aminophylline for improving early pathologic manifestations of sepsis should be questioned (fakioglu2004.pdf).",
+    "preserved": [
+      "modality"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "c7b56b0ce5d0b7e5c09d16bb",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 21,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0036-01-Q0036",
+    "status": "WITNESS",
+    "text": "Although a pathophysiological role of TNF- $\\alpha$ in chronic CHF has been postulated, 2 clinical trials failed to demonstrate the beneficial effect of anti-TNF- $\\alpha$ drugs,<sup>20</sup> and 1 trial even envisaged a possible detrimental effect.<sup>21</sup> It has been suggested that a complete block of circulating TNF- $\\alpha$ also suppresses the beneficial cardiac effects associated with low (nisi2013.pdf).",
+    "preserved": [
+      "negation",
+      "quantities",
+      "modality"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "20e8329c1358c3a4165b2bd1",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 57,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0036-01-Q0036",
+    "status": "WITNESS",
+    "text": "Although a pathophysiological role of TNF- $\\alpha$ in chronic CHF has been postulated, 2 clinical trials failed to demonstrate the beneficial effect of anti-TNF- $\\alpha$ drugs,<sup>20</sup> and 1 trial even envisaged a possible detrimental effect.<sup>21</sup> It has been suggested that a complete block of circulating TNF- $\\alpha$ also suppresses the beneficial cardiac effects associated with low (nisi2013.pdf).",
+    "preserved": [
+      "negation",
+      "quantities",
+      "modality"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "4c327242d7c881fe7d770231",
+    "parse_error": "",
+    "version": 2,
+    "ceiling": 60,
+    "ceiling_exception": false,
+    "revision_of": 1,
+    "mechanical": {
+      "words": 57,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0036-02-Q0036",
+    "status": "WITNESS",
+    "text": "Conversely, renal dysfunction does not cause accumulation of PTX and M1 but does increase M4 and M5 AUCs and the M4/PTX and M5/PTX AUC ratios.<sup>16</sup> Although no analogous studies have been performed in cardiac patients, pharmacokinetic alterations are expected because reduced cardiac output determines a reduction in perfusion and oxygenation of both liver and kidney (nisi2013.pdf).",
+    "preserved": [
+      "negation",
+      "quantities",
+      "modality",
+      "population/model"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "693c74d950af6de4d73d2e4f",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 56,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0036-02-Q0036",
+    "status": "WITNESS",
+    "text": "Conversely, renal dysfunction does not cause accumulation of PTX and M1 but does increase M4 and M5 AUCs and the M4/PTX and M5/PTX AUC ratios.<sup>16</sup> Although no analogous studies have been performed in cardiac patients, pharmacokinetic alterations are expected because reduced cardiac output determines a reduction in perfusion and oxygenation of both liver and kidney (nisi2013.pdf).",
+    "preserved": [
+      "negation",
+      "quantities",
+      "modality",
+      "population/model"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "9c5ef9d524197da4a8d10b31",
+    "parse_error": "",
+    "version": 2,
+    "ceiling": 60,
+    "ceiling_exception": false,
+    "revision_of": 1,
+    "mechanical": {
+      "words": 56,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0036-03-Q0036",
+    "status": "WITNESS",
+    "text": "These results are in line with previous literature, indicating that key inflammatory pathways in UC, particularly those involving pro-inflammatory cytokines such as TNF- $\\alpha$ , tend to operate independently of demographic variables, and that treatment response is more closely related to modulation of these biological pathways than to baseline patient characteristics [41–43] (pharmaceuticals-19-00552.pdf).",
+    "preserved": [
+      "quantities",
+      "population/model"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "04ff212093a78b97f27435df",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 53,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0036-04-Q0036",
+    "status": "WITNESS",
+    "text": "Subsequently, a subgroup of these patients were reevaluated 9 months after curative surgery, when no statistical differences were observed between baseline and postsurgery adiponectin and resistin levels (17) (Barahona2009_Cushings_Syndrome).",
+    "preserved": [
+      "negation",
+      "quantities",
+      "population/model",
+      "timing"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "a7b4f885d9bd371ea8be5f9a",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 29,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0037-01-Q0037",
+    "status": "WITNESS",
+    "text": "Tumor necrosis factor has been reliably shown to be elevated in depressed patients.<sup>23</sup> Moreover, increases in TNF have been associated with depressive symptoms during chronic exposure to interferon alpha.<sup>24</sup> In addition (raison2013.pdf).",
+    "preserved": [
+      "negation",
+      "quantities",
+      "modality",
+      "population/model",
+      "timing"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "ae8ddd00969fbdaa4468288a",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 32,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": true,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0037-01-Q0037",
+    "status": "WITNESS",
+    "text": "Tumor necrosis factor has been reliably shown to be elevated in depressed patients.<sup>23</sup> Moreover, increases in TNF have been associated with depressive symptoms during chronic exposure to interferon alpha.<sup>24</sup> In addition (raison2013.pdf).",
+    "preserved": [
+      "negation",
+      "quantities",
+      "modality",
+      "population/model",
+      "timing"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "10b1ab0e98ed0312ad1e2b97",
+    "parse_error": "",
+    "version": 2,
+    "ceiling": 60,
+    "ceiling_exception": false,
+    "revision_of": 1,
+    "mechanical": {
+      "words": 32,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": true,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0037-02-Q0037",
+    "status": "WITNESS",
+    "text": "It is becoming increasingly apparent that low, physiologic levels of cytokine activity are essential for a number of brain processes associated with protection from depression, including neuroplasticity and neurogenesis.<sup>66</sup> Moreover, recent data indicate that the behavioral effects of serotonergic antidepressants are dependent on TNF and IFN- $\\gamma$ -mediated upregulation of p11, a biochemical marker of antidepressant response (raison2013.pdf).",
+    "preserved": [
+      "negation",
+      "quantities",
+      "modality",
+      "population/model"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "2287e6cd295579bd35646701",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 58,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": true,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0037-02-Q0037",
+    "status": "WITNESS",
+    "text": "It is becoming increasingly apparent that low, physiologic levels of cytokine activity are essential for a number of brain processes associated with protection from depression, including neuroplasticity and neurogenesis.<sup>66</sup> Moreover, recent data indicate that the behavioral effects of serotonergic antidepressants are dependent on TNF and IFN- $\\gamma$ -mediated upregulation of p11, a biochemical marker of antidepressant response (raison2013.pdf).",
+    "preserved": [
+      "negation",
+      "quantities",
+      "modality",
+      "population/model"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "3bd914d56fb355297dbbd632",
+    "parse_error": "",
+    "version": 2,
+    "ceiling": 60,
+    "ceiling_exception": false,
+    "revision_of": 1,
+    "mechanical": {
+      "words": 58,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": true,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0037-03-Q0037",
+    "status": "WITNESS",
+    "text": "An immunologically important and possibly clinically relevant observation of the present study is the finding that pretreatment with ibuprofen, an inhibitor of the cyclooxygenase pathway of arachidonic acid metabolism, enhanced circulating TNF $\\alpha$ and IL-6 levels after endotoxin challenge (spinas1991.pdf).",
+    "preserved": [
+      "quantities",
+      "timing"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "3a6c2f0ba627b0d701d8793d",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 40,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0037-04-Q0037",
+    "status": "WITNESS",
+    "text": "The peak levels of TNF $\\alpha$ in the present study were considerably higher than those commonly detected in patients with sepsis [9–11] (spinas1991.pdf).",
+    "preserved": [
+      "quantities",
+      "population/model"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "7f08b1f4e46bdb7c9cb337a6",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 23,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0038-01-Q0038",
+    "status": "WITNESS",
+    "text": "It is becoming increasingly apparent that low, physiologic levels of cytokine activity are essential for a number of brain processes associated with protection from depression, including neuroplasticity and neurogenesis.<sup>66</sup> Moreover, recent data indicate that the behavioral effects of serotonergic antidepressants are dependent on TNF and IFN- $\\gamma$ -mediated upregulation of p11, a biochemical marker of antidepressant response (raison2013.pdf).",
+    "preserved": [
+      "negation",
+      "quantities",
+      "modality",
+      "population/model"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "efcf2ccd1167e9d9e999b8e6",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 58,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": true,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0038-01-Q0038",
+    "status": "WITNESS",
+    "text": "It is becoming increasingly apparent that low, physiologic levels of cytokine activity are essential for a number of brain processes associated with protection from depression, including neuroplasticity and neurogenesis.<sup>66</sup> Moreover, recent data indicate that the behavioral effects of serotonergic antidepressants are dependent on TNF and IFN- $\\gamma$ -mediated upregulation of p11, a biochemical marker of antidepressant response (raison2013.pdf).",
+    "preserved": [
+      "negation",
+      "quantities",
+      "modality",
+      "population/model"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "75e860bd4c12b20d2fd11ed4",
+    "parse_error": "",
+    "version": 2,
+    "ceiling": 60,
+    "ceiling_exception": false,
+    "revision_of": 1,
+    "mechanical": {
+      "words": 58,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": true,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0038-02-Q0038",
+    "status": "WITNESS",
+    "text": "addition, inflammatory cytokines can reduce the concentration of monoamine precursors through the activation of enzymes such as indoleamine 2,3-dioxygenase, which breaks down tryptophan, the primary amino acid precursor for serotonin, into kynurenine.<sup>14</sup> Inflammation can also reduce the availability of the enzyme cofactor, tetrahydrobiopterin, which is essential for activities of tryptophan hydroxylase and tyrosine hydroxylase (raison2013.pdf).",
+    "preserved": [
+      "negation",
+      "quantities"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "76c4696483b6b3ee13db6172",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 55,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": true,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0038-02-Q0038",
+    "status": "WITNESS",
+    "text": "addition, inflammatory cytokines can reduce the concentration of monoamine precursors through the activation of enzymes such as indoleamine 2,3-dioxygenase, which breaks down tryptophan, the primary amino acid precursor for serotonin, into kynurenine.<sup>14</sup> Inflammation can also reduce the availability of the enzyme cofactor, tetrahydrobiopterin, which is essential for activities of tryptophan hydroxylase and tyrosine hydroxylase (raison2013.pdf).",
+    "preserved": [
+      "negation",
+      "quantities"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "8e97c315e7da8a23509b2183",
+    "parse_error": "",
+    "version": 2,
+    "ceiling": 60,
+    "ceiling_exception": false,
+    "revision_of": 1,
+    "mechanical": {
+      "words": 55,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": true,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0038-03-Q0038",
+    "status": "WITNESS",
+    "text": "Although we did note differential effects on these, the intervention might also be expected to have wider effects, such as improving the quality rather than the quantity of pelvic-floor muscle contractions, the use of broader behavioural techniques such as bladder training, and generic quality of life, which we did not measure directly (glazener2011.pdf).",
+    "preserved": [
+      "negation",
+      "modality"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "23c8ffec1ac59ecfbc880c8c",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 53,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0038-04-Q0038",
+    "status": "WITNESS",
+    "text": "Treatment of voiding difficulty in women with 0.2 mg tamsulosin daily for 6 weeks has been reported to improve voiding and storage symptom scores, maximal flow rate, and PVR (ladi-seyedian2017.pdf).",
+    "preserved": [
+      "quantities",
+      "timing"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "f84e991a4069244675b80efd",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 30,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0039-01-Q0039",
+    "status": "WITNESS",
+    "text": "In addition, while patients and controls were matched by age and BMI, mean WC was higher, as expected, in CD patients compared to controls; the effect this may have had on circulating inflammatory cytokine concentrations is unknown, but of note we did not find any significant relationships between WC and any inflammatory cytokine (shah2016.pdf).",
+    "preserved": [
+      "negation",
+      "quantities",
+      "modality",
+      "population/model"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "7240a87e267e7c22a20807b8",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 54,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0039-01-Q0039",
+    "status": "WITNESS",
+    "text": "In addition, while patients and controls were matched by age and BMI, mean WC was higher, as expected, in CD patients compared to controls; the effect this may have had on circulating inflammatory cytokine concentrations is unknown, but of note we did not find any significant relationships between WC and any inflammatory cytokine (shah2016.pdf).",
+    "preserved": [
+      "negation",
+      "quantities",
+      "modality",
+      "population/model"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "4107989f9ae80e8c7acf8f04",
+    "parse_error": "",
+    "version": 2,
+    "ceiling": 60,
+    "ceiling_exception": false,
+    "revision_of": 1,
+    "mechanical": {
+      "words": 54,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0039-02-Q0039",
+    "status": "WITNESS",
+    "text": "Wagenmakers, M.A., et al., *Impaired quality of life in patients in long-term remission of Cushing's syndrome of both adrenal and pituitary origin: a remaining effect of long-standing hypercortisolism?* Eur J Endocrinol, 2012. **167**(5): p (roerink2019.pdf).",
+    "preserved": [
+      "quantities",
+      "population/model"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "69dee9a9c75960cc5f1938dd",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 35,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0039-03-Q0039",
+    "status": "WITNESS",
+    "text": "Several mechanisms could explain our finding of the lower aerobic exercise capacity (VO<sub>2peak</sub>) of the patients in long term remission of CS (roerink2019.pdf).",
+    "preserved": [
+      "quantities",
+      "modality",
+      "population/model"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "5102d99b4f9dcf845f6e1d2b",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 23,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0039-04-Q0039",
+    "status": "WITNESS",
+    "text": "Thus, despite endocrine remission, elevated plasma IL-6 concentrations in CD patients could contribute to the greater mortality risk observed long term in these patients [10, 11] (shah2016.pdf).",
+    "preserved": [
+      "quantities",
+      "modality",
+      "population/model"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "a7e306a701650f5ad359c3db",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 27,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0040-01-Q0040",
+    "status": "WITNESS",
+    "text": "In addition, while patients and controls were matched by age and BMI, mean WC was higher, as expected, in CD patients compared to controls; the effect this may have had on circulating inflammatory cytokine concentrations is unknown, but of note we did not find any significant relationships between WC and any inflammatory cytokine (shah2016.pdf).",
+    "preserved": [
+      "negation",
+      "quantities",
+      "modality",
+      "population/model"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "874597f3dc94c25a9662a61f",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 54,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0040-01-Q0040",
+    "status": "WITNESS",
+    "text": "In addition, while patients and controls were matched by age and BMI, mean WC was higher, as expected, in CD patients compared to controls; the effect this may have had on circulating inflammatory cytokine concentrations is unknown, but of note we did not find any significant relationships between WC and any inflammatory cytokine (shah2016.pdf).",
+    "preserved": [
+      "negation",
+      "quantities",
+      "modality",
+      "population/model"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "67a69de51bb992c1b84667e3",
+    "parse_error": "",
+    "version": 2,
+    "ceiling": 60,
+    "ceiling_exception": false,
+    "revision_of": 1,
+    "mechanical": {
+      "words": 54,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0040-02-Q0040",
+    "status": "WITNESS",
+    "text": "We confirm earlier studies demonstrating that chronic excess GC exposure increases circulating IL-6 and IL-1 $\\beta$ concentrations during active disease (shah2016.pdf).",
+    "preserved": [
+      "quantities",
+      "timing"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "00bc44068f2e1ef88a6693a9",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 21,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0040-03-Q0040",
+    "status": "WITNESS",
+    "text": "Higher PMS was associated with increased TNF- $\\alpha$ and fecal calprotectin levels and lower IBDQ-32 scores, while higher inflammatory markers were linked to poorer quality of life (pharmaceuticals-19-00552.pdf).",
+    "preserved": [
+      "quantities"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "e8a866289c6d1c6e51bf486e",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 28,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0040-04-Q0040",
+    "status": "WITNESS",
+    "text": "In dextran sulfate sodium (DSS)-induced colitis, PTX administration reduced disease activity index, histologic damage, and colonic levels of TNF- $\\alpha$ and malondialdehyde (MDA), a marker of lipid peroxidation [15] (pharmaceuticals-19-00552.pdf).",
+    "preserved": [
+      "quantities"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "82e3aee8443007da59d4ecc0",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 30,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  }
+]

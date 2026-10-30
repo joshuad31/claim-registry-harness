@@ -1,0 +1,1286 @@
+{
+  "mode": "off",
+  "items": [
+    {
+      "item_id": "W-FRD-BOWTON-01-Q0006",
+      "type": "WITNESS",
+      "raw": "Bowton et al. (bowton1989.pdf.md): in a ten-patient study of prior cerebrovascular disease, six given single oral 800 mg sustained-release pentoxifylline showed increased normocarbic global cerebral blood flow (xenon-133) from 52.5±15.2 to 59.4, 58.2, 62.4 mL/100g/min at 2, 4, 6 hours (p≤0.01–0.02; overall p=0.017). No concurrent placebo arm. Cerebral measured flow, not pelvic tissue function.",
+      "transcoded": "Bowton et al. (bowton1989.pdf.md): in a ten-patient study of prior cerebrovascular disease, six given single oral 800 mg sustained-release pentoxifylline showed increased normocarbic global cerebral blood flow (xenon-133) from 52.5±15.2 to 59.4, 58.2, 62.4 mL/100g/min at 2, 4, 6 hours (p≤0.01–0.02; overall p=0.017). No concurrent placebo arm. Cerebral measured flow, not pelvic tissue function.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-BOWTON-02-Q0006",
+      "type": "WITNESS",
+      "raw": "Bowton et al. (bowton1989.pdf.md): in a randomized two-dose study of 10 patients with prior cerebrovascular disease, four given single oral 400 mg sustained-release pentoxifylline showed no statistically significant overall increase in normocarbic global cerebral blood flow across 2, 4, 6 hours (p=0.29); means were 101±8%, 101±15%, 110±15% of baseline (baseline 55.5±13.9 ml/100g/min). Cerebral bed, measured flow—not pelvic tissue function.",
+      "transcoded": "Bowton et al. (bowton1989.pdf.md): in a randomized two-dose study of 10 patients with prior cerebrovascular disease, four given single oral 400 mg sustained-release pentoxifylline showed no statistically significant overall increase in normocarbic global cerebral blood flow across 2, 4, 6 hours (p=0.29); means were 101±8%, 101±15%, 110±15% of baseline (baseline 55.5±13.9 ml/100g/min). Cerebral bed, measured flow—not pelvic tissue function.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-SHIRAZI2015-01-Q0002",
+      "type": "WITNESS",
+      "raw": "In male Sprague-Dawley rats with surgically induced partial bladder outlet obstruction, Shirazi et al. gave pentoxifylline 100 mg/kg/day by oral gavage for four weeks after obstruction induction, associated with higher electrically evoked isolated-detrusor-strip tension than water controls (approximately 4.0 ± 1.0 versus 1.8 ± 0.4 g per 100 mg tissue; reported P=0.023). These figure-derived values are approximate (shirazi2015.pdf.md, Results).",
+      "transcoded": "In male Sprague-Dawley rats with surgically induced partial bladder outlet obstruction, Shirazi et al. gave pentoxifylline 100 mg/kg/day by oral gavage for four weeks after obstruction induction, associated with higher electrically evoked isolated-detrusor-strip tension than water controls (approximately 4.0 ± 1.0 versus 1.8 ± 0.4 g per 100 mg tissue; reported P=0.023). These figure-derived values are approximate (shirazi2015.pdf.md, Results).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-SHIRAZI2015-02-Q0002",
+      "type": "WITNESS",
+      "raw": "Shirazi 2015: in male Sprague-Dawley rats with partial bladder outlet obstruction, pentoxifylline 100 mg/kg/day by oral gavage for four weeks, begun after obstruction induction, produced no significant improvement in maximum carbachol-induced detrusor-strip contractile tension versus water-treated obstructed controls (20 animals per group; all completed). Treatment addressed established obstruction, not prevention; this is a functional contractility null.",
+      "transcoded": "Shirazi 2015: in male Sprague-Dawley rats with partial bladder outlet obstruction, pentoxifylline 100 mg/kg/day by oral gavage for four weeks, begun after obstruction induction, produced no significant improvement in maximum carbachol-induced detrusor-strip contractile tension versus water-treated obstructed controls (20 animals per group; all completed). Treatment addressed established obstruction, not prevention; this is a functional contractility null.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-RADEMAKERS-01-Q0003",
+      "type": "WITNESS",
+      "raw": "Rademakers et al.'s review (rademakers2016.pdf.md, Preoperative characterization; Figure 1) reports a retrospective urodynamic analysis attributed to Oelke et al. of 786 treatment-naïve men ≥40 with LUTS: median BCI rose with obstruction grade from 73 (Schäfer 0) to 188 (grade 6), median Wmax from 9.6 to 23 W/m². The review suggests thresholds BCI<100 and Wmax<7 be grade-adjusted—cross-sectional association, not within-man change.",
+      "transcoded": "Rademakers et al.'s review (rademakers2016.pdf.md, Preoperative characterization; Figure 1) reports a retrospective urodynamic analysis attributed to Oelke et al. of 786 treatment-naïve men ≥40 with LUTS: median BCI rose with obstruction grade from 73 (Schäfer 0) to 188 (grade 6), median Wmax from 9.6 to 23 W/m². The review suggests thresholds BCI<100 and Wmax<7 be grade-adjusted—cross-sectional association, not within-man change.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-RADEMAKERS-02-Q0003",
+      "type": "WITNESS",
+      "raw": "Rademakers et al. (rademakers2016.pdf.md), a narrative review, report that Oelke developed the Hannover–Maastricht nomogram from urodynamic data of 822 treatment-naïve men aged ≥40 with LUTS/BPO. It plots bladder-outlet-obstruction index against maximum Watts factor to classify outlet resistance and detrusor contractility simultaneously; values below the 25th-percentile line indicate detrusor underactivity relative to outlet resistance, including when obstruction coexists. Validation remained ongoing.",
+      "transcoded": "Rademakers et al. (rademakers2016.pdf.md), a narrative review, report that Oelke developed the Hannover–Maastricht nomogram from urodynamic data of 822 treatment-naïve men aged ≥40 with LUTS/BPO. It plots bladder-outlet-obstruction index against maximum Watts factor to classify outlet resistance and detrusor contractility simultaneously; values below the 25th-percentile line indicate detrusor underactivity relative to outlet resistance, including when obstruction coexists. Validation remained ongoing.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0004-01-Q0004",
+      "type": "WITNESS",
+      "raw": "He et al. retrospectively studied 21 men with nonbacterial chronic prostatitis and dysfunctional voiding (2007-2009), selected after antibiotics and alpha-blockers over six months gave poor effects. Diagnostic criteria required no neurological abnormality plus transient, intermittent external-sphincter closure during voiding on EMG and fluoroscopic cysto-urethrography, with raised external-sphincter EMG activity without abdominal-pressure increase (he2010.pdf.md, Patients and Methods).",
+      "transcoded": "He et al. retrospectively studied 21 men with nonbacterial chronic prostatitis and dysfunctional voiding (2007-2009), selected after antibiotics and alpha-blockers over six months gave poor effects. Diagnostic criteria required no neurological abnormality plus transient, intermittent external-sphincter closure during voiding on EMG and fluoroscopic cysto-urethrography, with raised external-sphincter EMG activity without abdominal-pressure increase (he2010.pdf.md, Patients and Methods).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0004-02-Q0004",
+      "type": "WITNESS",
+      "raw": "He et al. (he2010.pdf.md, PATIENTS AND METHODS; RESULTS, TABLE 1) report a retrospective, uncontrolled series of 21 men with nonbacterial chronic prostatitis and dysfunctional voiding whose Qmax rose 8.2 (SD 4.1) to 15.1 (SD 7.3) mL/s after ~10 weeks of relaxation/coordination biofeedback, not strengthening (P<0.05); antibiotics, α-blockers, anticholinergics suspended. Lacking a placebo control, this within-cohort change isn't a controlled effect.",
+      "transcoded": "He et al. (he2010.pdf.md, PATIENTS AND METHODS; RESULTS, TABLE 1) report a retrospective, uncontrolled series of 21 men with nonbacterial chronic prostatitis and dysfunctional voiding whose Qmax rose 8.2 (SD 4.1) to 15.1 (SD 7.3) mL/s after ~10 weeks of relaxation/coordination biofeedback, not strengthening (P<0.05); antibiotics, α-blockers, anticholinergics suspended. Lacking a placebo control, this within-cohort change isn't a controlled effect.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0001-01-Q0001",
+      "type": "WITNESS",
+      "raw": "Shirazi et al. (Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md): single-center randomized double-blind trial, 30 men per arm (all analyzed) with BPH/LUTS, giving pentoxifylline 400 mg every eight hours plus tamsulosin 0.4 mg/day or placebo plus tamsulosin, 12 weeks. Post-void residual fell more with combination (−32.93±16.33 versus −13.17±9.23 mL; p<.001), but baseline residual differed (77.27 versus 50.37 mL; p=.18). Reported values, not validated or baseline-equivalent.",
+      "transcoded": "Shirazi et al. (Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md): single-center randomized double-blind trial, 30 men per arm (all analyzed) with BPH/LUTS, giving pentoxifylline 400 mg every eight hours plus tamsulosin 0.4 mg/day or placebo plus tamsulosin, 12 weeks. Post-void residual fell more with combination (−32.93±16.33 versus −13.17±9.23 mL; p<.001), but baseline residual differed (77.27 versus 50.37 mL; p=.18). Reported values, not validated or baseline-equivalent.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0005-01-Q0005",
+      "type": "WITNESS",
+      "raw": "Masterson et al. (masterson2017.pdf.md, Methods; Results) prospectively studied an uncontrolled pilot of multimodal pelvic-floor physical therapy (manual therapy, therapeutic exercise, biofeedback, neuromodulation; nonstandardized frequency) in 14 men with idiopathic CPPS, assessed at the tenth visit. Ten completed ten visits; the remaining four had completed five-to-nine and were reported as still ongoing, not dropouts or completed-treatment failures.",
+      "transcoded": "Masterson et al. (masterson2017.pdf.md, Methods; Results) prospectively studied an uncontrolled pilot of multimodal pelvic-floor physical therapy (manual therapy, therapeutic exercise, biofeedback, neuromodulation; nonstandardized frequency) in 14 men with idiopathic CPPS, assessed at the tenth visit. Ten completed ten visits; the remaining four had completed five-to-nine and were reported as still ongoing, not dropouts or completed-treatment failures.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0005-02-Q0005",
+      "type": "WITNESS",
+      "raw": "Anderson et al. (anderson2011.pdf.md), a prospective open-label UCPPS pilot, report 113 of 157 (72%; 106 men, 7 women) completed six months of internal therapeutic-wand use within a multimodal self-treatment program (prescribed 3–4×/week; withdrawal threshold <1×/week). Of 44 withdrawn, 10 noncompliant, 10 failed questionnaires, rest unspecified. Completion is not verified per-session adherence and not a male-only clinic-PFPT cohort.",
+      "transcoded": "Anderson et al. (anderson2011.pdf.md), a prospective open-label UCPPS pilot, report 113 of 157 (72%; 106 men, 7 women) completed six months of internal therapeutic-wand use within a multimodal self-treatment program (prescribed 3–4×/week; withdrawal threshold <1×/week). Of 44 withdrawn, 10 noncompliant, 10 failed questionnaires, rest unspecified. Completion is not verified per-session adherence and not a male-only clinic-PFPT cohort.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0001-02-r3-Q0001",
+      "type": "WITNESS",
+      "raw": "Shirazi et al. (2024, Lower Urinary Tract Symptoms) reported mean Qmax changes of 4.48 versus 2.67 mL/s; their arithmetic difference, 1.81 mL/s, is an analyst-derived unadjusted contrast favoring pentoxifylline-plus-tamsulosin over placebo-plus-tamsulosin, not a separately reported adjusted estimate. This BPH add-on trial does not establish pentoxifylline monotherapy or psychogenic-voiding efficacy.",
+      "transcoded": "Shirazi et al. (2024, Lower Urinary Tract Symptoms) reported mean Qmax changes of 4.48 versus 2.67 mL/s; their arithmetic difference, 1.81 mL/s, is an analyst-derived unadjusted contrast favoring pentoxifylline-plus-tamsulosin over placebo-plus-tamsulosin, not a separately reported adjusted estimate. This BPH add-on trial does not establish pentoxifylline monotherapy or psychogenic-voiding efficacy.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0011-01-Q0011",
+      "type": "WITNESS",
+      "raw": "In Shirazi et al.'s single-center, randomized, double-blind 12-week BPH trial (60 men, 30/group), pentoxifylline 400 mg every eight hours plus tamsulosin 0.4 mg/day versus placebo plus tamsulosin showed no significant between-group voided-volume change (0.80 versus +1.34 mL; p=.22) and no statistically significant within-group change (p=.90, .89). Baseline-to-endpoint voided-volume only—not residual or flow; visit schedule, onset, post-withdrawal persistence unestablished (Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md, §3.3).",
+      "transcoded": "In Shirazi et al.'s single-center, randomized, double-blind 12-week BPH trial (60 men, 30/group), pentoxifylline 400 mg every eight hours plus tamsulosin 0.4 mg/day versus placebo plus tamsulosin showed no significant between-group voided-volume change (0.80 versus +1.34 mL; p=.22) and no statistically significant within-group change (p=.90, .89). Baseline-to-endpoint voided-volume only—not residual or flow; visit schedule, onset, post-withdrawal persistence unestablished (Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md, §3.3).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0007-01-Q0007",
+      "type": "WITNESS",
+      "raw": "Nisi et al. (nisi2013.pdf.md, Table 2; Methods) gave 20 chronic-heart-failure patients one sustained-release 600-mg oral PTX tablet fasting. Parent-PTX plasma Tpeak was 1.64 ± 0.92 versus 3.89 ± 1.90 h (NYHA II, n=11; III/IV, n=9; P=.0077); Cmax 719 ± 403 versus 833 ± 524 ng/mL (NS), mean ± SD. Plasma values only—no tissue, unbound, metabolite or half-life—not urinary-benefit timing.",
+      "transcoded": "Nisi et al. (nisi2013.pdf.md, Table 2; Methods) gave 20 chronic-heart-failure patients one sustained-release 600-mg oral PTX tablet fasting. Parent-PTX plasma Tpeak was 1.64 ± 0.92 versus 3.89 ± 1.90 h (NYHA II, n=11; III/IV, n=9; P=.0077); Cmax 719 ± 403 versus 833 ± 524 ng/mL (NS), mean ± SD. Plasma values only—no tissue, unbound, metabolite or half-life—not urinary-benefit timing.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0008-02-Q0008",
+      "type": "WITNESS",
+      "raw": "Roberts et al. report that pentoxifylline 5 μmol/L added to healthy volunteers' whole blood (30-minute preincubation, 37°C) reduced FMLP-stimulated neutrophil intracellular oxidant (DCF hydrogen-peroxide) production to 76 ± 5% of the PTX-free response (mean ± SE; n=10; p<0.025). This added, parent-drug concentration—not plasma or metabolite exposure—is ex vivo and does not establish a bladder response (roberts1993.pdf.md).",
+      "transcoded": "Roberts et al. report that pentoxifylline 5 μmol/L added to healthy volunteers' whole blood (30-minute preincubation, 37°C) reduced FMLP-stimulated neutrophil intracellular oxidant (DCF hydrogen-peroxide) production to 76 ± 5% of the PTX-free response (mean ± SE; n=10; p<0.025). This added, parent-drug concentration—not plasma or metabolite exposure—is ex vivo and does not establish a bladder response (roberts1993.pdf.md).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0009-02-Q0009",
+      "type": "WITNESS",
+      "raw": "Delanian et al. 2003, single-center randomized double-blind placebo-controlled 2×2 factorial trial in women with superficial radiation-induced fibrosis >6 months after breast radiotherapy (24 eligible, 22 with 6-month data). Combination pentoxifylline 800 mg/day plus vitamin E 1000 U/day gave −60.2% versus double-placebo −42.6% surface-area change (P=.038, Wilcoxon). Two-way ANOVA found no significant main effects, only a PTX×vitamin-E interaction trend (P=.09).",
+      "transcoded": "Delanian et al. 2003, single-center randomized double-blind placebo-controlled 2×2 factorial trial in women with superficial radiation-induced fibrosis >6 months after breast radiotherapy (24 eligible, 22 with 6-month data). Combination pentoxifylline 800 mg/day plus vitamin E 1000 U/day gave −60.2% versus double-placebo −42.6% surface-area change (P=.038, Wilcoxon). Two-way ANOVA found no significant main effects, only a PTX×vitamin-E interaction trend (P=.09).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0009-03-Q0009",
+      "type": "WITNESS",
+      "raw": "Delanian et al.'s follow-up of women with superficial breast radiation-induced fibrosis on pentoxifylline 800 mg/day plus vitamin E 1,000 U/day found that, after stopping, fibrosis surface area rebounded more after short (6-12-month) treatment than long (24-48-month) treatment: 40%/year (95% CI 24-56) versus 8.5%/year (95% CI 1-16); P=.0012. Duration was not randomized; follow-up lasted two years (delanian2005.pdf.md).",
+      "transcoded": "Delanian et al.'s follow-up of women with superficial breast radiation-induced fibrosis on pentoxifylline 800 mg/day plus vitamin E 1,000 U/day found that, after stopping, fibrosis surface area rebounded more after short (6-12-month) treatment than long (24-48-month) treatment: 40%/year (95% CI 24-56) versus 8.5%/year (95% CI 1-16); P=.0012. Duration was not randomized; follow-up lasted two years (delanian2005.pdf.md).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0012-01-Q0012",
+      "type": "WITNESS",
+      "raw": "In MP75-18's retrospective chart review of male patients seen by benign urologists at one ambulatory clinic (April-September 2022), 52 of 120 patients referred for pelvic-floor physical therapy scheduled and attended at least one visit (43.3%). This is an initial-attendance endpoint, not treatment completion, abandonment because therapy seemed ineffective, or clinical response (MP75-18, Methods and Figure 1).",
+      "transcoded": "In MP75-18's retrospective chart review of male patients seen by benign urologists at one ambulatory clinic (April-September 2022), 52 of 120 patients referred for pelvic-floor physical therapy scheduled and attended at least one visit (43.3%). This is an initial-attendance endpoint, not treatment completion, abandonment because therapy seemed ineffective, or clinical response (MP75-18, Methods and Figure 1).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0013-01-Q0013",
+      "type": "WITNESS",
+      "raw": "Kassar et al.'s systematic review/meta-analysis of four depression RCTs (318 participants) found no significant difference in all-cause discontinuation between pentoxifylline and placebo: 14/159 versus 16/159; pooled RR 0.88 (95% CI 0.45-1.74; P=0.72). Dosing was 400 mg twice daily (one trial thrice), mostly added to an SSRI; no follow-up limited long-term safety; alpha-blocker-specific safety was not assessed (s00210-025-03845-1.pdf.md).",
+      "transcoded": "Kassar et al.'s systematic review/meta-analysis of four depression RCTs (318 participants) found no significant difference in all-cause discontinuation between pentoxifylline and placebo: 14/159 versus 16/159; pooled RR 0.88 (95% CI 0.45-1.74; P=0.72). Dosing was 400 mg twice daily (one trial thrice), mostly added to an SSRI; no follow-up limited long-term safety; alpha-blocker-specific safety was not assessed (s00210-025-03845-1.pdf.md).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0015-01-Q0015",
+      "type": "WITNESS",
+      "raw": "In Parker et al.'s randomized, investigator-blinded porcine haemorrhage-plus-E.-coli-peritonitis experiment (female Large White pigs; n=5 per group), pentoxifylline plus colloid (20 mg/kg bolus, then 20 mg/kg over 60 minutes) gave lower median 2-hour MAP than colloid-plus-saline placebo: 62(10) versus 92(10) mmHg (P<0.01); by 6 hours groups did not differ. This is acute resuscitation, not chronic oral treatment (parker2000.pdf.md).",
+      "transcoded": "In Parker et al.'s randomized, investigator-blinded porcine haemorrhage-plus-E.-coli-peritonitis experiment (female Large White pigs; n=5 per group), pentoxifylline plus colloid (20 mg/kg bolus, then 20 mg/kg over 60 minutes) gave lower median 2-hour MAP than colloid-plus-saline placebo: 62(10) versus 92(10) mmHg (P<0.01); by 6 hours groups did not differ. This is acute resuscitation, not chronic oral treatment (parker2000.pdf.md).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0016-01-Q0016",
+      "type": "WITNESS",
+      "raw": "In Ridings et al.'s nonrandomized controlled porcine sepsis experiment (ridings1994.pdf.md, COMMENT), intravenous pentoxifylline (20 mg/kg bolus, 6 mg/kg/h) begun two hours after Pseudomonas infusion (established, uncorrected shock) was followed by fatal hypotension within one hour in 2/4 animals; two survivors resembled 1-hour-treated protection (data not shown). Authors attributed deaths to pentoxifylline but said n=4 precluded statistics; untransferable to bladder dysfunction.",
+      "transcoded": "In Ridings et al.'s nonrandomized controlled porcine sepsis experiment (ridings1994.pdf.md, COMMENT), intravenous pentoxifylline (20 mg/kg bolus, 6 mg/kg/h) begun two hours after Pseudomonas infusion (established, uncorrected shock) was followed by fatal hypotension within one hour in 2/4 animals; two survivors resembled 1-hour-treated protection (data not shown). Authors attributed deaths to pentoxifylline but said n=4 precluded statistics; untransferable to bladder dysfunction.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0017-01-Q0017",
+      "type": "WITNESS",
+      "raw": "In Kaplan et al.'s retrospective study of 43 men with pseudodyssynergia previously misdiagnosed as chronic nonbacterial prostatitis, success of biofeedback was defined as a decrease in symptoms of at least 50% on two consecutive office visits, using the American Urological Association symptom score. This definition measures symptom response, not attendance, completion, or abandonment (kaplan1997.pdf.md, Materials and Methods).",
+      "transcoded": "In Kaplan et al.'s retrospective study of 43 men with pseudodyssynergia previously misdiagnosed as chronic nonbacterial prostatitis, success of biofeedback was defined as a decrease in symptoms of at least 50% on two consecutive office visits, using the American Urological Association symptom score. This definition measures symptom response, not attendance, completion, or abandonment (kaplan1997.pdf.md, Materials and Methods).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0019-01-Q0019",
+      "type": "WITNESS",
+      "raw": "Wystrychowski et al. (wystrychowski2014.pdf.md, Table 1; RESULTS) randomized 58 male Sprague-Dawley rats; after right nephrectomy, solitary left pedicle was clamped 45 minutes. Subcutaneous pentoxifylline 100 mg/kg versus saline improved 48-hour creatinine clearance only when given 60 minutes before ischemia (10/arm; P<.001), not 1 minute into ischemia or 60 minutes post-release. These within-timing acute-model results don't transfer to chronic bladder disease.",
+      "transcoded": "Wystrychowski et al. (wystrychowski2014.pdf.md, Table 1; RESULTS) randomized 58 male Sprague-Dawley rats; after right nephrectomy, solitary left pedicle was clamped 45 minutes. Subcutaneous pentoxifylline 100 mg/kg versus saline improved 48-hour creatinine clearance only when given 60 minutes before ischemia (10/arm; P<.001), not 1 minute into ischemia or 60 minutes post-release. These within-timing acute-model results don't transfer to chronic bladder disease.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0020-01-Q0020",
+      "type": "WITNESS",
+      "raw": "Yu and Jeong's clinical literature review (2020ICU_icu-58-S68.pdf.md, PREVALENCE AND EPIDEMIOLOGY OF DETRUSOR UNDERACTIVITY) reports most published detrusor-underactivity prevalence data came from community-dwelling cohorts with significant LUTS judged by arbitrary urodynamic criteria (25%–48% elderly men, 12%–24% women), with limited general-population applicability. Community-based research is described as rare, not absent; one study used free Qmax and post-void residual, not pressure-flow parameters.",
+      "transcoded": "Yu and Jeong's clinical literature review (2020ICU_icu-58-S68.pdf.md, PREVALENCE AND EPIDEMIOLOGY OF DETRUSOR UNDERACTIVITY) reports most published detrusor-underactivity prevalence data came from community-dwelling cohorts with significant LUTS judged by arbitrary urodynamic criteria (25%–48% elderly men, 12%–24% women), with limited general-population applicability. Community-based research is described as rare, not absent; one study used free Qmax and post-void residual, not pressure-flow parameters.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0021-01-Q0021",
+      "type": "WITNESS",
+      "raw": "Li et al. 2018 (li2018.pdf.md, §2.1 Patient selection; §3 Results), single-center retrospective at the China Rehabilitation Research Centre, selected an underactive-bladder cohort from 4,538 consecutive LUTS patients undergoing video-urodynamics (December 2004–January 2016); 1,460/1,726 (84.6%) classified neurogenic UAB—a rehabilitation-hospital etiologic distribution, not community prevalence. This FRD carries no sex/age composition, diagnostic criteria, prior-treatment-failure, or shy-bladder data.",
+      "transcoded": "Li et al. 2018 (li2018.pdf.md, §2.1 Patient selection; §3 Results), single-center retrospective at the China Rehabilitation Research Centre, selected an underactive-bladder cohort from 4,538 consecutive LUTS patients undergoing video-urodynamics (December 2004–January 2016); 1,460/1,726 (84.6%) classified neurogenic UAB—a rehabilitation-hospital etiologic distribution, not community prevalence. This FRD carries no sex/age composition, diagnostic criteria, prior-treatment-failure, or shy-bladder data.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0022-01-Q0022",
+      "type": "WITNESS",
+      "raw": "Clemens et al. 2000: cohort of 19 men with chronic pelvic pain syndrome receiving combined biofeedback-directed pelvic-floor re-education and bladder training over six biweekly sessions. Ten completed all six, five completed three to five, four completed fewer than three; the four non-completers' reasons were sufficient improvement (2), insurance issues (1), unknown (1). Complete follow-up covered 16 patients, not all enrolled.",
+      "transcoded": "Clemens et al. 2000: cohort of 19 men with chronic pelvic pain syndrome receiving combined biofeedback-directed pelvic-floor re-education and bladder training over six biweekly sessions. Ten completed all six, five completed three to five, four completed fewer than three; the four non-completers' reasons were sufficient improvement (2), insurance issues (1), unknown (1). Complete follow-up covered 16 patients, not all enrolled.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0023-01-Q0023",
+      "type": "WITNESS",
+      "raw": "In Cornel et al.'s uncontrolled pre/post study of men with type III CP/CPPS, 31 of 33 enrolled remained after two dropped out. The mean NIH-CPSI micturition score fell from 5.1 (range 0-10) before to 2.2 (range 0-6) after pelvic-floor biofeedback and re-education (p<0.001). These are symptom scores, not measured urinary flow or residual volume (cornel2005.pdf.md, Results).",
+      "transcoded": "In Cornel et al.'s uncontrolled pre/post study of men with type III CP/CPPS, 31 of 33 enrolled remained after two dropped out. The mean NIH-CPSI micturition score fell from 5.1 (range 0-10) before to 2.2 (range 0-6) after pelvic-floor biofeedback and re-education (p<0.001). These are symptom scores, not measured urinary flow or residual volume (cornel2005.pdf.md, Results).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0025-01-Q0025",
+      "type": "WITNESS",
+      "raw": "FitzGerald et al. (fitzgerald2009.pdf.md), a randomized multicenter feasibility trial (47 total), report the male CP/CPPS subgroup (11 assigned myofascial PT, 10 global massage; 11 versus 9 at week 12). NIH-CPSI urinary-subscore change baseline-to-week-12 favored MPT (−3.9 versus −0.3; Wilcoxon p=0.007), but baselines were imbalanced (8.9±1.4 versus 4.6±2.7). Scheduled: ten weekly sessions. Preliminary; uroflow/residual and prior pelvic-floor-treatment history not reported.",
+      "transcoded": "FitzGerald et al. (fitzgerald2009.pdf.md), a randomized multicenter feasibility trial (47 total), report the male CP/CPPS subgroup (11 assigned myofascial PT, 10 global massage; 11 versus 9 at week 12). NIH-CPSI urinary-subscore change baseline-to-week-12 favored MPT (−3.9 versus −0.3; Wilcoxon p=0.007), but baselines were imbalanced (8.9±1.4 versus 4.6±2.7). Scheduled: ten weekly sessions. Preliminary; uroflow/residual and prior pelvic-floor-treatment history not reported.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0027-01-Q0027",
+      "type": "WITNESS",
+      "raw": "Neuner et al. (immunology00076-0102.pdf.md) studied four healthy volunteers overall; the two-day-regimen subgroup size is unspecified. Oral PTX 5×400 mg/day for two days significantly suppressed TNF-α, IL-1β, IL-6 and IL-8 release from day-7 PBMC cultured 24 hours, with or without LPS 1 µg/mL. These are ex-vivo endpoints after in-vivo dosing; plasma/tissue exposure and clinical urinary efficacy were unmeasured.",
+      "transcoded": "Neuner et al. (immunology00076-0102.pdf.md) studied four healthy volunteers overall; the two-day-regimen subgroup size is unspecified. Oral PTX 5×400 mg/day for two days significantly suppressed TNF-α, IL-1β, IL-6 and IL-8 release from day-7 PBMC cultured 24 hours, with or without LPS 1 µg/mL. These are ex-vivo endpoints after in-vivo dosing; plasma/tissue exposure and clinical urinary efficacy were unmeasured.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0028-01-Q0028",
+      "type": "WITNESS",
+      "raw": "Kruuse 2000, double-blind crossover in 10 healthy subjects: pentoxifylline 300 mg intravenously over 60 minutes versus saline, SPECT before and 55 and 115 minutes after infusion began. No significant over-time change in middle-cerebral-artery or global cerebral blood flow, corrected or uncorrected. pCO2-corrected changes did not differ between treatments; uncorrected changes did. Tests healthy cerebral perfusion, not ischemic bladder.",
+      "transcoded": "Kruuse 2000, double-blind crossover in 10 healthy subjects: pentoxifylline 300 mg intravenously over 60 minutes versus saline, SPECT before and 55 and 115 minutes after infusion began. No significant over-time change in middle-cerebral-artery or global cerebral blood flow, corrected or uncorrected. pCO2-corrected changes did not differ between treatments; uncorrected changes did. Tests healthy cerebral perfusion, not ischemic bladder.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0029-01-Q0029",
+      "type": "WITNESS",
+      "raw": "Dezube et al. 1993, pilot study of seven adult cancer patients treated on eight occasions for 1–3 weeks with oral controlled-release pentoxifylline 400 mg every eight hours. On all three occasions when baseline PBMC TNF/β-actin RNA ratios exceeded the healthy-volunteer normal range, ratios fell within one week; on five occasions within normal range, no reduction. Target-engagement, not clinical benefit.",
+      "transcoded": "Dezube et al. 1993, pilot study of seven adult cancer patients treated on eight occasions for 1–3 weeks with oral controlled-release pentoxifylline 400 mg every eight hours. On all three occasions when baseline PBMC TNF/β-actin RNA ratios exceeded the healthy-volunteer normal range, ratios fell within one week; on five occasions within normal range, no reduction. Target-engagement, not clinical benefit.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0031-01-Q0031",
+      "type": "WITNESS",
+      "raw": "van Reijn-Baggen 2022 review's Table 2 lists FitzGerald et al. (2009), a 47-participant mixed-population randomized trial comparing pelvic-floor physical therapy against full-body Western massage: CP/CPPS NIH-urinary pre-to-post P<.001 and PFPT-versus-control P<.01, with no stated between-group direction or magnitude; the narrative reports equal urinary improvement. This review-transmitted symptom-index result is not independent replication or improved bladder emptying.",
+      "transcoded": "van Reijn-Baggen 2022 review's Table 2 lists FitzGerald et al. (2009), a 47-participant mixed-population randomized trial comparing pelvic-floor physical therapy against full-body Western massage: CP/CPPS NIH-urinary pre-to-post P<.001 and PFPT-versus-control P<.01, with no stated between-group direction or magnitude; the narrative reports equal urinary improvement. This review-transmitted symptom-index result is not independent replication or improved bladder emptying.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0033-01-Q0033",
+      "type": "WITNESS",
+      "raw": "Raison et al. 2013, 12-week double-blind placebo-controlled randomized trial in 60 medically stable treatment-resistant-depression outpatients: infliximab (5 mg/kg intravenously at baseline, weeks 2 and 6; n=30) versus placebo (n=30) produced no statistically significant overall difference in 17-item HAM-D change over time (intention-to-treat mixed-effects, t58=0.10, P=.92). Nonsignificant, not proof of no benefit; this is infliximab for depression.",
+      "transcoded": "Raison et al. 2013, 12-week double-blind placebo-controlled randomized trial in 60 medically stable treatment-resistant-depression outpatients: infliximab (5 mg/kg intravenously at baseline, weeks 2 and 6; n=30) versus placebo (n=30) produced no statistically significant overall difference in 17-item HAM-D change over time (intention-to-treat mixed-effects, t58=0.10, P=.92). Nonsignificant, not proof of no benefit; this is infliximab for depression.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0034-01-Q0034",
+      "type": "WITNESS",
+      "raw": "Roerink et al.'s cross-sectional matched case-control study found that 17 patients in long-term remission of Cushing's syndrome had lower mean peak oxygen uptake during incremental bicycle exercise than 17 individually matched healthy controls: 28.0 ± 7.0 versus 34.8 ± 7.9 mL O2/kg/min (mean ± SD; P<0.01). Remission exceeded four years (median 11.3, range 4-28) (roerink2019.pdf.md).",
+      "transcoded": "Roerink et al.'s cross-sectional matched case-control study found that 17 patients in long-term remission of Cushing's syndrome had lower mean peak oxygen uptake during incremental bicycle exercise than 17 individually matched healthy controls: 28.0 ± 7.0 versus 34.8 ± 7.9 mL O2/kg/min (mean ± SD; P<0.01). Remission exceeded four years (median 11.3, range 4-28) (roerink2019.pdf.md).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0035-01-Q0035",
+      "type": "WITNESS",
+      "raw": "Shah et al. (shah2016.pdf.md, Regression Analysis; Discussion) studied 31 Cushing's-disease patients during active disease and after endocrine remission. Adjusted for age, gender, BMI, visceral/subcutaneous/total adipose masses, hepatic and inter-muscular fat did not predict plasma IL-6 or IL-1β at either visit; cytokines were not associated with insulin resistance. These are nonassociations, not causal exclusion; which cytokines stayed elevated isn't stated here.",
+      "transcoded": "Shah et al. (shah2016.pdf.md, Regression Analysis; Discussion) studied 31 Cushing's-disease patients during active disease and after endocrine remission. Adjusted for age, gender, BMI, visceral/subcutaneous/total adipose masses, hepatic and inter-muscular fat did not predict plasma IL-6 or IL-1β at either visit; cytokines were not associated with insulin resistance. These are nonassociations, not causal exclusion; which cytokines stayed elevated isn't stated here.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0037-01-Q0037",
+      "type": "WITNESS",
+      "raw": "Bortnick and colleagues' review states that phosphodiesterase-5 inhibitors are contraindicated in patients taking nitrates, because they might potentiate nitrates' effect and cause life-threatening hypotension. This is class-level contraindication guidance with a proposed interaction rationale, not a quantified, observed adverse-event rate (bortnick2019.pdf.md, Phosphodiesterase Inhibitors).",
+      "transcoded": "Bortnick and colleagues' review states that phosphodiesterase-5 inhibitors are contraindicated in patients taking nitrates, because they might potentiate nitrates' effect and cause life-threatening hypotension. This is class-level contraindication guidance with a proposed interaction rationale, not a quantified, observed adverse-event rate (bortnick2019.pdf.md, Phosphodiesterase Inhibitors).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0040-01-Q0040",
+      "type": "WITNESS",
+      "raw": "Bortnick et al. (bortnick2020.pdf.md, Medical therapy → Alpha blockers), a review, describe alpha-adrenergic antagonists as relaxing prostate and bladder-neck smooth muscle (which contains alpha-1a receptors) to relieve bladder outlet obstruction. This source states the mechanism only; it does not supply treatment-onset, duration, or prostate-size criteria distinguishing alpha-blocker therapy from 5-alpha-reductase inhibition or procedures.",
+      "transcoded": "Bortnick et al. (bortnick2020.pdf.md, Medical therapy → Alpha blockers), a review, describe alpha-adrenergic antagonists as relaxing prostate and bladder-neck smooth muscle (which contains alpha-1a receptors) to relieve bladder outlet obstruction. This source states the mechanism only; it does not supply treatment-onset, duration, or prostate-size criteria distinguishing alpha-blocker therapy from 5-alpha-reductase inhibition or procedures.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0041-01-Q0041",
+      "type": "WITNESS",
+      "raw": "Vogel et al. (Vogel2023_Glucocorticoid_Withdrawal.md, Figure 4(A); Methods) report a monocentric retrospective observational study of Cushing's-syndrome patients after curative surgery (cohort n=80). In the analyzed subset (N=50), C-reactive protein three months postoperatively was inversely associated with age/gender-corrected normalized grip strength at twelve months (Spearman rs=−0.371, P=.008). Authors state association, not causal mediation; this concerns endocrine, not bladder, recovery.",
+      "transcoded": "Vogel et al. (Vogel2023_Glucocorticoid_Withdrawal.md, Figure 4(A); Methods) report a monocentric retrospective observational study of Cushing's-syndrome patients after curative surgery (cohort n=80). In the analyzed subset (N=50), C-reactive protein three months postoperatively was inversely associated with age/gender-corrected normalized grip strength at twelve months (Spearman rs=−0.371, P=.008). Authors state association, not causal mediation; this concerns endocrine, not bladder, recovery.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0042-01-Q0042",
+      "type": "WITNESS",
+      "raw": "Fakioglu et al. (fakioglu2004.pdf.md, §3.1 Results; Fig. 2) report that in anesthetized Sprague–Dawley rats given intravenous endotoxin (4 mg/kg), post-endotoxin intravenous aminophylline (1 mg/kg over 30 minutes from 30 minutes, then 0.5 mg/kg/h) significantly increased lung water (81.41 ± 1.7% versus 80.23 ± 1.1% endotoxin-alone; P<0.05) among survivors (9/11 versus 9/10). Serum levels unreported; aminophylline class-transfer signal, not PTX-bladder evidence.",
+      "transcoded": "Fakioglu et al. (fakioglu2004.pdf.md, §3.1 Results; Fig. 2) report that in anesthetized Sprague–Dawley rats given intravenous endotoxin (4 mg/kg), post-endotoxin intravenous aminophylline (1 mg/kg over 30 minutes from 30 minutes, then 0.5 mg/kg/h) significantly increased lung water (81.41 ± 1.7% versus 80.23 ± 1.1% endotoxin-alone; P<0.05) among survivors (9/11 versus 9/10). Serum levels unreported; aminophylline class-transfer signal, not PTX-bladder evidence.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0043-01-Q0043",
+      "type": "WITNESS",
+      "raw": "van Houten et al. 2026, prospective paired cohort of nine Cushing's syndrome patients (six adrenal, three Cushing's disease) sampled at diagnosis and after surgical remission with complete glucocorticoid-replacement tapering: circulating plasma IL-6 and IL-8 (proximity extension assay) showed no significant difference, and CRP (ELISA) no discernible trend. These are basal circulating markers, not stimulated ex-vivo PBMC responses; marker-specific denominators unreported.",
+      "transcoded": "van Houten et al. 2026, prospective paired cohort of nine Cushing's syndrome patients (six adrenal, three Cushing's disease) sampled at diagnosis and after surgical remission with complete glucocorticoid-replacement tapering: circulating plasma IL-6 and IL-8 (proximity extension assay) showed no significant difference, and CRP (ELISA) no discernible trend. These are basal circulating markers, not stimulated ex-vivo PBMC responses; marker-specific denominators unreported.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0044-01-Q0044",
+      "type": "WITNESS",
+      "raw": "Fukabori-1996-uninhibited-bladder.pdf.md (English abstract, 'A CASE OF UNINHIBITED BLADDER...') reports one 60-year-old woman with pollakisuria, urge incontinence and urodynamic uninhibited contractions; after a failed anticholinergic, pentoxifylline (dose/route unstated) resolved incontinence and reduced pollakisuria by two weeks, with contractions absent and increased capacity by four weeks. Storage symptoms only; single case, not comparative efficacy.",
+      "transcoded": "Fukabori-1996-uninhibited-bladder.pdf.md (English abstract, 'A CASE OF UNINHIBITED BLADDER...') reports one 60-year-old woman with pollakisuria, urge incontinence and urodynamic uninhibited contractions; after a failed anticholinergic, pentoxifylline (dose/route unstated) resolved incontinence and reduced pollakisuria by two weeks, with contractions absent and increased capacity by four weeks. Storage symptoms only; single case, not comparative efficacy.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0045-01-Q0045",
+      "type": "WITNESS",
+      "raw": "Gulen 2024's review requires three criteria for MCAS: typical severe episodic activation symptoms in ≥2 organ systems; a substantial transient event-related rise in a validated marker, with event serum tryptase exceeding (1.2 × baseline) + 2 ng/mL; and symptom control with mast-cell-mediator-targeting drugs. Without prior baseline, measure tryptase ≥24 hours after complete recovery. It addresses no bladder or pentoxifylline outcome.",
+      "transcoded": "Gulen 2024's review requires three criteria for MCAS: typical severe episodic activation symptoms in ≥2 organ systems; a substantial transient event-related rise in a validated marker, with event serum tryptase exceeding (1.2 × baseline) + 2 ng/mL; and symptom control with mast-cell-mediator-targeting drugs. Without prior baseline, measure tryptase ≥24 hours after complete recovery. It addresses no bladder or pentoxifylline outcome.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0046-01-Q0046",
+      "type": "WITNESS",
+      "raw": "Vale et al. (vale2019.pdf.md, §3.1.4 Bladder outlet obstruction), a review, reports that in mice with bladder outlet obstruction, daily 17-DMAG (described as pharmacological HIF-pathway inhibition) improved BOO-induced morphology, suppressed HIF target-gene upregulation, and seemed to improve stimulated contractility (attributed to Iguchi, Malykhina, Wilcox 2016, ref 55). This is review-transmitted preclinical evidence implicating HIF/ischemia, not direct pentoxifylline data.",
+      "transcoded": "Vale et al. (vale2019.pdf.md, §3.1.4 Bladder outlet obstruction), a review, reports that in mice with bladder outlet obstruction, daily 17-DMAG (described as pharmacological HIF-pathway inhibition) improved BOO-induced morphology, suppressed HIF target-gene upregulation, and seemed to improve stimulated contractility (attributed to Iguchi, Malykhina, Wilcox 2016, ref 55). This is review-transmitted preclinical evidence implicating HIF/ischemia, not direct pentoxifylline data.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0047-01-Q0047",
+      "type": "WITNESS",
+      "raw": "Kim 2017's review of underactive bladder reports that, although parasympathomimetics have been widely used, the evidence does not support clinical benefit; it describes conflicting clinical results and relays Barendrecht et al.'s conclusion that evidence does not support their use, particularly given potential adverse effects.",
+      "transcoded": "Kim 2017's review of underactive bladder reports that, although parasympathomimetics have been widely used, the evidence does not support clinical benefit; it describes conflicting clinical results and relays Barendrecht et al.'s conclusion that evidence does not support their use, particularly given potential adverse effects.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0048-01-Q0048",
+      "type": "WITNESS",
+      "raw": "Shirazi et al.'s double-blind randomized 12-week BPH trial reports comparisons by t-test, Wilcoxon, and Mann–Whitney tests, with significance at p≤0.05; no ANCOVA or baseline-PVR-adjusted model is reported. The analysis set was participants receiving medication throughout (60 randomized, 30 per group, no exclusions). Whether change dispersion is SD or SE is not stated in this methods text.",
+      "transcoded": "Shirazi et al.'s double-blind randomized 12-week BPH trial reports comparisons by t-test, Wilcoxon, and Mann–Whitney tests, with significance at p≤0.05; no ANCOVA or baseline-PVR-adjusted model is reported. The analysis set was participants receiving medication throughout (60 randomized, 30 per group, no exclusions). Whether change dispersion is SD or SE is not stated in this methods text.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0049-01-Q0049",
+      "type": "WITNESS",
+      "raw": "Chung 2014's review characterizes paruresis (bashful bladder) as psychogenic inhibition of micturition—difficulty or inability to urinate when others are present or may soon be present—citing Boschen (2008), and suggests it may contribute to underactive bladder long-term. This is review-level proposed-mechanism description, not demonstrated psychogenic causation, a prevalence estimate, or treatment-response data.",
+      "transcoded": "Chung 2014's review characterizes paruresis (bashful bladder) as psychogenic inhibition of micturition—difficulty or inability to urinate when others are present or may soon be present—citing Boschen (2008), and suggests it may contribute to underactive bladder long-term. This is review-level proposed-mechanism description, not demonstrated psychogenic causation, a prevalence estimate, or treatment-response data.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0050-01-Q0050",
+      "type": "WITNESS",
+      "raw": "Ladi-Seyedian et al. (ladi-seyedian2017.pdf.md, §7.3.1 Parasympathomimetics) report, as a review, that some studies of distigmine found no significant difference versus placebo. The review does not specify those studies' endpoints, sample sizes, doses, or durations, and this is review-transmitted reporting, not independent verification or a pooled estimate of the negative comparisons.",
+      "transcoded": "Ladi-Seyedian et al. (ladi-seyedian2017.pdf.md, §7.3.1 Parasympathomimetics) report, as a review, that some studies of distigmine found no significant difference versus placebo. The review does not specify those studies' endpoints, sample sizes, doses, or durations, and this is review-transmitted reporting, not independent verification or a pooled estimate of the negative comparisons.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0052-01-Q0052",
+      "type": "WITNESS",
+      "raw": "Spinas 1991, randomized study of 20 healthy men: endotoxin alone (n=7), endotoxin plus oral ibuprofen (800 mg 120 minutes before, 800 mg immediately before; n=6), or saline (n=7). Ibuprofen pretreatment raised maximal plasma TNF-α to 627±136 pg/mL at 120 minutes versus 369±44 at 90 minutes without (mean±SE; source reports P=.003/P<.003), and raised IL-6, showing anti-inflammatory pretreatment increasing cytokines.",
+      "transcoded": "Spinas 1991, randomized study of 20 healthy men: endotoxin alone (n=7), endotoxin plus oral ibuprofen (800 mg 120 minutes before, 800 mg immediately before; n=6), or saline (n=7). Ibuprofen pretreatment raised maximal plasma TNF-α to 627±136 pg/mL at 120 minutes versus 369±44 at 90 minutes without (mean±SE; source reports P=.003/P<.003), and raised IL-6, showing anti-inflammatory pretreatment increasing cytokines.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0053-01-Q0053",
+      "type": "WITNESS",
+      "raw": "Chuang and colleagues' review reports, secondhand from Jeong and colleagues, that among 1,179 adults over 65 with non-neurogenic voiding dysfunction presenting with urinary symptoms, 'more than 40.2%' of men had detrusor underactivity (male criterion: bladder contractility index below 100). The 1,179 is the mixed-sex total, not the male denominator, which is not supplied (chuang2015.pdf.md, Epidemiology).",
+      "transcoded": "Chuang and colleagues' review reports, secondhand from Jeong and colleagues, that among 1,179 adults over 65 with non-neurogenic voiding dysfunction presenting with urinary symptoms, 'more than 40.2%' of men had detrusor underactivity (male criterion: bladder contractility index below 100). The 1,179 is the mixed-sex total, not the male denominator, which is not supplied (chuang2015.pdf.md, Epidemiology).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0054-01-Q0054",
+      "type": "WITNESS",
+      "raw": "Chung et al. (chung2016.pdf.md), reviewing Rule et al.'s population-based sample of men, report that in men in their seventies the annual change in postvoid residual urine was −3% (CI −19–19%), neither statistically nor clinically significant. This is a review-transmitted, population-level longitudinal estimate—not evidence of treatment response, individual recovery, or a basis for identifying any PTX-responsive subgroup.",
+      "transcoded": "Chung et al. (chung2016.pdf.md), reviewing Rule et al.'s population-based sample of men, report that in men in their seventies the annual change in postvoid residual urine was −3% (CI −19–19%), neither statistically nor clinically significant. This is a review-transmitted, population-level longitudinal estimate—not evidence of treatment response, individual recovery, or a basis for identifying any PTX-responsive subgroup.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0055-01-Q0055",
+      "type": "WITNESS",
+      "raw": "Glazener et al. 2011, UK randomized TURP trial: 442 men with incontinence six weeks post-surgery were offered four one-to-one PFMT (plus bladder training) sessions (n=220) or standard care (n=222). At 12 months, self-reported any incontinence (ICIQ-UI SF) was 126/194 (65%) versus 125/203 (62%); adjusted intention-to-treat risk ratio 1.06 (95% CI 0.91–1.23; p=0.47)—no significant benefit. Post-surgical leakage, not difficult emptying.",
+      "transcoded": "Glazener et al. 2011, UK randomized TURP trial: 442 men with incontinence six weeks post-surgery were offered four one-to-one PFMT (plus bladder training) sessions (n=220) or standard care (n=222). At 12 months, self-reported any incontinence (ICIQ-UI SF) was 126/194 (65%) versus 125/203 (62%); adjusted intention-to-treat risk ratio 1.06 (95% CI 0.91–1.23; p=0.47)—no significant benefit. Post-surgical leakage, not difficult emptying.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0056-01-Q0056",
+      "type": "WITNESS",
+      "raw": "In a study its authors call a retrospective case–control of 180 men with BPH after TURP (11255_2025_Article_4454.pdf.md, Table 6; Grouping and intervention methods), Table 6 reports post-intervention urinary control (fewer than one pad/day) in 31/83 (37.35%) given HBM-guided PFMT plus standard care versus 24/97 (24.74%) standard care alone, between-group P=0.067 (nonsignificant). This combination-program continence comparison isn't emptying, PFMT-monotherapy, or six-month-defined.",
+      "transcoded": "In a study its authors call a retrospective case–control of 180 men with BPH after TURP (11255_2025_Article_4454.pdf.md, Table 6; Grouping and intervention methods), Table 6 reports post-intervention urinary control (fewer than one pad/day) in 31/83 (37.35%) given HBM-guided PFMT plus standard care versus 24/97 (24.74%) standard care alone, between-group P=0.067 (nonsignificant). This combination-program continence comparison isn't emptying, PFMT-monotherapy, or six-month-defined.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0059-01-Q0059",
+      "type": "WITNESS",
+      "raw": "Brown et al.'s single-institution retrospective chart review of 958 adult female urogynecology patients (335 referred to pelvic-floor physical therapy) found that patients seeing a physical therapist the same day as their initial consult attended more often than those who did not (91% versus 61%, p<0.001), but completion did not differ (49% versus 41%, p=0.15). Allocation was non-randomized (nihms-1048633.pdf.md, Results).",
+      "transcoded": "Brown et al.'s single-institution retrospective chart review of 958 adult female urogynecology patients (335 referred to pelvic-floor physical therapy) found that patients seeing a physical therapist the same day as their initial consult attended more often than those who did not (91% versus 61%, p<0.001), but completion did not differ (49% versus 41%, p=0.15). Allocation was non-randomized (nihms-1048633.pdf.md, Results).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0061-01-Q0061",
+      "type": "WITNESS",
+      "raw": "Siu et al. (siu2003.pdf.md, RESULTS, Table I) studied 214 Chinese women with stress incontinence in a prospective pelvic-muscle-exercise cohort; the 103 dropouts had higher baseline Oxford-palpation strength (1.84, SD 0.57) than 111 remainers (1.67, SD 0.60; t=2.15, P<0.05). Dropout meant discontinued attendance, not verified home-exercise cessation, so this cannot explain discontinuation or transfer to male emptying nonresponse.",
+      "transcoded": "Siu et al. (siu2003.pdf.md, RESULTS, Table I) studied 214 Chinese women with stress incontinence in a prospective pelvic-muscle-exercise cohort; the 103 dropouts had higher baseline Oxford-palpation strength (1.84, SD 0.57) than 111 remainers (1.67, SD 0.60; t=2.15, P<0.05). Dropout meant discontinued attendance, not verified home-exercise cessation, so this cannot explain discontinuation or transfer to male emptying nonresponse.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0062-01-Q0062",
+      "type": "WITNESS",
+      "raw": "Stokes 2022 (OPAL trial of women with stress or mixed urinary incontinence): 409 of 600 randomized women returned a first home-PFMT diary at the second appointment; 395 entered regression after missing data affected the adherence metric. These are diary-return counts, not treatment completion or response, and the female cohort cannot identify male completed-treatment nonresponse or abandonment.",
+      "transcoded": "Stokes 2022 (OPAL trial of women with stress or mixed urinary incontinence): 409 of 600 randomized women returned a first home-PFMT diary at the second appointment; 395 entered regression after missing data affected the adherence metric. These are diary-return counts, not treatment completion or response, and the female cohort cannot identify male completed-treatment nonresponse or abandonment.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0004-03-r2-Q0004",
+      "type": "WITNESS",
+      "raw": "Kaplan et al. (kaplan1997.pdf.md): retrospective series of 43 men with urodynamically diagnosed pseudodyssynergia, previously treated as chronic nonbacterial prostatitis. Success was ≥50% symptom reduction on two consecutive visits. After behavior modification and biofeedback, 35 (printed 83%) responded; responders' mean AUA score fell 18.4→7.6 (three months), 8.1 (six months). RESULTS gives the three-month count; the abstract reports six-month success.",
+      "transcoded": "Kaplan et al. (kaplan1997.pdf.md): retrospective series of 43 men with urodynamically diagnosed pseudodyssynergia, previously treated as chronic nonbacterial prostatitis. Success was ≥50% symptom reduction on two consecutive visits. After behavior modification and biofeedback, 35 (printed 83%) responded; responders' mean AUA score fell 18.4→7.6 (three months), 8.1 (six months). RESULTS gives the three-month count; the abstract reports six-month success.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A1-H1-R1",
+      "type": "HYPOTHESIS",
+      "raw": "In these men (BPH, shy bladder and difficulty voiding, with inadequate benefit from tamsulosin and failed or abandoned prescribed pelvic-floor treatment), the persistent voiding difficulty includes a reversible physiological component.",
+      "transcoded": "In these men (BPH, shy bladder and difficulty voiding, with inadequate benefit from tamsulosin and failed or abandoned prescribed pelvic-floor treatment), the persistent voiding difficulty includes a reversible physiological component.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A1-H1-R2",
+      "type": "HYPOTHESIS",
+      "raw": "That reversible physiological component is one that tamsulosin does not adequately address in these men.",
+      "transcoded": "That reversible physiological component is one that tamsulosin does not adequately address in these men.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A1-H1-R3",
+      "type": "HYPOTHESIS",
+      "raw": "The same component is one that their prescribed pelvic-floor intervention does not adequately address.",
+      "transcoded": "The same component is one that their prescribed pelvic-floor intervention does not adequately address.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A1-H1-R4",
+      "type": "HYPOTHESIS",
+      "raw": "PTX or its metabolites can act on that reversible physiological component at clinically attainable exposures.",
+      "transcoded": "PTX or its metabolites can act on that reversible physiological component at clinically attainable exposures.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A1-H1-R5",
+      "type": "HYPOTHESIS",
+      "raw": "PTX could meaningfully improve voiding in an identifiable subgroup of these men: acting on the reversible component changes a relevant urinary function (for example contractility, outlet behavior, coordination, initiation, flow, or emptying).",
+      "transcoded": "PTX could meaningfully improve voiding in an identifiable subgroup of these men: acting on the reversible component changes a relevant urinary function (for example contractility, outlet behavior, coordination, initiation, flow, or emptying).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A1-H1-R6",
+      "type": "HYPOTHESIS",
+      "raw": "Trial slot (a), intervention and exposure, is specifiable from supported premises: agent, any required cointervention, route, dose, and duration at a clinically attainable exposure.",
+      "transcoded": "Trial slot (a), intervention and exposure, is specifiable from supported premises: agent, any required cointervention, route, dose, and duration at a clinically attainable exposure.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A1-H1-R7",
+      "type": "HYPOTHESIS",
+      "raw": "Trial slot (b), phenotype, is specifiable from supported premises: measurable baseline characteristics, ascertainable before treatment, that identify the subgroup of these men proposed to respond.",
+      "transcoded": "Trial slot (b), phenotype, is specifiable from supported premises: measurable baseline characteristics, ascertainable before treatment, that identify the subgroup of these men proposed to respond.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A1-H1-R8",
+      "type": "HYPOTHESIS",
+      "raw": "Trial slot (c), measurement, is specifiable from supported premises: the primary functional voiding outcome, its expected direction, and its expected timing.",
+      "transcoded": "Trial slot (c), measurement, is specifiable from supported premises: the primary functional voiding outcome, its expected direction, and its expected timing.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A1-H1-R9",
+      "type": "HYPOTHESIS",
+      "raw": "Trial slot (d), comparator, is specifiable from supported premises: a control or contrast that would distinguish the proposed PTX mechanism from the leading alternative explanation (for example tamsulosin, vitamin E, pelvic-floor treatment, combination effects, adherence, or contextual change).",
+      "transcoded": "Trial slot (d), comparator, is specifiable from supported premises: a control or contrast that would distinguish the proposed PTX mechanism from the leading alternative explanation (for example tamsulosin, vitamin E, pelvic-floor treatment, combination effects, adherence, or contextual change).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A1-H1-C1",
+      "type": "HYPOTHESIS",
+      "raw": "The relevant dysfunction occurs in this cohort.",
+      "transcoded": "The relevant dysfunction occurs in this cohort.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A1-H1-C2",
+      "type": "HYPOTHESIS",
+      "raw": "The proposed drug effects reach the relevant tissue under plausible treatment conditions.",
+      "transcoded": "The proposed drug effects reach the relevant tissue under plausible treatment conditions.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A1-H1-C3",
+      "type": "HYPOTHESIS",
+      "raw": "Changing those processes can improve urinary function.",
+      "transcoded": "Changing those processes can improve urinary function.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A1-H1-C4",
+      "type": "HYPOTHESIS",
+      "raw": "Any necessary contribution from vitamin E or another cointervention is made explicit rather than folded into the PTX rationale.",
+      "transcoded": "Any necessary contribution from vitamin E or another cointervention is made explicit rather than folded into the PTX rationale.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A1-H1-A1",
+      "type": "HYPOTHESIS",
+      "raw": "Relevant PTX or metabolite exposure is clinically unattainable.",
+      "transcoded": "Relevant PTX or metabolite exposure is clinically unattainable.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A1-H1-A2",
+      "type": "HYPOTHESIS",
+      "raw": "The proposed target is absent or incidental in impaired voiding relevant to this cohort.",
+      "transcoded": "The proposed target is absent or incidental in impaired voiding relevant to this cohort.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A1-H1-A3",
+      "type": "HYPOTHESIS",
+      "raw": "Target modulation fails to improve the relevant urinary function under informative conditions.",
+      "transcoded": "Target modulation fails to improve the relevant urinary function under informative conditions.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A1-H1-A4",
+      "type": "HYPOTHESIS",
+      "raw": "Stronger evidence breaks a causal link necessary to every non-speculative route.",
+      "transcoded": "Stronger evidence breaks a causal link necessary to every non-speculative route.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A1-H1-E1",
+      "type": "HYPOTHESIS",
+      "raw": "Converging findings connect attainable exposure, target engagement, physiological improvement, and relevant urinary function.",
+      "transcoded": "Converging findings connect attainable exposure, target engagement, physiological improvement, and relevant urinary function.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A1-H1-E2",
+      "type": "HYPOTHESIS",
+      "raw": "Timing, dose-response relationships, response predictors, and contrary results discriminate this explanation from alternatives.",
+      "transcoded": "Timing, dose-response relationships, response predictors, and contrary results discriminate this explanation from alternatives.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A1-H1-E3",
+      "type": "HYPOTHESIS",
+      "raw": "The evidence identifies measurable patient characteristics and trial outcomes that should reveal benefit.",
+      "transcoded": "The evidence identifies measurable patient characteristics and trial outcomes that should reveal benefit.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A1-H2-R1",
+      "type": "HYPOTHESIS",
+      "raw": "Affirmative evidence demonstrates a consequential mismatch between PTX's reported biological effects and the dysfunction driving impaired voiding in this cohort, in at least one of: exposure, tissue, disease process, timing, or the relationship between a biological marker and urinary function.",
+      "transcoded": "Affirmative evidence demonstrates a consequential mismatch between PTX's reported biological effects and the dysfunction driving impaired voiding in this cohort, in at least one of: exposure, tissue, disease process, timing, or the relationship between a biological marker and urinary function.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A1-H2-R2",
+      "type": "HYPOTHESIS",
+      "raw": "The mismatched link is necessary to the materially supported rationale as it stands in the ledger (shared by or required for its supported routes), so the failure reaches that rationale and not merely one route among many.",
+      "transcoded": "The mismatched link is necessary to the materially supported rationale as it stands in the ledger (shared by or required for its supported routes), so the failure reaches that rationale and not merely one route among many.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A1-H2-C1",
+      "type": "HYPOTHESIS",
+      "raw": "The evidence demonstrating the mismatch is sufficiently relevant to test H1; failure in an unrelated model or exposure does not suffice.",
+      "transcoded": "The evidence demonstrating the mismatch is sufficiently relevant to test H1; failure in an unrelated model or exposure does not suffice.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A1-H2-C2",
+      "type": "HYPOTHESIS",
+      "raw": "H2 targets the materially supported rationale as it currently stands in the ledger, not every route that could be imagined.",
+      "transcoded": "H2 targets the materially supported rationale as it currently stands in the ledger, not every route that could be imagined.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A1-H2-C3",
+      "type": "HYPOTHESIS",
+      "raw": "The absence of clinical trials alone does not corroborate H2.",
+      "transcoded": "The absence of clinical trials alone does not corroborate H2.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A1-H2-C4",
+      "type": "HYPOTHESIS",
+      "raw": "Breaking one route among several independently supported routes damages that route only in proportion to the share of the case it carried and does not by itself corroborate H2.",
+      "transcoded": "Breaking one route among several independently supported routes damages that route only in proportion to the share of the case it carried and does not by itself corroborate H2.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A1-H2-A1",
+      "type": "HYPOTHESIS",
+      "raw": "A coherent causal chain compatible with clinically attainable exposure survives the proposed mismatch objections.",
+      "transcoded": "A coherent causal chain compatible with clinically attainable exposure survives the proposed mismatch objections.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A1-H2-A2",
+      "type": "HYPOTHESIS",
+      "raw": "That causal chain generates supported functional predictions in relevant conditions.",
+      "transcoded": "That causal chain generates supported functional predictions in relevant conditions.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A1-H2-E1",
+      "type": "HYPOTHESIS",
+      "raw": "Relevant experiments demonstrate an affirmative failure of a necessary link: insufficient exposure, absent target engagement, persistent dysfunction despite target modulation, incompatible timing, or another necessary-link failure.",
+      "transcoded": "Relevant experiments demonstrate an affirmative failure of a necessary link: insufficient exposure, absent target engagement, persistent dysfunction despite target modulation, incompatible timing, or another necessary-link failure.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A1-H3-R1",
+      "type": "HYPOTHESIS",
+      "raw": "Existing evidence affirmatively supports some components of H1, that is, at least one link in the chain from clinically attainable PTX or metabolite exposure, through a relevant biological target and tissue effect, to changed voiding function, an identifiable patient subgroup, and a measurable trial prediction.",
+      "transcoded": "Existing evidence affirmatively supports some components of H1, that is, at least one link in the chain from clinically attainable PTX or metabolite exposure, through a relevant biological target and tissue effect, to changed voiding function, an identifiable patient subgroup, and a measurable trial prediction.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A1-H3-R2",
+      "type": "HYPOTHESIS",
+      "raw": "A named causal link remains unresolved after meaningful retrieval and adverse testing (for example, relevant exposure, tissue effects, functional consequences, or response predictors are unmeasured or inadequately distinguished), and that unresolved issue prevents a defensible trial rationale.",
+      "transcoded": "A named causal link remains unresolved after meaningful retrieval and adverse testing (for example, relevant exposure, tissue effects, functional consequences, or response predictors are unmeasured or inadequately distinguished), and that unresolved issue prevents a defensible trial rationale.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A1-H3-R3",
+      "type": "HYPOTHESIS",
+      "raw": "Because of the unresolved link, at least one of the four section 1 trial-specification slots, (a) intervention and exposure, (b) phenotype, (c) measurement, or (d) comparator, cannot be specified from supported premises.",
+      "transcoded": "Because of the unresolved link, at least one of the four section 1 trial-specification slots, (a) intervention and exposure, (b) phenotype, (c) measurement, or (d) comparator, cannot be specified from supported premises.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A1-H3-C1",
+      "type": "HYPOTHESIS",
+      "raw": "Meaningful retrieval and adverse testing have been completed; the uncertainty is not merely an artifact of an unfinished investigation.",
+      "transcoded": "Meaningful retrieval and adverse testing have been completed; the uncertainty is not merely an artifact of an unfinished investigation.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A1-H3-C2",
+      "type": "HYPOTHESIS",
+      "raw": "An uncertainty that the proposed trial can legitimately test does not by itself favor H3; the blocking gap must prevent a defensible trial rationale rather than be a question the trial itself would resolve.",
+      "transcoded": "An uncertainty that the proposed trial can legitimately test does not by itself favor H3; the blocking gap must prevent a defensible trial rationale rather than be a question the trial itself would resolve.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A1-H3-A1",
+      "type": "HYPOTHESIS",
+      "raw": "Evidence resolves the decisive links sufficiently to fill all four trial-specification slots (favoring H1).",
+      "transcoded": "Evidence resolves the decisive links sufficiently to fill all four trial-specification slots (favoring H1).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A1-H3-A2",
+      "type": "HYPOTHESIS",
+      "raw": "Evidence resolves the decisive links sufficiently to defeat the supported rationale (favoring H2).",
+      "transcoded": "Evidence resolves the decisive links sufficiently to defeat the supported rationale (favoring H2).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A1-H3-E1",
+      "type": "HYPOTHESIS",
+      "raw": "Plausible competing explanations remain compatible with the observations.",
+      "transcoded": "Plausible competing explanations remain compatible with the observations.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A1-H3-E2",
+      "type": "HYPOTHESIS",
+      "raw": "Relevant exposure, tissue effects, functional consequences, or response predictors are unmeasured or inadequately distinguished, and the resulting gap blocks at least one of the four specification slots.",
+      "transcoded": "Relevant exposure, tissue effects, functional consequences, or response predictors are unmeasured or inadequately distinguished, and the resulting gap blocks at least one of the four specification slots.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A1-H3-E3",
+      "type": "HYPOTHESIS",
+      "raw": "The investigation identifies the experiment that would resolve the localized uncertainty.",
+      "transcoded": "The investigation identifies the experiment that would resolve the localized uncertainty.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A2-H1-R1",
+      "type": "HYPOTHESIS",
+      "raw": "PTX's materially supported mechanism acts on current physiological function, such as perfusion, microcirculation, smooth-muscle behavior, or neural signaling (examples, not an exhaustive list).",
+      "transcoded": "PTX's materially supported mechanism acts on current physiological function, such as perfusion, microcirculation, smooth-muscle behavior, or neural signaling (examples, not an exhaustive list).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A2-H1-R2",
+      "type": "HYPOTHESIS",
+      "raw": "The mechanism acts on current function rather than on established tissue structure: its benefit does not run through altering established structure.",
+      "transcoded": "The mechanism acts on current function rather than on established tissue structure: its benefit does not run through altering established structure.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A2-H1-R3",
+      "type": "HYPOTHESIS",
+      "raw": "At clinically attainable exposures, PTX or its metabolites produce measurable improvement in voiding within days to a few weeks.",
+      "transcoded": "At clinically attainable exposures, PTX or its metabolites produce measurable improvement in voiding within days to a few weeks.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A2-H1-R4",
+      "type": "HYPOTHESIS",
+      "raw": "Benefit diminishes if treatment stops.",
+      "transcoded": "Benefit diminishes if treatment stops.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A2-H1-C1",
+      "type": "HYPOTHESIS",
+      "raw": "A functional component of impaired voiding is present and modifiable in this cohort.",
+      "transcoded": "A functional component of impaired voiding is present and modifiable in this cohort.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A2-H1-C2",
+      "type": "HYPOTHESIS",
+      "raw": "Attainable exposure reaches the relevant tissue quickly enough to act within the proposed days-to-few-weeks window.",
+      "transcoded": "Attainable exposure reaches the relevant tissue quickly enough to act within the proposed days-to-few-weeks window.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A2-H1-A1",
+      "type": "HYPOTHESIS",
+      "raw": "Relevant models show no early functional change at informative exposures.",
+      "transcoded": "Relevant models show no early functional change at informative exposures.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A2-H1-A2",
+      "type": "HYPOTHESIS",
+      "raw": "Human benefit, where reported, appears only after prolonged treatment.",
+      "transcoded": "Human benefit, where reported, appears only after prolonged treatment.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A2-H1-A3",
+      "type": "HYPOTHESIS",
+      "raw": "The supported route requires structural change before function can improve.",
+      "transcoded": "The supported route requires structural change before function can improve.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A2-H1-E1",
+      "type": "HYPOTHESIS",
+      "raw": "Functional endpoints such as contractility or flow improve early after exposure.",
+      "transcoded": "Functional endpoints such as contractility or flow improve early after exposure.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A2-H1-E2",
+      "type": "HYPOTHESIS",
+      "raw": "The time course is exposure-coupled: onset tracks dosing and benefit fades on withdrawal.",
+      "transcoded": "The time course is exposure-coupled: onset tracks dosing and benefit fades on withdrawal.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A2-H1-E3",
+      "type": "HYPOTHESIS",
+      "raw": "Early functional change is not explained by concurrent structural recovery.",
+      "transcoded": "Early functional change is not explained by concurrent structural recovery.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A2-H2-R1",
+      "type": "HYPOTHESIS",
+      "raw": "PTX's materially supported mechanism acts by reversing or limiting structural change, such as fibrosis, remodeling, or other tissue damage (examples, not an exhaustive list), rather than merely preventing it.",
+      "transcoded": "PTX's materially supported mechanism acts by reversing or limiting structural change, such as fibrosis, remodeling, or other tissue damage (examples, not an exhaustive list), rather than merely preventing it.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A2-H2-R2",
+      "type": "HYPOTHESIS",
+      "raw": "Structural change of this kind (fibrosis, remodeling, or other tissue damage) contributes to the impaired voiding at issue.",
+      "transcoded": "Structural change of this kind (fibrosis, remodeling, or other tissue damage) contributes to the impaired voiding at issue.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A2-H2-R3",
+      "type": "HYPOTHESIS",
+      "raw": "Meaningful improvement appears only after weeks to months of treatment.",
+      "transcoded": "Meaningful improvement appears only after weeks to months of treatment.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A2-H2-R4",
+      "type": "HYPOTHESIS",
+      "raw": "There is little early functional change during treatment.",
+      "transcoded": "There is little early functional change during treatment.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A2-H2-C1",
+      "type": "HYPOTHESIS",
+      "raw": "Structural change contributes consequentially to impaired voiding in this cohort.",
+      "transcoded": "Structural change contributes consequentially to impaired voiding in this cohort.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A2-H2-C2",
+      "type": "HYPOTHESIS",
+      "raw": "PTX can reverse or limit that structural change rather than merely prevent it.",
+      "transcoded": "PTX can reverse or limit that structural change rather than merely prevent it.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A2-H2-C3",
+      "type": "HYPOTHESIS",
+      "raw": "Evidence limited to prevention models does not by itself support A2-H2.",
+      "transcoded": "Evidence limited to prevention models does not by itself support A2-H2.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A2-H2-A1",
+      "type": "HYPOTHESIS",
+      "raw": "Structural effects appear only when treatment precedes injury (prevention, not reversal).",
+      "transcoded": "Structural effects appear only when treatment precedes injury (prevention, not reversal).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A2-H2-A2",
+      "type": "HYPOTHESIS",
+      "raw": "Structural improvement does not accompany functional improvement.",
+      "transcoded": "Structural improvement does not accompany functional improvement.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A2-H2-A3",
+      "type": "HYPOTHESIS",
+      "raw": "Meaningful benefit appears too quickly to be structurally mediated.",
+      "transcoded": "Meaningful benefit appears too quickly to be structurally mediated.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A2-H2-E1",
+      "type": "HYPOTHESIS",
+      "raw": "Structural endpoints such as stereology or collagen measures improve with treatment of established dysfunction.",
+      "transcoded": "Structural endpoints such as stereology or collagen measures improve with treatment of established dysfunction.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A2-H2-E2",
+      "type": "HYPOTHESIS",
+      "raw": "Functional improvement follows structural change in time.",
+      "transcoded": "Functional improvement follows structural change in time.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A2-H2-E3",
+      "type": "HYPOTHESIS",
+      "raw": "Benefit accumulates with treatment duration.",
+      "transcoded": "Benefit accumulates with treatment duration.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A2-H2-E4",
+      "type": "HYPOTHESIS",
+      "raw": "Benefit may persist after treatment stops.",
+      "transcoded": "Benefit may persist after treatment stops.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A2-H3-R1",
+      "type": "HYPOTHESIS",
+      "raw": "For at least one identified timing link (onset, duration-response, persistence after withdrawal, or which effect carries the benefit), the timing evidence is unmeasured, conflicting, poorly transferable, or compatible with both rapid functional benefit and slow structural recovery.",
+      "transcoded": "For at least one identified timing link (onset, duration-response, persistence after withdrawal, or which effect carries the benefit), the timing evidence is unmeasured, conflicting, poorly transferable, or compatible with both rapid functional benefit and slow structural recovery.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A2-H3-R2",
+      "type": "HYPOTHESIS",
+      "raw": "As a result, the expected onset and persistence of benefit cannot be specified from supported premises.",
+      "transcoded": "As a result, the expected onset and persistence of benefit cannot be specified from supported premises.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A2-H3-C1",
+      "type": "HYPOTHESIS",
+      "raw": "Meaningful retrieval and adverse testing of timing evidence have been completed; the uncertainty is not merely an artifact of an unfinished investigation.",
+      "transcoded": "Meaningful retrieval and adverse testing of timing evidence have been completed; the uncertainty is not merely an artifact of an unfinished investigation.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A2-H3-A1",
+      "type": "HYPOTHESIS",
+      "raw": "Evidence establishes onset, duration-response, or persistence clearly enough to favor A2-H1 or A2-H2.",
+      "transcoded": "Evidence establishes onset, duration-response, or persistence clearly enough to favor A2-H1 or A2-H2.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A2-H3-E1",
+      "type": "HYPOTHESIS",
+      "raw": "Available findings report both functional and structural effects without establishing which carries the benefit.",
+      "transcoded": "Available findings report both functional and structural effects without establishing which carries the benefit.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A2-H3-E2",
+      "type": "HYPOTHESIS",
+      "raw": "Available findings lack onset or withdrawal timing.",
+      "transcoded": "Available findings lack onset or withdrawal timing.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A2-H3-E3",
+      "type": "HYPOTHESIS",
+      "raw": "Available findings rest on models whose timing does not transfer to this cohort.",
+      "transcoded": "Available findings rest on models whose timing does not transfer to this cohort.",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    }
+  ],
+  "time": "2026-10-29T16:41:17+00:00"
+}

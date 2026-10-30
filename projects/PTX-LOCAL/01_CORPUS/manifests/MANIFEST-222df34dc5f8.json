@@ -1,0 +1,1016 @@
+{
+  "manifest_id": "MANIFEST-222df34dc5f8",
+  "created": "2026-10-29T15:13:30+00:00",
+  "source_dir": "/home/claude/claude-output/projects/PTX/01_CORPUS/source-files",
+  "files": 111,
+  "bytes": 4923230,
+  "sources": [
+    {
+      "source_id": "SRC-50e9977d08a6",
+      "filename": "10.1016@s0041-13450001266-5.pdf.md",
+      "bytes": 10894,
+      "words": 1406,
+      "sha256": "50e9977d08a6a4f95a413a2c57c42789645ccfc1e2e02c4a3c6078a34b014d48",
+      "title_guess": "Effects of Pentoxifylline Treatment on Delayed Graft Function in Cadaveric Kidney Recipients",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-a5edf7be2c0d",
+      "filename": "10.1097@00003246-199002000-00012.pdf.md",
+      "bytes": 27236,
+      "words": 4144,
+      "sha256": "a5edf7be2c0d8d38bdb99ff267d9d7f4dbbc863396634827a0cc42c4c49cd869",
+      "title_guess": "*laboratory investigations*",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-b4a162630fda",
+      "filename": "10.1097@ta.0b013e3181a5f4b5.pdf.md",
+      "bytes": 29691,
+      "words": 4306,
+      "sha256": "b4a162630fdaa2105fd1d1055d3de159c38275501ee8e01928336bee3083f2b4",
+      "title_guess": "Effects of Pentoxifylline on Inflammation and Lung Dysfunction in Ventilated Septic Animals",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-e78691f42e5b",
+      "filename": "11255_2025_Article_4454.pdf.md",
+      "bytes": 61783,
+      "words": 8566,
+      "sha256": "e78691f42e5bd686dd293d9bc65d245f05a0234d33f7e47c05484a5f9e5a4971",
+      "title_guess": "Application effect of pelvic floor function exercise based on health belief model in patients with benign prostatic hyperplasia after electrocautery",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-4d68acfbe7fb",
+      "filename": "2020ICU_icu-58-S68.pdf.md",
+      "bytes": 33301,
+      "words": 4570,
+      "sha256": "4d68acfbe7fb70c2e8e035dc87d2ad82ec29260af2b41374d11e8fc3584aa4ee",
+      "title_guess": "Epidemiology of underactive bladder: Common but underresearched",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-17ff61e5483d",
+      "filename": "Barahona2009_Cushings_Syndrome.md",
+      "bytes": 36662,
+      "words": 5439,
+      "sha256": "17ff61e5483dded3097292d14b0a5791fd2b8205a2366429bdf130f18fe2912b",
+      "title_guess": "Persistent Body Fat Mass and Inflammatory Marker Increases after Long-Term Cure of Cushing's Syndrome",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-af770b942b28",
+      "filename": "Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md",
+      "bytes": 35405,
+      "words": 4899,
+      "sha256": "af770b942b28c0c38b06fae0d2e4ef011a4b6be65089a3896b3bbe6edfe9d940",
+      "title_guess": "Comparison between combination of tamsulosin and Pentoxifylline versus tamsulosin alone in the treatment of lower urinary tract symptoms due to benign prostate hyperplasia: A preliminary study",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-1b748c4d5aff",
+      "filename": "DaMota2011_Cushings_Syndrome_Remission.md",
+      "bytes": 24920,
+      "words": 3273,
+      "sha256": "1b748c4d5aff7c957b459b450bafee33b128ce936790d0162ed737e26b7ee743",
+      "title_guess": "Overt Immune Dysfunction after Cushing's Syndrome Remission: A Consecutive Case Series and Review of the Literature",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-086dd7a98b27",
+      "filename": "Fukabori-1996-uninhibited-bladder.pdf.md",
+      "bytes": 12121,
+      "words": 684,
+      "sha256": "086dd7a98b27cac972531abf8303941642ceee2cc2e122e0f4cc93c25748a539",
+      "title_guess": "Pentoxifylline が有用と思われた無抑制神経因性膀胱の1例",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-4bce0ca8149e",
+      "filename": "Gulen2024_MCAS.md",
+      "bytes": 71373,
+      "words": 9711,
+      "sha256": "4bce0ca8149e240e009aadaf61098d22bc1a787df6a85b0207cee5fad3519671",
+      "title_guess": "Using the Right Criteria for MCAS",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-e1a3dc9d86a2",
+      "filename": "MP75-18-RATES-AND-ADHERENCE-TO-PELVIC-FLOOR-PHYSICAL-THERAPY-FOR-MALE-PATIENTS-WITH-BENIGN.pdf.md",
+      "bytes": 20563,
+      "words": 2446,
+      "sha256": "e1a3dc9d86a2d24feab2adf583abdd774fda37579fd8e36034c6ad099d44b171",
+      "title_guess": "MP75-17",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-717075564536",
+      "filename": "MS patients and PTX.pdf.md",
+      "bytes": 21652,
+      "words": 3252,
+      "sha256": "717075564536c742e0954d77eb7048a897777a3c6865c1483b68c01894aee153",
+      "title_guess": "Effect of Pentoxifylline on Recurrence in Patients With Multiple Sclerosis: A Non-Randomized Double-Blinded Placebo Controlled Clinical Trial",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-fad2e99975bb",
+      "filename": "Modulating effects of PTX on Cytokine Release Syndromes.pdf.md",
+      "bytes": 32834,
+      "words": 4788,
+      "sha256": "fad2e99975bb1b6d30d8ca5e1e235e1e925f3e53a315ebe6e8791104bcbf19f4",
+      "title_guess": "Modulating Effects of Pentoxifylline on Cytokine Release Syndromes",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-b532b1adf16c",
+      "filename": "Nyanyo2024_Cushings_Disease_A.md",
+      "bytes": 58986,
+      "words": 7526,
+      "sha256": "b532b1adf16cffcc16ecccfa525b7c6a683eb5591cde2db34a288f61bec8c3fd",
+      "title_guess": "Autoimmune Disorders Associated With Surgical Remission of Cushing's Disease",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-c91f0484be73",
+      "filename": "Papanicolaou1996_Withdrawal_Syndrome_and.md",
+      "bytes": 29652,
+      "words": 4151,
+      "sha256": "c91f0484be730ce1a7cf922b1e26aae1e95b281d43771a1a755d7c79c8715362",
+      "title_guess": "Acute Glucocorticoid Deficiency Is Associated with Plasma Elevations of Interleukin-6: Does the Latter Participate in the Symptomatology of the Steroid Withdrawal Syndrome and Adrenal Insufficiency?\\*",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-01a40e6c8517",
+      "filename": "Park2009_Glucocorticoids_in_Mast_Cells.md",
+      "bytes": 44290,
+      "words": 6299,
+      "sha256": "01a40e6c8517cd8d903d1d76cb3234475705b14b73998a95f5bbaa845de45c56",
+      "title_guess": "Mechanism of upregulation of the inhibitory regulator, src-like adaptor protein (SLAP), by glucocorticoids in mast cells",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-d2428b12d07d",
+      "filename": "Pentoxifylline-in-patients-with-ulcerative-colitis-treated-with-mesalamine-by-modulation.pdf.md",
+      "bytes": 61916,
+      "words": 9079,
+      "sha256": "d2428b12d07d0bdb7083b24dbb9917d0072afec6788aa6db1a92cb8e66ae394c",
+      "title_guess": "Pentoxifylline in patients with ulcerative colitis treated with mesalamine by modulation of IL-6/STAT3, ZO-1, and S1P pathways: a randomized controlled double-blinded study",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-90b8b622d09e",
+      "filename": "Pentoxifyllineinthetreatmentofrefractorynephroticsyndromesecondarytolupusnephritis..pdf.md",
+      "bytes": 15670,
+      "words": 2230,
+      "sha256": "90b8b622d09e611a565bcf5baad5e175bba018f93131e782e41fbe2ffe7fe91e",
+      "title_guess": "Pentoxifylline in the Treatment of Refractory Nephrotic Syndrome Secondary to Lupus Nephritis",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-0f2594453e11",
+      "filename": "Takasu1990_Cushings_Syndrome_Due.md",
+      "bytes": 32558,
+      "words": 4535,
+      "sha256": "0f2594453e11ea12cebe02b50c2bf6788e06c60b8b7bc267209c1940ec22b43e",
+      "title_guess": "EXACERBATION OF AUTOIMMUNE THYROID DYSFUNCTION AFTER UNILATERAL ADRENALECTOMY IN PATIENTS WITH CUSHING'S SYNDROME DUE TO AN ADRENOCORTICAL ADENOMA",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-3ea56ea561fb",
+      "filename": "Ueland2023_Cortisol_Secretion.md",
+      "bytes": 52468,
+      "words": 6820,
+      "sha256": "3ea56ea561fb53fd270e35542926bd63c7b17e88c3ae5102db294d116c8b10ce",
+      "title_guess": "Substantial changes in inflammatory and cardiovascular biomarkers in patients with autonomous cortisol secretion",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-430aad6abb07",
+      "filename": "VanHouten2026_Cushings_syndrome.md",
+      "bytes": 56522,
+      "words": 7709,
+      "sha256": "430aad6abb07152dda686f63ea537bd3e82ca12f1699f74ab44796559446a222",
+      "title_guess": "Increased cytokine production capacity and persistent inflammation after achieving remission of Cushing's syndrome",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-c204a6c27c93",
+      "filename": "Vogel2023_Glucocorticoid_Withdrawal.md",
+      "bytes": 61915,
+      "words": 8088,
+      "sha256": "c204a6c27c9311b01971a0c883db1021070bb13dcfedd07f2f6e4cc39cab96b6",
+      "title_guess": "Low-grade inflammation during the glucocorticoid withdrawal phase in patients with Cushing's syndrome",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-6d0014e50308",
+      "filename": "alewijnse2003.pdf.md",
+      "bytes": 67241,
+      "words": 8941,
+      "sha256": "6d0014e5030878f04a1ed036745ddb44cedf2fa04d76e28b301883997492c3ef",
+      "title_guess": "Predictors of long-term adherence to pelvic floor muscle exercise therapy among women with urinary incontinence",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-01e2fad4a909",
+      "filename": "anderson2011.pdf.md",
+      "bytes": 31869,
+      "words": 4856,
+      "sha256": "01e2fad4a9096acc9626154f66fdf459e7929f2af9b2c08b910f1ffb102efcd2",
+      "title_guess": "Safety and Effectiveness of an Internal Pelvic Myofascial Trigger Point Wand for Urologic Chronic Pelvic Pain Syndrome",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-65fff69dafec",
+      "filename": "barroso-aranda1990.pdf.md",
+      "bytes": 64845,
+      "words": 9709,
+      "sha256": "65fff69dafecffa137f49f5f5b288a3853b96f8e1ef40706eb1880b9d1e34c6e",
+      "title_guess": "PROCEEDINGS - PART I",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-392ceb97925a",
+      "filename": "bortnick2019.pdf.md",
+      "bytes": 27891,
+      "words": 4133,
+      "sha256": "392ceb97925a3f299bd7b255e2e4921aa470b1d1e89347821182010d6205a386",
+      "title_guess": "Medical Therapies for Treatment of BPH: Special Considerations in Elderly Men",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-44c133e4cbea",
+      "filename": "bortnick2020.pdf.md",
+      "bytes": 50331,
+      "words": 7370,
+      "sha256": "44c133e4cbeae39f01579c9d871884f82a9e78e63bc441bafc73eacc3f9d6eaa",
+      "title_guess": "Modern best practice in the management of benign prostatic hyperplasia in the elderly",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-d997d68ecce7",
+      "filename": "bowton1989.pdf.md",
+      "bytes": 28960,
+      "words": 3910,
+      "sha256": "d997d68ecce7a69f8b6802cef7d58df59b280f0129d23054092f36dcb68e6e02",
+      "title_guess": "Pentoxifylline Increases Cerebral Blood Flow in Patients With Cerebrovascular Disease",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-b7ceb985ad5a",
+      "filename": "breuille1993.pdf.md",
+      "bytes": 45649,
+      "words": 6798,
+      "sha256": "b7ceb985ad5a235723d9b8a946b60c545ec23a71ef0f7a65b524d84d1114e048",
+      "title_guess": "Pentoxifylline decreases body weight loss and muscle protein wasting characteristics of sepsis",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-c57afaea1a54",
+      "filename": "chen2004.pdf.md",
+      "bytes": 42011,
+      "words": 5858,
+      "sha256": "c57afaea1a5457aa18dbf86494d27bf8f9f42413d12357389ed19d8aae3d7bc2",
+      "title_guess": "The Development and Testing of the Pelvic Floor Muscle Exercise Self-Efficacy Scale",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-850904b4c0c7",
+      "filename": "chuang2015.pdf.md",
+      "bytes": 41272,
+      "words": 4674,
+      "sha256": "850904b4c0c7bce85c2b0b926ed7051e41d10cb78ef2236e1ad05e55f6aec217",
+      "title_guess": "Underactive Bladder in Older Adults",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-e1addec21385",
+      "filename": "chung2014.pdf.md",
+      "bytes": 21856,
+      "words": 3067,
+      "sha256": "e1addec2138534c3ab711aec8d885a711a42d88c21c37fc5156635b0de27d79b",
+      "title_guess": "Underactive Bladder and Detrusor Underactivity: a Review of Pathophysiology and Management Strategies for This Poorly Understood Bladder Syndrome",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-c9a36aa5adda",
+      "filename": "chung2016.pdf.md",
+      "bytes": 34732,
+      "words": 4594,
+      "sha256": "c9a36aa5addad6470a97458c615dc62a6927014759d767ef2cb4d244719337a0",
+      "title_guess": "Voiding dysfunction in older men",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-0103ceb7f2a6",
+      "filename": "clemens2000.pdf.md",
+      "bytes": 24086,
+      "words": 3529,
+      "sha256": "0103ceb7f2a6ed39980bdc6ab6651c7f506d837c49dab61de8a11dd9bed96820",
+      "title_guess": "BIOFEEDBACK, PELVIC FLOOR RE-EDUCATION, AND BLADDER TRAINING FOR MALE CHRONIC PELVIC PAIN SYNDROME",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-9408d5f31716",
+      "filename": "coe1997.pdf.md",
+      "bytes": 27612,
+      "words": 3901,
+      "sha256": "9408d5f317169e9c8d8ed7a4f560c7d9451167828b7567b63d3e5e26f3d9dd79",
+      "title_guess": "Pentoxifylline Prevents Endothelial Damage Due to Ischemia and Reperfusion Injury",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-2092e16101e2",
+      "filename": "cornel2005.pdf.md",
+      "bytes": 20828,
+      "words": 3115,
+      "sha256": "2092e16101e2a8ed0a4fcbafe8fc686bf8986d62653f30e66132735ef1f5c231",
+      "title_guess": "The Effect of Biofeedback Physical Therapy in Men with Chronic Pelvic Pain Syndrome Type III",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-b8e703a5a20c",
+      "filename": "costantini2008.pdf.md",
+      "bytes": 32611,
+      "words": 4693,
+      "sha256": "b8e703a5a20c8d05fa20b0cd13a5c3934bd708edef1c0ee003c8607ecf212319",
+      "title_guess": "**ORIGINAL ARTICLE**",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-26d4a056c078",
+      "filename": "delanian2003.pdf.md",
+      "bytes": 42578,
+      "words": 5544,
+      "sha256": "26d4a056c07864eab5a791b9a64cf7baaed8e4e07eb6bb64b562aba09a622d06",
+      "title_guess": "Randomized, Placebo-Controlled Trial of Combined Pentoxifylline and Tocopherol for Regression of Superficial Radiation-Induced Fibrosis",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-75fa1be928ad",
+      "filename": "delanian2005.pdf.md",
+      "bytes": 55219,
+      "words": 7390,
+      "sha256": "75fa1be928adb80afcfe757e87371c63b469b58583dad82242bb09b395cae01e",
+      "title_guess": "Kinetics of Response to Long-Term Treatment Combining Pentoxifylline and Tocopherol in Patients With Superficial Radiation-Induced Fibrosis",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-b5a944a5c08a",
+      "filename": "desouza2009.pdf.md",
+      "bytes": 28362,
+      "words": 4294,
+      "sha256": "b5a944a5c08a41a323a76ba71961dbb980b8c76cb4970286c32a3108487febbb",
+      "title_guess": "Pentoxyphylline in association with vitamin E reduces cutaneous fibrosis in systemic sclerosis",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-88a3c3d3d677",
+      "filename": "dezube1993.pdf.md",
+      "bytes": 26361,
+      "words": 4023,
+      "sha256": "88a3c3d3d677707ffb9b962b883dfe4c86845080ee45aae41acff770ad8c4dd1",
+      "title_guess": "Short communication",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-cf32a1f07be6",
+      "filename": "fakioglu2004.pdf.md",
+      "bytes": 36211,
+      "words": 5194,
+      "sha256": "cf32a1f07be63b2a603f80ba11b04b8e53dd737047f3708bc2da2d552ea96351",
+      "title_guess": "Aminophylline therapy during endotoxemia in anesthetized spontaneously breathing rats",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-93464d25e6bd",
+      "filename": "fdp03812573_1.pdf.md",
+      "bytes": 51829,
+      "words": 5766,
+      "sha256": "93464d25e6bdb4b6de2c04ec35ad4e4dacb3dce266045ee201948436ec59fee0",
+      "title_guess": "A Practical Approach for Primary Care Practitioners to Evaluate and Manage Lower Urinary Tract Symptoms and Benign Prostatic Hyperplasia",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-5f4516215901",
+      "filename": "fitzgerald2009.pdf.md",
+      "bytes": 67490,
+      "words": 9328,
+      "sha256": "5f4516215901dbd57681aa34798da5432b0dd9ed6c74c2204ba60cba88acfc99",
+      "title_guess": "Randomized Multicenter Feasibility Trial of Myofascial Physical Therapy for the Treatment of Urological Chronic Pelvic Pain Syndromes",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-171e9ca3104b",
+      "filename": "glazener2011.pdf.md",
+      "bytes": 69108,
+      "words": 9028,
+      "sha256": "171e9ca3104b5b74730aa643491943703d372730b8551b5f991b449a2d409504",
+      "title_guess": "Urinary incontinence in men after formal one-to-one pelvic-floor muscle training following radical prostatectomy or transurethral resection of the prostate (MAPS): two parallel randomised controlled t",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-bc9a83e70370",
+      "filename": "hafez2012.pdf.md",
+      "bytes": 52152,
+      "words": 7273,
+      "sha256": "bc9a83e70370a26e2535e76971185d624df345b8ec885b0775d3b64ed51d2bef",
+      "title_guess": "The effect of pentoxifyllin in a rat model of renal ischemic reperfusion injury, light, transmission, and scanning electron microscopical study",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-32403771231f",
+      "filename": "hall2018.pdf.md",
+      "bytes": 223105,
+      "words": 24452,
+      "sha256": "32403771231fd14e1f602d834caffc72e0a54ef9596a34ea07f4e059d52b4e81",
+      "title_guess": "Design of programs to train pelvic floor muscles in men with urinary dysfunction: Systematic review",
+      "flags": [
+        "POSSIBLE_OCR_OR_TABLE_NOISE"
+      ]
+    },
+    {
+      "source_id": "SRC-fc84b8ab64dd",
+      "filename": "han1990.pdf.md",
+      "bytes": 20990,
+      "words": 3059,
+      "sha256": "fc84b8ab64ddcabc37d8447dfbc6d742b1f37d680de4ce3d6f324bb74d574d1c",
+      "title_guess": "**Dexamethasone and Pentoxifylline Inhibit Endotoxin-induced Cachectin/Tumor Necrosis Factor Synthesis at Separate Points in the Signaling Pathway**",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-593ae1867b68",
+      "filename": "he2010.pdf.md",
+      "bytes": 16403,
+      "words": 2411,
+      "sha256": "593ae1867b689e6608d13253a5fc3da07b323eff6a800432be5474d41c74f327",
+      "title_guess": "Chronic prostatitis presenting with dysfunctional voiding and effects of pelvic floor biofeedback treatment",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-aa7e0919f869",
+      "filename": "immunology00076-0102.pdf.md",
+      "bytes": 36025,
+      "words": 5611,
+      "sha256": "aa7e0919f86978209c00b48ac4cf680b6ffad374afe4892fc0fafc42934d3ed5",
+      "title_guess": "Pentoxifylline *in vivo* down-regulates the release of IL-1 $\\beta$ , IL-6, IL-8 and tumour necrosis factor- $\\alpha$ by human peripheral blood mononuclear cells",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-981a7f8354a1",
+      "filename": "kaplan1997.pdf.md",
+      "bytes": 23770,
+      "words": 3392,
+      "sha256": "981a7f8354a177ff2d408963f2f09fa1d6aedfadd2794725faf9e5d53f0d191c",
+      "title_guess": "PSEUDODYSSYNERGIA (CONTRACTION OF THE EXTERNAL SPHINCTER DURING VOIDING) MISDIAGNOSED AS CHRONIC NONBACTERIAL PROSTATITIS AND THE ROLE OF BIOFEEDBACK AS A THERAPEUTIC OPTION",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-31b1b679b7ab",
+      "filename": "kim2001.pdf.md",
+      "bytes": 45360,
+      "words": 6515,
+      "sha256": "31b1b679b7ab1784d0653f2df1d1509044046bceec54dd61b85eb9a315219477",
+      "title_guess": "LABORATORY STUDY",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-c635b5dfc72d",
+      "filename": "kim2017.pdf.md",
+      "bytes": 47030,
+      "words": 6339,
+      "sha256": "c635b5dfc72dd4982849cebacff920b9cf4c2f6a4562ebd8c820fe75632874fa",
+      "title_guess": "Current pharmacological and surgical treatment of underactive bladder",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-c36323dc2bd2",
+      "filename": "koo2000.pdf.md",
+      "bytes": 39503,
+      "words": 5931,
+      "sha256": "c36323dc2bd293ecffd6145ab24152a521ab2e75c0cd54f821feee1580a5e9d0",
+      "title_guess": "Mechanism of the Beneficial Effects of Pentoxifylline during Sepsis: Maintenance of Adrenomedullin Responsiveness and Downregulation of Proinflammatory Cytokines",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-711ea3f7866c",
+      "filename": "kruuse2000.pdf.md",
+      "bytes": 53069,
+      "words": 7454,
+      "sha256": "711ea3f7866cf80b1d5a6de8c770351eadb8fd586cc64af3c6c15d35a1b4e503",
+      "title_guess": "Effects of the non-selective phosphodiesterase inhibitor pentoxifylline on regional cerebral blood flow and large arteries in healthy subjects",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-c25582143a4e",
+      "filename": "krysztopik1996.pdf.md",
+      "bytes": 36771,
+      "words": 5509,
+      "sha256": "c25582143a4eda5353cb9e0e16ca6bf23b1ecae533d6826e3e95d47d8f789856",
+      "title_guess": "Vasomotor Response to Pentoxifylline Mediates Improved Renal Blood Flow in Bacteremia",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-69257906e887",
+      "filename": "krysztopik2000.pdf.md",
+      "bytes": 44339,
+      "words": 6109,
+      "sha256": "69257906e887a10272b47630ac229b2e14a8d6c0cf091145db81c1996bd35f07",
+      "title_guess": "Lazaroid and Pentoxifylline Suppress Sepsis-Induced Increases in Renal Vascular Resistance via Altered Arachidonic Acid Metabolism",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-0f2b65a1fb75",
+      "filename": "ladi-seyedian2017.pdf.md",
+      "bytes": 80805,
+      "words": 11231,
+      "sha256": "0f2b65a1fb754d9e2024e3dc51f9b5c7e5d9ea75f28bc936e4ccc43faef7bbf7",
+      "title_guess": "Pharmacological treatments available for the management of underactive bladder in neurological conditions",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-cc96b54f39e5",
+      "filename": "lauterbach1995.pdf.md",
+      "bytes": 16558,
+      "words": 2436,
+      "sha256": "cc96b54f39e50e633adf92d5ebdebcfc30ecd8f665682c9671cb83927119f6dc",
+      "title_guess": "Effect of Pentoxifylline on Nitric Oxide Released by Murine Macrophages",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-34bb6e9e61b1",
+      "filename": "lee2018.pdf.md",
+      "bytes": 40955,
+      "words": 5474,
+      "sha256": "34bb6e9e61b12028959309758effcde2d657e9494650f815072138a9c64bee75",
+      "title_guess": "REVIEW",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-f5b07723fcd4",
+      "filename": "li2018.pdf.md",
+      "bytes": 26262,
+      "words": 3601,
+      "sha256": "f5b07723fcd4024a2a1b63270fba3f0ab94c6142cb0fce7e75397cd590d7f308",
+      "title_guess": "Clinical and urodynamic characteristics of underactive bladder",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-421f38230d9a",
+      "filename": "life-15-00613.pdf.md",
+      "bytes": 118448,
+      "words": 12641,
+      "sha256": "421f38230d9a9f6508f3af2079ddac7936cd007aed961cd5d889e8e9bf7da58e",
+      "title_guess": "Compliance and Adherence to Pelvic Floor Exercise Therapy in People with Pelvic Floor Disorders: A Systematic Review and Meta-Analysis",
+      "flags": [
+        "POSSIBLE_OCR_OR_TABLE_NOISE"
+      ]
+    },
+    {
+      "source_id": "SRC-ec4ebd50f13f",
+      "filename": "lin2004.pdf.md",
+      "bytes": 41323,
+      "words": 5683,
+      "sha256": "ec4ebd50f13f2ab9f7804854e988e0f8f9460b9bed11e24a06b5605bededfb33",
+      "title_guess": "Review Article",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-2f9ebddaeee9",
+      "filename": "luke1989.pdf.md",
+      "bytes": 37940,
+      "words": 5102,
+      "sha256": "2f9ebddaeee9fc6750c18828eddd50c336b6f34c1e294c71a96e2a0b3e60368b",
+      "title_guess": "Role of Vascular Decongestion in Ischemic Acute Renal Failure Defined by Postinsult Administration of Pentoxifylline ---",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-cd513c86ec76",
+      "filename": "ma2018.pdf.md",
+      "bytes": 38831,
+      "words": 5635,
+      "sha256": "cd513c86ec76fd79883a95ee06dcce25c76119614e2aa8c3b728810d9b373d11",
+      "title_guess": "Pentoxifylline protects against loss of function and renal interstitial fibrosis in chronic experimental partial ureteral obstruction",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-74e1410bc08d",
+      "filename": "masterson2017.pdf.md",
+      "bytes": 25109,
+      "words": 3595,
+      "sha256": "74e1410bc08db433e7b531a40568f024e3d2c23c22e04f3b75e3a38a537bc7fe",
+      "title_guess": "Comprehensive pelvic floor physical therapy program for men with idiopathic chronic pelvic pain syndrome: a prospective study",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-9fd474e02e50",
+      "filename": "mostafa-hedeab2022.pdf.md",
+      "bytes": 59215,
+      "words": 8117,
+      "sha256": "9fd474e02e50cb59707533267a1d55569bedb7b3f9a53e86df93b5854a6ab32c",
+      "title_guess": "A raising dawn of pentoxifylline in management of inflammatory disorders in Covid-19",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-83b30369c2d9",
+      "filename": "myers1995.pdf.md",
+      "bytes": 37458,
+      "words": 5596,
+      "sha256": "83b30369c2d97b4993d3d375516716fa49930850d5028a708adcb7394e957526",
+      "title_guess": "PROSTAGLANDINS LEUKOTRIENES AND ESSENTIAL FATTY ACIDS",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-028bf7a922c1",
+      "filename": "nakagawa2015.pdf.md",
+      "bytes": 46419,
+      "words": 6577,
+      "sha256": "028bf7a922c1215cebf8399d52e8c21d9fec3d79b3bfeff3204fc63c634c47c6",
+      "title_guess": "Pentoxifylline attenuates leukocyte–endothelial interactions in a two-hit model of shock and sepsis",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-ed3f52aa1246",
+      "filename": "nihms-1048633.pdf.md",
+      "bytes": 34928,
+      "words": 4566,
+      "sha256": "ed3f52aa1246027633dd74eaf399c5717ffd00948b4d7b4496183085a8050398",
+      "title_guess": "Better together: multidisciplinary approach improves adherence to pelvic floor physical therapy",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-024b221735fd",
+      "filename": "nihms496647.pdf.md",
+      "bytes": 40058,
+      "words": 5287,
+      "sha256": "024b221735fd01826bbe4a428b17dc15197397b46e6a57bf0be059267c3b3c0a",
+      "title_guess": "Mast Cell Activation Syndrome: Proposed Diagnostic Criteria:",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-5ae1859e9f4c",
+      "filename": "nisi2013.pdf.md",
+      "bytes": 36510,
+      "words": 5214,
+      "sha256": "5ae1859e9f4c9a1d8b97bab560c3978a9df74b6046fdb1a42c9bbf9aa1c5e483",
+      "title_guess": "Pharmacokinetics of Pentoxifylline and Its Main Metabolites in Patients With Different Degrees of Heart Failure Following a Single Dose of a Modified-Release Formulation",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-b7be512157ed",
+      "filename": "noel1990.pdf.md",
+      "bytes": 17636,
+      "words": 2537,
+      "sha256": "b7be512157ed5c9eec8364fc4ccff9dc70faa491e0a0153dba16e69cc371264c",
+      "title_guess": "PENTOXIFYLLINE INHIBITS LIPOPOLYSACCHARIDE-INDUCED SERUM TUMOR NECROSIS FACTOR AND MORTALITY",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-67466312ad2f",
+      "filename": "osman2018.pdf.md",
+      "bytes": 35736,
+      "words": 4965,
+      "sha256": "67466312ad2f420bbdbad448c471ad8fe4ed5a96d7b32d63580e6533455c0576",
+      "title_guess": "REVIEW",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-f780114dd95b",
+      "filename": "parker2000.pdf.md",
+      "bytes": 42146,
+      "words": 6086,
+      "sha256": "f780114dd95b5ba9d78309d896d92999c051487b925d536e242122e52e3ebdb8",
+      "title_guess": "Pentoxifylline fails to improve organ dysfunction and survival when used in the resuscitation of a porcine model of haemorrhage and abdominal sepsis",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-fb58e8ca2cbf",
+      "filename": "pharmaceuticals-19-00552.pdf.md",
+      "bytes": 108708,
+      "words": 14601,
+      "sha256": "fb58e8ca2cbf46bfe64835189cec2996de88260bbf4a6049f16c09f533c4d1bb",
+      "title_guess": "Article",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-34d7b7a1a314",
+      "filename": "pucheu-haston2014.pdf.md",
+      "bytes": 59497,
+      "words": 8294,
+      "sha256": "34d7b7a1a314bf37e08d0024056a4cc5b5ad733f95841c7f0815fb660de3132b",
+      "title_guess": "Effects of pentoxifylline on immediate and late-phase cutaneous reactions in response to anti–immunoglobulin E antibodies in clinically normal dogs",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-7f2eabd658b2",
+      "filename": "rademakers2016.pdf.md",
+      "bytes": 37692,
+      "words": 5362,
+      "sha256": "7f2eabd658b2449da958c6cbb6f6b07aefc9c8c76b4e3c2ef8ad2f13888e1cd8",
+      "title_guess": "Detrusor underactivity in men with lower urinary tract symptoms/benign prostatic obstruction: characterization and potential impact on indications for surgical treatment of the prostate",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-811e5a7d1abc",
+      "filename": "raison2013.pdf.md",
+      "bytes": 83454,
+      "words": 11208,
+      "sha256": "811e5a7d1abcf14391011aaa1f2db90ca72a502cfe546f191ecb354c2f2e5a9d",
+      "title_guess": "A Randomized Controlled Trial of the Tumor Necrosis Factor Antagonist Infliximab for Treatment-Resistant Depression",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-ef363715a84e",
+      "filename": "refsum1994.pdf.md",
+      "bytes": 22361,
+      "words": 3186,
+      "sha256": "ef363715a84e4bcbbb1397c11c64db6bef403c7b7c48ec07a807f5c0be21d864",
+      "title_guess": "Pentoxifylline Improves Intracellular Electrolytes in Sepsis",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-420645cae98e",
+      "filename": "refsum1996.pdf.md",
+      "bytes": 17291,
+      "words": 2764,
+      "sha256": "420645cae98ee5983f12adaf86c3e30f3aa97aab2921eec8930c4d52d2c76712",
+      "title_guess": "Modulation of TNF $\\alpha$ and IL-6 in a Peritonitis Model Using Pentoxifylline",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-bb5429ac854b",
+      "filename": "ridings1994.pdf.md",
+      "bytes": 62583,
+      "words": 8424,
+      "sha256": "bb5429ac854bf78f04b3d465215e4cb55a246d2b69bebd7743151daa7a6a706b",
+      "title_guess": "Beneficial Cardiopulmonary Effects of Pentoxifylline in Experimental Sepsis Are Lost Once Septic Shock Is Established",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-6396a01319fc",
+      "filename": "roberts1993.pdf.md",
+      "bytes": 55230,
+      "words": 7877,
+      "sha256": "6396a01319fcb84f0477fdd58efed9b3f3415dd683927cf2e3e42e5125bb470f",
+      "title_guess": "Pentoxifylline at clinically achievable levels inhibits FMLP-induced neutrophil responses, but not priming, upregulation of cell-adhesion molecules, or migration induced by GM-CSF",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-0f3df0a2d681",
+      "filename": "roerink2019.pdf.md",
+      "bytes": 58661,
+      "words": 8371,
+      "sha256": "0f3df0a2d681bbf6be1d380530a86f08bfee7a6ffc35ac4bcb5ec1165d39dedb",
+      "title_guess": "**Decreased aerobic exercise capacity after long-term remission from Cushing's syndrome: exploration of mechanisms**",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-700d939082ff",
+      "filename": "s00210-025-03845-1.pdf.md",
+      "bytes": 109191,
+      "words": 11567,
+      "sha256": "700d939082ff4a325d3747447a60ea749e6a90206a8d1ccfa845b6f7bd444610",
+      "title_guess": "Efficacy, safety and mechanistic insights of pentoxifylline in major depressive disorder: a systematic review and meta-analysis of randomized controlled trials",
+      "flags": [
+        "POSSIBLE_OCR_OR_TABLE_NOISE"
+      ]
+    },
+    {
+      "source_id": "SRC-60b2786cfa7e",
+      "filename": "s00345-024-04974-7.pdf.md",
+      "bytes": 47197,
+      "words": 6459,
+      "sha256": "60b2786cfa7e12f4ca3ef5743d12b9baaaf195db73280e698c8aa0ee105334f6",
+      "title_guess": "The effect of pelvic floor muscle training in men with benign prostatic hyperplasia and overactive bladder",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-9527ff8d1af1",
+      "filename": "s12912-023-01326-5.pdf.md",
+      "bytes": 86968,
+      "words": 10482,
+      "sha256": "9527ff8d1af1a1e5cdaa44cac4ba9b10d1c65735511d903e6a55b179ed773f19",
+      "title_guess": "RESEARCH",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-4cf199f4f2f9",
+      "filename": "shah2016.pdf.md",
+      "bytes": 39476,
+      "words": 5632,
+      "sha256": "4cf199f4f2f9f2047e63b49a52f468278e7fee9090553b89c4901aaf07b78f87",
+      "title_guess": "**Pro-inflammatory cytokines remain elevated despite long-term remission in Cushing's disease: a prospective study**",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-124dd946160d",
+      "filename": "sheridan1997.pdf.md",
+      "bytes": 34767,
+      "words": 4841,
+      "sha256": "124dd946160d3de51f0f778ba837f4b7f7671c8dcd46ced640f174e14009bf39",
+      "title_guess": "Pentoxifylline Treatment Attenuates Pulmonary Vasomotor Dysfunction in Acute Lung Injury<sup>1,2</sup>",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-7642f39f46e3",
+      "filename": "shirazi2014.pdf.md",
+      "bytes": 32846,
+      "words": 4627,
+      "sha256": "7642f39f46e31636cbabfb2d5f84c9c37fd64e7b0e4d344b8b247a63a9944354",
+      "title_guess": "Stereological Comparison of the Effects of Pentoxifylline, Captopril, Simvastatin, and Tamoxifen on Kidney and Bladder Structure After Partial Urethral Obstruction in Rats",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-0985b9953ec7",
+      "filename": "shirazi2015.pdf.md",
+      "bytes": 23737,
+      "words": 3447,
+      "sha256": "0985b9953ec73e654be05b5cbf3e73bf825f9f527b94a7c8f19e5e056f831059",
+      "title_guess": "The effect of pentoxifylline on detrusor muscle contractility after partial urethral obstruction in a rat model",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-15bee9db6b89",
+      "filename": "siu2003.pdf.md",
+      "bytes": 29057,
+      "words": 3917,
+      "sha256": "15bee9db6b891325b8d350341bd8d33a4570d9033582aeac508b7397826bec95",
+      "title_guess": "Compliance With a Pelvic Muscle Exercise Program as a Causal Predictor of Urinary Stress Incontinence Amongst Chinese Women",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-358eced634c5",
+      "filename": "skjeldal1994.pdf.md",
+      "bytes": 25891,
+      "words": 3722,
+      "sha256": "358eced634c5b96f7b5d08ff620bf341ace25149c49622cb51f6ae3f22c5dbdb",
+      "title_guess": "Pentoxifylline Reduces Skeletal Muscle Necrosis after Acute Hindlimb Ischemia in Rats",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-f72ee15d648a",
+      "filename": "spinas1991.pdf.md",
+      "bytes": 40530,
+      "words": 5945,
+      "sha256": "f72ee15d648a7f590867d22500277e9b6d1f0c681c96ae6ef7dd9c4a1a80177f",
+      "title_guess": "Pretreatment with Ibuprofen Augments Circulating Tumor Necrosis Factor- $\\alpha$ , Interleukin-6, and Elastase during Acute Endotoxemia",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-ad99805e95db",
+      "filename": "staubach1998.pdf.md",
+      "bytes": 44145,
+      "words": 6036,
+      "sha256": "ad99805e95db9e19993deea013ee1c9612d2f6c75480285b5bb7e27deb1aa95b",
+      "title_guess": "Effect of Pentoxifylline in Severe Sepsis",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-a05f4ee95bc4",
+      "filename": "stokes2022.pdf.md",
+      "bytes": 10831,
+      "words": 1602,
+      "sha256": "a05f4ee95bc4758ac696e5b68a93775208974cdb9fad42a21ccba338bc67955c",
+      "title_guess": "**PELVIC FLOOR MUSCLE TRAINING ADHERENCE: EVALUATING WOMEN'S ADHERENCE TO HOME EXERCISE PRESCRIPTION IN A MULTICENTRE RANDOMISED CONTROLLED TRIAL.**",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-d4fadc155bc9",
+      "filename": "strieter1988.pdf.md",
+      "bytes": 19184,
+      "words": 2682,
+      "sha256": "d4fadc155bc92c8681ac716f630f690853fd82afa607a7b6882073cd68a0d653",
+      "title_guess": "CELLULAR AND MOLECULAR REGULATION OF TUMOR NECROSIS FACTOR- ALPHA PRODUCTION BY PENTOXIFYLLINE",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-2f308ae4ef13",
+      "filename": "sullivan-et-al-1988-inhibition-of-the-inflammatory-action-of-interleukin-1-and-tumor-necrosis-factor-(alpha)-on.pdf.md",
+      "bytes": 57867,
+      "words": 8782,
+      "sha256": "2f308ae4ef138d7d978701d34695d2fc402d12a3cd969b82762491cde6c16f97",
+      "title_guess": "Inhibition of the Inflammatory Action of Interleukin-1 and Tumor Necrosis Factor (Alpha) on Neutrophil Function by Pentoxifylline",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-238260bfaaa4",
+      "filename": "vadiei1996.pdf.md",
+      "bytes": 44670,
+      "words": 6347,
+      "sha256": "238260bfaaa48932fb7424fa3249bec18ebbb3f0277689281863f5fb18c09223",
+      "title_guess": "Nephroprotective Mechanism(s) of Pentoxifylline: Reduction of Erythrocyte-Mediated Vascular Congestion and Inhibition of Nitric Oxide Release\\*",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-d84a2d9501fc",
+      "filename": "vale2019.pdf.md",
+      "bytes": 44088,
+      "words": 5627,
+      "sha256": "d84a2d9501fc6b16181083fb8c73b78a526c4598e8fb7f73cc3dbd31d7b72daa",
+      "title_guess": "REVIEW ARTICLE",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-377f2234a94a",
+      "filename": "vanreijn-baggen2022.pdf.md",
+      "bytes": 112050,
+      "words": 10139,
+      "sha256": "377f2234a94a34218ed404d21a3cdd9f4bfb7e3d25b6df94864753e1d6a09def",
+      "title_guess": "Pelvic Floor Physical Therapy for Pelvic Floor Hypertonicity: A Systematic Review of Treatment Efficacy",
+      "flags": [
+        "POSSIBLE_OCR_OR_TABLE_NOISE"
+      ]
+    },
+    {
+      "source_id": "SRC-abc45af2003f",
+      "filename": "voisin1998.pdf.md",
+      "bytes": 54504,
+      "words": 8221,
+      "sha256": "abc45af2003fc5bfd9aed3bd4c7ea6850c8c68d12ee35ec082dea1eeeda00be6",
+      "title_guess": "Cytokine modulation by PX differently affects specific acute phase proteins during sepsis in rats",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-ba6ac501a332",
+      "filename": "wang1996.pdf.md",
+      "bytes": 43095,
+      "words": 6112,
+      "sha256": "ba6ac501a33243a4b67b801912f408abbdbc595b66d90cabaf5528907bebd5f8",
+      "title_guess": "Pentoxifylline maintains vascular endothelial cell function during hyperdynamic and hypodynamic sepsis",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-974d32cdce57",
+      "filename": "wang2006.pdf.md",
+      "bytes": 41988,
+      "words": 6343,
+      "sha256": "974d32cdce571516119f00fc632b92603378d792937c8ba9027bb2d8ef86f9bb",
+      "title_guess": "Pentoxifylline protects against endotoxin-induced acute renal failure in mice",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-36739ce84c4d",
+      "filename": "waxman1991.pdf.md",
+      "bytes": 19177,
+      "words": 2525,
+      "sha256": "36739ce84c4d44fa0c022cf6457fcec8616b81ca253f96cb7aa002aaefa45351",
+      "title_guess": "Pentoxifylline in resuscitation of experimental hemorrhagic shock",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-24356c85227d",
+      "filename": "wu1999.pdf.md",
+      "bytes": 51321,
+      "words": 7537,
+      "sha256": "24356c85227dd1aa3753fc276327baf8185df472c789f6cc1956c4b3638c718a",
+      "title_guess": "Pentoxifylline improves circulatory failure and survival in murine models of endotoxaemia",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-750938cd961d",
+      "filename": "wystrychowski2014.pdf.md",
+      "bytes": 17761,
+      "words": 2446,
+      "sha256": "750938cd961d796375d60ca9d1b97af56309479f2f0efbe71dda0e3abb9d68f3",
+      "title_guess": "Nephroprotective Effect of Pentoxifylline in Renal Ischemia–Reperfusion in Rat Depends on the Timing of Its Administration",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-ed3c059f2ac7",
+      "filename": "yang-et-al-1999-pentoxifylline-prevents-the-transition-from-the-hyperdynamic-to-hypodynamic-response-during-sepsis.pdf.md",
+      "bytes": 57413,
+      "words": 8581,
+      "sha256": "ed3c059f2ac77be8e820605d0e8343ec0d8eaca0b360791afd7b19dcea214060",
+      "title_guess": "Pentoxifylline prevents the transition from the hyperdynamic to hypodynamic response during sepsis",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-6e87bcabb8fb",
+      "filename": "zabel1989.pdf.md",
+      "bytes": 34343,
+      "words": 4741,
+      "sha256": "6e87bcabb8fb4de9b5bc0c5e97f095f380465a5b357c50f8116d339381597425",
+      "title_guess": "Discussion",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-8662c3fdd50f",
+      "filename": "zabel1993.pdf.md",
+      "bytes": 57879,
+      "words": 8528,
+      "sha256": "8662c3fdd50f35c8dea1dca7a3d813e7966f84201b778d4ad3db40379b06e91d",
+      "title_guess": "Inhibition of Endogenous TNF Formation by Pentoxifylline",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-77df809c8b2d",
+      "filename": "zhang1994.pdf.md",
+      "bytes": 51559,
+      "words": 7530,
+      "sha256": "77df809c8b2dcd790c490901d3d0621aa8a28b50394dcb65d4f96fc9811f5b05",
+      "title_guess": "PENTOXIFYLLINE IMPROVES THE TISSUE OXYGEN EXTRACTION CAPABILITIES DURING ENDOTOXIC SHOCK",
+      "flags": []
+    }
+  ]
+}

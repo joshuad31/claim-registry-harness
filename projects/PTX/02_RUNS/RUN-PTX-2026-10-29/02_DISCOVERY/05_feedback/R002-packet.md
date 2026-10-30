@@ -1,0 +1,21 @@
+# R002 — qualitative discovery feedback
+Run PTX-Full-Run-2026-10-24. Ordinary round 2.
+Assessed: Q0005-A01, Q0010-A01, Q0011-A01, Q0007-A01, Q0008-A01, completion order; assessment boundary 10 saved QIDs.
+Direction CONTINUE. No HOLD. Keep capture → immediate same-lane refill → next ready capture. Expected returns: too early; target discriminators and uncovered A+B routes.
+
+Useful novelty: the human trial has only baseline/week12 measurements and no withdrawal follow-up; it does not determine onset. He individual nonresponse and abandonment are explicitly unreported, repairing the earlier zero-count inference. Nisi supplies total plasma PK, not free/tissue concentration. Roberts supplies stimulus-specific low-concentration effects alongside important null effects; generic PDE/cAMP claims at oral exposure are not justified by high-concentration assays. Repeating these broad facts without a new discriminating condition would be trivial novelty.
+
+## Three priorities
+1. R002-P1; A2 timing/attribution; G006. Harvest already-issued Delanian answers. Distinguish treatment of established fibrosis from prevention, early versus final measurements, duration-response and post-withdrawal persistence. Separate PTX, tocopherol and combined effects, and preserve the different tissue/disease context. Success: a qualified mechanistic timing prediction or an exact unresolved timing measurement, without turning another organ's tissue response into bladder onset.
+2. R002-P2; A1 functional bridge and adverse testing; G004/G005. Move into a consequential uncovered A/B route from the index. Seek the strongest informative failure of biological-marker-to-function transfer, timing after established injury, or evidence distinguishing residual detrusor/outlet/coordination physiology. Candidate source classes include the supplied organ-dysfunction/timing adverse experiments or bladder pathophysiology. Name actual sources before sending. Success: strengthen, defeat or localize a necessary shared link; a negative in an unrelated model alone does not defeat the whole rationale. No duplicate of an issued answer and no generic background filler.
+3. R002-P3; A1 prior-treatment phenotype; G001. Complete the queued Kaplan individual response/retention repair. Most consequential remaining history quarantine: exact response fraction and completion cannot be settled from 35/43 alongside 83%, or absent dropout text. Request reported numerator/denominator, definition, follow-up population and whether abandonment is actually reported; keep unreported separate from zero. Success: repaired source-attributed definition/count or a scoped not-reported field.
+
+## Corrections, gaps and restrictions
+G001 He portion resolved for working use: counts unreported, not zero. Preserve its group results. Kaplan portion remains open.
+G002 rat structural Table3 component/total inconsistency and G003 human PVR table/p-value alignment remain restricted; repair when they affect a route or trial condition. Qmax/IPSS and EFS are separate findings.
+G007 Anderson withdrawal categories total 66 against 44 noncompleters; overlap/nesting/column alignment is unknown. Do not publish mutually exclusive reason rates or a general 1.9% inefficacy-abandonment rate from this extraction. Completed pain-treatment nonresponse and isolated voiding nonresponse are different outcomes.
+G008 Strieter mRNA reduction/remaining-expression pairs are internally inconsistent. Exact percentages restricted; retain the reported qualitative dose effect and unaffected controls. Do not use summed parent/metabolite plasma mass as interchangeable pharmacological potency.
+A pressure-flow phenotype is measurable; preferential PTX response is not established. PK from single-dose CHF patients does not establish steady-state bladder exposure. No rare-harm conclusion from the small short add-on trial.
+
+A+B coverage, safety, serious adverse testing, shared/weakest-link testing, trial conditions, timing and six-round neglected-domain obligation remain open. No scientific completion.
+Next ordinary packet after 5–6 new usable QIDs; delivery within eight saves of actual R002 delivery. Keep acquisition moving while assessment proceeds; note adoption/repair in existing state, no receipt artifact.

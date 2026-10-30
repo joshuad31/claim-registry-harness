@@ -1,0 +1,1607 @@
+[
+  {
+    "response_id": "R-Q0001-A01",
+    "qid": "Q0001",
+    "attempt": "A01",
+    "outcome": "COMPLETE",
+    "usable": true,
+    "text": "[SOURCE] \"We tested whether foliar potassium silicate improves water relations and yield components in drought-stressed wheat grown in a controlled greenhouse.\" (alvarez2021.md, SYNTHETIC — Foliar silicate and wheat water relations in a controlled pot trial )\n[SOURCE] \"Foliar silicate increased relative water content of flag leaves by 9.4 percentage points compared with the water-sprayed control at 14 days after anthesis.\" (alvarez2021.md, SYNTHETIC — Foliar silicate and wheat water relations in a controlled pot trial )\n[SOURCE] \"Foliar silicate was tested at three rainfed field sites over two seasons to determine whether it improves wheat grain yield under water-limited conditions.\" (okafor2019.md, Results)\n[SOURCE] \"A two-season field experiment tested foliar silicate for lodging resistance and grain yield in irrigated wheat.\" (smidt2020.md, Results)\n[SOURCE] \"Among the field studies we located, results are inconsistent: some report no yield difference, while others report small increases that were not significant.\" (brennan2022.md, Results)\n[SOURCE] \"The experiment shows a structural effect of foliar silicate on stem strength under irrigated conditions.\" (smidt2020.md, Results)\n\n[INFERRED] The quoted passages are what this notebook contains on the question. Each quotation is attributed above to its file and section; no finding outside these passages is asserted. Sources quoted: alvarez2021.md, brennan2022.md, okafor2019.md, smidt2020.md.",
+    "cited_sources": [
+      "alvarez2021.md",
+      "okafor2019.md",
+      "smidt2020.md",
+      "brennan2022.md"
+    ],
+    "requested_sources_cited": [
+      "alvarez2021.md"
+    ],
+    "requested_sources_absent": [],
+    "retrieval": {
+      "named": [
+        {
+          "filename": "alvarez2021.md",
+          "complete": true,
+          "words": 276
+        }
+      ],
+      "other": [
+        {
+          "filename": "okafor2019.md",
+          "heading": "Abstract",
+          "score": 9.62
+        },
+        {
+          "filename": "brennan2022.md",
+          "heading": "Findings",
+          "score": 8.49
+        },
+        {
+          "filename": "okafor2019.md",
+          "heading": "SYNTHETIC — Multi-site field trial of foliar silicate in rainfed wheat (okafor2019)",
+          "score": 7.59
+        },
+        {
+          "filename": "smidt2020.md",
+          "heading": "Abstract",
+          "score": 7.46
+        },
+        {
+          "filename": "smidt2020.md",
+          "heading": "Discussion",
+          "score": 5.77
+        },
+        {
+          "filename": "smidt2020.md",
+          "heading": "Results",
+          "score": 5.23
+        }
+      ],
+      "unresolved": [],
+      "words": 518
+    },
+    "call_key": "13ac782effcd0618f1020e66",
+    "model": "local-rules-v1.8",
+    "captured": "2026-10-30T03:39:03+00:00"
+  },
+  {
+    "response_id": "R-Q0002-A01",
+    "qid": "Q0002",
+    "attempt": "A01",
+    "outcome": "COMPLETE",
+    "usable": true,
+    "text": "[SOURCE] \"Possible reasons include lower effective leaf coverage in a field canopy, rain washing the foliar film, and milder drought than in pot experiments.\" (okafor2019.md, SYNTHETIC — Multi-site field trial of foliar silicate in rainfed wheat (okafor20)\n[SOURCE] \"The trial cannot rule out a small yield effect below its detection limit.\" (okafor2019.md, SYNTHETIC — Multi-site field trial of foliar silicate in rainfed wheat (okafor20)\n[SOURCE] \"The experiment shows a structural effect of foliar silicate on stem strength under irrigated conditions.\" (smidt2020.md, SYNTHETIC — Foliar silicate, lodging and yield in irrigated wheat (smidt2020))\n[SOURCE] \"Grain yield was 8.12 tonnes per hectare in treated plots and 7.94 tonnes per hectare in controls; the difference was not significant.\" (smidt2020.md, SYNTHETIC — Foliar silicate, lodging and yield in irrigated wheat (smidt2020))\n[SOURCE] \"This narrative review summarises reported effects of silicon application on yield and drought tolerance in cereal crops, with attention to the gap between controlled and field studies.\" (brennan2022.md, Results)\n[SOURCE] \"There is plausible mechanistic support for a drought-tolerance effect in wheat, but the field yield evidence is mixed and does not establish a benefit.\" (brennan2022.md, Results)\n\n[INFERRED] The quoted passages are what this notebook contains on the question. Each quotation is attributed above to its file and section; no finding outside these passages is asserted. Sources quoted: brennan2022.md, okafor2019.md, smidt2020.md.",
+    "cited_sources": [
+      "okafor2019.md",
+      "smidt2020.md",
+      "brennan2022.md"
+    ],
+    "requested_sources_cited": [
+      "okafor2019.md",
+      "smidt2020.md"
+    ],
+    "requested_sources_absent": [],
+    "retrieval": {
+      "named": [
+        {
+          "filename": "okafor2019.md",
+          "complete": true,
+          "words": 257
+        },
+        {
+          "filename": "smidt2020.md",
+          "complete": true,
+          "words": 219
+        }
+      ],
+      "other": [
+        {
+          "filename": "brennan2022.md",
+          "heading": "Findings",
+          "score": 5.2
+        },
+        {
+          "filename": "brennan2022.md",
+          "heading": "Abstract",
+          "score": 4.6
+        },
+        {
+          "filename": "alvarez2021.md",
+          "heading": "SYNTHETIC — Foliar silicate and wheat water relations in a controlled pot trial (alvarez2021)",
+          "score": 3.67
+        },
+        {
+          "filename": "brennan2022.md",
+          "heading": "Conclusion",
+          "score": 3.47
+        },
+        {
+          "filename": "alvarez2021.md",
+          "heading": "Discussion",
+          "score": 2.74
+        },
+        {
+          "filename": "li2024.md",
+          "heading": "Results",
+          "score": 2.33
+        }
+      ],
+      "unresolved": [],
+      "words": 736
+    },
+    "call_key": "23601d70d524a42c369fefe2",
+    "model": "local-rules-v1.8",
+    "captured": "2026-10-30T03:39:03+00:00"
+  },
+  {
+    "response_id": "R-Q0003-A01",
+    "qid": "Q0003",
+    "attempt": "A01",
+    "outcome": "COMPLETE",
+    "usable": true,
+    "text": "[SOURCE] \"A two-season field experiment tested foliar silicate for lodging resistance and grain yield in irrigated wheat.\" (smidt2020.md, SYNTHETIC — Foliar silicate, lodging and yield in irrigated wheat (smidt2020))\n[SOURCE] \"Grain yield was 8.12 tonnes per hectare in treated plots and 7.94 tonnes per hectare in controls; the difference was not significant.\" (smidt2020.md, SYNTHETIC — Foliar silicate, lodging and yield in irrigated wheat (smidt2020))\n[SOURCE] \"Foliar silicate was tested at three rainfed field sites over two seasons to determine whether it improves wheat grain yield under water-limited conditions.\" (okafor2019.md, Results)\n[SOURCE] \"We tested whether foliar potassium silicate improves water relations and yield components in drought-stressed wheat grown in a controlled greenhouse.\" (alvarez2021.md, Results)\n[SOURCE] \"Among the field studies we located, results are inconsistent: some report no yield difference, while others report small increases that were not significant.\" (brennan2022.md, Results)\n[SOURCE] \"The authors recommend field trials that measure both leaf water relations and grain yield at a stated silicate rate, because most studies report one or the other.\" (brennan2022.md, Results)\n\n[INFERRED] The quoted passages are what this notebook contains on the question. Each quotation is attributed above to its file and section; no finding outside these passages is asserted. Sources quoted: alvarez2021.md, brennan2022.md, okafor2019.md, smidt2020.md.",
+    "cited_sources": [
+      "smidt2020.md",
+      "okafor2019.md",
+      "alvarez2021.md",
+      "brennan2022.md"
+    ],
+    "requested_sources_cited": [
+      "smidt2020.md"
+    ],
+    "requested_sources_absent": [],
+    "retrieval": {
+      "named": [
+        {
+          "filename": "smidt2020.md",
+          "complete": true,
+          "words": 219
+        }
+      ],
+      "other": [
+        {
+          "filename": "okafor2019.md",
+          "heading": "SYNTHETIC — Multi-site field trial of foliar silicate in rainfed wheat (okafor2019)",
+          "score": 7.59
+        },
+        {
+          "filename": "okafor2019.md",
+          "heading": "Abstract",
+          "score": 6.74
+        },
+        {
+          "filename": "brennan2022.md",
+          "heading": "Findings",
+          "score": 6.38
+        },
+        {
+          "filename": "alvarez2021.md",
+          "heading": "Abstract",
+          "score": 6.08
+        },
+        {
+          "filename": "brennan2022.md",
+          "heading": "Abstract",
+          "score": 5.11
+        },
+        {
+          "filename": "brennan2022.md",
+          "heading": "Interpretation",
+          "score": 4.96
+        }
+      ],
+      "unresolved": [],
+      "words": 461
+    },
+    "call_key": "f3aa669390fc76750b6a9b69",
+    "model": "local-rules-v1.8",
+    "captured": "2026-10-30T03:39:03+00:00"
+  },
+  {
+    "response_id": "R-Q0004-A01",
+    "qid": "Q0004",
+    "attempt": "A01",
+    "outcome": "COMPLETE",
+    "usable": true,
+    "text": "[SOURCE] \"Grain yield responses in pots are frequently positive but vary with rate and timing.\" (brennan2022.md, SYNTHETIC — Silicon in cereals: a narrative review of yield evidence (brennan202)\n[SOURCE] \"Shoot dry weight was 12 percent higher in treated stressed seedlings.\" (li2024.md, SYNTHETIC — Silicate improves root hydraulic conductance in a model plant under )\n[SOURCE] \"This narrative review summarises reported effects of silicon application on yield and drought tolerance in cereal crops, with attention to the gap between controlled and field studies.\" (brennan2022.md, SYNTHETIC — Silicon in cereals: a narrative review of yield evidence (brennan202)\n[SOURCE] \"It does not establish a grain yield effect in any crop, and the model species differs from wheat in root anatomy and silicon accumulation.\" (li2024.md, SYNTHETIC — Silicate improves root hydraulic conductance in a model plant under )\n[SOURCE] \"The absence of a yield response in the field contrasts with positive greenhouse reports.\" (okafor2019.md, Results)\n[SOURCE] \"Grain yield was 8.12 tonnes per hectare in treated plots and 7.94 tonnes per hectare in controls; the difference was not significant.\" (smidt2020.md, Results)\n\n[INFERRED] The quoted passages are what this notebook contains on the question. Each quotation is attributed above to its file and section; no finding outside these passages is asserted. Sources quoted: brennan2022.md, li2024.md, okafor2019.md, smidt2020.md.",
+    "cited_sources": [
+      "brennan2022.md",
+      "li2024.md",
+      "okafor2019.md",
+      "smidt2020.md"
+    ],
+    "requested_sources_cited": [
+      "brennan2022.md",
+      "li2024.md"
+    ],
+    "requested_sources_absent": [],
+    "retrieval": {
+      "named": [
+        {
+          "filename": "brennan2022.md",
+          "complete": true,
+          "words": 263
+        },
+        {
+          "filename": "li2024.md",
+          "complete": true,
+          "words": 201
+        }
+      ],
+      "other": [
+        {
+          "filename": "okafor2019.md",
+          "heading": "Discussion",
+          "score": 5.07
+        },
+        {
+          "filename": "alvarez2021.md",
+          "heading": "Limitations",
+          "score": 2.82
+        },
+        {
+          "filename": "smidt2020.md",
+          "heading": "Results",
+          "score": 2.23
+        },
+        {
+          "filename": "alvarez2021.md",
+          "heading": "Results",
+          "score": 2.02
+        },
+        {
+          "filename": "okafor2019.md",
+          "heading": "Results",
+          "score": 2.02
+        },
+        {
+          "filename": "smidt2020.md",
+          "heading": "SYNTHETIC — Foliar silicate, lodging and yield in irrigated wheat (smidt2020)",
+          "score": 1.91
+        }
+      ],
+      "unresolved": [],
+      "words": 768
+    },
+    "call_key": "350f7c16ab14baca8fce38cc",
+    "model": "local-rules-v1.8",
+    "captured": "2026-10-30T03:39:03+00:00"
+  },
+  {
+    "response_id": "R-Q0005-A01",
+    "qid": "Q0005",
+    "attempt": "A01",
+    "outcome": "COMPLETE",
+    "usable": true,
+    "text": "[SOURCE] \"It does not establish a grain yield effect in any crop, and the model species differs from wheat in root anatomy and silicon accumulation.\" (li2024.md, SYNTHETIC — Silicate improves root hydraulic conductance in a model plant under )\n[SOURCE] \"The result identifies a plausible water-transport mechanism for silicate under osmotic stress.\" (li2024.md, SYNTHETIC — Silicate improves root hydraulic conductance in a model plant under )\n[SOURCE] \"Foliar silicate was tested at three rainfed field sites over two seasons to determine whether it improves wheat grain yield under water-limited conditions.\" (okafor2019.md, Results)\n[SOURCE] \"We tested whether foliar potassium silicate improves water relations and yield components in drought-stressed wheat grown in a controlled greenhouse.\" (alvarez2021.md, Results)\n[SOURCE] \"Among the field studies we located, results are inconsistent: some report no yield difference, while others report small increases that were not significant.\" (brennan2022.md, Results)\n[SOURCE] \"This narrative review summarises reported effects of silicon application on yield and drought tolerance in cereal crops, with attention to the gap between controlled and field studies.\" (brennan2022.md, Results)\n\n[INFERRED] The quoted passages are what this notebook contains on the question. Each quotation is attributed above to its file and section; no finding outside these passages is asserted. Sources quoted: alvarez2021.md, brennan2022.md, li2024.md, okafor2019.md.",
+    "cited_sources": [
+      "li2024.md",
+      "okafor2019.md",
+      "alvarez2021.md",
+      "brennan2022.md"
+    ],
+    "requested_sources_cited": [
+      "li2024.md"
+    ],
+    "requested_sources_absent": [],
+    "retrieval": {
+      "named": [
+        {
+          "filename": "li2024.md",
+          "complete": true,
+          "words": 201
+        }
+      ],
+      "other": [
+        {
+          "filename": "okafor2019.md",
+          "heading": "Abstract",
+          "score": 11.71
+        },
+        {
+          "filename": "brennan2022.md",
+          "heading": "Findings",
+          "score": 9.64
+        },
+        {
+          "filename": "okafor2019.md",
+          "heading": "SYNTHETIC — Multi-site field trial of foliar silicate in rainfed wheat (okafor2019)",
+          "score": 7.6
+        },
+        {
+          "filename": "brennan2022.md",
+          "heading": "Abstract",
+          "score": 6.6
+        },
+        {
+          "filename": "smidt2020.md",
+          "heading": "Abstract",
+          "score": 6.38
+        },
+        {
+          "filename": "alvarez2021.md",
+          "heading": "Abstract",
+          "score": 6.21
+        }
+      ],
+      "unresolved": [],
+      "words": 414
+    },
+    "call_key": "b197ed774a17167b12c53ec7",
+    "model": "local-rules-v1.8",
+    "captured": "2026-10-30T03:39:04+00:00"
+  },
+  {
+    "response_id": "R-Q0006-A01",
+    "qid": "Q0006",
+    "attempt": "A01",
+    "outcome": "COMPLETE",
+    "usable": true,
+    "text": "[SOURCE] \"Possible reasons include lower effective leaf coverage in a field canopy, rain washing the foliar film, and milder drought than in pot experiments.\" (okafor2019.md, SYNTHETIC — Multi-site field trial of foliar silicate in rainfed wheat (okafor20)\n[SOURCE] \"Because the trial used pots and a single cultivar, the yield difference should not be extrapolated to field conditions without a field test.\" (alvarez2021.md, SYNTHETIC — Foliar silicate and wheat water relations in a controlled pot trial )\n[SOURCE] \"We tested whether foliar potassium silicate improves water relations and yield components in drought-stressed wheat grown in a controlled greenhouse.\" (alvarez2021.md, SYNTHETIC — Foliar silicate and wheat water relations in a controlled pot trial )\n[SOURCE] \"Foliar silicate was tested at three rainfed field sites over two seasons to determine whether it improves wheat grain yield under water-limited conditions.\" (okafor2019.md, SYNTHETIC — Multi-site field trial of foliar silicate in rainfed wheat (okafor20)\n[SOURCE] \"There is plausible mechanistic support for a drought-tolerance effect in wheat, but the field yield evidence is mixed and does not establish a benefit.\" (brennan2022.md, Results)\n[SOURCE] \"This narrative review summarises reported effects of silicon application on yield and drought tolerance in cereal crops, with attention to the gap between controlled and field studies.\" (brennan2022.md, Results)\n\n[INFERRED] The quoted passages are what this notebook contains on the question. Each quotation is attributed above to its file and section; no finding outside these passages is asserted. Sources quoted: alvarez2021.md, brennan2022.md, okafor2019.md.",
+    "cited_sources": [
+      "okafor2019.md",
+      "alvarez2021.md",
+      "brennan2022.md"
+    ],
+    "requested_sources_cited": [
+      "alvarez2021.md",
+      "okafor2019.md"
+    ],
+    "requested_sources_absent": [],
+    "retrieval": {
+      "named": [
+        {
+          "filename": "alvarez2021.md",
+          "complete": true,
+          "words": 276
+        },
+        {
+          "filename": "okafor2019.md",
+          "complete": true,
+          "words": 257
+        }
+      ],
+      "other": [
+        {
+          "filename": "brennan2022.md",
+          "heading": "Findings",
+          "score": 11.56
+        },
+        {
+          "filename": "brennan2022.md",
+          "heading": "Abstract",
+          "score": 9.03
+        },
+        {
+          "filename": "brennan2022.md",
+          "heading": "Interpretation",
+          "score": 5.42
+        },
+        {
+          "filename": "brennan2022.md",
+          "heading": "Limitations",
+          "score": 5.1
+        },
+        {
+          "filename": "brennan2022.md",
+          "heading": "Conclusion",
+          "score": 5.09
+        },
+        {
+          "filename": "li2024.md",
+          "heading": "Results",
+          "score": 2.33
+        }
+      ],
+      "unresolved": [],
+      "words": 782
+    },
+    "call_key": "96abe124ae30709dbe51bc1a",
+    "model": "local-rules-v1.8",
+    "captured": "2026-10-30T03:39:04+00:00"
+  },
+  {
+    "response_id": "R-Q0007-A01",
+    "qid": "Q0007",
+    "attempt": "A01",
+    "outcome": "COMPLETE",
+    "usable": true,
+    "text": "[SOURCE] \"Foliar silicate was tested at three rainfed field sites over two seasons to determine whether it improves wheat grain yield under water-limited conditions.\" (okafor2019.md, SYNTHETIC — Multi-site field trial of foliar silicate in rainfed wheat (okafor20)\n[SOURCE] \"Possible reasons include lower effective leaf coverage in a field canopy, rain washing the foliar film, and milder drought than in pot experiments.\" (okafor2019.md, SYNTHETIC — Multi-site field trial of foliar silicate in rainfed wheat (okafor20)\n[SOURCE] \"We tested whether foliar potassium silicate improves water relations and yield components in drought-stressed wheat grown in a controlled greenhouse.\" (alvarez2021.md, Results)\n[SOURCE] \"A two-season field experiment tested foliar silicate for lodging resistance and grain yield in irrigated wheat.\" (smidt2020.md, Results)\n[SOURCE] \"Among the field studies we located, results are inconsistent: some report no yield difference, while others report small increases that were not significant.\" (brennan2022.md, Results)\n[SOURCE] \"The experiment shows a structural effect of foliar silicate on stem strength under irrigated conditions.\" (smidt2020.md, Results)\n\n[INFERRED] The quoted passages are what this notebook contains on the question. Each quotation is attributed above to its file and section; no finding outside these passages is asserted. Sources quoted: alvarez2021.md, brennan2022.md, okafor2019.md, smidt2020.md.",
+    "cited_sources": [
+      "okafor2019.md",
+      "alvarez2021.md",
+      "smidt2020.md",
+      "brennan2022.md"
+    ],
+    "requested_sources_cited": [
+      "okafor2019.md"
+    ],
+    "requested_sources_absent": [],
+    "retrieval": {
+      "named": [
+        {
+          "filename": "okafor2019.md",
+          "complete": true,
+          "words": 257
+        }
+      ],
+      "other": [
+        {
+          "filename": "brennan2022.md",
+          "heading": "Findings",
+          "score": 8.49
+        },
+        {
+          "filename": "smidt2020.md",
+          "heading": "Abstract",
+          "score": 7.46
+        },
+        {
+          "filename": "alvarez2021.md",
+          "heading": "Abstract",
+          "score": 6.08
+        },
+        {
+          "filename": "smidt2020.md",
+          "heading": "Discussion",
+          "score": 5.77
+        },
+        {
+          "filename": "smidt2020.md",
+          "heading": "Results",
+          "score": 5.23
+        },
+        {
+          "filename": "brennan2022.md",
+          "heading": "Abstract",
+          "score": 5.11
+        }
+      ],
+      "unresolved": [],
+      "words": 513
+    },
+    "call_key": "e17d8887cb217f71a6ae9aff",
+    "model": "local-rules-v1.8",
+    "captured": "2026-10-30T03:39:04+00:00"
+  },
+  {
+    "response_id": "R-Q0008-A01",
+    "qid": "Q0008",
+    "attempt": "A01",
+    "outcome": "COMPLETE",
+    "usable": true,
+    "text": "[SOURCE] \"This narrative review summarises reported effects of silicon application on yield and drought tolerance in cereal crops, with attention to the gap between controlled and field studies.\" (brennan2022.md, SYNTHETIC — Silicon in cereals: a narrative review of yield evidence (brennan202)\n[SOURCE] \"There is plausible mechanistic support for a drought-tolerance effect in wheat, but the field yield evidence is mixed and does not establish a benefit.\" (brennan2022.md, SYNTHETIC — Silicon in cereals: a narrative review of yield evidence (brennan202)\n[SOURCE] \"The experiment shows a structural effect of foliar silicate on stem strength under irrigated conditions.\" (smidt2020.md, SYNTHETIC — Foliar silicate, lodging and yield in irrigated wheat (smidt2020))\n[SOURCE] \"Grain yield was 8.12 tonnes per hectare in treated plots and 7.94 tonnes per hectare in controls; the difference was not significant.\" (smidt2020.md, SYNTHETIC — Foliar silicate, lodging and yield in irrigated wheat (smidt2020))\n[SOURCE] \"The trial cannot rule out a small yield effect below its detection limit.\" (okafor2019.md, Results)\n[SOURCE] \"Because the trial used pots and a single cultivar, the yield difference should not be extrapolated to field conditions without a field test.\" (alvarez2021.md, Results)\n\n[INFERRED] The quoted passages are what this notebook contains on the question. Each quotation is attributed above to its file and section; no finding outside these passages is asserted. Sources quoted: alvarez2021.md, brennan2022.md, okafor2019.md, smidt2020.md.",
+    "cited_sources": [
+      "brennan2022.md",
+      "smidt2020.md",
+      "okafor2019.md",
+      "alvarez2021.md"
+    ],
+    "requested_sources_cited": [
+      "smidt2020.md",
+      "brennan2022.md"
+    ],
+    "requested_sources_absent": [],
+    "retrieval": {
+      "named": [
+        {
+          "filename": "smidt2020.md",
+          "complete": true,
+          "words": 219
+        },
+        {
+          "filename": "brennan2022.md",
+          "complete": true,
+          "words": 263
+        }
+      ],
+      "other": [
+        {
+          "filename": "okafor2019.md",
+          "heading": "SYNTHETIC — Multi-site field trial of foliar silicate in rainfed wheat (okafor2019)",
+          "score": 5.27
+        },
+        {
+          "filename": "alvarez2021.md",
+          "heading": "SYNTHETIC — Foliar silicate and wheat water relations in a controlled pot trial (alvarez2021)",
+          "score": 3.67
+        },
+        {
+          "filename": "okafor2019.md",
+          "heading": "Limitations",
+          "score": 3.48
+        },
+        {
+          "filename": "alvarez2021.md",
+          "heading": "Discussion",
+          "score": 2.74
+        },
+        {
+          "filename": "li2024.md",
+          "heading": "Results",
+          "score": 2.33
+        },
+        {
+          "filename": "alvarez2021.md",
+          "heading": "Results",
+          "score": 2.02
+        }
+      ],
+      "unresolved": [],
+      "words": 732
+    },
+    "call_key": "3173f90744da0b39ce3bf531",
+    "model": "local-rules-v1.8",
+    "captured": "2026-10-30T03:39:04+00:00"
+  },
+  {
+    "response_id": "R-Q0009-A01",
+    "qid": "Q0009",
+    "attempt": "A01",
+    "outcome": "COMPLETE",
+    "usable": true,
+    "text": "[SOURCE] \"There is plausible mechanistic support for a drought-tolerance effect in wheat, but the field yield evidence is mixed and does not establish a benefit.\" (brennan2022.md, SYNTHETIC — Silicon in cereals: a narrative review of yield evidence (brennan202)\n[SOURCE] \"Among the field studies we located, results are inconsistent: some report no yield difference, while others report small increases that were not significant.\" (brennan2022.md, SYNTHETIC — Silicon in cereals: a narrative review of yield evidence (brennan202)\n[SOURCE] \"Foliar silicate was tested at three rainfed field sites over two seasons to determine whether it improves wheat grain yield under water-limited conditions.\" (okafor2019.md, Results)\n[SOURCE] \"We tested whether foliar potassium silicate improves water relations and yield components in drought-stressed wheat grown in a controlled greenhouse.\" (alvarez2021.md, Results)\n[SOURCE] \"A two-season field experiment tested foliar silicate for lodging resistance and grain yield in irrigated wheat.\" (smidt2020.md, Results)\n[SOURCE] \"Grain yield was 8.12 tonnes per hectare in treated plots and 7.94 tonnes per hectare in controls; the difference was not significant.\" (smidt2020.md, Results)\n\n[INFERRED] The quoted passages are what this notebook contains on the question. Each quotation is attributed above to its file and section; no finding outside these passages is asserted. Sources quoted: alvarez2021.md, brennan2022.md, okafor2019.md, smidt2020.md.",
+    "cited_sources": [
+      "brennan2022.md",
+      "okafor2019.md",
+      "alvarez2021.md",
+      "smidt2020.md"
+    ],
+    "requested_sources_cited": [
+      "brennan2022.md"
+    ],
+    "requested_sources_absent": [],
+    "retrieval": {
+      "named": [
+        {
+          "filename": "brennan2022.md",
+          "complete": true,
+          "words": 263
+        }
+      ],
+      "other": [
+        {
+          "filename": "okafor2019.md",
+          "heading": "SYNTHETIC — Multi-site field trial of foliar silicate in rainfed wheat (okafor2019)",
+          "score": 7.59
+        },
+        {
+          "filename": "smidt2020.md",
+          "heading": "Abstract",
+          "score": 7.46
+        },
+        {
+          "filename": "okafor2019.md",
+          "heading": "Abstract",
+          "score": 6.74
+        },
+        {
+          "filename": "alvarez2021.md",
+          "heading": "Abstract",
+          "score": 6.08
+        },
+        {
+          "filename": "smidt2020.md",
+          "heading": "Discussion",
+          "score": 5.77
+        },
+        {
+          "filename": "smidt2020.md",
+          "heading": "Results",
+          "score": 5.23
+        }
+      ],
+      "unresolved": [],
+      "words": 462
+    },
+    "call_key": "0602a7d466aa7ae2cc5236c8",
+    "model": "local-rules-v1.8",
+    "captured": "2026-10-30T03:39:04+00:00"
+  },
+  {
+    "response_id": "R-Q0010-A01",
+    "qid": "Q0010",
+    "attempt": "A01",
+    "outcome": "COMPLETE",
+    "usable": true,
+    "text": "[SOURCE] \"We tested whether foliar potassium silicate improves water relations and yield components in drought-stressed wheat grown in a controlled greenhouse.\" (alvarez2021.md, SYNTHETIC — Foliar silicate and wheat water relations in a controlled pot trial )\n[SOURCE] \"Shoot dry weight was 12 percent higher in treated stressed seedlings.\" (li2024.md, SYNTHETIC — Silicate improves root hydraulic conductance in a model plant under )\n[SOURCE] \"Foliar silicate increased relative water content of flag leaves by 9.4 percentage points compared with the water-sprayed control at 14 days after anthesis.\" (alvarez2021.md, SYNTHETIC — Foliar silicate and wheat water relations in a controlled pot trial )\n[SOURCE] \"It does not establish a grain yield effect in any crop, and the model species differs from wheat in root anatomy and silicon accumulation.\" (li2024.md, SYNTHETIC — Silicate improves root hydraulic conductance in a model plant under )\n[SOURCE] \"The absence of a yield response in the field contrasts with positive greenhouse reports.\" (okafor2019.md, Results)\n[SOURCE] \"Grain yield responses in pots are frequently positive but vary with rate and timing.\" (brennan2022.md, Results)\n\n[INFERRED] The quoted passages are what this notebook contains on the question. Each quotation is attributed above to its file and section; no finding outside these passages is asserted. Sources quoted: alvarez2021.md, brennan2022.md, li2024.md, okafor2019.md.",
+    "cited_sources": [
+      "alvarez2021.md",
+      "li2024.md",
+      "okafor2019.md",
+      "brennan2022.md"
+    ],
+    "requested_sources_cited": [
+      "li2024.md",
+      "alvarez2021.md"
+    ],
+    "requested_sources_absent": [],
+    "retrieval": {
+      "named": [
+        {
+          "filename": "li2024.md",
+          "complete": true,
+          "words": 201
+        },
+        {
+          "filename": "alvarez2021.md",
+          "complete": true,
+          "words": 276
+        }
+      ],
+      "other": [
+        {
+          "filename": "brennan2022.md",
+          "heading": "Findings",
+          "score": 7.22
+        },
+        {
+          "filename": "okafor2019.md",
+          "heading": "Discussion",
+          "score": 5.07
+        },
+        {
+          "filename": "brennan2022.md",
+          "heading": "Abstract",
+          "score": 3.45
+        },
+        {
+          "filename": "smidt2020.md",
+          "heading": "Results",
+          "score": 2.23
+        },
+        {
+          "filename": "okafor2019.md",
+          "heading": "Results",
+          "score": 2.02
+        },
+        {
+          "filename": "brennan2022.md",
+          "heading": "SYNTHETIC — Silicon in cereals: a narrative review of yield evidence (brennan2022)",
+          "score": 1.91
+        }
+      ],
+      "unresolved": [],
+      "words": 789
+    },
+    "call_key": "cb15301e80e2cecfc21d9f05",
+    "model": "local-rules-v1.8",
+    "captured": "2026-10-30T03:39:04+00:00"
+  },
+  {
+    "response_id": "R-Q0011-A01",
+    "qid": "Q0011",
+    "attempt": "A01",
+    "outcome": "COMPLETE",
+    "usable": true,
+    "text": "[SOURCE] \"We tested whether foliar potassium silicate improves water relations and yield components in drought-stressed wheat grown in a controlled greenhouse.\" (alvarez2021.md, SYNTHETIC — Foliar silicate and wheat water relations in a controlled pot trial )\n[SOURCE] \"Foliar silicate increased relative water content of flag leaves by 9.4 percentage points compared with the water-sprayed control at 14 days after anthesis.\" (alvarez2021.md, SYNTHETIC — Foliar silicate and wheat water relations in a controlled pot trial )\n[SOURCE] \"Foliar silicate was tested at three rainfed field sites over two seasons to determine whether it improves wheat grain yield under water-limited conditions.\" (okafor2019.md, Results)\n[SOURCE] \"Among the field studies we located, results are inconsistent: some report no yield difference, while others report small increases that were not significant.\" (brennan2022.md, Results)\n[SOURCE] \"This narrative review summarises reported effects of silicon application on yield and drought tolerance in cereal crops, with attention to the gap between controlled and field studies.\" (brennan2022.md, Results)\n[SOURCE] \"A two-season field experiment tested foliar silicate for lodging resistance and grain yield in irrigated wheat.\" (smidt2020.md, Results)\n\n[INFERRED] The quoted passages are what this notebook contains on the question. Each quotation is attributed above to its file and section; no finding outside these passages is asserted. Sources quoted: alvarez2021.md, brennan2022.md, okafor2019.md, smidt2020.md.",
+    "cited_sources": [
+      "alvarez2021.md",
+      "okafor2019.md",
+      "brennan2022.md",
+      "smidt2020.md"
+    ],
+    "requested_sources_cited": [
+      "alvarez2021.md"
+    ],
+    "requested_sources_absent": [],
+    "retrieval": {
+      "named": [
+        {
+          "filename": "alvarez2021.md",
+          "complete": true,
+          "words": 276
+        }
+      ],
+      "other": [
+        {
+          "filename": "okafor2019.md",
+          "heading": "Abstract",
+          "score": 11.71
+        },
+        {
+          "filename": "brennan2022.md",
+          "heading": "Findings",
+          "score": 9.64
+        },
+        {
+          "filename": "okafor2019.md",
+          "heading": "SYNTHETIC — Multi-site field trial of foliar silicate in rainfed wheat (okafor2019)",
+          "score": 7.6
+        },
+        {
+          "filename": "brennan2022.md",
+          "heading": "Abstract",
+          "score": 6.6
+        },
+        {
+          "filename": "smidt2020.md",
+          "heading": "Abstract",
+          "score": 6.38
+        },
+        {
+          "filename": "brennan2022.md",
+          "heading": "Interpretation",
+          "score": 5.29
+        }
+      ],
+      "unresolved": [],
+      "words": 500
+    },
+    "call_key": "5b55535a88114a208f00fc89",
+    "model": "local-rules-v1.8",
+    "captured": "2026-10-30T03:39:04+00:00"
+  },
+  {
+    "response_id": "R-Q0012-A01",
+    "qid": "Q0012",
+    "attempt": "A01",
+    "outcome": "COMPLETE",
+    "usable": true,
+    "text": "[SOURCE] \"Possible reasons include lower effective leaf coverage in a field canopy, rain washing the foliar film, and milder drought than in pot experiments.\" (okafor2019.md, SYNTHETIC — Multi-site field trial of foliar silicate in rainfed wheat (okafor20)\n[SOURCE] \"Foliar silicate was tested at three rainfed field sites over two seasons to determine whether it improves wheat grain yield under water-limited conditions.\" (okafor2019.md, SYNTHETIC — Multi-site field trial of foliar silicate in rainfed wheat (okafor20)\n[SOURCE] \"Grain yield was 8.12 tonnes per hectare in treated plots and 7.94 tonnes per hectare in controls; the difference was not significant.\" (smidt2020.md, SYNTHETIC — Foliar silicate, lodging and yield in irrigated wheat (smidt2020))\n[SOURCE] \"Silicate treatment reduced lodging score from 4.1 to 2.3 in the first season.\" (smidt2020.md, SYNTHETIC — Foliar silicate, lodging and yield in irrigated wheat (smidt2020))\n[SOURCE] \"There is plausible mechanistic support for a drought-tolerance effect in wheat, but the field yield evidence is mixed and does not establish a benefit.\" (brennan2022.md, Results)\n[SOURCE] \"This narrative review summarises reported effects of silicon application on yield and drought tolerance in cereal crops, with attention to the gap between controlled and field studies.\" (brennan2022.md, Results)\n\n[INFERRED] The quoted passages are what this notebook contains on the question. Each quotation is attributed above to its file and section; no finding outside these passages is asserted. Sources quoted: brennan2022.md, okafor2019.md, smidt2020.md.",
+    "cited_sources": [
+      "okafor2019.md",
+      "smidt2020.md",
+      "brennan2022.md"
+    ],
+    "requested_sources_cited": [
+      "okafor2019.md",
+      "smidt2020.md"
+    ],
+    "requested_sources_absent": [],
+    "retrieval": {
+      "named": [
+        {
+          "filename": "okafor2019.md",
+          "complete": true,
+          "words": 257
+        },
+        {
+          "filename": "smidt2020.md",
+          "complete": true,
+          "words": 219
+        }
+      ],
+      "other": [
+        {
+          "filename": "brennan2022.md",
+          "heading": "Findings",
+          "score": 11.56
+        },
+        {
+          "filename": "brennan2022.md",
+          "heading": "Abstract",
+          "score": 9.03
+        },
+        {
+          "filename": "brennan2022.md",
+          "heading": "Interpretation",
+          "score": 5.42
+        },
+        {
+          "filename": "brennan2022.md",
+          "heading": "Limitations",
+          "score": 5.1
+        },
+        {
+          "filename": "brennan2022.md",
+          "heading": "Conclusion",
+          "score": 5.09
+        },
+        {
+          "filename": "alvarez2021.md",
+          "heading": "SYNTHETIC — Foliar silicate and wheat water relations in a controlled pot trial (alvarez2021)",
+          "score": 4.57
+        }
+      ],
+      "unresolved": [],
+      "words": 712
+    },
+    "call_key": "a9ec6af7e9805fe4b08981bd",
+    "model": "local-rules-v1.8",
+    "captured": "2026-10-30T03:39:04+00:00"
+  },
+  {
+    "response_id": "R-Q0013-A01",
+    "qid": "Q0013",
+    "attempt": "A01",
+    "outcome": "COMPLETE",
+    "usable": true,
+    "text": "[SOURCE] \"A two-season field experiment tested foliar silicate for lodging resistance and grain yield in irrigated wheat.\" (smidt2020.md, SYNTHETIC — Foliar silicate, lodging and yield in irrigated wheat (smidt2020))\n[SOURCE] \"The experiment shows a structural effect of foliar silicate on stem strength under irrigated conditions.\" (smidt2020.md, SYNTHETIC — Foliar silicate, lodging and yield in irrigated wheat (smidt2020))\n[SOURCE] \"Foliar silicate was tested at three rainfed field sites over two seasons to determine whether it improves wheat grain yield under water-limited conditions.\" (okafor2019.md, Results)\n[SOURCE] \"We tested whether foliar potassium silicate improves water relations and yield components in drought-stressed wheat grown in a controlled greenhouse.\" (alvarez2021.md, Results)\n[SOURCE] \"Among the field studies we located, results are inconsistent: some report no yield difference, while others report small increases that were not significant.\" (brennan2022.md, Results)\n[SOURCE] \"The authors recommend field trials that measure both leaf water relations and grain yield at a stated silicate rate, because most studies report one or the other.\" (brennan2022.md, Results)\n\n[INFERRED] The quoted passages are what this notebook contains on the question. Each quotation is attributed above to its file and section; no finding outside these passages is asserted. Sources quoted: alvarez2021.md, brennan2022.md, okafor2019.md, smidt2020.md.",
+    "cited_sources": [
+      "smidt2020.md",
+      "okafor2019.md",
+      "alvarez2021.md",
+      "brennan2022.md"
+    ],
+    "requested_sources_cited": [
+      "smidt2020.md"
+    ],
+    "requested_sources_absent": [],
+    "retrieval": {
+      "named": [
+        {
+          "filename": "smidt2020.md",
+          "complete": true,
+          "words": 219
+        }
+      ],
+      "other": [
+        {
+          "filename": "okafor2019.md",
+          "heading": "Abstract",
+          "score": 9.62
+        },
+        {
+          "filename": "brennan2022.md",
+          "heading": "Findings",
+          "score": 8.49
+        },
+        {
+          "filename": "okafor2019.md",
+          "heading": "SYNTHETIC — Multi-site field trial of foliar silicate in rainfed wheat (okafor2019)",
+          "score": 7.59
+        },
+        {
+          "filename": "alvarez2021.md",
+          "heading": "Abstract",
+          "score": 6.08
+        },
+        {
+          "filename": "brennan2022.md",
+          "heading": "Abstract",
+          "score": 5.11
+        },
+        {
+          "filename": "brennan2022.md",
+          "heading": "Interpretation",
+          "score": 4.96
+        }
+      ],
+      "unresolved": [],
+      "words": 461
+    },
+    "call_key": "972b3895345f78dd1ee887a0",
+    "model": "local-rules-v1.8",
+    "captured": "2026-10-30T03:39:04+00:00"
+  },
+  {
+    "response_id": "R-Q0014-A01",
+    "qid": "Q0014",
+    "attempt": "A01",
+    "outcome": "COMPLETE",
+    "usable": true,
+    "text": "[SOURCE] \"This narrative review summarises reported effects of silicon application on yield and drought tolerance in cereal crops, with attention to the gap between controlled and field studies.\" (brennan2022.md, SYNTHETIC — Silicon in cereals: a narrative review of yield evidence (brennan202)\n[SOURCE] \"There is plausible mechanistic support for a drought-tolerance effect in wheat, but the field yield evidence is mixed and does not establish a benefit.\" (brennan2022.md, SYNTHETIC — Silicon in cereals: a narrative review of yield evidence (brennan202)\n[SOURCE] \"It does not establish a grain yield effect in any crop, and the model species differs from wheat in root anatomy and silicon accumulation.\" (li2024.md, SYNTHETIC — Silicate improves root hydraulic conductance in a model plant under )\n[SOURCE] \"Shoot dry weight was 12 percent higher in treated stressed seedlings.\" (li2024.md, SYNTHETIC — Silicate improves root hydraulic conductance in a model plant under )\n[SOURCE] \"The trial cannot rule out a small yield effect below its detection limit.\" (okafor2019.md, Results)\n[SOURCE] \"Because the trial used pots and a single cultivar, the yield difference should not be extrapolated to field conditions without a field test.\" (alvarez2021.md, Results)\n\n[INFERRED] The quoted passages are what this notebook contains on the question. Each quotation is attributed above to its file and section; no finding outside these passages is asserted. Sources quoted: alvarez2021.md, brennan2022.md, li2024.md, okafor2019.md.",
+    "cited_sources": [
+      "brennan2022.md",
+      "li2024.md",
+      "okafor2019.md",
+      "alvarez2021.md"
+    ],
+    "requested_sources_cited": [
+      "brennan2022.md",
+      "li2024.md"
+    ],
+    "requested_sources_absent": [],
+    "retrieval": {
+      "named": [
+        {
+          "filename": "brennan2022.md",
+          "complete": true,
+          "words": 263
+        },
+        {
+          "filename": "li2024.md",
+          "complete": true,
+          "words": 201
+        }
+      ],
+      "other": [
+        {
+          "filename": "okafor2019.md",
+          "heading": "SYNTHETIC — Multi-site field trial of foliar silicate in rainfed wheat (okafor2019)",
+          "score": 5.27
+        },
+        {
+          "filename": "alvarez2021.md",
+          "heading": "SYNTHETIC — Foliar silicate and wheat water relations in a controlled pot trial (alvarez2021)",
+          "score": 3.67
+        },
+        {
+          "filename": "okafor2019.md",
+          "heading": "Limitations",
+          "score": 3.48
+        },
+        {
+          "filename": "smidt2020.md",
+          "heading": "Discussion",
+          "score": 3.41
+        },
+        {
+          "filename": "alvarez2021.md",
+          "heading": "Discussion",
+          "score": 2.74
+        },
+        {
+          "filename": "smidt2020.md",
+          "heading": "Results",
+          "score": 2.23
+        }
+      ],
+      "unresolved": [],
+      "words": 697
+    },
+    "call_key": "18ce0c22e80063aa252e1e9c",
+    "model": "local-rules-v1.8",
+    "captured": "2026-10-30T03:39:04+00:00"
+  },
+  {
+    "response_id": "R-Q0015-A01",
+    "qid": "Q0015",
+    "attempt": "A01",
+    "outcome": "COMPLETE",
+    "usable": true,
+    "text": "[SOURCE] \"It does not establish a grain yield effect in any crop, and the model species differs from wheat in root anatomy and silicon accumulation.\" (li2024.md, SYNTHETIC — Silicate improves root hydraulic conductance in a model plant under )\n[SOURCE] \"The result identifies a plausible water-transport mechanism for silicate under osmotic stress.\" (li2024.md, SYNTHETIC — Silicate improves root hydraulic conductance in a model plant under )\n[SOURCE] \"Foliar silicate was tested at three rainfed field sites over two seasons to determine whether it improves wheat grain yield under water-limited conditions.\" (okafor2019.md, Results)\n[SOURCE] \"We tested whether foliar potassium silicate improves water relations and yield components in drought-stressed wheat grown in a controlled greenhouse.\" (alvarez2021.md, Results)\n[SOURCE] \"A two-season field experiment tested foliar silicate for lodging resistance and grain yield in irrigated wheat.\" (smidt2020.md, Results)\n[SOURCE] \"Among the field studies we located, results are inconsistent: some report no yield difference, while others report small increases that were not significant.\" (brennan2022.md, Results)\n\n[INFERRED] The quoted passages are what this notebook contains on the question. Each quotation is attributed above to its file and section; no finding outside these passages is asserted. Sources quoted: alvarez2021.md, brennan2022.md, li2024.md, okafor2019.md, smidt2020.md.",
+    "cited_sources": [
+      "li2024.md",
+      "okafor2019.md",
+      "alvarez2021.md",
+      "smidt2020.md",
+      "brennan2022.md"
+    ],
+    "requested_sources_cited": [
+      "li2024.md"
+    ],
+    "requested_sources_absent": [],
+    "retrieval": {
+      "named": [
+        {
+          "filename": "li2024.md",
+          "complete": true,
+          "words": 201
+        }
+      ],
+      "other": [
+        {
+          "filename": "okafor2019.md",
+          "heading": "SYNTHETIC — Multi-site field trial of foliar silicate in rainfed wheat (okafor2019)",
+          "score": 7.59
+        },
+        {
+          "filename": "smidt2020.md",
+          "heading": "Abstract",
+          "score": 7.46
+        },
+        {
+          "filename": "okafor2019.md",
+          "heading": "Abstract",
+          "score": 6.74
+        },
+        {
+          "filename": "brennan2022.md",
+          "heading": "Findings",
+          "score": 6.38
+        },
+        {
+          "filename": "alvarez2021.md",
+          "heading": "Abstract",
+          "score": 6.08
+        },
+        {
+          "filename": "smidt2020.md",
+          "heading": "Discussion",
+          "score": 5.77
+        }
+      ],
+      "unresolved": [],
+      "words": 419
+    },
+    "call_key": "26254ad20832eeb9c81c69e9",
+    "model": "local-rules-v1.8",
+    "captured": "2026-10-30T03:39:04+00:00"
+  },
+  {
+    "response_id": "R-Q0016-A01",
+    "qid": "Q0016",
+    "attempt": "A01",
+    "outcome": "COMPLETE",
+    "usable": true,
+    "text": "[SOURCE] \"The absence of a yield response in the field contrasts with positive greenhouse reports.\" (okafor2019.md, SYNTHETIC — Multi-site field trial of foliar silicate in rainfed wheat (okafor20)\n[SOURCE] \"We tested whether foliar potassium silicate improves water relations and yield components in drought-stressed wheat grown in a controlled greenhouse.\" (alvarez2021.md, SYNTHETIC — Foliar silicate and wheat water relations in a controlled pot trial )\n[SOURCE] \"Foliar silicate increased relative water content of flag leaves by 9.4 percentage points compared with the water-sprayed control at 14 days after anthesis.\" (alvarez2021.md, SYNTHETIC — Foliar silicate and wheat water relations in a controlled pot trial )\n[SOURCE] \"Stomatal conductance was higher in treated plots at the driest site, by 0.04 mol per square metre per second, but the difference did not translate into a yield difference.\" (okafor2019.md, SYNTHETIC — Multi-site field trial of foliar silicate in rainfed wheat (okafor20)\n[SOURCE] \"Grain yield responses in pots are frequently positive but vary with rate and timing.\" (brennan2022.md, Results)\n[SOURCE] \"Shoot dry weight was 12 percent higher in treated stressed seedlings.\" (li2024.md, Results)\n\n[INFERRED] The quoted passages are what this notebook contains on the question. Each quotation is attributed above to its file and section; no finding outside these passages is asserted. Sources quoted: alvarez2021.md, brennan2022.md, li2024.md, okafor2019.md.",
+    "cited_sources": [
+      "okafor2019.md",
+      "alvarez2021.md",
+      "brennan2022.md",
+      "li2024.md"
+    ],
+    "requested_sources_cited": [
+      "alvarez2021.md",
+      "okafor2019.md"
+    ],
+    "requested_sources_absent": [],
+    "retrieval": {
+      "named": [
+        {
+          "filename": "alvarez2021.md",
+          "complete": true,
+          "words": 276
+        },
+        {
+          "filename": "okafor2019.md",
+          "complete": true,
+          "words": 257
+        }
+      ],
+      "other": [
+        {
+          "filename": "brennan2022.md",
+          "heading": "Findings",
+          "score": 7.22
+        },
+        {
+          "filename": "brennan2022.md",
+          "heading": "Abstract",
+          "score": 3.45
+        },
+        {
+          "filename": "li2024.md",
+          "heading": "Results",
+          "score": 2.33
+        },
+        {
+          "filename": "smidt2020.md",
+          "heading": "Results",
+          "score": 2.23
+        },
+        {
+          "filename": "brennan2022.md",
+          "heading": "SYNTHETIC — Silicon in cereals: a narrative review of yield evidence (brennan2022)",
+          "score": 1.91
+        },
+        {
+          "filename": "smidt2020.md",
+          "heading": "SYNTHETIC — Foliar silicate, lodging and yield in irrigated wheat (smidt2020)",
+          "score": 1.91
+        }
+      ],
+      "unresolved": [],
+      "words": 793
+    },
+    "call_key": "a097ce6dc93089a633848ca5",
+    "model": "local-rules-v1.8",
+    "captured": "2026-10-30T03:39:04+00:00"
+  },
+  {
+    "response_id": "R-Q0017-A01",
+    "qid": "Q0017",
+    "attempt": "A01",
+    "outcome": "COMPLETE",
+    "usable": true,
+    "text": "[SOURCE] \"Foliar silicate was tested at three rainfed field sites over two seasons to determine whether it improves wheat grain yield under water-limited conditions.\" (okafor2019.md, SYNTHETIC — Multi-site field trial of foliar silicate in rainfed wheat (okafor20)\n[SOURCE] \"Possible reasons include lower effective leaf coverage in a field canopy, rain washing the foliar film, and milder drought than in pot experiments.\" (okafor2019.md, SYNTHETIC — Multi-site field trial of foliar silicate in rainfed wheat (okafor20)\n[SOURCE] \"We tested whether foliar potassium silicate improves water relations and yield components in drought-stressed wheat grown in a controlled greenhouse.\" (alvarez2021.md, Results)\n[SOURCE] \"Among the field studies we located, results are inconsistent: some report no yield difference, while others report small increases that were not significant.\" (brennan2022.md, Results)\n[SOURCE] \"This narrative review summarises reported effects of silicon application on yield and drought tolerance in cereal crops, with attention to the gap between controlled and field studies.\" (brennan2022.md, Results)\n[SOURCE] \"A two-season field experiment tested foliar silicate for lodging resistance and grain yield in irrigated wheat.\" (smidt2020.md, Results)\n\n[INFERRED] The quoted passages are what this notebook contains on the question. Each quotation is attributed above to its file and section; no finding outside these passages is asserted. Sources quoted: alvarez2021.md, brennan2022.md, okafor2019.md, smidt2020.md.",
+    "cited_sources": [
+      "okafor2019.md",
+      "alvarez2021.md",
+      "brennan2022.md",
+      "smidt2020.md"
+    ],
+    "requested_sources_cited": [
+      "okafor2019.md"
+    ],
+    "requested_sources_absent": [],
+    "retrieval": {
+      "named": [
+        {
+          "filename": "okafor2019.md",
+          "complete": true,
+          "words": 257
+        }
+      ],
+      "other": [
+        {
+          "filename": "brennan2022.md",
+          "heading": "Findings",
+          "score": 9.64
+        },
+        {
+          "filename": "brennan2022.md",
+          "heading": "Abstract",
+          "score": 6.6
+        },
+        {
+          "filename": "smidt2020.md",
+          "heading": "Abstract",
+          "score": 6.38
+        },
+        {
+          "filename": "alvarez2021.md",
+          "heading": "Abstract",
+          "score": 6.21
+        },
+        {
+          "filename": "brennan2022.md",
+          "heading": "Interpretation",
+          "score": 5.29
+        },
+        {
+          "filename": "smidt2020.md",
+          "heading": "SYNTHETIC — Foliar silicate, lodging and yield in irrigated wheat (smidt2020)",
+          "score": 4.8
+        }
+      ],
+      "unresolved": [],
+      "words": 491
+    },
+    "call_key": "278629440ee6fd7b89dba224",
+    "model": "local-rules-v1.8",
+    "captured": "2026-10-30T03:39:04+00:00"
+  },
+  {
+    "response_id": "R-Q0018-A01",
+    "qid": "Q0018",
+    "attempt": "A01",
+    "outcome": "COMPLETE",
+    "usable": true,
+    "text": "[SOURCE] \"There is plausible mechanistic support for a drought-tolerance effect in wheat, but the field yield evidence is mixed and does not establish a benefit.\" (brennan2022.md, SYNTHETIC — Silicon in cereals: a narrative review of yield evidence (brennan202)\n[SOURCE] \"This narrative review summarises reported effects of silicon application on yield and drought tolerance in cereal crops, with attention to the gap between controlled and field studies.\" (brennan2022.md, SYNTHETIC — Silicon in cereals: a narrative review of yield evidence (brennan202)\n[SOURCE] \"Grain yield was 8.12 tonnes per hectare in treated plots and 7.94 tonnes per hectare in controls; the difference was not significant.\" (smidt2020.md, SYNTHETIC — Foliar silicate, lodging and yield in irrigated wheat (smidt2020))\n[SOURCE] \"Silicate treatment reduced lodging score from 4.1 to 2.3 in the first season.\" (smidt2020.md, SYNTHETIC — Foliar silicate, lodging and yield in irrigated wheat (smidt2020))\n[SOURCE] \"We tested whether foliar potassium silicate improves water relations and yield components in drought-stressed wheat grown in a controlled greenhouse.\" (alvarez2021.md, Results)\n[SOURCE] \"Shoot dry weight was 12 percent higher in treated stressed seedlings.\" (li2024.md, Results)\n\n[INFERRED] The quoted passages are what this notebook contains on the question. Each quotation is attributed above to its file and section; no finding outside these passages is asserted. Sources quoted: alvarez2021.md, brennan2022.md, li2024.md, smidt2020.md.",
+    "cited_sources": [
+      "brennan2022.md",
+      "smidt2020.md",
+      "alvarez2021.md",
+      "li2024.md"
+    ],
+    "requested_sources_cited": [
+      "smidt2020.md",
+      "brennan2022.md"
+    ],
+    "requested_sources_absent": [],
+    "retrieval": {
+      "named": [
+        {
+          "filename": "smidt2020.md",
+          "complete": true,
+          "words": 219
+        },
+        {
+          "filename": "brennan2022.md",
+          "complete": true,
+          "words": 263
+        }
+      ],
+      "other": [
+        {
+          "filename": "alvarez2021.md",
+          "heading": "SYNTHETIC — Foliar silicate and wheat water relations in a controlled pot trial (alvarez2021)",
+          "score": 4.57
+        },
+        {
+          "filename": "okafor2019.md",
+          "heading": "SYNTHETIC — Multi-site field trial of foliar silicate in rainfed wheat (okafor2019)",
+          "score": 3.34
+        },
+        {
+          "filename": "li2024.md",
+          "heading": "Results",
+          "score": 2.33
+        },
+        {
+          "filename": "alvarez2021.md",
+          "heading": "Abstract",
+          "score": 2.02
+        },
+        {
+          "filename": "alvarez2021.md",
+          "heading": "Results",
+          "score": 2.02
+        },
+        {
+          "filename": "okafor2019.md",
+          "heading": "Results",
+          "score": 2.02
+        }
+      ],
+      "unresolved": [],
+      "words": 762
+    },
+    "call_key": "3bee3c6df21918b4928f8f74",
+    "model": "local-rules-v1.8",
+    "captured": "2026-10-30T03:39:04+00:00"
+  },
+  {
+    "response_id": "R-Q0019-A01",
+    "qid": "Q0019",
+    "attempt": "A01",
+    "outcome": "COMPLETE",
+    "usable": true,
+    "text": "[SOURCE] \"There is plausible mechanistic support for a drought-tolerance effect in wheat, but the field yield evidence is mixed and does not establish a benefit.\" (brennan2022.md, SYNTHETIC — Silicon in cereals: a narrative review of yield evidence (brennan202)\n[SOURCE] \"Among the field studies we located, results are inconsistent: some report no yield difference, while others report small increases that were not significant.\" (brennan2022.md, SYNTHETIC — Silicon in cereals: a narrative review of yield evidence (brennan202)\n[SOURCE] \"Foliar silicate was tested at three rainfed field sites over two seasons to determine whether it improves wheat grain yield under water-limited conditions.\" (okafor2019.md, Results)\n[SOURCE] \"We tested whether foliar potassium silicate improves water relations and yield components in drought-stressed wheat grown in a controlled greenhouse.\" (alvarez2021.md, Results)\n[SOURCE] \"A two-season field experiment tested foliar silicate for lodging resistance and grain yield in irrigated wheat.\" (smidt2020.md, Results)\n[SOURCE] \"The experiment shows a structural effect of foliar silicate on stem strength under irrigated conditions.\" (smidt2020.md, Results)\n\n[INFERRED] The quoted passages are what this notebook contains on the question. Each quotation is attributed above to its file and section; no finding outside these passages is asserted. Sources quoted: alvarez2021.md, brennan2022.md, okafor2019.md, smidt2020.md.",
+    "cited_sources": [
+      "brennan2022.md",
+      "okafor2019.md",
+      "alvarez2021.md",
+      "smidt2020.md"
+    ],
+    "requested_sources_cited": [
+      "brennan2022.md"
+    ],
+    "requested_sources_absent": [],
+    "retrieval": {
+      "named": [
+        {
+          "filename": "brennan2022.md",
+          "complete": true,
+          "words": 263
+        }
+      ],
+      "other": [
+        {
+          "filename": "okafor2019.md",
+          "heading": "Abstract",
+          "score": 9.62
+        },
+        {
+          "filename": "okafor2019.md",
+          "heading": "SYNTHETIC — Multi-site field trial of foliar silicate in rainfed wheat (okafor2019)",
+          "score": 7.59
+        },
+        {
+          "filename": "smidt2020.md",
+          "heading": "Abstract",
+          "score": 7.46
+        },
+        {
+          "filename": "alvarez2021.md",
+          "heading": "Abstract",
+          "score": 6.08
+        },
+        {
+          "filename": "smidt2020.md",
+          "heading": "Discussion",
+          "score": 5.77
+        },
+        {
+          "filename": "smidt2020.md",
+          "heading": "Results",
+          "score": 5.23
+        }
+      ],
+      "unresolved": [],
+      "words": 462
+    },
+    "call_key": "6f6950631e1e7654944de8c5",
+    "model": "local-rules-v1.8",
+    "captured": "2026-10-30T03:39:04+00:00"
+  },
+  {
+    "response_id": "R-Q0020-A01",
+    "qid": "Q0020",
+    "attempt": "A01",
+    "outcome": "COMPLETE",
+    "usable": true,
+    "text": "[SOURCE] \"Because the trial used pots and a single cultivar, the yield difference should not be extrapolated to field conditions without a field test.\" (alvarez2021.md, SYNTHETIC — Foliar silicate and wheat water relations in a controlled pot trial )\n[SOURCE] \"It does not establish a grain yield effect in any crop, and the model species differs from wheat in root anatomy and silicon accumulation.\" (li2024.md, SYNTHETIC — Silicate improves root hydraulic conductance in a model plant under )\n[SOURCE] \"Shoot dry weight was 12 percent higher in treated stressed seedlings.\" (li2024.md, SYNTHETIC — Silicate improves root hydraulic conductance in a model plant under )\n[SOURCE] \"Foliar silicate increased relative water content of flag leaves by 9.4 percentage points compared with the water-sprayed control at 14 days after anthesis.\" (alvarez2021.md, SYNTHETIC — Foliar silicate and wheat water relations in a controlled pot trial )\n[SOURCE] \"This narrative review summarises reported effects of silicon application on yield and drought tolerance in cereal crops, with attention to the gap between controlled and field studies.\" (brennan2022.md, Results)\n[SOURCE] \"There is plausible mechanistic support for a drought-tolerance effect in wheat, but the field yield evidence is mixed and does not establish a benefit.\" (brennan2022.md, Results)\n\n[INFERRED] The quoted passages are what this notebook contains on the question. Each quotation is attributed above to its file and section; no finding outside these passages is asserted. Sources quoted: alvarez2021.md, brennan2022.md, li2024.md.",
+    "cited_sources": [
+      "alvarez2021.md",
+      "li2024.md",
+      "brennan2022.md"
+    ],
+    "requested_sources_cited": [
+      "li2024.md",
+      "alvarez2021.md"
+    ],
+    "requested_sources_absent": [],
+    "retrieval": {
+      "named": [
+        {
+          "filename": "li2024.md",
+          "complete": true,
+          "words": 201
+        },
+        {
+          "filename": "alvarez2021.md",
+          "complete": true,
+          "words": 276
+        }
+      ],
+      "other": [
+        {
+          "filename": "okafor2019.md",
+          "heading": "SYNTHETIC — Multi-site field trial of foliar silicate in rainfed wheat (okafor2019)",
+          "score": 5.27
+        },
+        {
+          "filename": "brennan2022.md",
+          "heading": "Findings",
+          "score": 5.2
+        },
+        {
+          "filename": "brennan2022.md",
+          "heading": "Abstract",
+          "score": 4.6
+        },
+        {
+          "filename": "okafor2019.md",
+          "heading": "Limitations",
+          "score": 3.48
+        },
+        {
+          "filename": "brennan2022.md",
+          "heading": "Conclusion",
+          "score": 3.47
+        },
+        {
+          "filename": "smidt2020.md",
+          "heading": "Discussion",
+          "score": 3.41
+        }
+      ],
+      "unresolved": [],
+      "words": 699
+    },
+    "call_key": "8914e268ede295ebd725dac6",
+    "model": "local-rules-v1.8",
+    "captured": "2026-10-30T03:39:04+00:00"
+  },
+  {
+    "response_id": "R-Q0021-A01",
+    "qid": "Q0021",
+    "attempt": "A01",
+    "outcome": "COMPLETE",
+    "usable": true,
+    "text": "[SOURCE] \"We tested whether foliar potassium silicate improves water relations and yield components in drought-stressed wheat grown in a controlled greenhouse.\" (alvarez2021.md, SYNTHETIC — Foliar silicate and wheat water relations in a controlled pot trial )\n[SOURCE] \"Foliar silicate increased relative water content of flag leaves by 9.4 percentage points compared with the water-sprayed control at 14 days after anthesis.\" (alvarez2021.md, SYNTHETIC — Foliar silicate and wheat water relations in a controlled pot trial )\n[SOURCE] \"Foliar silicate was tested at three rainfed field sites over two seasons to determine whether it improves wheat grain yield under water-limited conditions.\" (okafor2019.md, Results)\n[SOURCE] \"A two-season field experiment tested foliar silicate for lodging resistance and grain yield in irrigated wheat.\" (smidt2020.md, Results)\n[SOURCE] \"Among the field studies we located, results are inconsistent: some report no yield difference, while others report small increases that were not significant.\" (brennan2022.md, Results)\n[SOURCE] \"Grain yield was 8.12 tonnes per hectare in treated plots and 7.94 tonnes per hectare in controls; the difference was not significant.\" (smidt2020.md, Results)\n\n[INFERRED] The quoted passages are what this notebook contains on the question. Each quotation is attributed above to its file and section; no finding outside these passages is asserted. Sources quoted: alvarez2021.md, brennan2022.md, okafor2019.md, smidt2020.md.",
+    "cited_sources": [
+      "alvarez2021.md",
+      "okafor2019.md",
+      "smidt2020.md",
+      "brennan2022.md"
+    ],
+    "requested_sources_cited": [
+      "alvarez2021.md"
+    ],
+    "requested_sources_absent": [],
+    "retrieval": {
+      "named": [
+        {
+          "filename": "alvarez2021.md",
+          "complete": true,
+          "words": 276
+        }
+      ],
+      "other": [
+        {
+          "filename": "okafor2019.md",
+          "heading": "SYNTHETIC — Multi-site field trial of foliar silicate in rainfed wheat (okafor2019)",
+          "score": 7.59
+        },
+        {
+          "filename": "smidt2020.md",
+          "heading": "Abstract",
+          "score": 7.46
+        },
+        {
+          "filename": "okafor2019.md",
+          "heading": "Abstract",
+          "score": 6.74
+        },
+        {
+          "filename": "brennan2022.md",
+          "heading": "Findings",
+          "score": 6.38
+        },
+        {
+          "filename": "smidt2020.md",
+          "heading": "Discussion",
+          "score": 5.77
+        },
+        {
+          "filename": "smidt2020.md",
+          "heading": "Results",
+          "score": 5.23
+        }
+      ],
+      "unresolved": [],
+      "words": 518
+    },
+    "call_key": "decbac533726baf4af53d22d",
+    "model": "local-rules-v1.8",
+    "captured": "2026-10-30T03:39:04+00:00"
+  },
+  {
+    "response_id": "R-Q0022-A01",
+    "qid": "Q0022",
+    "attempt": "A01",
+    "outcome": "COMPLETE",
+    "usable": true,
+    "text": "[SOURCE] \"The absence of a yield response in the field contrasts with positive greenhouse reports.\" (okafor2019.md, SYNTHETIC — Multi-site field trial of foliar silicate in rainfed wheat (okafor20)\n[SOURCE] \"Stomatal conductance was higher in treated plots at the driest site, by 0.04 mol per square metre per second, but the difference did not translate into a yield difference.\" (okafor2019.md, SYNTHETIC — Multi-site field trial of foliar silicate in rainfed wheat (okafor20)\n[SOURCE] \"Grain yield was 8.12 tonnes per hectare in treated plots and 7.94 tonnes per hectare in controls; the difference was not significant.\" (smidt2020.md, SYNTHETIC — Foliar silicate, lodging and yield in irrigated wheat (smidt2020))\n[SOURCE] \"Silicate treatment reduced lodging score from 4.1 to 2.3 in the first season.\" (smidt2020.md, SYNTHETIC — Foliar silicate, lodging and yield in irrigated wheat (smidt2020))\n[SOURCE] \"Grain yield responses in pots are frequently positive but vary with rate and timing.\" (brennan2022.md, Results)\n[SOURCE] \"Shoot dry weight was 12 percent higher in treated stressed seedlings.\" (li2024.md, Results)\n\n[INFERRED] The quoted passages are what this notebook contains on the question. Each quotation is attributed above to its file and section; no finding outside these passages is asserted. Sources quoted: brennan2022.md, li2024.md, okafor2019.md, smidt2020.md.",
+    "cited_sources": [
+      "okafor2019.md",
+      "smidt2020.md",
+      "brennan2022.md",
+      "li2024.md"
+    ],
+    "requested_sources_cited": [
+      "okafor2019.md",
+      "smidt2020.md"
+    ],
+    "requested_sources_absent": [],
+    "retrieval": {
+      "named": [
+        {
+          "filename": "okafor2019.md",
+          "complete": true,
+          "words": 257
+        },
+        {
+          "filename": "smidt2020.md",
+          "complete": true,
+          "words": 219
+        }
+      ],
+      "other": [
+        {
+          "filename": "brennan2022.md",
+          "heading": "Findings",
+          "score": 7.22
+        },
+        {
+          "filename": "brennan2022.md",
+          "heading": "Abstract",
+          "score": 3.45
+        },
+        {
+          "filename": "alvarez2021.md",
+          "heading": "Limitations",
+          "score": 2.82
+        },
+        {
+          "filename": "li2024.md",
+          "heading": "Results",
+          "score": 2.33
+        },
+        {
+          "filename": "alvarez2021.md",
+          "heading": "Results",
+          "score": 2.02
+        },
+        {
+          "filename": "brennan2022.md",
+          "heading": "SYNTHETIC — Silicon in cereals: a narrative review of yield evidence (brennan2022)",
+          "score": 1.91
+        }
+      ],
+      "unresolved": [],
+      "words": 752
+    },
+    "call_key": "b72ffc343a997e5fd855ffab",
+    "model": "local-rules-v1.8",
+    "captured": "2026-10-30T03:39:04+00:00"
+  },
+  {
+    "response_id": "R-Q0023-A01",
+    "qid": "Q0023",
+    "attempt": "A01",
+    "outcome": "COMPLETE",
+    "usable": true,
+    "text": "[SOURCE] \"Grain yield was 8.12 tonnes per hectare in treated plots and 7.94 tonnes per hectare in controls; the difference was not significant.\" (smidt2020.md, SYNTHETIC — Foliar silicate, lodging and yield in irrigated wheat (smidt2020))\n[SOURCE] \"A two-season field experiment tested foliar silicate for lodging resistance and grain yield in irrigated wheat.\" (smidt2020.md, SYNTHETIC — Foliar silicate, lodging and yield in irrigated wheat (smidt2020))\n[SOURCE] \"Foliar silicate was tested at three rainfed field sites over two seasons to determine whether it improves wheat grain yield under water-limited conditions.\" (okafor2019.md, Results)\n[SOURCE] \"We tested whether foliar potassium silicate improves water relations and yield components in drought-stressed wheat grown in a controlled greenhouse.\" (alvarez2021.md, Results)\n[SOURCE] \"Among the field studies we located, results are inconsistent: some report no yield difference, while others report small increases that were not significant.\" (brennan2022.md, Results)\n[SOURCE] \"This narrative review summarises reported effects of silicon application on yield and drought tolerance in cereal crops, with attention to the gap between controlled and field studies.\" (brennan2022.md, Results)\n\n[INFERRED] The quoted passages are what this notebook contains on the question. Each quotation is attributed above to its file and section; no finding outside these passages is asserted. Sources quoted: alvarez2021.md, brennan2022.md, okafor2019.md, smidt2020.md.",
+    "cited_sources": [
+      "smidt2020.md",
+      "okafor2019.md",
+      "alvarez2021.md",
+      "brennan2022.md"
+    ],
+    "requested_sources_cited": [
+      "smidt2020.md"
+    ],
+    "requested_sources_absent": [],
+    "retrieval": {
+      "named": [
+        {
+          "filename": "smidt2020.md",
+          "complete": true,
+          "words": 219
+        }
+      ],
+      "other": [
+        {
+          "filename": "okafor2019.md",
+          "heading": "Abstract",
+          "score": 11.71
+        },
+        {
+          "filename": "brennan2022.md",
+          "heading": "Findings",
+          "score": 9.64
+        },
+        {
+          "filename": "okafor2019.md",
+          "heading": "SYNTHETIC — Multi-site field trial of foliar silicate in rainfed wheat (okafor2019)",
+          "score": 7.6
+        },
+        {
+          "filename": "brennan2022.md",
+          "heading": "Abstract",
+          "score": 6.6
+        },
+        {
+          "filename": "alvarez2021.md",
+          "heading": "Abstract",
+          "score": 6.21
+        },
+        {
+          "filename": "brennan2022.md",
+          "heading": "Interpretation",
+          "score": 5.29
+        }
+      ],
+      "unresolved": [],
+      "words": 461
+    },
+    "call_key": "fd2e1e12be6d504b3de20600",
+    "model": "local-rules-v1.8",
+    "captured": "2026-10-30T03:39:04+00:00"
+  },
+  {
+    "response_id": "R-Q0024-A01",
+    "qid": "Q0024",
+    "attempt": "A01",
+    "outcome": "COMPLETE",
+    "usable": true,
+    "text": "[SOURCE] \"There is plausible mechanistic support for a drought-tolerance effect in wheat, but the field yield evidence is mixed and does not establish a benefit.\" (brennan2022.md, SYNTHETIC — Silicon in cereals: a narrative review of yield evidence (brennan202)\n[SOURCE] \"This narrative review summarises reported effects of silicon application on yield and drought tolerance in cereal crops, with attention to the gap between controlled and field studies.\" (brennan2022.md, SYNTHETIC — Silicon in cereals: a narrative review of yield evidence (brennan202)\n[SOURCE] \"Shoot dry weight was 12 percent higher in treated stressed seedlings.\" (li2024.md, SYNTHETIC — Silicate improves root hydraulic conductance in a model plant under )\n[SOURCE] \"It does not establish a grain yield effect in any crop, and the model species differs from wheat in root anatomy and silicon accumulation.\" (li2024.md, SYNTHETIC — Silicate improves root hydraulic conductance in a model plant under )\n[SOURCE] \"We tested whether foliar potassium silicate improves water relations and yield components in drought-stressed wheat grown in a controlled greenhouse.\" (alvarez2021.md, Results)\n[SOURCE] \"Grain yield was 8.12 tonnes per hectare in treated plots and 7.94 tonnes per hectare in controls; the difference was not significant.\" (smidt2020.md, Results)\n\n[INFERRED] The quoted passages are what this notebook contains on the question. Each quotation is attributed above to its file and section; no finding outside these passages is asserted. Sources quoted: alvarez2021.md, brennan2022.md, li2024.md, smidt2020.md.",
+    "cited_sources": [
+      "brennan2022.md",
+      "li2024.md",
+      "alvarez2021.md",
+      "smidt2020.md"
+    ],
+    "requested_sources_cited": [
+      "brennan2022.md",
+      "li2024.md"
+    ],
+    "requested_sources_absent": [],
+    "retrieval": {
+      "named": [
+        {
+          "filename": "brennan2022.md",
+          "complete": true,
+          "words": 263
+        },
+        {
+          "filename": "li2024.md",
+          "complete": true,
+          "words": 201
+        }
+      ],
+      "other": [
+        {
+          "filename": "alvarez2021.md",
+          "heading": "SYNTHETIC — Foliar silicate and wheat water relations in a controlled pot trial (alvarez2021)",
+          "score": 4.57
+        },
+        {
+          "filename": "okafor2019.md",
+          "heading": "SYNTHETIC — Multi-site field trial of foliar silicate in rainfed wheat (okafor2019)",
+          "score": 3.34
+        },
+        {
+          "filename": "smidt2020.md",
+          "heading": "Results",
+          "score": 2.23
+        },
+        {
+          "filename": "alvarez2021.md",
+          "heading": "Abstract",
+          "score": 2.02
+        },
+        {
+          "filename": "alvarez2021.md",
+          "heading": "Results",
+          "score": 2.02
+        },
+        {
+          "filename": "okafor2019.md",
+          "heading": "Results",
+          "score": 2.02
+        }
+      ],
+      "unresolved": [],
+      "words": 763
+    },
+    "call_key": "87e7d70839371bbff071de37",
+    "model": "local-rules-v1.8",
+    "captured": "2026-10-30T03:39:04+00:00"
+  }
+]

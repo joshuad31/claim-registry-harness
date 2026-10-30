@@ -1,0 +1,358 @@
+[
+  {
+    "qid": "Q0001",
+    "run_id": "RUN-WORKED-20261030T033909Z",
+    "round": 1,
+    "order_in_round": 1,
+    "text": "In field2023.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about Foliar silicate increases grain yield of drought-stressed wheat in field trials? Cite the exact passage for each finding.",
+    "firewall": {
+      "status": "PASS",
+      "repairs": [],
+      "original_text": "In field2023.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about Foliar silicate increases grain yield of drought-stressed wheat in field trials? Cite the exact passage for each finding."
+    },
+    "sources_as_sent": [
+      "field2023.md"
+    ],
+    "sources_resolved": {
+      "field2023.md": "field2023.md"
+    },
+    "target": "coverage of: Foliar silicate increases grain yield of drought-stressed wheat in field trials",
+    "packet_priority_id": null,
+    "rationale": "The local engine rotates the ranked sources across the hypothesis clauses and decisive tests so that every source and every required part is queried at least once.",
+    "header_version": "d707291f1b874f1e",
+    "issued": "2026-10-30T03:39:09+00:00",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0001-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": []
+  },
+  {
+    "qid": "Q0002",
+    "run_id": "RUN-WORKED-20261030T033909Z",
+    "round": 1,
+    "order_in_round": 2,
+    "text": "In null2021.md, review2019.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about The increase is reported at a foliar rate of two millilitres per litre? Cite the exact passage for each finding.",
+    "firewall": {
+      "status": "PASS",
+      "repairs": [],
+      "original_text": "In null2021.md, review2019.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about The increase is reported at a foliar rate of two millilitres per litre? Cite the exact passage for each finding."
+    },
+    "sources_as_sent": [
+      "null2021.md",
+      "review2019.md"
+    ],
+    "sources_resolved": {
+      "null2021.md": "null2021.md",
+      "review2019.md": "review2019.md"
+    },
+    "target": "coverage of: The increase is reported at a foliar rate of two millilitres per litre",
+    "packet_priority_id": null,
+    "rationale": "The local engine rotates the ranked sources across the hypothesis clauses and decisive tests so that every source and every required part is queried at least once.",
+    "header_version": "d707291f1b874f1e",
+    "issued": "2026-10-30T03:39:09+00:00",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0002-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": []
+  },
+  {
+    "qid": "Q0003",
+    "run_id": "RUN-WORKED-20261030T033909Z",
+    "round": 1,
+    "order_in_round": 3,
+    "text": "In review2019.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about Foliar silicate does not increase grain yield of drought-stressed wheat in field trials? Cite the exact passage for each finding.",
+    "firewall": {
+      "status": "PASS",
+      "repairs": [],
+      "original_text": "In review2019.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about Foliar silicate does not increase grain yield of drought-stressed wheat in field trials? Cite the exact passage for each finding."
+    },
+    "sources_as_sent": [
+      "review2019.md"
+    ],
+    "sources_resolved": {
+      "review2019.md": "review2019.md"
+    },
+    "target": "coverage of: Foliar silicate does not increase grain yield of drought-stressed wheat in field",
+    "packet_priority_id": null,
+    "rationale": "The local engine rotates the ranked sources across the hypothesis clauses and decisive tests so that every source and every required part is queried at least once.",
+    "header_version": "d707291f1b874f1e",
+    "issued": "2026-10-30T03:39:09+00:00",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0003-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": []
+  },
+  {
+    "qid": "Q0004",
+    "run_id": "RUN-WORKED-20261030T033909Z",
+    "round": 2,
+    "order_in_round": 1,
+    "text": "In field2023.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about Field trials at a foliar rate of two millilitres per litre report no yield difference? Cite the exact passage for each finding.",
+    "firewall": {
+      "status": "PASS",
+      "repairs": [],
+      "original_text": "In field2023.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about Field trials at a foliar rate of two millilitres per litre report no yield difference? Cite the exact passage for each finding."
+    },
+    "sources_as_sent": [
+      "field2023.md"
+    ],
+    "sources_resolved": {
+      "field2023.md": "field2023.md"
+    },
+    "target": "coverage of: Field trials at a foliar rate of two millilitres per litre report no yield diffe",
+    "packet_priority_id": null,
+    "rationale": "The local engine rotates the ranked sources across the hypothesis clauses and decisive tests so that every source and every required part is queried at least once.",
+    "header_version": "d707291f1b874f1e",
+    "issued": "2026-10-30T03:39:09+00:00",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0004-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": []
+  },
+  {
+    "qid": "Q0005",
+    "run_id": "RUN-WORKED-20261030T033909Z",
+    "round": 2,
+    "order_in_round": 2,
+    "text": "In null2021.md, review2019.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about Existing field evidence cannot determine whether foliar silicate increases grain yield of drought-stressed wheat under drought? Cite the exact passage for each finding.",
+    "firewall": {
+      "status": "PASS",
+      "repairs": [],
+      "original_text": "In null2021.md, review2019.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about Existing field evidence cannot determine whether foliar silicate increases grain yield of drought-stressed wheat under drought? Cite the exact passage for each finding."
+    },
+    "sources_as_sent": [
+      "null2021.md",
+      "review2019.md"
+    ],
+    "sources_resolved": {
+      "null2021.md": "null2021.md",
+      "review2019.md": "review2019.md"
+    },
+    "target": "coverage of: Existing field evidence cannot determine whether foliar silicate increases grain",
+    "packet_priority_id": null,
+    "rationale": "The local engine rotates the ranked sources across the hypothesis clauses and decisive tests so that every source and every required part is queried at least once.",
+    "header_version": "d707291f1b874f1e",
+    "issued": "2026-10-30T03:39:09+00:00",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0005-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": []
+  },
+  {
+    "qid": "Q0006",
+    "run_id": "RUN-WORKED-20261030T033909Z",
+    "round": 2,
+    "order_in_round": 3,
+    "text": "In review2019.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about The field findings are inconsistent across trials? Cite the exact passage for each finding.",
+    "firewall": {
+      "status": "PASS",
+      "repairs": [],
+      "original_text": "In review2019.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about The field findings are inconsistent across trials? Cite the exact passage for each finding."
+    },
+    "sources_as_sent": [
+      "review2019.md"
+    ],
+    "sources_resolved": {
+      "review2019.md": "review2019.md"
+    },
+    "target": "coverage of: The field findings are inconsistent across trials",
+    "packet_priority_id": null,
+    "rationale": "The local engine rotates the ranked sources across the hypothesis clauses and decisive tests so that every source and every required part is queried at least once.",
+    "header_version": "d707291f1b874f1e",
+    "issued": "2026-10-30T03:39:09+00:00",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0006-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": []
+  },
+  {
+    "qid": "Q0007",
+    "run_id": "RUN-WORKED-20261030T033909Z",
+    "round": 3,
+    "order_in_round": 1,
+    "text": "In field2023.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about Foliar silicate increases grain yield of drought-stressed wheat in field trials? Cite the exact passage for each finding.",
+    "firewall": {
+      "status": "PASS",
+      "repairs": [],
+      "original_text": "In field2023.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about Foliar silicate increases grain yield of drought-stressed wheat in field trials? Cite the exact passage for each finding."
+    },
+    "sources_as_sent": [
+      "field2023.md"
+    ],
+    "sources_resolved": {
+      "field2023.md": "field2023.md"
+    },
+    "target": "coverage of: Foliar silicate increases grain yield of drought-stressed wheat in field trials",
+    "packet_priority_id": null,
+    "rationale": "The local engine rotates the ranked sources across the hypothesis clauses and decisive tests so that every source and every required part is queried at least once.",
+    "header_version": "d707291f1b874f1e",
+    "issued": "2026-10-30T03:39:09+00:00",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0007-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": []
+  },
+  {
+    "qid": "Q0008",
+    "run_id": "RUN-WORKED-20261030T033909Z",
+    "round": 3,
+    "order_in_round": 2,
+    "text": "In null2021.md, review2019.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about The increase is reported at a foliar rate of two millilitres per litre? Cite the exact passage for each finding.",
+    "firewall": {
+      "status": "PASS",
+      "repairs": [],
+      "original_text": "In null2021.md, review2019.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about The increase is reported at a foliar rate of two millilitres per litre? Cite the exact passage for each finding."
+    },
+    "sources_as_sent": [
+      "null2021.md",
+      "review2019.md"
+    ],
+    "sources_resolved": {
+      "null2021.md": "null2021.md",
+      "review2019.md": "review2019.md"
+    },
+    "target": "coverage of: The increase is reported at a foliar rate of two millilitres per litre",
+    "packet_priority_id": null,
+    "rationale": "The local engine rotates the ranked sources across the hypothesis clauses and decisive tests so that every source and every required part is queried at least once.",
+    "header_version": "d707291f1b874f1e",
+    "issued": "2026-10-30T03:39:09+00:00",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0008-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": []
+  },
+  {
+    "qid": "Q0009",
+    "run_id": "RUN-WORKED-20261030T033909Z",
+    "round": 3,
+    "order_in_round": 3,
+    "text": "In review2019.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about Foliar silicate does not increase grain yield of drought-stressed wheat in field trials? Cite the exact passage for each finding.",
+    "firewall": {
+      "status": "PASS",
+      "repairs": [],
+      "original_text": "In review2019.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about Foliar silicate does not increase grain yield of drought-stressed wheat in field trials? Cite the exact passage for each finding."
+    },
+    "sources_as_sent": [
+      "review2019.md"
+    ],
+    "sources_resolved": {
+      "review2019.md": "review2019.md"
+    },
+    "target": "coverage of: Foliar silicate does not increase grain yield of drought-stressed wheat in field",
+    "packet_priority_id": null,
+    "rationale": "The local engine rotates the ranked sources across the hypothesis clauses and decisive tests so that every source and every required part is queried at least once.",
+    "header_version": "d707291f1b874f1e",
+    "issued": "2026-10-30T03:39:09+00:00",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0009-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": []
+  },
+  {
+    "qid": "Q0010",
+    "run_id": "RUN-WORKED-20261030T033909Z",
+    "round": 4,
+    "order_in_round": 1,
+    "text": "In field2023.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about Field trials at a foliar rate of two millilitres per litre report no yield difference? Cite the exact passage for each finding.",
+    "firewall": {
+      "status": "PASS",
+      "repairs": [],
+      "original_text": "In field2023.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about Field trials at a foliar rate of two millilitres per litre report no yield difference? Cite the exact passage for each finding."
+    },
+    "sources_as_sent": [
+      "field2023.md"
+    ],
+    "sources_resolved": {
+      "field2023.md": "field2023.md"
+    },
+    "target": "coverage of: Field trials at a foliar rate of two millilitres per litre report no yield diffe",
+    "packet_priority_id": null,
+    "rationale": "The local engine rotates the ranked sources across the hypothesis clauses and decisive tests so that every source and every required part is queried at least once.",
+    "header_version": "d707291f1b874f1e",
+    "issued": "2026-10-30T03:39:09+00:00",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0010-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": []
+  },
+  {
+    "qid": "Q0011",
+    "run_id": "RUN-WORKED-20261030T033909Z",
+    "round": 4,
+    "order_in_round": 2,
+    "text": "In null2021.md, review2019.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about Existing field evidence cannot determine whether foliar silicate increases grain yield of drought-stressed wheat under drought? Cite the exact passage for each finding.",
+    "firewall": {
+      "status": "PASS",
+      "repairs": [],
+      "original_text": "In null2021.md, review2019.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about Existing field evidence cannot determine whether foliar silicate increases grain yield of drought-stressed wheat under drought? Cite the exact passage for each finding."
+    },
+    "sources_as_sent": [
+      "null2021.md",
+      "review2019.md"
+    ],
+    "sources_resolved": {
+      "null2021.md": "null2021.md",
+      "review2019.md": "review2019.md"
+    },
+    "target": "coverage of: Existing field evidence cannot determine whether foliar silicate increases grain",
+    "packet_priority_id": null,
+    "rationale": "The local engine rotates the ranked sources across the hypothesis clauses and decisive tests so that every source and every required part is queried at least once.",
+    "header_version": "d707291f1b874f1e",
+    "issued": "2026-10-30T03:39:09+00:00",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0011-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": []
+  },
+  {
+    "qid": "Q0012",
+    "run_id": "RUN-WORKED-20261030T033909Z",
+    "round": 4,
+    "order_in_round": 3,
+    "text": "In review2019.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about The field findings are inconsistent across trials? Cite the exact passage for each finding.",
+    "firewall": {
+      "status": "PASS",
+      "repairs": [],
+      "original_text": "In review2019.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about The field findings are inconsistent across trials? Cite the exact passage for each finding."
+    },
+    "sources_as_sent": [
+      "review2019.md"
+    ],
+    "sources_resolved": {
+      "review2019.md": "review2019.md"
+    },
+    "target": "coverage of: The field findings are inconsistent across trials",
+    "packet_priority_id": null,
+    "rationale": "The local engine rotates the ranked sources across the hypothesis clauses and decisive tests so that every source and every required part is queried at least once.",
+    "header_version": "d707291f1b874f1e",
+    "issued": "2026-10-30T03:39:09+00:00",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0012-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": []
+  }
+]

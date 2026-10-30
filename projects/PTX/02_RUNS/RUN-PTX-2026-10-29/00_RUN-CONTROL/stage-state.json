@@ -1,0 +1,302 @@
+{
+  "corpus": {
+    "status": "done",
+    "updated": "2026-10-29T15:13:32+00:00",
+    "started": "2026-10-29T15:13:30+00:00",
+    "summary": {
+      "manifest_id": "MANIFEST-222df34dc5f8",
+      "files": 111,
+      "bytes": 4923230,
+      "chunks": 3335,
+      "flagged_sources": [
+        "hall2018.pdf.md",
+        "life-15-00613.pdf.md",
+        "s00210-025-03845-1.pdf.md",
+        "vanreijn-baggen2022.pdf.md"
+      ]
+    }
+  },
+  "index": {
+    "status": "done",
+    "updated": "2026-10-29T15:13:32+00:00",
+    "summary": {
+      "index": "supplied (imported)"
+    }
+  },
+  "archivist_prompt": {
+    "status": "done",
+    "updated": "2026-10-29T15:13:32+00:00",
+    "summary": {
+      "archivist_prompt": "supplied (imported)"
+    }
+  },
+  "frame": {
+    "status": "done",
+    "updated": "2026-10-29T15:13:32+00:00",
+    "summary": {
+      "axes": 2,
+      "hypotheses": 6,
+      "decisive_tests": 11,
+      "gauge": 64,
+      "approval": {
+        "A1": "APPROVED",
+        "A2": "TEST_ONLY"
+      }
+    }
+  },
+  "quest": {
+    "status": "imported",
+    "updated": "2026-10-29T15:13:32+00:00",
+    "summary": {
+      "questions": 62,
+      "usable": 61,
+      "packets": 12,
+      "source": "/mnt/user-data/uploads/FINAL SPECIFICATION DOCUMENTS/ChatGPT output/PTX-Full-Run-2026-10-24/ChatGPTs folder/04 Quest"
+    }
+  },
+  "frd_generate": {
+    "status": "imported",
+    "updated": "2026-10-29T15:13:32+00:00",
+    "summary": {
+      "candidates": 77,
+      "source": "/mnt/user-data/uploads/FINAL SPECIFICATION DOCUMENTS/ChatGPT output/PTX-Full-Run-2026-10-24/Human Review/FRD database.json",
+      "sha256": "e06109fb2b1ccf532408d4161473cb9bd67af9d32de690d3c833c0d4f6ab4285"
+    }
+  },
+  "frd_validate": {
+    "status": "imported",
+    "updated": "2026-10-29T15:13:32+00:00",
+    "summary": {
+      "validations": 77,
+      "ready_retained": 73,
+      "quote_verified": 77,
+      "source": "/mnt/user-data/uploads/FINAL SPECIFICATION DOCUMENTS/ChatGPT output/PTX-Full-Run-2026-10-24/Human Review/FRD database.json",
+      "sha256": "e06109fb2b1ccf532408d4161473cb9bd67af9d32de690d3c833c0d4f6ab4285"
+    }
+  },
+  "units": {
+    "status": "done",
+    "updated": "2026-10-29T15:45:10+00:00",
+    "started": "2026-10-29T15:45:09+00:00",
+    "summary": {
+      "units": 82,
+      "active": 72,
+      "unanchored": 0,
+      "by_hypothesis": {
+        "A1-H1": {
+          "REQUIRED_SUPPORT": 9,
+          "CONTEXTUAL_CONSTRAINT": 4,
+          "ADVERSE_TEST": 4,
+          "CORROBORATING_EXPECTATION": 3,
+          "EVALUATIVE_JUDGMENT": 2
+        },
+        "A1-H2": {
+          "REQUIRED_SUPPORT": 2,
+          "CONTEXTUAL_CONSTRAINT": 4,
+          "ADVERSE_TEST": 2,
+          "CORROBORATING_EXPECTATION": 1,
+          "EVALUATIVE_JUDGMENT": 1
+        },
+        "A1-H3": {
+          "REQUIRED_SUPPORT": 3,
+          "CONTEXTUAL_CONSTRAINT": 2,
+          "ADVERSE_TEST": 2,
+          "CORROBORATING_EXPECTATION": 3,
+          "EVALUATIVE_JUDGMENT": 3
+        },
+        "A2-H1": {
+          "REQUIRED_SUPPORT": 4,
+          "CONTEXTUAL_CONSTRAINT": 2,
+          "ADVERSE_TEST": 3,
+          "CORROBORATING_EXPECTATION": 3,
+          "EVALUATIVE_JUDGMENT": 1
+        },
+        "A2-H2": {
+          "REQUIRED_SUPPORT": 4,
+          "CONTEXTUAL_CONSTRAINT": 3,
+          "ADVERSE_TEST": 3,
+          "CORROBORATING_EXPECTATION": 4,
+          "EVALUATIVE_JUDGMENT": 1
+        },
+        "A2-H3": {
+          "REQUIRED_SUPPORT": 2,
+          "CONTEXTUAL_CONSTRAINT": 1,
+          "ADVERSE_TEST": 1,
+          "CORROBORATING_EXPECTATION": 3,
+          "EVALUATIVE_JUDGMENT": 2
+        }
+      }
+    }
+  },
+  "frd_retain": {
+    "status": "done",
+    "updated": "2026-10-29T15:32:31+00:00",
+    "started": "2026-10-29T15:32:31+00:00",
+    "summary": {
+      "ready": 73,
+      "retained": 73,
+      "archived": 0,
+      "within_budget": true,
+      "budget_pct": 18.94
+    }
+  },
+  "language": {
+    "status": "done",
+    "updated": "2026-10-29T15:32:31+00:00",
+    "started": "2026-10-29T15:32:31+00:00",
+    "summary": {
+      "mode": "off"
+    }
+  },
+  "witnesses": {
+    "status": "done",
+    "updated": "2026-10-29T16:41:17+00:00",
+    "started": "2026-10-29T16:41:17+00:00",
+    "summary": {
+      "applications": 73,
+      "released": 56,
+      "held": 17,
+      "ceiling_exceptions": 0,
+      "audit_pass_first_round": 54,
+      "time": "2026-10-29T16:41:17+00:00"
+    }
+  },
+  "qualify": {
+    "status": "done",
+    "updated": "2026-10-29T16:41:17+00:00",
+    "started": "2026-10-29T16:41:17+00:00",
+    "summary": {
+      "fixtures": 22,
+      "pass_a_correct": 22,
+      "pass_b_correct": 22,
+      "unqualified_patterns": []
+    }
+  },
+  "transcode": {
+    "status": "done",
+    "updated": "2026-10-29T16:41:17+00:00",
+    "started": "2026-10-29T16:41:17+00:00",
+    "summary": {
+      "mode": "off",
+      "items": 128
+    }
+  },
+  "match": {
+    "status": "done",
+    "updated": "2026-10-29T17:32:53+00:00",
+    "started": "2026-10-29T17:32:52+00:00",
+    "summary": {
+      "units": 72,
+      "witnesses": 56,
+      "pairs_assessed": 1680,
+      "pairs_not_assessed_prefilter": 2352,
+      "exhaustive": false,
+      "agreed": 473,
+      "model_adjudicated": 44,
+      "disputed_abstain": 38,
+      "missing_both_passes": 135,
+      "one_pass_only": 990,
+      "complete_relations": 6,
+      "contradictions": 1,
+      "text_mode": "off",
+      "review_pairs": 88,
+      "human_decisions": 0
+    }
+  },
+  "joint": {
+    "status": "done",
+    "updated": "2026-10-29T17:57:13+00:00",
+    "started": "2026-10-29T17:57:13+00:00",
+    "summary": {
+      "joint_proposed": 2,
+      "joint_approved": 0,
+      "incompat_pairs_checked": 3,
+      "incompat_approved": 0
+    }
+  },
+  "coverage": {
+    "status": "done",
+    "updated": "2026-10-29T19:09:04+00:00",
+    "started": "2026-10-29T19:09:04+00:00",
+    "summary": {
+      "A1-H1": {
+        "status": "NO_COMPLETE_COVERAGE",
+        "sets": 0,
+        "search": "NOT_RUN",
+        "covered_units": "0/9"
+      },
+      "A1-H2": {
+        "status": "NO_COMPLETE_COVERAGE",
+        "sets": 0,
+        "search": "NOT_RUN",
+        "covered_units": "0/2"
+      },
+      "A1-H3": {
+        "status": "NO_COMPLETE_COVERAGE",
+        "sets": 0,
+        "search": "NOT_RUN",
+        "covered_units": "1/3"
+      },
+      "A2-H1": {
+        "status": "NO_COMPLETE_COVERAGE",
+        "sets": 0,
+        "search": "NOT_RUN",
+        "covered_units": "0/4"
+      },
+      "A2-H2": {
+        "status": "NO_COMPLETE_COVERAGE",
+        "sets": 0,
+        "search": "NOT_RUN",
+        "covered_units": "0/4"
+      },
+      "A2-H3": {
+        "status": "NO_COMPLETE_COVERAGE",
+        "sets": 0,
+        "search": "NOT_RUN",
+        "covered_units": "1/2"
+      }
+    }
+  },
+  "crux": {
+    "status": "done",
+    "updated": "2026-10-29T19:09:04+00:00",
+    "started": "2026-10-29T19:09:04+00:00",
+    "summary": {
+      "coverage_recomputed": 0,
+      "crux_candidates": 0,
+      "conflict_recorded": 0,
+      "diagnostic_witnesses": 0,
+      "tests": 8,
+      "unknown_tests": 0
+    }
+  },
+  "assess": {
+    "status": "done",
+    "updated": "2026-10-29T19:09:04+00:00",
+    "started": "2026-10-29T19:09:04+00:00",
+    "summary": {
+      "allocations": {
+        "A1": {
+          "A1-H1": 29,
+          "A1-H2": 8,
+          "A1-H3": 27
+        },
+        "A2": {
+          "A2-H1": 15,
+          "A2-H2": 13,
+          "A2-H3": 36
+        }
+      },
+      "problems": []
+    }
+  },
+  "report": {
+    "status": "done",
+    "updated": "2026-10-29T19:09:04+00:00",
+    "started": "2026-10-29T19:09:04+00:00",
+    "summary": {
+      "report_words": 2283,
+      "crux_candidates": 0
+    }
+  }
+}

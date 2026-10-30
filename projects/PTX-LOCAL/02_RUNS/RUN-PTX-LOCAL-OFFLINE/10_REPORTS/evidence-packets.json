@@ -1,0 +1,804 @@
+[
+  {
+    "hypothesis_id": "A1-H1",
+    "axis_id": "A1",
+    "approval": "APPROVED",
+    "title": "PTX addresses a consequential, treatable mechanism that existing interventions leave unresolved",
+    "statement": "The available pharmacological, physiological, and mechanistic evidence supports a coherent causal explanation for why PTX could meaningfully improve voiding in an identifiable subgroup of these men. Their persistent difficulty includes a reversible physiological component that tamsulosin and their prescribed pelvic-floor intervention do not adequately address. PTX or its metabolites can act on that component at clinically attainable exposures. The supported premises and their discriminating predictions are sufficient to specify intervention, phenotype, measurement, and comparator for a targeted clinical trial, whether or not every intermediate link is resolved.",
+    "coverage_status": "NO_COMPLETE_COVERAGE",
+    "required_covered": "0/5",
+    "allocation": 22,
+    "controlling": [],
+    "objections": [],
+    "qualifications": [
+      {
+        "unit_id": "A1-H1-C1",
+        "unit_type": "CONTEXTUAL_CONSTRAINT",
+        "unit_text": "The relevant dysfunction occurs in this cohort",
+        "supported_by": [],
+        "contradicted_by": []
+      },
+      {
+        "unit_id": "A1-H1-C2",
+        "unit_type": "CONTEXTUAL_CONSTRAINT",
+        "unit_text": "the proposed drug effects reach the relevant tissue under plausible treatment conditions",
+        "supported_by": [],
+        "contradicted_by": []
+      },
+      {
+        "unit_id": "A1-H1-C3",
+        "unit_type": "CONTEXTUAL_CONSTRAINT",
+        "unit_text": "and changing those processes can improve urinary function",
+        "supported_by": [],
+        "contradicted_by": []
+      },
+      {
+        "unit_id": "A1-H1-C4",
+        "unit_type": "CONTEXTUAL_CONSTRAINT",
+        "unit_text": "Any necessary contribution from vitamin E or another cointervention is explicit",
+        "supported_by": [],
+        "contradicted_by": []
+      }
+    ],
+    "corroboration": [],
+    "gaps": [
+      {
+        "unit_id": "A1-H1-R1",
+        "unit_type": "REQUIRED_SUPPORT",
+        "unit_text": "mechanistic evidence supports a coherent causal explanation for why PTX could meaningfully improve voiding in an identifiable subgroup of these men",
+        "partly": [],
+        "nearest": [
+          {
+            "witness_id": "W-FRD-Q0005-04-Q0005",
+            "text": "Despite these limitations, the consistency of findings across multiple clinical and biochemical outcomes, as well as across subgroup and adjusted analyses, supports the robustness of the observed treatment effect (pharmaceuticals-19-00552.pdf).",
+            "source_file": "pharmaceuticals-19-00552.pdf.md",
+            "locator": "Results",
+            "vfrd_id": "FRD-Q0005-04",
+            "relation": "NO_SEMANTIC_RELATION",
+            "basis": "AGREED",
+            "overlap": 0.15
+          },
+          {
+            "witness_id": "W-FRD-Q0013-02-Q0013",
+            "text": "Pelvic floor muscle training (hereafter PFMT) is a therapy to improve endurance, strength, power, relaxation, or a combination of these, and because of its effectiveness is considered the first line of treatment for stress UI in women [2,6,16,17], and in men [18] (life-15-00613.pdf).",
+            "source_file": "life-15-00613.pdf.md",
+            "locator": "Compliance and Adherence to Pelvic Floor Exercise Therapy in People with Pelvic",
+            "vfrd_id": "FRD-Q0013-02",
+            "relation": "NO_SEMANTIC_RELATION",
+            "basis": "AGREED",
+            "overlap": 0.15
+          }
+        ]
+      },
+      {
+        "unit_id": "A1-H1-R2",
+        "unit_type": "REQUIRED_SUPPORT",
+        "unit_text": "Their persistent difficulty includes a reversible physiological component that tamsulosin and their prescribed pelvic-floor intervention do not adequately address",
+        "partly": [],
+        "nearest": [
+          {
+            "witness_id": "W-FRD-Q0038-03-Q0038",
+            "text": "Although we did note differential effects on these, the intervention might also be expected to have wider effects, such as improving the quality rather than the quantity of pelvic-floor muscle contractions, the use of broader behavioural techniques such as bladder training, and generic quality of life, which we did not measure directly (glazener2011.pdf).",
+            "source_file": "glazener2011.pdf.md",
+            "locator": "Results",
+            "vfrd_id": "FRD-Q0038-03",
+            "relation": "NO_SEMANTIC_RELATION",
+            "basis": "AGREED",
+            "overlap": 0.17
+          },
+          {
+            "witness_id": "W-FRD-Q0038-04-Q0038",
+            "text": "Treatment of voiding difficulty in women with 0.2 mg tamsulosin daily for 6 weeks has been reported to improve voiding and storage symptom scores, maximal flow rate, and PVR (ladi-seyedian2017.pdf).",
+            "source_file": "ladi-seyedian2017.pdf.md",
+            "locator": "Results",
+            "vfrd_id": "FRD-Q0038-04",
+            "relation": "NO_SEMANTIC_RELATION",
+            "basis": "AGREED",
+            "overlap": 0.17
+          }
+        ]
+      },
+      {
+        "unit_id": "A1-H1-R3",
+        "unit_type": "REQUIRED_SUPPORT",
+        "unit_text": "PTX or its metabolites can act on that component at clinically attainable exposures",
+        "partly": [],
+        "nearest": [
+          {
+            "witness_id": "W-FRD-Q0027-02-Q0027",
+            "text": "The study confirmed that PTX at clinically achievable concentration (5–10 μmol/l) attenuated the responses of human neutrophils to chemotactic peptide, whereas it did not inhibit the effect of GM-CSF on neutrophil function even at high concentrations (roberts1993.pdf).",
+            "source_file": "roberts1993.pdf.md",
+            "locator": "Pentoxifylline at clinically achievable levels inhibits FMLP-induced neutrophil",
+            "vfrd_id": "FRD-Q0027-02",
+            "relation": "NO_SEMANTIC_RELATION",
+            "basis": "AGREED",
+            "overlap": 0.29
+          },
+          {
+            "witness_id": "W-FRD-Q0007-01-Q0007",
+            "text": "Finally the overall response rate of 57% in the MPT group suggests that MPT represents a clinically meaningful treatment option, supporting the findings of others.<sup>16–20</sup> **Table 4.** Global response assessment by treatment group | | No (fitzgerald2009.pdf).",
+            "source_file": "fitzgerald2009.pdf.md",
+            "locator": "Randomized Multicenter Feasibility Trial of Myofascial Physical Therapy for the",
+            "vfrd_id": "FRD-Q0007-01",
+            "relation": "NO_SEMANTIC_RELATION",
+            "basis": "AGREED",
+            "overlap": 0.14
+          }
+        ]
+      },
+      {
+        "unit_id": "A1-H1-R4",
+        "unit_type": "REQUIRED_SUPPORT",
+        "unit_text": "The supported premises and their discriminating predictions are sufficient to specify intervention, phenotype, measurement",
+        "partly": [],
+        "nearest": [
+          {
+            "witness_id": "W-FRD-Q0001-03-Q0001",
+            "text": "Barie, MD, New York:** I wonder if you could comment on the temporal relationships between the timing of intervention and the fact that the physiologic responses you observed became meaningful statistically at 7 to as many as 14 days thereafter? (staubach1998.pdf).",
+            "source_file": "staubach1998.pdf.md",
+            "locator": "Results",
+            "vfrd_id": "FRD-Q0001-03",
+            "relation": "NO_SEMANTIC_RELATION",
+            "basis": "AGREED",
+            "overlap": 0.11
+          },
+          {
+            "witness_id": "W-FRD-Q0004-04-Q0004",
+            "text": "Some progress exists in identifying phenotypes of these pelvic disorders that leads to selection of the most appropriate and effective use of multimodal therapy.<sup>12</sup> Pelvic muscle tenderness is associated with more than 50% of the reported phenotypes and patients with more than 1 phenotype typically have higher pain scores (anderson2011.pdf).",
+            "source_file": "anderson2011.pdf.md",
+            "locator": "Safety and Effectiveness of an Internal Pelvic Myofascial Trigger Point Wand for",
+            "vfrd_id": "FRD-Q0004-04",
+            "relation": "NO_SEMANTIC_RELATION",
+            "basis": "AGREED",
+            "overlap": 0.11
+          }
+        ]
+      },
+      {
+        "unit_id": "A1-H1-R5",
+        "unit_type": "REQUIRED_SUPPORT",
+        "unit_text": "comparator for a targeted clinical trial, whether or not every intermediate link is resolved",
+        "partly": [],
+        "nearest": [
+          {
+            "witness_id": "W-FRD-Q0005-04-Q0005",
+            "text": "Despite these limitations, the consistency of findings across multiple clinical and biochemical outcomes, as well as across subgroup and adjusted analyses, supports the robustness of the observed treatment effect (pharmaceuticals-19-00552.pdf).",
+            "source_file": "pharmaceuticals-19-00552.pdf.md",
+            "locator": "Results",
+            "vfrd_id": "FRD-Q0005-04",
+            "relation": "NO_SEMANTIC_RELATION",
+            "basis": "AGREED",
+            "overlap": 0.11
+          },
+          {
+            "witness_id": "W-FRD-Q0013-04-Q0013",
+            "text": "To our knowledge, this study represents one of the first pilot clinical investigations to assess the adjunctive role of PTX in UC, integrating both clinical efficacy endpoints (PMS and IBDQ-32) and mechanistic inflammatory biomarkers such as fecal calprotectin, ESR, and TNF- $\\alpha$ (pharmaceuticals-19-00552.pdf).",
+            "source_file": "pharmaceuticals-19-00552.pdf.md",
+            "locator": "Results",
+            "vfrd_id": "FRD-Q0013-04",
+            "relation": "NO_SEMANTIC_RELATION",
+            "basis": "AGREED",
+            "overlap": 0.11
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "hypothesis_id": "A1-H2",
+    "axis_id": "A1",
+    "approval": "APPROVED",
+    "title": "The proposed therapeutic mechanism fails at a necessary causal link",
+    "statement": "H1 is wrong because PTX's reported biological effects do not translate into a meaningful remedy for the dysfunction driving impaired voiding in this cohort. Affirmative evidence demonstrates a consequential mismatch in exposure, tissue, disease process, timing, or the relationship between a biological marker and urinary function—and that mismatch defeats the materially supported rationale, not merely one route among many. Favorable findings therefore do not provide the proposed causal justification for this intervention.",
+    "coverage_status": "NO_COMPLETE_COVERAGE",
+    "required_covered": "0/3",
+    "allocation": 21,
+    "controlling": [],
+    "objections": [],
+    "qualifications": [
+      {
+        "unit_id": "A1-H2-C1",
+        "unit_type": "CONTEXTUAL_CONSTRAINT",
+        "unit_text": "The evidence demonstrating the mismatch is sufficiently relevant to test H1",
+        "supported_by": [],
+        "contradicted_by": []
+      },
+      {
+        "unit_id": "A1-H2-C2",
+        "unit_type": "CONTEXTUAL_CONSTRAINT",
+        "unit_text": "failure in an unrelated model or exposure does not suffice",
+        "supported_by": [],
+        "contradicted_by": []
+      },
+      {
+        "unit_id": "A1-H2-C3",
+        "unit_type": "CONTEXTUAL_CONSTRAINT",
+        "unit_text": "H2 targets the materially supported rationale as it currently stands in the ledger, not every route that could be imagined",
+        "supported_by": [],
+        "contradicted_by": []
+      }
+    ],
+    "corroboration": [],
+    "gaps": [
+      {
+        "unit_id": "A1-H2-R1",
+        "unit_type": "REQUIRED_SUPPORT",
+        "unit_text": "PTX's reported biological effects do not translate into a meaningful remedy for the dysfunction driving impaired voiding in this cohort",
+        "partly": [],
+        "nearest": [
+          {
+            "witness_id": "W-FRD-Q0003-04-Q0003",
+            "text": "The etiology of diabetic bladder dysfunction is multifactorial; both the myogenic and neurogenic effects of diabetic cystopathy cause a decrease in bladder sensation and impairment in voiding function [39] (ladi-seyedian2017.pdf).",
+            "source_file": "ladi-seyedian2017.pdf.md",
+            "locator": "Results",
+            "vfrd_id": "FRD-Q0003-04",
+            "relation": "NO_SEMANTIC_RELATION",
+            "basis": "AGREED",
+            "overlap": 0.25
+          },
+          {
+            "witness_id": "W-FRD-Q0015-04-Q0015",
+            "text": "The etiology of diabetic bladder dysfunction is multifactorial; both the myogenic and neurogenic effects of diabetic cystopathy cause a decrease in bladder sensation and impairment in voiding function [39] (ladi-seyedian2017.pdf).",
+            "source_file": "ladi-seyedian2017.pdf.md",
+            "locator": "Results",
+            "vfrd_id": "FRD-Q0015-04",
+            "relation": "NO_SEMANTIC_RELATION",
+            "basis": "AGREED",
+            "overlap": 0.25
+          }
+        ]
+      },
+      {
+        "unit_id": "A1-H2-R2",
+        "unit_type": "REQUIRED_SUPPORT",
+        "unit_text": "Affirmative evidence demonstrates a consequential mismatch in exposure, tissue, disease process, timing, or the relationship between a biological marker and urinary function—and that mismatch defeats the materially supported rationale, not merely one route among many",
+        "partly": [],
+        "nearest": [
+          {
+            "witness_id": "W-FRD-Q0001-03-Q0001",
+            "text": "Barie, MD, New York:** I wonder if you could comment on the temporal relationships between the timing of intervention and the fact that the physiologic responses you observed became meaningful statistically at 7 to as many as 14 days thereafter? (staubach1998.pdf).",
+            "source_file": "staubach1998.pdf.md",
+            "locator": "Results",
+            "vfrd_id": "FRD-Q0001-03",
+            "relation": "NO_SEMANTIC_RELATION",
+            "basis": "AGREED",
+            "overlap": 0.08
+          },
+          {
+            "witness_id": "W-FRD-Q0004-01-Q0004",
+            "text": "Some risk factors are mentioned in this review and other pathophysiologies are described elsewhere in this issue. **Table 3.** Possible risk factors of detrusor underactivity | Pathological regions | Disease entities | |----------------------|------------------------------------------------------------------------------------------------------------------------------------------| | Idiopathic | Normal ageing process<br>Unknown factors in younger population | | Neurogenic | Parkinson disease<br>Multiple sclerosis<br>Guillain-Barre syndrome<br>Neurosyphilis<br>Diabetes mellitus | | Myogenic | Diabetes mellitus<br>Bladder outlet (2020ICU_icu-58-S68.pdf).",
+            "source_file": "2020ICU_icu-58-S68.pdf.md",
+            "locator": "Epidemiology of underactive bladder: Common but underresearched",
+            "vfrd_id": "FRD-Q0004-01",
+            "relation": "NO_SEMANTIC_RELATION",
+            "basis": "AGREED",
+            "overlap": 0.08
+          }
+        ]
+      },
+      {
+        "unit_id": "A1-H2-R3",
+        "unit_type": "REQUIRED_SUPPORT",
+        "unit_text": "Favorable findings therefore do not provide the proposed causal justification for this intervention",
+        "partly": [],
+        "nearest": [
+          {
+            "witness_id": "W-FRD-Q0001-01-Q0001",
+            "text": "A review of available studies indicates that Pentoxifylline may have a potentially positive impact on male infertility,<sup>27</sup> Peyronie's disease,<sup>28</sup> regulation of the systemic inflammatory response to bypass surgery,<sup>29</sup> angina symptom,<sup>30</sup> management of intermittent claudication,<sup>31</sup> improvement of cerebral blood flow in patients with cerebrovascular disease, and the progression of vascular dementia.<sup>32</sup> Therefore (Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf).",
+            "source_file": "Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md",
+            "locator": "Comparison between combination of tamsulosin and Pentoxifylline versus tamsulosi",
+            "vfrd_id": "FRD-Q0001-01",
+            "relation": "NO_SEMANTIC_RELATION",
+            "basis": "AGREED",
+            "overlap": 0.12
+          },
+          {
+            "witness_id": "W-FRD-Q0001-03-Q0001",
+            "text": "Barie, MD, New York:** I wonder if you could comment on the temporal relationships between the timing of intervention and the fact that the physiologic responses you observed became meaningful statistically at 7 to as many as 14 days thereafter? (staubach1998.pdf).",
+            "source_file": "staubach1998.pdf.md",
+            "locator": "Results",
+            "vfrd_id": "FRD-Q0001-03",
+            "relation": "NO_SEMANTIC_RELATION",
+            "basis": "AGREED",
+            "overlap": 0.12
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "hypothesis_id": "A1-H3",
+    "axis_id": "A1",
+    "approval": "APPROVED",
+    "title": "The evidence leaves the decisive mechanistic link unresolved",
+    "statement": "Existing evidence supports some components of H1 but cannot distinguish a therapeutically consequential mechanism from the failure described by H2. The unresolved links prevent the rationale from becoming specific enough to design the trial: at least one of intervention and exposure, phenotype, measurement, or comparator cannot be specified from supported premises. The uncertainty is localized to identified links, and neither a compelling mechanistic endorsement nor a mechanistic rejection is presently determined.",
+    "coverage_status": "NO_COMPLETE_COVERAGE",
+    "required_covered": "0/5",
+    "allocation": 21,
+    "controlling": [],
+    "objections": [],
+    "qualifications": [
+      {
+        "unit_id": "A1-H3-C1",
+        "unit_type": "CONTEXTUAL_CONSTRAINT",
+        "unit_text": "Meaningful retrieval and adverse testing have been completed",
+        "supported_by": [],
+        "contradicted_by": []
+      },
+      {
+        "unit_id": "A1-H3-C2",
+        "unit_type": "CONTEXTUAL_CONSTRAINT",
+        "unit_text": "uncertainty is not merely an artifact of an unfinished investigation",
+        "supported_by": [],
+        "contradicted_by": []
+      }
+    ],
+    "corroboration": [],
+    "gaps": [
+      {
+        "unit_id": "A1-H3-R1",
+        "unit_type": "REQUIRED_SUPPORT",
+        "unit_text": "Existing evidence supports some components of H1",
+        "partly": [],
+        "nearest": [
+          {
+            "witness_id": "W-FRD-Q0005-04-Q0005",
+            "text": "Despite these limitations, the consistency of findings across multiple clinical and biochemical outcomes, as well as across subgroup and adjusted analyses, supports the robustness of the observed treatment effect (pharmaceuticals-19-00552.pdf).",
+            "source_file": "pharmaceuticals-19-00552.pdf.md",
+            "locator": "Results",
+            "vfrd_id": "FRD-Q0005-04",
+            "relation": "NO_SEMANTIC_RELATION",
+            "basis": "AGREED",
+            "overlap": 0.2
+          },
+          {
+            "witness_id": "W-FRD-Q0009-02-Q0009",
+            "text": "Criteria specific to PFMT were developed, based on the Consensus on Exercise Reporting Template, and applied to all studies to measure the comprehensiveness of the PFMT description in the manuscript. **Results:** Results from the 108 included studies indicate substantial heterogeneity in both the content of PFMT and the quality of reporting of the components of the exercise regimes (hall2018.pdf).",
+            "source_file": "hall2018.pdf.md",
+            "locator": "Design of programs to train pelvic floor muscles in men with urinary dysfunction",
+            "vfrd_id": "FRD-Q0009-02",
+            "relation": "NO_SEMANTIC_RELATION",
+            "basis": "AGREED",
+            "overlap": 0.2
+          }
+        ]
+      },
+      {
+        "unit_id": "A1-H3-R2",
+        "unit_type": "REQUIRED_SUPPORT",
+        "unit_text": "cannot distinguish a therapeutically consequential mechanism from the failure described by H2",
+        "partly": [],
+        "nearest": [
+          {
+            "witness_id": "W-FRD-Q0002-01-Q0002",
+            "text": "Captopril is commonly prescribed as an angiotensin-converting enzyme inhibitor for the treatment of some medical conditions, including hypertension and some types of congestive heart failure [10,11] (shirazi2014.pdf).",
+            "source_file": "shirazi2014.pdf.md",
+            "locator": "Stereological Comparison of the Effects of Pentoxifylline, Captopril, Simvastati",
+            "vfrd_id": "FRD-Q0002-01",
+            "relation": "NO_SEMANTIC_RELATION",
+            "basis": "AGREED",
+            "overlap": 0.12
+          },
+          {
+            "witness_id": "W-FRD-Q0004-01-Q0004",
+            "text": "Some risk factors are mentioned in this review and other pathophysiologies are described elsewhere in this issue. **Table 3.** Possible risk factors of detrusor underactivity | Pathological regions | Disease entities | |----------------------|------------------------------------------------------------------------------------------------------------------------------------------| | Idiopathic | Normal ageing process<br>Unknown factors in younger population | | Neurogenic | Parkinson disease<br>Multiple sclerosis<br>Guillain-Barre syndrome<br>Neurosyphilis<br>Diabetes mellitus | | Myogenic | Diabetes mellitus<br>Bladder outlet (2020ICU_icu-58-S68.pdf).",
+            "source_file": "2020ICU_icu-58-S68.pdf.md",
+            "locator": "Epidemiology of underactive bladder: Common but underresearched",
+            "vfrd_id": "FRD-Q0004-01",
+            "relation": "NO_SEMANTIC_RELATION",
+            "basis": "AGREED",
+            "overlap": 0.12
+          }
+        ]
+      },
+      {
+        "unit_id": "A1-H3-R3",
+        "unit_type": "REQUIRED_SUPPORT",
+        "unit_text": "The unresolved links prevent the rationale from becoming specific enough to design the trial: at least one of intervention and exposure, phenotype, measurement, or comparator cannot be specified from supported premises",
+        "partly": [],
+        "nearest": [
+          {
+            "witness_id": "W-FRD-Q0001-03-Q0001",
+            "text": "Barie, MD, New York:** I wonder if you could comment on the temporal relationships between the timing of intervention and the fact that the physiologic responses you observed became meaningful statistically at 7 to as many as 14 days thereafter? (staubach1998.pdf).",
+            "source_file": "staubach1998.pdf.md",
+            "locator": "Results",
+            "vfrd_id": "FRD-Q0001-03",
+            "relation": "NO_SEMANTIC_RELATION",
+            "basis": "AGREED",
+            "overlap": 0.05
+          },
+          {
+            "witness_id": "W-FRD-Q0004-04-Q0004",
+            "text": "Some progress exists in identifying phenotypes of these pelvic disorders that leads to selection of the most appropriate and effective use of multimodal therapy.<sup>12</sup> Pelvic muscle tenderness is associated with more than 50% of the reported phenotypes and patients with more than 1 phenotype typically have higher pain scores (anderson2011.pdf).",
+            "source_file": "anderson2011.pdf.md",
+            "locator": "Safety and Effectiveness of an Internal Pelvic Myofascial Trigger Point Wand for",
+            "vfrd_id": "FRD-Q0004-04",
+            "relation": "NO_SEMANTIC_RELATION",
+            "basis": "AGREED",
+            "overlap": 0.05
+          }
+        ]
+      },
+      {
+        "unit_id": "A1-H3-R4",
+        "unit_type": "REQUIRED_SUPPORT",
+        "unit_text": "The uncertainty is localized to identified links",
+        "partly": [],
+        "nearest": []
+      },
+      {
+        "unit_id": "A1-H3-R5",
+        "unit_type": "REQUIRED_SUPPORT",
+        "unit_text": "neither a compelling mechanistic endorsement nor a mechanistic rejection is presently determined",
+        "partly": [],
+        "nearest": [
+          {
+            "witness_id": "W-FRD-Q0008-02-Q0008",
+            "text": "An analysis comparing response rates between treatment arms using the exact conditional test version of Mantel-Haenszel methods to adjust for within-center clustering was implemented within the Proc-StatXact software system.<sup>28</sup> Outcome measures between treatment arms were analyzed with Wilcoxon rank sum tests, and outcome scores within treatment groups and disease states were determined with paired t tests (fitzgerald2009.pdf).",
+            "source_file": "fitzgerald2009.pdf.md",
+            "locator": "Randomized Multicenter Feasibility Trial of Myofascial Physical Therapy for the",
+            "vfrd_id": "FRD-Q0008-02",
+            "relation": "NO_SEMANTIC_RELATION",
+            "basis": "AGREED",
+            "overlap": 0.14
+          },
+          {
+            "witness_id": "W-FRD-Q0013-04-Q0013",
+            "text": "To our knowledge, this study represents one of the first pilot clinical investigations to assess the adjunctive role of PTX in UC, integrating both clinical efficacy endpoints (PMS and IBDQ-32) and mechanistic inflammatory biomarkers such as fecal calprotectin, ESR, and TNF- $\\alpha$ (pharmaceuticals-19-00552.pdf).",
+            "source_file": "pharmaceuticals-19-00552.pdf.md",
+            "locator": "Results",
+            "vfrd_id": "FRD-Q0013-04",
+            "relation": "NO_SEMANTIC_RELATION",
+            "basis": "AGREED",
+            "overlap": 0.14
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "hypothesis_id": "A2-H1",
+    "axis_id": "A2",
+    "approval": "TEST_ONLY",
+    "title": "PTX benefit is a rapid functional effect",
+    "statement": "The materially supported mechanism acts on current physiological function—such as perfusion, microcirculation, smooth-muscle behavior, or neural signaling—rather than on established tissue structure. At clinically attainable exposures, PTX or its metabolites should produce measurable improvement in voiding within days to a few weeks, and benefit should diminish if treatment stops.",
+    "coverage_status": "NO_COMPLETE_COVERAGE",
+    "required_covered": "0/3",
+    "allocation": 22,
+    "controlling": [],
+    "objections": [],
+    "qualifications": [
+      {
+        "unit_id": "A2-H1-C1",
+        "unit_type": "CONTEXTUAL_CONSTRAINT",
+        "unit_text": "A functional component of impaired voiding is present and modifiable in this cohort",
+        "supported_by": [],
+        "contradicted_by": []
+      },
+      {
+        "unit_id": "A2-H1-C2",
+        "unit_type": "CONTEXTUAL_CONSTRAINT",
+        "unit_text": "attainable exposure reaches the relevant tissue quickly enough to act within the proposed window",
+        "supported_by": [],
+        "contradicted_by": []
+      }
+    ],
+    "corroboration": [],
+    "gaps": [
+      {
+        "unit_id": "A2-H1-R1",
+        "unit_type": "REQUIRED_SUPPORT",
+        "unit_text": "The materially supported mechanism acts on current physiological function—such as perfusion, microcirculation, smooth-muscle behavior, or neural signaling—rather than on established tissue structure",
+        "partly": [],
+        "nearest": [
+          {
+            "witness_id": "W-FRD-Q0002-02-Q0002",
+            "text": "[5] indicated that persistent bladder dysfunction in men after transurethral resection of prostate would be associated with long-lasting detrusor ischemia and reduced perfusion (shirazi2015.pdf).",
+            "source_file": "shirazi2015.pdf.md",
+            "locator": "The effect of pentoxifylline on detrusor muscle contractility after partial uret",
+            "vfrd_id": "FRD-Q0002-02",
+            "relation": "NO_SEMANTIC_RELATION",
+            "basis": "AGREED",
+            "overlap": 0.06
+          },
+          {
+            "witness_id": "W-FRD-Q0009-01-Q0009",
+            "text": "Our previous research [3] also analysed the possible mechanism that increased the mental burden caused by pelvic floor dysfunction, and then increased the prostatic urethral pressure, which caused LUTS in some patients with CP, manifested as voiding symptoms and mostly classified as IIIB (leukocytosis with no proof of bacterial infection); Hinman and Baumann [4] had a similar view (he2010.pdf).",
+            "source_file": "he2010.pdf.md",
+            "locator": "Chronic prostatitis presenting with dysfunctional voiding and effects of pelvic",
+            "vfrd_id": "FRD-Q0009-01",
+            "relation": "NO_SEMANTIC_RELATION",
+            "basis": "AGREED",
+            "overlap": 0.06
+          }
+        ]
+      },
+      {
+        "unit_id": "A2-H1-R2",
+        "unit_type": "REQUIRED_SUPPORT",
+        "unit_text": "At clinically attainable exposures, PTX or its metabolites should produce measurable improvement in voiding within days to a few weeks",
+        "partly": [],
+        "nearest": [
+          {
+            "witness_id": "W-FRD-Q0008-03-Q0008",
+            "text": "finding suggests that PTX may exert an anti-inflammatory effect sufficient to translate into measurable symptom relief (pharmaceuticals-19-00552.pdf).",
+            "source_file": "pharmaceuticals-19-00552.pdf.md",
+            "locator": "Results",
+            "vfrd_id": "FRD-Q0008-03",
+            "relation": "NO_SEMANTIC_RELATION",
+            "basis": "AGREED",
+            "overlap": 0.17
+          },
+          {
+            "witness_id": "W-FRD-Q0010-03-Q0010",
+            "text": "Long-term follow-up of previous phase II patients, in fact, helped us to understand that improvement under combined PTX/Vit E treatment is slow, progressive, and continuous, with a maximum effect after periods ranging from 18 months to 3 years (Delanian et al, unpublished data, 2003), to take account of patient-to-patient variability (delanian2003.pdf).",
+            "source_file": "delanian2003.pdf.md",
+            "locator": "Results",
+            "vfrd_id": "FRD-Q0010-03",
+            "relation": "NO_SEMANTIC_RELATION",
+            "basis": "AGREED",
+            "overlap": 0.17
+          }
+        ]
+      },
+      {
+        "unit_id": "A2-H1-R3",
+        "unit_type": "REQUIRED_SUPPORT",
+        "unit_text": "benefit should diminish if treatment stops",
+        "partly": [],
+        "nearest": [
+          {
+            "witness_id": "W-FRD-Q0002-01-Q0002",
+            "text": "Captopril is commonly prescribed as an angiotensin-converting enzyme inhibitor for the treatment of some medical conditions, including hypertension and some types of congestive heart failure [10,11] (shirazi2014.pdf).",
+            "source_file": "shirazi2014.pdf.md",
+            "locator": "Stereological Comparison of the Effects of Pentoxifylline, Captopril, Simvastati",
+            "vfrd_id": "FRD-Q0002-01",
+            "relation": "NO_SEMANTIC_RELATION",
+            "basis": "AGREED",
+            "overlap": 0.25
+          },
+          {
+            "witness_id": "W-FRD-Q0005-04-Q0005",
+            "text": "Despite these limitations, the consistency of findings across multiple clinical and biochemical outcomes, as well as across subgroup and adjusted analyses, supports the robustness of the observed treatment effect (pharmaceuticals-19-00552.pdf).",
+            "source_file": "pharmaceuticals-19-00552.pdf.md",
+            "locator": "Results",
+            "vfrd_id": "FRD-Q0005-04",
+            "relation": "NO_SEMANTIC_RELATION",
+            "basis": "AGREED",
+            "overlap": 0.25
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "hypothesis_id": "A2-H2",
+    "axis_id": "A2",
+    "approval": "TEST_ONLY",
+    "title": "PTX benefit is a slow structural recovery",
+    "statement": "The materially supported mechanism acts by reversing or limiting structural change—such as fibrosis, remodeling, or other tissue damage—that contributes to impaired voiding. Meaningful improvement should appear only after weeks to months of treatment, with little early functional change, and may persist after treatment stops.",
+    "coverage_status": "NO_COMPLETE_COVERAGE",
+    "required_covered": "0/2",
+    "allocation": 21,
+    "controlling": [],
+    "objections": [],
+    "qualifications": [
+      {
+        "unit_id": "A2-H2-C1",
+        "unit_type": "CONTEXTUAL_CONSTRAINT",
+        "unit_text": "Structural change contributes consequentially to impaired voiding in this cohort",
+        "supported_by": [],
+        "contradicted_by": []
+      },
+      {
+        "unit_id": "A2-H2-C2",
+        "unit_type": "CONTEXTUAL_CONSTRAINT",
+        "unit_text": "PTX can reverse or limit that change rather than merely prevent it",
+        "supported_by": [],
+        "contradicted_by": []
+      }
+    ],
+    "corroboration": [],
+    "gaps": [
+      {
+        "unit_id": "A2-H2-R1",
+        "unit_type": "REQUIRED_SUPPORT",
+        "unit_text": "The materially supported mechanism acts by reversing or limiting structural change—such as fibrosis, remodeling, or other tissue damage—that contributes to impaired voiding",
+        "partly": [],
+        "nearest": [
+          {
+            "witness_id": "W-FRD-Q0009-01-Q0009",
+            "text": "Our previous research [3] also analysed the possible mechanism that increased the mental burden caused by pelvic floor dysfunction, and then increased the prostatic urethral pressure, which caused LUTS in some patients with CP, manifested as voiding symptoms and mostly classified as IIIB (leukocytosis with no proof of bacterial infection); Hinman and Baumann [4] had a similar view (he2010.pdf).",
+            "source_file": "he2010.pdf.md",
+            "locator": "Chronic prostatitis presenting with dysfunctional voiding and effects of pelvic",
+            "vfrd_id": "FRD-Q0009-01",
+            "relation": "NO_SEMANTIC_RELATION",
+            "basis": "AGREED",
+            "overlap": 0.13
+          },
+          {
+            "witness_id": "W-FRD-Q0003-04-Q0003",
+            "text": "The etiology of diabetic bladder dysfunction is multifactorial; both the myogenic and neurogenic effects of diabetic cystopathy cause a decrease in bladder sensation and impairment in voiding function [39] (ladi-seyedian2017.pdf).",
+            "source_file": "ladi-seyedian2017.pdf.md",
+            "locator": "Results",
+            "vfrd_id": "FRD-Q0003-04",
+            "relation": "NO_SEMANTIC_RELATION",
+            "basis": "AGREED",
+            "overlap": 0.07
+          }
+        ]
+      },
+      {
+        "unit_id": "A2-H2-R2",
+        "unit_type": "REQUIRED_SUPPORT",
+        "unit_text": "Meaningful improvement should appear only after weeks to months of treatment, with little early functional change",
+        "partly": [],
+        "nearest": [
+          {
+            "witness_id": "W-FRD-Q0010-03-Q0010",
+            "text": "Long-term follow-up of previous phase II patients, in fact, helped us to understand that improvement under combined PTX/Vit E treatment is slow, progressive, and continuous, with a maximum effect after periods ranging from 18 months to 3 years (Delanian et al, unpublished data, 2003), to take account of patient-to-patient variability (delanian2003.pdf).",
+            "source_file": "delanian2003.pdf.md",
+            "locator": "Results",
+            "vfrd_id": "FRD-Q0010-03",
+            "relation": "NO_SEMANTIC_RELATION",
+            "basis": "AGREED",
+            "overlap": 0.3
+          },
+          {
+            "witness_id": "W-FRD-Q0010-04-Q0010",
+            "text": "However, the magnitude of improvement was more pronounced in the PTX group, and the between-group HL confidence interval indicated a meaningful treatment advantage (pharmaceuticals-19-00552.pdf).",
+            "source_file": "pharmaceuticals-19-00552.pdf.md",
+            "locator": "Results",
+            "vfrd_id": "FRD-Q0010-04",
+            "relation": "NO_SEMANTIC_RELATION",
+            "basis": "AGREED",
+            "overlap": 0.3
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "hypothesis_id": "A2-H3",
+    "axis_id": "A2",
+    "approval": "TEST_ONLY",
+    "title": "The evidence cannot determine the time course of benefit",
+    "statement": "Existing evidence cannot distinguish rapid functional benefit from slow structural recovery. Timing evidence is unmeasured, conflicting, poorly transferable, or compatible with both, so the expected onset and persistence of benefit cannot be specified from supported premises. The uncertainty is localized to identified timing links.",
+    "coverage_status": "NO_COMPLETE_COVERAGE",
+    "required_covered": "0/4",
+    "allocation": 21,
+    "controlling": [],
+    "objections": [],
+    "qualifications": [
+      {
+        "unit_id": "A2-H3-C1",
+        "unit_type": "CONTEXTUAL_CONSTRAINT",
+        "unit_text": "Meaningful retrieval and adverse testing of timing evidence have been completed",
+        "supported_by": [],
+        "contradicted_by": []
+      },
+      {
+        "unit_id": "A2-H3-C2",
+        "unit_type": "CONTEXTUAL_CONSTRAINT",
+        "unit_text": "uncertainty is not merely an artifact of an unfinished investigation",
+        "supported_by": [],
+        "contradicted_by": []
+      }
+    ],
+    "corroboration": [],
+    "gaps": [
+      {
+        "unit_id": "A2-H3-R1",
+        "unit_type": "REQUIRED_SUPPORT",
+        "unit_text": "Existing evidence cannot distinguish rapid functional benefit from slow structural recovery",
+        "partly": [],
+        "nearest": [
+          {
+            "witness_id": "W-FRD-Q0010-03-Q0010",
+            "text": "Long-term follow-up of previous phase II patients, in fact, helped us to understand that improvement under combined PTX/Vit E treatment is slow, progressive, and continuous, with a maximum effect after periods ranging from 18 months to 3 years (Delanian et al, unpublished data, 2003), to take account of patient-to-patient variability (delanian2003.pdf).",
+            "source_file": "delanian2003.pdf.md",
+            "locator": "Results",
+            "vfrd_id": "FRD-Q0010-03",
+            "relation": "NO_SEMANTIC_RELATION",
+            "basis": "AGREED",
+            "overlap": 0.1
+          },
+          {
+            "witness_id": "W-FRD-Q0011-01-Q0011",
+            "text": "Given that urological abnormalities are the sole and initial presenting symptoms in approximately 5% of patients with multiple sclerosis, some may benefit from additional neurological evaluation.<sup>20</sup> This fact is particularly true in patients who have concomitant involuntary bladder contractions during voiding (kaplan1997.pdf).",
+            "source_file": "kaplan1997.pdf.md",
+            "locator": "PSEUDODYSSYNERGIA (CONTRACTION OF THE EXTERNAL SPHINCTER DURING VOIDING",
+            "vfrd_id": "FRD-Q0011-01",
+            "relation": "NO_SEMANTIC_RELATION",
+            "basis": "AGREED",
+            "overlap": 0.1
+          }
+        ]
+      },
+      {
+        "unit_id": "A2-H3-R2",
+        "unit_type": "REQUIRED_SUPPORT",
+        "unit_text": "Timing evidence is unmeasured, conflicting, poorly transferable, or compatible with both",
+        "partly": [],
+        "nearest": [
+          {
+            "witness_id": "W-FRD-Q0001-03-Q0001",
+            "text": "Barie, MD, New York:** I wonder if you could comment on the temporal relationships between the timing of intervention and the fact that the physiologic responses you observed became meaningful statistically at 7 to as many as 14 days thereafter? (staubach1998.pdf).",
+            "source_file": "staubach1998.pdf.md",
+            "locator": "Results",
+            "vfrd_id": "FRD-Q0001-03",
+            "relation": "NO_SEMANTIC_RELATION",
+            "basis": "AGREED",
+            "overlap": 0.14
+          },
+          {
+            "witness_id": "W-FRD-Q0006-01-Q0006",
+            "text": "The source of these symptoms is still poorly understood, but pain associated with chronic tension and spasm of the pelvic floor muscles (pelvic floor tension myalgia) has been hypothesized to be a contributing factor.<sup>2,3</sup> We and others have observed that patients with CPPS frequently exhibit tenderness of the levator ani muscles on rectal examination and that measures (clemens2000.pdf).",
+            "source_file": "clemens2000.pdf.md",
+            "locator": "BIOFEEDBACK, PELVIC FLOOR RE-EDUCATION, AND BLADDER TRAINING FOR MALE CHRONIC PE",
+            "vfrd_id": "FRD-Q0006-01",
+            "relation": "NO_SEMANTIC_RELATION",
+            "basis": "AGREED",
+            "overlap": 0.14
+          }
+        ]
+      },
+      {
+        "unit_id": "A2-H3-R3",
+        "unit_type": "REQUIRED_SUPPORT",
+        "unit_text": "the expected onset and persistence of benefit cannot be specified from supported premises",
+        "partly": [],
+        "nearest": [
+          {
+            "witness_id": "W-FRD-Q0011-01-Q0011",
+            "text": "Given that urological abnormalities are the sole and initial presenting symptoms in approximately 5% of patients with multiple sclerosis, some may benefit from additional neurological evaluation.<sup>20</sup> This fact is particularly true in patients who have concomitant involuntary bladder contractions during voiding (kaplan1997.pdf).",
+            "source_file": "kaplan1997.pdf.md",
+            "locator": "PSEUDODYSSYNERGIA (CONTRACTION OF THE EXTERNAL SPHINCTER DURING VOIDING",
+            "vfrd_id": "FRD-Q0011-01",
+            "relation": "NO_SEMANTIC_RELATION",
+            "basis": "AGREED",
+            "overlap": 0.12
+          },
+          {
+            "witness_id": "W-FRD-Q0015-01-Q0015",
+            "text": "Casola\\*, Columbus, OH **INTRODUCTION AND OBJECTIVE:** Male patients suffering from benign urological conditions including lower urinary tract symptoms, overactive bladder, pelvic floor dysfunction, and testicular/groin pain may benefit from pelvic floor physical therapy (PT), but the rates at which patients receive referrals for these conditions, and at what rate they follow through with those referrals is unknown (MP75-18-RATES-AND-ADHERENCE-TO-PELVIC-FLOOR-PHYSICAL-THERAPY-FOR-MALE-PATIENTS-WITH-BENIGN.pdf).",
+            "source_file": "MP75-18-RATES-AND-ADHERENCE-TO-PELVIC-FLOOR-PHYSICAL-THERAPY-FOR-MALE-PATIENTS-WITH-BENIGN.pdf.md",
+            "locator": "MP75-17",
+            "vfrd_id": "FRD-Q0015-01",
+            "relation": "NO_SEMANTIC_RELATION",
+            "basis": "AGREED",
+            "overlap": 0.12
+          }
+        ]
+      },
+      {
+        "unit_id": "A2-H3-R4",
+        "unit_type": "REQUIRED_SUPPORT",
+        "unit_text": "The uncertainty is localized to identified timing links",
+        "partly": [],
+        "nearest": [
+          {
+            "witness_id": "W-FRD-Q0001-03-Q0001",
+            "text": "Barie, MD, New York:** I wonder if you could comment on the temporal relationships between the timing of intervention and the fact that the physiologic responses you observed became meaningful statistically at 7 to as many as 14 days thereafter? (staubach1998.pdf).",
+            "source_file": "staubach1998.pdf.md",
+            "locator": "Results",
+            "vfrd_id": "FRD-Q0001-03",
+            "relation": "NO_SEMANTIC_RELATION",
+            "basis": "AGREED",
+            "overlap": 0.2
+          },
+          {
+            "witness_id": "W-FRD-Q0021-03-Q0021",
+            "text": "Barie, MD, New York:** I wonder if you could comment on the temporal relationships between the timing of intervention and the fact that the physiologic responses you observed became meaningful statistically at 7 to as many as 14 days thereafter? (staubach1998.pdf).",
+            "source_file": "staubach1998.pdf.md",
+            "locator": "Results",
+            "vfrd_id": "FRD-Q0021-03",
+            "relation": "NO_SEMANTIC_RELATION",
+            "basis": "AGREED",
+            "overlap": 0.2
+          }
+        ]
+      }
+    ]
+  }
+]

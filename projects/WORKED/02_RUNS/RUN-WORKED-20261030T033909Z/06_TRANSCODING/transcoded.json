@@ -1,0 +1,556 @@
+{
+  "mode": "off",
+  "items": [
+    {
+      "item_id": "W-FRD-Q0001-01-Q0001",
+      "type": "WITNESS",
+      "raw": "Foliar silicate increased grain yield of drought-stressed wheat in field trials by eighteen percent (field2023).",
+      "transcoded": "Foliar silicate increased grain yield of drought-stressed wheat in field trials by eighteen percent (field2023).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0001-02-Q0001",
+      "type": "WITNESS",
+      "raw": "The increase was measured at a foliar rate of two millilitres per litre (field2023).",
+      "transcoded": "The increase was measured at a foliar rate of two millilitres per litre (field2023).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0001-03-Q0001",
+      "type": "WITNESS",
+      "raw": "Foliar silicate did not increase grain yield of drought-stressed wheat in field trials (null2021).",
+      "transcoded": "Foliar silicate did not increase grain yield of drought-stressed wheat in field trials (null2021).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0001-04-Q0001",
+      "type": "WITNESS",
+      "raw": "Some field trials report a yield increase, while others report no yield difference at the same foliar rate (review2019).",
+      "transcoded": "Some field trials report a yield increase, while others report no yield difference at the same foliar rate (review2019).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0002-01-Q0002",
+      "type": "WITNESS",
+      "raw": "These field trials at a foliar rate of two millilitres per litre reported no yield difference between silicate and control plots (null2021).",
+      "transcoded": "These field trials at a foliar rate of two millilitres per litre reported no yield difference between silicate and control plots (null2021).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0002-02-Q0002",
+      "type": "WITNESS",
+      "raw": "Some field trials report a yield increase, while others report no yield difference at the same foliar rate (review2019).",
+      "transcoded": "Some field trials report a yield increase, while others report no yield difference at the same foliar rate (review2019).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0002-03-Q0002",
+      "type": "WITNESS",
+      "raw": "Foliar silicate did not increase grain yield of drought-stressed wheat in field trials (null2021).",
+      "transcoded": "Foliar silicate did not increase grain yield of drought-stressed wheat in field trials (null2021).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0002-04-Q0002",
+      "type": "WITNESS",
+      "raw": "This was a narrative review without a pooled effect size, and publication bias was not assessed (review2019).",
+      "transcoded": "This was a narrative review without a pooled effect size, and publication bias was not assessed (review2019).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0003-01-Q0003",
+      "type": "WITNESS",
+      "raw": "Some field trials report a yield increase, while others report no yield difference at the same foliar rate (review2019).",
+      "transcoded": "Some field trials report a yield increase, while others report no yield difference at the same foliar rate (review2019).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0003-02-Q0003",
+      "type": "WITNESS",
+      "raw": "Field evidence on foliar silicate and wheat yield is inconsistent across trials (review2019).",
+      "transcoded": "Field evidence on foliar silicate and wheat yield is inconsistent across trials (review2019).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0003-03-Q0003",
+      "type": "WITNESS",
+      "raw": "Foliar silicate did not increase grain yield of drought-stressed wheat in field trials (null2021).",
+      "transcoded": "Foliar silicate did not increase grain yield of drought-stressed wheat in field trials (null2021).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0003-04-Q0003",
+      "type": "WITNESS",
+      "raw": "Foliar silicate increased grain yield of drought-stressed wheat in field trials by eighteen percent (field2023).",
+      "transcoded": "Foliar silicate increased grain yield of drought-stressed wheat in field trials by eighteen percent (field2023).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0004-01-Q0004",
+      "type": "WITNESS",
+      "raw": "The increase was measured at a foliar rate of two millilitres per litre (field2023).",
+      "transcoded": "The increase was measured at a foliar rate of two millilitres per litre (field2023).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0004-02-Q0004",
+      "type": "WITNESS",
+      "raw": "Foliar silicate increased grain yield of drought-stressed wheat in field trials by eighteen percent (field2023).",
+      "transcoded": "Foliar silicate increased grain yield of drought-stressed wheat in field trials by eighteen percent (field2023).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0004-03-Q0004",
+      "type": "WITNESS",
+      "raw": "These field trials at a foliar rate of two millilitres per litre reported no yield difference between silicate and control plots (null2021).",
+      "transcoded": "These field trials at a foliar rate of two millilitres per litre reported no yield difference between silicate and control plots (null2021).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0004-04-Q0004",
+      "type": "WITNESS",
+      "raw": "Some field trials report a yield increase, while others report no yield difference at the same foliar rate (review2019).",
+      "transcoded": "Some field trials report a yield increase, while others report no yield difference at the same foliar rate (review2019).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0005-01-Q0005",
+      "type": "WITNESS",
+      "raw": "Foliar silicate did not increase grain yield of drought-stressed wheat in field trials (null2021).",
+      "transcoded": "Foliar silicate did not increase grain yield of drought-stressed wheat in field trials (null2021).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0005-02-Q0005",
+      "type": "WITNESS",
+      "raw": "These field trials at a foliar rate of two millilitres per litre reported no yield difference between silicate and control plots (null2021).",
+      "transcoded": "These field trials at a foliar rate of two millilitres per litre reported no yield difference between silicate and control plots (null2021).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0005-03-Q0005",
+      "type": "WITNESS",
+      "raw": "Some field trials report a yield increase, while others report no yield difference at the same foliar rate (review2019).",
+      "transcoded": "Some field trials report a yield increase, while others report no yield difference at the same foliar rate (review2019).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0005-04-Q0005",
+      "type": "WITNESS",
+      "raw": "Field evidence on foliar silicate and wheat yield is inconsistent across trials (review2019).",
+      "transcoded": "Field evidence on foliar silicate and wheat yield is inconsistent across trials (review2019).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0006-01-Q0006",
+      "type": "WITNESS",
+      "raw": "Field evidence on foliar silicate and wheat yield is inconsistent across trials (review2019).",
+      "transcoded": "Field evidence on foliar silicate and wheat yield is inconsistent across trials (review2019).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0006-02-Q0006",
+      "type": "WITNESS",
+      "raw": "Some field trials report a yield increase, while others report no yield difference at the same foliar rate (review2019).",
+      "transcoded": "Some field trials report a yield increase, while others report no yield difference at the same foliar rate (review2019).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0006-03-Q0006",
+      "type": "WITNESS",
+      "raw": "These field trials at a foliar rate of two millilitres per litre reported no yield difference between silicate and control plots (null2021).",
+      "transcoded": "These field trials at a foliar rate of two millilitres per litre reported no yield difference between silicate and control plots (null2021).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0006-04-Q0006",
+      "type": "WITNESS",
+      "raw": "Foliar silicate increased grain yield of drought-stressed wheat in field trials by eighteen percent (field2023).",
+      "transcoded": "Foliar silicate increased grain yield of drought-stressed wheat in field trials by eighteen percent (field2023).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0007-01-Q0007",
+      "type": "WITNESS",
+      "raw": "Foliar silicate increased grain yield of drought-stressed wheat in field trials by eighteen percent (field2023).",
+      "transcoded": "Foliar silicate increased grain yield of drought-stressed wheat in field trials by eighteen percent (field2023).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0007-02-Q0007",
+      "type": "WITNESS",
+      "raw": "The increase was measured at a foliar rate of two millilitres per litre (field2023).",
+      "transcoded": "The increase was measured at a foliar rate of two millilitres per litre (field2023).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0007-03-Q0007",
+      "type": "WITNESS",
+      "raw": "Foliar silicate did not increase grain yield of drought-stressed wheat in field trials (null2021).",
+      "transcoded": "Foliar silicate did not increase grain yield of drought-stressed wheat in field trials (null2021).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0007-04-Q0007",
+      "type": "WITNESS",
+      "raw": "Some field trials report a yield increase, while others report no yield difference at the same foliar rate (review2019).",
+      "transcoded": "Some field trials report a yield increase, while others report no yield difference at the same foliar rate (review2019).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0008-01-Q0008",
+      "type": "WITNESS",
+      "raw": "These field trials at a foliar rate of two millilitres per litre reported no yield difference between silicate and control plots (null2021).",
+      "transcoded": "These field trials at a foliar rate of two millilitres per litre reported no yield difference between silicate and control plots (null2021).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0008-02-Q0008",
+      "type": "WITNESS",
+      "raw": "Some field trials report a yield increase, while others report no yield difference at the same foliar rate (review2019).",
+      "transcoded": "Some field trials report a yield increase, while others report no yield difference at the same foliar rate (review2019).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0008-03-Q0008",
+      "type": "WITNESS",
+      "raw": "Foliar silicate did not increase grain yield of drought-stressed wheat in field trials (null2021).",
+      "transcoded": "Foliar silicate did not increase grain yield of drought-stressed wheat in field trials (null2021).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0008-04-Q0008",
+      "type": "WITNESS",
+      "raw": "This was a narrative review without a pooled effect size, and publication bias was not assessed (review2019).",
+      "transcoded": "This was a narrative review without a pooled effect size, and publication bias was not assessed (review2019).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0009-01-Q0009",
+      "type": "WITNESS",
+      "raw": "Some field trials report a yield increase, while others report no yield difference at the same foliar rate (review2019).",
+      "transcoded": "Some field trials report a yield increase, while others report no yield difference at the same foliar rate (review2019).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0009-02-Q0009",
+      "type": "WITNESS",
+      "raw": "Field evidence on foliar silicate and wheat yield is inconsistent across trials (review2019).",
+      "transcoded": "Field evidence on foliar silicate and wheat yield is inconsistent across trials (review2019).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0009-03-Q0009",
+      "type": "WITNESS",
+      "raw": "Foliar silicate did not increase grain yield of drought-stressed wheat in field trials (null2021).",
+      "transcoded": "Foliar silicate did not increase grain yield of drought-stressed wheat in field trials (null2021).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0009-04-Q0009",
+      "type": "WITNESS",
+      "raw": "Foliar silicate increased grain yield of drought-stressed wheat in field trials by eighteen percent (field2023).",
+      "transcoded": "Foliar silicate increased grain yield of drought-stressed wheat in field trials by eighteen percent (field2023).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0010-01-Q0010",
+      "type": "WITNESS",
+      "raw": "The increase was measured at a foliar rate of two millilitres per litre (field2023).",
+      "transcoded": "The increase was measured at a foliar rate of two millilitres per litre (field2023).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0010-02-Q0010",
+      "type": "WITNESS",
+      "raw": "Foliar silicate increased grain yield of drought-stressed wheat in field trials by eighteen percent (field2023).",
+      "transcoded": "Foliar silicate increased grain yield of drought-stressed wheat in field trials by eighteen percent (field2023).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "W-FRD-Q0010-03-Q0010",
+      "type": "WITNESS",
+      "raw": "These field trials at a foliar rate of two millilitres per litre reported no yield difference between silicate and control plots (null2021).",
+      "transcoded": "These field trials at a foliar rate of two millilitres per litre reported no yield difference between silicate and control plots (null2021).",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A1-H1-R1",
+      "type": "HYPOTHESIS",
+      "raw": "Foliar silicate increases grain yield of drought-stressed wheat in field trials",
+      "transcoded": "Foliar silicate increases grain yield of drought-stressed wheat in field trials",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A1-H1-R2",
+      "type": "HYPOTHESIS",
+      "raw": "The increase is reported at a foliar rate of two millilitres per litre",
+      "transcoded": "The increase is reported at a foliar rate of two millilitres per litre",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A1-H1-R3",
+      "type": "HYPOTHESIS",
+      "raw": "The yield increase is larger when drought is severe",
+      "transcoded": "The yield increase is larger when drought is severe",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A1-H1-C1",
+      "type": "HYPOTHESIS",
+      "raw": "The foliar rate is two millilitres per litre and the trials are conducted under drought",
+      "transcoded": "The foliar rate is two millilitres per litre and the trials are conducted under drought",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A1-H1-A1",
+      "type": "HYPOTHESIS",
+      "raw": "Field trials at that rate report no yield difference",
+      "transcoded": "Field trials at that rate report no yield difference",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A1-H1-E1",
+      "type": "HYPOTHESIS",
+      "raw": "Field trials at that rate report a larger yield increase when drought is severe",
+      "transcoded": "Field trials at that rate report a larger yield increase when drought is severe",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A1-H2-R1",
+      "type": "HYPOTHESIS",
+      "raw": "Foliar silicate does not increase grain yield of drought-stressed wheat in field trials",
+      "transcoded": "Foliar silicate does not increase grain yield of drought-stressed wheat in field trials",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A1-H2-R2",
+      "type": "HYPOTHESIS",
+      "raw": "Field trials at a foliar rate of two millilitres per litre report no yield difference",
+      "transcoded": "Field trials at a foliar rate of two millilitres per litre report no yield difference",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A1-H2-C1",
+      "type": "HYPOTHESIS",
+      "raw": "The null trials used the same foliar rate of two millilitres per litre",
+      "transcoded": "The null trials used the same foliar rate of two millilitres per litre",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A1-H2-A1",
+      "type": "HYPOTHESIS",
+      "raw": "A field trial at that rate reports a yield increase",
+      "transcoded": "A field trial at that rate reports a yield increase",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A1-H2-E1",
+      "type": "HYPOTHESIS",
+      "raw": "Multi-site field trials report no yield difference at that rate",
+      "transcoded": "Multi-site field trials report no yield difference at that rate",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A1-H3-R1",
+      "type": "HYPOTHESIS",
+      "raw": "Existing field evidence cannot determine whether foliar silicate increases grain yield of drought-stressed wheat under drought",
+      "transcoded": "Existing field evidence cannot determine whether foliar silicate increases grain yield of drought-stressed wheat under drought",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A1-H3-R2",
+      "type": "HYPOTHESIS",
+      "raw": "The field findings are inconsistent across trials",
+      "transcoded": "The field findings are inconsistent across trials",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A1-H3-C1",
+      "type": "HYPOTHESIS",
+      "raw": "Field trials at a comparable rate have been retrieved",
+      "transcoded": "Field trials at a comparable rate have been retrieved",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A1-H3-A1",
+      "type": "HYPOTHESIS",
+      "raw": "Consistent field trials establish either a yield benefit or its absence at that rate",
+      "transcoded": "Consistent field trials establish either a yield benefit or its absence at that rate",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    },
+    {
+      "item_id": "A1-H3-E1",
+      "type": "HYPOTHESIS",
+      "raw": "Field findings differ across trials without a clear rate or timing explanation",
+      "transcoded": "Field findings differ across trials without a clear rate or timing explanation",
+      "status": "IDENTITY",
+      "bindings": "",
+      "rules": "",
+      "check": "identity transcoder"
+    }
+  ],
+  "time": "2026-10-30T03:39:10+00:00"
+}

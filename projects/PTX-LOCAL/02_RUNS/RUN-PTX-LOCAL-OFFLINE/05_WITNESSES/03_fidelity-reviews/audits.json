@@ -1,0 +1,3542 @@
+[
+  {
+    "witness_id": "W-FRD-Q0001-01-Q0001",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "weaker",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "c4b481e2ec8c48487271baee",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0001-02-Q0001",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "f237f31555f94cbffa6c1bfc",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0001-03-Q0001",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "c6e9ba6c1166cec27f1a5add",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0001-04-Q0001",
+    "verdict": "REVISE_WITNESS",
+    "unsupported": [
+      {
+        "words": "negation",
+        "problem": "the witness drops the parent's negation",
+        "property": "polarity"
+      },
+      {
+        "words": "4",
+        "problem": "a number in the parent FRD is missing from the witness",
+        "property": "quantity"
+      }
+    ],
+    "omissions": [],
+    "forbidden_reading": "the witness states more than the FRD supports",
+    "reader_recovers": "wrong",
+    "reason": "local audit found content not licensed by the parent FRD",
+    "fix": "state only what the parent claim states, keeping its polarity and quantities",
+    "call_key": "d7cbf0a7b70cec74417e7bf8",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0001-04-Q0001",
+    "verdict": "REVISE_WITNESS",
+    "unsupported": [
+      {
+        "words": "negation",
+        "problem": "the witness drops the parent's negation",
+        "property": "polarity"
+      },
+      {
+        "words": "4",
+        "problem": "a number in the parent FRD is missing from the witness",
+        "property": "quantity"
+      }
+    ],
+    "omissions": [],
+    "forbidden_reading": "the witness states more than the FRD supports",
+    "reader_recovers": "wrong",
+    "reason": "local audit found content not licensed by the parent FRD",
+    "fix": "state only what the parent claim states, keeping its polarity and quantities",
+    "call_key": "d7cbf0a7b70cec74417e7bf8",
+    "parse_error": "",
+    "version": 2,
+    "round": 2
+  },
+  {
+    "witness_id": "W-FRD-Q0002-01-Q0002",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "f82a49c6e2906b716d9dca64",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0002-02-Q0002",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "ba9aa2b3be63adf5726f554f",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0002-03-Q0002",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "3a9b5c76f5c4012adec533ed",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0002-04-Q0002",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "7ff3fedad8dbe576cb341fde",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0003-01-Q0003",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "3d776c2b5da93b3e24d7b6d0",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0003-02-Q0003",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "0d561ca34223ffc2c59c1039",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0003-03-Q0003",
+    "verdict": "REVISE_WITNESS",
+    "unsupported": [
+      {
+        "words": "20, 21",
+        "problem": "a number in the parent FRD is missing from the witness",
+        "property": "quantity"
+      }
+    ],
+    "omissions": [],
+    "forbidden_reading": "the witness states more than the FRD supports",
+    "reader_recovers": "wrong",
+    "reason": "local audit found content not licensed by the parent FRD",
+    "fix": "state only what the parent claim states, keeping its polarity and quantities",
+    "call_key": "c1437c96332c72e41e09e6c1",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0003-03-Q0003",
+    "verdict": "REVISE_WITNESS",
+    "unsupported": [
+      {
+        "words": "20, 21",
+        "problem": "a number in the parent FRD is missing from the witness",
+        "property": "quantity"
+      }
+    ],
+    "omissions": [],
+    "forbidden_reading": "the witness states more than the FRD supports",
+    "reader_recovers": "wrong",
+    "reason": "local audit found content not licensed by the parent FRD",
+    "fix": "state only what the parent claim states, keeping its polarity and quantities",
+    "call_key": "c1437c96332c72e41e09e6c1",
+    "parse_error": "",
+    "version": 2,
+    "round": 2
+  },
+  {
+    "witness_id": "W-FRD-Q0003-04-Q0003",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "62b0dd19d058403ed680f7c1",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0004-01-Q0004",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "weaker",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "fc145114047001453d303afd",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0004-02-Q0004",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "d265e0c606f0ee8861ee328c",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0004-03-Q0004",
+    "verdict": "REVISE_WITNESS",
+    "unsupported": [
+      {
+        "words": "3",
+        "problem": "a number in the parent FRD is missing from the witness",
+        "property": "quantity"
+      }
+    ],
+    "omissions": [],
+    "forbidden_reading": "the witness states more than the FRD supports",
+    "reader_recovers": "wrong",
+    "reason": "local audit found content not licensed by the parent FRD",
+    "fix": "state only what the parent claim states, keeping its polarity and quantities",
+    "call_key": "7fd55f67968337b3102c8b65",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0004-03-Q0004",
+    "verdict": "REVISE_WITNESS",
+    "unsupported": [
+      {
+        "words": "3",
+        "problem": "a number in the parent FRD is missing from the witness",
+        "property": "quantity"
+      }
+    ],
+    "omissions": [],
+    "forbidden_reading": "the witness states more than the FRD supports",
+    "reader_recovers": "wrong",
+    "reason": "local audit found content not licensed by the parent FRD",
+    "fix": "state only what the parent claim states, keeping its polarity and quantities",
+    "call_key": "7fd55f67968337b3102c8b65",
+    "parse_error": "",
+    "version": 2,
+    "round": 2
+  },
+  {
+    "witness_id": "W-FRD-Q0004-04-Q0004",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "8f8ef42e4480092416bad51a",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0005-01-Q0005",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "3b687ef9cc8f5ec6e4535ce9",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0005-02-Q0005",
+    "verdict": "REVISE_WITNESS",
+    "unsupported": [
+      {
+        "words": "109, 3, 4, 6",
+        "problem": "a number in the parent FRD is missing from the witness",
+        "property": "quantity"
+      }
+    ],
+    "omissions": [],
+    "forbidden_reading": "the witness states more than the FRD supports",
+    "reader_recovers": "wrong",
+    "reason": "local audit found content not licensed by the parent FRD",
+    "fix": "state only what the parent claim states, keeping its polarity and quantities",
+    "call_key": "824b10857b381710c4f360fa",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0005-02-Q0005",
+    "verdict": "REVISE_WITNESS",
+    "unsupported": [
+      {
+        "words": "109, 3, 4, 6",
+        "problem": "a number in the parent FRD is missing from the witness",
+        "property": "quantity"
+      }
+    ],
+    "omissions": [],
+    "forbidden_reading": "the witness states more than the FRD supports",
+    "reader_recovers": "wrong",
+    "reason": "local audit found content not licensed by the parent FRD",
+    "fix": "state only what the parent claim states, keeping its polarity and quantities",
+    "call_key": "824b10857b381710c4f360fa",
+    "parse_error": "",
+    "version": 2,
+    "round": 2
+  },
+  {
+    "witness_id": "W-FRD-Q0005-03-Q0005",
+    "verdict": "REVISE_WITNESS",
+    "unsupported": [
+      {
+        "words": "10,25,26, 11, 27, 28",
+        "problem": "a number in the parent FRD is missing from the witness",
+        "property": "quantity"
+      }
+    ],
+    "omissions": [],
+    "forbidden_reading": "the witness states more than the FRD supports",
+    "reader_recovers": "wrong",
+    "reason": "local audit found content not licensed by the parent FRD",
+    "fix": "state only what the parent claim states, keeping its polarity and quantities",
+    "call_key": "1ea2fdc690d3bea66c44d572",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0005-03-Q0005",
+    "verdict": "REVISE_WITNESS",
+    "unsupported": [
+      {
+        "words": "10,25,26, 11, 27, 28",
+        "problem": "a number in the parent FRD is missing from the witness",
+        "property": "quantity"
+      }
+    ],
+    "omissions": [],
+    "forbidden_reading": "the witness states more than the FRD supports",
+    "reader_recovers": "wrong",
+    "reason": "local audit found content not licensed by the parent FRD",
+    "fix": "state only what the parent claim states, keeping its polarity and quantities",
+    "call_key": "1ea2fdc690d3bea66c44d572",
+    "parse_error": "",
+    "version": 2,
+    "round": 2
+  },
+  {
+    "witness_id": "W-FRD-Q0005-04-Q0005",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "f2a578d2b88f74149b3d80e2",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0006-01-Q0006",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "weaker",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "fc7d3d9d696e7542175b7af2",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0006-02-Q0006",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "af88842ce6d5bd4894195bc2",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0006-03-Q0006",
+    "verdict": "REVISE_WITNESS",
+    "unsupported": [
+      {
+        "words": "38",
+        "problem": "a number in the parent FRD is missing from the witness",
+        "property": "quantity"
+      }
+    ],
+    "omissions": [],
+    "forbidden_reading": "the witness states more than the FRD supports",
+    "reader_recovers": "wrong",
+    "reason": "local audit found content not licensed by the parent FRD",
+    "fix": "state only what the parent claim states, keeping its polarity and quantities",
+    "call_key": "3e9dd73a4d6eceeb497a2abb",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0006-03-Q0006",
+    "verdict": "REVISE_WITNESS",
+    "unsupported": [
+      {
+        "words": "38",
+        "problem": "a number in the parent FRD is missing from the witness",
+        "property": "quantity"
+      }
+    ],
+    "omissions": [],
+    "forbidden_reading": "the witness states more than the FRD supports",
+    "reader_recovers": "wrong",
+    "reason": "local audit found content not licensed by the parent FRD",
+    "fix": "state only what the parent claim states, keeping its polarity and quantities",
+    "call_key": "3e9dd73a4d6eceeb497a2abb",
+    "parse_error": "",
+    "version": 2,
+    "round": 2
+  },
+  {
+    "witness_id": "W-FRD-Q0006-04-Q0006",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "219a5b8d32d156fa62e335d6",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0007-01-Q0007",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "4f8c7002217b05bb770906f6",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0007-02-Q0007",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "0fac334ec004a1b3043d4571",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0007-03-Q0007",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "aa027f16042b5d9f1332d9ca",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0007-04-Q0007",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "4ed3cab1c4b63d205181d3a5",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0008-01-Q0008",
+    "verdict": "REVISE_WITNESS",
+    "unsupported": [
+      {
+        "words": "ucpp",
+        "problem": "the witness adds content words that the parent FRD does not contain",
+        "property": "fabrication/scope"
+      },
+      {
+        "words": "0, 0.0002, 0.0003, 0.0007",
+        "problem": "a number in the parent FRD is missing from the witness",
+        "property": "quantity"
+      }
+    ],
+    "omissions": [],
+    "forbidden_reading": "the witness states more than the FRD supports",
+    "reader_recovers": "wrong",
+    "reason": "local audit found content not licensed by the parent FRD",
+    "fix": "state only what the parent claim states, keeping its polarity and quantities",
+    "call_key": "f88b2dd15d34b81d153aab48",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0008-01-Q0008",
+    "verdict": "REVISE_WITNESS",
+    "unsupported": [
+      {
+        "words": "ucpp",
+        "problem": "the witness adds content words that the parent FRD does not contain",
+        "property": "fabrication/scope"
+      },
+      {
+        "words": "0, 0.0002, 0.0003, 0.0007",
+        "problem": "a number in the parent FRD is missing from the witness",
+        "property": "quantity"
+      }
+    ],
+    "omissions": [],
+    "forbidden_reading": "the witness states more than the FRD supports",
+    "reader_recovers": "wrong",
+    "reason": "local audit found content not licensed by the parent FRD",
+    "fix": "state only what the parent claim states, keeping its polarity and quantities",
+    "call_key": "f88b2dd15d34b81d153aab48",
+    "parse_error": "",
+    "version": 2,
+    "round": 2
+  },
+  {
+    "witness_id": "W-FRD-Q0008-02-Q0008",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "b5745d7aa03167781491eff1",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0008-03-Q0008",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "814c3a062f5adc5cf4620e41",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0008-04-Q0008",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "37c930ffed116e733af9ab96",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0009-01-Q0009",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "2ce16a4866254c2f67f61884",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0009-02-Q0009",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "9e790a446168e763d18a2fb8",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0009-03-Q0009",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "b69d941095c7af95f567052a",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0009-04-Q0009",
+    "verdict": "REVISE_WITNESS",
+    "unsupported": [
+      {
+        "words": "1.7, 1.9, 101.5, 124.3",
+        "problem": "a number in the parent FRD is missing from the witness",
+        "property": "quantity"
+      }
+    ],
+    "omissions": [],
+    "forbidden_reading": "the witness states more than the FRD supports",
+    "reader_recovers": "wrong",
+    "reason": "local audit found content not licensed by the parent FRD",
+    "fix": "state only what the parent claim states, keeping its polarity and quantities",
+    "call_key": "bfb1fc7aedb7ef2d89dc1ca3",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0009-04-Q0009",
+    "verdict": "REVISE_WITNESS",
+    "unsupported": [
+      {
+        "words": "1.7, 1.9, 101.5, 124.3",
+        "problem": "a number in the parent FRD is missing from the witness",
+        "property": "quantity"
+      }
+    ],
+    "omissions": [],
+    "forbidden_reading": "the witness states more than the FRD supports",
+    "reader_recovers": "wrong",
+    "reason": "local audit found content not licensed by the parent FRD",
+    "fix": "state only what the parent claim states, keeping its polarity and quantities",
+    "call_key": "bfb1fc7aedb7ef2d89dc1ca3",
+    "parse_error": "",
+    "version": 2,
+    "round": 2
+  },
+  {
+    "witness_id": "W-FRD-Q0010-01-Q0010",
+    "verdict": "REVISE_WITNESS",
+    "unsupported": [
+      {
+        "words": "0.05, 101.5, 124.3, 16.7",
+        "problem": "a number in the parent FRD is missing from the witness",
+        "property": "quantity"
+      }
+    ],
+    "omissions": [],
+    "forbidden_reading": "the witness states more than the FRD supports",
+    "reader_recovers": "wrong",
+    "reason": "local audit found content not licensed by the parent FRD",
+    "fix": "state only what the parent claim states, keeping its polarity and quantities",
+    "call_key": "fe5b4e2c6c3fd902b2bfe973",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0010-01-Q0010",
+    "verdict": "REVISE_WITNESS",
+    "unsupported": [
+      {
+        "words": "0.05, 101.5, 124.3, 16.7",
+        "problem": "a number in the parent FRD is missing from the witness",
+        "property": "quantity"
+      }
+    ],
+    "omissions": [],
+    "forbidden_reading": "the witness states more than the FRD supports",
+    "reader_recovers": "wrong",
+    "reason": "local audit found content not licensed by the parent FRD",
+    "fix": "state only what the parent claim states, keeping its polarity and quantities",
+    "call_key": "fe5b4e2c6c3fd902b2bfe973",
+    "parse_error": "",
+    "version": 2,
+    "round": 2
+  },
+  {
+    "witness_id": "W-FRD-Q0010-02-Q0010",
+    "verdict": "REVISE_WITNESS",
+    "unsupported": [
+      {
+        "words": "6",
+        "problem": "a number in the parent FRD is missing from the witness",
+        "property": "quantity"
+      }
+    ],
+    "omissions": [],
+    "forbidden_reading": "the witness states more than the FRD supports",
+    "reader_recovers": "wrong",
+    "reason": "local audit found content not licensed by the parent FRD",
+    "fix": "state only what the parent claim states, keeping its polarity and quantities",
+    "call_key": "a321adf1b131e6c7992c12ac",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0010-02-Q0010",
+    "verdict": "REVISE_WITNESS",
+    "unsupported": [
+      {
+        "words": "6",
+        "problem": "a number in the parent FRD is missing from the witness",
+        "property": "quantity"
+      }
+    ],
+    "omissions": [],
+    "forbidden_reading": "the witness states more than the FRD supports",
+    "reader_recovers": "wrong",
+    "reason": "local audit found content not licensed by the parent FRD",
+    "fix": "state only what the parent claim states, keeping its polarity and quantities",
+    "call_key": "a321adf1b131e6c7992c12ac",
+    "parse_error": "",
+    "version": 2,
+    "round": 2
+  },
+  {
+    "witness_id": "W-FRD-Q0010-03-Q0010",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "c2a3a59d194221bdb4516e0a",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0010-04-Q0010",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "946333d6fce7c04d3159712e",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0011-01-Q0011",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "d1fbf84fc5289538e4982ca3",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0011-02-Q0011",
+    "verdict": "REVISE_WITNESS",
+    "unsupported": [
+      {
+        "words": "31, 34, 7,8",
+        "problem": "a number in the parent FRD is missing from the witness",
+        "property": "quantity"
+      }
+    ],
+    "omissions": [],
+    "forbidden_reading": "the witness states more than the FRD supports",
+    "reader_recovers": "wrong",
+    "reason": "local audit found content not licensed by the parent FRD",
+    "fix": "state only what the parent claim states, keeping its polarity and quantities",
+    "call_key": "2a4a84e323bca8a877ceb595",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0011-02-Q0011",
+    "verdict": "REVISE_WITNESS",
+    "unsupported": [
+      {
+        "words": "31, 34, 7,8",
+        "problem": "a number in the parent FRD is missing from the witness",
+        "property": "quantity"
+      }
+    ],
+    "omissions": [],
+    "forbidden_reading": "the witness states more than the FRD supports",
+    "reader_recovers": "wrong",
+    "reason": "local audit found content not licensed by the parent FRD",
+    "fix": "state only what the parent claim states, keeping its polarity and quantities",
+    "call_key": "2a4a84e323bca8a877ceb595",
+    "parse_error": "",
+    "version": 2,
+    "round": 2
+  },
+  {
+    "witness_id": "W-FRD-Q0011-03-Q0011",
+    "verdict": "REVISE_WITNESS",
+    "unsupported": [
+      {
+        "words": "negation",
+        "problem": "the witness drops the parent's negation",
+        "property": "polarity"
+      },
+      {
+        "words": "4",
+        "problem": "a number in the parent FRD is missing from the witness",
+        "property": "quantity"
+      }
+    ],
+    "omissions": [],
+    "forbidden_reading": "the witness states more than the FRD supports",
+    "reader_recovers": "wrong",
+    "reason": "local audit found content not licensed by the parent FRD",
+    "fix": "state only what the parent claim states, keeping its polarity and quantities",
+    "call_key": "885d1d7575b55150c0e00d87",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0011-03-Q0011",
+    "verdict": "REVISE_WITNESS",
+    "unsupported": [
+      {
+        "words": "negation",
+        "problem": "the witness drops the parent's negation",
+        "property": "polarity"
+      },
+      {
+        "words": "4",
+        "problem": "a number in the parent FRD is missing from the witness",
+        "property": "quantity"
+      }
+    ],
+    "omissions": [],
+    "forbidden_reading": "the witness states more than the FRD supports",
+    "reader_recovers": "wrong",
+    "reason": "local audit found content not licensed by the parent FRD",
+    "fix": "state only what the parent claim states, keeping its polarity and quantities",
+    "call_key": "885d1d7575b55150c0e00d87",
+    "parse_error": "",
+    "version": 2,
+    "round": 2
+  },
+  {
+    "witness_id": "W-FRD-Q0011-04-Q0011",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "6d39a3da05fd0cfcb39fadb9",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0012-01-Q0012",
+    "verdict": "REVISE_WITNESS",
+    "unsupported": [
+      {
+        "words": "negation",
+        "problem": "the witness drops the parent's negation",
+        "property": "polarity"
+      },
+      {
+        "words": "0.002, 0.008, 0.034, 0.038",
+        "problem": "a number in the parent FRD is missing from the witness",
+        "property": "quantity"
+      }
+    ],
+    "omissions": [],
+    "forbidden_reading": "the witness states more than the FRD supports",
+    "reader_recovers": "wrong",
+    "reason": "local audit found content not licensed by the parent FRD",
+    "fix": "state only what the parent claim states, keeping its polarity and quantities",
+    "call_key": "14de31bbbb74146c87fe18e3",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0012-01-Q0012",
+    "verdict": "REVISE_WITNESS",
+    "unsupported": [
+      {
+        "words": "negation",
+        "problem": "the witness drops the parent's negation",
+        "property": "polarity"
+      },
+      {
+        "words": "0.002, 0.008, 0.034, 0.038",
+        "problem": "a number in the parent FRD is missing from the witness",
+        "property": "quantity"
+      }
+    ],
+    "omissions": [],
+    "forbidden_reading": "the witness states more than the FRD supports",
+    "reader_recovers": "wrong",
+    "reason": "local audit found content not licensed by the parent FRD",
+    "fix": "state only what the parent claim states, keeping its polarity and quantities",
+    "call_key": "14de31bbbb74146c87fe18e3",
+    "parse_error": "",
+    "version": 2,
+    "round": 2
+  },
+  {
+    "witness_id": "W-FRD-Q0012-02-Q0012",
+    "verdict": "REVISE_WITNESS",
+    "unsupported": [
+      {
+        "words": "negation",
+        "problem": "the witness drops the parent's negation",
+        "property": "polarity"
+      },
+      {
+        "words": "4",
+        "problem": "a number in the parent FRD is missing from the witness",
+        "property": "quantity"
+      }
+    ],
+    "omissions": [],
+    "forbidden_reading": "the witness states more than the FRD supports",
+    "reader_recovers": "wrong",
+    "reason": "local audit found content not licensed by the parent FRD",
+    "fix": "state only what the parent claim states, keeping its polarity and quantities",
+    "call_key": "800faac4fe83d49da444ec68",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0012-02-Q0012",
+    "verdict": "REVISE_WITNESS",
+    "unsupported": [
+      {
+        "words": "negation",
+        "problem": "the witness drops the parent's negation",
+        "property": "polarity"
+      },
+      {
+        "words": "4",
+        "problem": "a number in the parent FRD is missing from the witness",
+        "property": "quantity"
+      }
+    ],
+    "omissions": [],
+    "forbidden_reading": "the witness states more than the FRD supports",
+    "reader_recovers": "wrong",
+    "reason": "local audit found content not licensed by the parent FRD",
+    "fix": "state only what the parent claim states, keeping its polarity and quantities",
+    "call_key": "800faac4fe83d49da444ec68",
+    "parse_error": "",
+    "version": 2,
+    "round": 2
+  },
+  {
+    "witness_id": "W-FRD-Q0012-03-Q0012",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "e125664cbe7605ff8395fb46",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0012-04-Q0012",
+    "verdict": "REVISE_WITNESS",
+    "unsupported": [
+      {
+        "words": "negation",
+        "problem": "the witness drops the parent's negation",
+        "property": "polarity"
+      }
+    ],
+    "omissions": [],
+    "forbidden_reading": "the witness states more than the FRD supports",
+    "reader_recovers": "wrong",
+    "reason": "local audit found content not licensed by the parent FRD",
+    "fix": "state only what the parent claim states, keeping its polarity and quantities",
+    "call_key": "ec80f7b77e8fad099635e057",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0012-04-Q0012",
+    "verdict": "REVISE_WITNESS",
+    "unsupported": [
+      {
+        "words": "negation",
+        "problem": "the witness drops the parent's negation",
+        "property": "polarity"
+      }
+    ],
+    "omissions": [],
+    "forbidden_reading": "the witness states more than the FRD supports",
+    "reader_recovers": "wrong",
+    "reason": "local audit found content not licensed by the parent FRD",
+    "fix": "state only what the parent claim states, keeping its polarity and quantities",
+    "call_key": "ec80f7b77e8fad099635e057",
+    "parse_error": "",
+    "version": 2,
+    "round": 2
+  },
+  {
+    "witness_id": "W-FRD-Q0013-01-Q0013",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "ac9c53b306ef2fb1f6917fb5",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0013-02-Q0013",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "37b58a844f032e69c9d5b613",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0013-03-Q0013",
+    "verdict": "REVISE_WITNESS",
+    "unsupported": [
+      {
+        "words": "10,25,26, 11, 27, 28",
+        "problem": "a number in the parent FRD is missing from the witness",
+        "property": "quantity"
+      }
+    ],
+    "omissions": [],
+    "forbidden_reading": "the witness states more than the FRD supports",
+    "reader_recovers": "wrong",
+    "reason": "local audit found content not licensed by the parent FRD",
+    "fix": "state only what the parent claim states, keeping its polarity and quantities",
+    "call_key": "33291a641378e8c103431a4e",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0013-03-Q0013",
+    "verdict": "REVISE_WITNESS",
+    "unsupported": [
+      {
+        "words": "10,25,26, 11, 27, 28",
+        "problem": "a number in the parent FRD is missing from the witness",
+        "property": "quantity"
+      }
+    ],
+    "omissions": [],
+    "forbidden_reading": "the witness states more than the FRD supports",
+    "reader_recovers": "wrong",
+    "reason": "local audit found content not licensed by the parent FRD",
+    "fix": "state only what the parent claim states, keeping its polarity and quantities",
+    "call_key": "33291a641378e8c103431a4e",
+    "parse_error": "",
+    "version": 2,
+    "round": 2
+  },
+  {
+    "witness_id": "W-FRD-Q0013-04-Q0013",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "d63736c3ac0e35c42ed94cf2",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0014-01-Q0014",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "0de188bf1155d6fff5d7147b",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0014-02-Q0014",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "31688316e89c29380f729049",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0014-03-Q0014",
+    "verdict": "REVISE_WITNESS",
+    "unsupported": [
+      {
+        "words": "0, 0.010, 0.011, 0.033",
+        "problem": "a number in the parent FRD is missing from the witness",
+        "property": "quantity"
+      }
+    ],
+    "omissions": [],
+    "forbidden_reading": "the witness states more than the FRD supports",
+    "reader_recovers": "wrong",
+    "reason": "local audit found content not licensed by the parent FRD",
+    "fix": "state only what the parent claim states, keeping its polarity and quantities",
+    "call_key": "c590d8c2afb886020496a431",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0014-03-Q0014",
+    "verdict": "REVISE_WITNESS",
+    "unsupported": [
+      {
+        "words": "0, 0.010, 0.011, 0.033",
+        "problem": "a number in the parent FRD is missing from the witness",
+        "property": "quantity"
+      }
+    ],
+    "omissions": [],
+    "forbidden_reading": "the witness states more than the FRD supports",
+    "reader_recovers": "wrong",
+    "reason": "local audit found content not licensed by the parent FRD",
+    "fix": "state only what the parent claim states, keeping its polarity and quantities",
+    "call_key": "c590d8c2afb886020496a431",
+    "parse_error": "",
+    "version": 2,
+    "round": 2
+  },
+  {
+    "witness_id": "W-FRD-Q0014-04-Q0014",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "1a6d38ebc2cbc4d66b07b113",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0015-01-Q0015",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "4770308f8470dfea7526bda8",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0015-02-Q0015",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "1893512a8ed48bc231f2f8de",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0015-03-Q0015",
+    "verdict": "REVISE_WITNESS",
+    "unsupported": [
+      {
+        "words": "20, 21",
+        "problem": "a number in the parent FRD is missing from the witness",
+        "property": "quantity"
+      }
+    ],
+    "omissions": [],
+    "forbidden_reading": "the witness states more than the FRD supports",
+    "reader_recovers": "wrong",
+    "reason": "local audit found content not licensed by the parent FRD",
+    "fix": "state only what the parent claim states, keeping its polarity and quantities",
+    "call_key": "c4561a1dec3e595e10eeabd3",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0015-03-Q0015",
+    "verdict": "REVISE_WITNESS",
+    "unsupported": [
+      {
+        "words": "20, 21",
+        "problem": "a number in the parent FRD is missing from the witness",
+        "property": "quantity"
+      }
+    ],
+    "omissions": [],
+    "forbidden_reading": "the witness states more than the FRD supports",
+    "reader_recovers": "wrong",
+    "reason": "local audit found content not licensed by the parent FRD",
+    "fix": "state only what the parent claim states, keeping its polarity and quantities",
+    "call_key": "c4561a1dec3e595e10eeabd3",
+    "parse_error": "",
+    "version": 2,
+    "round": 2
+  },
+  {
+    "witness_id": "W-FRD-Q0015-04-Q0015",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "95351b8844331cec65c01e4c",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0016-01-Q0016",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "dda23a745a366c163261d6d3",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0016-02-Q0016",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "7ae5806b81db0feef112e592",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0016-03-Q0016",
+    "verdict": "REVISE_WITNESS",
+    "unsupported": [
+      {
+        "words": "negation",
+        "problem": "the witness drops the parent's negation",
+        "property": "polarity"
+      },
+      {
+        "words": "4",
+        "problem": "a number in the parent FRD is missing from the witness",
+        "property": "quantity"
+      }
+    ],
+    "omissions": [],
+    "forbidden_reading": "the witness states more than the FRD supports",
+    "reader_recovers": "wrong",
+    "reason": "local audit found content not licensed by the parent FRD",
+    "fix": "state only what the parent claim states, keeping its polarity and quantities",
+    "call_key": "e793c7cd547fab9deb2a07df",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0016-03-Q0016",
+    "verdict": "REVISE_WITNESS",
+    "unsupported": [
+      {
+        "words": "negation",
+        "problem": "the witness drops the parent's negation",
+        "property": "polarity"
+      },
+      {
+        "words": "4",
+        "problem": "a number in the parent FRD is missing from the witness",
+        "property": "quantity"
+      }
+    ],
+    "omissions": [],
+    "forbidden_reading": "the witness states more than the FRD supports",
+    "reader_recovers": "wrong",
+    "reason": "local audit found content not licensed by the parent FRD",
+    "fix": "state only what the parent claim states, keeping its polarity and quantities",
+    "call_key": "e793c7cd547fab9deb2a07df",
+    "parse_error": "",
+    "version": 2,
+    "round": 2
+  },
+  {
+    "witness_id": "W-FRD-Q0016-04-Q0016",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "cf4d9e4e202d8995921a59eb",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0017-01-Q0017",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "fdf297ad0dba0b3af00be3c9",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0017-02-Q0017",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "de76b0218713d45988bd5ee1",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0017-03-Q0017",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "54afa5b0d50b97cad93aae86",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0017-04-Q0017",
+    "verdict": "REVISE_WITNESS",
+    "unsupported": [
+      {
+        "words": "0.24, 0.90, 0.97, 18.56",
+        "problem": "a number in the parent FRD is missing from the witness",
+        "property": "quantity"
+      }
+    ],
+    "omissions": [],
+    "forbidden_reading": "the witness states more than the FRD supports",
+    "reader_recovers": "wrong",
+    "reason": "local audit found content not licensed by the parent FRD",
+    "fix": "state only what the parent claim states, keeping its polarity and quantities",
+    "call_key": "884c7e00ac7c484e5aa2231e",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0017-04-Q0017",
+    "verdict": "REVISE_WITNESS",
+    "unsupported": [
+      {
+        "words": "0.24, 0.90, 0.97, 18.56",
+        "problem": "a number in the parent FRD is missing from the witness",
+        "property": "quantity"
+      }
+    ],
+    "omissions": [],
+    "forbidden_reading": "the witness states more than the FRD supports",
+    "reader_recovers": "wrong",
+    "reason": "local audit found content not licensed by the parent FRD",
+    "fix": "state only what the parent claim states, keeping its polarity and quantities",
+    "call_key": "884c7e00ac7c484e5aa2231e",
+    "parse_error": "",
+    "version": 2,
+    "round": 2
+  },
+  {
+    "witness_id": "W-FRD-Q0018-01-Q0018",
+    "verdict": "REVISE_WITNESS",
+    "unsupported": [
+      {
+        "words": "0.24, 0.90, 0.97, 18.56",
+        "problem": "a number in the parent FRD is missing from the witness",
+        "property": "quantity"
+      }
+    ],
+    "omissions": [],
+    "forbidden_reading": "the witness states more than the FRD supports",
+    "reader_recovers": "wrong",
+    "reason": "local audit found content not licensed by the parent FRD",
+    "fix": "state only what the parent claim states, keeping its polarity and quantities",
+    "call_key": "ede2140ccf8e84b459c95bac",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0018-01-Q0018",
+    "verdict": "REVISE_WITNESS",
+    "unsupported": [
+      {
+        "words": "0.24, 0.90, 0.97, 18.56",
+        "problem": "a number in the parent FRD is missing from the witness",
+        "property": "quantity"
+      }
+    ],
+    "omissions": [],
+    "forbidden_reading": "the witness states more than the FRD supports",
+    "reader_recovers": "wrong",
+    "reason": "local audit found content not licensed by the parent FRD",
+    "fix": "state only what the parent claim states, keeping its polarity and quantities",
+    "call_key": "ede2140ccf8e84b459c95bac",
+    "parse_error": "",
+    "version": 2,
+    "round": 2
+  },
+  {
+    "witness_id": "W-FRD-Q0018-02-Q0018",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "1dd51cb848c09f8cb42af9db",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0018-03-Q0018",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "dd60663771fa124bc27ce332",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0018-04-Q0018",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "1d391a516c3875762dc49592",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0019-01-Q0019",
+    "verdict": "REVISE_WITNESS",
+    "unsupported": [
+      {
+        "words": "negation",
+        "problem": "the witness drops the parent's negation",
+        "property": "polarity"
+      },
+      {
+        "words": "01, 05, 138, 16",
+        "problem": "a number in the parent FRD is missing from the witness",
+        "property": "quantity"
+      }
+    ],
+    "omissions": [],
+    "forbidden_reading": "the witness states more than the FRD supports",
+    "reader_recovers": "wrong",
+    "reason": "local audit found content not licensed by the parent FRD",
+    "fix": "state only what the parent claim states, keeping its polarity and quantities",
+    "call_key": "66a043685e8adc770853a13b",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0019-01-Q0019",
+    "verdict": "REVISE_WITNESS",
+    "unsupported": [
+      {
+        "words": "negation",
+        "problem": "the witness drops the parent's negation",
+        "property": "polarity"
+      },
+      {
+        "words": "01, 05, 138, 16",
+        "problem": "a number in the parent FRD is missing from the witness",
+        "property": "quantity"
+      }
+    ],
+    "omissions": [],
+    "forbidden_reading": "the witness states more than the FRD supports",
+    "reader_recovers": "wrong",
+    "reason": "local audit found content not licensed by the parent FRD",
+    "fix": "state only what the parent claim states, keeping its polarity and quantities",
+    "call_key": "66a043685e8adc770853a13b",
+    "parse_error": "",
+    "version": 2,
+    "round": 2
+  },
+  {
+    "witness_id": "W-FRD-Q0019-02-Q0019",
+    "verdict": "REVISE_WITNESS",
+    "unsupported": [
+      {
+        "words": "14",
+        "problem": "a number in the parent FRD is missing from the witness",
+        "property": "quantity"
+      }
+    ],
+    "omissions": [],
+    "forbidden_reading": "the witness states more than the FRD supports",
+    "reader_recovers": "wrong",
+    "reason": "local audit found content not licensed by the parent FRD",
+    "fix": "state only what the parent claim states, keeping its polarity and quantities",
+    "call_key": "91d0ca17107ce63c17e4f5cb",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0019-02-Q0019",
+    "verdict": "REVISE_WITNESS",
+    "unsupported": [
+      {
+        "words": "14",
+        "problem": "a number in the parent FRD is missing from the witness",
+        "property": "quantity"
+      }
+    ],
+    "omissions": [],
+    "forbidden_reading": "the witness states more than the FRD supports",
+    "reader_recovers": "wrong",
+    "reason": "local audit found content not licensed by the parent FRD",
+    "fix": "state only what the parent claim states, keeping its polarity and quantities",
+    "call_key": "91d0ca17107ce63c17e4f5cb",
+    "parse_error": "",
+    "version": 2,
+    "round": 2
+  },
+  {
+    "witness_id": "W-FRD-Q0019-03-Q0019",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "d38f491d44c0c38c1e4ac622",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0019-04-Q0019",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "weaker",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "73140d8a0ed7331161e017bc",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0020-01-Q0020",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "726cd69bda7b814c7e45e07a",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0020-02-Q0020",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "e1aca1a363620e8e1fd49301",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0020-03-Q0020",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "39987c32e88a38fb5f155b5d",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0020-04-Q0020",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "e52b24ba488ea3ecb4ec9878",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0021-01-Q0021",
+    "verdict": "REVISE_WITNESS",
+    "unsupported": [
+      {
+        "words": "1066, 12, 20, 21",
+        "problem": "a number in the parent FRD is missing from the witness",
+        "property": "quantity"
+      }
+    ],
+    "omissions": [],
+    "forbidden_reading": "the witness states more than the FRD supports",
+    "reader_recovers": "wrong",
+    "reason": "local audit found content not licensed by the parent FRD",
+    "fix": "state only what the parent claim states, keeping its polarity and quantities",
+    "call_key": "2208426cd93dc2e3c3555092",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0021-01-Q0021",
+    "verdict": "REVISE_WITNESS",
+    "unsupported": [
+      {
+        "words": "1066, 12, 20, 21",
+        "problem": "a number in the parent FRD is missing from the witness",
+        "property": "quantity"
+      }
+    ],
+    "omissions": [],
+    "forbidden_reading": "the witness states more than the FRD supports",
+    "reader_recovers": "wrong",
+    "reason": "local audit found content not licensed by the parent FRD",
+    "fix": "state only what the parent claim states, keeping its polarity and quantities",
+    "call_key": "2208426cd93dc2e3c3555092",
+    "parse_error": "",
+    "version": 2,
+    "round": 2
+  },
+  {
+    "witness_id": "W-FRD-Q0021-02-Q0021",
+    "verdict": "REVISE_WITNESS",
+    "unsupported": [
+      {
+        "words": "0.001, 0.05, 24, 37",
+        "problem": "a number in the parent FRD is missing from the witness",
+        "property": "quantity"
+      }
+    ],
+    "omissions": [],
+    "forbidden_reading": "the witness states more than the FRD supports",
+    "reader_recovers": "wrong",
+    "reason": "local audit found content not licensed by the parent FRD",
+    "fix": "state only what the parent claim states, keeping its polarity and quantities",
+    "call_key": "85e9def0b172ed7e63d5dba5",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0021-02-Q0021",
+    "verdict": "REVISE_WITNESS",
+    "unsupported": [
+      {
+        "words": "0.001, 0.05, 24, 37",
+        "problem": "a number in the parent FRD is missing from the witness",
+        "property": "quantity"
+      }
+    ],
+    "omissions": [],
+    "forbidden_reading": "the witness states more than the FRD supports",
+    "reader_recovers": "wrong",
+    "reason": "local audit found content not licensed by the parent FRD",
+    "fix": "state only what the parent claim states, keeping its polarity and quantities",
+    "call_key": "85e9def0b172ed7e63d5dba5",
+    "parse_error": "",
+    "version": 2,
+    "round": 2
+  },
+  {
+    "witness_id": "W-FRD-Q0021-03-Q0021",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "878e3b9a5e32c754790e7364",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0021-04-Q0021",
+    "verdict": "REVISE_WITNESS",
+    "unsupported": [
+      {
+        "words": "1.5, 20, 24",
+        "problem": "a number in the parent FRD is missing from the witness",
+        "property": "quantity"
+      }
+    ],
+    "omissions": [],
+    "forbidden_reading": "the witness states more than the FRD supports",
+    "reader_recovers": "wrong",
+    "reason": "local audit found content not licensed by the parent FRD",
+    "fix": "state only what the parent claim states, keeping its polarity and quantities",
+    "call_key": "7c4e146569f743e13071c6d4",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0021-04-Q0021",
+    "verdict": "REVISE_WITNESS",
+    "unsupported": [
+      {
+        "words": "1.5, 20, 24",
+        "problem": "a number in the parent FRD is missing from the witness",
+        "property": "quantity"
+      }
+    ],
+    "omissions": [],
+    "forbidden_reading": "the witness states more than the FRD supports",
+    "reader_recovers": "wrong",
+    "reason": "local audit found content not licensed by the parent FRD",
+    "fix": "state only what the parent claim states, keeping its polarity and quantities",
+    "call_key": "7c4e146569f743e13071c6d4",
+    "parse_error": "",
+    "version": 2,
+    "round": 2
+  },
+  {
+    "witness_id": "W-FRD-Q0022-01-Q0022",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "d5c31c0afcfeb1fcc4a4ba70",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0022-02-Q0022",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "e1bb0b50a94e6154d4e175b3",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0022-03-Q0022",
+    "verdict": "REVISE_WITNESS",
+    "unsupported": [
+      {
+        "words": "11",
+        "problem": "a number in the parent FRD is missing from the witness",
+        "property": "quantity"
+      }
+    ],
+    "omissions": [],
+    "forbidden_reading": "the witness states more than the FRD supports",
+    "reader_recovers": "wrong",
+    "reason": "local audit found content not licensed by the parent FRD",
+    "fix": "state only what the parent claim states, keeping its polarity and quantities",
+    "call_key": "c574f5198e71c8303f36e3b2",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0022-03-Q0022",
+    "verdict": "REVISE_WITNESS",
+    "unsupported": [
+      {
+        "words": "11",
+        "problem": "a number in the parent FRD is missing from the witness",
+        "property": "quantity"
+      }
+    ],
+    "omissions": [],
+    "forbidden_reading": "the witness states more than the FRD supports",
+    "reader_recovers": "wrong",
+    "reason": "local audit found content not licensed by the parent FRD",
+    "fix": "state only what the parent claim states, keeping its polarity and quantities",
+    "call_key": "c574f5198e71c8303f36e3b2",
+    "parse_error": "",
+    "version": 2,
+    "round": 2
+  },
+  {
+    "witness_id": "W-FRD-Q0022-04-Q0022",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "78cdba23821105e655e2c789",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0023-01-Q0023",
+    "verdict": "REVISE_WITNESS",
+    "unsupported": [
+      {
+        "words": "11",
+        "problem": "a number in the parent FRD is missing from the witness",
+        "property": "quantity"
+      }
+    ],
+    "omissions": [],
+    "forbidden_reading": "the witness states more than the FRD supports",
+    "reader_recovers": "wrong",
+    "reason": "local audit found content not licensed by the parent FRD",
+    "fix": "state only what the parent claim states, keeping its polarity and quantities",
+    "call_key": "83ccd1d7c17d5009578ef04f",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0023-01-Q0023",
+    "verdict": "REVISE_WITNESS",
+    "unsupported": [
+      {
+        "words": "11",
+        "problem": "a number in the parent FRD is missing from the witness",
+        "property": "quantity"
+      }
+    ],
+    "omissions": [],
+    "forbidden_reading": "the witness states more than the FRD supports",
+    "reader_recovers": "wrong",
+    "reason": "local audit found content not licensed by the parent FRD",
+    "fix": "state only what the parent claim states, keeping its polarity and quantities",
+    "call_key": "83ccd1d7c17d5009578ef04f",
+    "parse_error": "",
+    "version": 2,
+    "round": 2
+  },
+  {
+    "witness_id": "W-FRD-Q0023-02-Q0023",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "ac5857d312bd2507f0038f61",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0023-03-Q0023",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "fcedc8cf71deac547bbc4467",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0023-04-Q0023",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "1fc482ba3a5f855d1be02673",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0024-01-Q0024",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "cf32e7884a4345be73dd140d",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0024-02-Q0024",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "d51da4f0454fb657527410d6",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0024-03-Q0024",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "5cf66a9a446b9a3ab6db904d",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0024-04-Q0024",
+    "verdict": "REVISE_WITNESS",
+    "unsupported": [
+      {
+        "words": "11, 7",
+        "problem": "a number in the parent FRD is missing from the witness",
+        "property": "quantity"
+      }
+    ],
+    "omissions": [],
+    "forbidden_reading": "the witness states more than the FRD supports",
+    "reader_recovers": "wrong",
+    "reason": "local audit found content not licensed by the parent FRD",
+    "fix": "state only what the parent claim states, keeping its polarity and quantities",
+    "call_key": "13c913a4c24323beae9fa879",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0024-04-Q0024",
+    "verdict": "REVISE_WITNESS",
+    "unsupported": [
+      {
+        "words": "11, 7",
+        "problem": "a number in the parent FRD is missing from the witness",
+        "property": "quantity"
+      }
+    ],
+    "omissions": [],
+    "forbidden_reading": "the witness states more than the FRD supports",
+    "reader_recovers": "wrong",
+    "reason": "local audit found content not licensed by the parent FRD",
+    "fix": "state only what the parent claim states, keeping its polarity and quantities",
+    "call_key": "13c913a4c24323beae9fa879",
+    "parse_error": "",
+    "version": 2,
+    "round": 2
+  },
+  {
+    "witness_id": "W-FRD-Q0025-01-Q0025",
+    "verdict": "REVISE_WITNESS",
+    "unsupported": [
+      {
+        "words": "11, 7",
+        "problem": "a number in the parent FRD is missing from the witness",
+        "property": "quantity"
+      }
+    ],
+    "omissions": [],
+    "forbidden_reading": "the witness states more than the FRD supports",
+    "reader_recovers": "wrong",
+    "reason": "local audit found content not licensed by the parent FRD",
+    "fix": "state only what the parent claim states, keeping its polarity and quantities",
+    "call_key": "57c840bb9754e22a8d462baa",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0025-01-Q0025",
+    "verdict": "REVISE_WITNESS",
+    "unsupported": [
+      {
+        "words": "11, 7",
+        "problem": "a number in the parent FRD is missing from the witness",
+        "property": "quantity"
+      }
+    ],
+    "omissions": [],
+    "forbidden_reading": "the witness states more than the FRD supports",
+    "reader_recovers": "wrong",
+    "reason": "local audit found content not licensed by the parent FRD",
+    "fix": "state only what the parent claim states, keeping its polarity and quantities",
+    "call_key": "57c840bb9754e22a8d462baa",
+    "parse_error": "",
+    "version": 2,
+    "round": 2
+  },
+  {
+    "witness_id": "W-FRD-Q0025-02-Q0025",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "8b0e8e593425f75449d70091",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0025-03-Q0025",
+    "verdict": "REVISE_WITNESS",
+    "unsupported": [
+      {
+        "words": "10,25,26, 11, 27, 28",
+        "problem": "a number in the parent FRD is missing from the witness",
+        "property": "quantity"
+      }
+    ],
+    "omissions": [],
+    "forbidden_reading": "the witness states more than the FRD supports",
+    "reader_recovers": "wrong",
+    "reason": "local audit found content not licensed by the parent FRD",
+    "fix": "state only what the parent claim states, keeping its polarity and quantities",
+    "call_key": "49818a4d64438aa70d5b8704",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0025-03-Q0025",
+    "verdict": "REVISE_WITNESS",
+    "unsupported": [
+      {
+        "words": "10,25,26, 11, 27, 28",
+        "problem": "a number in the parent FRD is missing from the witness",
+        "property": "quantity"
+      }
+    ],
+    "omissions": [],
+    "forbidden_reading": "the witness states more than the FRD supports",
+    "reader_recovers": "wrong",
+    "reason": "local audit found content not licensed by the parent FRD",
+    "fix": "state only what the parent claim states, keeping its polarity and quantities",
+    "call_key": "49818a4d64438aa70d5b8704",
+    "parse_error": "",
+    "version": 2,
+    "round": 2
+  },
+  {
+    "witness_id": "W-FRD-Q0025-04-Q0025",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "7f082f680cae773a429d08ff",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0026-01-Q0026",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "d34986ceb02b66ca1be31f50",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0026-02-Q0026",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "04999f042624755f3ec3b8d2",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0026-03-Q0026",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "ae1148a573c75326d96b46cd",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0026-04-Q0026",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "39eb2fd858292ba59554746b",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0027-01-Q0027",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "ec68b507197c7b09a8ea7b4d",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0027-02-Q0027",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "61670e8f1e95cbfea5286b9d",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0027-03-Q0027",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "f659ff9bffa543208298769f",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0027-04-Q0027",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "de60b0ee2fc812a86b00076b",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0028-01-Q0028",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "6d3fefcff1fdd89c1893f87d",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0028-02-Q0028",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "c7665227793cdb7dbb30cb95",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0028-03-Q0028",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "27edba30c0e9c7a1f40248ea",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0028-04-Q0028",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "d7d2b4b5ca4fd928e9d328da",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0029-01-Q0029",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "a00a16d982a8d56d105bdc52",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0029-02-Q0029",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "weaker",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "5b2ffac6ad072ae19bee2f15",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0029-03-Q0029",
+    "verdict": "REVISE_WITNESS",
+    "unsupported": [
+      {
+        "words": "33, 34, 400",
+        "problem": "a number in the parent FRD is missing from the witness",
+        "property": "quantity"
+      }
+    ],
+    "omissions": [],
+    "forbidden_reading": "the witness states more than the FRD supports",
+    "reader_recovers": "wrong",
+    "reason": "local audit found content not licensed by the parent FRD",
+    "fix": "state only what the parent claim states, keeping its polarity and quantities",
+    "call_key": "cbe2a3e3ac739f871b4a6e07",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0029-03-Q0029",
+    "verdict": "REVISE_WITNESS",
+    "unsupported": [
+      {
+        "words": "33, 34, 400",
+        "problem": "a number in the parent FRD is missing from the witness",
+        "property": "quantity"
+      }
+    ],
+    "omissions": [],
+    "forbidden_reading": "the witness states more than the FRD supports",
+    "reader_recovers": "wrong",
+    "reason": "local audit found content not licensed by the parent FRD",
+    "fix": "state only what the parent claim states, keeping its polarity and quantities",
+    "call_key": "cbe2a3e3ac739f871b4a6e07",
+    "parse_error": "",
+    "version": 2,
+    "round": 2
+  },
+  {
+    "witness_id": "W-FRD-Q0029-04-Q0029",
+    "verdict": "REVISE_WITNESS",
+    "unsupported": [
+      {
+        "words": "clinic",
+        "problem": "the witness adds content words that the parent FRD does not contain",
+        "property": "fabrication/scope"
+      },
+      {
+        "words": "129, 145, 157, 17",
+        "problem": "a number in the parent FRD is missing from the witness",
+        "property": "quantity"
+      }
+    ],
+    "omissions": [],
+    "forbidden_reading": "the witness states more than the FRD supports",
+    "reader_recovers": "wrong",
+    "reason": "local audit found content not licensed by the parent FRD",
+    "fix": "state only what the parent claim states, keeping its polarity and quantities",
+    "call_key": "d0dd5ec380a6d70a8ab4e9ab",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0029-04-Q0029",
+    "verdict": "REVISE_WITNESS",
+    "unsupported": [
+      {
+        "words": "clinic",
+        "problem": "the witness adds content words that the parent FRD does not contain",
+        "property": "fabrication/scope"
+      },
+      {
+        "words": "129, 145, 157, 17",
+        "problem": "a number in the parent FRD is missing from the witness",
+        "property": "quantity"
+      }
+    ],
+    "omissions": [],
+    "forbidden_reading": "the witness states more than the FRD supports",
+    "reader_recovers": "wrong",
+    "reason": "local audit found content not licensed by the parent FRD",
+    "fix": "state only what the parent claim states, keeping its polarity and quantities",
+    "call_key": "d0dd5ec380a6d70a8ab4e9ab",
+    "parse_error": "",
+    "version": 2,
+    "round": 2
+  },
+  {
+    "witness_id": "W-FRD-Q0030-01-Q0030",
+    "verdict": "REVISE_WITNESS",
+    "unsupported": [
+      {
+        "words": "33, 34, 400",
+        "problem": "a number in the parent FRD is missing from the witness",
+        "property": "quantity"
+      }
+    ],
+    "omissions": [],
+    "forbidden_reading": "the witness states more than the FRD supports",
+    "reader_recovers": "wrong",
+    "reason": "local audit found content not licensed by the parent FRD",
+    "fix": "state only what the parent claim states, keeping its polarity and quantities",
+    "call_key": "c39942e7283b554577cbc331",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0030-01-Q0030",
+    "verdict": "REVISE_WITNESS",
+    "unsupported": [
+      {
+        "words": "33, 34, 400",
+        "problem": "a number in the parent FRD is missing from the witness",
+        "property": "quantity"
+      }
+    ],
+    "omissions": [],
+    "forbidden_reading": "the witness states more than the FRD supports",
+    "reader_recovers": "wrong",
+    "reason": "local audit found content not licensed by the parent FRD",
+    "fix": "state only what the parent claim states, keeping its polarity and quantities",
+    "call_key": "c39942e7283b554577cbc331",
+    "parse_error": "",
+    "version": 2,
+    "round": 2
+  },
+  {
+    "witness_id": "W-FRD-Q0030-02-Q0030",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "97ff42095ae3ec0b8cef1750",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0030-03-Q0030",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "89fd74d4bab57ff6602b6366",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0030-04-Q0030",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "ca1f37cb9929f52ca9661463",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0031-01-Q0031",
+    "verdict": "REVISE_WITNESS",
+    "unsupported": [
+      {
+        "words": "negation",
+        "problem": "the witness drops the parent's negation",
+        "property": "polarity"
+      },
+      {
+        "words": "100, 2019, 68",
+        "problem": "a number in the parent FRD is missing from the witness",
+        "property": "quantity"
+      }
+    ],
+    "omissions": [],
+    "forbidden_reading": "the witness states more than the FRD supports",
+    "reader_recovers": "wrong",
+    "reason": "local audit found content not licensed by the parent FRD",
+    "fix": "state only what the parent claim states, keeping its polarity and quantities",
+    "call_key": "4dd8009fd6da80aade00f9a1",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0031-01-Q0031",
+    "verdict": "REVISE_WITNESS",
+    "unsupported": [
+      {
+        "words": "negation",
+        "problem": "the witness drops the parent's negation",
+        "property": "polarity"
+      },
+      {
+        "words": "100, 2019, 68",
+        "problem": "a number in the parent FRD is missing from the witness",
+        "property": "quantity"
+      }
+    ],
+    "omissions": [],
+    "forbidden_reading": "the witness states more than the FRD supports",
+    "reader_recovers": "wrong",
+    "reason": "local audit found content not licensed by the parent FRD",
+    "fix": "state only what the parent claim states, keeping its polarity and quantities",
+    "call_key": "4dd8009fd6da80aade00f9a1",
+    "parse_error": "",
+    "version": 2,
+    "round": 2
+  },
+  {
+    "witness_id": "W-FRD-Q0031-02-Q0031",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "029935f2c81a237f7cf2fb55",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0031-03-Q0031",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "4a6c2a445fb3387b217f5023",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0031-04-Q0031",
+    "verdict": "REVISE_WITNESS",
+    "unsupported": [
+      {
+        "words": "negation",
+        "problem": "the witness drops the parent's negation",
+        "property": "polarity"
+      }
+    ],
+    "omissions": [],
+    "forbidden_reading": "the witness states more than the FRD supports",
+    "reader_recovers": "wrong",
+    "reason": "local audit found content not licensed by the parent FRD",
+    "fix": "state only what the parent claim states, keeping its polarity and quantities",
+    "call_key": "216d6b07e5e4bf6ebc62abef",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0031-04-Q0031",
+    "verdict": "REVISE_WITNESS",
+    "unsupported": [
+      {
+        "words": "negation",
+        "problem": "the witness drops the parent's negation",
+        "property": "polarity"
+      }
+    ],
+    "omissions": [],
+    "forbidden_reading": "the witness states more than the FRD supports",
+    "reader_recovers": "wrong",
+    "reason": "local audit found content not licensed by the parent FRD",
+    "fix": "state only what the parent claim states, keeping its polarity and quantities",
+    "call_key": "216d6b07e5e4bf6ebc62abef",
+    "parse_error": "",
+    "version": 2,
+    "round": 2
+  },
+  {
+    "witness_id": "W-FRD-Q0032-01-Q0032",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "0b8fb06222e0215df2111e38",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0032-02-Q0032",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "5bb57a590caacb503da910a8",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0032-03-Q0032",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "b44e91cf4c34a53c02976f72",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0032-04-Q0032",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "73f24e83e96c30da24d8f09a",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0033-01-Q0033",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "6a37585347d1136a750dae2b",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0033-02-Q0033",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "cd513285a138eaa230e6f40b",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0033-03-Q0033",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "c1429e151f0125b7bc6baaa2",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0033-04-Q0033",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "2b27ad42cca4890effb6a465",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0034-01-Q0034",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "c54d3202b4d6e77af6de3987",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0034-02-Q0034",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "143c40d3ab69f1131b23b2c4",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0034-03-Q0034",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "cf01fcd2aff076854e85af89",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0034-04-Q0034",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "80494b5e7359aa1935b47e62",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0035-01-Q0035",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "2f7913ec510c2a4ccd159b6e",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0035-02-Q0035",
+    "verdict": "REVISE_WITNESS",
+    "unsupported": [
+      {
+        "words": "pretreatment",
+        "problem": "the witness adds content words that the parent FRD does not contain",
+        "property": "fabrication/scope"
+      }
+    ],
+    "omissions": [],
+    "forbidden_reading": "the witness states more than the FRD supports",
+    "reader_recovers": "wrong",
+    "reason": "local audit found content not licensed by the parent FRD",
+    "fix": "state only what the parent claim states, keeping its polarity and quantities",
+    "call_key": "3b7633335202be415e8cb239",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0035-02-Q0035",
+    "verdict": "REVISE_WITNESS",
+    "unsupported": [
+      {
+        "words": "pretreatment",
+        "problem": "the witness adds content words that the parent FRD does not contain",
+        "property": "fabrication/scope"
+      }
+    ],
+    "omissions": [],
+    "forbidden_reading": "the witness states more than the FRD supports",
+    "reader_recovers": "wrong",
+    "reason": "local audit found content not licensed by the parent FRD",
+    "fix": "state only what the parent claim states, keeping its polarity and quantities",
+    "call_key": "3b7633335202be415e8cb239",
+    "parse_error": "",
+    "version": 2,
+    "round": 2
+  },
+  {
+    "witness_id": "W-FRD-Q0035-03-Q0035",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "e03a3bdd31e8c7f1afb521bb",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0035-04-Q0035",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "850f3cb7d1123cf6d76cd297",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0036-01-Q0036",
+    "verdict": "REVISE_WITNESS",
+    "unsupported": [
+      {
+        "words": "22",
+        "problem": "a number in the parent FRD is missing from the witness",
+        "property": "quantity"
+      }
+    ],
+    "omissions": [],
+    "forbidden_reading": "the witness states more than the FRD supports",
+    "reader_recovers": "wrong",
+    "reason": "local audit found content not licensed by the parent FRD",
+    "fix": "state only what the parent claim states, keeping its polarity and quantities",
+    "call_key": "8bf01fec3f32c1e8516ca22e",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0036-01-Q0036",
+    "verdict": "REVISE_WITNESS",
+    "unsupported": [
+      {
+        "words": "22",
+        "problem": "a number in the parent FRD is missing from the witness",
+        "property": "quantity"
+      }
+    ],
+    "omissions": [],
+    "forbidden_reading": "the witness states more than the FRD supports",
+    "reader_recovers": "wrong",
+    "reason": "local audit found content not licensed by the parent FRD",
+    "fix": "state only what the parent claim states, keeping its polarity and quantities",
+    "call_key": "8bf01fec3f32c1e8516ca22e",
+    "parse_error": "",
+    "version": 2,
+    "round": 2
+  },
+  {
+    "witness_id": "W-FRD-Q0036-02-Q0036",
+    "verdict": "REVISE_WITNESS",
+    "unsupported": [
+      {
+        "words": "17, 600",
+        "problem": "a number in the parent FRD is missing from the witness",
+        "property": "quantity"
+      }
+    ],
+    "omissions": [],
+    "forbidden_reading": "the witness states more than the FRD supports",
+    "reader_recovers": "wrong",
+    "reason": "local audit found content not licensed by the parent FRD",
+    "fix": "state only what the parent claim states, keeping its polarity and quantities",
+    "call_key": "d87529e3a9293407168f8db0",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0036-02-Q0036",
+    "verdict": "REVISE_WITNESS",
+    "unsupported": [
+      {
+        "words": "17, 600",
+        "problem": "a number in the parent FRD is missing from the witness",
+        "property": "quantity"
+      }
+    ],
+    "omissions": [],
+    "forbidden_reading": "the witness states more than the FRD supports",
+    "reader_recovers": "wrong",
+    "reason": "local audit found content not licensed by the parent FRD",
+    "fix": "state only what the parent claim states, keeping its polarity and quantities",
+    "call_key": "d87529e3a9293407168f8db0",
+    "parse_error": "",
+    "version": 2,
+    "round": 2
+  },
+  {
+    "witness_id": "W-FRD-Q0036-03-Q0036",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "3f18d983584ef148d6c5c4b2",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0036-04-Q0036",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "998c7c06e8a297ed45bb2b8c",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0037-01-Q0037",
+    "verdict": "REVISE_WITNESS",
+    "unsupported": [
+      {
+        "words": "negation",
+        "problem": "the witness drops the parent's negation",
+        "property": "polarity"
+      },
+      {
+        "words": "25, 26, 27, 28,29",
+        "problem": "a number in the parent FRD is missing from the witness",
+        "property": "quantity"
+      }
+    ],
+    "omissions": [],
+    "forbidden_reading": "the witness states more than the FRD supports",
+    "reader_recovers": "wrong",
+    "reason": "local audit found content not licensed by the parent FRD",
+    "fix": "state only what the parent claim states, keeping its polarity and quantities",
+    "call_key": "e504058314c473e2b679f81a",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0037-01-Q0037",
+    "verdict": "REVISE_WITNESS",
+    "unsupported": [
+      {
+        "words": "negation",
+        "problem": "the witness drops the parent's negation",
+        "property": "polarity"
+      },
+      {
+        "words": "25, 26, 27, 28,29",
+        "problem": "a number in the parent FRD is missing from the witness",
+        "property": "quantity"
+      }
+    ],
+    "omissions": [],
+    "forbidden_reading": "the witness states more than the FRD supports",
+    "reader_recovers": "wrong",
+    "reason": "local audit found content not licensed by the parent FRD",
+    "fix": "state only what the parent claim states, keeping its polarity and quantities",
+    "call_key": "e504058314c473e2b679f81a",
+    "parse_error": "",
+    "version": 2,
+    "round": 2
+  },
+  {
+    "witness_id": "W-FRD-Q0037-02-Q0037",
+    "verdict": "REVISE_WITNESS",
+    "unsupported": [
+      {
+        "words": "negation",
+        "problem": "the witness drops the parent's negation",
+        "property": "polarity"
+      },
+      {
+        "words": "67",
+        "problem": "a number in the parent FRD is missing from the witness",
+        "property": "quantity"
+      }
+    ],
+    "omissions": [],
+    "forbidden_reading": "the witness states more than the FRD supports",
+    "reader_recovers": "wrong",
+    "reason": "local audit found content not licensed by the parent FRD",
+    "fix": "state only what the parent claim states, keeping its polarity and quantities",
+    "call_key": "5d02c838ffe92b7d5ccf6042",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0037-02-Q0037",
+    "verdict": "REVISE_WITNESS",
+    "unsupported": [
+      {
+        "words": "negation",
+        "problem": "the witness drops the parent's negation",
+        "property": "polarity"
+      },
+      {
+        "words": "67",
+        "problem": "a number in the parent FRD is missing from the witness",
+        "property": "quantity"
+      }
+    ],
+    "omissions": [],
+    "forbidden_reading": "the witness states more than the FRD supports",
+    "reader_recovers": "wrong",
+    "reason": "local audit found content not licensed by the parent FRD",
+    "fix": "state only what the parent claim states, keeping its polarity and quantities",
+    "call_key": "5d02c838ffe92b7d5ccf6042",
+    "parse_error": "",
+    "version": 2,
+    "round": 2
+  },
+  {
+    "witness_id": "W-FRD-Q0037-03-Q0037",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "f6596e8bf7f556089957f094",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0037-04-Q0037",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "6c0f66a2bd89316607688b77",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0038-01-Q0038",
+    "verdict": "REVISE_WITNESS",
+    "unsupported": [
+      {
+        "words": "negation",
+        "problem": "the witness drops the parent's negation",
+        "property": "polarity"
+      },
+      {
+        "words": "67",
+        "problem": "a number in the parent FRD is missing from the witness",
+        "property": "quantity"
+      }
+    ],
+    "omissions": [],
+    "forbidden_reading": "the witness states more than the FRD supports",
+    "reader_recovers": "wrong",
+    "reason": "local audit found content not licensed by the parent FRD",
+    "fix": "state only what the parent claim states, keeping its polarity and quantities",
+    "call_key": "e9dfc5a085c9692c796383c1",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0038-01-Q0038",
+    "verdict": "REVISE_WITNESS",
+    "unsupported": [
+      {
+        "words": "negation",
+        "problem": "the witness drops the parent's negation",
+        "property": "polarity"
+      },
+      {
+        "words": "67",
+        "problem": "a number in the parent FRD is missing from the witness",
+        "property": "quantity"
+      }
+    ],
+    "omissions": [],
+    "forbidden_reading": "the witness states more than the FRD supports",
+    "reader_recovers": "wrong",
+    "reason": "local audit found content not licensed by the parent FRD",
+    "fix": "state only what the parent claim states, keeping its polarity and quantities",
+    "call_key": "e9dfc5a085c9692c796383c1",
+    "parse_error": "",
+    "version": 2,
+    "round": 2
+  },
+  {
+    "witness_id": "W-FRD-Q0038-02-Q0038",
+    "verdict": "REVISE_WITNESS",
+    "unsupported": [
+      {
+        "words": "negation",
+        "problem": "the witness drops the parent's negation",
+        "property": "polarity"
+      },
+      {
+        "words": "15,16, 17, 18, 2,15,21,22",
+        "problem": "a number in the parent FRD is missing from the witness",
+        "property": "quantity"
+      }
+    ],
+    "omissions": [],
+    "forbidden_reading": "the witness states more than the FRD supports",
+    "reader_recovers": "wrong",
+    "reason": "local audit found content not licensed by the parent FRD",
+    "fix": "state only what the parent claim states, keeping its polarity and quantities",
+    "call_key": "1bcf71673d51f8f4b3c7c5a2",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0038-02-Q0038",
+    "verdict": "REVISE_WITNESS",
+    "unsupported": [
+      {
+        "words": "negation",
+        "problem": "the witness drops the parent's negation",
+        "property": "polarity"
+      },
+      {
+        "words": "15,16, 17, 18, 2,15,21,22",
+        "problem": "a number in the parent FRD is missing from the witness",
+        "property": "quantity"
+      }
+    ],
+    "omissions": [],
+    "forbidden_reading": "the witness states more than the FRD supports",
+    "reader_recovers": "wrong",
+    "reason": "local audit found content not licensed by the parent FRD",
+    "fix": "state only what the parent claim states, keeping its polarity and quantities",
+    "call_key": "1bcf71673d51f8f4b3c7c5a2",
+    "parse_error": "",
+    "version": 2,
+    "round": 2
+  },
+  {
+    "witness_id": "W-FRD-Q0038-03-Q0038",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "b9f646818a4693e740d77730",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0038-04-Q0038",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "cfb329b09182ba9ba77ccd7e",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0039-01-Q0039",
+    "verdict": "REVISE_WITNESS",
+    "unsupported": [
+      {
+        "words": "6",
+        "problem": "a number in the parent FRD is missing from the witness",
+        "property": "quantity"
+      }
+    ],
+    "omissions": [],
+    "forbidden_reading": "the witness states more than the FRD supports",
+    "reader_recovers": "wrong",
+    "reason": "local audit found content not licensed by the parent FRD",
+    "fix": "state only what the parent claim states, keeping its polarity and quantities",
+    "call_key": "2e693aee04fd3831d5f7922d",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0039-01-Q0039",
+    "verdict": "REVISE_WITNESS",
+    "unsupported": [
+      {
+        "words": "6",
+        "problem": "a number in the parent FRD is missing from the witness",
+        "property": "quantity"
+      }
+    ],
+    "omissions": [],
+    "forbidden_reading": "the witness states more than the FRD supports",
+    "reader_recovers": "wrong",
+    "reason": "local audit found content not licensed by the parent FRD",
+    "fix": "state only what the parent claim states, keeping its polarity and quantities",
+    "call_key": "2e693aee04fd3831d5f7922d",
+    "parse_error": "",
+    "version": 2,
+    "round": 2
+  },
+  {
+    "witness_id": "W-FRD-Q0039-02-Q0039",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "7be814e884ec94e39dcb680b",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0039-03-Q0039",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "2402b10dbf90bd6e3133c903",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0039-04-Q0039",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "29c42f4e9011a95fcf01f8b8",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0040-01-Q0040",
+    "verdict": "REVISE_WITNESS",
+    "unsupported": [
+      {
+        "words": "6",
+        "problem": "a number in the parent FRD is missing from the witness",
+        "property": "quantity"
+      }
+    ],
+    "omissions": [],
+    "forbidden_reading": "the witness states more than the FRD supports",
+    "reader_recovers": "wrong",
+    "reason": "local audit found content not licensed by the parent FRD",
+    "fix": "state only what the parent claim states, keeping its polarity and quantities",
+    "call_key": "4aaaf54d206f3cf7877d4a2b",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0040-01-Q0040",
+    "verdict": "REVISE_WITNESS",
+    "unsupported": [
+      {
+        "words": "6",
+        "problem": "a number in the parent FRD is missing from the witness",
+        "property": "quantity"
+      }
+    ],
+    "omissions": [],
+    "forbidden_reading": "the witness states more than the FRD supports",
+    "reader_recovers": "wrong",
+    "reason": "local audit found content not licensed by the parent FRD",
+    "fix": "state only what the parent claim states, keeping its polarity and quantities",
+    "call_key": "4aaaf54d206f3cf7877d4a2b",
+    "parse_error": "",
+    "version": 2,
+    "round": 2
+  },
+  {
+    "witness_id": "W-FRD-Q0040-02-Q0040",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "29ecb699bd54982f283ed444",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0040-03-Q0040",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "e9c8f73f414dea2c1259fd21",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  },
+  {
+    "witness_id": "W-FRD-Q0040-04-Q0040",
+    "verdict": "PASS",
+    "unsupported": [],
+    "omissions": [],
+    "forbidden_reading": "",
+    "reader_recovers": "same",
+    "reason": "every content word of the witness is licensed by the parent FRD; polarity and quantities are preserved (local structural audit)",
+    "fix": "",
+    "call_key": "01e5fe2d3b1b2d72425efbc0",
+    "parse_error": "",
+    "version": 1,
+    "round": 1
+  }
+]

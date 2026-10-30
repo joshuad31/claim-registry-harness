@@ -1,0 +1,899 @@
+[
+  {
+    "witness_id": "W-FRD-Q0001-01-Q0001",
+    "status": "WITNESS",
+    "text": "Foliar silicate increased grain yield of drought-stressed wheat in field trials by eighteen percent (field2023).",
+    "preserved": [
+      "assertion"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "cb5656a82e3c03f95ef21233",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 15,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0001-02-Q0001",
+    "status": "WITNESS",
+    "text": "The increase was measured at a foliar rate of two millilitres per litre (field2023).",
+    "preserved": [
+      "assertion"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "51a66e9889f7221e7650e07e",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 14,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0001-03-Q0001",
+    "status": "WITNESS",
+    "text": "Foliar silicate did not increase grain yield of drought-stressed wheat in field trials (null2021).",
+    "preserved": [
+      "negation"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "991c0f09d655a7d1b10b193d",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 14,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0001-04-Q0001",
+    "status": "WITNESS",
+    "text": "Some field trials report a yield increase, while others report no yield difference at the same foliar rate (review2019).",
+    "preserved": [
+      "negation"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "5900140870dc6d088f1d0baa",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 19,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0002-01-Q0002",
+    "status": "WITNESS",
+    "text": "These field trials at a foliar rate of two millilitres per litre reported no yield difference between silicate and control plots (null2021).",
+    "preserved": [
+      "negation"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "9a0d07cc6e27b85c3ec4ed9b",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 22,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0002-02-Q0002",
+    "status": "WITNESS",
+    "text": "Some field trials report a yield increase, while others report no yield difference at the same foliar rate (review2019).",
+    "preserved": [
+      "negation"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "ec7f85d12ddaab4c6dc3076a",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 19,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0002-03-Q0002",
+    "status": "WITNESS",
+    "text": "Foliar silicate did not increase grain yield of drought-stressed wheat in field trials (null2021).",
+    "preserved": [
+      "negation"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "be386b536c41ca522591ac71",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 14,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0002-04-Q0002",
+    "status": "WITNESS",
+    "text": "This was a narrative review without a pooled effect size, and publication bias was not assessed (review2019).",
+    "preserved": [
+      "negation"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "b51679c976b1cd40046296b7",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 17,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0003-01-Q0003",
+    "status": "WITNESS",
+    "text": "Some field trials report a yield increase, while others report no yield difference at the same foliar rate (review2019).",
+    "preserved": [
+      "negation"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "b4c7ec47ab72605af6017737",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 19,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0003-02-Q0003",
+    "status": "WITNESS",
+    "text": "Field evidence on foliar silicate and wheat yield is inconsistent across trials (review2019).",
+    "preserved": [
+      "assertion"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "9bf9f03c4195874dfd924f90",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 13,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0003-03-Q0003",
+    "status": "WITNESS",
+    "text": "Foliar silicate did not increase grain yield of drought-stressed wheat in field trials (null2021).",
+    "preserved": [
+      "negation"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "fb58aa252c1ff994998780ab",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 14,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0003-04-Q0003",
+    "status": "WITNESS",
+    "text": "Foliar silicate increased grain yield of drought-stressed wheat in field trials by eighteen percent (field2023).",
+    "preserved": [
+      "assertion"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "bfd5b6c7977eb5d4faaf80f3",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 15,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0004-01-Q0004",
+    "status": "WITNESS",
+    "text": "The increase was measured at a foliar rate of two millilitres per litre (field2023).",
+    "preserved": [
+      "assertion"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "708fb8143585dd475bcce561",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 14,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0004-02-Q0004",
+    "status": "WITNESS",
+    "text": "Foliar silicate increased grain yield of drought-stressed wheat in field trials by eighteen percent (field2023).",
+    "preserved": [
+      "assertion"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "1dab7260ca5e2417177cbe85",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 15,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0004-03-Q0004",
+    "status": "WITNESS",
+    "text": "These field trials at a foliar rate of two millilitres per litre reported no yield difference between silicate and control plots (null2021).",
+    "preserved": [
+      "negation"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "e35a627062e518bfb97413f5",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 22,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0004-04-Q0004",
+    "status": "WITNESS",
+    "text": "Some field trials report a yield increase, while others report no yield difference at the same foliar rate (review2019).",
+    "preserved": [
+      "negation"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "3307088ce4f8cf82c110bff0",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 19,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0005-01-Q0005",
+    "status": "WITNESS",
+    "text": "Foliar silicate did not increase grain yield of drought-stressed wheat in field trials (null2021).",
+    "preserved": [
+      "negation"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "2984042e5f5be2373fc94579",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 14,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0005-02-Q0005",
+    "status": "WITNESS",
+    "text": "These field trials at a foliar rate of two millilitres per litre reported no yield difference between silicate and control plots (null2021).",
+    "preserved": [
+      "negation"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "a8c052948dea627b25b563ba",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 22,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0005-03-Q0005",
+    "status": "WITNESS",
+    "text": "Some field trials report a yield increase, while others report no yield difference at the same foliar rate (review2019).",
+    "preserved": [
+      "negation"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "3f951d1b19802a2d66718b85",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 19,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0005-04-Q0005",
+    "status": "WITNESS",
+    "text": "Field evidence on foliar silicate and wheat yield is inconsistent across trials (review2019).",
+    "preserved": [
+      "assertion"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "bb631d20b5154051a934f8c4",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 13,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0006-01-Q0006",
+    "status": "WITNESS",
+    "text": "Field evidence on foliar silicate and wheat yield is inconsistent across trials (review2019).",
+    "preserved": [
+      "assertion"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "e48c0884f3e3604b5cf4749b",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 13,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0006-02-Q0006",
+    "status": "WITNESS",
+    "text": "Some field trials report a yield increase, while others report no yield difference at the same foliar rate (review2019).",
+    "preserved": [
+      "negation"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "e6383bda2bf647781b1d92b5",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 19,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0006-03-Q0006",
+    "status": "WITNESS",
+    "text": "These field trials at a foliar rate of two millilitres per litre reported no yield difference between silicate and control plots (null2021).",
+    "preserved": [
+      "negation"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "ca02a2b201fcb228b5e1f0ef",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 22,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0006-04-Q0006",
+    "status": "WITNESS",
+    "text": "Foliar silicate increased grain yield of drought-stressed wheat in field trials by eighteen percent (field2023).",
+    "preserved": [
+      "assertion"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "eb01b4bfededdd409ab77808",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 15,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0007-01-Q0007",
+    "status": "WITNESS",
+    "text": "Foliar silicate increased grain yield of drought-stressed wheat in field trials by eighteen percent (field2023).",
+    "preserved": [
+      "assertion"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "8303013d1a2913e8d028e74b",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 15,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0007-02-Q0007",
+    "status": "WITNESS",
+    "text": "The increase was measured at a foliar rate of two millilitres per litre (field2023).",
+    "preserved": [
+      "assertion"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "0098d2fb72298c3f0f2075f0",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 14,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0007-03-Q0007",
+    "status": "WITNESS",
+    "text": "Foliar silicate did not increase grain yield of drought-stressed wheat in field trials (null2021).",
+    "preserved": [
+      "negation"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "01f7f6d771fb83329ef6e9a8",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 14,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0007-04-Q0007",
+    "status": "WITNESS",
+    "text": "Some field trials report a yield increase, while others report no yield difference at the same foliar rate (review2019).",
+    "preserved": [
+      "negation"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "ad4c9cc1aab99b5e3c4563a0",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 19,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0008-01-Q0008",
+    "status": "WITNESS",
+    "text": "These field trials at a foliar rate of two millilitres per litre reported no yield difference between silicate and control plots (null2021).",
+    "preserved": [
+      "negation"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "d79c313d013c5c5eb84a6812",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 22,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0008-02-Q0008",
+    "status": "WITNESS",
+    "text": "Some field trials report a yield increase, while others report no yield difference at the same foliar rate (review2019).",
+    "preserved": [
+      "negation"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "b4995bb639f1afde6eb8cf7b",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 19,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0008-03-Q0008",
+    "status": "WITNESS",
+    "text": "Foliar silicate did not increase grain yield of drought-stressed wheat in field trials (null2021).",
+    "preserved": [
+      "negation"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "9291391c17729e7a973206f2",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 14,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0008-04-Q0008",
+    "status": "WITNESS",
+    "text": "This was a narrative review without a pooled effect size, and publication bias was not assessed (review2019).",
+    "preserved": [
+      "negation"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "ce6a0cc592b7da17100eb153",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 17,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0009-01-Q0009",
+    "status": "WITNESS",
+    "text": "Some field trials report a yield increase, while others report no yield difference at the same foliar rate (review2019).",
+    "preserved": [
+      "negation"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "813a4d2d0519b8f40b3a6a73",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 19,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0009-02-Q0009",
+    "status": "WITNESS",
+    "text": "Field evidence on foliar silicate and wheat yield is inconsistent across trials (review2019).",
+    "preserved": [
+      "assertion"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "4582f636b98e1e630e4a0719",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 13,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0009-03-Q0009",
+    "status": "WITNESS",
+    "text": "Foliar silicate did not increase grain yield of drought-stressed wheat in field trials (null2021).",
+    "preserved": [
+      "negation"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "232aaedc937a0aebf27479a2",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 14,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0009-04-Q0009",
+    "status": "WITNESS",
+    "text": "Foliar silicate increased grain yield of drought-stressed wheat in field trials by eighteen percent (field2023).",
+    "preserved": [
+      "assertion"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "ffe9d5039a01a2687869f3ac",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 15,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0010-01-Q0010",
+    "status": "WITNESS",
+    "text": "The increase was measured at a foliar rate of two millilitres per litre (field2023).",
+    "preserved": [
+      "assertion"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "407f3cce2e07008665ed36c0",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 14,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0010-02-Q0010",
+    "status": "WITNESS",
+    "text": "Foliar silicate increased grain yield of drought-stressed wheat in field trials by eighteen percent (field2023).",
+    "preserved": [
+      "assertion"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "f3b6571b3193de2337e7a5ab",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 15,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  },
+  {
+    "witness_id": "W-FRD-Q0010-03-Q0010",
+    "status": "WITNESS",
+    "text": "These field trials at a foliar rate of two millilitres per litre reported no yield difference between silicate and control plots (null2021).",
+    "preserved": [
+      "negation"
+    ],
+    "omitted": [],
+    "would_be_lost": "",
+    "repair_needed": "",
+    "call_key": "66deadc92b5739969b822233",
+    "parse_error": "",
+    "version": 1,
+    "ceiling": 60,
+    "mechanical": {
+      "words": 22,
+      "ceiling": 60,
+      "within_ceiling": true,
+      "numerals_not_in_parent": [],
+      "negation_dropped_warning": false,
+      "ok": true
+    }
+  }
+]

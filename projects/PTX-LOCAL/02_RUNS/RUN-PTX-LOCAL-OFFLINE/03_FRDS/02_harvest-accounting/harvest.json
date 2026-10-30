@@ -1,0 +1,824 @@
+{
+  "responses_processed": 40,
+  "candidates": 160,
+  "over_limit_not_extracted": [],
+  "sources_cited_in_answers": 56,
+  "sources_producing_frds": 53,
+  "under_harvested_sources": [
+    "Pentoxifylline-in-patients-with-ulcerative-colitis-treated-with-mesalamine-by-modulation.pdf.md",
+    "chung2014.pdf.md",
+    "vadiei1996.pdf.md"
+  ],
+  "per_response": [
+    {
+      "qid": "Q0001",
+      "response_id": "R-Q0001-A01",
+      "origin_ref": "RESP-c74a3782",
+      "frds": 4,
+      "over_limit": 0,
+      "review": {
+        "sources_cited_in_response": [
+          "Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md",
+          "staubach1998.pdf.md",
+          "li2018.pdf.md",
+          "kruuse2000.pdf.md",
+          "pharmaceuticals-19-00552.pdf.md"
+        ],
+        "cited_sources_without_frd": [],
+        "not_extracted": [],
+        "unresolved_citations_or_labels": [],
+        "gaps_and_unsupported_synthesis": []
+      },
+      "parse_error": ""
+    },
+    {
+      "qid": "Q0002",
+      "response_id": "R-Q0002-A01",
+      "origin_ref": "RESP-339109b8",
+      "frds": 4,
+      "over_limit": 0,
+      "review": {
+        "sources_cited_in_response": [
+          "shirazi2014.pdf.md",
+          "shirazi2015.pdf.md",
+          "glazener2011.pdf.md",
+          "ladi-seyedian2017.pdf.md"
+        ],
+        "cited_sources_without_frd": [],
+        "not_extracted": [],
+        "unresolved_citations_or_labels": [],
+        "gaps_and_unsupported_synthesis": []
+      },
+      "parse_error": ""
+    },
+    {
+      "qid": "Q0003",
+      "response_id": "R-Q0003-A01",
+      "origin_ref": "RESP-2fd3d8d5",
+      "frds": 4,
+      "over_limit": 0,
+      "review": {
+        "sources_cited_in_response": [
+          "shirazi2014.pdf.md",
+          "Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md",
+          "ladi-seyedian2017.pdf.md",
+          "pharmaceuticals-19-00552.pdf.md",
+          "Pentoxifylline-in-patients-with-ulcerative-colitis-treated-with-mesalamine-by-modulation.pdf.md"
+        ],
+        "cited_sources_without_frd": [],
+        "not_extracted": [],
+        "unresolved_citations_or_labels": [],
+        "gaps_and_unsupported_synthesis": []
+      },
+      "parse_error": ""
+    },
+    {
+      "qid": "Q0004",
+      "response_id": "R-Q0004-A01",
+      "origin_ref": "RESP-cf36c70b",
+      "frds": 4,
+      "over_limit": 0,
+      "review": {
+        "sources_cited_in_response": [
+          "2020ICU_icu-58-S68.pdf.md",
+          "anderson2011.pdf.md",
+          "pharmaceuticals-19-00552.pdf.md"
+        ],
+        "cited_sources_without_frd": [],
+        "not_extracted": [],
+        "unresolved_citations_or_labels": [],
+        "gaps_and_unsupported_synthesis": []
+      },
+      "parse_error": ""
+    },
+    {
+      "qid": "Q0005",
+      "response_id": "R-Q0005-A01",
+      "origin_ref": "RESP-fd91201c",
+      "frds": 4,
+      "over_limit": 0,
+      "review": {
+        "sources_cited_in_response": [
+          "anderson2011.pdf.md",
+          "zabel1989.pdf.md",
+          "pharmaceuticals-19-00552.pdf.md",
+          "kruuse2000.pdf.md",
+          "Pentoxifylline-in-patients-with-ulcerative-colitis-treated-with-mesalamine-by-modulation.pdf.md"
+        ],
+        "cited_sources_without_frd": [],
+        "not_extracted": [],
+        "unresolved_citations_or_labels": [],
+        "gaps_and_unsupported_synthesis": []
+      },
+      "parse_error": ""
+    },
+    {
+      "qid": "Q0006",
+      "response_id": "R-Q0006-A01",
+      "origin_ref": "RESP-67761fde",
+      "frds": 4,
+      "over_limit": 0,
+      "review": {
+        "sources_cited_in_response": [
+          "clemens2000.pdf.md",
+          "staubach1998.pdf.md",
+          "kruuse2000.pdf.md",
+          "pharmaceuticals-19-00552.pdf.md"
+        ],
+        "cited_sources_without_frd": [],
+        "not_extracted": [],
+        "unresolved_citations_or_labels": [],
+        "gaps_and_unsupported_synthesis": []
+      },
+      "parse_error": ""
+    },
+    {
+      "qid": "Q0007",
+      "response_id": "R-Q0007-A01",
+      "origin_ref": "RESP-38ebdf8f",
+      "frds": 4,
+      "over_limit": 0,
+      "review": {
+        "sources_cited_in_response": [
+          "fitzgerald2009.pdf.md",
+          "cornel2005.pdf.md",
+          "11255_2025_Article_4454.pdf.md",
+          "Pentoxifylline-in-patients-with-ulcerative-colitis-treated-with-mesalamine-by-modulation.pdf.md"
+        ],
+        "cited_sources_without_frd": [],
+        "not_extracted": [],
+        "unresolved_citations_or_labels": [],
+        "gaps_and_unsupported_synthesis": []
+      },
+      "parse_error": ""
+    },
+    {
+      "qid": "Q0008",
+      "response_id": "R-Q0008-A01",
+      "origin_ref": "RESP-778fff1e",
+      "frds": 4,
+      "over_limit": 0,
+      "review": {
+        "sources_cited_in_response": [
+          "fitzgerald2009.pdf.md",
+          "pharmaceuticals-19-00552.pdf.md",
+          "s00210-025-03845-1.pdf.md",
+          "kruuse2000.pdf.md"
+        ],
+        "cited_sources_without_frd": [],
+        "not_extracted": [],
+        "unresolved_citations_or_labels": [],
+        "gaps_and_unsupported_synthesis": []
+      },
+      "parse_error": ""
+    },
+    {
+      "qid": "Q0009",
+      "response_id": "R-Q0009-A01",
+      "origin_ref": "RESP-8556f658",
+      "frds": 4,
+      "over_limit": 0,
+      "review": {
+        "sources_cited_in_response": [
+          "he2010.pdf.md",
+          "hall2018.pdf.md",
+          "myers1995.pdf.md",
+          "wu1999.pdf.md"
+        ],
+        "cited_sources_without_frd": [],
+        "not_extracted": [],
+        "unresolved_citations_or_labels": [],
+        "gaps_and_unsupported_synthesis": []
+      },
+      "parse_error": ""
+    },
+    {
+      "qid": "Q0010",
+      "response_id": "R-Q0010-A01",
+      "origin_ref": "RESP-cd291e8f",
+      "frds": 4,
+      "over_limit": 0,
+      "review": {
+        "sources_cited_in_response": [
+          "he2010.pdf.md",
+          "delanian2003.pdf.md",
+          "pharmaceuticals-19-00552.pdf.md",
+          "clemens2000.pdf.md"
+        ],
+        "cited_sources_without_frd": [],
+        "not_extracted": [],
+        "unresolved_citations_or_labels": [],
+        "gaps_and_unsupported_synthesis": []
+      },
+      "parse_error": ""
+    },
+    {
+      "qid": "Q0011",
+      "response_id": "R-Q0011-A01",
+      "origin_ref": "RESP-d927db5a",
+      "frds": 4,
+      "over_limit": 0,
+      "review": {
+        "sources_cited_in_response": [
+          "kaplan1997.pdf.md",
+          "li2018.pdf.md",
+          "Barahona2009_Cushings_Syndrome.md",
+          "clemens2000.pdf.md",
+          "kruuse2000.pdf.md"
+        ],
+        "cited_sources_without_frd": [],
+        "not_extracted": [],
+        "unresolved_citations_or_labels": [],
+        "gaps_and_unsupported_synthesis": []
+      },
+      "parse_error": ""
+    },
+    {
+      "qid": "Q0012",
+      "response_id": "R-Q0012-A01",
+      "origin_ref": "RESP-7800d9d1",
+      "frds": 4,
+      "over_limit": 0,
+      "review": {
+        "sources_cited_in_response": [
+          "life-15-00613.pdf.md",
+          "li2018.pdf.md",
+          "zabel1989.pdf.md",
+          "11255_2025_Article_4454.pdf.md"
+        ],
+        "cited_sources_without_frd": [],
+        "not_extracted": [],
+        "unresolved_citations_or_labels": [],
+        "gaps_and_unsupported_synthesis": []
+      },
+      "parse_error": ""
+    },
+    {
+      "qid": "Q0013",
+      "response_id": "R-Q0013-A01",
+      "origin_ref": "RESP-7606dbcb",
+      "frds": 4,
+      "over_limit": 0,
+      "review": {
+        "sources_cited_in_response": [
+          "life-15-00613.pdf.md",
+          "zabel1989.pdf.md",
+          "pharmaceuticals-19-00552.pdf.md"
+        ],
+        "cited_sources_without_frd": [],
+        "not_extracted": [],
+        "unresolved_citations_or_labels": [],
+        "gaps_and_unsupported_synthesis": []
+      },
+      "parse_error": ""
+    },
+    {
+      "qid": "Q0014",
+      "response_id": "R-Q0014-A01",
+      "origin_ref": "RESP-f83d396c",
+      "frds": 4,
+      "over_limit": 0,
+      "review": {
+        "sources_cited_in_response": [
+          "masterson2017.pdf.md",
+          "MP75-18-RATES-AND-ADHERENCE-TO-PELVIC-FLOOR-PHYSICAL-THERAPY-FOR-MALE-PATIENTS-WITH-BENIGN.pdf.md",
+          "glazener2011.pdf.md",
+          "ladi-seyedian2017.pdf.md"
+        ],
+        "cited_sources_without_frd": [],
+        "not_extracted": [],
+        "unresolved_citations_or_labels": [],
+        "gaps_and_unsupported_synthesis": []
+      },
+      "parse_error": ""
+    },
+    {
+      "qid": "Q0015",
+      "response_id": "R-Q0015-A01",
+      "origin_ref": "RESP-8e042dcc",
+      "frds": 4,
+      "over_limit": 0,
+      "review": {
+        "sources_cited_in_response": [
+          "MP75-18-RATES-AND-ADHERENCE-TO-PELVIC-FLOOR-PHYSICAL-THERAPY-FOR-MALE-PATIENTS-WITH-BENIGN.pdf.md",
+          "Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md",
+          "ladi-seyedian2017.pdf.md",
+          "pharmaceuticals-19-00552.pdf.md",
+          "Pentoxifylline-in-patients-with-ulcerative-colitis-treated-with-mesalamine-by-modulation.pdf.md"
+        ],
+        "cited_sources_without_frd": [],
+        "not_extracted": [],
+        "unresolved_citations_or_labels": [],
+        "gaps_and_unsupported_synthesis": []
+      },
+      "parse_error": ""
+    },
+    {
+      "qid": "Q0016",
+      "response_id": "R-Q0016-A01",
+      "origin_ref": "RESP-61903385",
+      "frds": 4,
+      "over_limit": 0,
+      "review": {
+        "sources_cited_in_response": [
+          "osman2018.pdf.md",
+          "li2018.pdf.md",
+          "ladi-seyedian2017.pdf.md",
+          "chung2014.pdf.md"
+        ],
+        "cited_sources_without_frd": [],
+        "not_extracted": [],
+        "unresolved_citations_or_labels": [],
+        "gaps_and_unsupported_synthesis": []
+      },
+      "parse_error": ""
+    },
+    {
+      "qid": "Q0017",
+      "response_id": "R-Q0017-A01",
+      "origin_ref": "RESP-f1002051",
+      "frds": 4,
+      "over_limit": 0,
+      "review": {
+        "sources_cited_in_response": [
+          "s00345-024-04974-7.pdf.md",
+          "rademakers2016.pdf.md",
+          "zabel1989.pdf.md",
+          "pharmaceuticals-19-00552.pdf.md"
+        ],
+        "cited_sources_without_frd": [],
+        "not_extracted": [],
+        "unresolved_citations_or_labels": [],
+        "gaps_and_unsupported_synthesis": []
+      },
+      "parse_error": ""
+    },
+    {
+      "qid": "Q0018",
+      "response_id": "R-Q0018-A01",
+      "origin_ref": "RESP-154b7baa",
+      "frds": 4,
+      "over_limit": 0,
+      "review": {
+        "sources_cited_in_response": [
+          "s00345-024-04974-7.pdf.md",
+          "luke1989.pdf.md",
+          "11255_2025_Article_4454.pdf.md",
+          "kruuse2000.pdf.md",
+          "fakioglu2004.pdf.md"
+        ],
+        "cited_sources_without_frd": [],
+        "not_extracted": [],
+        "unresolved_citations_or_labels": [],
+        "gaps_and_unsupported_synthesis": []
+      },
+      "parse_error": ""
+    },
+    {
+      "qid": "Q0019",
+      "response_id": "R-Q0019-A01",
+      "origin_ref": "RESP-53782f74",
+      "frds": 4,
+      "over_limit": 0,
+      "review": {
+        "sources_cited_in_response": [
+          "vanreijn-baggen2022.pdf.md",
+          "bortnick2019.pdf.md",
+          "11255_2025_Article_4454.pdf.md",
+          "Pentoxifylline-in-patients-with-ulcerative-colitis-treated-with-mesalamine-by-modulation.pdf.md"
+        ],
+        "cited_sources_without_frd": [],
+        "not_extracted": [],
+        "unresolved_citations_or_labels": [],
+        "gaps_and_unsupported_synthesis": []
+      },
+      "parse_error": ""
+    },
+    {
+      "qid": "Q0020",
+      "response_id": "R-Q0020-A01",
+      "origin_ref": "RESP-1ea9a0c0",
+      "frds": 4,
+      "over_limit": 0,
+      "review": {
+        "sources_cited_in_response": [
+          "bortnick2019.pdf.md",
+          "pharmaceuticals-19-00552.pdf.md",
+          "s00210-025-03845-1.pdf.md",
+          "kruuse2000.pdf.md"
+        ],
+        "cited_sources_without_frd": [],
+        "not_extracted": [],
+        "unresolved_citations_or_labels": [],
+        "gaps_and_unsupported_synthesis": []
+      },
+      "parse_error": ""
+    },
+    {
+      "qid": "Q0021",
+      "response_id": "R-Q0021-A01",
+      "origin_ref": "RESP-5f82823b",
+      "frds": 4,
+      "over_limit": 0,
+      "review": {
+        "sources_cited_in_response": [
+          "bortnick2020.pdf.md",
+          "staubach1998.pdf.md",
+          "li2018.pdf.md"
+        ],
+        "cited_sources_without_frd": [],
+        "not_extracted": [],
+        "unresolved_citations_or_labels": [],
+        "gaps_and_unsupported_synthesis": []
+      },
+      "parse_error": ""
+    },
+    {
+      "qid": "Q0022",
+      "response_id": "R-Q0022-A01",
+      "origin_ref": "RESP-0cadac02",
+      "frds": 4,
+      "over_limit": 0,
+      "review": {
+        "sources_cited_in_response": [
+          "bowton1989.pdf.md",
+          "dezube1993.pdf.md",
+          "delanian2003.pdf.md",
+          "pharmaceuticals-19-00552.pdf.md"
+        ],
+        "cited_sources_without_frd": [],
+        "not_extracted": [],
+        "unresolved_citations_or_labels": [],
+        "gaps_and_unsupported_synthesis": []
+      },
+      "parse_error": ""
+    },
+    {
+      "qid": "Q0023",
+      "response_id": "R-Q0023-A01",
+      "origin_ref": "RESP-af215d33",
+      "frds": 4,
+      "over_limit": 0,
+      "review": {
+        "sources_cited_in_response": [
+          "dezube1993.pdf.md",
+          "stokes2022.pdf.md",
+          "fakioglu2004.pdf.md",
+          "kruuse2000.pdf.md",
+          "pharmaceuticals-19-00552.pdf.md"
+        ],
+        "cited_sources_without_frd": [],
+        "not_extracted": [],
+        "unresolved_citations_or_labels": [],
+        "gaps_and_unsupported_synthesis": []
+      },
+      "parse_error": ""
+    },
+    {
+      "qid": "Q0024",
+      "response_id": "R-Q0024-A01",
+      "origin_ref": "RESP-934146db",
+      "frds": 4,
+      "over_limit": 0,
+      "review": {
+        "sources_cited_in_response": [
+          "immunology00076-0102.pdf.md",
+          "fdp03812573_1.pdf.md",
+          "zabel1989.pdf.md",
+          "11255_2025_Article_4454.pdf.md"
+        ],
+        "cited_sources_without_frd": [],
+        "not_extracted": [],
+        "unresolved_citations_or_labels": [],
+        "gaps_and_unsupported_synthesis": []
+      },
+      "parse_error": ""
+    },
+    {
+      "qid": "Q0025",
+      "response_id": "R-Q0025-A01",
+      "origin_ref": "RESP-e011c0c3",
+      "frds": 4,
+      "over_limit": 0,
+      "review": {
+        "sources_cited_in_response": [
+          "immunology00076-0102.pdf.md",
+          "zabel1989.pdf.md",
+          "pharmaceuticals-19-00552.pdf.md"
+        ],
+        "cited_sources_without_frd": [],
+        "not_extracted": [],
+        "unresolved_citations_or_labels": [],
+        "gaps_and_unsupported_synthesis": []
+      },
+      "parse_error": ""
+    },
+    {
+      "qid": "Q0026",
+      "response_id": "R-Q0026-A01",
+      "origin_ref": "RESP-f0e02d99",
+      "frds": 4,
+      "over_limit": 0,
+      "review": {
+        "sources_cited_in_response": [
+          "kruuse2000.pdf.md",
+          "staubach1998.pdf.md",
+          "Nyanyo2024_Cushings_Disease_A.md",
+          "parker2000.pdf.md",
+          "ridings1994.pdf.md"
+        ],
+        "cited_sources_without_frd": [],
+        "not_extracted": [],
+        "unresolved_citations_or_labels": [],
+        "gaps_and_unsupported_synthesis": []
+      },
+      "parse_error": ""
+    },
+    {
+      "qid": "Q0027",
+      "response_id": "R-Q0027-A01",
+      "origin_ref": "RESP-f0efb159",
+      "frds": 4,
+      "over_limit": 0,
+      "review": {
+        "sources_cited_in_response": [
+          "roberts1993.pdf.md",
+          "strieter1988.pdf.md",
+          "Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md",
+          "ladi-seyedian2017.pdf.md"
+        ],
+        "cited_sources_without_frd": [],
+        "not_extracted": [],
+        "unresolved_citations_or_labels": [],
+        "gaps_and_unsupported_synthesis": []
+      },
+      "parse_error": ""
+    },
+    {
+      "qid": "Q0028",
+      "response_id": "R-Q0028-A01",
+      "origin_ref": "RESP-a593fc71",
+      "frds": 4,
+      "over_limit": 0,
+      "review": {
+        "sources_cited_in_response": [
+          "strieter1988.pdf.md",
+          "pharmaceuticals-19-00552.pdf.md",
+          "MP75-18-RATES-AND-ADHERENCE-TO-PELVIC-FLOOR-PHYSICAL-THERAPY-FOR-MALE-PATIENTS-WITH-BENIGN.pdf.md",
+          "parker2000.pdf.md"
+        ],
+        "cited_sources_without_frd": [],
+        "not_extracted": [],
+        "unresolved_citations_or_labels": [],
+        "gaps_and_unsupported_synthesis": []
+      },
+      "parse_error": ""
+    },
+    {
+      "qid": "Q0029",
+      "response_id": "R-Q0029-A01",
+      "origin_ref": "RESP-fe6e1343",
+      "frds": 4,
+      "over_limit": 0,
+      "review": {
+        "sources_cited_in_response": [
+          "delanian2003.pdf.md",
+          "delanian2005.pdf.md",
+          "zabel1989.pdf.md",
+          "pharmaceuticals-19-00552.pdf.md"
+        ],
+        "cited_sources_without_frd": [],
+        "not_extracted": [],
+        "unresolved_citations_or_labels": [],
+        "gaps_and_unsupported_synthesis": []
+      },
+      "parse_error": ""
+    },
+    {
+      "qid": "Q0030",
+      "response_id": "R-Q0030-A01",
+      "origin_ref": "RESP-7363896f",
+      "frds": 4,
+      "over_limit": 0,
+      "review": {
+        "sources_cited_in_response": [
+          "delanian2005.pdf.md",
+          "luke1989.pdf.md",
+          "11255_2025_Article_4454.pdf.md",
+          "kruuse2000.pdf.md",
+          "fakioglu2004.pdf.md"
+        ],
+        "cited_sources_without_frd": [],
+        "not_extracted": [],
+        "unresolved_citations_or_labels": [],
+        "gaps_and_unsupported_synthesis": []
+      },
+      "parse_error": ""
+    },
+    {
+      "qid": "Q0031",
+      "response_id": "R-Q0031-A01",
+      "origin_ref": "RESP-031e7eff",
+      "frds": 4,
+      "over_limit": 0,
+      "review": {
+        "sources_cited_in_response": [
+          "s00210-025-03845-1.pdf.md",
+          "glazener2011.pdf.md",
+          "hall2018.pdf.md",
+          "staubach1998.pdf.md",
+          "pharmaceuticals-19-00552.pdf.md"
+        ],
+        "cited_sources_without_frd": [],
+        "not_extracted": [],
+        "unresolved_citations_or_labels": [],
+        "gaps_and_unsupported_synthesis": []
+      },
+      "parse_error": ""
+    },
+    {
+      "qid": "Q0032",
+      "response_id": "R-Q0032-A01",
+      "origin_ref": "RESP-087da30e",
+      "frds": 4,
+      "over_limit": 0,
+      "review": {
+        "sources_cited_in_response": [
+          "parker2000.pdf.md",
+          "ma2018.pdf.md",
+          "pharmaceuticals-19-00552.pdf.md"
+        ],
+        "cited_sources_without_frd": [],
+        "not_extracted": [],
+        "unresolved_citations_or_labels": [],
+        "gaps_and_unsupported_synthesis": []
+      },
+      "parse_error": ""
+    },
+    {
+      "qid": "Q0033",
+      "response_id": "R-Q0033-A01",
+      "origin_ref": "RESP-674b7ec3",
+      "frds": 4,
+      "over_limit": 0,
+      "review": {
+        "sources_cited_in_response": [
+          "parker2000.pdf.md",
+          "myers1995.pdf.md",
+          "wu1999.pdf.md",
+          "vadiei1996.pdf.md",
+          "kruuse2000.pdf.md"
+        ],
+        "cited_sources_without_frd": [],
+        "not_extracted": [],
+        "unresolved_citations_or_labels": [],
+        "gaps_and_unsupported_synthesis": []
+      },
+      "parse_error": ""
+    },
+    {
+      "qid": "Q0034",
+      "response_id": "R-Q0034-A01",
+      "origin_ref": "RESP-8d3ef9b2",
+      "frds": 4,
+      "over_limit": 0,
+      "review": {
+        "sources_cited_in_response": [
+          "ridings1994.pdf.md",
+          "wystrychowski2014.pdf.md",
+          "delanian2003.pdf.md",
+          "pharmaceuticals-19-00552.pdf.md"
+        ],
+        "cited_sources_without_frd": [],
+        "not_extracted": [],
+        "unresolved_citations_or_labels": [],
+        "gaps_and_unsupported_synthesis": []
+      },
+      "parse_error": ""
+    },
+    {
+      "qid": "Q0035",
+      "response_id": "R-Q0035-A01",
+      "origin_ref": "RESP-70d7ccaa",
+      "frds": 4,
+      "over_limit": 0,
+      "review": {
+        "sources_cited_in_response": [
+          "wystrychowski2014.pdf.md",
+          "stokes2022.pdf.md",
+          "fakioglu2004.pdf.md",
+          "kruuse2000.pdf.md",
+          "pharmaceuticals-19-00552.pdf.md"
+        ],
+        "cited_sources_without_frd": [],
+        "not_extracted": [],
+        "unresolved_citations_or_labels": [],
+        "gaps_and_unsupported_synthesis": []
+      },
+      "parse_error": ""
+    },
+    {
+      "qid": "Q0036",
+      "response_id": "R-Q0036-A01",
+      "origin_ref": "RESP-1ec0d87c",
+      "frds": 4,
+      "over_limit": 0,
+      "review": {
+        "sources_cited_in_response": [
+          "nisi2013.pdf.md",
+          "pharmaceuticals-19-00552.pdf.md",
+          "Barahona2009_Cushings_Syndrome.md",
+          "masterson2017.pdf.md",
+          "parker2000.pdf.md"
+        ],
+        "cited_sources_without_frd": [],
+        "not_extracted": [],
+        "unresolved_citations_or_labels": [],
+        "gaps_and_unsupported_synthesis": []
+      },
+      "parse_error": ""
+    },
+    {
+      "qid": "Q0037",
+      "response_id": "R-Q0037-A01",
+      "origin_ref": "RESP-f264af5f",
+      "frds": 4,
+      "over_limit": 0,
+      "review": {
+        "sources_cited_in_response": [
+          "raison2013.pdf.md",
+          "spinas1991.pdf.md",
+          "zabel1989.pdf.md",
+          "pharmaceuticals-19-00552.pdf.md"
+        ],
+        "cited_sources_without_frd": [],
+        "not_extracted": [],
+        "unresolved_citations_or_labels": [],
+        "gaps_and_unsupported_synthesis": []
+      },
+      "parse_error": ""
+    },
+    {
+      "qid": "Q0038",
+      "response_id": "R-Q0038-A01",
+      "origin_ref": "RESP-144cd921",
+      "frds": 4,
+      "over_limit": 0,
+      "review": {
+        "sources_cited_in_response": [
+          "raison2013.pdf.md",
+          "glazener2011.pdf.md",
+          "ladi-seyedian2017.pdf.md"
+        ],
+        "cited_sources_without_frd": [],
+        "not_extracted": [],
+        "unresolved_citations_or_labels": [],
+        "gaps_and_unsupported_synthesis": []
+      },
+      "parse_error": ""
+    },
+    {
+      "qid": "Q0039",
+      "response_id": "R-Q0039-A01",
+      "origin_ref": "RESP-fe87d34c",
+      "frds": 4,
+      "over_limit": 0,
+      "review": {
+        "sources_cited_in_response": [
+          "shah2016.pdf.md",
+          "roerink2019.pdf.md",
+          "Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md",
+          "ladi-seyedian2017.pdf.md"
+        ],
+        "cited_sources_without_frd": [],
+        "not_extracted": [],
+        "unresolved_citations_or_labels": [],
+        "gaps_and_unsupported_synthesis": []
+      },
+      "parse_error": ""
+    },
+    {
+      "qid": "Q0040",
+      "response_id": "R-Q0040-A01",
+      "origin_ref": "RESP-d5940fdd",
+      "frds": 4,
+      "over_limit": 0,
+      "review": {
+        "sources_cited_in_response": [
+          "shah2016.pdf.md",
+          "pharmaceuticals-19-00552.pdf.md",
+          "MP75-18-RATES-AND-ADHERENCE-TO-PELVIC-FLOOR-PHYSICAL-THERAPY-FOR-MALE-PATIENTS-WITH-BENIGN.pdf.md",
+          "parker2000.pdf.md"
+        ],
+        "cited_sources_without_frd": [],
+        "not_extracted": [],
+        "unresolved_citations_or_labels": [],
+        "gaps_and_unsupported_synthesis": []
+      },
+      "parse_error": ""
+    }
+  ],
+  "provenance_counts": {
+    "OWN_RESULT": 160
+  }
+}

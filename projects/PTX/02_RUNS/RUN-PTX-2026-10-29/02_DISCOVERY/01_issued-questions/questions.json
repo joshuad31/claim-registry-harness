@@ -1,0 +1,1874 @@
+[
+  {
+    "qid": "Q0001",
+    "run_id": "PTX-Full-Run-2026-10-24",
+    "round": 1,
+    "order_in_round": 1,
+    "text": "I want a defensible trial, not another attractive story. In Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md, what incremental voiding benefit did adding pentoxifylline actually produce versus tamsulosin alone? Report design, randomized/analyzed denominators, dose, duration, baseline and between-group changes in flow, residual urine and symptom scores, with uncertainty and harms. State whether prior tamsulosin nonresponse, shy bladder, and completed ineffective versus abandoned pelvic-floor treatment were eligibility criteria or measured. Use (exact source filename, actual section heading) beside substantive claims; distinguish own trial data from references. Answer in 900 words or less.",
+    "firewall": {
+      "status": "IMPORTED",
+      "repairs": [],
+      "original_text": "I want a defensible trial, not another attractive story. In Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md, what incremental voiding benefit did adding pentoxifylline actually produce versus tamsulosin alone? Report design, randomized/analyzed denominators, dose, duration, baseline and between-group changes in flow, residual urine and symptom scores, with uncertainty and harms. State whether prior tamsulosin nonresponse, shy bladder, and completed ineffective versus abandoned pelvic-floor treatment were eligibility criteria or measured. Use (exact source filename, actual section heading) beside substantive claims; distinguish own trial data from references. Answer in 900 words or less."
+    },
+    "sources_as_sent": [
+      "Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md"
+    ],
+    "sources_resolved": {
+      "Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md": "Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md"
+    },
+    "target": "D2-incremental-benefit",
+    "packet_priority_id": null,
+    "header_version": "PTX_for_urination_header_v4.1.md",
+    "issued": "",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0001-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": [],
+    "notebook_lane": "primary",
+    "imported_from": "ChatGPTs folder/04 Quest/questions/PTX-Full-Run-2026-10-24-Q0001.md"
+  },
+  {
+    "qid": "Q0002",
+    "run_id": "PTX-Full-Run-2026-10-24",
+    "round": 1,
+    "order_in_round": 2,
+    "text": "The strongest bladder experiment must carry real functional weight if this trial deserves funding. Using shirazi2015.pdf.md and shirazi2014.pdf.md, what does oral pentoxifylline change in obstructed rat bladder function versus structure, and does treatment begin before established dysfunction or after it? Report dose, route, groups, timing, contractile and structural results including null or adverse findings; distinguish prevention from reversal, direct observations from inferred causal bridges, and identify what could transfer to a human trial versus what remains unmeasured. Cite (exact source filename, actual section heading) beside substantive claims.",
+    "firewall": {
+      "status": "IMPORTED",
+      "repairs": [],
+      "original_text": "The strongest bladder experiment must carry real functional weight if this trial deserves funding. Using shirazi2015.pdf.md and shirazi2014.pdf.md, what does oral pentoxifylline change in obstructed rat bladder function versus structure, and does treatment begin before established dysfunction or after it? Report dose, route, groups, timing, contractile and structural results including null or adverse findings; distinguish prevention from reversal, direct observations from inferred causal bridges, and identify what could transfer to a human trial versus what remains unmeasured. Cite (exact source filename, actual section heading) beside substantive claims."
+    },
+    "sources_as_sent": [
+      "shirazi2015.pdf.md",
+      "shirazi2014.pdf.md"
+    ],
+    "sources_resolved": {
+      "shirazi2015.pdf.md": "shirazi2015.pdf.md",
+      "shirazi2014.pdf.md": "shirazi2014.pdf.md"
+    },
+    "target": "functional-structural-timing",
+    "packet_priority_id": null,
+    "header_version": "PTX_for_urination_header_v4.1.md",
+    "issued": "",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0002-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": [],
+    "notebook_lane": "clone-1",
+    "imported_from": "ChatGPTs folder/04 Quest/questions/PTX-Full-Run-2026-10-24-Q0002.md"
+  },
+  {
+    "qid": "Q0003",
+    "run_id": "PTX-Full-Run-2026-10-24",
+    "round": 1,
+    "order_in_round": 3,
+    "text": "I refuse to mistake an obstruction label for the physiological problem a drug must fix. Using osman2018.pdf.md and rademakers2016.pdf.md, which pretreatment measurements distinguish detrusor underactivity, outlet obstruction, and their coexistence in men with persistent voiding difficulty? Give operational criteria, relevant quantitative thresholds and limitations, and what symptom or alpha-blocker nonresponse cannot diagnose. Identify a defensible measurable enrollment phenotype and the comparator measurements that would prevent a false mechanistic claim. Cite (exact source filename, actual section heading) beside substantive claims.",
+    "firewall": {
+      "status": "IMPORTED",
+      "repairs": [],
+      "original_text": "I refuse to mistake an obstruction label for the physiological problem a drug must fix. Using osman2018.pdf.md and rademakers2016.pdf.md, which pretreatment measurements distinguish detrusor underactivity, outlet obstruction, and their coexistence in men with persistent voiding difficulty? Give operational criteria, relevant quantitative thresholds and limitations, and what symptom or alpha-blocker nonresponse cannot diagnose. Identify a defensible measurable enrollment phenotype and the comparator measurements that would prevent a false mechanistic claim. Cite (exact source filename, actual section heading) beside substantive claims."
+    },
+    "sources_as_sent": [
+      "osman2018.pdf.md",
+      "rademakers2016.pdf.md"
+    ],
+    "sources_resolved": {
+      "osman2018.pdf.md": "osman2018.pdf.md",
+      "rademakers2016.pdf.md": "rademakers2016.pdf.md"
+    },
+    "target": "phenotype",
+    "packet_priority_id": null,
+    "header_version": "PTX_for_urination_header_v4.1.md",
+    "issued": "",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0003-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": [],
+    "notebook_lane": "clone-2",
+    "imported_from": "ChatGPTs folder/04 Quest/questions/PTX-Full-Run-2026-10-24-Q0003.md"
+  },
+  {
+    "qid": "Q0004",
+    "run_id": "PTX-Full-Run-2026-10-24",
+    "round": 1,
+    "order_in_round": 4,
+    "text": "Calling every pelvic-floor failure the same would ruin this trial. Using he2010.pdf.md and kaplan1997.pdf.md, what objective evidence shows dysfunctional sphincter coordination causing difficult emptying despite prior medical treatment, and what changes after biofeedback? Give selection criteria, prior therapies, enrolled and analyzed denominators, flow/residual/pressure results, program and follow-up. Separate completed-treatment nonresponse from abandonment and distinguish relaxation or coordination training from strengthening. State the strongest alternative explanation and what remains unmeasured. Cite (exact source filename, actual section heading) beside substantive claims.",
+    "firewall": {
+      "status": "IMPORTED",
+      "repairs": [],
+      "original_text": "Calling every pelvic-floor failure the same would ruin this trial. Using he2010.pdf.md and kaplan1997.pdf.md, what objective evidence shows dysfunctional sphincter coordination causing difficult emptying despite prior medical treatment, and what changes after biofeedback? Give selection criteria, prior therapies, enrolled and analyzed denominators, flow/residual/pressure results, program and follow-up. Separate completed-treatment nonresponse from abandonment and distinguish relaxation or coordination training from strengthening. State the strongest alternative explanation and what remains unmeasured. Cite (exact source filename, actual section heading) beside substantive claims."
+    },
+    "sources_as_sent": [
+      "he2010.pdf.md",
+      "kaplan1997.pdf.md"
+    ],
+    "sources_resolved": {
+      "he2010.pdf.md": "he2010.pdf.md",
+      "kaplan1997.pdf.md": "kaplan1997.pdf.md"
+    },
+    "target": "coordination-alternative",
+    "packet_priority_id": null,
+    "header_version": "PTX_for_urination_header_v4.1.md",
+    "issued": "",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0004-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": [],
+    "notebook_lane": "clone-3",
+    "imported_from": "ChatGPTs folder/04 Quest/questions/PTX-Full-Run-2026-10-24-Q0004.md"
+  },
+  {
+    "qid": "Q0005",
+    "run_id": "PTX-Full-Run-2026-10-24",
+    "round": 1,
+    "order_in_round": 5,
+    "text": "A claim that men simply will not persist with pelvic-floor therapy needs actual denominators. Using masterson2017.pdf.md and anderson2011.pdf.md, distinguish prescribed treatment exposure, attendance, home adherence, completion, abandonment for perceived inefficacy, and completed-treatment nonresponse. Give actual counts/reasons, intervention components, male urinary outcomes versus pain outcomes, cointerventions and selection limitations. What could honestly define either prior-treatment history in a future voiding trial? Cite (exact source filename, actual section heading) beside substantive claims.",
+    "firewall": {
+      "status": "IMPORTED",
+      "repairs": [],
+      "original_text": "A claim that men simply will not persist with pelvic-floor therapy needs actual denominators. Using masterson2017.pdf.md and anderson2011.pdf.md, distinguish prescribed treatment exposure, attendance, home adherence, completion, abandonment for perceived inefficacy, and completed-treatment nonresponse. Give actual counts/reasons, intervention components, male urinary outcomes versus pain outcomes, cointerventions and selection limitations. What could honestly define either prior-treatment history in a future voiding trial? Cite (exact source filename, actual section heading) beside substantive claims."
+    },
+    "sources_as_sent": [
+      "masterson2017.pdf.md",
+      "anderson2011.pdf.md"
+    ],
+    "sources_resolved": {
+      "masterson2017.pdf.md": "masterson2017.pdf.md",
+      "anderson2011.pdf.md": "anderson2011.pdf.md"
+    },
+    "target": "pelvic-history",
+    "packet_priority_id": null,
+    "header_version": "PTX_for_urination_header_v4.1.md",
+    "issued": "",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0005-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": [],
+    "notebook_lane": "clone-4",
+    "imported_from": "ChatGPTs folder/04 Quest/questions/PTX-Full-Run-2026-10-24-Q0005.md"
+  },
+  {
+    "qid": "Q0006",
+    "run_id": "PTX-Full-Run-2026-10-24",
+    "round": 1,
+    "order_in_round": 6,
+    "text": "I want the rapid perfusion case tested where it can fail. Using bowton1989.pdf.md, what human pentoxifylline exposure produced which measured blood-flow change, on what time course and in which vascular bed? Give design, denominator, dose/route, comparator, quantitative results and contrary/null findings. Distinguish measured flow from inferred tissue function and identify exactly what must transfer before a rapid bladder benefit prediction is defensible. Cite (exact source filename, actual section heading) beside substantive claims. Answer in 900 words or less.",
+    "firewall": {
+      "status": "IMPORTED",
+      "repairs": [],
+      "original_text": "I want the rapid perfusion case tested where it can fail. Using bowton1989.pdf.md, what human pentoxifylline exposure produced which measured blood-flow change, on what time course and in which vascular bed? Give design, denominator, dose/route, comparator, quantitative results and contrary/null findings. Distinguish measured flow from inferred tissue function and identify exactly what must transfer before a rapid bladder benefit prediction is defensible. Cite (exact source filename, actual section heading) beside substantive claims. Answer in 900 words or less."
+    },
+    "sources_as_sent": [
+      "bowton1989.pdf.md"
+    ],
+    "sources_resolved": {
+      "bowton1989.pdf.md": "bowton1989.pdf.md"
+    },
+    "target": "rapid-perfusion",
+    "packet_priority_id": null,
+    "header_version": "PTX_for_urination_header_v4.1.md",
+    "issued": "",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0006-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": [],
+    "notebook_lane": "clone-5",
+    "imported_from": "ChatGPTs folder/04 Quest/questions/PTX-Full-Run-2026-10-24-Q0006.md"
+  },
+  {
+    "qid": "Q0007",
+    "run_id": "PTX-Full-Run-2026-10-24",
+    "round": 2,
+    "order_in_round": 1,
+    "text": "A rapid drug effect is useless to our trial if the required exposure is unattainable. Using nisi2013.pdf.md, report the measured parent PTX and named metabolite plasma Cmax, Tmax and half-life after the actual oral formulation/dose, with units and patient groups. Identify total versus unbound and plasma versus tissue measurements explicitly; do not equate dose with concentration. What exposure comparison is and is not justified for an oral voiding trial? Cite (exact filename, actual section heading) beside substantive claims. Answer in 900 words or less.",
+    "firewall": {
+      "status": "IMPORTED",
+      "repairs": [],
+      "original_text": "A rapid drug effect is useless to our trial if the required exposure is unattainable. Using nisi2013.pdf.md, report the measured parent PTX and named metabolite plasma Cmax, Tmax and half-life after the actual oral formulation/dose, with units and patient groups. Identify total versus unbound and plasma versus tissue measurements explicitly; do not equate dose with concentration. What exposure comparison is and is not justified for an oral voiding trial? Cite (exact filename, actual section heading) beside substantive claims. Answer in 900 words or less."
+    },
+    "sources_as_sent": [
+      "nisi2013.pdf.md"
+    ],
+    "sources_resolved": {
+      "nisi2013.pdf.md": "nisi2013.pdf.md"
+    },
+    "target": "exposure-PK",
+    "packet_priority_id": null,
+    "header_version": "PTX_for_urination_header_v4.1.md",
+    "issued": "",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0007-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": [],
+    "notebook_lane": "clone-5",
+    "imported_from": "ChatGPTs folder/04 Quest/questions/PTX-Full-Run-2026-10-24-Q0007.md"
+  },
+  {
+    "qid": "Q0008",
+    "run_id": "PTX-Full-Run-2026-10-24",
+    "round": 2,
+    "order_in_round": 2,
+    "text": "Our anti-inflammatory rationale must survive the actual potency limits. Using roberts1993.pdf.md and strieter1988.pdf.md, which measured cellular responses to PTX occurred at which concentrations and incubation times, and which responses remained unchanged? Distinguish parent from metabolites, experimental medium from human exposure, and direct findings from the missing bladder-function bridge. Cite (exact filename, actual section heading) beside each substantive claim.",
+    "firewall": {
+      "status": "IMPORTED",
+      "repairs": [],
+      "original_text": "Our anti-inflammatory rationale must survive the actual potency limits. Using roberts1993.pdf.md and strieter1988.pdf.md, which measured cellular responses to PTX occurred at which concentrations and incubation times, and which responses remained unchanged? Distinguish parent from metabolites, experimental medium from human exposure, and direct findings from the missing bladder-function bridge. Cite (exact filename, actual section heading) beside each substantive claim."
+    },
+    "sources_as_sent": [
+      "roberts1993.pdf.md",
+      "strieter1988.pdf.md"
+    ],
+    "sources_resolved": {
+      "roberts1993.pdf.md": "roberts1993.pdf.md",
+      "strieter1988.pdf.md": "strieter1988.pdf.md"
+    },
+    "target": "inflammatory-potency",
+    "packet_priority_id": null,
+    "header_version": "PTX_for_urination_header_v4.1.md",
+    "issued": "",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0008-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": [],
+    "notebook_lane": "clone-1",
+    "imported_from": "ChatGPTs folder/04 Quest/questions/PTX-Full-Run-2026-10-24-Q0008.md"
+  },
+  {
+    "qid": "Q0009",
+    "run_id": "PTX-Full-Run-2026-10-24",
+    "round": 2,
+    "order_in_round": 3,
+    "text": "The structural-recovery case must show reversal, not borrow credit from prevention. Using delanian2003.pdf.md and delanian2005.pdf.md, what randomized contrasts separate PTX alone, tocopherol alone and their combination for established radiation fibrosis, and what do onset and withdrawal findings actually show? Give population, doses, denominators, duration, endpoints and key quantitative contrasts. Distinguish source findings from transfer assumptions to established bladder dysfunction and state any failure of PTX monotherapy. Cite (exact filename, actual section heading) beside substantive claims.",
+    "firewall": {
+      "status": "IMPORTED",
+      "repairs": [],
+      "original_text": "The structural-recovery case must show reversal, not borrow credit from prevention. Using delanian2003.pdf.md and delanian2005.pdf.md, what randomized contrasts separate PTX alone, tocopherol alone and their combination for established radiation fibrosis, and what do onset and withdrawal findings actually show? Give population, doses, denominators, duration, endpoints and key quantitative contrasts. Distinguish source findings from transfer assumptions to established bladder dysfunction and state any failure of PTX monotherapy. Cite (exact filename, actual section heading) beside substantive claims."
+    },
+    "sources_as_sent": [
+      "delanian2003.pdf.md",
+      "delanian2005.pdf.md"
+    ],
+    "sources_resolved": {
+      "delanian2003.pdf.md": "delanian2003.pdf.md",
+      "delanian2005.pdf.md": "delanian2005.pdf.md"
+    },
+    "target": "established-fibrosis-combination",
+    "packet_priority_id": null,
+    "header_version": "PTX_for_urination_header_v4.1.md",
+    "issued": "",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0009-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": [],
+    "notebook_lane": "clone-2",
+    "imported_from": "ChatGPTs folder/04 Quest/questions/PTX-Full-Run-2026-10-24-Q0009.md"
+  },
+  {
+    "qid": "Q0010",
+    "run_id": "PTX-Full-Run-2026-10-24",
+    "round": 2,
+    "order_in_round": 4,
+    "text": "The individual failure count matters, and group-average improvement cannot substitute for it. In he2010.pdf.md, does the source explicitly report how many patients completed treatment without improvement or abandoned treatment because it seemed ineffective? Quote the exact relevant wording and denominators, or mark each individual count unreported. Do not infer zero nonresponders from a significant mean change. Cite (exact filename, actual section heading). Answer in 250 words or less.",
+    "firewall": {
+      "status": "IMPORTED",
+      "repairs": [],
+      "original_text": "The individual failure count matters, and group-average improvement cannot substitute for it. In he2010.pdf.md, does the source explicitly report how many patients completed treatment without improvement or abandoned treatment because it seemed ineffective? Quote the exact relevant wording and denominators, or mark each individual count unreported. Do not infer zero nonresponders from a significant mean change. Cite (exact filename, actual section heading). Answer in 250 words or less."
+    },
+    "sources_as_sent": [
+      "he2010.pdf.md"
+    ],
+    "sources_resolved": {
+      "he2010.pdf.md": "he2010.pdf.md"
+    },
+    "target": "Q0004-source-fidelity",
+    "packet_priority_id": null,
+    "header_version": "PTX_for_urination_header_v4.1.md",
+    "issued": "",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0010-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": [],
+    "notebook_lane": "clone-3",
+    "imported_from": "ChatGPTs folder/04 Quest/questions/PTX-Full-Run-2026-10-24-Q0010.md"
+  },
+  {
+    "qid": "Q0011",
+    "run_id": "PTX-Full-Run-2026-10-24",
+    "round": 2,
+    "order_in_round": 5,
+    "text": "The onset of benefit decides whether this trial can distinguish rapid function from slow recovery. In Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md, at which actual visits were urinary outcomes measured, and what earliest between-group benefit or lack of benefit was observed? Report visit times, endpoint-specific findings, and whether post-withdrawal persistence was tested. Do not infer onset from a final 12-week result. Cite (exact filename, actual section heading). Answer in 300 words or less.",
+    "firewall": {
+      "status": "IMPORTED",
+      "repairs": [],
+      "original_text": "The onset of benefit decides whether this trial can distinguish rapid function from slow recovery. In Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md, at which actual visits were urinary outcomes measured, and what earliest between-group benefit or lack of benefit was observed? Report visit times, endpoint-specific findings, and whether post-withdrawal persistence was tested. Do not infer onset from a final 12-week result. Cite (exact filename, actual section heading). Answer in 300 words or less."
+    },
+    "sources_as_sent": [
+      "Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md"
+    ],
+    "sources_resolved": {
+      "Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md": "Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md"
+    },
+    "target": "human-onset-withdrawal",
+    "packet_priority_id": null,
+    "header_version": "PTX_for_urination_header_v4.1.md",
+    "issued": "",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0011-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": [],
+    "notebook_lane": "primary",
+    "imported_from": "ChatGPTs folder/04 Quest/questions/PTX-Full-Run-2026-10-24-Q0011.md"
+  },
+  {
+    "qid": "Q0012",
+    "run_id": "PTX-Full-Run-2026-10-24",
+    "round": 2,
+    "order_in_round": 6,
+    "text": "Our cohort cannot be invented from a referral statistic. In MP75-18-RATES-AND-ADHERENCE-TO-PELVIC-FLOOR-PHYSICAL-THERAPY-FOR-MALE-PATIENTS-WITH-BENIGN.pdf.md, use ONLY MP75-18, excluding adjacent abstracts. What are the actual referral, scheduling and attendance denominators and stated reasons for nonattendance? Does it measure abandonment because treatment seemed ineffective or completed-treatment nonresponse? Cite the exact filename and MP75-18 heading; mark unreported items. Answer in 300 words or less.",
+    "firewall": {
+      "status": "IMPORTED",
+      "repairs": [],
+      "original_text": "Our cohort cannot be invented from a referral statistic. In MP75-18-RATES-AND-ADHERENCE-TO-PELVIC-FLOOR-PHYSICAL-THERAPY-FOR-MALE-PATIENTS-WITH-BENIGN.pdf.md, use ONLY MP75-18, excluding adjacent abstracts. What are the actual referral, scheduling and attendance denominators and stated reasons for nonattendance? Does it measure abandonment because treatment seemed ineffective or completed-treatment nonresponse? Cite the exact filename and MP75-18 heading; mark unreported items. Answer in 300 words or less."
+    },
+    "sources_as_sent": [
+      "MP75-18-RATES-AND-ADHERENCE-TO-PELVIC-FLOOR-PHYSICAL-THERAPY-FOR-MALE-PATIENTS-WITH-BENIGN.pdf.md"
+    ],
+    "sources_resolved": {
+      "MP75-18-RATES-AND-ADHERENCE-TO-PELVIC-FLOOR-PHYSICAL-THERAPY-FOR-MALE-PATIENTS-WITH-BENIGN.pdf.md": "MP75-18-RATES-AND-ADHERENCE-TO-PELVIC-FLOOR-PHYSICAL-THERAPY-FOR-MALE-PATIENTS-WITH-BENIGN.pdf.md"
+    },
+    "target": "referral-versus-failure",
+    "packet_priority_id": null,
+    "header_version": "PTX_for_urination_header_v4.1.md",
+    "issued": "",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0012-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": [],
+    "notebook_lane": "clone-4",
+    "imported_from": "ChatGPTs folder/04 Quest/questions/PTX-Full-Run-2026-10-24-Q0012.md"
+  },
+  {
+    "qid": "Q0013",
+    "run_id": "PTX-Full-Run-2026-10-24",
+    "round": 3,
+    "order_in_round": 1,
+    "text": "A trial case must not hide harms behind a small urology sample. In s00210-025-03845-1.pdf.md, what dose-specific PTX adverse-event and discontinuation results are reported across depression trials, with denominators, cointerventions, follow-up and ascertainment limits? Separate review pooling from primary cohorts and identify what cannot transfer to older men taking an alpha-blocker. Cite (exact filename, actual section heading). Answer in 350 words or less.",
+    "firewall": {
+      "status": "IMPORTED",
+      "repairs": [],
+      "original_text": "A trial case must not hide harms behind a small urology sample. In s00210-025-03845-1.pdf.md, what dose-specific PTX adverse-event and discontinuation results are reported across depression trials, with denominators, cointerventions, follow-up and ascertainment limits? Separate review pooling from primary cohorts and identify what cannot transfer to older men taking an alpha-blocker. Cite (exact filename, actual section heading). Answer in 350 words or less."
+    },
+    "sources_as_sent": [
+      "s00210-025-03845-1.pdf.md"
+    ],
+    "sources_resolved": {
+      "s00210-025-03845-1.pdf.md": "s00210-025-03845-1.pdf.md"
+    },
+    "target": "safety-transfer",
+    "packet_priority_id": null,
+    "header_version": "PTX_for_urination_header_v4.1.md",
+    "issued": "",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0013-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": [],
+    "notebook_lane": "primary",
+    "imported_from": "ChatGPTs folder/04 Quest/questions/PTX-Full-Run-2026-10-24-Q0013.md"
+  },
+  {
+    "qid": "Q0014",
+    "run_id": "PTX-Full-Run-2026-10-24",
+    "round": 3,
+    "order_in_round": 2,
+    "text": "A kidney prevention experiment cannot silently become a bladder reversal claim. In ma2018.pdf.md, identify the species, obstruction site, PTX dose/route and start time, then report the key paired fibrosis and functional results by timepoint. Was established injury ever treated after delay, and which result challenges transfer to chronic difficult voiding? Cite (exact filename, actual section heading). Answer in 350 words or less.",
+    "firewall": {
+      "status": "IMPORTED",
+      "repairs": [],
+      "original_text": "A kidney prevention experiment cannot silently become a bladder reversal claim. In ma2018.pdf.md, identify the species, obstruction site, PTX dose/route and start time, then report the key paired fibrosis and functional results by timepoint. Was established injury ever treated after delay, and which result challenges transfer to chronic difficult voiding? Cite (exact filename, actual section heading). Answer in 350 words or less."
+    },
+    "sources_as_sent": [
+      "ma2018.pdf.md"
+    ],
+    "sources_resolved": {
+      "ma2018.pdf.md": "ma2018.pdf.md"
+    },
+    "target": "renal-prevention-transfer",
+    "packet_priority_id": null,
+    "header_version": "PTX_for_urination_header_v4.1.md",
+    "issued": "",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0014-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": [],
+    "notebook_lane": "clone-3",
+    "imported_from": "ChatGPTs folder/04 Quest/questions/PTX-Full-Run-2026-10-24-Q0014.md"
+  },
+  {
+    "qid": "Q0015",
+    "run_id": "PTX-Full-Run-2026-10-24",
+    "round": 3,
+    "order_in_round": 3,
+    "text": "A biological marker can improve while the patient does not. In parker2000.pdf.md, what did PTX change and fail to change after hemorrhage and abdominal sepsis, at which dose and timing, compared with what control? Give group sizes and principal organ-function/survival results, then specify the narrow lesson and the transfer limits for a bladder therapeutic rationale. Cite (exact filename, actual section heading). Answer in 300 words or less.",
+    "firewall": {
+      "status": "IMPORTED",
+      "repairs": [],
+      "original_text": "A biological marker can improve while the patient does not. In parker2000.pdf.md, what did PTX change and fail to change after hemorrhage and abdominal sepsis, at which dose and timing, compared with what control? Give group sizes and principal organ-function/survival results, then specify the narrow lesson and the transfer limits for a bladder therapeutic rationale. Cite (exact filename, actual section heading). Answer in 300 words or less."
+    },
+    "sources_as_sent": [
+      "parker2000.pdf.md"
+    ],
+    "sources_resolved": {
+      "parker2000.pdf.md": "parker2000.pdf.md"
+    },
+    "target": "marker-function-adverse",
+    "packet_priority_id": null,
+    "header_version": "PTX_for_urination_header_v4.1.md",
+    "issued": "",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0015-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": [],
+    "notebook_lane": "clone-5",
+    "imported_from": "ChatGPTs folder/04 Quest/questions/PTX-Full-Run-2026-10-24-Q0015.md"
+  },
+  {
+    "qid": "Q0016",
+    "run_id": "PTX-Full-Run-2026-10-24",
+    "round": 3,
+    "order_in_round": 4,
+    "text": "Timing can kill an otherwise attractive mechanism. In ridings1994.pdf.md, compare PTX before versus after established septic shock: dose, route, timing, group sizes, cardiopulmonary and inflammatory endpoints, and principal null findings. What is actually shown about prevention versus treatment, and what cannot be inferred for established bladder dysfunction? Cite (exact filename, actual section heading). Answer in 300 words or less.",
+    "firewall": {
+      "status": "IMPORTED",
+      "repairs": [],
+      "original_text": "Timing can kill an otherwise attractive mechanism. In ridings1994.pdf.md, compare PTX before versus after established septic shock: dose, route, timing, group sizes, cardiopulmonary and inflammatory endpoints, and principal null findings. What is actually shown about prevention versus treatment, and what cannot be inferred for established bladder dysfunction? Cite (exact filename, actual section heading). Answer in 300 words or less."
+    },
+    "sources_as_sent": [
+      "ridings1994.pdf.md"
+    ],
+    "sources_resolved": {
+      "ridings1994.pdf.md": "ridings1994.pdf.md"
+    },
+    "target": "timing-adverse",
+    "packet_priority_id": null,
+    "header_version": "PTX_for_urination_header_v4.1.md",
+    "issued": "",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0016-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": [],
+    "notebook_lane": "clone-1",
+    "imported_from": "ChatGPTs folder/04 Quest/questions/PTX-Full-Run-2026-10-24-Q0016.md"
+  },
+  {
+    "qid": "Q0017",
+    "run_id": "PTX-Full-Run-2026-10-24",
+    "round": 3,
+    "order_in_round": 5,
+    "text": "Our completed-treatment failure subgroup needs actual individual counts. In kaplan1997.pdf.md, report the printed responder/nonresponder definition, numerator, denominator and follow-up, including the 35/43 and 83% wording if present. Does the source actually report attendance, completion, dropout or abandonment because therapy seemed ineffective? Quote the relevant sentences and distinguish arithmetic discrepancy from missing data. Cite (exact filename, actual section heading). Answer in 300 words or less.",
+    "firewall": {
+      "status": "IMPORTED",
+      "repairs": [],
+      "original_text": "Our completed-treatment failure subgroup needs actual individual counts. In kaplan1997.pdf.md, report the printed responder/nonresponder definition, numerator, denominator and follow-up, including the 35/43 and 83% wording if present. Does the source actually report attendance, completion, dropout or abandonment because therapy seemed ineffective? Quote the relevant sentences and distinguish arithmetic discrepancy from missing data. Cite (exact filename, actual section heading). Answer in 300 words or less."
+    },
+    "sources_as_sent": [
+      "kaplan1997.pdf.md"
+    ],
+    "sources_resolved": {
+      "kaplan1997.pdf.md": "kaplan1997.pdf.md"
+    },
+    "target": "G001-Kaplan-repair",
+    "packet_priority_id": "R001-P2",
+    "header_version": "PTX_for_urination_header_v4.1.md",
+    "issued": "",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0017-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": [],
+    "notebook_lane": "clone-2",
+    "imported_from": "ChatGPTs folder/04 Quest/questions/PTX-Full-Run-2026-10-24-Q0017.md"
+  },
+  {
+    "qid": "Q0018",
+    "run_id": "PTX-Full-Run-2026-10-24",
+    "round": 3,
+    "order_in_round": 6,
+    "text": "A storage-symptom exercise trial must not become evidence for difficult emptying after failed therapy. In s00345-024-04974-7.pdf.md, what did adding pelvic-floor training to silodosin change versus silodosin alone, in which enrolled men and at what follow-up? Report group denominators, actual exercise goal, urinary endpoints, prior alpha-blocker status and treatment adherence. Separate urgency/frequency from flow or residual measurements and state whether prior pelvic-floor failure was studied. Cite (exact filename, actual section heading). Answer in 350 words or less.",
+    "firewall": {
+      "status": "IMPORTED",
+      "repairs": [],
+      "original_text": "A storage-symptom exercise trial must not become evidence for difficult emptying after failed therapy. In s00345-024-04974-7.pdf.md, what did adding pelvic-floor training to silodosin change versus silodosin alone, in which enrolled men and at what follow-up? Report group denominators, actual exercise goal, urinary endpoints, prior alpha-blocker status and treatment adherence. Separate urgency/frequency from flow or residual measurements and state whether prior pelvic-floor failure was studied. Cite (exact filename, actual section heading). Answer in 350 words or less."
+    },
+    "sources_as_sent": [
+      "s00345-024-04974-7.pdf.md"
+    ],
+    "sources_resolved": {
+      "s00345-024-04974-7.pdf.md": "s00345-024-04974-7.pdf.md"
+    },
+    "target": "pelvic-comparator-storage",
+    "packet_priority_id": null,
+    "header_version": "PTX_for_urination_header_v4.1.md",
+    "issued": "",
+    "status": "UNUSABLE",
+    "response_ids": [
+      "R-Q0018-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": [],
+    "notebook_lane": "clone-4",
+    "imported_from": "ChatGPTs folder/04 Quest/questions/PTX-Full-Run-2026-10-24-Q0018.md"
+  },
+  {
+    "qid": "Q0019",
+    "run_id": "PTX-Full-Run-2026-10-24",
+    "round": 4,
+    "order_in_round": 1,
+    "text": "A protective mechanism must survive delayed-treatment testing. In wystrychowski2014.pdf.md, which PTX administration-time contrasts produced versus failed to produce renal functional or injury protection? Give species, doses/routes, exact timing, control and principal quantitative results. Distinguish ischemia prevention from reversal and state the narrow transfer limit for chronic bladder disease. Cite (exact filename, actual section heading). Answer in 300 words or less.",
+    "firewall": {
+      "status": "IMPORTED",
+      "repairs": [],
+      "original_text": "A protective mechanism must survive delayed-treatment testing. In wystrychowski2014.pdf.md, which PTX administration-time contrasts produced versus failed to produce renal functional or injury protection? Give species, doses/routes, exact timing, control and principal quantitative results. Distinguish ischemia prevention from reversal and state the narrow transfer limit for chronic bladder disease. Cite (exact filename, actual section heading). Answer in 300 words or less."
+    },
+    "sources_as_sent": [
+      "wystrychowski2014.pdf.md"
+    ],
+    "sources_resolved": {
+      "wystrychowski2014.pdf.md": "wystrychowski2014.pdf.md"
+    },
+    "target": "delayed-treatment-adverse",
+    "packet_priority_id": null,
+    "header_version": "PTX_for_urination_header_v4.1.md",
+    "issued": "",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0019-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": [],
+    "notebook_lane": "primary",
+    "imported_from": "ChatGPTs folder/04 Quest/questions/PTX-Full-Run-2026-10-24-Q0019.md"
+  },
+  {
+    "qid": "Q0020",
+    "run_id": "PTX-Full-Run-2026-10-24",
+    "round": 4,
+    "order_in_round": 2,
+    "text": "A trial needs a real recruitable phenotype, not multiplication of unrelated prevalence figures. In 2020ICU_icu-58-S68.pdf.md, which estimates concern community symptoms versus referred or urodynamically diagnosed male detrusor underactivity, with what denominators and age ranges? Can any estimate identify US men with BPH, shy bladder and failed alpha-blocker plus prior pelvic-floor failure or abandonment? Localize the missing conditional overlaps. Cite (exact filename, actual section heading). Answer in 300 words or less.",
+    "firewall": {
+      "status": "IMPORTED",
+      "repairs": [],
+      "original_text": "A trial needs a real recruitable phenotype, not multiplication of unrelated prevalence figures. In 2020ICU_icu-58-S68.pdf.md, which estimates concern community symptoms versus referred or urodynamically diagnosed male detrusor underactivity, with what denominators and age ranges? Can any estimate identify US men with BPH, shy bladder and failed alpha-blocker plus prior pelvic-floor failure or abandonment? Localize the missing conditional overlaps. Cite (exact filename, actual section heading). Answer in 300 words or less."
+    },
+    "sources_as_sent": [
+      "2020ICU_icu-58-S68.pdf.md"
+    ],
+    "sources_resolved": {
+      "2020ICU_icu-58-S68.pdf.md": "2020ICU_icu-58-S68.pdf.md"
+    },
+    "target": "cohort-size-conditional",
+    "packet_priority_id": null,
+    "header_version": "PTX_for_urination_header_v4.1.md",
+    "issued": "",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0020-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": [],
+    "notebook_lane": "clone-3",
+    "imported_from": "ChatGPTs folder/04 Quest/questions/PTX-Full-Run-2026-10-24-Q0020.md"
+  },
+  {
+    "qid": "Q0021",
+    "run_id": "PTX-Full-Run-2026-10-24",
+    "round": 4,
+    "order_in_round": 3,
+    "text": "A selected clinic series must not become a national cohort estimate. In li2018.pdf.md, what diagnostic criteria, source population, sex/age composition and denominators produced the reported underactive-bladder cases? Which baseline symptoms, pressure-flow findings and coexisting obstruction could define an informative male trial stratum, and which conditional features of prior treatment failure or shy bladder remain unmeasured? Cite (exact filename, actual section heading). Answer in 300 words or less.",
+    "firewall": {
+      "status": "IMPORTED",
+      "repairs": [],
+      "original_text": "A selected clinic series must not become a national cohort estimate. In li2018.pdf.md, what diagnostic criteria, source population, sex/age composition and denominators produced the reported underactive-bladder cases? Which baseline symptoms, pressure-flow findings and coexisting obstruction could define an informative male trial stratum, and which conditional features of prior treatment failure or shy bladder remain unmeasured? Cite (exact filename, actual section heading). Answer in 300 words or less."
+    },
+    "sources_as_sent": [
+      "li2018.pdf.md"
+    ],
+    "sources_resolved": {
+      "li2018.pdf.md": "li2018.pdf.md"
+    },
+    "target": "clinical-phenotype-denominator",
+    "packet_priority_id": null,
+    "header_version": "PTX_for_urination_header_v4.1.md",
+    "issued": "",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0021-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": [],
+    "notebook_lane": "clone-5",
+    "imported_from": "ChatGPTs folder/04 Quest/questions/PTX-Full-Run-2026-10-24-Q0021.md"
+  },
+  {
+    "qid": "Q0022",
+    "run_id": "PTX-Full-Run-2026-10-24",
+    "round": 4,
+    "order_in_round": 4,
+    "text": "A future comparator needs the actual delivered coordination program and its functional limits. In clemens2000.pdf.md, report enrolled and evaluable denominators, treatment attendance, reasons for incomplete attendance, actual relaxation/strengthening/bladder-training components, and measured urinary outcomes versus unmeasured flow or residual. Which results concern completers rather than all enrolled? Cite (exact filename, actual section heading). Answer in 300 words or less.",
+    "firewall": {
+      "status": "IMPORTED",
+      "repairs": [],
+      "original_text": "A future comparator needs the actual delivered coordination program and its functional limits. In clemens2000.pdf.md, report enrolled and evaluable denominators, treatment attendance, reasons for incomplete attendance, actual relaxation/strengthening/bladder-training components, and measured urinary outcomes versus unmeasured flow or residual. Which results concern completers rather than all enrolled? Cite (exact filename, actual section heading). Answer in 300 words or less."
+    },
+    "sources_as_sent": [
+      "clemens2000.pdf.md"
+    ],
+    "sources_resolved": {
+      "clemens2000.pdf.md": "clemens2000.pdf.md"
+    },
+    "target": "coordination-comparator-exposure",
+    "packet_priority_id": "R002-P2",
+    "header_version": "PTX_for_urination_header_v4.1.md",
+    "issued": "",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0022-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": [],
+    "notebook_lane": "clone-1",
+    "imported_from": "ChatGPTs folder/04 Quest/questions/PTX-Full-Run-2026-10-24-Q0022.md"
+  },
+  {
+    "qid": "Q0023",
+    "run_id": "PTX-Full-Run-2026-10-24",
+    "round": 4,
+    "order_in_round": 5,
+    "text": "A pain-score response cannot stand in for improved emptying. In cornel2005.pdf.md, what male selection, enrolled/completed denominators, biofeedback exposure, separate urinary outcome and pelvic-floor tone changes were reported? Distinguish treatment completion, individual nonresponse and dropout reasons, and identify any measured flow/residual versus symptom-only effect. Cite (exact filename, actual section heading). Answer in 300 words or less.",
+    "firewall": {
+      "status": "IMPORTED",
+      "repairs": [],
+      "original_text": "A pain-score response cannot stand in for improved emptying. In cornel2005.pdf.md, what male selection, enrolled/completed denominators, biofeedback exposure, separate urinary outcome and pelvic-floor tone changes were reported? Distinguish treatment completion, individual nonresponse and dropout reasons, and identify any measured flow/residual versus symptom-only effect. Cite (exact filename, actual section heading). Answer in 300 words or less."
+    },
+    "sources_as_sent": [
+      "cornel2005.pdf.md"
+    ],
+    "sources_resolved": {
+      "cornel2005.pdf.md": "cornel2005.pdf.md"
+    },
+    "target": "pelvic-tone-function",
+    "packet_priority_id": "R002-P2",
+    "header_version": "PTX_for_urination_header_v4.1.md",
+    "issued": "",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0023-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": [],
+    "notebook_lane": "clone-2",
+    "imported_from": "ChatGPTs folder/04 Quest/questions/PTX-Full-Run-2026-10-24-Q0023.md"
+  },
+  {
+    "qid": "Q0024",
+    "run_id": "PTX-Full-Run-2026-10-24",
+    "round": 4,
+    "order_in_round": 6,
+    "text": "A direct comparator trial must not be lost to filename routing. Locate Magdalena Hagovska et al. 2024, The effect of pelvic floor muscle training in men with benign prostatic hyperplasia and overactive bladder (s00345-024-04974-7.pdf.md). What are its enrolled/completed group sizes, silodosin control, exercise goal, prior treatment status and separate storage versus emptying outcomes? Cite the actual filename and section; if unavailable state precisely that retrieval gap, without replacing it with another trial. Answer in 350 words or less.",
+    "firewall": {
+      "status": "IMPORTED",
+      "repairs": [],
+      "original_text": "A direct comparator trial must not be lost to filename routing. Locate Magdalena Hagovska et al. 2024, The effect of pelvic floor muscle training in men with benign prostatic hyperplasia and overactive bladder (s00345-024-04974-7.pdf.md). What are its enrolled/completed group sizes, silodosin control, exercise goal, prior treatment status and separate storage versus emptying outcomes? Cite the actual filename and section; if unavailable state precisely that retrieval gap, without replacing it with another trial. Answer in 350 words or less."
+    },
+    "sources_as_sent": [
+      "Magdalena Hagovska 2024 The effect of pelvic floor muscle training in men with benign prostatic hyperplasia and overactive bladder"
+    ],
+    "sources_resolved": {
+      "Magdalena Hagovska 2024 The effect of pelvic floor muscle training in men with benign prostatic hyperplasia and overactive bladder": "UNRESOLVED_NAME"
+    },
+    "target": "P027-focused-retrieval-repair",
+    "packet_priority_id": null,
+    "header_version": "PTX_for_urination_header_v4.1.md",
+    "issued": "",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0024-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": [],
+    "notebook_lane": "clone-4",
+    "imported_from": "ChatGPTs folder/04 Quest/questions/PTX-Full-Run-2026-10-24-Q0024.md"
+  },
+  {
+    "qid": "Q0025",
+    "run_id": "PTX-Full-Run-2026-10-24",
+    "round": 5,
+    "order_in_round": 1,
+    "text": "The leading non-drug alternative deserves a real comparator test. In fitzgerald2009.pdf.md, what male-specific urinary outcomes, responder counts and discontinuation data distinguish myofascial physical therapy from global therapeutic massage? Give randomization denominators, actual intervention exposure, follow-up and male versus pooled results; state whether flow/residual or prior ineffective pelvic-floor treatment was measured. Cite (exact filename, actual section heading). Answer in 300 words or less.",
+    "firewall": {
+      "status": "IMPORTED",
+      "repairs": [],
+      "original_text": "The leading non-drug alternative deserves a real comparator test. In fitzgerald2009.pdf.md, what male-specific urinary outcomes, responder counts and discontinuation data distinguish myofascial physical therapy from global therapeutic massage? Give randomization denominators, actual intervention exposure, follow-up and male versus pooled results; state whether flow/residual or prior ineffective pelvic-floor treatment was measured. Cite (exact filename, actual section heading). Answer in 300 words or less."
+    },
+    "sources_as_sent": [
+      "fitzgerald2009.pdf.md"
+    ],
+    "sources_resolved": {
+      "fitzgerald2009.pdf.md": "fitzgerald2009.pdf.md"
+    },
+    "target": "manual-comparator-male",
+    "packet_priority_id": "R002-P2",
+    "header_version": "PTX_for_urination_header_v4.1.md",
+    "issued": "",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0025-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": [],
+    "notebook_lane": "primary",
+    "imported_from": "ChatGPTs folder/04 Quest/questions/PTX-Full-Run-2026-10-24-Q0025.md"
+  },
+  {
+    "qid": "Q0026",
+    "run_id": "PTX-Full-Run-2026-10-24",
+    "round": 5,
+    "order_in_round": 2,
+    "text": "Calling all pelvic-floor exercise equivalent would make the comparator scientifically empty. In hall2018.pdf.md, how do male urinary-dysfunction programs differ in strengthening, relaxation, coordination, supervision and home dose, and what reporting gaps prevent judging adequate prior treatment exposure? Give the review denominator and the most consequential quantitative reporting findings, preserving dependence on included trials. Cite (exact filename, actual section heading). Answer in 300 words or less.",
+    "firewall": {
+      "status": "IMPORTED",
+      "repairs": [],
+      "original_text": "Calling all pelvic-floor exercise equivalent would make the comparator scientifically empty. In hall2018.pdf.md, how do male urinary-dysfunction programs differ in strengthening, relaxation, coordination, supervision and home dose, and what reporting gaps prevent judging adequate prior treatment exposure? Give the review denominator and the most consequential quantitative reporting findings, preserving dependence on included trials. Cite (exact filename, actual section heading). Answer in 300 words or less."
+    },
+    "sources_as_sent": [
+      "hall2018.pdf.md"
+    ],
+    "sources_resolved": {
+      "hall2018.pdf.md": "hall2018.pdf.md"
+    },
+    "target": "adequate-pelvic-treatment-exposure",
+    "packet_priority_id": null,
+    "header_version": "PTX_for_urination_header_v4.1.md",
+    "issued": "",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0026-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": [],
+    "notebook_lane": "clone-3",
+    "imported_from": "ChatGPTs folder/04 Quest/questions/PTX-Full-Run-2026-10-24-Q0026.md"
+  },
+  {
+    "qid": "Q0027",
+    "run_id": "PTX-Full-Run-2026-10-24",
+    "round": 5,
+    "order_in_round": 3,
+    "text": "The anti-inflammatory rationale needs an actual human oral exposure bridge. In immunology00076-0102.pdf.md, what administered PTX regimen changed stimulated IL-1beta, IL-6, IL-8 or TNF release in human cells, with design, denominator, timing, affected and unchanged findings? Separate in-vivo dosing from ex-vivo stimulation and measured plasma/tissue exposure. What necessary step toward a bladder-function trial is established versus unmeasured? Cite (exact filename, actual section heading). Answer in 300 words or less.",
+    "firewall": {
+      "status": "IMPORTED",
+      "repairs": [],
+      "original_text": "The anti-inflammatory rationale needs an actual human oral exposure bridge. In immunology00076-0102.pdf.md, what administered PTX regimen changed stimulated IL-1beta, IL-6, IL-8 or TNF release in human cells, with design, denominator, timing, affected and unchanged findings? Separate in-vivo dosing from ex-vivo stimulation and measured plasma/tissue exposure. What necessary step toward a bladder-function trial is established versus unmeasured? Cite (exact filename, actual section heading). Answer in 300 words or less."
+    },
+    "sources_as_sent": [
+      "immunology00076-0102.pdf.md"
+    ],
+    "sources_resolved": {
+      "immunology00076-0102.pdf.md": "immunology00076-0102.pdf.md"
+    },
+    "target": "human-inflammatory-exposure",
+    "packet_priority_id": "R002-P2",
+    "header_version": "PTX_for_urination_header_v4.1.md",
+    "issued": "",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0027-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": [],
+    "notebook_lane": "clone-5",
+    "imported_from": "ChatGPTs folder/04 Quest/questions/PTX-Full-Run-2026-10-24-Q0027.md"
+  },
+  {
+    "qid": "Q0028",
+    "run_id": "PTX-Full-Run-2026-10-24",
+    "round": 5,
+    "order_in_round": 4,
+    "text": "A generalized perfusion story must face the controlled human vascular test. In kruuse2000.pdf.md, what PTX dose/route and design changed or failed to change regional cerebral flow, large-artery measures and systemic hemodynamics in healthy subjects, at what times? Give denominators and principal contrasts, then state what this does and does not test about rapid benefit in an ischemic bladder subgroup. Cite (exact filename, actual section heading). Answer in 300 words or less.",
+    "firewall": {
+      "status": "IMPORTED",
+      "repairs": [],
+      "original_text": "A generalized perfusion story must face the controlled human vascular test. In kruuse2000.pdf.md, what PTX dose/route and design changed or failed to change regional cerebral flow, large-artery measures and systemic hemodynamics in healthy subjects, at what times? Give denominators and principal contrasts, then state what this does and does not test about rapid benefit in an ischemic bladder subgroup. Cite (exact filename, actual section heading). Answer in 300 words or less."
+    },
+    "sources_as_sent": [
+      "kruuse2000.pdf.md"
+    ],
+    "sources_resolved": {
+      "kruuse2000.pdf.md": "kruuse2000.pdf.md"
+    },
+    "target": "healthy-human-vascular-adverse",
+    "packet_priority_id": "R003-P1",
+    "header_version": "PTX_for_urination_header_v4.1.md",
+    "issued": "",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0028-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": [],
+    "notebook_lane": "clone-1",
+    "imported_from": "ChatGPTs folder/04 Quest/questions/PTX-Full-Run-2026-10-24-Q0028.md"
+  },
+  {
+    "qid": "Q0029",
+    "run_id": "PTX-Full-Run-2026-10-24",
+    "round": 5,
+    "order_in_round": 5,
+    "text": "The TNF story needs human target engagement rather than a borrowed cell-culture label. In dezube1993.pdf.md, what oral PTX dose, duration, patient selection and sample size changed TNF expression or release, with what measurement and comparison? Report relevant null findings and tolerability, distinguish target change from clinical functional benefit, and state the limits of transfer to bladder dysfunction. Cite (exact filename, actual section heading). Answer in 300 words or less.",
+    "firewall": {
+      "status": "IMPORTED",
+      "repairs": [],
+      "original_text": "The TNF story needs human target engagement rather than a borrowed cell-culture label. In dezube1993.pdf.md, what oral PTX dose, duration, patient selection and sample size changed TNF expression or release, with what measurement and comparison? Report relevant null findings and tolerability, distinguish target change from clinical functional benefit, and state the limits of transfer to bladder dysfunction. Cite (exact filename, actual section heading). Answer in 300 words or less."
+    },
+    "sources_as_sent": [
+      "dezube1993.pdf.md"
+    ],
+    "sources_resolved": {
+      "dezube1993.pdf.md": "dezube1993.pdf.md"
+    },
+    "target": "human-TNF-target-engagement",
+    "packet_priority_id": "R003-P1",
+    "header_version": "PTX_for_urination_header_v4.1.md",
+    "issued": "",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0029-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": [],
+    "notebook_lane": "clone-2",
+    "imported_from": "ChatGPTs folder/04 Quest/questions/PTX-Full-Run-2026-10-24-Q0029.md"
+  },
+  {
+    "qid": "Q0030",
+    "run_id": "PTX-Full-Run-2026-10-24",
+    "round": 5,
+    "order_in_round": 6,
+    "text": "A pooled adherence percentage cannot define men who abandoned ineffective voiding therapy. In life-15-00613.pdf.md, what adherence definitions, populations and denominators underlie the pooled estimates, and which evidence actually concerns men with difficult emptying rather than women with incontinence or postoperative strengthening? Identify dependence on included supplied studies and which needed attrition/nonresponse fields remain unreported. Cite (exact filename, actual section heading). Answer in 250 words or less.",
+    "firewall": {
+      "status": "IMPORTED",
+      "repairs": [],
+      "original_text": "A pooled adherence percentage cannot define men who abandoned ineffective voiding therapy. In life-15-00613.pdf.md, what adherence definitions, populations and denominators underlie the pooled estimates, and which evidence actually concerns men with difficult emptying rather than women with incontinence or postoperative strengthening? Identify dependence on included supplied studies and which needed attrition/nonresponse fields remain unreported. Cite (exact filename, actual section heading). Answer in 250 words or less."
+    },
+    "sources_as_sent": [
+      "life-15-00613.pdf.md"
+    ],
+    "sources_resolved": {
+      "life-15-00613.pdf.md": "life-15-00613.pdf.md"
+    },
+    "target": "adherence-population-transfer",
+    "packet_priority_id": null,
+    "header_version": "PTX_for_urination_header_v4.1.md",
+    "issued": "",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0030-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": [],
+    "notebook_lane": "clone-4",
+    "imported_from": "ChatGPTs folder/04 Quest/questions/PTX-Full-Run-2026-10-24-Q0030.md"
+  },
+  {
+    "qid": "Q0031",
+    "run_id": "PTX-Full-Run-2026-10-24",
+    "round": 6,
+    "order_in_round": 1,
+    "text": "Hypertonicity treatment must earn its place as the leading mechanistic alternative. In vanreijn-baggen2022.pdf.md, what male-specific controlled evidence links pelvic-floor relaxation or manual therapy to urinary improvement rather than pain alone? State study/population denominators, comparator, actual outcome type and important methodological gaps; distinguish included primary trials from independent corroboration. Cite (exact filename, actual section heading). Answer in 250 words or less.",
+    "firewall": {
+      "status": "IMPORTED",
+      "repairs": [],
+      "original_text": "Hypertonicity treatment must earn its place as the leading mechanistic alternative. In vanreijn-baggen2022.pdf.md, what male-specific controlled evidence links pelvic-floor relaxation or manual therapy to urinary improvement rather than pain alone? State study/population denominators, comparator, actual outcome type and important methodological gaps; distinguish included primary trials from independent corroboration. Cite (exact filename, actual section heading). Answer in 250 words or less."
+    },
+    "sources_as_sent": [
+      "vanreijn-baggen2022.pdf.md"
+    ],
+    "sources_resolved": {
+      "vanreijn-baggen2022.pdf.md": "vanreijn-baggen2022.pdf.md"
+    },
+    "target": "hypertonicity-alternative",
+    "packet_priority_id": "R003-P1",
+    "header_version": "PTX_for_urination_header_v4.1.md",
+    "issued": "",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0031-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": [],
+    "notebook_lane": "primary",
+    "imported_from": "ChatGPTs folder/04 Quest/questions/PTX-Full-Run-2026-10-24-Q0031.md"
+  },
+  {
+    "qid": "Q0032",
+    "run_id": "PTX-Full-Run-2026-10-24",
+    "round": 6,
+    "order_in_round": 2,
+    "text": "The clinical emptying signal must survive correct table reading. In Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md, transcribe only the PVR rows from Tables 1 and 4 with actual column headings, arm names, denominators, baseline/end/change labels, units and SD-versus-SE notation. Identify which printed test/p-value compares which cells; flag ambiguous formatting rather than align or repair it by inference. Cite actual table headings. Answer in 350 words or less.",
+    "firewall": {
+      "status": "IMPORTED",
+      "repairs": [],
+      "original_text": "The clinical emptying signal must survive correct table reading. In Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md, transcribe only the PVR rows from Tables 1 and 4 with actual column headings, arm names, denominators, baseline/end/change labels, units and SD-versus-SE notation. Identify which printed test/p-value compares which cells; flag ambiguous formatting rather than align or repair it by inference. Cite actual table headings. Answer in 350 words or less."
+    },
+    "sources_as_sent": [
+      "Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md"
+    ],
+    "sources_resolved": {
+      "Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md": "Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md"
+    },
+    "target": "G003-PVR-table-repair",
+    "packet_priority_id": "R004-P2",
+    "header_version": "PTX_for_urination_header_v4.1.md",
+    "issued": "",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0032-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": [],
+    "notebook_lane": "clone-3",
+    "imported_from": "ChatGPTs folder/04 Quest/questions/PTX-Full-Run-2026-10-24-Q0032.md"
+  },
+  {
+    "qid": "Q0033",
+    "run_id": "PTX-Full-Run-2026-10-24",
+    "round": 6,
+    "order_in_round": 3,
+    "text": "An inflammatory responder rule must predict something beyond a generic high marker. In raison2013.pdf.md, what overall randomized result and exploratory hs-CRP-dependent response pattern occurred with infliximab, with sample sizes, cutoff and interaction limits? Which finding challenges blanket anti-TNF benefit, and what would need testing before any inflammatory marker could select a PTX voiding-trial subgroup? Keep the different drug/outcome explicit. Cite (exact filename, actual section heading). Answer in 250 words or less.",
+    "firewall": {
+      "status": "IMPORTED",
+      "repairs": [],
+      "original_text": "An inflammatory responder rule must predict something beyond a generic high marker. In raison2013.pdf.md, what overall randomized result and exploratory hs-CRP-dependent response pattern occurred with infliximab, with sample sizes, cutoff and interaction limits? Which finding challenges blanket anti-TNF benefit, and what would need testing before any inflammatory marker could select a PTX voiding-trial subgroup? Keep the different drug/outcome explicit. Cite (exact filename, actual section heading). Answer in 250 words or less."
+    },
+    "sources_as_sent": [
+      "raison2013.pdf.md"
+    ],
+    "sources_resolved": {
+      "raison2013.pdf.md": "raison2013.pdf.md"
+    },
+    "target": "inflammatory-responder-adverse",
+    "packet_priority_id": "R004-P1",
+    "header_version": "PTX_for_urination_header_v4.1.md",
+    "issued": "",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0033-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": [],
+    "notebook_lane": "clone-5",
+    "imported_from": "ChatGPTs folder/04 Quest/questions/PTX-Full-Run-2026-10-24-Q0033.md"
+  },
+  {
+    "qid": "Q0034",
+    "run_id": "PTX-Full-Run-2026-10-24",
+    "round": 6,
+    "order_in_round": 4,
+    "text": "Persistent functional disability must not automatically be attributed to a convenient vascular marker. In roerink2019.pdf.md, which exercise-capacity deficit persisted after Cushing remission, and which measured capillary, mitochondrial, eNOS or oxidase findings failed to explain it? Give design, denominators and principal null contrasts; state the narrow lesson for measuring target engagement and function separately in a PTX voiding trial. Cite (exact filename, actual section heading). Answer in 250 words or less.",
+    "firewall": {
+      "status": "IMPORTED",
+      "repairs": [],
+      "original_text": "Persistent functional disability must not automatically be attributed to a convenient vascular marker. In roerink2019.pdf.md, which exercise-capacity deficit persisted after Cushing remission, and which measured capillary, mitochondrial, eNOS or oxidase findings failed to explain it? Give design, denominators and principal null contrasts; state the narrow lesson for measuring target engagement and function separately in a PTX voiding trial. Cite (exact filename, actual section heading). Answer in 250 words or less."
+    },
+    "sources_as_sent": [
+      "roerink2019.pdf.md"
+    ],
+    "sources_resolved": {
+      "roerink2019.pdf.md": "roerink2019.pdf.md"
+    },
+    "target": "marker-functional-dissociation",
+    "packet_priority_id": "R004-P1",
+    "header_version": "PTX_for_urination_header_v4.1.md",
+    "issued": "",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0034-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": [],
+    "notebook_lane": "clone-1",
+    "imported_from": "ChatGPTs folder/04 Quest/questions/PTX-Full-Run-2026-10-24-Q0034.md"
+  },
+  {
+    "qid": "Q0035",
+    "run_id": "PTX-Full-Run-2026-10-24",
+    "round": 6,
+    "order_in_round": 5,
+    "text": "A persistent cytokine can be a phenotype marker rather than the untreated cause. In shah2016.pdf.md, which cytokines remained elevated after endocrine remission while adiposity or insulin sensitivity improved, with patient/control denominators and follow-up timing? Which measured associations establish persistence but fail to establish causal functional impairment? State what this requires of a baseline inflammatory selection rule for a PTX voiding trial, without transferring the disease. Cite (exact filename, actual section heading). Answer in 250 words or less.",
+    "firewall": {
+      "status": "IMPORTED",
+      "repairs": [],
+      "original_text": "A persistent cytokine can be a phenotype marker rather than the untreated cause. In shah2016.pdf.md, which cytokines remained elevated after endocrine remission while adiposity or insulin sensitivity improved, with patient/control denominators and follow-up timing? Which measured associations establish persistence but fail to establish causal functional impairment? State what this requires of a baseline inflammatory selection rule for a PTX voiding trial, without transferring the disease. Cite (exact filename, actual section heading). Answer in 250 words or less."
+    },
+    "sources_as_sent": [
+      "shah2016.pdf.md"
+    ],
+    "sources_resolved": {
+      "shah2016.pdf.md": "shah2016.pdf.md"
+    },
+    "target": "persistent-marker-causal-specificity",
+    "packet_priority_id": "R004-P1",
+    "header_version": "PTX_for_urination_header_v4.1.md",
+    "issued": "",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0035-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": [],
+    "notebook_lane": "clone-2",
+    "imported_from": "ChatGPTs folder/04 Quest/questions/PTX-Full-Run-2026-10-24-Q0035.md"
+  },
+  {
+    "qid": "Q0036",
+    "run_id": "PTX-Full-Run-2026-10-24",
+    "round": 6,
+    "order_in_round": 6,
+    "text": "A credible targeted trial cannot enroll symptoms while missing another treatable cause. In fdp03812573_1.pdf.md, which actual baseline examinations, tests, red flags and alternative etiologies should distinguish BPH-associated LUTS from impaired contraction, infection, neurologic or medication causes? Identify what symptom score or prostate enlargement cannot establish and which functional outcomes matter for a qualified clinician-facing trial rationale. Cite (exact filename, actual section heading). Answer in 250 words or less.",
+    "firewall": {
+      "status": "IMPORTED",
+      "repairs": [],
+      "original_text": "A credible targeted trial cannot enroll symptoms while missing another treatable cause. In fdp03812573_1.pdf.md, which actual baseline examinations, tests, red flags and alternative etiologies should distinguish BPH-associated LUTS from impaired contraction, infection, neurologic or medication causes? Identify what symptom score or prostate enlargement cannot establish and which functional outcomes matter for a qualified clinician-facing trial rationale. Cite (exact filename, actual section heading). Answer in 250 words or less."
+    },
+    "sources_as_sent": [
+      "fdp03812573_1.pdf.md"
+    ],
+    "sources_resolved": {
+      "fdp03812573_1.pdf.md": "fdp03812573_1.pdf.md"
+    },
+    "target": "clinical-eligibility-alternatives",
+    "packet_priority_id": "R004-P1",
+    "header_version": "PTX_for_urination_header_v4.1.md",
+    "issued": "",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0036-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": [],
+    "notebook_lane": "clone-4",
+    "imported_from": "ChatGPTs folder/04 Quest/questions/PTX-Full-Run-2026-10-24-Q0036.md"
+  },
+  {
+    "qid": "Q0037",
+    "run_id": "PTX-Full-Run-2026-10-24",
+    "round": 7,
+    "order_in_round": 1,
+    "text": "An add-on trial needs a fair risk and alternative-treatment comparison for older men. In bortnick2019.pdf.md, which alpha-blocker, 5-alpha-reductase inhibitor, PDE5 or antimuscarinic risks and selection constraints matter when voiding difficulty persists? Distinguish symptom benefit, obstruction/progression outcomes and orthostatic or retention risks; identify baseline monitoring relevant to a PTX add-on experiment without inventing a PTX recommendation. Cite (exact filename, actual section heading). Answer in 250 words or less.",
+    "firewall": {
+      "status": "IMPORTED",
+      "repairs": [],
+      "original_text": "An add-on trial needs a fair risk and alternative-treatment comparison for older men. In bortnick2019.pdf.md, which alpha-blocker, 5-alpha-reductase inhibitor, PDE5 or antimuscarinic risks and selection constraints matter when voiding difficulty persists? Distinguish symptom benefit, obstruction/progression outcomes and orthostatic or retention risks; identify baseline monitoring relevant to a PTX add-on experiment without inventing a PTX recommendation. Cite (exact filename, actual section heading). Answer in 250 words or less."
+    },
+    "sources_as_sent": [
+      "bortnick2019.pdf.md"
+    ],
+    "sources_resolved": {
+      "bortnick2019.pdf.md": "bortnick2019.pdf.md"
+    },
+    "target": "older-men-alternative-safety",
+    "packet_priority_id": "R004-P1",
+    "header_version": "PTX_for_urination_header_v4.1.md",
+    "issued": "",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0037-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": [],
+    "notebook_lane": "primary",
+    "imported_from": "ChatGPTs folder/04 Quest/questions/PTX-Full-Run-2026-10-24-Q0037.md"
+  },
+  {
+    "qid": "Q0038",
+    "run_id": "PTX-Full-Run-2026-10-24",
+    "round": 7,
+    "order_in_round": 2,
+    "text": "Rapid reversible symptoms and cytokine changes need an actual temporal discriminator. In Papanicolaou1996_Withdrawal_Syndrome_and.md, what within-patient sequence followed cortisol withdrawal and replacement for IL-6, TNF, IL-1beta and symptoms, with denominators and timing? Which observations distinguish association, reversible current function and slower recovery, and which causal links remain untested? Keep steroid replacement distinct from PTX and urinary benefit. Cite (exact filename, actual section heading). Answer in 250 words or less.",
+    "firewall": {
+      "status": "IMPORTED",
+      "repairs": [],
+      "original_text": "Rapid reversible symptoms and cytokine changes need an actual temporal discriminator. In Papanicolaou1996_Withdrawal_Syndrome_and.md, what within-patient sequence followed cortisol withdrawal and replacement for IL-6, TNF, IL-1beta and symptoms, with denominators and timing? Which observations distinguish association, reversible current function and slower recovery, and which causal links remain untested? Keep steroid replacement distinct from PTX and urinary benefit. Cite (exact filename, actual section heading). Answer in 250 words or less."
+    },
+    "sources_as_sent": [
+      "Papanicolaou1996_Withdrawal_Syndrome_and.md"
+    ],
+    "sources_resolved": {
+      "Papanicolaou1996_Withdrawal_Syndrome_and.md": "Papanicolaou1996_Withdrawal_Syndrome_and.md"
+    },
+    "target": "withdrawal-reversibility-discriminator",
+    "packet_priority_id": "R005-P1",
+    "header_version": "PTX_for_urination_header_v4.1.md",
+    "issued": "",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0038-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": [],
+    "notebook_lane": "clone-3",
+    "imported_from": "ChatGPTs folder/04 Quest/questions/PTX-Full-Run-2026-10-24-Q0038.md"
+  },
+  {
+    "qid": "Q0039",
+    "run_id": "PTX-Full-Run-2026-10-24",
+    "round": 7,
+    "order_in_round": 3,
+    "text": "A blood marker must not masquerade as target severity or therapeutic reversibility. In Ueland2023_Cortisol_Secretion.md, which inflammatory/cardiovascular markers differed between patient groups, tracked cortisol severity, or failed to normalize after cure? Give denominators and follow-up for the operated subgroup, null findings and causal limits. Which result most challenges using one elevated circulating marker as a sufficient responder criterion in a PTX trial? Keep population and outcome transfer explicit. Cite (exact filename, actual section heading). Answer in 250 words or less.",
+    "firewall": {
+      "status": "IMPORTED",
+      "repairs": [],
+      "original_text": "A blood marker must not masquerade as target severity or therapeutic reversibility. In Ueland2023_Cortisol_Secretion.md, which inflammatory/cardiovascular markers differed between patient groups, tracked cortisol severity, or failed to normalize after cure? Give denominators and follow-up for the operated subgroup, null findings and causal limits. Which result most challenges using one elevated circulating marker as a sufficient responder criterion in a PTX trial? Keep population and outcome transfer explicit. Cite (exact filename, actual section heading). Answer in 250 words or less."
+    },
+    "sources_as_sent": [
+      "Ueland2023_Cortisol_Secretion.md"
+    ],
+    "sources_resolved": {
+      "Ueland2023_Cortisol_Secretion.md": "Ueland2023_Cortisol_Secretion.md"
+    },
+    "target": "marker-severity-reversibility",
+    "packet_priority_id": "R005-P1",
+    "header_version": "PTX_for_urination_header_v4.1.md",
+    "issued": "",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0039-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": [],
+    "notebook_lane": "clone-5",
+    "imported_from": "ChatGPTs folder/04 Quest/questions/PTX-Full-Run-2026-10-24-Q0039.md"
+  },
+  {
+    "qid": "Q0040",
+    "run_id": "PTX-Full-Run-2026-10-24",
+    "round": 7,
+    "order_in_round": 4,
+    "text": "Prior alpha-blocker failure must mean an adequately exposed treatment for the right problem. In bortnick2020.pdf.md, what treatment-onset, duration and prostate-size or progression criteria distinguish a reasonable alpha-blocker trial from 5-alpha-reductase inhibition or procedural treatment? Which persistent LUTS patterns require diagnostic reassessment rather than proof of an untreated PTX-responsive cause? Separate symptom improvement from obstruction/progression outcomes and overlapping review evidence. Cite (exact filename, actual section heading). Answer in 250 words or less.",
+    "firewall": {
+      "status": "IMPORTED",
+      "repairs": [],
+      "original_text": "Prior alpha-blocker failure must mean an adequately exposed treatment for the right problem. In bortnick2020.pdf.md, what treatment-onset, duration and prostate-size or progression criteria distinguish a reasonable alpha-blocker trial from 5-alpha-reductase inhibition or procedural treatment? Which persistent LUTS patterns require diagnostic reassessment rather than proof of an untreated PTX-responsive cause? Separate symptom improvement from obstruction/progression outcomes and overlapping review evidence. Cite (exact filename, actual section heading). Answer in 250 words or less."
+    },
+    "sources_as_sent": [
+      "bortnick2020.pdf.md"
+    ],
+    "sources_resolved": {
+      "bortnick2020.pdf.md": "bortnick2020.pdf.md"
+    },
+    "target": "adequate-drug-failure-definition",
+    "packet_priority_id": "R005-P1",
+    "header_version": "PTX_for_urination_header_v4.1.md",
+    "issued": "",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0040-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": [],
+    "notebook_lane": "clone-1",
+    "imported_from": "ChatGPTs folder/04 Quest/questions/PTX-Full-Run-2026-10-24-Q0040.md"
+  },
+  {
+    "qid": "Q0041",
+    "run_id": "PTX-Full-Run-2026-10-24",
+    "round": 7,
+    "order_in_round": 5,
+    "text": "A slow-recovery prediction needs longitudinal functional timing rather than a final biomarker snapshot. In Vogel2023_Glucocorticoid_Withdrawal.md, what postoperative inflammatory trajectory and later muscle-function relation were observed, with cohort/subset denominators, timepoints and obesity/glycemia modifiers? Distinguish predictive associations from causal mediation and identify what measurement schedule a PTX trial would need to separate early marker change from later function. Keep endocrine recovery distinct from bladder recovery. Cite (exact filename, actual section heading). Answer in 250 words or less.",
+    "firewall": {
+      "status": "IMPORTED",
+      "repairs": [],
+      "original_text": "A slow-recovery prediction needs longitudinal functional timing rather than a final biomarker snapshot. In Vogel2023_Glucocorticoid_Withdrawal.md, what postoperative inflammatory trajectory and later muscle-function relation were observed, with cohort/subset denominators, timepoints and obesity/glycemia modifiers? Distinguish predictive associations from causal mediation and identify what measurement schedule a PTX trial would need to separate early marker change from later function. Keep endocrine recovery distinct from bladder recovery. Cite (exact filename, actual section heading). Answer in 250 words or less."
+    },
+    "sources_as_sent": [
+      "Vogel2023_Glucocorticoid_Withdrawal.md"
+    ],
+    "sources_resolved": {
+      "Vogel2023_Glucocorticoid_Withdrawal.md": "Vogel2023_Glucocorticoid_Withdrawal.md"
+    },
+    "target": "longitudinal-marker-function-timing",
+    "packet_priority_id": "R005-P1",
+    "header_version": "PTX_for_urination_header_v4.1.md",
+    "issued": "",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0041-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": [],
+    "notebook_lane": "clone-2",
+    "imported_from": "ChatGPTs folder/04 Quest/questions/PTX-Full-Run-2026-10-24-Q0041.md"
+  },
+  {
+    "qid": "Q0042",
+    "run_id": "PTX-Full-Run-2026-10-24",
+    "round": 7,
+    "order_in_round": 6,
+    "text": "A methylxanthine class label must not substitute for a tested therapeutic bridge. In fakioglu2004.pdf.md, what post-endotoxin aminophylline dose, route and timing failed or succeeded on functional/inflammatory outcomes, with animal groups and principal results? Identify missing serum-level or toxicity information and explain why this is a bounded adverse class-transfer test rather than direct evidence for or against oral PTX bladder benefit. Cite (exact filename, actual section heading). Answer in 250 words or less.",
+    "firewall": {
+      "status": "IMPORTED",
+      "repairs": [],
+      "original_text": "A methylxanthine class label must not substitute for a tested therapeutic bridge. In fakioglu2004.pdf.md, what post-endotoxin aminophylline dose, route and timing failed or succeeded on functional/inflammatory outcomes, with animal groups and principal results? Identify missing serum-level or toxicity information and explain why this is a bounded adverse class-transfer test rather than direct evidence for or against oral PTX bladder benefit. Cite (exact filename, actual section heading). Answer in 250 words or less."
+    },
+    "sources_as_sent": [
+      "fakioglu2004.pdf.md"
+    ],
+    "sources_resolved": {
+      "fakioglu2004.pdf.md": "fakioglu2004.pdf.md"
+    },
+    "target": "methylxanthine-class-adverse",
+    "packet_priority_id": "R005-P1",
+    "header_version": "PTX_for_urination_header_v4.1.md",
+    "issued": "",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0042-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": [],
+    "notebook_lane": "clone-4",
+    "imported_from": "ChatGPTs folder/04 Quest/questions/PTX-Full-Run-2026-10-24-Q0042.md"
+  },
+  {
+    "qid": "Q0043",
+    "run_id": "PTX-Full-Run-2026-10-24",
+    "round": 8,
+    "order_in_round": 1,
+    "text": "A circulating marker may miss the very cellular state our trial claims to treat. In VanHouten2026_Cushings_syndrome.md, what changed in ex-vivo monocyte cytokine responses after remission while circulating IL-6, IL-8 or CRP did not, with patient denominator, timepoints and stimulation conditions? Which compartment mismatch would defeat a blood-marker-only responder rule, and what remains untested about a causal PTX-responsive voiding component? Keep endocrine and urinary populations distinct. Cite (exact filename, actual section heading). Answer in 250 words or less.",
+    "firewall": {
+      "status": "IMPORTED",
+      "repairs": [],
+      "original_text": "A circulating marker may miss the very cellular state our trial claims to treat. In VanHouten2026_Cushings_syndrome.md, what changed in ex-vivo monocyte cytokine responses after remission while circulating IL-6, IL-8 or CRP did not, with patient denominator, timepoints and stimulation conditions? Which compartment mismatch would defeat a blood-marker-only responder rule, and what remains untested about a causal PTX-responsive voiding component? Keep endocrine and urinary populations distinct. Cite (exact filename, actual section heading). Answer in 250 words or less."
+    },
+    "sources_as_sent": [
+      "VanHouten2026_Cushings_syndrome.md"
+    ],
+    "sources_resolved": {
+      "VanHouten2026_Cushings_syndrome.md": "VanHouten2026_Cushings_syndrome.md"
+    },
+    "target": "neglected-domain-compartment-contrary",
+    "packet_priority_id": "R006-P1",
+    "header_version": "PTX_for_urination_header_v4.1.md",
+    "issued": "",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0043-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": [],
+    "notebook_lane": "primary",
+    "imported_from": "ChatGPTs folder/04 Quest/questions/PTX-Full-Run-2026-10-24-Q0043.md"
+  },
+  {
+    "qid": "Q0044",
+    "run_id": "PTX-Full-Run-2026-10-24",
+    "round": 8,
+    "order_in_round": 2,
+    "text": "A urinary case can help only if its phenotype and timing are not inflated. In Fukabori-1996-uninhibited-bladder.pdf.md, use ONLY the final originally published English abstract headed A CASE OF UNINHIBITED BLADDER SUCCESSFULLY TREATED WITH PENTOXIFYLLINE. What sex, urinary phenotype, PTX regimen, symptom or urodynamic change and onset/duration are explicitly reported, and which are unstated? Distinguish storage from difficult emptying and a single case from comparative efficacy. No translation or Japanese-body claims. Cite the exact filename and English-abstract heading. Answer in 250 words or less.",
+    "firewall": {
+      "status": "IMPORTED",
+      "repairs": [],
+      "original_text": "A urinary case can help only if its phenotype and timing are not inflated. In Fukabori-1996-uninhibited-bladder.pdf.md, use ONLY the final originally published English abstract headed A CASE OF UNINHIBITED BLADDER SUCCESSFULLY TREATED WITH PENTOXIFYLLINE. What sex, urinary phenotype, PTX regimen, symptom or urodynamic change and onset/duration are explicitly reported, and which are unstated? Distinguish storage from difficult emptying and a single case from comparative efficacy. No translation or Japanese-body claims. Cite the exact filename and English-abstract heading. Answer in 250 words or less."
+    },
+    "sources_as_sent": [
+      "Fukabori-1996-uninhibited-bladder.pdf.md"
+    ],
+    "sources_resolved": {
+      "Fukabori-1996-uninhibited-bladder.pdf.md": "Fukabori-1996-uninhibited-bladder.pdf.md"
+    },
+    "target": "English-abstract-urinary-timing",
+    "packet_priority_id": "R006-P3",
+    "header_version": "PTX_for_urination_header_v4.1.md",
+    "issued": "",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0044-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": [],
+    "notebook_lane": "clone-3",
+    "imported_from": "ChatGPTs folder/04 Quest/questions/PTX-Full-Run-2026-10-24-Q0044.md"
+  },
+  {
+    "qid": "Q0045",
+    "run_id": "PTX-Full-Run-2026-10-24",
+    "round": 8,
+    "order_in_round": 3,
+    "text": "Nonspecific inflammatory symptoms must not manufacture a responder phenotype. In Gulen2024_MCAS.md, which consensus criteria, event-linked measurements and baseline-versus-event comparisons are required to establish systemic mast-cell activation, and which common symptoms or tests are insufficient? State whether these criteria establish mast-cell involvement in male difficult voiding or PTX response, versus what remains unmeasured. Cite (exact filename, actual section heading). Answer in 250 words or less.",
+    "firewall": {
+      "status": "IMPORTED",
+      "repairs": [],
+      "original_text": "Nonspecific inflammatory symptoms must not manufacture a responder phenotype. In Gulen2024_MCAS.md, which consensus criteria, event-linked measurements and baseline-versus-event comparisons are required to establish systemic mast-cell activation, and which common symptoms or tests are insufficient? State whether these criteria establish mast-cell involvement in male difficult voiding or PTX response, versus what remains unmeasured. Cite (exact filename, actual section heading). Answer in 250 words or less."
+    },
+    "sources_as_sent": [
+      "Gulen2024_MCAS.md"
+    ],
+    "sources_resolved": {
+      "Gulen2024_MCAS.md": "Gulen2024_MCAS.md"
+    },
+    "target": "mast-cell-phenotype-adverse",
+    "packet_priority_id": "R006-P3",
+    "header_version": "PTX_for_urination_header_v4.1.md",
+    "issued": "",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0045-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": [],
+    "notebook_lane": "clone-5",
+    "imported_from": "ChatGPTs folder/04 Quest/questions/PTX-Full-Run-2026-10-24-Q0045.md"
+  },
+  {
+    "qid": "Q0046",
+    "run_id": "PTX-Full-Run-2026-10-24",
+    "round": 8,
+    "order_in_round": 4,
+    "text": "The trial rationale must target a reversible cause rather than any mechanism associated with underactivity. In vale2019.pdf.md, which experimental myogenic, neural, urothelial or ischemic mechanisms have paired perturbation and bladder-functional findings, and which would predict failure of an anti-inflammatory/perfusion intervention? Identify the strongest discriminating baseline measurement and timing assumption, distinguishing review premises from direct PTX evidence. Cite (exact filename, actual section heading). Answer in 300 words or less.",
+    "firewall": {
+      "status": "IMPORTED",
+      "repairs": [],
+      "original_text": "The trial rationale must target a reversible cause rather than any mechanism associated with underactivity. In vale2019.pdf.md, which experimental myogenic, neural, urothelial or ischemic mechanisms have paired perturbation and bladder-functional findings, and which would predict failure of an anti-inflammatory/perfusion intervention? Identify the strongest discriminating baseline measurement and timing assumption, distinguishing review premises from direct PTX evidence. Cite (exact filename, actual section heading). Answer in 300 words or less."
+    },
+    "sources_as_sent": [
+      "vale2019.pdf.md"
+    ],
+    "sources_resolved": {
+      "vale2019.pdf.md": "vale2019.pdf.md"
+    },
+    "target": "detrusor-weakest-link-alternatives",
+    "packet_priority_id": "R006-P3",
+    "header_version": "PTX_for_urination_header_v4.1.md",
+    "issued": "",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0046-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": [],
+    "notebook_lane": "clone-1",
+    "imported_from": "ChatGPTs folder/04 Quest/questions/PTX-Full-Run-2026-10-24-Q0046.md"
+  },
+  {
+    "qid": "Q0047",
+    "run_id": "PTX-Full-Run-2026-10-24",
+    "round": 8,
+    "order_in_round": 5,
+    "text": "An untreated-cause claim must face existing underactive-bladder alternatives. In kim2017.pdf.md, which pharmacological, catheter-based or surgical treatments have actual functional evidence versus mechanistic rationale alone, and what major efficacy or safety failures constrain them? Distinguish improved contractility from reduced outlet resistance and drainage. Which comparator or cointervention would most clearly discriminate an incremental PTX mechanism? Cite (exact filename, actual section heading). Answer in 250 words or less.",
+    "firewall": {
+      "status": "IMPORTED",
+      "repairs": [],
+      "original_text": "An untreated-cause claim must face existing underactive-bladder alternatives. In kim2017.pdf.md, which pharmacological, catheter-based or surgical treatments have actual functional evidence versus mechanistic rationale alone, and what major efficacy or safety failures constrain them? Distinguish improved contractility from reduced outlet resistance and drainage. Which comparator or cointervention would most clearly discriminate an incremental PTX mechanism? Cite (exact filename, actual section heading). Answer in 250 words or less."
+    },
+    "sources_as_sent": [
+      "kim2017.pdf.md"
+    ],
+    "sources_resolved": {
+      "kim2017.pdf.md": "kim2017.pdf.md"
+    },
+    "target": "underactive-bladder-usual-care-contrast",
+    "packet_priority_id": "R006-P3",
+    "header_version": "PTX_for_urination_header_v4.1.md",
+    "issued": "",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0047-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": [],
+    "notebook_lane": "clone-2",
+    "imported_from": "ChatGPTs folder/04 Quest/questions/PTX-Full-Run-2026-10-24-Q0047.md"
+  },
+  {
+    "qid": "Q0048",
+    "run_id": "PTX-Full-Run-2026-10-24",
+    "round": 8,
+    "order_in_round": 6,
+    "text": "The PVR treatment contrast needs its reported statistical method, not another transcription of cells. In Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md, does the methods section report baseline-adjusted analysis, ANCOVA or a model controlling baseline PVR? Which analysis set and tests generated absolute/percentage change comparisons, and is change dispersion identified as SD or SE anywhere? Quote exact method wording or mark each item not reported; do not calculate a repaired p-value. Cite actual section headings. Answer in 250 words or less.",
+    "firewall": {
+      "status": "IMPORTED",
+      "repairs": [],
+      "original_text": "The PVR treatment contrast needs its reported statistical method, not another transcription of cells. In Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md, does the methods section report baseline-adjusted analysis, ANCOVA or a model controlling baseline PVR? Which analysis set and tests generated absolute/percentage change comparisons, and is change dispersion identified as SD or SE anywhere? Quote exact method wording or mark each item not reported; do not calculate a repaired p-value. Cite actual section headings. Answer in 250 words or less."
+    },
+    "sources_as_sent": [
+      "Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md"
+    ],
+    "sources_resolved": {
+      "Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md": "Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md"
+    },
+    "target": "G003-adjustment-method-final",
+    "packet_priority_id": "R007-P2",
+    "header_version": "PTX_for_urination_header_v4.1.md",
+    "issued": "",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0048-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": [],
+    "notebook_lane": "clone-4",
+    "imported_from": "ChatGPTs folder/04 Quest/questions/PTX-Full-Run-2026-10-24-Q0048.md"
+  },
+  {
+    "qid": "Q0049",
+    "run_id": "PTX-Full-Run-2026-10-24",
+    "round": 9,
+    "order_in_round": 1,
+    "text": "Shy bladder must not be silently relabeled as detrusor failure. In chung2014.pdf.md, how are paruresis, dysfunctional voiding, myogenic failure and neurogenic underactivity distinguished, and what tests or mechanism evidence discriminate them? Does the paruresis mention supply a primary prevalence estimate or treatment-response dataset? Identify the most important baseline distinction for a trial enrolling men with both BPH labeling and shy bladder. Cite (exact filename, actual section heading). Answer in 250 words or less.",
+    "firewall": {
+      "status": "IMPORTED",
+      "repairs": [],
+      "original_text": "Shy bladder must not be silently relabeled as detrusor failure. In chung2014.pdf.md, how are paruresis, dysfunctional voiding, myogenic failure and neurogenic underactivity distinguished, and what tests or mechanism evidence discriminate them? Does the paruresis mention supply a primary prevalence estimate or treatment-response dataset? Identify the most important baseline distinction for a trial enrolling men with both BPH labeling and shy bladder. Cite (exact filename, actual section heading). Answer in 250 words or less."
+    },
+    "sources_as_sent": [
+      "chung2014.pdf.md"
+    ],
+    "sources_resolved": {
+      "chung2014.pdf.md": "chung2014.pdf.md"
+    },
+    "target": "paruresis-versus-underactivity",
+    "packet_priority_id": "R006-P3",
+    "header_version": "PTX_for_urination_header_v4.1.md",
+    "issued": "",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0049-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": [],
+    "notebook_lane": "primary",
+    "imported_from": "ChatGPTs folder/04 Quest/questions/PTX-Full-Run-2026-10-24-Q0049.md"
+  },
+  {
+    "qid": "Q0050",
+    "run_id": "PTX-Full-Run-2026-10-24",
+    "round": 9,
+    "order_in_round": 2,
+    "text": "Neurological underactivity therapies must not be transferred by symptom resemblance. In ladi-seyedian2017.pdf.md, which neural lesions or signaling defects underlie the reviewed treatments, and which pharmacological interventions actually changed emptying or contraction versus failing despite plausible mechanisms? Give the key studied populations and exposure constraints, and identify which assumption breaks transfer to non-neurogenic BPH/shy-bladder men. Cite (exact filename, actual section heading). Answer in 250 words or less.",
+    "firewall": {
+      "status": "IMPORTED",
+      "repairs": [],
+      "original_text": "Neurological underactivity therapies must not be transferred by symptom resemblance. In ladi-seyedian2017.pdf.md, which neural lesions or signaling defects underlie the reviewed treatments, and which pharmacological interventions actually changed emptying or contraction versus failing despite plausible mechanisms? Give the key studied populations and exposure constraints, and identify which assumption breaks transfer to non-neurogenic BPH/shy-bladder men. Cite (exact filename, actual section heading). Answer in 250 words or less."
+    },
+    "sources_as_sent": [
+      "ladi-seyedian2017.pdf.md"
+    ],
+    "sources_resolved": {
+      "ladi-seyedian2017.pdf.md": "ladi-seyedian2017.pdf.md"
+    },
+    "target": "neurologic-treatment-transfer",
+    "packet_priority_id": "R007-P3",
+    "header_version": "PTX_for_urination_header_v4.1.md",
+    "issued": "",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0050-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": [],
+    "notebook_lane": "clone-3",
+    "imported_from": "ChatGPTs folder/04 Quest/questions/PTX-Full-Run-2026-10-24-Q0050.md"
+  },
+  {
+    "qid": "Q0051",
+    "run_id": "PTX-Full-Run-2026-10-24",
+    "round": 9,
+    "order_in_round": 3,
+    "text": "Unmet need is not itself a PTX mechanism. In lee2018.pdf.md, which diagnostic uncertainty and management failures define underactive-bladder unmet need, and which actual functional findings support conservative, pharmacological, outlet-reducing or neuromodulation alternatives? Identify the trial contrast that could distinguish detrusor recovery from easier outflow or symptom adaptation, preserving review-to-primary dependence. Cite (exact filename, actual section heading). Answer in 250 words or less.",
+    "firewall": {
+      "status": "IMPORTED",
+      "repairs": [],
+      "original_text": "Unmet need is not itself a PTX mechanism. In lee2018.pdf.md, which diagnostic uncertainty and management failures define underactive-bladder unmet need, and which actual functional findings support conservative, pharmacological, outlet-reducing or neuromodulation alternatives? Identify the trial contrast that could distinguish detrusor recovery from easier outflow or symptom adaptation, preserving review-to-primary dependence. Cite (exact filename, actual section heading). Answer in 250 words or less."
+    },
+    "sources_as_sent": [
+      "lee2018.pdf.md"
+    ],
+    "sources_resolved": {
+      "lee2018.pdf.md": "lee2018.pdf.md"
+    },
+    "target": "unmet-need-versus-mechanism",
+    "packet_priority_id": "R007-P3",
+    "header_version": "PTX_for_urination_header_v4.1.md",
+    "issued": "",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0051-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": [],
+    "notebook_lane": "clone-5",
+    "imported_from": "ChatGPTs folder/04 Quest/questions/PTX-Full-Run-2026-10-24-Q0051.md"
+  },
+  {
+    "qid": "Q0052",
+    "run_id": "PTX-Full-Run-2026-10-24",
+    "round": 9,
+    "order_in_round": 4,
+    "text": "If symptoms improve while cytokines rise, blood cytokine reduction cannot be treated as a universal functional mediator. In spinas1991.pdf.md, what randomized or controlled ibuprofen/endotoxin contrasts changed clinical responses versus TNF, IL-6 and elastase, with doses, denominators and timing? Which paired outcome directly challenges marker-as-function reasoning, and what cannot transfer from healthy experimental endotoxemia to PTX or bladder disease? Cite (exact filename, actual section heading). Answer in 250 words or less.",
+    "firewall": {
+      "status": "IMPORTED",
+      "repairs": [],
+      "original_text": "If symptoms improve while cytokines rise, blood cytokine reduction cannot be treated as a universal functional mediator. In spinas1991.pdf.md, what randomized or controlled ibuprofen/endotoxin contrasts changed clinical responses versus TNF, IL-6 and elastase, with doses, denominators and timing? Which paired outcome directly challenges marker-as-function reasoning, and what cannot transfer from healthy experimental endotoxemia to PTX or bladder disease? Cite (exact filename, actual section heading). Answer in 250 words or less."
+    },
+    "sources_as_sent": [
+      "spinas1991.pdf.md"
+    ],
+    "sources_resolved": {
+      "spinas1991.pdf.md": "spinas1991.pdf.md"
+    },
+    "target": "cytokine-clinical-paradox",
+    "packet_priority_id": "R007-P3",
+    "header_version": "PTX_for_urination_header_v4.1.md",
+    "issued": "",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0052-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": [],
+    "notebook_lane": "clone-1",
+    "imported_from": "ChatGPTs folder/04 Quest/questions/PTX-Full-Run-2026-10-24-Q0052.md"
+  },
+  {
+    "qid": "Q0053",
+    "run_id": "PTX-Full-Run-2026-10-24",
+    "round": 9,
+    "order_in_round": 5,
+    "text": "The practical-value case needs measured burden rather than an inflated population estimate. In chuang2015.pdf.md, which older-adult underactive-bladder morbidity, retention/catheter burden or economic findings have explicit denominators and sources, and which are only secondary descriptions? How do neurologic comorbidity and diagnosis change applicability to men labeled BPH after unsuccessful therapies? Identify a defensible functional/burden outcome for a targeted trial without importing national overlap estimates. Cite (exact filename, actual section heading). Answer in 250 words or less.",
+    "firewall": {
+      "status": "IMPORTED",
+      "repairs": [],
+      "original_text": "The practical-value case needs measured burden rather than an inflated population estimate. In chuang2015.pdf.md, which older-adult underactive-bladder morbidity, retention/catheter burden or economic findings have explicit denominators and sources, and which are only secondary descriptions? How do neurologic comorbidity and diagnosis change applicability to men labeled BPH after unsuccessful therapies? Identify a defensible functional/burden outcome for a targeted trial without importing national overlap estimates. Cite (exact filename, actual section heading). Answer in 250 words or less."
+    },
+    "sources_as_sent": [
+      "chuang2015.pdf.md"
+    ],
+    "sources_resolved": {
+      "chuang2015.pdf.md": "chuang2015.pdf.md"
+    },
+    "target": "practical-burden-denominator",
+    "packet_priority_id": "R008-P1",
+    "header_version": "PTX_for_urination_header_v4.1.md",
+    "issued": "",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0053-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": [],
+    "notebook_lane": "clone-2",
+    "imported_from": "ChatGPTs folder/04 Quest/questions/PTX-Full-Run-2026-10-24-Q0053.md"
+  },
+  {
+    "qid": "Q0054",
+    "run_id": "PTX-Full-Run-2026-10-24",
+    "round": 9,
+    "order_in_round": 6,
+    "text": "Age and polypharmacy can create a false PTX-responsive subgroup. In chung2016.pdf.md, which age-related myogenic, neural, outlet and medication mechanisms distinguish voiding dysfunction in older men, and what reported denominators or diagnostic findings support them? Which reversible contributors should be measured or stabilized before testing a PTX effect, and which prevalence/burden statements cannot identify the joint BPH/shy-bladder/prior-treatment-failure cohort? Cite (exact filename, actual section heading). Answer in 250 words or less.",
+    "firewall": {
+      "status": "IMPORTED",
+      "repairs": [],
+      "original_text": "Age and polypharmacy can create a false PTX-responsive subgroup. In chung2016.pdf.md, which age-related myogenic, neural, outlet and medication mechanisms distinguish voiding dysfunction in older men, and what reported denominators or diagnostic findings support them? Which reversible contributors should be measured or stabilized before testing a PTX effect, and which prevalence/burden statements cannot identify the joint BPH/shy-bladder/prior-treatment-failure cohort? Cite (exact filename, actual section heading). Answer in 250 words or less."
+    },
+    "sources_as_sent": [
+      "chung2016.pdf.md"
+    ],
+    "sources_resolved": {
+      "chung2016.pdf.md": "chung2016.pdf.md"
+    },
+    "target": "aging-polypharmacy-confounding",
+    "packet_priority_id": "R008-P1",
+    "header_version": "PTX_for_urination_header_v4.1.md",
+    "issued": "",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0054-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": [],
+    "notebook_lane": "clone-4",
+    "imported_from": "ChatGPTs folder/04 Quest/questions/PTX-Full-Run-2026-10-24-Q0054.md"
+  },
+  {
+    "qid": "Q0055",
+    "run_id": "PTX-Full-Run-2026-10-24",
+    "round": 10,
+    "order_in_round": 1,
+    "text": "Attendance and exercise uptake must not be confused with treatment efficacy. In glazener2011.pdf.md, what did the two randomized MAPS trials show for one-to-one PFMT versus standard care after prostatectomy or TURP, with arm denominators, exercise uptake, follow-up and leakage outcomes? Did greater uptake improve the primary outcome, and what cannot transfer to nonsurgical men with difficult emptying or define their prior completed-treatment failure? Cite (exact filename, actual section heading). Answer in 250 words or less.",
+    "firewall": {
+      "status": "IMPORTED",
+      "repairs": [],
+      "original_text": "Attendance and exercise uptake must not be confused with treatment efficacy. In glazener2011.pdf.md, what did the two randomized MAPS trials show for one-to-one PFMT versus standard care after prostatectomy or TURP, with arm denominators, exercise uptake, follow-up and leakage outcomes? Did greater uptake improve the primary outcome, and what cannot transfer to nonsurgical men with difficult emptying or define their prior completed-treatment failure? Cite (exact filename, actual section heading). Answer in 250 words or less."
+    },
+    "sources_as_sent": [
+      "glazener2011.pdf.md"
+    ],
+    "sources_resolved": {
+      "glazener2011.pdf.md": "glazener2011.pdf.md"
+    },
+    "target": "exercise-uptake-versus-efficacy",
+    "packet_priority_id": "R009-P1",
+    "header_version": "PTX_for_urination_header_v4.1.md",
+    "issued": "",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0055-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": [],
+    "notebook_lane": "primary",
+    "imported_from": "ChatGPTs folder/04 Quest/questions/PTX-Full-Run-2026-10-24-Q0055.md"
+  },
+  {
+    "qid": "Q0056",
+    "run_id": "PTX-Full-Run-2026-10-24",
+    "round": 10,
+    "order_in_round": 2,
+    "text": "Better rehabilitation adherence after surgery is not reversal of untreated obstruction. In 11255_2025_Article_4454.pdf.md, what randomized/cohort design, postoperative male population, group denominators and health-belief exercise program produced which adherence and urinary outcomes at what times? Separate continence from emptying and the behavior intervention from surgical recovery; identify what cannot define prior ineffective pelvic-floor treatment in a nonsurgical PTX cohort. Cite (exact filename, actual section heading). Answer in 250 words or less.",
+    "firewall": {
+      "status": "IMPORTED",
+      "repairs": [],
+      "original_text": "Better rehabilitation adherence after surgery is not reversal of untreated obstruction. In 11255_2025_Article_4454.pdf.md, what randomized/cohort design, postoperative male population, group denominators and health-belief exercise program produced which adherence and urinary outcomes at what times? Separate continence from emptying and the behavior intervention from surgical recovery; identify what cannot define prior ineffective pelvic-floor treatment in a nonsurgical PTX cohort. Cite (exact filename, actual section heading). Answer in 250 words or less."
+    },
+    "sources_as_sent": [
+      "11255_2025_Article_4454.pdf.md"
+    ],
+    "sources_resolved": {
+      "11255_2025_Article_4454.pdf.md": "11255_2025_Article_4454.pdf.md"
+    },
+    "target": "postoperative-rehab-attribution",
+    "packet_priority_id": "R009-P1",
+    "header_version": "PTX_for_urination_header_v4.1.md",
+    "issued": "",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0056-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": [],
+    "notebook_lane": "clone-3",
+    "imported_from": "ChatGPTs folder/04 Quest/questions/PTX-Full-Run-2026-10-24-Q0056.md"
+  },
+  {
+    "qid": "Q0057",
+    "run_id": "PTX-Full-Run-2026-10-24",
+    "round": 10,
+    "order_in_round": 3,
+    "text": "A claim of adequate prior pelvic-floor exposure needs actual long-term behavior and missingness. In alewijnse2003.pdf.md, which women, baseline/follow-up denominators, exercise prescription and adherence definition produced which predictors of persistence? Separate confidence, reported exercise behavior and symptom benefit; identify attrition and the assumptions preventing its rates from defining male difficult-emptying treatment failure or abandonment. Cite (exact filename, actual section heading). Answer in 250 words or less.",
+    "firewall": {
+      "status": "IMPORTED",
+      "repairs": [],
+      "original_text": "A claim of adequate prior pelvic-floor exposure needs actual long-term behavior and missingness. In alewijnse2003.pdf.md, which women, baseline/follow-up denominators, exercise prescription and adherence definition produced which predictors of persistence? Separate confidence, reported exercise behavior and symptom benefit; identify attrition and the assumptions preventing its rates from defining male difficult-emptying treatment failure or abandonment. Cite (exact filename, actual section heading). Answer in 250 words or less."
+    },
+    "sources_as_sent": [
+      "alewijnse2003.pdf.md"
+    ],
+    "sources_resolved": {
+      "alewijnse2003.pdf.md": "alewijnse2003.pdf.md"
+    },
+    "target": "long-term-adherence-history-measurement",
+    "packet_priority_id": "R009-P1",
+    "header_version": "PTX_for_urination_header_v4.1.md",
+    "issued": "",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0057-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": [],
+    "notebook_lane": "clone-5",
+    "imported_from": "ChatGPTs folder/04 Quest/questions/PTX-Full-Run-2026-10-24-Q0057.md"
+  },
+  {
+    "qid": "Q0058",
+    "run_id": "PTX-Full-Run-2026-10-24",
+    "round": 10,
+    "order_in_round": 4,
+    "text": "Confidence to exercise cannot certify adequate treatment exposure. In chen2004.pdf.md, what constructs, item structure, validation population and reliability/validity results define the pelvic-floor self-efficacy scale? Does it measure actual performed exercise or clinical response, and what is missing before using it to distinguish completed ineffective therapy from abandonment in a male voiding trial? Cite (exact filename, actual section heading). Answer in 250 words or less.",
+    "firewall": {
+      "status": "IMPORTED",
+      "repairs": [],
+      "original_text": "Confidence to exercise cannot certify adequate treatment exposure. In chen2004.pdf.md, what constructs, item structure, validation population and reliability/validity results define the pelvic-floor self-efficacy scale? Does it measure actual performed exercise or clinical response, and what is missing before using it to distinguish completed ineffective therapy from abandonment in a male voiding trial? Cite (exact filename, actual section heading). Answer in 250 words or less."
+    },
+    "sources_as_sent": [
+      "chen2004.pdf.md"
+    ],
+    "sources_resolved": {
+      "chen2004.pdf.md": "chen2004.pdf.md"
+    },
+    "target": "self-efficacy-versus-exposure",
+    "packet_priority_id": "R009-P1",
+    "header_version": "PTX_for_urination_header_v4.1.md",
+    "issued": "",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0058-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": [],
+    "notebook_lane": "clone-1",
+    "imported_from": "ChatGPTs folder/04 Quest/questions/PTX-Full-Run-2026-10-24-Q0058.md"
+  },
+  {
+    "qid": "Q0059",
+    "run_id": "PTX-Full-Run-2026-10-24",
+    "round": 10,
+    "order_in_round": 5,
+    "text": "Failure to reach therapy may reflect care delivery rather than ineffective treatment. In nihms-1048633.pdf.md, which multidisciplinary versus usual referral conditions changed first attendance or completion, with population, denominators, design and attrition? Separate referral, attendance, sustained home use and clinical response; identify the exact transfer limits before using these findings to classify male prior-treatment abandonment in a PTX trial. Cite (exact filename, actual section heading). Answer in 250 words or less.",
+    "firewall": {
+      "status": "IMPORTED",
+      "repairs": [],
+      "original_text": "Failure to reach therapy may reflect care delivery rather than ineffective treatment. In nihms-1048633.pdf.md, which multidisciplinary versus usual referral conditions changed first attendance or completion, with population, denominators, design and attrition? Separate referral, attendance, sustained home use and clinical response; identify the exact transfer limits before using these findings to classify male prior-treatment abandonment in a PTX trial. Cite (exact filename, actual section heading). Answer in 250 words or less."
+    },
+    "sources_as_sent": [
+      "nihms-1048633.pdf.md"
+    ],
+    "sources_resolved": {
+      "nihms-1048633.pdf.md": "nihms-1048633.pdf.md"
+    },
+    "target": "care-delivery-versus-treatment-failure",
+    "packet_priority_id": "R009-P1",
+    "header_version": "PTX_for_urination_header_v4.1.md",
+    "issued": "",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0059-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": [],
+    "notebook_lane": "clone-2",
+    "imported_from": "ChatGPTs folder/04 Quest/questions/PTX-Full-Run-2026-10-24-Q0059.md"
+  },
+  {
+    "qid": "Q0060",
+    "run_id": "PTX-Full-Run-2026-10-24",
+    "round": 10,
+    "order_in_round": 6,
+    "text": "A compliance score must separate performed treatment from attitudes and benefit. In s12912-023-01326-5.pdf.md, what domains/items, validation population and reliability/validity tests define the rehabilitation training compliance scale? Which components measure actual behavior versus beliefs, and does validation establish adequate male pelvic-floor exposure or distinguish completed-treatment nonresponse from abandonment? Identify the missing transfer validation. Cite (exact filename, actual section heading). Answer in 250 words or less.",
+    "firewall": {
+      "status": "IMPORTED",
+      "repairs": [],
+      "original_text": "A compliance score must separate performed treatment from attitudes and benefit. In s12912-023-01326-5.pdf.md, what domains/items, validation population and reliability/validity tests define the rehabilitation training compliance scale? Which components measure actual behavior versus beliefs, and does validation establish adequate male pelvic-floor exposure or distinguish completed-treatment nonresponse from abandonment? Identify the missing transfer validation. Cite (exact filename, actual section heading). Answer in 250 words or less."
+    },
+    "sources_as_sent": [
+      "s12912-023-01326-5.pdf.md"
+    ],
+    "sources_resolved": {
+      "s12912-023-01326-5.pdf.md": "s12912-023-01326-5.pdf.md"
+    },
+    "target": "compliance-scale-behavior-versus-belief",
+    "packet_priority_id": "R009-P1",
+    "header_version": "PTX_for_urination_header_v4.1.md",
+    "issued": "",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0060-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": [],
+    "notebook_lane": "clone-4",
+    "imported_from": "ChatGPTs folder/04 Quest/questions/PTX-Full-Run-2026-10-24-Q0060.md"
+  },
+  {
+    "qid": "Q0061",
+    "run_id": "PTX-Full-Run-2026-10-24",
+    "round": 11,
+    "order_in_round": 1,
+    "text": "An adherence-outcome association does not automatically prove inadequate effort caused treatment failure. In siu2003.pdf.md, what design, enrolled/follow-up denominators, exercise exposure measure and stress-incontinence outcomes support the claimed causal predictor? Which temporal, confounding or attrition assumptions remain, and what cannot transfer to male difficult-emptying nonresponse versus abandonment? Cite (exact filename, actual section heading). Answer in 250 words or less.",
+    "firewall": {
+      "status": "IMPORTED",
+      "repairs": [],
+      "original_text": "An adherence-outcome association does not automatically prove inadequate effort caused treatment failure. In siu2003.pdf.md, what design, enrolled/follow-up denominators, exercise exposure measure and stress-incontinence outcomes support the claimed causal predictor? Which temporal, confounding or attrition assumptions remain, and what cannot transfer to male difficult-emptying nonresponse versus abandonment? Cite (exact filename, actual section heading). Answer in 250 words or less."
+    },
+    "sources_as_sent": [
+      "siu2003.pdf.md"
+    ],
+    "sources_resolved": {
+      "siu2003.pdf.md": "siu2003.pdf.md"
+    },
+    "target": "adherence-outcome-causal-attribution",
+    "packet_priority_id": "R009-P1",
+    "header_version": "PTX_for_urination_header_v4.1.md",
+    "issued": "",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0061-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": [],
+    "notebook_lane": "primary",
+    "imported_from": "ChatGPTs folder/04 Quest/questions/PTX-Full-Run-2026-10-24-Q0061.md"
+  },
+  {
+    "qid": "Q0062",
+    "run_id": "PTX-Full-Run-2026-10-24",
+    "round": 11,
+    "order_in_round": 2,
+    "text": "Missing exercise diaries can make apparent adequate treatment exposure a selected-subset artifact. In stokes2022.pdf.md, who returned a usable first diary, what home PFMT prescription and adherence definition were used, and what numerator/denominator and missingness distinguish diary return from actual exercise performance? State the OPAL cohort dependence and what cannot identify male completed-treatment nonresponse or abandonment. Cite (exact filename, actual section heading). Answer in 250 words or less.",
+    "firewall": {
+      "status": "IMPORTED",
+      "repairs": [],
+      "original_text": "Missing exercise diaries can make apparent adequate treatment exposure a selected-subset artifact. In stokes2022.pdf.md, who returned a usable first diary, what home PFMT prescription and adherence definition were used, and what numerator/denominator and missingness distinguish diary return from actual exercise performance? State the OPAL cohort dependence and what cannot identify male completed-treatment nonresponse or abandonment. Cite (exact filename, actual section heading). Answer in 250 words or less."
+    },
+    "sources_as_sent": [
+      "stokes2022.pdf.md"
+    ],
+    "sources_resolved": {
+      "stokes2022.pdf.md": "stokes2022.pdf.md"
+    },
+    "target": "diary-selection-treatment-exposure",
+    "packet_priority_id": "R009-P1",
+    "header_version": "PTX_for_urination_header_v4.1.md",
+    "issued": "",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0062-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": [],
+    "notebook_lane": "clone-3",
+    "imported_from": "ChatGPTs folder/04 Quest/questions/PTX-Full-Run-2026-10-24-Q0062.md"
+  }
+]

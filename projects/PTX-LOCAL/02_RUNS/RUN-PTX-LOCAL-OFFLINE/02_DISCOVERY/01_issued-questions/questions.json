@@ -1,0 +1,1204 @@
+[
+  {
+    "qid": "Q0001",
+    "run_id": "RUN-PTX-LOCAL-OFFLINE",
+    "round": 1,
+    "order_in_round": 1,
+    "text": "In Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md, what does the source report about test  - specifically, what findings, study design, denominators, doses or exposures, comparators, timing, and contrary or null results bear on the question: Question the corpus must help answer?",
+    "firewall": {
+      "status": "PASS",
+      "repairs": [],
+      "original_text": "In Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md, what does the source report about test  - specifically, what findings, study design, denominators, doses or exposures, comparators, timing, and contrary or null results bear on the question: Question the corpus must help answer?"
+    },
+    "sources_as_sent": [
+      "Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md"
+    ],
+    "sources_resolved": {
+      "Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md": "Comparison-between-combination-of-tamsulosin-and-Pentoxifylline-versus-tamsulosin-alone-in.pdf.md"
+    },
+    "target": "decisive test: Test ",
+    "packet_priority_id": null,
+    "rationale": "The local engine rotates the ranked sources across the hypothesis clauses and decisive tests so that every source and every required part is queried at least once.",
+    "header_version": "82d89acb3212b566",
+    "issued": "2026-10-30T03:38:30+00:00",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0001-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": []
+  },
+  {
+    "qid": "Q0002",
+    "run_id": "RUN-PTX-LOCAL-OFFLINE",
+    "round": 1,
+    "order_in_round": 2,
+    "text": "In shirazi2015.pdf.md, shirazi2014.pdf.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about Their persistent difficulty includes a reversible physiological component that tamsulosin and their prescribed pelvic-floor intervention do not adequately address? Cite the exact passage for each finding.",
+    "firewall": {
+      "status": "PASS",
+      "repairs": [],
+      "original_text": "In shirazi2015.pdf.md, shirazi2014.pdf.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about Their persistent difficulty includes a reversible physiological component that tamsulosin and their prescribed pelvic-floor intervention do not adequately address? Cite the exact passage for each finding."
+    },
+    "sources_as_sent": [
+      "shirazi2015.pdf.md",
+      "shirazi2014.pdf.md"
+    ],
+    "sources_resolved": {
+      "shirazi2015.pdf.md": "shirazi2015.pdf.md",
+      "shirazi2014.pdf.md": "shirazi2014.pdf.md"
+    },
+    "target": "coverage of: Their persistent difficulty includes a reversible physiological component that t",
+    "packet_priority_id": null,
+    "rationale": "The local engine rotates the ranked sources across the hypothesis clauses and decisive tests so that every source and every required part is queried at least once.",
+    "header_version": "82d89acb3212b566",
+    "issued": "2026-10-30T03:38:30+00:00",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0002-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": []
+  },
+  {
+    "qid": "Q0003",
+    "run_id": "RUN-PTX-LOCAL-OFFLINE",
+    "round": 1,
+    "order_in_round": 3,
+    "text": "In shirazi2014.pdf.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about PTX's reported biological effects do not translate into a meaningful remedy for the dysfunction driving impaired voiding in this cohort? Cite the exact passage for each finding.",
+    "firewall": {
+      "status": "PASS",
+      "repairs": [],
+      "original_text": "In shirazi2014.pdf.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about PTX's reported biological effects do not translate into a meaningful remedy for the dysfunction driving impaired voiding in this cohort? Cite the exact passage for each finding."
+    },
+    "sources_as_sent": [
+      "shirazi2014.pdf.md"
+    ],
+    "sources_resolved": {
+      "shirazi2014.pdf.md": "shirazi2014.pdf.md"
+    },
+    "target": "coverage of: PTX's reported biological effects do not translate into a meaningful remedy for ",
+    "packet_priority_id": null,
+    "rationale": "The local engine rotates the ranked sources across the hypothesis clauses and decisive tests so that every source and every required part is queried at least once.",
+    "header_version": "82d89acb3212b566",
+    "issued": "2026-10-30T03:38:30+00:00",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0003-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": []
+  },
+  {
+    "qid": "Q0004",
+    "run_id": "RUN-PTX-LOCAL-OFFLINE",
+    "round": 1,
+    "order_in_round": 4,
+    "text": "In 2020ICU_icu-58-S68.pdf.md, anderson2011.pdf.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about Affirmative evidence demonstrates a consequential mismatch in exposure, tissue, disease process, timing, or the relationship between a biological marker and urinary function—and that mismatch defeats the materially supported rationale, not merely one route among many? Cite the exact passage for each finding.",
+    "firewall": {
+      "status": "PASS",
+      "repairs": [],
+      "original_text": "In 2020ICU_icu-58-S68.pdf.md, anderson2011.pdf.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about Affirmative evidence demonstrates a consequential mismatch in exposure, tissue, disease process, timing, or the relationship between a biological marker and urinary function—and that mismatch defeats the materially supported rationale, not merely one route among many? Cite the exact passage for each finding."
+    },
+    "sources_as_sent": [
+      "2020ICU_icu-58-S68.pdf.md",
+      "anderson2011.pdf.md"
+    ],
+    "sources_resolved": {
+      "2020ICU_icu-58-S68.pdf.md": "2020ICU_icu-58-S68.pdf.md",
+      "anderson2011.pdf.md": "anderson2011.pdf.md"
+    },
+    "target": "coverage of: Affirmative evidence demonstrates a consequential mismatch in exposure, tissue, ",
+    "packet_priority_id": null,
+    "rationale": "The local engine rotates the ranked sources across the hypothesis clauses and decisive tests so that every source and every required part is queried at least once.",
+    "header_version": "82d89acb3212b566",
+    "issued": "2026-10-30T03:38:30+00:00",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0004-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": []
+  },
+  {
+    "qid": "Q0005",
+    "run_id": "RUN-PTX-LOCAL-OFFLINE",
+    "round": 1,
+    "order_in_round": 5,
+    "text": "In anderson2011.pdf.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about Existing evidence supports some components of ? Cite the exact passage for each finding.",
+    "firewall": {
+      "status": "REPAIRED",
+      "repairs": [
+        "removed hypothesis identifiers"
+      ],
+      "original_text": "In anderson2011.pdf.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about Existing evidence supports some components of H1? Cite the exact passage for each finding."
+    },
+    "sources_as_sent": [
+      "anderson2011.pdf.md"
+    ],
+    "sources_resolved": {
+      "anderson2011.pdf.md": "anderson2011.pdf.md"
+    },
+    "target": "coverage of: Existing evidence supports some components of H1",
+    "packet_priority_id": null,
+    "rationale": "The local engine rotates the ranked sources across the hypothesis clauses and decisive tests so that every source and every required part is queried at least once.",
+    "header_version": "82d89acb3212b566",
+    "issued": "2026-10-30T03:38:30+00:00",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0005-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": []
+  },
+  {
+    "qid": "Q0006",
+    "run_id": "RUN-PTX-LOCAL-OFFLINE",
+    "round": 2,
+    "order_in_round": 1,
+    "text": "In clemens2000.pdf.md, what does the source report about **exposure**  - specifically, what findings, study design, denominators, doses or exposures, comparators, timing, and contrary or null results bear on the question: Do clinically attainable PTX or metabolite exposures reach the relevant tissue at the concentration and duration required for the proposed effect??",
+    "firewall": {
+      "status": "PASS",
+      "repairs": [],
+      "original_text": "In clemens2000.pdf.md, what does the source report about **exposure**  - specifically, what findings, study design, denominators, doses or exposures, comparators, timing, and contrary or null results bear on the question: Do clinically attainable PTX or metabolite exposures reach the relevant tissue at the concentration and duration required for the proposed effect??"
+    },
+    "sources_as_sent": [
+      "clemens2000.pdf.md"
+    ],
+    "sources_resolved": {
+      "clemens2000.pdf.md": "clemens2000.pdf.md"
+    },
+    "target": "decisive test: **Exposure** ",
+    "packet_priority_id": null,
+    "rationale": "The local engine rotates the ranked sources across the hypothesis clauses and decisive tests so that every source and every required part is queried at least once.",
+    "header_version": "82d89acb3212b566",
+    "issued": "2026-10-30T03:38:31+00:00",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0006-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": []
+  },
+  {
+    "qid": "Q0007",
+    "run_id": "RUN-PTX-LOCAL-OFFLINE",
+    "round": 2,
+    "order_in_round": 2,
+    "text": "In cornel2005.pdf.md, fitzgerald2009.pdf.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about The materially supported mechanism acts on current physiological function—such as perfusion, microcirculation, smooth-muscle behavior, or neural signaling—rather than on established tissue structure? Cite the exact passage for each finding.",
+    "firewall": {
+      "status": "PASS",
+      "repairs": [],
+      "original_text": "In cornel2005.pdf.md, fitzgerald2009.pdf.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about The materially supported mechanism acts on current physiological function—such as perfusion, microcirculation, smooth-muscle behavior, or neural signaling—rather than on established tissue structure? Cite the exact passage for each finding."
+    },
+    "sources_as_sent": [
+      "cornel2005.pdf.md",
+      "fitzgerald2009.pdf.md"
+    ],
+    "sources_resolved": {
+      "cornel2005.pdf.md": "cornel2005.pdf.md",
+      "fitzgerald2009.pdf.md": "fitzgerald2009.pdf.md"
+    },
+    "target": "coverage of: The materially supported mechanism acts on current physiological function—such a",
+    "packet_priority_id": null,
+    "rationale": "The local engine rotates the ranked sources across the hypothesis clauses and decisive tests so that every source and every required part is queried at least once.",
+    "header_version": "82d89acb3212b566",
+    "issued": "2026-10-30T03:38:31+00:00",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0007-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": []
+  },
+  {
+    "qid": "Q0008",
+    "run_id": "RUN-PTX-LOCAL-OFFLINE",
+    "round": 2,
+    "order_in_round": 3,
+    "text": "In fitzgerald2009.pdf.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about At clinically attainable exposures, PTX or its metabolites should produce measurable improvement in voiding within days to a few weeks? Cite the exact passage for each finding.",
+    "firewall": {
+      "status": "PASS",
+      "repairs": [],
+      "original_text": "In fitzgerald2009.pdf.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about At clinically attainable exposures, PTX or its metabolites should produce measurable improvement in voiding within days to a few weeks? Cite the exact passage for each finding."
+    },
+    "sources_as_sent": [
+      "fitzgerald2009.pdf.md"
+    ],
+    "sources_resolved": {
+      "fitzgerald2009.pdf.md": "fitzgerald2009.pdf.md"
+    },
+    "target": "coverage of: At clinically attainable exposures, PTX or its metabolites should produce measur",
+    "packet_priority_id": null,
+    "rationale": "The local engine rotates the ranked sources across the hypothesis clauses and decisive tests so that every source and every required part is queried at least once.",
+    "header_version": "82d89acb3212b566",
+    "issued": "2026-10-30T03:38:31+00:00",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0008-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": []
+  },
+  {
+    "qid": "Q0009",
+    "run_id": "RUN-PTX-LOCAL-OFFLINE",
+    "round": 2,
+    "order_in_round": 4,
+    "text": "In hall2018.pdf.md, he2010.pdf.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about The materially supported mechanism acts by reversing or limiting structural change—such as fibrosis, remodeling, or other tissue damage—that contributes to impaired voiding? Cite the exact passage for each finding.",
+    "firewall": {
+      "status": "PASS",
+      "repairs": [],
+      "original_text": "In hall2018.pdf.md, he2010.pdf.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about The materially supported mechanism acts by reversing or limiting structural change—such as fibrosis, remodeling, or other tissue damage—that contributes to impaired voiding? Cite the exact passage for each finding."
+    },
+    "sources_as_sent": [
+      "hall2018.pdf.md",
+      "he2010.pdf.md"
+    ],
+    "sources_resolved": {
+      "hall2018.pdf.md": "hall2018.pdf.md",
+      "he2010.pdf.md": "he2010.pdf.md"
+    },
+    "target": "coverage of: The materially supported mechanism acts by reversing or limiting structural chan",
+    "packet_priority_id": null,
+    "rationale": "The local engine rotates the ranked sources across the hypothesis clauses and decisive tests so that every source and every required part is queried at least once.",
+    "header_version": "82d89acb3212b566",
+    "issued": "2026-10-30T03:38:31+00:00",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0009-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": []
+  },
+  {
+    "qid": "Q0010",
+    "run_id": "RUN-PTX-LOCAL-OFFLINE",
+    "round": 2,
+    "order_in_round": 5,
+    "text": "In he2010.pdf.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about Meaningful improvement should appear only after weeks to months of treatment, with little early functional change? Cite the exact passage for each finding.",
+    "firewall": {
+      "status": "PASS",
+      "repairs": [],
+      "original_text": "In he2010.pdf.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about Meaningful improvement should appear only after weeks to months of treatment, with little early functional change? Cite the exact passage for each finding."
+    },
+    "sources_as_sent": [
+      "he2010.pdf.md"
+    ],
+    "sources_resolved": {
+      "he2010.pdf.md": "he2010.pdf.md"
+    },
+    "target": "coverage of: Meaningful improvement should appear only after weeks to months of treatment, wi",
+    "packet_priority_id": null,
+    "rationale": "The local engine rotates the ranked sources across the hypothesis clauses and decisive tests so that every source and every required part is queried at least once.",
+    "header_version": "82d89acb3212b566",
+    "issued": "2026-10-30T03:38:31+00:00",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0010-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": []
+  },
+  {
+    "qid": "Q0011",
+    "run_id": "RUN-PTX-LOCAL-OFFLINE",
+    "round": 3,
+    "order_in_round": 1,
+    "text": "In kaplan1997.pdf.md, what does the source report about **target relevance**  - specifically, what findings, study design, denominators, doses or exposures, comparators, timing, and contrary or null results bear on the question: Is the proposed target or process actually present and consequential in impaired voiding relevant to this cohort, rather than incidental or confined to another condition??",
+    "firewall": {
+      "status": "PASS",
+      "repairs": [],
+      "original_text": "In kaplan1997.pdf.md, what does the source report about **target relevance**  - specifically, what findings, study design, denominators, doses or exposures, comparators, timing, and contrary or null results bear on the question: Is the proposed target or process actually present and consequential in impaired voiding relevant to this cohort, rather than incidental or confined to another condition??"
+    },
+    "sources_as_sent": [
+      "kaplan1997.pdf.md"
+    ],
+    "sources_resolved": {
+      "kaplan1997.pdf.md": "kaplan1997.pdf.md"
+    },
+    "target": "decisive test: **Target relevance** ",
+    "packet_priority_id": null,
+    "rationale": "The local engine rotates the ranked sources across the hypothesis clauses and decisive tests so that every source and every required part is queried at least once.",
+    "header_version": "82d89acb3212b566",
+    "issued": "2026-10-30T03:38:31+00:00",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0011-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": []
+  },
+  {
+    "qid": "Q0012",
+    "run_id": "RUN-PTX-LOCAL-OFFLINE",
+    "round": 3,
+    "order_in_round": 2,
+    "text": "In li2018.pdf.md, life-15-00613.pdf.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about Timing evidence is unmeasured, conflicting, poorly transferable, or compatible with both? Cite the exact passage for each finding.",
+    "firewall": {
+      "status": "PASS",
+      "repairs": [],
+      "original_text": "In li2018.pdf.md, life-15-00613.pdf.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about Timing evidence is unmeasured, conflicting, poorly transferable, or compatible with both? Cite the exact passage for each finding."
+    },
+    "sources_as_sent": [
+      "li2018.pdf.md",
+      "life-15-00613.pdf.md"
+    ],
+    "sources_resolved": {
+      "li2018.pdf.md": "li2018.pdf.md",
+      "life-15-00613.pdf.md": "life-15-00613.pdf.md"
+    },
+    "target": "coverage of: Timing evidence is unmeasured, conflicting, poorly transferable, or compatible w",
+    "packet_priority_id": null,
+    "rationale": "The local engine rotates the ranked sources across the hypothesis clauses and decisive tests so that every source and every required part is queried at least once.",
+    "header_version": "82d89acb3212b566",
+    "issued": "2026-10-30T03:38:31+00:00",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0012-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": []
+  },
+  {
+    "qid": "Q0013",
+    "run_id": "RUN-PTX-LOCAL-OFFLINE",
+    "round": 3,
+    "order_in_round": 3,
+    "text": "In life-15-00613.pdf.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about mechanistic evidence supports a coherent causal explanation for why PTX could meaningfully improve voiding in an identifiable subgroup of these men? Cite the exact passage for each finding.",
+    "firewall": {
+      "status": "PASS",
+      "repairs": [],
+      "original_text": "In life-15-00613.pdf.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about mechanistic evidence supports a coherent causal explanation for why PTX could meaningfully improve voiding in an identifiable subgroup of these men? Cite the exact passage for each finding."
+    },
+    "sources_as_sent": [
+      "life-15-00613.pdf.md"
+    ],
+    "sources_resolved": {
+      "life-15-00613.pdf.md": "life-15-00613.pdf.md"
+    },
+    "target": "coverage of: mechanistic evidence supports a coherent causal explanation for why PTX could me",
+    "packet_priority_id": null,
+    "rationale": "The local engine rotates the ranked sources across the hypothesis clauses and decisive tests so that every source and every required part is queried at least once.",
+    "header_version": "82d89acb3212b566",
+    "issued": "2026-10-30T03:38:31+00:00",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0013-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": []
+  },
+  {
+    "qid": "Q0014",
+    "run_id": "RUN-PTX-LOCAL-OFFLINE",
+    "round": 3,
+    "order_in_round": 4,
+    "text": "In masterson2017.pdf.md, MP75-18-RATES-AND-ADHERENCE-TO-PELVIC-FLOOR-PHYSICAL-THERAPY-FOR-MALE-PATIENTS-WITH-BENIGN.pdf.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about Their persistent difficulty includes a reversible physiological component that tamsulosin and their prescribed pelvic-floor intervention do not adequately address? Cite the exact passage for each finding.",
+    "firewall": {
+      "status": "PASS",
+      "repairs": [],
+      "original_text": "In masterson2017.pdf.md, MP75-18-RATES-AND-ADHERENCE-TO-PELVIC-FLOOR-PHYSICAL-THERAPY-FOR-MALE-PATIENTS-WITH-BENIGN.pdf.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about Their persistent difficulty includes a reversible physiological component that tamsulosin and their prescribed pelvic-floor intervention do not adequately address? Cite the exact passage for each finding."
+    },
+    "sources_as_sent": [
+      "masterson2017.pdf.md",
+      "MP75-18-RATES-AND-ADHERENCE-TO-PELVIC-FLOOR-PHYSICAL-THERAPY-FOR-MALE-PATIENTS-WITH-BENIGN.pdf.md"
+    ],
+    "sources_resolved": {
+      "masterson2017.pdf.md": "masterson2017.pdf.md",
+      "MP75-18-RATES-AND-ADHERENCE-TO-PELVIC-FLOOR-PHYSICAL-THERAPY-FOR-MALE-PATIENTS-WITH-BENIGN.pdf.md": "MP75-18-RATES-AND-ADHERENCE-TO-PELVIC-FLOOR-PHYSICAL-THERAPY-FOR-MALE-PATIENTS-WITH-BENIGN.pdf.md"
+    },
+    "target": "coverage of: Their persistent difficulty includes a reversible physiological component that t",
+    "packet_priority_id": null,
+    "rationale": "The local engine rotates the ranked sources across the hypothesis clauses and decisive tests so that every source and every required part is queried at least once.",
+    "header_version": "82d89acb3212b566",
+    "issued": "2026-10-30T03:38:31+00:00",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0014-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": []
+  },
+  {
+    "qid": "Q0015",
+    "run_id": "RUN-PTX-LOCAL-OFFLINE",
+    "round": 3,
+    "order_in_round": 5,
+    "text": "In MP75-18-RATES-AND-ADHERENCE-TO-PELVIC-FLOOR-PHYSICAL-THERAPY-FOR-MALE-PATIENTS-WITH-BENIGN.pdf.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about PTX's reported biological effects do not translate into a meaningful remedy for the dysfunction driving impaired voiding in this cohort? Cite the exact passage for each finding.",
+    "firewall": {
+      "status": "PASS",
+      "repairs": [],
+      "original_text": "In MP75-18-RATES-AND-ADHERENCE-TO-PELVIC-FLOOR-PHYSICAL-THERAPY-FOR-MALE-PATIENTS-WITH-BENIGN.pdf.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about PTX's reported biological effects do not translate into a meaningful remedy for the dysfunction driving impaired voiding in this cohort? Cite the exact passage for each finding."
+    },
+    "sources_as_sent": [
+      "MP75-18-RATES-AND-ADHERENCE-TO-PELVIC-FLOOR-PHYSICAL-THERAPY-FOR-MALE-PATIENTS-WITH-BENIGN.pdf.md"
+    ],
+    "sources_resolved": {
+      "MP75-18-RATES-AND-ADHERENCE-TO-PELVIC-FLOOR-PHYSICAL-THERAPY-FOR-MALE-PATIENTS-WITH-BENIGN.pdf.md": "MP75-18-RATES-AND-ADHERENCE-TO-PELVIC-FLOOR-PHYSICAL-THERAPY-FOR-MALE-PATIENTS-WITH-BENIGN.pdf.md"
+    },
+    "target": "coverage of: PTX's reported biological effects do not translate into a meaningful remedy for ",
+    "packet_priority_id": null,
+    "rationale": "The local engine rotates the ranked sources across the hypothesis clauses and decisive tests so that every source and every required part is queried at least once.",
+    "header_version": "82d89acb3212b566",
+    "issued": "2026-10-30T03:38:31+00:00",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0015-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": []
+  },
+  {
+    "qid": "Q0016",
+    "run_id": "RUN-PTX-LOCAL-OFFLINE",
+    "round": 4,
+    "order_in_round": 1,
+    "text": "In osman2018.pdf.md, what does the source report about **functional link**  - specifically, what findings, study design, denominators, doses or exposures, comparators, timing, and contrary or null results bear on the question: Does changing the proposed target improve contractility, outlet behavior, coordination, initiation, flow, emptying, or another relevant urinary function??",
+    "firewall": {
+      "status": "PASS",
+      "repairs": [],
+      "original_text": "In osman2018.pdf.md, what does the source report about **functional link**  - specifically, what findings, study design, denominators, doses or exposures, comparators, timing, and contrary or null results bear on the question: Does changing the proposed target improve contractility, outlet behavior, coordination, initiation, flow, emptying, or another relevant urinary function??"
+    },
+    "sources_as_sent": [
+      "osman2018.pdf.md"
+    ],
+    "sources_resolved": {
+      "osman2018.pdf.md": "osman2018.pdf.md"
+    },
+    "target": "decisive test: **Functional link** ",
+    "packet_priority_id": null,
+    "rationale": "The local engine rotates the ranked sources across the hypothesis clauses and decisive tests so that every source and every required part is queried at least once.",
+    "header_version": "82d89acb3212b566",
+    "issued": "2026-10-30T03:38:32+00:00",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0016-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": []
+  },
+  {
+    "qid": "Q0017",
+    "run_id": "RUN-PTX-LOCAL-OFFLINE",
+    "round": 4,
+    "order_in_round": 2,
+    "text": "In rademakers2016.pdf.md, s00345-024-04974-7.pdf.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about Existing evidence supports some components of ? Cite the exact passage for each finding.",
+    "firewall": {
+      "status": "REPAIRED",
+      "repairs": [
+        "removed hypothesis identifiers"
+      ],
+      "original_text": "In rademakers2016.pdf.md, s00345-024-04974-7.pdf.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about Existing evidence supports some components of H1? Cite the exact passage for each finding."
+    },
+    "sources_as_sent": [
+      "rademakers2016.pdf.md",
+      "s00345-024-04974-7.pdf.md"
+    ],
+    "sources_resolved": {
+      "rademakers2016.pdf.md": "rademakers2016.pdf.md",
+      "s00345-024-04974-7.pdf.md": "s00345-024-04974-7.pdf.md"
+    },
+    "target": "coverage of: Existing evidence supports some components of H1",
+    "packet_priority_id": null,
+    "rationale": "The local engine rotates the ranked sources across the hypothesis clauses and decisive tests so that every source and every required part is queried at least once.",
+    "header_version": "82d89acb3212b566",
+    "issued": "2026-10-30T03:38:32+00:00",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0017-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": []
+  },
+  {
+    "qid": "Q0018",
+    "run_id": "RUN-PTX-LOCAL-OFFLINE",
+    "round": 4,
+    "order_in_round": 3,
+    "text": "In s00345-024-04974-7.pdf.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about cannot distinguish a therapeutically consequential mechanism from the failure described by ? Cite the exact passage for each finding.",
+    "firewall": {
+      "status": "REPAIRED",
+      "repairs": [
+        "removed hypothesis identifiers"
+      ],
+      "original_text": "In s00345-024-04974-7.pdf.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about cannot distinguish a therapeutically consequential mechanism from the failure described by H2? Cite the exact passage for each finding."
+    },
+    "sources_as_sent": [
+      "s00345-024-04974-7.pdf.md"
+    ],
+    "sources_resolved": {
+      "s00345-024-04974-7.pdf.md": "s00345-024-04974-7.pdf.md"
+    },
+    "target": "coverage of: cannot distinguish a therapeutically consequential mechanism from the failure de",
+    "packet_priority_id": null,
+    "rationale": "The local engine rotates the ranked sources across the hypothesis clauses and decisive tests so that every source and every required part is queried at least once.",
+    "header_version": "82d89acb3212b566",
+    "issued": "2026-10-30T03:38:32+00:00",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0018-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": []
+  },
+  {
+    "qid": "Q0019",
+    "run_id": "RUN-PTX-LOCAL-OFFLINE",
+    "round": 4,
+    "order_in_round": 4,
+    "text": "In vanreijn-baggen2022.pdf.md, bortnick2019.pdf.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about The materially supported mechanism acts on current physiological function—such as perfusion, microcirculation, smooth-muscle behavior, or neural signaling—rather than on established tissue structure? Cite the exact passage for each finding.",
+    "firewall": {
+      "status": "PASS",
+      "repairs": [],
+      "original_text": "In vanreijn-baggen2022.pdf.md, bortnick2019.pdf.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about The materially supported mechanism acts on current physiological function—such as perfusion, microcirculation, smooth-muscle behavior, or neural signaling—rather than on established tissue structure? Cite the exact passage for each finding."
+    },
+    "sources_as_sent": [
+      "vanreijn-baggen2022.pdf.md",
+      "bortnick2019.pdf.md"
+    ],
+    "sources_resolved": {
+      "vanreijn-baggen2022.pdf.md": "vanreijn-baggen2022.pdf.md",
+      "bortnick2019.pdf.md": "bortnick2019.pdf.md"
+    },
+    "target": "coverage of: The materially supported mechanism acts on current physiological function—such a",
+    "packet_priority_id": null,
+    "rationale": "The local engine rotates the ranked sources across the hypothesis clauses and decisive tests so that every source and every required part is queried at least once.",
+    "header_version": "82d89acb3212b566",
+    "issued": "2026-10-30T03:38:32+00:00",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0019-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": []
+  },
+  {
+    "qid": "Q0020",
+    "run_id": "RUN-PTX-LOCAL-OFFLINE",
+    "round": 4,
+    "order_in_round": 5,
+    "text": "In bortnick2019.pdf.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about At clinically attainable exposures, PTX or its metabolites should produce measurable improvement in voiding within days to a few weeks? Cite the exact passage for each finding.",
+    "firewall": {
+      "status": "PASS",
+      "repairs": [],
+      "original_text": "In bortnick2019.pdf.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about At clinically attainable exposures, PTX or its metabolites should produce measurable improvement in voiding within days to a few weeks? Cite the exact passage for each finding."
+    },
+    "sources_as_sent": [
+      "bortnick2019.pdf.md"
+    ],
+    "sources_resolved": {
+      "bortnick2019.pdf.md": "bortnick2019.pdf.md"
+    },
+    "target": "coverage of: At clinically attainable exposures, PTX or its metabolites should produce measur",
+    "packet_priority_id": null,
+    "rationale": "The local engine rotates the ranked sources across the hypothesis clauses and decisive tests so that every source and every required part is queried at least once.",
+    "header_version": "82d89acb3212b566",
+    "issued": "2026-10-30T03:38:32+00:00",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0020-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": []
+  },
+  {
+    "qid": "Q0021",
+    "run_id": "RUN-PTX-LOCAL-OFFLINE",
+    "round": 5,
+    "order_in_round": 1,
+    "text": "In bortnick2020.pdf.md, what does the source report about **timing and reversibility**  - specifically, what findings, study design, denominators, doses or exposures, comparators, timing, and contrary or null results bear on the question: Which mechanisms predict improvement within days, recovery over weeks or months, prevention only, or no reversal of established dysfunction??",
+    "firewall": {
+      "status": "PASS",
+      "repairs": [],
+      "original_text": "In bortnick2020.pdf.md, what does the source report about **timing and reversibility**  - specifically, what findings, study design, denominators, doses or exposures, comparators, timing, and contrary or null results bear on the question: Which mechanisms predict improvement within days, recovery over weeks or months, prevention only, or no reversal of established dysfunction??"
+    },
+    "sources_as_sent": [
+      "bortnick2020.pdf.md"
+    ],
+    "sources_resolved": {
+      "bortnick2020.pdf.md": "bortnick2020.pdf.md"
+    },
+    "target": "decisive test: **Timing and reversibility** ",
+    "packet_priority_id": null,
+    "rationale": "The local engine rotates the ranked sources across the hypothesis clauses and decisive tests so that every source and every required part is queried at least once.",
+    "header_version": "82d89acb3212b566",
+    "issued": "2026-10-30T03:38:33+00:00",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0021-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": []
+  },
+  {
+    "qid": "Q0022",
+    "run_id": "RUN-PTX-LOCAL-OFFLINE",
+    "round": 5,
+    "order_in_round": 2,
+    "text": "In bowton1989.pdf.md, dezube1993.pdf.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about Meaningful improvement should appear only after weeks to months of treatment, with little early functional change? Cite the exact passage for each finding.",
+    "firewall": {
+      "status": "PASS",
+      "repairs": [],
+      "original_text": "In bowton1989.pdf.md, dezube1993.pdf.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about Meaningful improvement should appear only after weeks to months of treatment, with little early functional change? Cite the exact passage for each finding."
+    },
+    "sources_as_sent": [
+      "bowton1989.pdf.md",
+      "dezube1993.pdf.md"
+    ],
+    "sources_resolved": {
+      "bowton1989.pdf.md": "bowton1989.pdf.md",
+      "dezube1993.pdf.md": "dezube1993.pdf.md"
+    },
+    "target": "coverage of: Meaningful improvement should appear only after weeks to months of treatment, wi",
+    "packet_priority_id": null,
+    "rationale": "The local engine rotates the ranked sources across the hypothesis clauses and decisive tests so that every source and every required part is queried at least once.",
+    "header_version": "82d89acb3212b566",
+    "issued": "2026-10-30T03:38:33+00:00",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0022-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": []
+  },
+  {
+    "qid": "Q0023",
+    "run_id": "RUN-PTX-LOCAL-OFFLINE",
+    "round": 5,
+    "order_in_round": 3,
+    "text": "In dezube1993.pdf.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about Existing evidence cannot distinguish rapid functional benefit from slow structural recovery? Cite the exact passage for each finding.",
+    "firewall": {
+      "status": "PASS",
+      "repairs": [],
+      "original_text": "In dezube1993.pdf.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about Existing evidence cannot distinguish rapid functional benefit from slow structural recovery? Cite the exact passage for each finding."
+    },
+    "sources_as_sent": [
+      "dezube1993.pdf.md"
+    ],
+    "sources_resolved": {
+      "dezube1993.pdf.md": "dezube1993.pdf.md"
+    },
+    "target": "coverage of: Existing evidence cannot distinguish rapid functional benefit from slow structur",
+    "packet_priority_id": null,
+    "rationale": "The local engine rotates the ranked sources across the hypothesis clauses and decisive tests so that every source and every required part is queried at least once.",
+    "header_version": "82d89acb3212b566",
+    "issued": "2026-10-30T03:38:33+00:00",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0023-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": []
+  },
+  {
+    "qid": "Q0024",
+    "run_id": "RUN-PTX-LOCAL-OFFLINE",
+    "round": 5,
+    "order_in_round": 4,
+    "text": "In fdp03812573_1.pdf.md, immunology00076-0102.pdf.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about Timing evidence is unmeasured, conflicting, poorly transferable, or compatible with both? Cite the exact passage for each finding.",
+    "firewall": {
+      "status": "PASS",
+      "repairs": [],
+      "original_text": "In fdp03812573_1.pdf.md, immunology00076-0102.pdf.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about Timing evidence is unmeasured, conflicting, poorly transferable, or compatible with both? Cite the exact passage for each finding."
+    },
+    "sources_as_sent": [
+      "fdp03812573_1.pdf.md",
+      "immunology00076-0102.pdf.md"
+    ],
+    "sources_resolved": {
+      "fdp03812573_1.pdf.md": "fdp03812573_1.pdf.md",
+      "immunology00076-0102.pdf.md": "immunology00076-0102.pdf.md"
+    },
+    "target": "coverage of: Timing evidence is unmeasured, conflicting, poorly transferable, or compatible w",
+    "packet_priority_id": null,
+    "rationale": "The local engine rotates the ranked sources across the hypothesis clauses and decisive tests so that every source and every required part is queried at least once.",
+    "header_version": "82d89acb3212b566",
+    "issued": "2026-10-30T03:38:33+00:00",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0024-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": []
+  },
+  {
+    "qid": "Q0025",
+    "run_id": "RUN-PTX-LOCAL-OFFLINE",
+    "round": 5,
+    "order_in_round": 5,
+    "text": "In immunology00076-0102.pdf.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about mechanistic evidence supports a coherent causal explanation for why PTX could meaningfully improve voiding in an identifiable subgroup of these men? Cite the exact passage for each finding.",
+    "firewall": {
+      "status": "PASS",
+      "repairs": [],
+      "original_text": "In immunology00076-0102.pdf.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about mechanistic evidence supports a coherent causal explanation for why PTX could meaningfully improve voiding in an identifiable subgroup of these men? Cite the exact passage for each finding."
+    },
+    "sources_as_sent": [
+      "immunology00076-0102.pdf.md"
+    ],
+    "sources_resolved": {
+      "immunology00076-0102.pdf.md": "immunology00076-0102.pdf.md"
+    },
+    "target": "coverage of: mechanistic evidence supports a coherent causal explanation for why PTX could me",
+    "packet_priority_id": null,
+    "rationale": "The local engine rotates the ranked sources across the hypothesis clauses and decisive tests so that every source and every required part is queried at least once.",
+    "header_version": "82d89acb3212b566",
+    "issued": "2026-10-30T03:38:33+00:00",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0025-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": []
+  },
+  {
+    "qid": "Q0026",
+    "run_id": "RUN-PTX-LOCAL-OFFLINE",
+    "round": 6,
+    "order_in_round": 1,
+    "text": "In kruuse2000.pdf.md, what does the source report about **transfer**  - specifically, what findings, study design, denominators, doses or exposures, comparators, timing, and contrary or null results bear on the question: Which differences in species, tissue, disease, dose, route, and injury model preserve or break the causal bridge to this cohort??",
+    "firewall": {
+      "status": "PASS",
+      "repairs": [],
+      "original_text": "In kruuse2000.pdf.md, what does the source report about **transfer**  - specifically, what findings, study design, denominators, doses or exposures, comparators, timing, and contrary or null results bear on the question: Which differences in species, tissue, disease, dose, route, and injury model preserve or break the causal bridge to this cohort??"
+    },
+    "sources_as_sent": [
+      "kruuse2000.pdf.md"
+    ],
+    "sources_resolved": {
+      "kruuse2000.pdf.md": "kruuse2000.pdf.md"
+    },
+    "target": "decisive test: **Transfer** ",
+    "packet_priority_id": null,
+    "rationale": "The local engine rotates the ranked sources across the hypothesis clauses and decisive tests so that every source and every required part is queried at least once.",
+    "header_version": "82d89acb3212b566",
+    "issued": "2026-10-30T03:38:34+00:00",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0026-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": []
+  },
+  {
+    "qid": "Q0027",
+    "run_id": "RUN-PTX-LOCAL-OFFLINE",
+    "round": 6,
+    "order_in_round": 2,
+    "text": "In roberts1993.pdf.md, strieter1988.pdf.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about PTX's reported biological effects do not translate into a meaningful remedy for the dysfunction driving impaired voiding in this cohort? Cite the exact passage for each finding.",
+    "firewall": {
+      "status": "PASS",
+      "repairs": [],
+      "original_text": "In roberts1993.pdf.md, strieter1988.pdf.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about PTX's reported biological effects do not translate into a meaningful remedy for the dysfunction driving impaired voiding in this cohort? Cite the exact passage for each finding."
+    },
+    "sources_as_sent": [
+      "roberts1993.pdf.md",
+      "strieter1988.pdf.md"
+    ],
+    "sources_resolved": {
+      "roberts1993.pdf.md": "roberts1993.pdf.md",
+      "strieter1988.pdf.md": "strieter1988.pdf.md"
+    },
+    "target": "coverage of: PTX's reported biological effects do not translate into a meaningful remedy for ",
+    "packet_priority_id": null,
+    "rationale": "The local engine rotates the ranked sources across the hypothesis clauses and decisive tests so that every source and every required part is queried at least once.",
+    "header_version": "82d89acb3212b566",
+    "issued": "2026-10-30T03:38:34+00:00",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0027-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": []
+  },
+  {
+    "qid": "Q0028",
+    "run_id": "RUN-PTX-LOCAL-OFFLINE",
+    "round": 6,
+    "order_in_round": 3,
+    "text": "In strieter1988.pdf.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about Affirmative evidence demonstrates a consequential mismatch in exposure, tissue, disease process, timing, or the relationship between a biological marker and urinary function—and that mismatch defeats the materially supported rationale, not merely one route among many? Cite the exact passage for each finding.",
+    "firewall": {
+      "status": "PASS",
+      "repairs": [],
+      "original_text": "In strieter1988.pdf.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about Affirmative evidence demonstrates a consequential mismatch in exposure, tissue, disease process, timing, or the relationship between a biological marker and urinary function—and that mismatch defeats the materially supported rationale, not merely one route among many? Cite the exact passage for each finding."
+    },
+    "sources_as_sent": [
+      "strieter1988.pdf.md"
+    ],
+    "sources_resolved": {
+      "strieter1988.pdf.md": "strieter1988.pdf.md"
+    },
+    "target": "coverage of: Affirmative evidence demonstrates a consequential mismatch in exposure, tissue, ",
+    "packet_priority_id": null,
+    "rationale": "The local engine rotates the ranked sources across the hypothesis clauses and decisive tests so that every source and every required part is queried at least once.",
+    "header_version": "82d89acb3212b566",
+    "issued": "2026-10-30T03:38:34+00:00",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0028-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": []
+  },
+  {
+    "qid": "Q0029",
+    "run_id": "RUN-PTX-LOCAL-OFFLINE",
+    "round": 6,
+    "order_in_round": 4,
+    "text": "In delanian2003.pdf.md, delanian2005.pdf.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about Existing evidence supports some components of ? Cite the exact passage for each finding.",
+    "firewall": {
+      "status": "REPAIRED",
+      "repairs": [
+        "removed hypothesis identifiers"
+      ],
+      "original_text": "In delanian2003.pdf.md, delanian2005.pdf.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about Existing evidence supports some components of H1? Cite the exact passage for each finding."
+    },
+    "sources_as_sent": [
+      "delanian2003.pdf.md",
+      "delanian2005.pdf.md"
+    ],
+    "sources_resolved": {
+      "delanian2003.pdf.md": "delanian2003.pdf.md",
+      "delanian2005.pdf.md": "delanian2005.pdf.md"
+    },
+    "target": "coverage of: Existing evidence supports some components of H1",
+    "packet_priority_id": null,
+    "rationale": "The local engine rotates the ranked sources across the hypothesis clauses and decisive tests so that every source and every required part is queried at least once.",
+    "header_version": "82d89acb3212b566",
+    "issued": "2026-10-30T03:38:34+00:00",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0029-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": []
+  },
+  {
+    "qid": "Q0030",
+    "run_id": "RUN-PTX-LOCAL-OFFLINE",
+    "round": 6,
+    "order_in_round": 5,
+    "text": "In delanian2005.pdf.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about cannot distinguish a therapeutically consequential mechanism from the failure described by ? Cite the exact passage for each finding.",
+    "firewall": {
+      "status": "REPAIRED",
+      "repairs": [
+        "removed hypothesis identifiers"
+      ],
+      "original_text": "In delanian2005.pdf.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about cannot distinguish a therapeutically consequential mechanism from the failure described by H2? Cite the exact passage for each finding."
+    },
+    "sources_as_sent": [
+      "delanian2005.pdf.md"
+    ],
+    "sources_resolved": {
+      "delanian2005.pdf.md": "delanian2005.pdf.md"
+    },
+    "target": "coverage of: cannot distinguish a therapeutically consequential mechanism from the failure de",
+    "packet_priority_id": null,
+    "rationale": "The local engine rotates the ranked sources across the hypothesis clauses and decisive tests so that every source and every required part is queried at least once.",
+    "header_version": "82d89acb3212b566",
+    "issued": "2026-10-30T03:38:34+00:00",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0030-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": []
+  },
+  {
+    "qid": "Q0031",
+    "run_id": "RUN-PTX-LOCAL-OFFLINE",
+    "round": 7,
+    "order_in_round": 1,
+    "text": "In s00210-025-03845-1.pdf.md, what does the source report about **intervention attribution**  - specifically, what findings, study design, denominators, doses or exposures, comparators, timing, and contrary or null results bear on the question: What evidence separates PTX from tamsulosin, vitamin E, pelvic-floor treatment, combination effects, adherence, and contextual change??",
+    "firewall": {
+      "status": "PASS",
+      "repairs": [],
+      "original_text": "In s00210-025-03845-1.pdf.md, what does the source report about **intervention attribution**  - specifically, what findings, study design, denominators, doses or exposures, comparators, timing, and contrary or null results bear on the question: What evidence separates PTX from tamsulosin, vitamin E, pelvic-floor treatment, combination effects, adherence, and contextual change??"
+    },
+    "sources_as_sent": [
+      "s00210-025-03845-1.pdf.md"
+    ],
+    "sources_resolved": {
+      "s00210-025-03845-1.pdf.md": "s00210-025-03845-1.pdf.md"
+    },
+    "target": "decisive test: **Intervention attribution** ",
+    "packet_priority_id": null,
+    "rationale": "The local engine rotates the ranked sources across the hypothesis clauses and decisive tests so that every source and every required part is queried at least once.",
+    "header_version": "82d89acb3212b566",
+    "issued": "2026-10-30T03:38:35+00:00",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0031-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": []
+  },
+  {
+    "qid": "Q0032",
+    "run_id": "RUN-PTX-LOCAL-OFFLINE",
+    "round": 7,
+    "order_in_round": 2,
+    "text": "In ma2018.pdf.md, parker2000.pdf.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about At clinically attainable exposures, PTX or its metabolites should produce measurable improvement in voiding within days to a few weeks? Cite the exact passage for each finding.",
+    "firewall": {
+      "status": "PASS",
+      "repairs": [],
+      "original_text": "In ma2018.pdf.md, parker2000.pdf.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about At clinically attainable exposures, PTX or its metabolites should produce measurable improvement in voiding within days to a few weeks? Cite the exact passage for each finding."
+    },
+    "sources_as_sent": [
+      "ma2018.pdf.md",
+      "parker2000.pdf.md"
+    ],
+    "sources_resolved": {
+      "ma2018.pdf.md": "ma2018.pdf.md",
+      "parker2000.pdf.md": "parker2000.pdf.md"
+    },
+    "target": "coverage of: At clinically attainable exposures, PTX or its metabolites should produce measur",
+    "packet_priority_id": null,
+    "rationale": "The local engine rotates the ranked sources across the hypothesis clauses and decisive tests so that every source and every required part is queried at least once.",
+    "header_version": "82d89acb3212b566",
+    "issued": "2026-10-30T03:38:35+00:00",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0032-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": []
+  },
+  {
+    "qid": "Q0033",
+    "run_id": "RUN-PTX-LOCAL-OFFLINE",
+    "round": 7,
+    "order_in_round": 3,
+    "text": "In parker2000.pdf.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about The materially supported mechanism acts by reversing or limiting structural change—such as fibrosis, remodeling, or other tissue damage—that contributes to impaired voiding? Cite the exact passage for each finding.",
+    "firewall": {
+      "status": "PASS",
+      "repairs": [],
+      "original_text": "In parker2000.pdf.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about The materially supported mechanism acts by reversing or limiting structural change—such as fibrosis, remodeling, or other tissue damage—that contributes to impaired voiding? Cite the exact passage for each finding."
+    },
+    "sources_as_sent": [
+      "parker2000.pdf.md"
+    ],
+    "sources_resolved": {
+      "parker2000.pdf.md": "parker2000.pdf.md"
+    },
+    "target": "coverage of: The materially supported mechanism acts by reversing or limiting structural chan",
+    "packet_priority_id": null,
+    "rationale": "The local engine rotates the ranked sources across the hypothesis clauses and decisive tests so that every source and every required part is queried at least once.",
+    "header_version": "82d89acb3212b566",
+    "issued": "2026-10-30T03:38:35+00:00",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0033-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": []
+  },
+  {
+    "qid": "Q0034",
+    "run_id": "RUN-PTX-LOCAL-OFFLINE",
+    "round": 7,
+    "order_in_round": 4,
+    "text": "In ridings1994.pdf.md, wystrychowski2014.pdf.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about Meaningful improvement should appear only after weeks to months of treatment, with little early functional change? Cite the exact passage for each finding.",
+    "firewall": {
+      "status": "PASS",
+      "repairs": [],
+      "original_text": "In ridings1994.pdf.md, wystrychowski2014.pdf.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about Meaningful improvement should appear only after weeks to months of treatment, with little early functional change? Cite the exact passage for each finding."
+    },
+    "sources_as_sent": [
+      "ridings1994.pdf.md",
+      "wystrychowski2014.pdf.md"
+    ],
+    "sources_resolved": {
+      "ridings1994.pdf.md": "ridings1994.pdf.md",
+      "wystrychowski2014.pdf.md": "wystrychowski2014.pdf.md"
+    },
+    "target": "coverage of: Meaningful improvement should appear only after weeks to months of treatment, wi",
+    "packet_priority_id": null,
+    "rationale": "The local engine rotates the ranked sources across the hypothesis clauses and decisive tests so that every source and every required part is queried at least once.",
+    "header_version": "82d89acb3212b566",
+    "issued": "2026-10-30T03:38:35+00:00",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0034-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": []
+  },
+  {
+    "qid": "Q0035",
+    "run_id": "RUN-PTX-LOCAL-OFFLINE",
+    "round": 7,
+    "order_in_round": 5,
+    "text": "In wystrychowski2014.pdf.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about Existing evidence cannot distinguish rapid functional benefit from slow structural recovery? Cite the exact passage for each finding.",
+    "firewall": {
+      "status": "PASS",
+      "repairs": [],
+      "original_text": "In wystrychowski2014.pdf.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about Existing evidence cannot distinguish rapid functional benefit from slow structural recovery? Cite the exact passage for each finding."
+    },
+    "sources_as_sent": [
+      "wystrychowski2014.pdf.md"
+    ],
+    "sources_resolved": {
+      "wystrychowski2014.pdf.md": "wystrychowski2014.pdf.md"
+    },
+    "target": "coverage of: Existing evidence cannot distinguish rapid functional benefit from slow structur",
+    "packet_priority_id": null,
+    "rationale": "The local engine rotates the ranked sources across the hypothesis clauses and decisive tests so that every source and every required part is queried at least once.",
+    "header_version": "82d89acb3212b566",
+    "issued": "2026-10-30T03:38:35+00:00",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0035-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": []
+  },
+  {
+    "qid": "Q0036",
+    "run_id": "RUN-PTX-LOCAL-OFFLINE",
+    "round": 8,
+    "order_in_round": 1,
+    "text": "In nisi2013.pdf.md, what does the source report about **phenotype and prediction**  - specifically, what findings, study design, denominators, doses or exposures, comparators, timing, and contrary or null results bear on the question: What measurable patient characteristics identify the proposed responsive subgroup and predict response, nonresponse, onset, and persistence??",
+    "firewall": {
+      "status": "PASS",
+      "repairs": [],
+      "original_text": "In nisi2013.pdf.md, what does the source report about **phenotype and prediction**  - specifically, what findings, study design, denominators, doses or exposures, comparators, timing, and contrary or null results bear on the question: What measurable patient characteristics identify the proposed responsive subgroup and predict response, nonresponse, onset, and persistence??"
+    },
+    "sources_as_sent": [
+      "nisi2013.pdf.md"
+    ],
+    "sources_resolved": {
+      "nisi2013.pdf.md": "nisi2013.pdf.md"
+    },
+    "target": "decisive test: **Phenotype and prediction** ",
+    "packet_priority_id": null,
+    "rationale": "The local engine rotates the ranked sources across the hypothesis clauses and decisive tests so that every source and every required part is queried at least once.",
+    "header_version": "82d89acb3212b566",
+    "issued": "2026-10-30T03:38:36+00:00",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0036-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": []
+  },
+  {
+    "qid": "Q0037",
+    "run_id": "RUN-PTX-LOCAL-OFFLINE",
+    "round": 8,
+    "order_in_round": 2,
+    "text": "In spinas1991.pdf.md, raison2013.pdf.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about mechanistic evidence supports a coherent causal explanation for why PTX could meaningfully improve voiding in an identifiable subgroup of these men? Cite the exact passage for each finding.",
+    "firewall": {
+      "status": "PASS",
+      "repairs": [],
+      "original_text": "In spinas1991.pdf.md, raison2013.pdf.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about mechanistic evidence supports a coherent causal explanation for why PTX could meaningfully improve voiding in an identifiable subgroup of these men? Cite the exact passage for each finding."
+    },
+    "sources_as_sent": [
+      "spinas1991.pdf.md",
+      "raison2013.pdf.md"
+    ],
+    "sources_resolved": {
+      "spinas1991.pdf.md": "spinas1991.pdf.md",
+      "raison2013.pdf.md": "raison2013.pdf.md"
+    },
+    "target": "coverage of: mechanistic evidence supports a coherent causal explanation for why PTX could me",
+    "packet_priority_id": null,
+    "rationale": "The local engine rotates the ranked sources across the hypothesis clauses and decisive tests so that every source and every required part is queried at least once.",
+    "header_version": "82d89acb3212b566",
+    "issued": "2026-10-30T03:38:36+00:00",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0037-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": []
+  },
+  {
+    "qid": "Q0038",
+    "run_id": "RUN-PTX-LOCAL-OFFLINE",
+    "round": 8,
+    "order_in_round": 3,
+    "text": "In raison2013.pdf.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about Their persistent difficulty includes a reversible physiological component that tamsulosin and their prescribed pelvic-floor intervention do not adequately address? Cite the exact passage for each finding.",
+    "firewall": {
+      "status": "PASS",
+      "repairs": [],
+      "original_text": "In raison2013.pdf.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about Their persistent difficulty includes a reversible physiological component that tamsulosin and their prescribed pelvic-floor intervention do not adequately address? Cite the exact passage for each finding."
+    },
+    "sources_as_sent": [
+      "raison2013.pdf.md"
+    ],
+    "sources_resolved": {
+      "raison2013.pdf.md": "raison2013.pdf.md"
+    },
+    "target": "coverage of: Their persistent difficulty includes a reversible physiological component that t",
+    "packet_priority_id": null,
+    "rationale": "The local engine rotates the ranked sources across the hypothesis clauses and decisive tests so that every source and every required part is queried at least once.",
+    "header_version": "82d89acb3212b566",
+    "issued": "2026-10-30T03:38:36+00:00",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0038-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": []
+  },
+  {
+    "qid": "Q0039",
+    "run_id": "RUN-PTX-LOCAL-OFFLINE",
+    "round": 8,
+    "order_in_round": 4,
+    "text": "In roerink2019.pdf.md, shah2016.pdf.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about PTX's reported biological effects do not translate into a meaningful remedy for the dysfunction driving impaired voiding in this cohort? Cite the exact passage for each finding.",
+    "firewall": {
+      "status": "PASS",
+      "repairs": [],
+      "original_text": "In roerink2019.pdf.md, shah2016.pdf.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about PTX's reported biological effects do not translate into a meaningful remedy for the dysfunction driving impaired voiding in this cohort? Cite the exact passage for each finding."
+    },
+    "sources_as_sent": [
+      "roerink2019.pdf.md",
+      "shah2016.pdf.md"
+    ],
+    "sources_resolved": {
+      "roerink2019.pdf.md": "roerink2019.pdf.md",
+      "shah2016.pdf.md": "shah2016.pdf.md"
+    },
+    "target": "coverage of: PTX's reported biological effects do not translate into a meaningful remedy for ",
+    "packet_priority_id": null,
+    "rationale": "The local engine rotates the ranked sources across the hypothesis clauses and decisive tests so that every source and every required part is queried at least once.",
+    "header_version": "82d89acb3212b566",
+    "issued": "2026-10-30T03:38:36+00:00",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0039-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": []
+  },
+  {
+    "qid": "Q0040",
+    "run_id": "RUN-PTX-LOCAL-OFFLINE",
+    "round": 8,
+    "order_in_round": 5,
+    "text": "In shah2016.pdf.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about Affirmative evidence demonstrates a consequential mismatch in exposure, tissue, disease process, timing, or the relationship between a biological marker and urinary function—and that mismatch defeats the materially supported rationale, not merely one route among many? Cite the exact passage for each finding.",
+    "firewall": {
+      "status": "PASS",
+      "repairs": [],
+      "original_text": "In shah2016.pdf.md, what findings, study designs, populations or models, doses or exposures, comparators, and contrary or null results are reported about Affirmative evidence demonstrates a consequential mismatch in exposure, tissue, disease process, timing, or the relationship between a biological marker and urinary function—and that mismatch defeats the materially supported rationale, not merely one route among many? Cite the exact passage for each finding."
+    },
+    "sources_as_sent": [
+      "shah2016.pdf.md"
+    ],
+    "sources_resolved": {
+      "shah2016.pdf.md": "shah2016.pdf.md"
+    },
+    "target": "coverage of: Affirmative evidence demonstrates a consequential mismatch in exposure, tissue, ",
+    "packet_priority_id": null,
+    "rationale": "The local engine rotates the ranked sources across the hypothesis clauses and decisive tests so that every source and every required part is queried at least once.",
+    "header_version": "82d89acb3212b566",
+    "issued": "2026-10-30T03:38:36+00:00",
+    "status": "ANSWERED",
+    "response_ids": [
+      "R-Q0040-A01"
+    ],
+    "frd_ids": [],
+    "witness_ids": []
+  }
+]

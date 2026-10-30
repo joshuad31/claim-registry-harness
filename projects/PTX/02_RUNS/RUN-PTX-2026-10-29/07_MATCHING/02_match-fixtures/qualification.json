@@ -1,0 +1,402 @@
+{
+  "fixtures": 22,
+  "pass_a_correct": 22,
+  "pass_b_correct": 22,
+  "per_pattern": {
+    "actor_object_reversal": {
+      "n": 2,
+      "a_ok": 2,
+      "b_ok": 2
+    },
+    "active_passive_actor_kept": {
+      "n": 2,
+      "a_ok": 2,
+      "b_ok": 2
+    },
+    "affirmation_vs_denial": {
+      "n": 2,
+      "a_ok": 2,
+      "b_ok": 2
+    },
+    "possibility_vs_necessity": {
+      "n": 2,
+      "a_ok": 2,
+      "b_ok": 2
+    },
+    "report_vs_assertion": {
+      "n": 2,
+      "a_ok": 2,
+      "b_ok": 2
+    },
+    "condition_vs_unconditional": {
+      "n": 2,
+      "a_ok": 2,
+      "b_ok": 2
+    },
+    "high_overlap_changed_roles": {
+      "n": 2,
+      "a_ok": 2,
+      "b_ok": 2
+    },
+    "must_keep_reordered": {
+      "n": 1,
+      "a_ok": 1,
+      "b_ok": 1
+    },
+    "must_keep_specific_entails_general": {
+      "n": 1,
+      "a_ok": 1,
+      "b_ok": 1
+    },
+    "unrelated": {
+      "n": 2,
+      "a_ok": 2,
+      "b_ok": 2
+    },
+    "scope_transfer": {
+      "n": 1,
+      "a_ok": 1,
+      "b_ok": 1
+    },
+    "scope_transfer_null_is_not_contradiction": {
+      "n": 1,
+      "a_ok": 1,
+      "b_ok": 1
+    },
+    "quantity_conflict": {
+      "n": 1,
+      "a_ok": 1,
+      "b_ok": 1
+    },
+    "instance_establishes_capability": {
+      "n": 1,
+      "a_ok": 1,
+      "b_ok": 1
+    }
+  },
+  "qualified_patterns": [
+    "active_passive_actor_kept",
+    "actor_object_reversal",
+    "affirmation_vs_denial",
+    "condition_vs_unconditional",
+    "high_overlap_changed_roles",
+    "instance_establishes_capability",
+    "must_keep_reordered",
+    "must_keep_specific_entails_general",
+    "possibility_vs_necessity",
+    "quantity_conflict",
+    "report_vs_assertion",
+    "scope_transfer",
+    "scope_transfer_null_is_not_contradiction",
+    "unrelated"
+  ],
+  "unqualified_patterns": [],
+  "rows": [
+    {
+      "fixture": "FX-01",
+      "pattern": "actor_object_reversal",
+      "accept": [
+        "ABSTAIN",
+        "CONTRADICTS",
+        "NO_SEMANTIC_RELATION"
+      ],
+      "pass_a": "NO_SEMANTIC_RELATION",
+      "pass_b": "NO_SEMANTIC_RELATION",
+      "a_ok": true,
+      "b_ok": true,
+      "trace_a": "Actor and object are reversed: in the witness 'fibrosis in obstructed rat bladders' is what reduces 'drug A exposure', whereas the unit needs drug A to reduce fibrosis. Despite the high word overlap, the witness neither supports nor denies that drug A reduced fibrosis.",
+      "trace_b": "The roles are reversed: in the witness, fibrosis is the actor that \"reduced drug A exposure\" (a pharmacokinetic effect), while in the unit drug A is the actor that \"reduced fibrosis\" (a therapeutic effect). Despite the word overlap, the witness says nothing about drug A's effect on fibrosis, and both statements can be true together, so there is neither support nor contradiction."
+    },
+    {
+      "fixture": "FX-02",
+      "pattern": "actor_object_reversal",
+      "accept": [
+        "ABSTAIN",
+        "CONTRADICTS",
+        "NO_SEMANTIC_RELATION"
+      ],
+      "pass_a": "NO_SEMANTIC_RELATION",
+      "pass_b": "NO_SEMANTIC_RELATION",
+      "a_ok": true,
+      "b_ok": true,
+      "trace_a": "Actor and object are reversed: the witness makes 'improvements in maximum flow rate' the cause and 'tamsulosin absorption' the effect, whereas the unit needs tamsulosin to have improved flow rate. Despite the shared words and population (men with BPH), the witness never attributes the flow improvement to tamsulosin, so it neither supports nor contradicts the unit.",
+      "trace_b": "The witness makes flow-rate improvement the cause and tamsulosin absorption the outcome (\"Improvements in maximum flow rate ... increased tamsulosin absorption\"), while the unit makes tamsulosin the cause of the flow improvement. With actor and object swapped, the witness neither supports nor denies \"Tamsulosin improved maximum flow rate in men with BPH\"."
+    },
+    {
+      "fixture": "FX-03",
+      "pattern": "active_passive_actor_kept",
+      "accept": [
+        "EQUIVALENT"
+      ],
+      "pass_a": "EQUIVALENT",
+      "pass_b": "EQUIVALENT",
+      "a_ok": true,
+      "b_ok": true,
+      "trace_a": "A passive-voice paraphrase that keeps the same actor (Shirazi), action (measured), object (detrusor tension) and timing ('after four weeks').",
+      "trace_b": "\"Detrusor tension was measured by Shirazi after four weeks\" is the passive form of \"Shirazi measured detrusor tension after four weeks\"; the agent (Shirazi), object (detrusor tension), timing (after four weeks) and polarity are unchanged, so there is no role swap."
+    },
+    {
+      "fixture": "FX-04",
+      "pattern": "active_passive_actor_kept",
+      "accept": [
+        "EQUIVALENT",
+        "WITNESS_ENTAILS_UNIT"
+      ],
+      "pass_a": "EQUIVALENT",
+      "pass_b": "EQUIVALENT",
+      "a_ok": true,
+      "b_ok": true,
+      "trace_a": "A passive paraphrase with the same quantity ('sixty men'), action (randomized), design ('two treatment arms') and actor (the trial, here named as 'the trial investigators').",
+      "trace_b": "\"Sixty men were randomized to two treatment arms by the trial investigators\" is the passive form of \"The trial randomized sixty men to two treatment arms\"; the quantity (sixty men), the allocation (two treatment arms) and the actor (the trial and its investigators) are preserved, with no role change."
+    },
+    {
+      "fixture": "FX-05",
+      "pattern": "affirmation_vs_denial",
+      "accept": [
+        "CONTRADICTS"
+      ],
+      "pass_a": "CONTRADICTS",
+      "pass_b": "CONTRADICTS",
+      "a_ok": true,
+      "b_ok": true,
+      "trace_a": "Same actor, outcome and comparison ('evoked detrusor tension compared with control') with opposite polarity: the witness reports 'no significant increase' where the unit asserts that drug A 'increased' it, and no difference in scope is recorded.",
+      "trace_b": "At the same recorded scope (drug A, \"evoked detrusor tension\", \"compared with control\"), the witness denies the increase (\"no significant increase\") and the unit affirms it (\"increased\"). This is opposite polarity on the same predicate, and the null is not from a different population, model or exposure, so the two cannot both be accepted as written."
+    },
+    {
+      "fixture": "FX-06",
+      "pattern": "affirmation_vs_denial",
+      "accept": [
+        "CONTRADICTS"
+      ],
+      "pass_a": "CONTRADICTS",
+      "pass_b": "CONTRADICTS",
+      "a_ok": true,
+      "b_ok": true,
+      "trace_a": "Same predicate and scope (carbachol-induced tension between the groups) with opposite polarity: the witness affirms the tension 'differed significantly', while the unit states it 'did not differ'. Both cannot be accepted as written.",
+      "trace_b": "On the same measure (\"Carbachol-induced tension\") and the same comparison (\"between the groups\"), the witness affirms a difference (\"differed significantly\") and the unit denies one (\"did not differ\"). Opposite polarity on the same predicate at the same scope means both cannot be accepted."
+    },
+    {
+      "fixture": "FX-07",
+      "pattern": "possibility_vs_necessity",
+      "accept": [
+        "PARTIALLY_COVERS",
+        "UNIT_ENTAILS_WITNESS"
+      ],
+      "pass_a": "UNIT_ENTAILS_WITNESS",
+      "pass_b": "UNIT_ENTAILS_WITNESS",
+      "a_ok": true,
+      "b_ok": true,
+      "trace_a": "Same actor, outcome and cohort, but the witness is weaker in both attribution and modality ('The authors suggest that drug A may improve' vs the unit's 'must improve'). Necessity implies possibility, but a suggested possibility cannot establish the unit's 'must'.",
+      "trace_b": "Actor, predicate and cohort match, but the witness is weaker on attribution (\"The authors suggest\") and on modality (\"may improve\" vs the unit's \"must improve\"). \"Must\" implies \"may\" but not the reverse, so the witness is weaker partial support and does not establish the unit."
+    },
+    {
+      "fixture": "FX-08",
+      "pattern": "possibility_vs_necessity",
+      "accept": [
+        "EQUIVALENT",
+        "WITNESS_ENTAILS_UNIT"
+      ],
+      "pass_a": "WITNESS_ENTAILS_UNIT",
+      "pass_b": "WITNESS_ENTAILS_UNIT",
+      "a_ok": true,
+      "b_ok": true,
+      "trace_a": "The witness reports an actual instance, drug A 'measured in human bladder tissue samples' 'after standard clinical oral doses', which meets every scope condition of the capability unit (human bladder tissue, oral route, clinically attainable dose), so 'can reach' follows.",
+      "trace_b": "Drug A \"was measured in human bladder tissue samples\" after \"standard clinical oral doses\", a reported instance that meets every scope condition of the capability unit: human species, bladder tissue, oral route, and a clinically attainable dose. So \"can reach human bladder tissue at clinically attainable oral doses\" follows."
+    },
+    {
+      "fixture": "FX-09",
+      "pattern": "report_vs_assertion",
+      "accept": [
+        "PARTIALLY_COVERS",
+        "UNIT_ENTAILS_WITNESS"
+      ],
+      "pass_a": "UNIT_ENTAILS_WITNESS",
+      "pass_b": "UNIT_ENTAILS_WITNESS",
+      "a_ok": true,
+      "b_ok": true,
+      "trace_a": "The embedded proposition matches the unit (drug A reduces fibrosis in obstructed bladders), but the witness only attributes it to a source that 'reports, without new data' (a narrative review). A reported claim is weaker than the claim itself, so this is relevant but incomplete support.",
+      "trace_b": "The embedded proposition matches the unit in actor (drug A), predicate (reduces fibrosis), scope (obstructed bladders) and polarity, but the witness only establishes that \"A narrative review reports, without new data\" this claim. A source reporting a claim is weaker than the claim itself, so the unit implies the witness's content while the witness gives only weaker, partial support."
+    },
+    {
+      "fixture": "FX-10",
+      "pattern": "report_vs_assertion",
+      "accept": [
+        "EQUIVALENT"
+      ],
+      "pass_a": "EQUIVALENT",
+      "pass_b": "EQUIVALENT",
+      "a_ok": true,
+      "b_ok": true,
+      "trace_a": "Both texts attribute the same claim to the same source ('Chung's review reports' = 'According to Chung's review'), with the same actor (drug A), polarity (reduces), object (fibrosis) and scope (obstructed bladders).",
+      "trace_b": "\"According to Chung's review\" and \"Chung's review reports that\" are the same attribution to the same source, and the reported proposition \"drug A reduces fibrosis in obstructed bladders\" is identical in actor, predicate, scope and polarity. The unit is itself a report-level claim, so the attribution does not weaken the witness relative to it."
+    },
+    {
+      "fixture": "FX-11",
+      "pattern": "condition_vs_unconditional",
+      "accept": [
+        "PARTIALLY_COVERS",
+        "UNIT_ENTAILS_WITNESS"
+      ],
+      "pass_a": "UNIT_ENTAILS_WITNESS",
+      "pass_b": "UNIT_ENTAILS_WITNESS",
+      "a_ok": true,
+      "b_ok": true,
+      "trace_a": "The witness puts the claim inside a condition ('If drug A reaches the detrusor') and hedges the outcome ('may improve'), while the unit asserts both parts outright. The unit implies the hedged conditional, but the conditional establishes neither that drug A reaches the detrusor nor that contractility improves.",
+      "trace_b": "The witness puts \"drug A reaches the detrusor\" inside a condition (\"If ...\") and hedges the outcome (\"may improve\"), while the unit asserts both conjuncts unconditionally (\"reaches the detrusor and contractility improves\"). The unit implies the conditional possibility, but the witness establishes neither conjunct, so it is weaker."
+    },
+    {
+      "fixture": "FX-12",
+      "pattern": "condition_vs_unconditional",
+      "accept": [
+        "EQUIVALENT"
+      ],
+      "pass_a": "EQUIVALENT",
+      "pass_b": "EQUIVALENT",
+      "a_ok": true,
+      "b_ok": true,
+      "trace_a": "Only the position of the scope phrase changes ('In obstructed rats' moved to the end); the actor (drug A), polarity ('increased'), outcome ('evoked tension') and model (obstructed rats) are identical.",
+      "trace_b": "\"In obstructed rats, drug A increased evoked tension\" only moves the scope phrase to the front of \"Drug A increased evoked tension in obstructed rats\"; actor, predicate, model and polarity are identical."
+    },
+    {
+      "fixture": "FX-13",
+      "pattern": "high_overlap_changed_roles",
+      "accept": [
+        "ABSTAIN",
+        "NO_SEMANTIC_RELATION",
+        "PARTIALLY_COVERS"
+      ],
+      "pass_a": "NO_SEMANTIC_RELATION",
+      "pass_b": "NO_SEMANTIC_RELATION",
+      "a_ok": true,
+      "b_ok": true,
+      "trace_a": "The comparison is rearranged: the witness has 'tamsulosin plus placebo' beating 'drug A alone', while the unit needs 'drug A plus tamsulosin' to beat 'tamsulosin alone'. Tamsulosin outperforming drug A monotherapy neither establishes nor excludes an add-on benefit of drug A, so despite the high word overlap there is no support or contradiction.",
+      "trace_b": "The arms are swapped: the witness ranks \"Tamsulosin plus placebo\" above \"drug A alone\" (monotherapy vs monotherapy), while the unit ranks \"Drug A plus tamsulosin\" above \"tamsulosin alone\" (combination vs tamsulosin). The witness has no combination arm, so it says nothing about drug A's add-on effect, and tamsulosin beating drug A monotherapy is compatible with the unit, so there is no contradiction either."
+    },
+    {
+      "fixture": "FX-14",
+      "pattern": "high_overlap_changed_roles",
+      "accept": [
+        "ABSTAIN",
+        "NO_SEMANTIC_RELATION",
+        "PARTIALLY_COVERS"
+      ],
+      "pass_a": "PARTIALLY_COVERS",
+      "pass_b": "PARTIALLY_COVERS",
+      "a_ok": true,
+      "b_ok": true,
+      "trace_a": "Same drug, unit dose, outcome and polarity ('400 mg ... increased maximum flow rate'), but the dosing frequency differs ('once daily' vs the unit's 'three times daily'), which is a different exposure. Carrying the effect over to the unit's regimen needs a transfer assumption, and the two findings do not conflict.",
+      "trace_b": "The right effect (\"increased maximum flow rate\") is shown for drug A, but at a different exposure: \"400 mg once daily\" rather than the unit's \"400 mg three times daily\", a third of the daily dose. Applying it to the unit's regimen needs a dose-transfer assumption, so this mismatch on a required exposure element limits the relation to partial coverage."
+    },
+    {
+      "fixture": "FX-15",
+      "pattern": "must_keep_reordered",
+      "accept": [
+        "EQUIVALENT"
+      ],
+      "pass_a": "EQUIVALENT",
+      "pass_b": "EQUIVALENT",
+      "a_ok": true,
+      "b_ok": true,
+      "trace_a": "This is an active/passive rewording of the same claim: the same condition (paruresis), the same feature ('difficulty urinating when others are present') and the same 'characterizes' relation, with the same polarity and no added qualifier.",
+      "trace_b": "\"Difficulty urinating when others are present characterizes paruresis\" is the active form of \"Paruresis is characterized by difficulty urinating when others are present\"; the feature and the condition keep their roles, and polarity and scope are unchanged."
+    },
+    {
+      "fixture": "FX-16",
+      "pattern": "must_keep_specific_entails_general",
+      "accept": [
+        "EQUIVALENT",
+        "WITNESS_ENTAILS_UNIT"
+      ],
+      "pass_a": "WITNESS_ENTAILS_UNIT",
+      "pass_b": "WITNESS_ENTAILS_UNIT",
+      "a_ok": true,
+      "b_ok": true,
+      "trace_a": "The witness states the unit's full claim (drug A improved detrusor contractility in obstructed rats) and only adds detail ('after four weeks of oral dosing', '12 per group'). The unit sets no timing, route or sample-size condition, so the more specific witness entails it.",
+      "trace_b": "The witness contains every element of the unit (\"drug A improved detrusor contractility in obstructed rats\") and adds only specifics the unit leaves open (\"After four weeks of oral dosing\", \"12 per group\"). Being more specific and at least as strong, it entails the unit."
+    },
+    {
+      "fixture": "FX-17",
+      "pattern": "unrelated",
+      "accept": [
+        "NO_SEMANTIC_RELATION"
+      ],
+      "pass_a": "NO_SEMANTIC_RELATION",
+      "pass_b": "NO_SEMANTIC_RELATION",
+      "a_ok": true,
+      "b_ok": true,
+      "trace_a": "The witness has a different actor ('beta-blockers'), outcome ('mortality') and condition ('after myocardial infarction'); it says nothing about drug A, collagen deposition or obstructed rat bladders.",
+      "trace_b": "\"Beta-blockers reduce mortality after myocardial infarction\" shares no actor (beta-blockers vs drug A), effect (mortality vs collagen deposition) or scope (post-myocardial infarction vs obstructed rat bladders) with the unit, and nothing in the text identifies drug A as a beta-blocker. There is no support, contradiction or partial coverage."
+    },
+    {
+      "fixture": "FX-18",
+      "pattern": "unrelated",
+      "accept": [
+        "NO_SEMANTIC_RELATION"
+      ],
+      "pass_a": "NO_SEMANTIC_RELATION",
+      "pass_b": "NO_SEMANTIC_RELATION",
+      "a_ok": true,
+      "b_ok": true,
+      "trace_a": "The witness reports a pharmacokinetic timing ('Peak plasma concentration occurred at two hours'), while the unit concerns how adherence was assessed ('returned diaries'). The objects and predicates differ, so there is no support or conflict.",
+      "trace_b": "\"Peak plasma concentration occurred at two hours\" is a pharmacokinetic timing finding, while \"Adherence was assessed by returned diaries\" is about how adherence was measured. They share no actor, object or measure, so there is no material relation."
+    },
+    {
+      "fixture": "FX-19",
+      "pattern": "scope_transfer",
+      "accept": [
+        "NO_SEMANTIC_RELATION",
+        "PARTIALLY_COVERS"
+      ],
+      "pass_a": "PARTIALLY_COVERS",
+      "pass_b": "PARTIALLY_COVERS",
+      "a_ok": true,
+      "b_ok": true,
+      "trace_a": "The witness shows a related beneficial effect of drug A ('improved detrusor contractility', one component of voiding) but in a different species and model ('obstructed rats') than the unit requires ('men with BPH'), and on a narrower endpoint than 'voiding function'. A species/model and endpoint transfer would be needed.",
+      "trace_b": "\"improved detrusor contractility in obstructed rats\" supplies a material mechanistic link of \"improves voiding function in men with BPH\", but the species/population (obstructed rats vs men with BPH) and the endpoint (contractility vs voiding function) both differ. A transfer assumption is needed and neither text implies the other, so this is partial coverage only."
+    },
+    {
+      "fixture": "FX-20",
+      "pattern": "scope_transfer_null_is_not_contradiction",
+      "accept": [
+        "ABSTAIN",
+        "NO_SEMANTIC_RELATION",
+        "PARTIALLY_COVERS"
+      ],
+      "pass_a": "NO_SEMANTIC_RELATION",
+      "pass_b": "NO_SEMANTIC_RELATION",
+      "a_ok": true,
+      "b_ok": true,
+      "trace_a": "The witness is a null result ('did not change') for a different organ ('renal blood flow' vs bladder perfusion) in a different species and population ('healthy dogs' vs humans). A null finding at a different scope is not a contradiction, and it supplies no part of the unit's positive claim about human bladder perfusion.",
+      "trace_b": "\"In healthy dogs, drug A did not change renal blood flow\" is a null result in a different species (dogs vs humans) and a different organ (renal vs bladder), so it does not contradict \"improves bladder perfusion in humans\". It also supplies no material part of the claimed improvement, so there is no support or partial coverage."
+    },
+    {
+      "fixture": "FX-21",
+      "pattern": "quantity_conflict",
+      "accept": [
+        "CONTRADICTS"
+      ],
+      "pass_a": "CONTRADICTS",
+      "pass_b": "CONTRADICTS",
+      "a_ok": true,
+      "b_ok": true,
+      "trace_a": "Same quantity at the same scope (rise in mean maximum flow rate in 'the drug A arm of the trial') with conflicting values: '1.2 mL/s' in the witness vs '4.5 mL/s' in the unit, so both cannot be accepted as written.",
+      "trace_b": "Both texts give the same quantity (the rise in \"Mean maximum flow rate\" in \"the drug A arm of the trial\") but with conflicting values, \"1.2 mL/s\" vs \"4.5 mL/s\". Conflicting values for the same quantity at the same scope cannot both be accepted, even though the direction (\"rose\") agrees."
+    },
+    {
+      "fixture": "FX-22",
+      "pattern": "instance_establishes_capability",
+      "accept": [
+        "EQUIVALENT",
+        "WITNESS_ENTAILS_UNIT"
+      ],
+      "pass_a": "WITNESS_ENTAILS_UNIT",
+      "pass_b": "WITNESS_ENTAILS_UNIT",
+      "a_ok": true,
+      "b_ok": true,
+      "trace_a": "The witness reports a concrete instance in human subjects ('In 20 patients') in which drug A 'reduced serum TNF-alpha by 30%'. That meets every scope condition of the existential unit ('at least one study reports ... in human subjects'), and the added dose, route and duration only make it more specific.",
+      "trace_b": "The witness reports an instance (\"In 20 patients, oral drug A ... reduced serum TNF-alpha by 30%\") that meets every scope condition of the existential unit: human subjects, drug A, serum TNF-alpha, and a reduction. So \"At least one study reports drug A reducing serum TNF-alpha in human subjects\" follows, and the extra dose, route, timing and quantity details only make the witness more specific."
+    }
+  ],
+  "disclosure": "Fixtures use generic 'drug A' vocabulary plus any project fixtures in 01_FRAME/match-fixtures.json. Passing them qualifies the matcher only for these tested patterns; it does not prove general language understanding.",
+  "time": "2026-10-29T16:41:17+00:00"
+}

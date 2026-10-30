@@ -1,0 +1,747 @@
+[
+  {
+    "unit_id": "A1-H1-R1",
+    "hypothesis_id": "A1-H1",
+    "axis_id": "A1",
+    "type": "REQUIRED_SUPPORT",
+    "text": "Foliar silicate treatment increases grain yield of drought-stressed wheat in field conditions",
+    "source_quote": "Foliar silicate treatment increases grain yield of drought-stressed wheat in field conditions",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "foliar",
+      "silicate",
+      "treatment",
+      "increases",
+      "grain",
+      "yield",
+      "drought-stressed",
+      "wheat",
+      "field",
+      "conditions"
+    ],
+    "satisfied_by": "a source-reported finding stating that Foliar silicate treatment increases grain yield of drought-stressed wheat in field conditions",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "5648b9d5956b3edb0c88f951"
+  },
+  {
+    "unit_id": "A1-H1-R2",
+    "hypothesis_id": "A1-H1",
+    "axis_id": "A1",
+    "type": "REQUIRED_SUPPORT",
+    "text": "The effect is large enough and repeatable enough to justify a field trial",
+    "source_quote": "The effect is large enough and repeatable enough to justify a field trial",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "effect",
+      "large",
+      "enough",
+      "repeatable",
+      "justify",
+      "field",
+      "trial"
+    ],
+    "satisfied_by": "a source-reported finding stating that The effect is large enough and repeatable enough to justify a field trial",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "5648b9d5956b3edb0c88f951"
+  },
+  {
+    "unit_id": "A1-H1-R3",
+    "hypothesis_id": "A1-H1",
+    "axis_id": "A1",
+    "type": "REQUIRED_SUPPORT",
+    "text": "the mechanism reported in controlled studies transfers to field-grown wheat",
+    "source_quote": "the mechanism reported in controlled studies transfers to field-grown wheat",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "mechanism",
+      "reported",
+      "controlled",
+      "studies",
+      "transfers",
+      "field-grown",
+      "wheat"
+    ],
+    "satisfied_by": "a source-reported finding stating that the mechanism reported in controlled studies transfers to field-grown wheat",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "5648b9d5956b3edb0c88f951"
+  },
+  {
+    "unit_id": "A1-H1-C1",
+    "hypothesis_id": "A1-H1",
+    "axis_id": "A1",
+    "type": "CONTEXTUAL_CONSTRAINT",
+    "text": "The applied silicate reaches the leaf surface at a rate used in the reported studies",
+    "source_quote": "The applied silicate reaches the leaf surface at a rate used in the reported studies",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "applied",
+      "silicate",
+      "reaches",
+      "leaf",
+      "surface",
+      "rate",
+      "used",
+      "reported",
+      "studies"
+    ],
+    "satisfied_by": "a source-reported finding stating that The applied silicate reaches the leaf surface at a rate used in the reported studies",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "5648b9d5956b3edb0c88f951"
+  },
+  {
+    "unit_id": "A1-H1-C2",
+    "hypothesis_id": "A1-H1",
+    "axis_id": "A1",
+    "type": "CONTEXTUAL_CONSTRAINT",
+    "text": "drought stress is severe enough for the mechanism to matter",
+    "source_quote": "drought stress is severe enough for the mechanism to matter",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "drought",
+      "stress",
+      "severe",
+      "enough",
+      "mechanism",
+      "matter"
+    ],
+    "satisfied_by": "a source-reported finding stating that drought stress is severe enough for the mechanism to matter",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "5648b9d5956b3edb0c88f951"
+  },
+  {
+    "unit_id": "A1-H1-C3",
+    "hypothesis_id": "A1-H1",
+    "axis_id": "A1",
+    "type": "CONTEXTUAL_CONSTRAINT",
+    "text": "and the greenhouse water-relations effect carries into field-grown wheat",
+    "source_quote": "and the greenhouse water-relations effect carries into field-grown wheat",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "greenhouse",
+      "water-relations",
+      "effect",
+      "carries",
+      "field-grown",
+      "wheat"
+    ],
+    "satisfied_by": "a source-reported finding stating that and the greenhouse water-relations effect carries into field-grown wheat",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "5648b9d5956b3edb0c88f951"
+  },
+  {
+    "unit_id": "A1-H1-A1",
+    "hypothesis_id": "A1-H1",
+    "axis_id": "A1",
+    "type": "ADVERSE_TEST",
+    "text": "Field trials at comparable rates report no yield benefit",
+    "source_quote": "Field trials at comparable rates report no yield benefit",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "field",
+      "trials",
+      "comparable",
+      "rates",
+      "report",
+      "yield",
+      "benefit"
+    ],
+    "satisfied_by": "a source-reported finding stating that Field trials at comparable rates report no yield benefit",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "5648b9d5956b3edb0c88f951"
+  },
+  {
+    "unit_id": "A1-H1-A2",
+    "hypothesis_id": "A1-H1",
+    "axis_id": "A1",
+    "type": "ADVERSE_TEST",
+    "text": "the greenhouse benefit disappears without controlled pots",
+    "source_quote": "the greenhouse benefit disappears without controlled pots",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "greenhouse",
+      "benefit",
+      "disappears",
+      "controlled",
+      "pots"
+    ],
+    "satisfied_by": "a source-reported finding stating that the greenhouse benefit disappears without controlled pots",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "5648b9d5956b3edb0c88f951"
+  },
+  {
+    "unit_id": "A1-H1-A3",
+    "hypothesis_id": "A1-H1",
+    "axis_id": "A1",
+    "type": "ADVERSE_TEST",
+    "text": "or the reported mechanism is specific to a model organism",
+    "source_quote": "or the reported mechanism is specific to a model organism",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "reported",
+      "mechanism",
+      "specific",
+      "model",
+      "organism"
+    ],
+    "satisfied_by": "a source-reported finding stating that or the reported mechanism is specific to a model organism",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "5648b9d5956b3edb0c88f951"
+  },
+  {
+    "unit_id": "A1-H1-E1",
+    "hypothesis_id": "A1-H1",
+    "axis_id": "A1",
+    "type": "CORROBORATING_EXPECTATION",
+    "text": "Field trials at comparable rates report a yield increase with a stated denominator and season",
+    "source_quote": "Field trials at comparable rates report a yield increase with a stated denominator and season",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "field",
+      "trials",
+      "comparable",
+      "rates",
+      "report",
+      "yield",
+      "increase",
+      "stated",
+      "denominator",
+      "season"
+    ],
+    "satisfied_by": "a source-reported finding stating that Field trials at comparable rates report a yield increase with a stated denominator and season",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "5648b9d5956b3edb0c88f951"
+  },
+  {
+    "unit_id": "A1-H1-E2",
+    "hypothesis_id": "A1-H1",
+    "axis_id": "A1",
+    "type": "CORROBORATING_EXPECTATION",
+    "text": "the benefit grows with drought severity",
+    "source_quote": "the benefit grows with drought severity",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "benefit",
+      "grows",
+      "drought",
+      "severity"
+    ],
+    "satisfied_by": "a source-reported finding stating that the benefit grows with drought severity",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "5648b9d5956b3edb0c88f951"
+  },
+  {
+    "unit_id": "A1-H1-E3",
+    "hypothesis_id": "A1-H1",
+    "axis_id": "A1",
+    "type": "CORROBORATING_EXPECTATION",
+    "text": "and the water-relations mechanism is measured in field-grown wheat",
+    "source_quote": "and the water-relations mechanism is measured in field-grown wheat",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "water-relations",
+      "mechanism",
+      "measured",
+      "field-grown",
+      "wheat"
+    ],
+    "satisfied_by": "a source-reported finding stating that and the water-relations mechanism is measured in field-grown wheat",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "5648b9d5956b3edb0c88f951"
+  },
+  {
+    "unit_id": "A1-H2-R1",
+    "hypothesis_id": "A1-H2",
+    "axis_id": "A1",
+    "type": "REQUIRED_SUPPORT",
+    "text": "Foliar silicate treatment does not increase grain yield of drought-stressed wheat in the field",
+    "source_quote": "Foliar silicate treatment does not increase grain yield of drought-stressed wheat in the field",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "foliar",
+      "silicate",
+      "treatment",
+      "increase",
+      "grain",
+      "yield",
+      "drought-stressed",
+      "wheat",
+      "field"
+    ],
+    "satisfied_by": "a source-reported finding stating that Foliar silicate treatment does not increase grain yield of drought-stressed wheat in the field",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "5cd7228276529959a66d99b8"
+  },
+  {
+    "unit_id": "A1-H2-R2",
+    "hypothesis_id": "A1-H2",
+    "axis_id": "A1",
+    "type": "REQUIRED_SUPPORT",
+    "text": "The positive results come from greenhouse or model-organism work that does not transfer",
+    "source_quote": "The positive results come from greenhouse or model-organism work that does not transfer",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "positive",
+      "results",
+      "come",
+      "greenhouse",
+      "model-organism",
+      "work",
+      "transfer"
+    ],
+    "satisfied_by": "a source-reported finding stating that The positive results come from greenhouse or model-organism work that does not transfer",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "5cd7228276529959a66d99b8"
+  },
+  {
+    "unit_id": "A1-H2-R3",
+    "hypothesis_id": "A1-H2",
+    "axis_id": "A1",
+    "type": "REQUIRED_SUPPORT",
+    "text": "field trials show no yield benefit",
+    "source_quote": "field trials show no yield benefit",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "field",
+      "trials",
+      "show",
+      "yield",
+      "benefit"
+    ],
+    "satisfied_by": "a source-reported finding stating that field trials show no yield benefit",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "5cd7228276529959a66d99b8"
+  },
+  {
+    "unit_id": "A1-H2-C1",
+    "hypothesis_id": "A1-H2",
+    "axis_id": "A1",
+    "type": "CONTEXTUAL_CONSTRAINT",
+    "text": "The field trials that report null results used a comparable rate and application timing",
+    "source_quote": "The field trials that report null results used a comparable rate and application timing",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "field",
+      "trials",
+      "report",
+      "null",
+      "results",
+      "used",
+      "comparable",
+      "rate",
+      "application",
+      "timing"
+    ],
+    "satisfied_by": "a source-reported finding stating that The field trials that report null results used a comparable rate and application timing",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "5cd7228276529959a66d99b8"
+  },
+  {
+    "unit_id": "A1-H2-C2",
+    "hypothesis_id": "A1-H2",
+    "axis_id": "A1",
+    "type": "CONTEXTUAL_CONSTRAINT",
+    "text": "they were run in water-limited conditions rather than well-watered ones",
+    "source_quote": "they were run in water-limited conditions rather than well-watered ones",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "run",
+      "water-limited",
+      "conditions",
+      "rather",
+      "well-watered",
+      "ones"
+    ],
+    "satisfied_by": "a source-reported finding stating that they were run in water-limited conditions rather than well-watered ones",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "5cd7228276529959a66d99b8"
+  },
+  {
+    "unit_id": "A1-H2-A1",
+    "hypothesis_id": "A1-H2",
+    "axis_id": "A1",
+    "type": "ADVERSE_TEST",
+    "text": "A well-powered field trial at a comparable rate reports a clear yield increase under drought",
+    "source_quote": "A well-powered field trial at a comparable rate reports a clear yield increase under drought",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "well-powered",
+      "field",
+      "trial",
+      "comparable",
+      "rate",
+      "reports",
+      "clear",
+      "yield",
+      "increase",
+      "drought"
+    ],
+    "satisfied_by": "a source-reported finding stating that A well-powered field trial at a comparable rate reports a clear yield increase under drought",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "5cd7228276529959a66d99b8"
+  },
+  {
+    "unit_id": "A1-H2-E1",
+    "hypothesis_id": "A1-H2",
+    "axis_id": "A1",
+    "type": "CORROBORATING_EXPECTATION",
+    "text": "Multi-site field trials report no significant yield difference",
+    "source_quote": "Multi-site field trials report no significant yield difference",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "multi-site",
+      "field",
+      "trials",
+      "report",
+      "significant",
+      "yield",
+      "difference"
+    ],
+    "satisfied_by": "a source-reported finding stating that Multi-site field trials report no significant yield difference",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "5cd7228276529959a66d99b8"
+  },
+  {
+    "unit_id": "A1-H2-E2",
+    "hypothesis_id": "A1-H2",
+    "axis_id": "A1",
+    "type": "CORROBORATING_EXPECTATION",
+    "text": "the positive findings are confined to pots or model organisms",
+    "source_quote": "the positive findings are confined to pots or model organisms",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "positive",
+      "findings",
+      "confined",
+      "pots",
+      "model",
+      "organisms"
+    ],
+    "satisfied_by": "a source-reported finding stating that the positive findings are confined to pots or model organisms",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "5cd7228276529959a66d99b8"
+  },
+  {
+    "unit_id": "A1-H2-E3",
+    "hypothesis_id": "A1-H2",
+    "axis_id": "A1",
+    "type": "CORROBORATING_EXPECTATION",
+    "text": "and reviews report inconsistent field results",
+    "source_quote": "and reviews report inconsistent field results",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "reviews",
+      "report",
+      "inconsistent",
+      "field",
+      "results"
+    ],
+    "satisfied_by": "a source-reported finding stating that and reviews report inconsistent field results",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "5cd7228276529959a66d99b8"
+  },
+  {
+    "unit_id": "A1-H3-R1",
+    "hypothesis_id": "A1-H3",
+    "axis_id": "A1",
+    "type": "REQUIRED_SUPPORT",
+    "text": "Existing evidence cannot determine whether foliar silicate increases field grain yield under drought",
+    "source_quote": "Existing evidence cannot determine whether foliar silicate increases field grain yield under drought",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "existing",
+      "evidence",
+      "determine",
+      "whether",
+      "foliar",
+      "silicate",
+      "increases",
+      "field",
+      "grain",
+      "yield"
+    ],
+    "satisfied_by": "a source-reported finding stating that Existing evidence cannot determine whether foliar silicate increases field grain yield under drought",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "63d5c8753d7e9b5db68f13a8"
+  },
+  {
+    "unit_id": "A1-H3-R2",
+    "hypothesis_id": "A1-H3",
+    "axis_id": "A1",
+    "type": "REQUIRED_SUPPORT",
+    "text": "Some controlled studies report benefits, field results are mixed or null",
+    "source_quote": "Some controlled studies report benefits, field results are mixed or null",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "controlled",
+      "studies",
+      "report",
+      "benefits",
+      "field",
+      "results",
+      "mixed",
+      "null"
+    ],
+    "satisfied_by": "a source-reported finding stating that Some controlled studies report benefits, field results are mixed or null",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "63d5c8753d7e9b5db68f13a8"
+  },
+  {
+    "unit_id": "A1-H3-R3",
+    "hypothesis_id": "A1-H3",
+    "axis_id": "A1",
+    "type": "REQUIRED_SUPPORT",
+    "text": "the decisive field comparison has not been made",
+    "source_quote": "the decisive field comparison has not been made",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "decisive",
+      "field",
+      "comparison",
+      "made"
+    ],
+    "satisfied_by": "a source-reported finding stating that the decisive field comparison has not been made",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "63d5c8753d7e9b5db68f13a8"
+  },
+  {
+    "unit_id": "A1-H3-C1",
+    "hypothesis_id": "A1-H3",
+    "axis_id": "A1",
+    "type": "CONTEXTUAL_CONSTRAINT",
+    "text": "Relevant field and controlled studies have been retrieved",
+    "source_quote": "Relevant field and controlled studies have been retrieved",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "relevant",
+      "field",
+      "controlled",
+      "studies",
+      "retrieved"
+    ],
+    "satisfied_by": "a source-reported finding stating that Relevant field and controlled studies have been retrieved",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "63d5c8753d7e9b5db68f13a8"
+  },
+  {
+    "unit_id": "A1-H3-C2",
+    "hypothesis_id": "A1-H3",
+    "axis_id": "A1",
+    "type": "CONTEXTUAL_CONSTRAINT",
+    "text": "the gap is not merely an artifact of an unfinished search",
+    "source_quote": "the gap is not merely an artifact of an unfinished search",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "gap",
+      "merely",
+      "artifact",
+      "unfinished",
+      "search"
+    ],
+    "satisfied_by": "a source-reported finding stating that the gap is not merely an artifact of an unfinished search",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "63d5c8753d7e9b5db68f13a8"
+  },
+  {
+    "unit_id": "A1-H3-A1",
+    "hypothesis_id": "A1-H3",
+    "axis_id": "A1",
+    "type": "ADVERSE_TEST",
+    "text": "Consistent field evidence at a comparable rate establishes either a yield benefit or its absence",
+    "source_quote": "Consistent field evidence at a comparable rate establishes either a yield benefit or its absence",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "consistent",
+      "field",
+      "evidence",
+      "comparable",
+      "rate",
+      "establishes",
+      "either",
+      "yield",
+      "benefit"
+    ],
+    "satisfied_by": "a source-reported finding stating that Consistent field evidence at a comparable rate establishes either a yield benefit or its absence",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "63d5c8753d7e9b5db68f13a8"
+  },
+  {
+    "unit_id": "A1-H3-E1",
+    "hypothesis_id": "A1-H3",
+    "axis_id": "A1",
+    "type": "CORROBORATING_EXPECTATION",
+    "text": "Field results conflict across sites or seasons",
+    "source_quote": "Field results conflict across sites or seasons",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "field",
+      "results",
+      "conflict",
+      "across",
+      "sites",
+      "seasons"
+    ],
+    "satisfied_by": "a source-reported finding stating that Field results conflict across sites or seasons",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "63d5c8753d7e9b5db68f13a8"
+  },
+  {
+    "unit_id": "A1-H3-E2",
+    "hypothesis_id": "A1-H3",
+    "axis_id": "A1",
+    "type": "CORROBORATING_EXPECTATION",
+    "text": "rates and application timing differ between studies",
+    "source_quote": "rates and application timing differ between studies",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "rates",
+      "application",
+      "timing",
+      "differ",
+      "studies"
+    ],
+    "satisfied_by": "a source-reported finding stating that rates and application timing differ between studies",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "63d5c8753d7e9b5db68f13a8"
+  },
+  {
+    "unit_id": "A1-H3-E3",
+    "hypothesis_id": "A1-H3",
+    "axis_id": "A1",
+    "type": "CORROBORATING_EXPECTATION",
+    "text": "and no study measures both the water-relations mechanism and grain yield in the field",
+    "source_quote": "and no study measures both the water-relations mechanism and grain yield in the field",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "study",
+      "measures",
+      "water-relations",
+      "mechanism",
+      "grain",
+      "yield",
+      "field"
+    ],
+    "satisfied_by": "a source-reported finding stating that and no study measures both the water-relations mechanism and grain yield in the field",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "63d5c8753d7e9b5db68f13a8"
+  }
+]

@@ -1,0 +1,431 @@
+[
+  {
+    "witness_id": "W-FRD-Q0001-01-Q0001",
+    "home": "A1-H3",
+    "rival": "A1-H1",
+    "axis": "A1",
+    "kind": "diagnostic",
+    "membership_screen_passes": true,
+    "t1": "PASS",
+    "t2": "PASS",
+    "t1_certificate": {
+      "kind": "T1_accommodated",
+      "units_checked": [
+        "A1-H1-R1",
+        "A1-H1-R2",
+        "A1-H1-R3",
+        "A1-H1-R4",
+        "A1-H1-R5",
+        "A1-H1-R6",
+        "A1-H1-R7",
+        "A1-H1-R8",
+        "A1-H1-R9",
+        "A1-H1-C1",
+        "A1-H1-C2",
+        "A1-H1-C3",
+        "A1-H1-C4",
+        "A1-H1-E1",
+        "A1-H1-E2",
+        "A1-H1-E3",
+        "A1-H1-A1",
+        "A1-H1-A2",
+        "A1-H1-A3",
+        "A1-H1-A4"
+      ],
+      "unjudged_treated_as_no_relation": [
+        "A1-H1-R3",
+        "A1-H1-R6",
+        "A1-H1-R9",
+        "A1-H1-C2",
+        "A1-H1-E1",
+        "A1-H1-E2",
+        "A1-H1-A1",
+        "A1-H1-A3"
+      ],
+      "why": "no CONTRADICTS relation with any asserted unit and no realized falsifier; some rival units were outside the diagnostic shortlist"
+    },
+    "t2_certificate": {
+      "kind": "T2_accommodated",
+      "example_arrangement": {
+        "A1-H1-R1": null,
+        "A1-H1-R2": null,
+        "A1-H1-R3": null,
+        "A1-H1-R4": null,
+        "A1-H1-R5": null,
+        "A1-H1-R6": null,
+        "A1-H1-R7": null,
+        "A1-H1-R8": null,
+        "A1-H1-R9": null
+      },
+      "rival_units_already_without_options": [
+        "A1-H1-R1",
+        "A1-H1-R2",
+        "A1-H1-R3",
+        "A1-H1-R4",
+        "A1-H1-R5",
+        "A1-H1-R6",
+        "A1-H1-R7",
+        "A1-H1-R8",
+        "A1-H1-R9"
+      ],
+      "why": "the witness removes no option the rival needs; the rival is already incomplete on the listed units, independent of this witness"
+    },
+    "crux": false,
+    "tests_failed": 0,
+    "theory_id": "BTHEORY-e1eb57096405"
+  },
+  {
+    "witness_id": "W-FRD-Q0001-01-Q0001",
+    "home": "A1-H3",
+    "rival": "A1-H2",
+    "axis": "A1",
+    "kind": "diagnostic",
+    "membership_screen_passes": true,
+    "t1": "PASS",
+    "t2": "PASS",
+    "t1_certificate": {
+      "kind": "T1_accommodated",
+      "units_checked": [
+        "A1-H2-R1",
+        "A1-H2-R2",
+        "A1-H2-C1",
+        "A1-H2-C2",
+        "A1-H2-C3",
+        "A1-H2-C4",
+        "A1-H2-E1",
+        "A1-H2-A1",
+        "A1-H2-A2"
+      ],
+      "unjudged_treated_as_no_relation": [
+        "A1-H2-A1"
+      ],
+      "why": "no CONTRADICTS relation with any asserted unit and no realized falsifier; some rival units were outside the diagnostic shortlist"
+    },
+    "t2_certificate": {
+      "kind": "T2_accommodated",
+      "example_arrangement": {
+        "A1-H2-R1": null,
+        "A1-H2-R2": null
+      },
+      "rival_units_already_without_options": [
+        "A1-H2-R1",
+        "A1-H2-R2"
+      ],
+      "why": "the witness removes no option the rival needs; the rival is already incomplete on the listed units, independent of this witness"
+    },
+    "crux": false,
+    "tests_failed": 0,
+    "theory_id": "BTHEORY-09329c8bb488"
+  },
+  {
+    "witness_id": "W-FRD-Q0001-01-Q0001",
+    "home": "A2-H3",
+    "rival": "A2-H1",
+    "axis": "A2",
+    "kind": "diagnostic",
+    "membership_screen_passes": true,
+    "t1": "PASS",
+    "t2": "PASS",
+    "t1_certificate": {
+      "kind": "T1_accommodated",
+      "units_checked": [
+        "A2-H1-R1",
+        "A2-H1-R2",
+        "A2-H1-R3",
+        "A2-H1-R4",
+        "A2-H1-C1",
+        "A2-H1-C2",
+        "A2-H1-E1",
+        "A2-H1-E2",
+        "A2-H1-E3",
+        "A2-H1-A1",
+        "A2-H1-A2",
+        "A2-H1-A3"
+      ],
+      "unjudged_treated_as_no_relation": [],
+      "why": "no CONTRADICTS relation with any asserted unit and no realized falsifier"
+    },
+    "t2_certificate": {
+      "kind": "T2_accommodated",
+      "example_arrangement": {
+        "A2-H1-R1": null,
+        "A2-H1-R2": null,
+        "A2-H1-R3": null,
+        "A2-H1-R4": null
+      },
+      "rival_units_already_without_options": [
+        "A2-H1-R1",
+        "A2-H1-R2",
+        "A2-H1-R3",
+        "A2-H1-R4"
+      ],
+      "why": "the witness removes no option the rival needs; the rival is already incomplete on the listed units, independent of this witness"
+    },
+    "crux": false,
+    "tests_failed": 0,
+    "theory_id": "BTHEORY-6f5f24f4a883"
+  },
+  {
+    "witness_id": "W-FRD-Q0001-01-Q0001",
+    "home": "A2-H3",
+    "rival": "A2-H2",
+    "axis": "A2",
+    "kind": "diagnostic",
+    "membership_screen_passes": true,
+    "t1": "PASS",
+    "t2": "PASS",
+    "t1_certificate": {
+      "kind": "T1_accommodated",
+      "units_checked": [
+        "A2-H2-R1",
+        "A2-H2-R2",
+        "A2-H2-R3",
+        "A2-H2-R4",
+        "A2-H2-C1",
+        "A2-H2-C2",
+        "A2-H2-C3",
+        "A2-H2-E1",
+        "A2-H2-E2",
+        "A2-H2-E3",
+        "A2-H2-E4",
+        "A2-H2-A1",
+        "A2-H2-A2",
+        "A2-H2-A3"
+      ],
+      "unjudged_treated_as_no_relation": [
+        "A2-H2-R1",
+        "A2-H2-R2",
+        "A2-H2-E3",
+        "A2-H2-E4"
+      ],
+      "why": "no CONTRADICTS relation with any asserted unit and no realized falsifier; some rival units were outside the diagnostic shortlist"
+    },
+    "t2_certificate": {
+      "kind": "T2_accommodated",
+      "example_arrangement": {
+        "A2-H2-R1": null,
+        "A2-H2-R2": null,
+        "A2-H2-R3": null,
+        "A2-H2-R4": null
+      },
+      "rival_units_already_without_options": [
+        "A2-H2-R1",
+        "A2-H2-R2",
+        "A2-H2-R3",
+        "A2-H2-R4"
+      ],
+      "why": "the witness removes no option the rival needs; the rival is already incomplete on the listed units, independent of this witness"
+    },
+    "crux": false,
+    "tests_failed": 0,
+    "theory_id": "BTHEORY-09ebc8c7ec55"
+  },
+  {
+    "witness_id": "W-FRD-Q0001-02-r3-Q0001",
+    "home": "A2-H3",
+    "rival": "A2-H1",
+    "axis": "A2",
+    "kind": "diagnostic",
+    "membership_screen_passes": true,
+    "t1": "PASS",
+    "t2": "PASS",
+    "t1_certificate": {
+      "kind": "T1_accommodated",
+      "units_checked": [
+        "A2-H1-R1",
+        "A2-H1-R2",
+        "A2-H1-R3",
+        "A2-H1-R4",
+        "A2-H1-C1",
+        "A2-H1-C2",
+        "A2-H1-E1",
+        "A2-H1-E2",
+        "A2-H1-E3",
+        "A2-H1-A1",
+        "A2-H1-A2",
+        "A2-H1-A3"
+      ],
+      "unjudged_treated_as_no_relation": [],
+      "why": "no CONTRADICTS relation with any asserted unit and no realized falsifier"
+    },
+    "t2_certificate": {
+      "kind": "T2_accommodated",
+      "example_arrangement": {
+        "A2-H1-R1": null,
+        "A2-H1-R2": null,
+        "A2-H1-R3": null,
+        "A2-H1-R4": null
+      },
+      "rival_units_already_without_options": [
+        "A2-H1-R1",
+        "A2-H1-R2",
+        "A2-H1-R3",
+        "A2-H1-R4"
+      ],
+      "why": "the witness removes no option the rival needs; the rival is already incomplete on the listed units, independent of this witness"
+    },
+    "crux": false,
+    "tests_failed": 0,
+    "theory_id": "BTHEORY-6f5f24f4a883"
+  },
+  {
+    "witness_id": "W-FRD-Q0001-02-r3-Q0001",
+    "home": "A2-H3",
+    "rival": "A2-H2",
+    "axis": "A2",
+    "kind": "diagnostic",
+    "membership_screen_passes": true,
+    "t1": "PASS",
+    "t2": "PASS",
+    "t1_certificate": {
+      "kind": "T1_accommodated",
+      "units_checked": [
+        "A2-H2-R1",
+        "A2-H2-R2",
+        "A2-H2-R3",
+        "A2-H2-R4",
+        "A2-H2-C1",
+        "A2-H2-C2",
+        "A2-H2-C3",
+        "A2-H2-E1",
+        "A2-H2-E2",
+        "A2-H2-E3",
+        "A2-H2-E4",
+        "A2-H2-A1",
+        "A2-H2-A2",
+        "A2-H2-A3"
+      ],
+      "unjudged_treated_as_no_relation": [
+        "A2-H2-R2",
+        "A2-H2-E3",
+        "A2-H2-E4"
+      ],
+      "why": "no CONTRADICTS relation with any asserted unit and no realized falsifier; some rival units were outside the diagnostic shortlist"
+    },
+    "t2_certificate": {
+      "kind": "T2_accommodated",
+      "example_arrangement": {
+        "A2-H2-R1": null,
+        "A2-H2-R2": null,
+        "A2-H2-R3": null,
+        "A2-H2-R4": null
+      },
+      "rival_units_already_without_options": [
+        "A2-H2-R1",
+        "A2-H2-R2",
+        "A2-H2-R3",
+        "A2-H2-R4"
+      ],
+      "why": "the witness removes no option the rival needs; the rival is already incomplete on the listed units, independent of this witness"
+    },
+    "crux": false,
+    "tests_failed": 0,
+    "theory_id": "BTHEORY-09ebc8c7ec55"
+  },
+  {
+    "witness_id": "W-FRD-Q0011-01-Q0011",
+    "home": "A2-H3",
+    "rival": "A2-H1",
+    "axis": "A2",
+    "kind": "diagnostic",
+    "membership_screen_passes": true,
+    "t1": "PASS",
+    "t2": "PASS",
+    "t1_certificate": {
+      "kind": "T1_accommodated",
+      "units_checked": [
+        "A2-H1-R1",
+        "A2-H1-R2",
+        "A2-H1-R3",
+        "A2-H1-R4",
+        "A2-H1-C1",
+        "A2-H1-C2",
+        "A2-H1-E1",
+        "A2-H1-E2",
+        "A2-H1-E3",
+        "A2-H1-A1",
+        "A2-H1-A2",
+        "A2-H1-A3"
+      ],
+      "unjudged_treated_as_no_relation": [
+        "A2-H1-R4"
+      ],
+      "why": "no CONTRADICTS relation with any asserted unit and no realized falsifier; some rival units were outside the diagnostic shortlist"
+    },
+    "t2_certificate": {
+      "kind": "T2_accommodated",
+      "example_arrangement": {
+        "A2-H1-R1": null,
+        "A2-H1-R2": null,
+        "A2-H1-R3": null,
+        "A2-H1-R4": null
+      },
+      "rival_units_already_without_options": [
+        "A2-H1-R1",
+        "A2-H1-R2",
+        "A2-H1-R3",
+        "A2-H1-R4"
+      ],
+      "why": "the witness removes no option the rival needs; the rival is already incomplete on the listed units, independent of this witness"
+    },
+    "crux": false,
+    "tests_failed": 0,
+    "theory_id": "BTHEORY-6f5f24f4a883"
+  },
+  {
+    "witness_id": "W-FRD-Q0011-01-Q0011",
+    "home": "A2-H3",
+    "rival": "A2-H2",
+    "axis": "A2",
+    "kind": "diagnostic",
+    "membership_screen_passes": true,
+    "t1": "PASS",
+    "t2": "PASS",
+    "t1_certificate": {
+      "kind": "T1_accommodated",
+      "units_checked": [
+        "A2-H2-R1",
+        "A2-H2-R2",
+        "A2-H2-R3",
+        "A2-H2-R4",
+        "A2-H2-C1",
+        "A2-H2-C2",
+        "A2-H2-C3",
+        "A2-H2-E1",
+        "A2-H2-E2",
+        "A2-H2-E3",
+        "A2-H2-E4",
+        "A2-H2-A1",
+        "A2-H2-A2",
+        "A2-H2-A3"
+      ],
+      "unjudged_treated_as_no_relation": [
+        "A2-H2-R2",
+        "A2-H2-R3",
+        "A2-H2-E1",
+        "A2-H2-E3",
+        "A2-H2-E4"
+      ],
+      "why": "no CONTRADICTS relation with any asserted unit and no realized falsifier; some rival units were outside the diagnostic shortlist"
+    },
+    "t2_certificate": {
+      "kind": "T2_accommodated",
+      "example_arrangement": {
+        "A2-H2-R1": null,
+        "A2-H2-R2": null,
+        "A2-H2-R3": null,
+        "A2-H2-R4": null
+      },
+      "rival_units_already_without_options": [
+        "A2-H2-R1",
+        "A2-H2-R2",
+        "A2-H2-R3",
+        "A2-H2-R4"
+      ],
+      "why": "the witness removes no option the rival needs; the rival is already incomplete on the listed units, independent of this witness"
+    },
+    "crux": false,
+    "tests_failed": 0,
+    "theory_id": "BTHEORY-09ebc8c7ec55"
+  }
+]

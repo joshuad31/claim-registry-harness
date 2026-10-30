@@ -1,0 +1,1830 @@
+{
+  "hypotheses": {
+    "A1-H1": {
+      "status": "NO_COMPLETE_COVERAGE",
+      "sets": [],
+      "uncovered_units": [
+        "A1-H1-R3"
+      ],
+      "search_status": "NOT_RUN",
+      "note": "At least one required unit has no coverage option; no complete set can be built.",
+      "hypothesis_id": "A1-H1",
+      "axis_id": "A1",
+      "required_units": [
+        "A1-H1-R1",
+        "A1-H1-R2",
+        "A1-H1-R3"
+      ],
+      "constraints": [
+        "A1-H1-C1"
+      ],
+      "options_truncated": {},
+      "options": {
+        "A1-H1-R1": [
+          {
+            "option_id": "OPT-99609b7d1ca4",
+            "witnesses": [
+              "W-FRD-Q0001-01-Q0001"
+            ],
+            "relation": "EQUIVALENT",
+            "joint": false
+          },
+          {
+            "option_id": "OPT-37c7d96590dc",
+            "witnesses": [
+              "W-FRD-Q0003-04-Q0003"
+            ],
+            "relation": "EQUIVALENT",
+            "joint": false
+          },
+          {
+            "option_id": "OPT-bb2504b6a0cf",
+            "witnesses": [
+              "W-FRD-Q0004-02-Q0004"
+            ],
+            "relation": "EQUIVALENT",
+            "joint": false
+          },
+          {
+            "option_id": "OPT-5ee157ca42e2",
+            "witnesses": [
+              "W-FRD-Q0006-04-Q0006"
+            ],
+            "relation": "EQUIVALENT",
+            "joint": false
+          },
+          {
+            "option_id": "OPT-fd15a92150f4",
+            "witnesses": [
+              "W-FRD-Q0007-01-Q0007"
+            ],
+            "relation": "EQUIVALENT",
+            "joint": false
+          },
+          {
+            "option_id": "OPT-503c842bcd6d",
+            "witnesses": [
+              "W-FRD-Q0009-04-Q0009"
+            ],
+            "relation": "EQUIVALENT",
+            "joint": false
+          },
+          {
+            "option_id": "OPT-860bc417430d",
+            "witnesses": [
+              "W-FRD-Q0010-02-Q0010"
+            ],
+            "relation": "EQUIVALENT",
+            "joint": false
+          }
+        ],
+        "A1-H1-R2": [
+          {
+            "option_id": "OPT-6ccddf1c7a3e",
+            "witnesses": [
+              "W-FRD-Q0001-02-Q0001"
+            ],
+            "relation": "EQUIVALENT",
+            "joint": false
+          },
+          {
+            "option_id": "OPT-30c85effc749",
+            "witnesses": [
+              "W-FRD-Q0002-01-Q0002"
+            ],
+            "relation": "WITNESS_ENTAILS_UNIT",
+            "joint": false
+          },
+          {
+            "option_id": "OPT-9e06e74fd615",
+            "witnesses": [
+              "W-FRD-Q0004-01-Q0004"
+            ],
+            "relation": "EQUIVALENT",
+            "joint": false
+          },
+          {
+            "option_id": "OPT-c680b801c1d1",
+            "witnesses": [
+              "W-FRD-Q0004-03-Q0004"
+            ],
+            "relation": "WITNESS_ENTAILS_UNIT",
+            "joint": false
+          },
+          {
+            "option_id": "OPT-55565e3b9de2",
+            "witnesses": [
+              "W-FRD-Q0005-02-Q0005"
+            ],
+            "relation": "WITNESS_ENTAILS_UNIT",
+            "joint": false
+          },
+          {
+            "option_id": "OPT-f6cbc4105cbf",
+            "witnesses": [
+              "W-FRD-Q0006-03-Q0006"
+            ],
+            "relation": "WITNESS_ENTAILS_UNIT",
+            "joint": false
+          },
+          {
+            "option_id": "OPT-d080520ce4f6",
+            "witnesses": [
+              "W-FRD-Q0007-02-Q0007"
+            ],
+            "relation": "EQUIVALENT",
+            "joint": false
+          },
+          {
+            "option_id": "OPT-c8786d56a682",
+            "witnesses": [
+              "W-FRD-Q0008-01-Q0008"
+            ],
+            "relation": "WITNESS_ENTAILS_UNIT",
+            "joint": false
+          },
+          {
+            "option_id": "OPT-02d52e2d02b1",
+            "witnesses": [
+              "W-FRD-Q0010-01-Q0010"
+            ],
+            "relation": "EQUIVALENT",
+            "joint": false
+          },
+          {
+            "option_id": "OPT-81fb1f09cb8a",
+            "witnesses": [
+              "W-FRD-Q0010-03-Q0010"
+            ],
+            "relation": "WITNESS_ENTAILS_UNIT",
+            "joint": false
+          }
+        ],
+        "A1-H1-R3": []
+      },
+      "constraint_violators": {},
+      "units_covered": 2
+    },
+    "A1-H2": {
+      "status": "COMPLETE",
+      "sets": [
+        {
+          "set_id": "SET-9e552c5b70e2",
+          "witnesses": [
+            "W-FRD-Q0001-03-Q0001",
+            "W-FRD-Q0002-01-Q0002"
+          ],
+          "option_ids": [
+            "OPT-0569d5574e6c",
+            "OPT-9eaa08e053bd"
+          ],
+          "certificates": [
+            {
+              "witness_id": "W-FRD-Q0001-03-Q0001",
+              "removal_breaks": "required unit(s) uncovered",
+              "uncovered_units": [
+                "A1-H2-R1"
+              ],
+              "joint_groups_broken": [],
+              "options_that_cover_each_unit_without_it": {
+                "A1-H2-R1": []
+              }
+            },
+            {
+              "witness_id": "W-FRD-Q0002-01-Q0002",
+              "removal_breaks": "required unit(s) uncovered",
+              "uncovered_units": [
+                "A1-H2-R2"
+              ],
+              "joint_groups_broken": [],
+              "options_that_cover_each_unit_without_it": {
+                "A1-H2-R2": []
+              }
+            }
+          ]
+        },
+        {
+          "set_id": "SET-4fec1337c614",
+          "witnesses": [
+            "W-FRD-Q0001-03-Q0001",
+            "W-FRD-Q0004-03-Q0004"
+          ],
+          "option_ids": [
+            "OPT-6a5f384db42d",
+            "OPT-9eaa08e053bd"
+          ],
+          "certificates": [
+            {
+              "witness_id": "W-FRD-Q0001-03-Q0001",
+              "removal_breaks": "required unit(s) uncovered",
+              "uncovered_units": [
+                "A1-H2-R1"
+              ],
+              "joint_groups_broken": [],
+              "options_that_cover_each_unit_without_it": {
+                "A1-H2-R1": []
+              }
+            },
+            {
+              "witness_id": "W-FRD-Q0004-03-Q0004",
+              "removal_breaks": "required unit(s) uncovered",
+              "uncovered_units": [
+                "A1-H2-R2"
+              ],
+              "joint_groups_broken": [],
+              "options_that_cover_each_unit_without_it": {
+                "A1-H2-R2": []
+              }
+            }
+          ]
+        },
+        {
+          "set_id": "SET-2f54078675ea",
+          "witnesses": [
+            "W-FRD-Q0001-03-Q0001",
+            "W-FRD-Q0005-02-Q0005"
+          ],
+          "option_ids": [
+            "OPT-9eaa08e053bd",
+            "OPT-f8509ec31e70"
+          ],
+          "certificates": [
+            {
+              "witness_id": "W-FRD-Q0001-03-Q0001",
+              "removal_breaks": "required unit(s) uncovered",
+              "uncovered_units": [
+                "A1-H2-R1"
+              ],
+              "joint_groups_broken": [],
+              "options_that_cover_each_unit_without_it": {
+                "A1-H2-R1": []
+              }
+            },
+            {
+              "witness_id": "W-FRD-Q0005-02-Q0005",
+              "removal_breaks": "required unit(s) uncovered",
+              "uncovered_units": [
+                "A1-H2-R2"
+              ],
+              "joint_groups_broken": [],
+              "options_that_cover_each_unit_without_it": {
+                "A1-H2-R2": []
+              }
+            }
+          ]
+        },
+        {
+          "set_id": "SET-f15bb9f29236",
+          "witnesses": [
+            "W-FRD-Q0001-03-Q0001",
+            "W-FRD-Q0006-03-Q0006"
+          ],
+          "option_ids": [
+            "OPT-9d7367567433",
+            "OPT-9eaa08e053bd"
+          ],
+          "certificates": [
+            {
+              "witness_id": "W-FRD-Q0001-03-Q0001",
+              "removal_breaks": "required unit(s) uncovered",
+              "uncovered_units": [
+                "A1-H2-R1"
+              ],
+              "joint_groups_broken": [],
+              "options_that_cover_each_unit_without_it": {
+                "A1-H2-R1": []
+              }
+            },
+            {
+              "witness_id": "W-FRD-Q0006-03-Q0006",
+              "removal_breaks": "required unit(s) uncovered",
+              "uncovered_units": [
+                "A1-H2-R2"
+              ],
+              "joint_groups_broken": [],
+              "options_that_cover_each_unit_without_it": {
+                "A1-H2-R2": []
+              }
+            }
+          ]
+        },
+        {
+          "set_id": "SET-0efddd15ce04",
+          "witnesses": [
+            "W-FRD-Q0001-03-Q0001",
+            "W-FRD-Q0008-01-Q0008"
+          ],
+          "option_ids": [
+            "OPT-8d22bf28089f",
+            "OPT-9eaa08e053bd"
+          ],
+          "certificates": [
+            {
+              "witness_id": "W-FRD-Q0001-03-Q0001",
+              "removal_breaks": "required unit(s) uncovered",
+              "uncovered_units": [
+                "A1-H2-R1"
+              ],
+              "joint_groups_broken": [],
+              "options_that_cover_each_unit_without_it": {
+                "A1-H2-R1": []
+              }
+            },
+            {
+              "witness_id": "W-FRD-Q0008-01-Q0008",
+              "removal_breaks": "required unit(s) uncovered",
+              "uncovered_units": [
+                "A1-H2-R2"
+              ],
+              "joint_groups_broken": [],
+              "options_that_cover_each_unit_without_it": {
+                "A1-H2-R2": []
+              }
+            }
+          ]
+        },
+        {
+          "set_id": "SET-29ec204df064",
+          "witnesses": [
+            "W-FRD-Q0001-03-Q0001",
+            "W-FRD-Q0010-03-Q0010"
+          ],
+          "option_ids": [
+            "OPT-9eaa08e053bd",
+            "OPT-c884ab51581f"
+          ],
+          "certificates": [
+            {
+              "witness_id": "W-FRD-Q0001-03-Q0001",
+              "removal_breaks": "required unit(s) uncovered",
+              "uncovered_units": [
+                "A1-H2-R1"
+              ],
+              "joint_groups_broken": [],
+              "options_that_cover_each_unit_without_it": {
+                "A1-H2-R1": []
+              }
+            },
+            {
+              "witness_id": "W-FRD-Q0010-03-Q0010",
+              "removal_breaks": "required unit(s) uncovered",
+              "uncovered_units": [
+                "A1-H2-R2"
+              ],
+              "joint_groups_broken": [],
+              "options_that_cover_each_unit_without_it": {
+                "A1-H2-R2": []
+              }
+            }
+          ]
+        },
+        {
+          "set_id": "SET-3c365c5c985f",
+          "witnesses": [
+            "W-FRD-Q0002-01-Q0002",
+            "W-FRD-Q0002-03-Q0002"
+          ],
+          "option_ids": [
+            "OPT-0569d5574e6c",
+            "OPT-a2fdfb3913d8"
+          ],
+          "certificates": [
+            {
+              "witness_id": "W-FRD-Q0002-01-Q0002",
+              "removal_breaks": "required unit(s) uncovered",
+              "uncovered_units": [
+                "A1-H2-R2"
+              ],
+              "joint_groups_broken": [],
+              "options_that_cover_each_unit_without_it": {
+                "A1-H2-R2": []
+              }
+            },
+            {
+              "witness_id": "W-FRD-Q0002-03-Q0002",
+              "removal_breaks": "required unit(s) uncovered",
+              "uncovered_units": [
+                "A1-H2-R1"
+              ],
+              "joint_groups_broken": [],
+              "options_that_cover_each_unit_without_it": {
+                "A1-H2-R1": []
+              }
+            }
+          ]
+        },
+        {
+          "set_id": "SET-a7afd2e4256b",
+          "witnesses": [
+            "W-FRD-Q0002-03-Q0002",
+            "W-FRD-Q0004-03-Q0004"
+          ],
+          "option_ids": [
+            "OPT-6a5f384db42d",
+            "OPT-a2fdfb3913d8"
+          ],
+          "certificates": [
+            {
+              "witness_id": "W-FRD-Q0002-03-Q0002",
+              "removal_breaks": "required unit(s) uncovered",
+              "uncovered_units": [
+                "A1-H2-R1"
+              ],
+              "joint_groups_broken": [],
+              "options_that_cover_each_unit_without_it": {
+                "A1-H2-R1": []
+              }
+            },
+            {
+              "witness_id": "W-FRD-Q0004-03-Q0004",
+              "removal_breaks": "required unit(s) uncovered",
+              "uncovered_units": [
+                "A1-H2-R2"
+              ],
+              "joint_groups_broken": [],
+              "options_that_cover_each_unit_without_it": {
+                "A1-H2-R2": []
+              }
+            }
+          ]
+        },
+        {
+          "set_id": "SET-1572f5f64309",
+          "witnesses": [
+            "W-FRD-Q0002-03-Q0002",
+            "W-FRD-Q0005-02-Q0005"
+          ],
+          "option_ids": [
+            "OPT-a2fdfb3913d8",
+            "OPT-f8509ec31e70"
+          ],
+          "certificates": [
+            {
+              "witness_id": "W-FRD-Q0002-03-Q0002",
+              "removal_breaks": "required unit(s) uncovered",
+              "uncovered_units": [
+                "A1-H2-R1"
+              ],
+              "joint_groups_broken": [],
+              "options_that_cover_each_unit_without_it": {
+                "A1-H2-R1": []
+              }
+            },
+            {
+              "witness_id": "W-FRD-Q0005-02-Q0005",
+              "removal_breaks": "required unit(s) uncovered",
+              "uncovered_units": [
+                "A1-H2-R2"
+              ],
+              "joint_groups_broken": [],
+              "options_that_cover_each_unit_without_it": {
+                "A1-H2-R2": []
+              }
+            }
+          ]
+        },
+        {
+          "set_id": "SET-102570629c44",
+          "witnesses": [
+            "W-FRD-Q0002-03-Q0002",
+            "W-FRD-Q0006-03-Q0006"
+          ],
+          "option_ids": [
+            "OPT-9d7367567433",
+            "OPT-a2fdfb3913d8"
+          ],
+          "certificates": [
+            {
+              "witness_id": "W-FRD-Q0002-03-Q0002",
+              "removal_breaks": "required unit(s) uncovered",
+              "uncovered_units": [
+                "A1-H2-R1"
+              ],
+              "joint_groups_broken": [],
+              "options_that_cover_each_unit_without_it": {
+                "A1-H2-R1": []
+              }
+            },
+            {
+              "witness_id": "W-FRD-Q0006-03-Q0006",
+              "removal_breaks": "required unit(s) uncovered",
+              "uncovered_units": [
+                "A1-H2-R2"
+              ],
+              "joint_groups_broken": [],
+              "options_that_cover_each_unit_without_it": {
+                "A1-H2-R2": []
+              }
+            }
+          ]
+        },
+        {
+          "set_id": "SET-147804c6c80e",
+          "witnesses": [
+            "W-FRD-Q0002-03-Q0002",
+            "W-FRD-Q0008-01-Q0008"
+          ],
+          "option_ids": [
+            "OPT-8d22bf28089f",
+            "OPT-a2fdfb3913d8"
+          ],
+          "certificates": [
+            {
+              "witness_id": "W-FRD-Q0002-03-Q0002",
+              "removal_breaks": "required unit(s) uncovered",
+              "uncovered_units": [
+                "A1-H2-R1"
+              ],
+              "joint_groups_broken": [],
+              "options_that_cover_each_unit_without_it": {
+                "A1-H2-R1": []
+              }
+            },
+            {
+              "witness_id": "W-FRD-Q0008-01-Q0008",
+              "removal_breaks": "required unit(s) uncovered",
+              "uncovered_units": [
+                "A1-H2-R2"
+              ],
+              "joint_groups_broken": [],
+              "options_that_cover_each_unit_without_it": {
+                "A1-H2-R2": []
+              }
+            }
+          ]
+        },
+        {
+          "set_id": "SET-2da3ec29b4f9",
+          "witnesses": [
+            "W-FRD-Q0002-03-Q0002",
+            "W-FRD-Q0010-03-Q0010"
+          ],
+          "option_ids": [
+            "OPT-a2fdfb3913d8",
+            "OPT-c884ab51581f"
+          ],
+          "certificates": [
+            {
+              "witness_id": "W-FRD-Q0002-03-Q0002",
+              "removal_breaks": "required unit(s) uncovered",
+              "uncovered_units": [
+                "A1-H2-R1"
+              ],
+              "joint_groups_broken": [],
+              "options_that_cover_each_unit_without_it": {
+                "A1-H2-R1": []
+              }
+            },
+            {
+              "witness_id": "W-FRD-Q0010-03-Q0010",
+              "removal_breaks": "required unit(s) uncovered",
+              "uncovered_units": [
+                "A1-H2-R2"
+              ],
+              "joint_groups_broken": [],
+              "options_that_cover_each_unit_without_it": {
+                "A1-H2-R2": []
+              }
+            }
+          ]
+        },
+        {
+          "set_id": "SET-c0255d1194d6",
+          "witnesses": [
+            "W-FRD-Q0002-01-Q0002",
+            "W-FRD-Q0003-03-Q0003"
+          ],
+          "option_ids": [
+            "OPT-0569d5574e6c",
+            "OPT-fd6f67f424e5"
+          ],
+          "certificates": [
+            {
+              "witness_id": "W-FRD-Q0002-01-Q0002",
+              "removal_breaks": "required unit(s) uncovered",
+              "uncovered_units": [
+                "A1-H2-R2"
+              ],
+              "joint_groups_broken": [],
+              "options_that_cover_each_unit_without_it": {
+                "A1-H2-R2": []
+              }
+            },
+            {
+              "witness_id": "W-FRD-Q0003-03-Q0003",
+              "removal_breaks": "required unit(s) uncovered",
+              "uncovered_units": [
+                "A1-H2-R1"
+              ],
+              "joint_groups_broken": [],
+              "options_that_cover_each_unit_without_it": {
+                "A1-H2-R1": []
+              }
+            }
+          ]
+        },
+        {
+          "set_id": "SET-b4453358bf82",
+          "witnesses": [
+            "W-FRD-Q0003-03-Q0003",
+            "W-FRD-Q0004-03-Q0004"
+          ],
+          "option_ids": [
+            "OPT-6a5f384db42d",
+            "OPT-fd6f67f424e5"
+          ],
+          "certificates": [
+            {
+              "witness_id": "W-FRD-Q0003-03-Q0003",
+              "removal_breaks": "required unit(s) uncovered",
+              "uncovered_units": [
+                "A1-H2-R1"
+              ],
+              "joint_groups_broken": [],
+              "options_that_cover_each_unit_without_it": {
+                "A1-H2-R1": []
+              }
+            },
+            {
+              "witness_id": "W-FRD-Q0004-03-Q0004",
+              "removal_breaks": "required unit(s) uncovered",
+              "uncovered_units": [
+                "A1-H2-R2"
+              ],
+              "joint_groups_broken": [],
+              "options_that_cover_each_unit_without_it": {
+                "A1-H2-R2": []
+              }
+            }
+          ]
+        },
+        {
+          "set_id": "SET-a667ece2fa80",
+          "witnesses": [
+            "W-FRD-Q0003-03-Q0003",
+            "W-FRD-Q0005-02-Q0005"
+          ],
+          "option_ids": [
+            "OPT-f8509ec31e70",
+            "OPT-fd6f67f424e5"
+          ],
+          "certificates": [
+            {
+              "witness_id": "W-FRD-Q0003-03-Q0003",
+              "removal_breaks": "required unit(s) uncovered",
+              "uncovered_units": [
+                "A1-H2-R1"
+              ],
+              "joint_groups_broken": [],
+              "options_that_cover_each_unit_without_it": {
+                "A1-H2-R1": []
+              }
+            },
+            {
+              "witness_id": "W-FRD-Q0005-02-Q0005",
+              "removal_breaks": "required unit(s) uncovered",
+              "uncovered_units": [
+                "A1-H2-R2"
+              ],
+              "joint_groups_broken": [],
+              "options_that_cover_each_unit_without_it": {
+                "A1-H2-R2": []
+              }
+            }
+          ]
+        },
+        {
+          "set_id": "SET-04800bb90453",
+          "witnesses": [
+            "W-FRD-Q0003-03-Q0003",
+            "W-FRD-Q0006-03-Q0006"
+          ],
+          "option_ids": [
+            "OPT-9d7367567433",
+            "OPT-fd6f67f424e5"
+          ],
+          "certificates": [
+            {
+              "witness_id": "W-FRD-Q0003-03-Q0003",
+              "removal_breaks": "required unit(s) uncovered",
+              "uncovered_units": [
+                "A1-H2-R1"
+              ],
+              "joint_groups_broken": [],
+              "options_that_cover_each_unit_without_it": {
+                "A1-H2-R1": []
+              }
+            },
+            {
+              "witness_id": "W-FRD-Q0006-03-Q0006",
+              "removal_breaks": "required unit(s) uncovered",
+              "uncovered_units": [
+                "A1-H2-R2"
+              ],
+              "joint_groups_broken": [],
+              "options_that_cover_each_unit_without_it": {
+                "A1-H2-R2": []
+              }
+            }
+          ]
+        },
+        {
+          "set_id": "SET-3e5016f909b2",
+          "witnesses": [
+            "W-FRD-Q0003-03-Q0003",
+            "W-FRD-Q0008-01-Q0008"
+          ],
+          "option_ids": [
+            "OPT-8d22bf28089f",
+            "OPT-fd6f67f424e5"
+          ],
+          "certificates": [
+            {
+              "witness_id": "W-FRD-Q0003-03-Q0003",
+              "removal_breaks": "required unit(s) uncovered",
+              "uncovered_units": [
+                "A1-H2-R1"
+              ],
+              "joint_groups_broken": [],
+              "options_that_cover_each_unit_without_it": {
+                "A1-H2-R1": []
+              }
+            },
+            {
+              "witness_id": "W-FRD-Q0008-01-Q0008",
+              "removal_breaks": "required unit(s) uncovered",
+              "uncovered_units": [
+                "A1-H2-R2"
+              ],
+              "joint_groups_broken": [],
+              "options_that_cover_each_unit_without_it": {
+                "A1-H2-R2": []
+              }
+            }
+          ]
+        },
+        {
+          "set_id": "SET-78262bef6870",
+          "witnesses": [
+            "W-FRD-Q0003-03-Q0003",
+            "W-FRD-Q0010-03-Q0010"
+          ],
+          "option_ids": [
+            "OPT-c884ab51581f",
+            "OPT-fd6f67f424e5"
+          ],
+          "certificates": [
+            {
+              "witness_id": "W-FRD-Q0003-03-Q0003",
+              "removal_breaks": "required unit(s) uncovered",
+              "uncovered_units": [
+                "A1-H2-R1"
+              ],
+              "joint_groups_broken": [],
+              "options_that_cover_each_unit_without_it": {
+                "A1-H2-R1": []
+              }
+            },
+            {
+              "witness_id": "W-FRD-Q0010-03-Q0010",
+              "removal_breaks": "required unit(s) uncovered",
+              "uncovered_units": [
+                "A1-H2-R2"
+              ],
+              "joint_groups_broken": [],
+              "options_that_cover_each_unit_without_it": {
+                "A1-H2-R2": []
+              }
+            }
+          ]
+        },
+        {
+          "set_id": "SET-1bb59e716f64",
+          "witnesses": [
+            "W-FRD-Q0002-01-Q0002",
+            "W-FRD-Q0005-01-Q0005"
+          ],
+          "option_ids": [
+            "OPT-0569d5574e6c",
+            "OPT-d695916b96c4"
+          ],
+          "certificates": [
+            {
+              "witness_id": "W-FRD-Q0002-01-Q0002",
+              "removal_breaks": "required unit(s) uncovered",
+              "uncovered_units": [
+                "A1-H2-R2"
+              ],
+              "joint_groups_broken": [],
+              "options_that_cover_each_unit_without_it": {
+                "A1-H2-R2": []
+              }
+            },
+            {
+              "witness_id": "W-FRD-Q0005-01-Q0005",
+              "removal_breaks": "required unit(s) uncovered",
+              "uncovered_units": [
+                "A1-H2-R1"
+              ],
+              "joint_groups_broken": [],
+              "options_that_cover_each_unit_without_it": {
+                "A1-H2-R1": []
+              }
+            }
+          ]
+        },
+        {
+          "set_id": "SET-1cf82183ecf0",
+          "witnesses": [
+            "W-FRD-Q0004-03-Q0004",
+            "W-FRD-Q0005-01-Q0005"
+          ],
+          "option_ids": [
+            "OPT-6a5f384db42d",
+            "OPT-d695916b96c4"
+          ],
+          "certificates": [
+            {
+              "witness_id": "W-FRD-Q0004-03-Q0004",
+              "removal_breaks": "required unit(s) uncovered",
+              "uncovered_units": [
+                "A1-H2-R2"
+              ],
+              "joint_groups_broken": [],
+              "options_that_cover_each_unit_without_it": {
+                "A1-H2-R2": []
+              }
+            },
+            {
+              "witness_id": "W-FRD-Q0005-01-Q0005",
+              "removal_breaks": "required unit(s) uncovered",
+              "uncovered_units": [
+                "A1-H2-R1"
+              ],
+              "joint_groups_broken": [],
+              "options_that_cover_each_unit_without_it": {
+                "A1-H2-R1": []
+              }
+            }
+          ]
+        },
+        {
+          "set_id": "SET-b03af2c5a146",
+          "witnesses": [
+            "W-FRD-Q0005-01-Q0005",
+            "W-FRD-Q0005-02-Q0005"
+          ],
+          "option_ids": [
+            "OPT-d695916b96c4",
+            "OPT-f8509ec31e70"
+          ],
+          "certificates": [
+            {
+              "witness_id": "W-FRD-Q0005-01-Q0005",
+              "removal_breaks": "required unit(s) uncovered",
+              "uncovered_units": [
+                "A1-H2-R1"
+              ],
+              "joint_groups_broken": [],
+              "options_that_cover_each_unit_without_it": {
+                "A1-H2-R1": []
+              }
+            },
+            {
+              "witness_id": "W-FRD-Q0005-02-Q0005",
+              "removal_breaks": "required unit(s) uncovered",
+              "uncovered_units": [
+                "A1-H2-R2"
+              ],
+              "joint_groups_broken": [],
+              "options_that_cover_each_unit_without_it": {
+                "A1-H2-R2": []
+              }
+            }
+          ]
+        },
+        {
+          "set_id": "SET-da2527a2078e",
+          "witnesses": [
+            "W-FRD-Q0005-01-Q0005",
+            "W-FRD-Q0006-03-Q0006"
+          ],
+          "option_ids": [
+            "OPT-9d7367567433",
+            "OPT-d695916b96c4"
+          ],
+          "certificates": [
+            {
+              "witness_id": "W-FRD-Q0005-01-Q0005",
+              "removal_breaks": "required unit(s) uncovered",
+              "uncovered_units": [
+                "A1-H2-R1"
+              ],
+              "joint_groups_broken": [],
+              "options_that_cover_each_unit_without_it": {
+                "A1-H2-R1": []
+              }
+            },
+            {
+              "witness_id": "W-FRD-Q0006-03-Q0006",
+              "removal_breaks": "required unit(s) uncovered",
+              "uncovered_units": [
+                "A1-H2-R2"
+              ],
+              "joint_groups_broken": [],
+              "options_that_cover_each_unit_without_it": {
+                "A1-H2-R2": []
+              }
+            }
+          ]
+        },
+        {
+          "set_id": "SET-c0008920ccb8",
+          "witnesses": [
+            "W-FRD-Q0005-01-Q0005",
+            "W-FRD-Q0008-01-Q0008"
+          ],
+          "option_ids": [
+            "OPT-8d22bf28089f",
+            "OPT-d695916b96c4"
+          ],
+          "certificates": [
+            {
+              "witness_id": "W-FRD-Q0005-01-Q0005",
+              "removal_breaks": "required unit(s) uncovered",
+              "uncovered_units": [
+                "A1-H2-R1"
+              ],
+              "joint_groups_broken": [],
+              "options_that_cover_each_unit_without_it": {
+                "A1-H2-R1": []
+              }
+            },
+            {
+              "witness_id": "W-FRD-Q0008-01-Q0008",
+              "removal_breaks": "required unit(s) uncovered",
+              "uncovered_units": [
+                "A1-H2-R2"
+              ],
+              "joint_groups_broken": [],
+              "options_that_cover_each_unit_without_it": {
+                "A1-H2-R2": []
+              }
+            }
+          ]
+        },
+        {
+          "set_id": "SET-249b9e63c0b3",
+          "witnesses": [
+            "W-FRD-Q0005-01-Q0005",
+            "W-FRD-Q0010-03-Q0010"
+          ],
+          "option_ids": [
+            "OPT-c884ab51581f",
+            "OPT-d695916b96c4"
+          ],
+          "certificates": [
+            {
+              "witness_id": "W-FRD-Q0005-01-Q0005",
+              "removal_breaks": "required unit(s) uncovered",
+              "uncovered_units": [
+                "A1-H2-R1"
+              ],
+              "joint_groups_broken": [],
+              "options_that_cover_each_unit_without_it": {
+                "A1-H2-R1": []
+              }
+            },
+            {
+              "witness_id": "W-FRD-Q0010-03-Q0010",
+              "removal_breaks": "required unit(s) uncovered",
+              "uncovered_units": [
+                "A1-H2-R2"
+              ],
+              "joint_groups_broken": [],
+              "options_that_cover_each_unit_without_it": {
+                "A1-H2-R2": []
+              }
+            }
+          ]
+        },
+        {
+          "set_id": "SET-01db81e34e2c",
+          "witnesses": [
+            "W-FRD-Q0002-01-Q0002",
+            "W-FRD-Q0007-03-Q0007"
+          ],
+          "option_ids": [
+            "OPT-0569d5574e6c",
+            "OPT-c4245e5e4b75"
+          ],
+          "certificates": [
+            {
+              "witness_id": "W-FRD-Q0002-01-Q0002",
+              "removal_breaks": "required unit(s) uncovered",
+              "uncovered_units": [
+                "A1-H2-R2"
+              ],
+              "joint_groups_broken": [],
+              "options_that_cover_each_unit_without_it": {
+                "A1-H2-R2": []
+              }
+            },
+            {
+              "witness_id": "W-FRD-Q0007-03-Q0007",
+              "removal_breaks": "required unit(s) uncovered",
+              "uncovered_units": [
+                "A1-H2-R1"
+              ],
+              "joint_groups_broken": [],
+              "options_that_cover_each_unit_without_it": {
+                "A1-H2-R1": []
+              }
+            }
+          ]
+        },
+        {
+          "set_id": "SET-3b12c3c16850",
+          "witnesses": [
+            "W-FRD-Q0004-03-Q0004",
+            "W-FRD-Q0007-03-Q0007"
+          ],
+          "option_ids": [
+            "OPT-6a5f384db42d",
+            "OPT-c4245e5e4b75"
+          ],
+          "certificates": [
+            {
+              "witness_id": "W-FRD-Q0004-03-Q0004",
+              "removal_breaks": "required unit(s) uncovered",
+              "uncovered_units": [
+                "A1-H2-R2"
+              ],
+              "joint_groups_broken": [],
+              "options_that_cover_each_unit_without_it": {
+                "A1-H2-R2": []
+              }
+            },
+            {
+              "witness_id": "W-FRD-Q0007-03-Q0007",
+              "removal_breaks": "required unit(s) uncovered",
+              "uncovered_units": [
+                "A1-H2-R1"
+              ],
+              "joint_groups_broken": [],
+              "options_that_cover_each_unit_without_it": {
+                "A1-H2-R1": []
+              }
+            }
+          ]
+        },
+        {
+          "set_id": "SET-ddc33749da76",
+          "witnesses": [
+            "W-FRD-Q0005-02-Q0005",
+            "W-FRD-Q0007-03-Q0007"
+          ],
+          "option_ids": [
+            "OPT-c4245e5e4b75",
+            "OPT-f8509ec31e70"
+          ],
+          "certificates": [
+            {
+              "witness_id": "W-FRD-Q0005-02-Q0005",
+              "removal_breaks": "required unit(s) uncovered",
+              "uncovered_units": [
+                "A1-H2-R2"
+              ],
+              "joint_groups_broken": [],
+              "options_that_cover_each_unit_without_it": {
+                "A1-H2-R2": []
+              }
+            },
+            {
+              "witness_id": "W-FRD-Q0007-03-Q0007",
+              "removal_breaks": "required unit(s) uncovered",
+              "uncovered_units": [
+                "A1-H2-R1"
+              ],
+              "joint_groups_broken": [],
+              "options_that_cover_each_unit_without_it": {
+                "A1-H2-R1": []
+              }
+            }
+          ]
+        },
+        {
+          "set_id": "SET-8698808b9ebe",
+          "witnesses": [
+            "W-FRD-Q0006-03-Q0006",
+            "W-FRD-Q0007-03-Q0007"
+          ],
+          "option_ids": [
+            "OPT-9d7367567433",
+            "OPT-c4245e5e4b75"
+          ],
+          "certificates": [
+            {
+              "witness_id": "W-FRD-Q0006-03-Q0006",
+              "removal_breaks": "required unit(s) uncovered",
+              "uncovered_units": [
+                "A1-H2-R2"
+              ],
+              "joint_groups_broken": [],
+              "options_that_cover_each_unit_without_it": {
+                "A1-H2-R2": []
+              }
+            },
+            {
+              "witness_id": "W-FRD-Q0007-03-Q0007",
+              "removal_breaks": "required unit(s) uncovered",
+              "uncovered_units": [
+                "A1-H2-R1"
+              ],
+              "joint_groups_broken": [],
+              "options_that_cover_each_unit_without_it": {
+                "A1-H2-R1": []
+              }
+            }
+          ]
+        },
+        {
+          "set_id": "SET-ca899858dc63",
+          "witnesses": [
+            "W-FRD-Q0007-03-Q0007",
+            "W-FRD-Q0008-01-Q0008"
+          ],
+          "option_ids": [
+            "OPT-8d22bf28089f",
+            "OPT-c4245e5e4b75"
+          ],
+          "certificates": [
+            {
+              "witness_id": "W-FRD-Q0007-03-Q0007",
+              "removal_breaks": "required unit(s) uncovered",
+              "uncovered_units": [
+                "A1-H2-R1"
+              ],
+              "joint_groups_broken": [],
+              "options_that_cover_each_unit_without_it": {
+                "A1-H2-R1": []
+              }
+            },
+            {
+              "witness_id": "W-FRD-Q0008-01-Q0008",
+              "removal_breaks": "required unit(s) uncovered",
+              "uncovered_units": [
+                "A1-H2-R2"
+              ],
+              "joint_groups_broken": [],
+              "options_that_cover_each_unit_without_it": {
+                "A1-H2-R2": []
+              }
+            }
+          ]
+        },
+        {
+          "set_id": "SET-38cee51878dc",
+          "witnesses": [
+            "W-FRD-Q0007-03-Q0007",
+            "W-FRD-Q0010-03-Q0010"
+          ],
+          "option_ids": [
+            "OPT-c4245e5e4b75",
+            "OPT-c884ab51581f"
+          ],
+          "certificates": [
+            {
+              "witness_id": "W-FRD-Q0007-03-Q0007",
+              "removal_breaks": "required unit(s) uncovered",
+              "uncovered_units": [
+                "A1-H2-R1"
+              ],
+              "joint_groups_broken": [],
+              "options_that_cover_each_unit_without_it": {
+                "A1-H2-R1": []
+              }
+            },
+            {
+              "witness_id": "W-FRD-Q0010-03-Q0010",
+              "removal_breaks": "required unit(s) uncovered",
+              "uncovered_units": [
+                "A1-H2-R2"
+              ],
+              "joint_groups_broken": [],
+              "options_that_cover_each_unit_without_it": {
+                "A1-H2-R2": []
+              }
+            }
+          ]
+        },
+        {
+          "set_id": "SET-377183890bd8",
+          "witnesses": [
+            "W-FRD-Q0002-01-Q0002",
+            "W-FRD-Q0008-03-Q0008"
+          ],
+          "option_ids": [
+            "OPT-0569d5574e6c",
+            "OPT-d1c6c0c1c738"
+          ],
+          "certificates": [
+            {
+              "witness_id": "W-FRD-Q0002-01-Q0002",
+              "removal_breaks": "required unit(s) uncovered",
+              "uncovered_units": [
+                "A1-H2-R2"
+              ],
+              "joint_groups_broken": [],
+              "options_that_cover_each_unit_without_it": {
+                "A1-H2-R2": []
+              }
+            },
+            {
+              "witness_id": "W-FRD-Q0008-03-Q0008",
+              "removal_breaks": "required unit(s) uncovered",
+              "uncovered_units": [
+                "A1-H2-R1"
+              ],
+              "joint_groups_broken": [],
+              "options_that_cover_each_unit_without_it": {
+                "A1-H2-R1": []
+              }
+            }
+          ]
+        },
+        {
+          "set_id": "SET-deece05afa93",
+          "witnesses": [
+            "W-FRD-Q0004-03-Q0004",
+            "W-FRD-Q0008-03-Q0008"
+          ],
+          "option_ids": [
+            "OPT-6a5f384db42d",
+            "OPT-d1c6c0c1c738"
+          ],
+          "certificates": [
+            {
+              "witness_id": "W-FRD-Q0004-03-Q0004",
+              "removal_breaks": "required unit(s) uncovered",
+              "uncovered_units": [
+                "A1-H2-R2"
+              ],
+              "joint_groups_broken": [],
+              "options_that_cover_each_unit_without_it": {
+                "A1-H2-R2": []
+              }
+            },
+            {
+              "witness_id": "W-FRD-Q0008-03-Q0008",
+              "removal_breaks": "required unit(s) uncovered",
+              "uncovered_units": [
+                "A1-H2-R1"
+              ],
+              "joint_groups_broken": [],
+              "options_that_cover_each_unit_without_it": {
+                "A1-H2-R1": []
+              }
+            }
+          ]
+        },
+        {
+          "set_id": "SET-6b16652bd8f6",
+          "witnesses": [
+            "W-FRD-Q0005-02-Q0005",
+            "W-FRD-Q0008-03-Q0008"
+          ],
+          "option_ids": [
+            "OPT-d1c6c0c1c738",
+            "OPT-f8509ec31e70"
+          ],
+          "certificates": [
+            {
+              "witness_id": "W-FRD-Q0005-02-Q0005",
+              "removal_breaks": "required unit(s) uncovered",
+              "uncovered_units": [
+                "A1-H2-R2"
+              ],
+              "joint_groups_broken": [],
+              "options_that_cover_each_unit_without_it": {
+                "A1-H2-R2": []
+              }
+            },
+            {
+              "witness_id": "W-FRD-Q0008-03-Q0008",
+              "removal_breaks": "required unit(s) uncovered",
+              "uncovered_units": [
+                "A1-H2-R1"
+              ],
+              "joint_groups_broken": [],
+              "options_that_cover_each_unit_without_it": {
+                "A1-H2-R1": []
+              }
+            }
+          ]
+        },
+        {
+          "set_id": "SET-e38244a8356c",
+          "witnesses": [
+            "W-FRD-Q0006-03-Q0006",
+            "W-FRD-Q0008-03-Q0008"
+          ],
+          "option_ids": [
+            "OPT-9d7367567433",
+            "OPT-d1c6c0c1c738"
+          ],
+          "certificates": [
+            {
+              "witness_id": "W-FRD-Q0006-03-Q0006",
+              "removal_breaks": "required unit(s) uncovered",
+              "uncovered_units": [
+                "A1-H2-R2"
+              ],
+              "joint_groups_broken": [],
+              "options_that_cover_each_unit_without_it": {
+                "A1-H2-R2": []
+              }
+            },
+            {
+              "witness_id": "W-FRD-Q0008-03-Q0008",
+              "removal_breaks": "required unit(s) uncovered",
+              "uncovered_units": [
+                "A1-H2-R1"
+              ],
+              "joint_groups_broken": [],
+              "options_that_cover_each_unit_without_it": {
+                "A1-H2-R1": []
+              }
+            }
+          ]
+        },
+        {
+          "set_id": "SET-215ab71bd490",
+          "witnesses": [
+            "W-FRD-Q0008-01-Q0008",
+            "W-FRD-Q0008-03-Q0008"
+          ],
+          "option_ids": [
+            "OPT-8d22bf28089f",
+            "OPT-d1c6c0c1c738"
+          ],
+          "certificates": [
+            {
+              "witness_id": "W-FRD-Q0008-01-Q0008",
+              "removal_breaks": "required unit(s) uncovered",
+              "uncovered_units": [
+                "A1-H2-R2"
+              ],
+              "joint_groups_broken": [],
+              "options_that_cover_each_unit_without_it": {
+                "A1-H2-R2": []
+              }
+            },
+            {
+              "witness_id": "W-FRD-Q0008-03-Q0008",
+              "removal_breaks": "required unit(s) uncovered",
+              "uncovered_units": [
+                "A1-H2-R1"
+              ],
+              "joint_groups_broken": [],
+              "options_that_cover_each_unit_without_it": {
+                "A1-H2-R1": []
+              }
+            }
+          ]
+        },
+        {
+          "set_id": "SET-70a1bb160994",
+          "witnesses": [
+            "W-FRD-Q0008-03-Q0008",
+            "W-FRD-Q0010-03-Q0010"
+          ],
+          "option_ids": [
+            "OPT-c884ab51581f",
+            "OPT-d1c6c0c1c738"
+          ],
+          "certificates": [
+            {
+              "witness_id": "W-FRD-Q0008-03-Q0008",
+              "removal_breaks": "required unit(s) uncovered",
+              "uncovered_units": [
+                "A1-H2-R1"
+              ],
+              "joint_groups_broken": [],
+              "options_that_cover_each_unit_without_it": {
+                "A1-H2-R1": []
+              }
+            },
+            {
+              "witness_id": "W-FRD-Q0010-03-Q0010",
+              "removal_breaks": "required unit(s) uncovered",
+              "uncovered_units": [
+                "A1-H2-R2"
+              ],
+              "joint_groups_broken": [],
+              "options_that_cover_each_unit_without_it": {
+                "A1-H2-R2": []
+              }
+            }
+          ]
+        },
+        {
+          "set_id": "SET-64b85cf9a13a",
+          "witnesses": [
+            "W-FRD-Q0002-01-Q0002",
+            "W-FRD-Q0009-03-Q0009"
+          ],
+          "option_ids": [
+            "OPT-0569d5574e6c",
+            "OPT-079fbeaac1e7"
+          ],
+          "certificates": [
+            {
+              "witness_id": "W-FRD-Q0002-01-Q0002",
+              "removal_breaks": "required unit(s) uncovered",
+              "uncovered_units": [
+                "A1-H2-R2"
+              ],
+              "joint_groups_broken": [],
+              "options_that_cover_each_unit_without_it": {
+                "A1-H2-R2": []
+              }
+            },
+            {
+              "witness_id": "W-FRD-Q0009-03-Q0009",
+              "removal_breaks": "required unit(s) uncovered",
+              "uncovered_units": [
+                "A1-H2-R1"
+              ],
+              "joint_groups_broken": [],
+              "options_that_cover_each_unit_without_it": {
+                "A1-H2-R1": []
+              }
+            }
+          ]
+        },
+        {
+          "set_id": "SET-27494692eec5",
+          "witnesses": [
+            "W-FRD-Q0004-03-Q0004",
+            "W-FRD-Q0009-03-Q0009"
+          ],
+          "option_ids": [
+            "OPT-079fbeaac1e7",
+            "OPT-6a5f384db42d"
+          ],
+          "certificates": [
+            {
+              "witness_id": "W-FRD-Q0004-03-Q0004",
+              "removal_breaks": "required unit(s) uncovered",
+              "uncovered_units": [
+                "A1-H2-R2"
+              ],
+              "joint_groups_broken": [],
+              "options_that_cover_each_unit_without_it": {
+                "A1-H2-R2": []
+              }
+            },
+            {
+              "witness_id": "W-FRD-Q0009-03-Q0009",
+              "removal_breaks": "required unit(s) uncovered",
+              "uncovered_units": [
+                "A1-H2-R1"
+              ],
+              "joint_groups_broken": [],
+              "options_that_cover_each_unit_without_it": {
+                "A1-H2-R1": []
+              }
+            }
+          ]
+        },
+        {
+          "set_id": "SET-78c79f26dd39",
+          "witnesses": [
+            "W-FRD-Q0005-02-Q0005",
+            "W-FRD-Q0009-03-Q0009"
+          ],
+          "option_ids": [
+            "OPT-079fbeaac1e7",
+            "OPT-f8509ec31e70"
+          ],
+          "certificates": [
+            {
+              "witness_id": "W-FRD-Q0005-02-Q0005",
+              "removal_breaks": "required unit(s) uncovered",
+              "uncovered_units": [
+                "A1-H2-R2"
+              ],
+              "joint_groups_broken": [],
+              "options_that_cover_each_unit_without_it": {
+                "A1-H2-R2": []
+              }
+            },
+            {
+              "witness_id": "W-FRD-Q0009-03-Q0009",
+              "removal_breaks": "required unit(s) uncovered",
+              "uncovered_units": [
+                "A1-H2-R1"
+              ],
+              "joint_groups_broken": [],
+              "options_that_cover_each_unit_without_it": {
+                "A1-H2-R1": []
+              }
+            }
+          ]
+        },
+        {
+          "set_id": "SET-73b0dc880e2e",
+          "witnesses": [
+            "W-FRD-Q0006-03-Q0006",
+            "W-FRD-Q0009-03-Q0009"
+          ],
+          "option_ids": [
+            "OPT-079fbeaac1e7",
+            "OPT-9d7367567433"
+          ],
+          "certificates": [
+            {
+              "witness_id": "W-FRD-Q0006-03-Q0006",
+              "removal_breaks": "required unit(s) uncovered",
+              "uncovered_units": [
+                "A1-H2-R2"
+              ],
+              "joint_groups_broken": [],
+              "options_that_cover_each_unit_without_it": {
+                "A1-H2-R2": []
+              }
+            },
+            {
+              "witness_id": "W-FRD-Q0009-03-Q0009",
+              "removal_breaks": "required unit(s) uncovered",
+              "uncovered_units": [
+                "A1-H2-R1"
+              ],
+              "joint_groups_broken": [],
+              "options_that_cover_each_unit_without_it": {
+                "A1-H2-R1": []
+              }
+            }
+          ]
+        },
+        {
+          "set_id": "SET-5a66bf276c18",
+          "witnesses": [
+            "W-FRD-Q0008-01-Q0008",
+            "W-FRD-Q0009-03-Q0009"
+          ],
+          "option_ids": [
+            "OPT-079fbeaac1e7",
+            "OPT-8d22bf28089f"
+          ],
+          "certificates": [
+            {
+              "witness_id": "W-FRD-Q0008-01-Q0008",
+              "removal_breaks": "required unit(s) uncovered",
+              "uncovered_units": [
+                "A1-H2-R2"
+              ],
+              "joint_groups_broken": [],
+              "options_that_cover_each_unit_without_it": {
+                "A1-H2-R2": []
+              }
+            },
+            {
+              "witness_id": "W-FRD-Q0009-03-Q0009",
+              "removal_breaks": "required unit(s) uncovered",
+              "uncovered_units": [
+                "A1-H2-R1"
+              ],
+              "joint_groups_broken": [],
+              "options_that_cover_each_unit_without_it": {
+                "A1-H2-R1": []
+              }
+            }
+          ]
+        },
+        {
+          "set_id": "SET-2dd917c6249c",
+          "witnesses": [
+            "W-FRD-Q0009-03-Q0009",
+            "W-FRD-Q0010-03-Q0010"
+          ],
+          "option_ids": [
+            "OPT-079fbeaac1e7",
+            "OPT-c884ab51581f"
+          ],
+          "certificates": [
+            {
+              "witness_id": "W-FRD-Q0009-03-Q0009",
+              "removal_breaks": "required unit(s) uncovered",
+              "uncovered_units": [
+                "A1-H2-R1"
+              ],
+              "joint_groups_broken": [],
+              "options_that_cover_each_unit_without_it": {
+                "A1-H2-R1": []
+              }
+            },
+            {
+              "witness_id": "W-FRD-Q0010-03-Q0010",
+              "removal_breaks": "required unit(s) uncovered",
+              "uncovered_units": [
+                "A1-H2-R2"
+              ],
+              "joint_groups_broken": [],
+              "options_that_cover_each_unit_without_it": {
+                "A1-H2-R2": []
+              }
+            }
+          ]
+        }
+      ],
+      "uncovered_units": [],
+      "search_status": "EXHAUSTIVE",
+      "transversals": 42,
+      "rejected_candidates": [],
+      "note": "",
+      "hypothesis_id": "A1-H2",
+      "axis_id": "A1",
+      "required_units": [
+        "A1-H2-R1",
+        "A1-H2-R2"
+      ],
+      "constraints": [
+        "A1-H2-C1"
+      ],
+      "options_truncated": {},
+      "options": {
+        "A1-H2-R1": [
+          {
+            "option_id": "OPT-9eaa08e053bd",
+            "witnesses": [
+              "W-FRD-Q0001-03-Q0001"
+            ],
+            "relation": "EQUIVALENT",
+            "joint": false
+          },
+          {
+            "option_id": "OPT-a2fdfb3913d8",
+            "witnesses": [
+              "W-FRD-Q0002-03-Q0002"
+            ],
+            "relation": "EQUIVALENT",
+            "joint": false
+          },
+          {
+            "option_id": "OPT-fd6f67f424e5",
+            "witnesses": [
+              "W-FRD-Q0003-03-Q0003"
+            ],
+            "relation": "EQUIVALENT",
+            "joint": false
+          },
+          {
+            "option_id": "OPT-d695916b96c4",
+            "witnesses": [
+              "W-FRD-Q0005-01-Q0005"
+            ],
+            "relation": "EQUIVALENT",
+            "joint": false
+          },
+          {
+            "option_id": "OPT-c4245e5e4b75",
+            "witnesses": [
+              "W-FRD-Q0007-03-Q0007"
+            ],
+            "relation": "EQUIVALENT",
+            "joint": false
+          },
+          {
+            "option_id": "OPT-d1c6c0c1c738",
+            "witnesses": [
+              "W-FRD-Q0008-03-Q0008"
+            ],
+            "relation": "EQUIVALENT",
+            "joint": false
+          },
+          {
+            "option_id": "OPT-079fbeaac1e7",
+            "witnesses": [
+              "W-FRD-Q0009-03-Q0009"
+            ],
+            "relation": "EQUIVALENT",
+            "joint": false
+          }
+        ],
+        "A1-H2-R2": [
+          {
+            "option_id": "OPT-0569d5574e6c",
+            "witnesses": [
+              "W-FRD-Q0002-01-Q0002"
+            ],
+            "relation": "EQUIVALENT",
+            "joint": false
+          },
+          {
+            "option_id": "OPT-6a5f384db42d",
+            "witnesses": [
+              "W-FRD-Q0004-03-Q0004"
+            ],
+            "relation": "EQUIVALENT",
+            "joint": false
+          },
+          {
+            "option_id": "OPT-f8509ec31e70",
+            "witnesses": [
+              "W-FRD-Q0005-02-Q0005"
+            ],
+            "relation": "EQUIVALENT",
+            "joint": false
+          },
+          {
+            "option_id": "OPT-9d7367567433",
+            "witnesses": [
+              "W-FRD-Q0006-03-Q0006"
+            ],
+            "relation": "EQUIVALENT",
+            "joint": false
+          },
+          {
+            "option_id": "OPT-8d22bf28089f",
+            "witnesses": [
+              "W-FRD-Q0008-01-Q0008"
+            ],
+            "relation": "EQUIVALENT",
+            "joint": false
+          },
+          {
+            "option_id": "OPT-c884ab51581f",
+            "witnesses": [
+              "W-FRD-Q0010-03-Q0010"
+            ],
+            "relation": "EQUIVALENT",
+            "joint": false
+          }
+        ]
+      },
+      "constraint_violators": {},
+      "units_covered": 2
+    },
+    "A1-H3": {
+      "status": "NO_COMPLETE_COVERAGE",
+      "sets": [],
+      "uncovered_units": [
+        "A1-H3-R1"
+      ],
+      "search_status": "NOT_RUN",
+      "note": "At least one required unit has no coverage option; no complete set can be built.",
+      "hypothesis_id": "A1-H3",
+      "axis_id": "A1",
+      "required_units": [
+        "A1-H3-R1",
+        "A1-H3-R2"
+      ],
+      "constraints": [
+        "A1-H3-C1"
+      ],
+      "options_truncated": {},
+      "options": {
+        "A1-H3-R1": [],
+        "A1-H3-R2": [
+          {
+            "option_id": "OPT-dcd10beb12ca",
+            "witnesses": [
+              "W-FRD-Q0003-02-Q0003"
+            ],
+            "relation": "WITNESS_ENTAILS_UNIT",
+            "joint": false
+          },
+          {
+            "option_id": "OPT-15eeb568e7f1",
+            "witnesses": [
+              "W-FRD-Q0005-04-Q0005"
+            ],
+            "relation": "WITNESS_ENTAILS_UNIT",
+            "joint": false
+          },
+          {
+            "option_id": "OPT-99e1a5342527",
+            "witnesses": [
+              "W-FRD-Q0006-01-Q0006"
+            ],
+            "relation": "WITNESS_ENTAILS_UNIT",
+            "joint": false
+          },
+          {
+            "option_id": "OPT-2240d7a24346",
+            "witnesses": [
+              "W-FRD-Q0009-02-Q0009"
+            ],
+            "relation": "WITNESS_ENTAILS_UNIT",
+            "joint": false
+          }
+        ]
+      },
+      "constraint_violators": {},
+      "units_covered": 1
+    }
+  },
+  "time": "2026-10-30T03:39:12+00:00"
+}

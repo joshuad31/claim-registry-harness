@@ -1,0 +1,742 @@
+[
+  {
+    "response_id": "R-Q0001-A01",
+    "qid": "Q0001",
+    "attempt": "A01",
+    "outcome": "COMPLETE",
+    "usable": true,
+    "text": "[SOURCE] \"Foliar silicate increased grain yield of drought-stressed wheat in field trials by eighteen percent.\" (field2023.md, SYNTHETIC — Field trial of foliar silicate in drought-stressed wheat (field2023))\n[SOURCE] \"The increase was measured at a foliar rate of two millilitres per litre.\" (field2023.md, SYNTHETIC — Field trial of foliar silicate in drought-stressed wheat (field2023))\n[SOURCE] \"Foliar silicate did not increase grain yield of drought-stressed wheat in field trials.\" (null2021.md, Results)\n[SOURCE] \"Some field trials report a yield increase, while others report no yield difference at the same foliar rate.\" (review2019.md, Results)\n[SOURCE] \"Four field sites were sown with the same cultivar and sprayed twice with foliar silicate or a water control.\" (null2021.md, Results)\n[SOURCE] \"The authors conclude that the field findings are inconsistent and that another field trial at a stated rate is needed.\" (review2019.md, Results)\n\n[INFERRED] The quoted passages are what this notebook contains on the question. Each quotation is attributed above to its file and section; no finding outside these passages is asserted. Sources quoted: field2023.md, null2021.md, review2019.md.",
+    "cited_sources": [
+      "field2023.md",
+      "null2021.md",
+      "review2019.md"
+    ],
+    "requested_sources_cited": [
+      "field2023.md"
+    ],
+    "requested_sources_absent": [],
+    "retrieval": {
+      "named": [
+        {
+          "filename": "field2023.md",
+          "complete": true,
+          "words": 116
+        }
+      ],
+      "other": [
+        {
+          "filename": "null2021.md",
+          "heading": "Results",
+          "score": 10.8
+        },
+        {
+          "filename": "review2019.md",
+          "heading": "Findings",
+          "score": 6.56
+        },
+        {
+          "filename": "null2021.md",
+          "heading": "SYNTHETIC — Multi-site field trial reporting a null yield result (null2021)",
+          "score": 5.81
+        },
+        {
+          "filename": "review2019.md",
+          "heading": "SYNTHETIC — Review of foliar silicate and wheat yield (review2019)",
+          "score": 4.97
+        },
+        {
+          "filename": "review2019.md",
+          "heading": "Interpretation",
+          "score": 2.77
+        },
+        {
+          "filename": "null2021.md",
+          "heading": "Methods",
+          "score": 1.52
+        }
+      ],
+      "unresolved": [],
+      "words": 307
+    },
+    "call_key": "433b5867e302342b03f81f8a",
+    "model": "local-rules-v1.8",
+    "captured": "2026-10-30T03:39:09+00:00"
+  },
+  {
+    "response_id": "R-Q0002-A01",
+    "qid": "Q0002",
+    "attempt": "A01",
+    "outcome": "COMPLETE",
+    "usable": true,
+    "text": "[SOURCE] \"These field trials at a foliar rate of two millilitres per litre reported no yield difference between silicate and control plots.\" (null2021.md, SYNTHETIC — Multi-site field trial reporting a null yield result (null2021))\n[SOURCE] \"Some field trials report a yield increase, while others report no yield difference at the same foliar rate.\" (review2019.md, SYNTHETIC — Review of foliar silicate and wheat yield (review2019))\n[SOURCE] \"Foliar silicate did not increase grain yield of drought-stressed wheat in field trials.\" (null2021.md, SYNTHETIC — Multi-site field trial reporting a null yield result (null2021))\n[SOURCE] \"This was a narrative review without a pooled effect size, and publication bias was not assessed.\" (review2019.md, SYNTHETIC — Review of foliar silicate and wheat yield (review2019))\n[SOURCE] \"The increase was measured at a foliar rate of two millilitres per litre.\" (field2023.md, Results)\n[SOURCE] \"The trial compared a foliar silicate spray with a water control in field plots at two sites.\" (field2023.md, Results)\n\n[INFERRED] The quoted passages are what this notebook contains on the question. Each quotation is attributed above to its file and section; no finding outside these passages is asserted. Sources quoted: field2023.md, null2021.md, review2019.md.",
+    "cited_sources": [
+      "null2021.md",
+      "review2019.md",
+      "field2023.md"
+    ],
+    "requested_sources_cited": [
+      "null2021.md",
+      "review2019.md"
+    ],
+    "requested_sources_absent": [],
+    "retrieval": {
+      "named": [
+        {
+          "filename": "null2021.md",
+          "complete": true,
+          "words": 114
+        },
+        {
+          "filename": "review2019.md",
+          "complete": true,
+          "words": 109
+        }
+      ],
+      "other": [
+        {
+          "filename": "field2023.md",
+          "heading": "Results",
+          "score": 7.83
+        },
+        {
+          "filename": "field2023.md",
+          "heading": "SYNTHETIC — Field trial of foliar silicate in drought-stressed wheat (field2023)",
+          "score": 2.05
+        },
+        {
+          "filename": "field2023.md",
+          "heading": "Methods",
+          "score": 1.54
+        },
+        {
+          "filename": "field2023.md",
+          "heading": "Limitations",
+          "score": 1.23
+        }
+      ],
+      "unresolved": [],
+      "words": 339
+    },
+    "call_key": "ce147fc96faf1189ad10d21a",
+    "model": "local-rules-v1.8",
+    "captured": "2026-10-30T03:39:09+00:00"
+  },
+  {
+    "response_id": "R-Q0003-A01",
+    "qid": "Q0003",
+    "attempt": "A01",
+    "outcome": "COMPLETE",
+    "usable": true,
+    "text": "[SOURCE] \"Some field trials report a yield increase, while others report no yield difference at the same foliar rate.\" (review2019.md, SYNTHETIC — Review of foliar silicate and wheat yield (review2019))\n[SOURCE] \"Field evidence on foliar silicate and wheat yield is inconsistent across trials.\" (review2019.md, SYNTHETIC — Review of foliar silicate and wheat yield (review2019))\n[SOURCE] \"Foliar silicate did not increase grain yield of drought-stressed wheat in field trials.\" (null2021.md, Results)\n[SOURCE] \"Foliar silicate increased grain yield of drought-stressed wheat in field trials by eighteen percent.\" (field2023.md, Results)\n[SOURCE] \"The trial compared a foliar silicate spray with a water control in field plots at two sites.\" (field2023.md, Results)\n[SOURCE] \"Four field sites were sown with the same cultivar and sprayed twice with foliar silicate or a water control.\" (null2021.md, Results)\n\n[INFERRED] The quoted passages are what this notebook contains on the question. Each quotation is attributed above to its file and section; no finding outside these passages is asserted. Sources quoted: field2023.md, null2021.md, review2019.md.",
+    "cited_sources": [
+      "review2019.md",
+      "null2021.md",
+      "field2023.md"
+    ],
+    "requested_sources_cited": [
+      "review2019.md"
+    ],
+    "requested_sources_absent": [],
+    "retrieval": {
+      "named": [
+        {
+          "filename": "review2019.md",
+          "complete": true,
+          "words": 109
+        }
+      ],
+      "other": [
+        {
+          "filename": "null2021.md",
+          "heading": "Results",
+          "score": 11.89
+        },
+        {
+          "filename": "field2023.md",
+          "heading": "Results",
+          "score": 10.77
+        },
+        {
+          "filename": "null2021.md",
+          "heading": "SYNTHETIC — Multi-site field trial reporting a null yield result (null2021)",
+          "score": 5.81
+        },
+        {
+          "filename": "field2023.md",
+          "heading": "SYNTHETIC — Field trial of foliar silicate in drought-stressed wheat (field2023)",
+          "score": 5.65
+        },
+        {
+          "filename": "null2021.md",
+          "heading": "Methods",
+          "score": 1.52
+        },
+        {
+          "filename": "field2023.md",
+          "heading": "Methods",
+          "score": 1.46
+        }
+      ],
+      "unresolved": [],
+      "words": 306
+    },
+    "call_key": "ab55896f85b851e9963a3fd4",
+    "model": "local-rules-v1.8",
+    "captured": "2026-10-30T03:39:09+00:00"
+  },
+  {
+    "response_id": "R-Q0004-A01",
+    "qid": "Q0004",
+    "attempt": "A01",
+    "outcome": "COMPLETE",
+    "usable": true,
+    "text": "[SOURCE] \"The increase was measured at a foliar rate of two millilitres per litre.\" (field2023.md, SYNTHETIC — Field trial of foliar silicate in drought-stressed wheat (field2023))\n[SOURCE] \"Foliar silicate increased grain yield of drought-stressed wheat in field trials by eighteen percent.\" (field2023.md, SYNTHETIC — Field trial of foliar silicate in drought-stressed wheat (field2023))\n[SOURCE] \"These field trials at a foliar rate of two millilitres per litre reported no yield difference between silicate and control plots.\" (null2021.md, Results)\n[SOURCE] \"Some field trials report a yield increase, while others report no yield difference at the same foliar rate.\" (review2019.md, Results)\n[SOURCE] \"The authors conclude that the field findings are inconsistent and that another field trial at a stated rate is needed.\" (review2019.md, Results)\n[SOURCE] \"Four field sites were sown with the same cultivar and sprayed twice with foliar silicate or a water control.\" (null2021.md, Results)\n\n[INFERRED] The quoted passages are what this notebook contains on the question. Each quotation is attributed above to its file and section; no finding outside these passages is asserted. Sources quoted: field2023.md, null2021.md, review2019.md.",
+    "cited_sources": [
+      "field2023.md",
+      "null2021.md",
+      "review2019.md"
+    ],
+    "requested_sources_cited": [
+      "field2023.md"
+    ],
+    "requested_sources_absent": [],
+    "retrieval": {
+      "named": [
+        {
+          "filename": "field2023.md",
+          "complete": true,
+          "words": 116
+        }
+      ],
+      "other": [
+        {
+          "filename": "null2021.md",
+          "heading": "Results",
+          "score": 13.39
+        },
+        {
+          "filename": "review2019.md",
+          "heading": "Findings",
+          "score": 10.4
+        },
+        {
+          "filename": "null2021.md",
+          "heading": "SYNTHETIC — Multi-site field trial reporting a null yield result (null2021)",
+          "score": 5.81
+        },
+        {
+          "filename": "review2019.md",
+          "heading": "Interpretation",
+          "score": 4.0
+        },
+        {
+          "filename": "review2019.md",
+          "heading": "SYNTHETIC — Review of foliar silicate and wheat yield (review2019)",
+          "score": 3.13
+        },
+        {
+          "filename": "null2021.md",
+          "heading": "Methods",
+          "score": 1.1
+        }
+      ],
+      "unresolved": [],
+      "words": 307
+    },
+    "call_key": "fcc5733a3d79a89f2ce2422f",
+    "model": "local-rules-v1.8",
+    "captured": "2026-10-30T03:39:09+00:00"
+  },
+  {
+    "response_id": "R-Q0005-A01",
+    "qid": "Q0005",
+    "attempt": "A01",
+    "outcome": "COMPLETE",
+    "usable": true,
+    "text": "[SOURCE] \"Foliar silicate did not increase grain yield of drought-stressed wheat in field trials.\" (null2021.md, SYNTHETIC — Multi-site field trial reporting a null yield result (null2021))\n[SOURCE] \"These field trials at a foliar rate of two millilitres per litre reported no yield difference between silicate and control plots.\" (null2021.md, SYNTHETIC — Multi-site field trial reporting a null yield result (null2021))\n[SOURCE] \"Some field trials report a yield increase, while others report no yield difference at the same foliar rate.\" (review2019.md, SYNTHETIC — Review of foliar silicate and wheat yield (review2019))\n[SOURCE] \"Field evidence on foliar silicate and wheat yield is inconsistent across trials.\" (review2019.md, SYNTHETIC — Review of foliar silicate and wheat yield (review2019))\n[SOURCE] \"Foliar silicate increased grain yield of drought-stressed wheat in field trials by eighteen percent.\" (field2023.md, Results)\n[SOURCE] \"The trial compared a foliar silicate spray with a water control in field plots at two sites.\" (field2023.md, Results)\n\n[INFERRED] The quoted passages are what this notebook contains on the question. Each quotation is attributed above to its file and section; no finding outside these passages is asserted. Sources quoted: field2023.md, null2021.md, review2019.md.",
+    "cited_sources": [
+      "null2021.md",
+      "review2019.md",
+      "field2023.md"
+    ],
+    "requested_sources_cited": [
+      "null2021.md",
+      "review2019.md"
+    ],
+    "requested_sources_absent": [],
+    "retrieval": {
+      "named": [
+        {
+          "filename": "null2021.md",
+          "complete": true,
+          "words": 114
+        },
+        {
+          "filename": "review2019.md",
+          "complete": true,
+          "words": 109
+        }
+      ],
+      "other": [
+        {
+          "filename": "field2023.md",
+          "heading": "Results",
+          "score": 9.83
+        },
+        {
+          "filename": "field2023.md",
+          "heading": "SYNTHETIC — Field trial of foliar silicate in drought-stressed wheat (field2023)",
+          "score": 5.65
+        },
+        {
+          "filename": "field2023.md",
+          "heading": "Methods",
+          "score": 1.46
+        },
+        {
+          "filename": "field2023.md",
+          "heading": "Limitations",
+          "score": 0.49
+        }
+      ],
+      "unresolved": [],
+      "words": 339
+    },
+    "call_key": "2b6b58d77160df8083ee423f",
+    "model": "local-rules-v1.8",
+    "captured": "2026-10-30T03:39:09+00:00"
+  },
+  {
+    "response_id": "R-Q0006-A01",
+    "qid": "Q0006",
+    "attempt": "A01",
+    "outcome": "COMPLETE",
+    "usable": true,
+    "text": "[SOURCE] \"Field evidence on foliar silicate and wheat yield is inconsistent across trials.\" (review2019.md, SYNTHETIC — Review of foliar silicate and wheat yield (review2019))\n[SOURCE] \"Some field trials report a yield increase, while others report no yield difference at the same foliar rate.\" (review2019.md, SYNTHETIC — Review of foliar silicate and wheat yield (review2019))\n[SOURCE] \"These field trials at a foliar rate of two millilitres per litre reported no yield difference between silicate and control plots.\" (null2021.md, Results)\n[SOURCE] \"Foliar silicate increased grain yield of drought-stressed wheat in field trials by eighteen percent.\" (field2023.md, Results)\n[SOURCE] \"The trial compared a foliar silicate spray with a water control in field plots at two sites.\" (field2023.md, Results)\n[SOURCE] \"Four field sites were sown with the same cultivar and sprayed twice with foliar silicate or a water control.\" (null2021.md, Results)\n\n[INFERRED] The quoted passages are what this notebook contains on the question. Each quotation is attributed above to its file and section; no finding outside these passages is asserted. Sources quoted: field2023.md, null2021.md, review2019.md.",
+    "cited_sources": [
+      "review2019.md",
+      "null2021.md",
+      "field2023.md"
+    ],
+    "requested_sources_cited": [
+      "review2019.md"
+    ],
+    "requested_sources_absent": [],
+    "retrieval": {
+      "named": [
+        {
+          "filename": "review2019.md",
+          "complete": true,
+          "words": 109
+        }
+      ],
+      "other": [
+        {
+          "filename": "null2021.md",
+          "heading": "Results",
+          "score": 5.58
+        },
+        {
+          "filename": "null2021.md",
+          "heading": "SYNTHETIC — Multi-site field trial reporting a null yield result (null2021)",
+          "score": 4.87
+        },
+        {
+          "filename": "field2023.md",
+          "heading": "Results",
+          "score": 3.76
+        },
+        {
+          "filename": "field2023.md",
+          "heading": "SYNTHETIC — Field trial of foliar silicate in drought-stressed wheat (field2023)",
+          "score": 1.28
+        },
+        {
+          "filename": "null2021.md",
+          "heading": "Methods",
+          "score": 0.55
+        },
+        {
+          "filename": "field2023.md",
+          "heading": "Methods",
+          "score": 0.53
+        }
+      ],
+      "unresolved": [],
+      "words": 306
+    },
+    "call_key": "79dd420096571c947eee473d",
+    "model": "local-rules-v1.8",
+    "captured": "2026-10-30T03:39:09+00:00"
+  },
+  {
+    "response_id": "R-Q0007-A01",
+    "qid": "Q0007",
+    "attempt": "A01",
+    "outcome": "COMPLETE",
+    "usable": true,
+    "text": "[SOURCE] \"Foliar silicate increased grain yield of drought-stressed wheat in field trials by eighteen percent.\" (field2023.md, SYNTHETIC — Field trial of foliar silicate in drought-stressed wheat (field2023))\n[SOURCE] \"The increase was measured at a foliar rate of two millilitres per litre.\" (field2023.md, SYNTHETIC — Field trial of foliar silicate in drought-stressed wheat (field2023))\n[SOURCE] \"Foliar silicate did not increase grain yield of drought-stressed wheat in field trials.\" (null2021.md, Results)\n[SOURCE] \"Some field trials report a yield increase, while others report no yield difference at the same foliar rate.\" (review2019.md, Results)\n[SOURCE] \"Four field sites were sown with the same cultivar and sprayed twice with foliar silicate or a water control.\" (null2021.md, Results)\n[SOURCE] \"The authors conclude that the field findings are inconsistent and that another field trial at a stated rate is needed.\" (review2019.md, Results)\n\n[INFERRED] The quoted passages are what this notebook contains on the question. Each quotation is attributed above to its file and section; no finding outside these passages is asserted. Sources quoted: field2023.md, null2021.md, review2019.md.",
+    "cited_sources": [
+      "field2023.md",
+      "null2021.md",
+      "review2019.md"
+    ],
+    "requested_sources_cited": [
+      "field2023.md"
+    ],
+    "requested_sources_absent": [],
+    "retrieval": {
+      "named": [
+        {
+          "filename": "field2023.md",
+          "complete": true,
+          "words": 116
+        }
+      ],
+      "other": [
+        {
+          "filename": "null2021.md",
+          "heading": "Results",
+          "score": 10.8
+        },
+        {
+          "filename": "review2019.md",
+          "heading": "Findings",
+          "score": 6.56
+        },
+        {
+          "filename": "null2021.md",
+          "heading": "SYNTHETIC — Multi-site field trial reporting a null yield result (null2021)",
+          "score": 5.81
+        },
+        {
+          "filename": "review2019.md",
+          "heading": "SYNTHETIC — Review of foliar silicate and wheat yield (review2019)",
+          "score": 4.97
+        },
+        {
+          "filename": "review2019.md",
+          "heading": "Interpretation",
+          "score": 2.77
+        },
+        {
+          "filename": "null2021.md",
+          "heading": "Methods",
+          "score": 1.52
+        }
+      ],
+      "unresolved": [],
+      "words": 307
+    },
+    "call_key": "433b5867e302342b03f81f8a",
+    "model": "local-rules-v1.8",
+    "captured": "2026-10-30T03:39:09+00:00"
+  },
+  {
+    "response_id": "R-Q0008-A01",
+    "qid": "Q0008",
+    "attempt": "A01",
+    "outcome": "COMPLETE",
+    "usable": true,
+    "text": "[SOURCE] \"These field trials at a foliar rate of two millilitres per litre reported no yield difference between silicate and control plots.\" (null2021.md, SYNTHETIC — Multi-site field trial reporting a null yield result (null2021))\n[SOURCE] \"Some field trials report a yield increase, while others report no yield difference at the same foliar rate.\" (review2019.md, SYNTHETIC — Review of foliar silicate and wheat yield (review2019))\n[SOURCE] \"Foliar silicate did not increase grain yield of drought-stressed wheat in field trials.\" (null2021.md, SYNTHETIC — Multi-site field trial reporting a null yield result (null2021))\n[SOURCE] \"This was a narrative review without a pooled effect size, and publication bias was not assessed.\" (review2019.md, SYNTHETIC — Review of foliar silicate and wheat yield (review2019))\n[SOURCE] \"The increase was measured at a foliar rate of two millilitres per litre.\" (field2023.md, Results)\n[SOURCE] \"The trial compared a foliar silicate spray with a water control in field plots at two sites.\" (field2023.md, Results)\n\n[INFERRED] The quoted passages are what this notebook contains on the question. Each quotation is attributed above to its file and section; no finding outside these passages is asserted. Sources quoted: field2023.md, null2021.md, review2019.md.",
+    "cited_sources": [
+      "null2021.md",
+      "review2019.md",
+      "field2023.md"
+    ],
+    "requested_sources_cited": [
+      "null2021.md",
+      "review2019.md"
+    ],
+    "requested_sources_absent": [],
+    "retrieval": {
+      "named": [
+        {
+          "filename": "null2021.md",
+          "complete": true,
+          "words": 114
+        },
+        {
+          "filename": "review2019.md",
+          "complete": true,
+          "words": 109
+        }
+      ],
+      "other": [
+        {
+          "filename": "field2023.md",
+          "heading": "Results",
+          "score": 7.83
+        },
+        {
+          "filename": "field2023.md",
+          "heading": "SYNTHETIC — Field trial of foliar silicate in drought-stressed wheat (field2023)",
+          "score": 2.05
+        },
+        {
+          "filename": "field2023.md",
+          "heading": "Methods",
+          "score": 1.54
+        },
+        {
+          "filename": "field2023.md",
+          "heading": "Limitations",
+          "score": 1.23
+        }
+      ],
+      "unresolved": [],
+      "words": 339
+    },
+    "call_key": "ce147fc96faf1189ad10d21a",
+    "model": "local-rules-v1.8",
+    "captured": "2026-10-30T03:39:09+00:00"
+  },
+  {
+    "response_id": "R-Q0009-A01",
+    "qid": "Q0009",
+    "attempt": "A01",
+    "outcome": "COMPLETE",
+    "usable": true,
+    "text": "[SOURCE] \"Some field trials report a yield increase, while others report no yield difference at the same foliar rate.\" (review2019.md, SYNTHETIC — Review of foliar silicate and wheat yield (review2019))\n[SOURCE] \"Field evidence on foliar silicate and wheat yield is inconsistent across trials.\" (review2019.md, SYNTHETIC — Review of foliar silicate and wheat yield (review2019))\n[SOURCE] \"Foliar silicate did not increase grain yield of drought-stressed wheat in field trials.\" (null2021.md, Results)\n[SOURCE] \"Foliar silicate increased grain yield of drought-stressed wheat in field trials by eighteen percent.\" (field2023.md, Results)\n[SOURCE] \"The trial compared a foliar silicate spray with a water control in field plots at two sites.\" (field2023.md, Results)\n[SOURCE] \"Four field sites were sown with the same cultivar and sprayed twice with foliar silicate or a water control.\" (null2021.md, Results)\n\n[INFERRED] The quoted passages are what this notebook contains on the question. Each quotation is attributed above to its file and section; no finding outside these passages is asserted. Sources quoted: field2023.md, null2021.md, review2019.md.",
+    "cited_sources": [
+      "review2019.md",
+      "null2021.md",
+      "field2023.md"
+    ],
+    "requested_sources_cited": [
+      "review2019.md"
+    ],
+    "requested_sources_absent": [],
+    "retrieval": {
+      "named": [
+        {
+          "filename": "review2019.md",
+          "complete": true,
+          "words": 109
+        }
+      ],
+      "other": [
+        {
+          "filename": "null2021.md",
+          "heading": "Results",
+          "score": 11.89
+        },
+        {
+          "filename": "field2023.md",
+          "heading": "Results",
+          "score": 10.77
+        },
+        {
+          "filename": "null2021.md",
+          "heading": "SYNTHETIC — Multi-site field trial reporting a null yield result (null2021)",
+          "score": 5.81
+        },
+        {
+          "filename": "field2023.md",
+          "heading": "SYNTHETIC — Field trial of foliar silicate in drought-stressed wheat (field2023)",
+          "score": 5.65
+        },
+        {
+          "filename": "null2021.md",
+          "heading": "Methods",
+          "score": 1.52
+        },
+        {
+          "filename": "field2023.md",
+          "heading": "Methods",
+          "score": 1.46
+        }
+      ],
+      "unresolved": [],
+      "words": 306
+    },
+    "call_key": "ab55896f85b851e9963a3fd4",
+    "model": "local-rules-v1.8",
+    "captured": "2026-10-30T03:39:09+00:00"
+  },
+  {
+    "response_id": "R-Q0010-A01",
+    "qid": "Q0010",
+    "attempt": "A01",
+    "outcome": "COMPLETE",
+    "usable": true,
+    "text": "[SOURCE] \"The increase was measured at a foliar rate of two millilitres per litre.\" (field2023.md, SYNTHETIC — Field trial of foliar silicate in drought-stressed wheat (field2023))\n[SOURCE] \"Foliar silicate increased grain yield of drought-stressed wheat in field trials by eighteen percent.\" (field2023.md, SYNTHETIC — Field trial of foliar silicate in drought-stressed wheat (field2023))\n[SOURCE] \"These field trials at a foliar rate of two millilitres per litre reported no yield difference between silicate and control plots.\" (null2021.md, Results)\n[SOURCE] \"Some field trials report a yield increase, while others report no yield difference at the same foliar rate.\" (review2019.md, Results)\n[SOURCE] \"The authors conclude that the field findings are inconsistent and that another field trial at a stated rate is needed.\" (review2019.md, Results)\n[SOURCE] \"Four field sites were sown with the same cultivar and sprayed twice with foliar silicate or a water control.\" (null2021.md, Results)\n\n[INFERRED] The quoted passages are what this notebook contains on the question. Each quotation is attributed above to its file and section; no finding outside these passages is asserted. Sources quoted: field2023.md, null2021.md, review2019.md.",
+    "cited_sources": [
+      "field2023.md",
+      "null2021.md",
+      "review2019.md"
+    ],
+    "requested_sources_cited": [
+      "field2023.md"
+    ],
+    "requested_sources_absent": [],
+    "retrieval": {
+      "named": [
+        {
+          "filename": "field2023.md",
+          "complete": true,
+          "words": 116
+        }
+      ],
+      "other": [
+        {
+          "filename": "null2021.md",
+          "heading": "Results",
+          "score": 13.39
+        },
+        {
+          "filename": "review2019.md",
+          "heading": "Findings",
+          "score": 10.4
+        },
+        {
+          "filename": "null2021.md",
+          "heading": "SYNTHETIC — Multi-site field trial reporting a null yield result (null2021)",
+          "score": 5.81
+        },
+        {
+          "filename": "review2019.md",
+          "heading": "Interpretation",
+          "score": 4.0
+        },
+        {
+          "filename": "review2019.md",
+          "heading": "SYNTHETIC — Review of foliar silicate and wheat yield (review2019)",
+          "score": 3.13
+        },
+        {
+          "filename": "null2021.md",
+          "heading": "Methods",
+          "score": 1.1
+        }
+      ],
+      "unresolved": [],
+      "words": 307
+    },
+    "call_key": "fcc5733a3d79a89f2ce2422f",
+    "model": "local-rules-v1.8",
+    "captured": "2026-10-30T03:39:09+00:00"
+  },
+  {
+    "response_id": "R-Q0011-A01",
+    "qid": "Q0011",
+    "attempt": "A01",
+    "outcome": "COMPLETE",
+    "usable": true,
+    "text": "[SOURCE] \"Foliar silicate did not increase grain yield of drought-stressed wheat in field trials.\" (null2021.md, SYNTHETIC — Multi-site field trial reporting a null yield result (null2021))\n[SOURCE] \"These field trials at a foliar rate of two millilitres per litre reported no yield difference between silicate and control plots.\" (null2021.md, SYNTHETIC — Multi-site field trial reporting a null yield result (null2021))\n[SOURCE] \"Some field trials report a yield increase, while others report no yield difference at the same foliar rate.\" (review2019.md, SYNTHETIC — Review of foliar silicate and wheat yield (review2019))\n[SOURCE] \"Field evidence on foliar silicate and wheat yield is inconsistent across trials.\" (review2019.md, SYNTHETIC — Review of foliar silicate and wheat yield (review2019))\n[SOURCE] \"Foliar silicate increased grain yield of drought-stressed wheat in field trials by eighteen percent.\" (field2023.md, Results)\n[SOURCE] \"The trial compared a foliar silicate spray with a water control in field plots at two sites.\" (field2023.md, Results)\n\n[INFERRED] The quoted passages are what this notebook contains on the question. Each quotation is attributed above to its file and section; no finding outside these passages is asserted. Sources quoted: field2023.md, null2021.md, review2019.md.",
+    "cited_sources": [
+      "null2021.md",
+      "review2019.md",
+      "field2023.md"
+    ],
+    "requested_sources_cited": [
+      "null2021.md",
+      "review2019.md"
+    ],
+    "requested_sources_absent": [],
+    "retrieval": {
+      "named": [
+        {
+          "filename": "null2021.md",
+          "complete": true,
+          "words": 114
+        },
+        {
+          "filename": "review2019.md",
+          "complete": true,
+          "words": 109
+        }
+      ],
+      "other": [
+        {
+          "filename": "field2023.md",
+          "heading": "Results",
+          "score": 9.83
+        },
+        {
+          "filename": "field2023.md",
+          "heading": "SYNTHETIC — Field trial of foliar silicate in drought-stressed wheat (field2023)",
+          "score": 5.65
+        },
+        {
+          "filename": "field2023.md",
+          "heading": "Methods",
+          "score": 1.46
+        },
+        {
+          "filename": "field2023.md",
+          "heading": "Limitations",
+          "score": 0.49
+        }
+      ],
+      "unresolved": [],
+      "words": 339
+    },
+    "call_key": "2b6b58d77160df8083ee423f",
+    "model": "local-rules-v1.8",
+    "captured": "2026-10-30T03:39:09+00:00"
+  },
+  {
+    "response_id": "R-Q0012-A01",
+    "qid": "Q0012",
+    "attempt": "A01",
+    "outcome": "COMPLETE",
+    "usable": true,
+    "text": "[SOURCE] \"Field evidence on foliar silicate and wheat yield is inconsistent across trials.\" (review2019.md, SYNTHETIC — Review of foliar silicate and wheat yield (review2019))\n[SOURCE] \"Some field trials report a yield increase, while others report no yield difference at the same foliar rate.\" (review2019.md, SYNTHETIC — Review of foliar silicate and wheat yield (review2019))\n[SOURCE] \"These field trials at a foliar rate of two millilitres per litre reported no yield difference between silicate and control plots.\" (null2021.md, Results)\n[SOURCE] \"Foliar silicate increased grain yield of drought-stressed wheat in field trials by eighteen percent.\" (field2023.md, Results)\n[SOURCE] \"The trial compared a foliar silicate spray with a water control in field plots at two sites.\" (field2023.md, Results)\n[SOURCE] \"Four field sites were sown with the same cultivar and sprayed twice with foliar silicate or a water control.\" (null2021.md, Results)\n\n[INFERRED] The quoted passages are what this notebook contains on the question. Each quotation is attributed above to its file and section; no finding outside these passages is asserted. Sources quoted: field2023.md, null2021.md, review2019.md.",
+    "cited_sources": [
+      "review2019.md",
+      "null2021.md",
+      "field2023.md"
+    ],
+    "requested_sources_cited": [
+      "review2019.md"
+    ],
+    "requested_sources_absent": [],
+    "retrieval": {
+      "named": [
+        {
+          "filename": "review2019.md",
+          "complete": true,
+          "words": 109
+        }
+      ],
+      "other": [
+        {
+          "filename": "null2021.md",
+          "heading": "Results",
+          "score": 5.58
+        },
+        {
+          "filename": "null2021.md",
+          "heading": "SYNTHETIC — Multi-site field trial reporting a null yield result (null2021)",
+          "score": 4.87
+        },
+        {
+          "filename": "field2023.md",
+          "heading": "Results",
+          "score": 3.76
+        },
+        {
+          "filename": "field2023.md",
+          "heading": "SYNTHETIC — Field trial of foliar silicate in drought-stressed wheat (field2023)",
+          "score": 1.28
+        },
+        {
+          "filename": "null2021.md",
+          "heading": "Methods",
+          "score": 0.55
+        },
+        {
+          "filename": "field2023.md",
+          "heading": "Methods",
+          "score": 0.53
+        }
+      ],
+      "unresolved": [],
+      "words": 306
+    },
+    "call_key": "79dd420096571c947eee473d",
+    "model": "local-rules-v1.8",
+    "captured": "2026-10-30T03:39:09+00:00"
+  }
+]

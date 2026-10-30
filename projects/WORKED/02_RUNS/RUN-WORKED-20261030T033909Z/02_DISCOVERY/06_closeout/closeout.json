@@ -1,0 +1,32 @@
+{
+  "status": "OPERATIONAL_LIMIT",
+  "rounds": 4,
+  "questions_issued": 12,
+  "usable_answers": 12,
+  "stop_evaluation": {
+    "gauge": 64,
+    "thresholds": {
+      "branch1_mean3": 0.334,
+      "branch2_mean4": 0.75
+    },
+    "axes": {
+      "A1": {
+        "deltas": [
+          6.0,
+          4.0,
+          2.0
+        ],
+        "branch1": false,
+        "branch2": false,
+        "mean3": 4.0,
+        "mean4": null
+      }
+    },
+    "numeric_rule_met": false,
+    "substantive_conditions_met": true,
+    "ab_covered": true,
+    "stop": false
+  },
+  "note": "max_rounds=4 reached; this is an operational stop, not a scientific completion finding",
+  "closed": "2026-10-30T03:39:10+00:00"
+}

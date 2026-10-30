@@ -1,0 +1,54 @@
+{
+  "manifest_id": "MANIFEST-39a17d3d2115",
+  "created": "2026-10-30T03:39:03+00:00",
+  "source_dir": "C:\\Users\\joshu\\Desktop\\FINAL SPECIFICATION DOCUMENTS\\DeepSeek_2 output\\projects\\DEMO\\01_CORPUS\\source-files",
+  "files": 5,
+  "bytes": 7854,
+  "sources": [
+    {
+      "source_id": "SRC-373838527000",
+      "filename": "alvarez2021.md",
+      "bytes": 1781,
+      "words": 276,
+      "sha256": "373838527000e617fe07e4443b2f144a7eb8531e2d0864faf4ac8399fea11657",
+      "title_guess": "SYNTHETIC — Foliar silicate and wheat water relations in a controlled pot trial (alvarez2021)",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-b3fab2fa63e5",
+      "filename": "brennan2022.md",
+      "bytes": 1703,
+      "words": 263,
+      "sha256": "b3fab2fa63e5bed14b5a2d10cafb743478aea99fb8f0f44035eb75eba4a77394",
+      "title_guess": "SYNTHETIC — Silicon in cereals: a narrative review of yield evidence (brennan2022)",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-f307756912e1",
+      "filename": "li2024.md",
+      "bytes": 1375,
+      "words": 201,
+      "sha256": "f307756912e1df1edda91a50a2221b4129b88bd54e0961c4c96df3cfe445ab86",
+      "title_guess": "SYNTHETIC — Silicate improves root hydraulic conductance in a model plant under osmotic stress (li2024)",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-fd17ca4e7153",
+      "filename": "okafor2019.md",
+      "bytes": 1636,
+      "words": 257,
+      "sha256": "fd17ca4e7153ba6cc1fc11c65f17dfbf231abcad56ca158c0d1bc85631dc6d49",
+      "title_guess": "SYNTHETIC — Multi-site field trial of foliar silicate in rainfed wheat (okafor2019)",
+      "flags": []
+    },
+    {
+      "source_id": "SRC-243bbf9698e0",
+      "filename": "smidt2020.md",
+      "bytes": 1359,
+      "words": 219,
+      "sha256": "243bbf9698e0dde438f57c28fe9ecb8594cfe2c281217ea87d8d0f8f886c91fc",
+      "title_guess": "SYNTHETIC — Foliar silicate, lodging and yield in irrigated wheat (smidt2020)",
+      "flags": []
+    }
+  ]
+}

@@ -1,0 +1,318 @@
+{
+  "corpus_bytes": 2109,
+  "budget_pct": 25.0,
+  "budget_bytes": 527,
+  "candidate_db_bytes": 38002,
+  "validated_db_bytes_before": 49308,
+  "validated_db_bytes_after": 39983,
+  "ready": 48,
+  "retained": 39,
+  "archived": [
+    {
+      "validation_id": "VAL-FRD-Q0012-04",
+      "vfrd_id": "FRD-Q0012-04",
+      "frd_id": "FRD-Q0012-04",
+      "qid": "Q0012",
+      "child": false,
+      "source_file": "field2023.md",
+      "citation": {
+        "filename": "field2023.md",
+        "locator": "Results"
+      },
+      "claim": "Foliar silicate increased grain yield of drought-stressed wheat in field trials by eighteen percent.",
+      "source_text": "Foliar silicate increased grain yield of drought-stressed wheat in field trials by eighteen percent.",
+      "verdict": "RIGHT",
+      "verdict_explanation": "The exact quoted sentence appears in the named source.",
+      "evidence_label": "[SOURCE]",
+      "provenance": "OWN_RESULT",
+      "readiness": "READY FOR WITNESS CONSTRUCTION",
+      "readiness_reason": "a verbatim supporting sentence was located in the named source",
+      "quote_check": {
+        "found": true,
+        "method": "exact"
+      },
+      "original_claim": "Foliar silicate increased grain yield of drought-stressed wheat in field trials by eighteen percent.",
+      "call_key": "d626d1cde59a5b4f7293c4d1",
+      "model": "local-rules-v1.8",
+      "archive_reason": "REDUNDANT_WITH FRD-Q0001-01"
+    },
+    {
+      "validation_id": "VAL-FRD-Q0012-03",
+      "vfrd_id": "FRD-Q0012-03",
+      "frd_id": "FRD-Q0012-03",
+      "qid": "Q0012",
+      "child": false,
+      "source_file": "null2021.md",
+      "citation": {
+        "filename": "null2021.md",
+        "locator": "Results"
+      },
+      "claim": "These field trials at a foliar rate of two millilitres per litre reported no yield difference between silicate and control plots.",
+      "source_text": "These field trials at a foliar rate of two millilitres per litre reported no yield difference between silicate and control plots.",
+      "verdict": "RIGHT",
+      "verdict_explanation": "The exact quoted sentence appears in the named source.",
+      "evidence_label": "[SOURCE]",
+      "provenance": "OWN_RESULT",
+      "readiness": "READY FOR WITNESS CONSTRUCTION",
+      "readiness_reason": "a verbatim supporting sentence was located in the named source",
+      "quote_check": {
+        "found": true,
+        "method": "exact"
+      },
+      "original_claim": "These field trials at a foliar rate of two millilitres per litre reported no yield difference between silicate and control plots.",
+      "call_key": "08a1d1ae7b6d7f8572de2abc",
+      "model": "local-rules-v1.8",
+      "archive_reason": "REDUNDANT_WITH FRD-Q0002-01"
+    },
+    {
+      "validation_id": "VAL-FRD-Q0012-02",
+      "vfrd_id": "FRD-Q0012-02",
+      "frd_id": "FRD-Q0012-02",
+      "qid": "Q0012",
+      "child": false,
+      "source_file": "review2019.md",
+      "citation": {
+        "filename": "review2019.md",
+        "locator": "SYNTHETIC — Review of foliar silicate and wheat yield (review2019"
+      },
+      "claim": "Some field trials report a yield increase, while others report no yield difference at the same foliar rate.",
+      "source_text": "Some field trials report a yield increase, while others report no yield difference at the same foliar rate.",
+      "verdict": "RIGHT",
+      "verdict_explanation": "The exact quoted sentence appears in the named source.",
+      "evidence_label": "[SOURCE]",
+      "provenance": "OWN_RESULT",
+      "readiness": "READY FOR WITNESS CONSTRUCTION",
+      "readiness_reason": "a verbatim supporting sentence was located in the named source",
+      "quote_check": {
+        "found": true,
+        "method": "exact"
+      },
+      "original_claim": "Some field trials report a yield increase, while others report no yield difference at the same foliar rate.",
+      "call_key": "8f7f5bdb0669d003b7a6b7f8",
+      "model": "local-rules-v1.8",
+      "archive_reason": "REDUNDANT_WITH FRD-Q0001-04"
+    },
+    {
+      "validation_id": "VAL-FRD-Q0012-01",
+      "vfrd_id": "FRD-Q0012-01",
+      "frd_id": "FRD-Q0012-01",
+      "qid": "Q0012",
+      "child": false,
+      "source_file": "review2019.md",
+      "citation": {
+        "filename": "review2019.md",
+        "locator": "SYNTHETIC — Review of foliar silicate and wheat yield (review2019"
+      },
+      "claim": "Field evidence on foliar silicate and wheat yield is inconsistent across trials.",
+      "source_text": "Field evidence on foliar silicate and wheat yield is inconsistent across trials.",
+      "verdict": "RIGHT",
+      "verdict_explanation": "The exact quoted sentence appears in the named source.",
+      "evidence_label": "[SOURCE]",
+      "provenance": "OWN_RESULT",
+      "readiness": "READY FOR WITNESS CONSTRUCTION",
+      "readiness_reason": "a verbatim supporting sentence was located in the named source",
+      "quote_check": {
+        "found": true,
+        "method": "exact"
+      },
+      "original_claim": "Field evidence on foliar silicate and wheat yield is inconsistent across trials.",
+      "call_key": "3f99ff6155e5af066c1e9829",
+      "model": "local-rules-v1.8",
+      "archive_reason": "REDUNDANT_WITH FRD-Q0003-02"
+    },
+    {
+      "validation_id": "VAL-FRD-Q0011-04",
+      "vfrd_id": "FRD-Q0011-04",
+      "frd_id": "FRD-Q0011-04",
+      "qid": "Q0011",
+      "child": false,
+      "source_file": "review2019.md",
+      "citation": {
+        "filename": "review2019.md",
+        "locator": "SYNTHETIC — Review of foliar silicate and wheat yield (review2019"
+      },
+      "claim": "Field evidence on foliar silicate and wheat yield is inconsistent across trials.",
+      "source_text": "Field evidence on foliar silicate and wheat yield is inconsistent across trials.",
+      "verdict": "RIGHT",
+      "verdict_explanation": "The exact quoted sentence appears in the named source.",
+      "evidence_label": "[SOURCE]",
+      "provenance": "OWN_RESULT",
+      "readiness": "READY FOR WITNESS CONSTRUCTION",
+      "readiness_reason": "a verbatim supporting sentence was located in the named source",
+      "quote_check": {
+        "found": true,
+        "method": "exact"
+      },
+      "original_claim": "Field evidence on foliar silicate and wheat yield is inconsistent across trials.",
+      "call_key": "3fc25f0a3013d98862595b30",
+      "model": "local-rules-v1.8",
+      "archive_reason": "REDUNDANT_WITH FRD-Q0003-02"
+    },
+    {
+      "validation_id": "VAL-FRD-Q0011-03",
+      "vfrd_id": "FRD-Q0011-03",
+      "frd_id": "FRD-Q0011-03",
+      "qid": "Q0011",
+      "child": false,
+      "source_file": "review2019.md",
+      "citation": {
+        "filename": "review2019.md",
+        "locator": "SYNTHETIC — Review of foliar silicate and wheat yield (review2019"
+      },
+      "claim": "Some field trials report a yield increase, while others report no yield difference at the same foliar rate.",
+      "source_text": "Some field trials report a yield increase, while others report no yield difference at the same foliar rate.",
+      "verdict": "RIGHT",
+      "verdict_explanation": "The exact quoted sentence appears in the named source.",
+      "evidence_label": "[SOURCE]",
+      "provenance": "OWN_RESULT",
+      "readiness": "READY FOR WITNESS CONSTRUCTION",
+      "readiness_reason": "a verbatim supporting sentence was located in the named source",
+      "quote_check": {
+        "found": true,
+        "method": "exact"
+      },
+      "original_claim": "Some field trials report a yield increase, while others report no yield difference at the same foliar rate.",
+      "call_key": "1c0685cb5247cd7b7234b3b9",
+      "model": "local-rules-v1.8",
+      "archive_reason": "REDUNDANT_WITH FRD-Q0001-04"
+    },
+    {
+      "validation_id": "VAL-FRD-Q0011-02",
+      "vfrd_id": "FRD-Q0011-02",
+      "frd_id": "FRD-Q0011-02",
+      "qid": "Q0011",
+      "child": false,
+      "source_file": "null2021.md",
+      "citation": {
+        "filename": "null2021.md",
+        "locator": "SYNTHETIC — Multi-site field trial reporting a null yield result (null2021"
+      },
+      "claim": "These field trials at a foliar rate of two millilitres per litre reported no yield difference between silicate and control plots.",
+      "source_text": "These field trials at a foliar rate of two millilitres per litre reported no yield difference between silicate and control plots.",
+      "verdict": "RIGHT",
+      "verdict_explanation": "The exact quoted sentence appears in the named source.",
+      "evidence_label": "[SOURCE]",
+      "provenance": "OWN_RESULT",
+      "readiness": "READY FOR WITNESS CONSTRUCTION",
+      "readiness_reason": "a verbatim supporting sentence was located in the named source",
+      "quote_check": {
+        "found": true,
+        "method": "exact"
+      },
+      "original_claim": "These field trials at a foliar rate of two millilitres per litre reported no yield difference between silicate and control plots.",
+      "call_key": "85eba66b5b61b5d6179f4722",
+      "model": "local-rules-v1.8",
+      "archive_reason": "REDUNDANT_WITH FRD-Q0002-01"
+    },
+    {
+      "validation_id": "VAL-FRD-Q0011-01",
+      "vfrd_id": "FRD-Q0011-01",
+      "frd_id": "FRD-Q0011-01",
+      "qid": "Q0011",
+      "child": false,
+      "source_file": "null2021.md",
+      "citation": {
+        "filename": "null2021.md",
+        "locator": "SYNTHETIC — Multi-site field trial reporting a null yield result (null2021"
+      },
+      "claim": "Foliar silicate did not increase grain yield of drought-stressed wheat in field trials.",
+      "source_text": "Foliar silicate did not increase grain yield of drought-stressed wheat in field trials.",
+      "verdict": "RIGHT",
+      "verdict_explanation": "The exact quoted sentence appears in the named source.",
+      "evidence_label": "[SOURCE]",
+      "provenance": "OWN_RESULT",
+      "readiness": "READY FOR WITNESS CONSTRUCTION",
+      "readiness_reason": "a verbatim supporting sentence was located in the named source",
+      "quote_check": {
+        "found": true,
+        "method": "exact"
+      },
+      "original_claim": "Foliar silicate did not increase grain yield of drought-stressed wheat in field trials.",
+      "call_key": "a7ca909957f801240a44b67e",
+      "model": "local-rules-v1.8",
+      "archive_reason": "REDUNDANT_WITH FRD-Q0001-03"
+    },
+    {
+      "validation_id": "VAL-FRD-Q0010-04",
+      "vfrd_id": "FRD-Q0010-04",
+      "frd_id": "FRD-Q0010-04",
+      "qid": "Q0010",
+      "child": false,
+      "source_file": "review2019.md",
+      "citation": {
+        "filename": "review2019.md",
+        "locator": "Results"
+      },
+      "claim": "Some field trials report a yield increase, while others report no yield difference at the same foliar rate.",
+      "source_text": "Some field trials report a yield increase, while others report no yield difference at the same foliar rate.",
+      "verdict": "RIGHT",
+      "verdict_explanation": "The exact quoted sentence appears in the named source.",
+      "evidence_label": "[SOURCE]",
+      "provenance": "OWN_RESULT",
+      "readiness": "READY FOR WITNESS CONSTRUCTION",
+      "readiness_reason": "a verbatim supporting sentence was located in the named source",
+      "quote_check": {
+        "found": true,
+        "method": "exact"
+      },
+      "original_claim": "Some field trials report a yield increase, while others report no yield difference at the same foliar rate.",
+      "call_key": "33a95f5475c271396d777e2d",
+      "model": "local-rules-v1.8",
+      "archive_reason": "REDUNDANT_WITH FRD-Q0001-04"
+    }
+  ],
+  "archived_questions": [
+    "Q0011",
+    "Q0012"
+  ],
+  "redundant_pairs": {
+    "FRD-Q0003-04": "FRD-Q0001-01",
+    "FRD-Q0004-02": "FRD-Q0001-01",
+    "FRD-Q0006-04": "FRD-Q0001-01",
+    "FRD-Q0007-01": "FRD-Q0001-01",
+    "FRD-Q0009-04": "FRD-Q0001-01",
+    "FRD-Q0010-02": "FRD-Q0001-01",
+    "FRD-Q0012-04": "FRD-Q0001-01",
+    "FRD-Q0004-01": "FRD-Q0001-02",
+    "FRD-Q0007-02": "FRD-Q0001-02",
+    "FRD-Q0010-01": "FRD-Q0001-02",
+    "FRD-Q0002-03": "FRD-Q0001-03",
+    "FRD-Q0003-03": "FRD-Q0001-03",
+    "FRD-Q0005-01": "FRD-Q0001-03",
+    "FRD-Q0007-03": "FRD-Q0001-03",
+    "FRD-Q0008-03": "FRD-Q0001-03",
+    "FRD-Q0009-03": "FRD-Q0001-03",
+    "FRD-Q0011-01": "FRD-Q0001-03",
+    "FRD-Q0004-03": "FRD-Q0002-01",
+    "FRD-Q0005-02": "FRD-Q0002-01",
+    "FRD-Q0006-03": "FRD-Q0002-01",
+    "FRD-Q0008-01": "FRD-Q0002-01",
+    "FRD-Q0010-03": "FRD-Q0002-01",
+    "FRD-Q0011-02": "FRD-Q0002-01",
+    "FRD-Q0012-03": "FRD-Q0002-01",
+    "FRD-Q0002-02": "FRD-Q0001-04",
+    "FRD-Q0003-01": "FRD-Q0001-04",
+    "FRD-Q0004-04": "FRD-Q0001-04",
+    "FRD-Q0005-03": "FRD-Q0001-04",
+    "FRD-Q0006-02": "FRD-Q0001-04",
+    "FRD-Q0007-04": "FRD-Q0001-04",
+    "FRD-Q0008-02": "FRD-Q0001-04",
+    "FRD-Q0009-01": "FRD-Q0001-04",
+    "FRD-Q0010-04": "FRD-Q0001-04",
+    "FRD-Q0011-03": "FRD-Q0001-04",
+    "FRD-Q0012-02": "FRD-Q0001-04",
+    "FRD-Q0008-04": "FRD-Q0002-04",
+    "FRD-Q0005-04": "FRD-Q0003-02",
+    "FRD-Q0006-01": "FRD-Q0003-02",
+    "FRD-Q0009-02": "FRD-Q0003-02",
+    "FRD-Q0011-04": "FRD-Q0003-02",
+    "FRD-Q0012-01": "FRD-Q0003-02"
+  },
+  "max_archivable": 9,
+  "ratios": {
+    "candidate_db_over_corpus": 18.019,
+    "validated_over_candidate_db": 1.298
+  },
+  "within_budget": false,
+  "time": "2026-10-30T03:39:10+00:00"
+}

@@ -1,0 +1,56 @@
+[2026-10-30T03:39:09+00:00] == stage corpus: Ingest, hash and index the corpus
+[2026-10-30T03:39:09+00:00]    corpus: {'manifest_id': 'MANIFEST-994dfb50a22d', 'files': 3, 'bytes': 2109, 'chunks': 12, 'flagged_sources': ['field2023.md', 'null2021.md', 'review2019.md']}
+[2026-10-30T03:39:09+00:00] == stage index: Ranked index (supplied or generated)
+[2026-10-30T03:39:09+00:00]    index: {'index': 'supplied', 'path': 'C:\\Users\\joshu\\Desktop\\FINAL SPECIFICATION DOCUMENTS\\DeepSeek_2 output\\projects\\WORKED\\01_FRAME\\index.md'}
+[2026-10-30T03:39:09+00:00] == stage archivist_prompt: Archivist custom prompt (supplied or generated)
+[2026-10-30T03:39:09+00:00]    archivist_prompt: {'archivist_prompt': 'supplied'}
+[2026-10-30T03:39:09+00:00] == stage frame: Parse and freeze the header, hypotheses and run configuration
+[2026-10-30T03:39:09+00:00]    frame: {'axes': 1, 'hypotheses': 3, 'decisive_tests': 0, 'gauge': 64, 'approval': {'A1': 'UNKNOWN'}}
+[2026-10-30T03:39:09+00:00] == stage units: Internal coverage units (verbatim-anchored)
+[2026-10-30T03:39:09+00:00]    units: {'units': 16, 'active': 16, 'unanchored': 0, 'by_hypothesis': {'A1-H1': {'REQUIRED_SUPPORT': 3, 'CONTEXTUAL_CONSTRAINT': 1, 'ADVERSE_TEST': 1, 'CORROBORATING_EXPECTATION': 1}, 'A1-H2': {'REQUIRED_SUPPORT': 2, 'CONTEXTUAL_CONSTRAINT': 1, 'ADVERSE_TEST': 1, 'CORROBORATING_EXPECTATION': 1}, 'A1-H3': {'REQUIRED_SUPPORT': 2, 'CONTEXTUAL_CONSTRAINT': 1, 'ADVERSE_TEST': 1, 'CORROBORATING_EXPECTATION': 1}}}
+[2026-10-30T03:39:09+00:00] == stage quest: Coordinator-led discovery quest
+[2026-10-30T03:39:09+00:00] quest R1: issued 3 questions
+[2026-10-30T03:39:09+00:00] quest R1: 3 usable answers
+[2026-10-30T03:39:09+00:00] quest R1: assessment {'A1': {'A1-H1': 10, 'A1-H2': 44, 'A1-H3': 10}} stop=False
+[2026-10-30T03:39:09+00:00] quest R2: issued 3 questions
+[2026-10-30T03:39:09+00:00] quest R2: 3 usable answers
+[2026-10-30T03:39:09+00:00] quest R2: assessment {'A1': {'A1-H1': 7, 'A1-H2': 50, 'A1-H3': 7}} stop=False
+[2026-10-30T03:39:09+00:00] quest R3: issued 3 questions
+[2026-10-30T03:39:09+00:00] quest R3: 3 usable answers
+[2026-10-30T03:39:09+00:00] quest R3: assessment {'A1': {'A1-H1': 5, 'A1-H2': 54, 'A1-H3': 5}} stop=False
+[2026-10-30T03:39:09+00:00] quest R4: issued 3 questions
+[2026-10-30T03:39:09+00:00] quest R4: 3 usable answers
+[2026-10-30T03:39:10+00:00] quest R4: assessment {'A1': {'A1-H1': 4, 'A1-H2': 56, 'A1-H3': 4}} stop=False
+[2026-10-30T03:39:10+00:00]    quest: {'status': 'OPERATIONAL_LIMIT', 'rounds': 4, 'questions_issued': 12, 'usable_answers': 12, 'stop_evaluation': {'gauge': 64, 'thresholds': {'branch1_mean3': 0.334, 'branch2_mean4': 0.75}, 'axes': {'A1': {'deltas': [6.0, 4.0, 2.0], 'branch1': False, 'branch2': False, 'mean3': 4.0, 'mean4': None}}, 'numeric_rule_met': False, 'substantive_conditions_met': True, 'ab_covered': True, 'stop': False}, 'note': 'max_rounds=4 reached; this is an operational stop, not a scientific completion finding', 'closed': '2026-10-30T03:39:10+00:00'}
+[2026-10-30T03:39:10+00:00] == stage frd_generate: Candidate FRDs (one response at a time)
+[2026-10-30T03:39:10+00:00]    frd_generate: {'responses': 12, 'candidates': 48, 'over_limit': 0}
+[2026-10-30T03:39:10+00:00] == stage frd_validate: Blind source-only validation + quote check
+[2026-10-30T03:39:10+00:00]    frd_validate: {'candidates': 48, 'validations': 48, 'ready': 48, 'quote_unverified': 0}
+[2026-10-30T03:39:10+00:00] == stage frd_retain: Retention and archival (Problems-note budgets)
+[2026-10-30T03:39:10+00:00]    frd_retain: {'ready': 48, 'retained': 39, 'archived': 9, 'within_budget': False, 'budget_pct': 25.0}
+[2026-10-30T03:39:10+00:00] == stage language: Custom dictionary and canonicalizer
+[2026-10-30T03:39:10+00:00]    language: {'mode': 'off'}
+[2026-10-30T03:39:10+00:00] == stage witnesses: Question-guided witnesses + fidelity audit
+[2026-10-30T03:39:10+00:00]    witnesses: {'applications': 39, 'released': 39, 'held': 0, 'ceiling_exceptions': 0, 'audit_pass_first_round': 39, 'time': '2026-10-30T03:39:10+00:00'}
+[2026-10-30T03:39:10+00:00] == stage transcode: Transcode witnesses and units
+[2026-10-30T03:39:10+00:00]    transcode: {'mode': 'off', 'items': 55}
+[2026-10-30T03:39:10+00:00] == stage qualify: Matcher qualification on adversarial fixtures
+[2026-10-30T03:39:10+00:00]    qualify: {'fixtures': 22, 'pass_a_correct': 22, 'pass_b_correct': 22, 'unqualified_patterns': []}
+[2026-10-30T03:39:10+00:00] == stage match: Two-pass semantic matching
+[2026-10-30T03:39:12+00:00]    match: {'units': 16, 'witnesses': 39, 'pairs_assessed': 624, 'pairs_not_assessed_prefilter': 0, 'exhaustive': True, 'agreed': 609, 'model_adjudicated': 15, 'disputed_abstain': 0, 'missing_both_passes': 0, 'one_pass_only': 0, 'complete_relations': 73, 'contradictions': 28, 'text_mode': 'off', 'review_pairs': 116, 'human_decisions': 0}
+[2026-10-30T03:39:12+00:00] == stage joint: Jointly sufficient groups and incompatibilities
+[2026-10-30T03:39:12+00:00]    joint: {'joint_proposed': 0, 'joint_approved': 0, 'incompat_pairs_checked': 200, 'incompat_approved': 49}
+[2026-10-30T03:39:12+00:00] == stage coverage: Deletion-minimal coverage sets
+[2026-10-30T03:39:12+00:00]    coverage: {'A1-H1': {'status': 'NO_COMPLETE_COVERAGE', 'sets': 0, 'search': 'NOT_RUN', 'covered_units': '2/3'}, 'A1-H2': {'status': 'COMPLETE', 'sets': 42, 'search': 'EXHAUSTIVE', 'covered_units': '2/2'}, 'A1-H3': {'status': 'NO_COMPLETE_COVERAGE', 'sets': 0, 'search': 'NOT_RUN', 'covered_units': '1/2'}}
+[2026-10-30T03:39:12+00:00] == stage crux: Frozen rival theories, T1/T2, crux candidates
+[2026-10-30T03:39:12+00:00]    crux: {'coverage_recomputed': 0, 'crux_candidates': 7, 'conflict_recorded': 6, 'diagnostic_witnesses': 7, 'tests': 68, 'unknown_tests': 0}
+[2026-10-30T03:39:12+00:00] == stage assess: Final ACH_Eval assessment of the witness registry
+[2026-10-30T03:39:12+00:00]    assess: {'allocations': {'A1': {'A1-H1': 15, 'A1-H2': 47, 'A1-H3': 2}}, 'problems': []}
+[2026-10-30T03:39:12+00:00] == stage report: Crux report and HTML audit browser
+[2026-10-30T03:39:12+00:00] stage report: ERROR TypeError: int() argument must be a string, a bytes-like object or a real number, not 'list'
+[2026-10-30T03:39:28+00:00] == stage report: Crux report and HTML audit browser
+[2026-10-30T03:39:28+00:00] stage report: ERROR TypeError: int() argument must be a string, a bytes-like object or a real number, not 'list'
+[2026-10-30T03:39:49+00:00] == stage report: Crux report and HTML audit browser
+[2026-10-30T03:39:49+00:00] stage report: ERROR TypeError: int() argument must be a string, a bytes-like object or a real number, not 'list'
+[2026-10-30T03:40:04+00:00] == stage report: Crux report and HTML audit browser
+[2026-10-30T03:40:04+00:00]    report: {'report_words': 2542, 'crux_candidates': 7}

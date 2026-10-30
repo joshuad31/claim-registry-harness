@@ -1,0 +1,89 @@
+{
+  "A1-H1": {
+    "hypothesis_id": "A1-H1",
+    "required": [
+      "A1-H1-R1",
+      "A1-H1-R2",
+      "A1-H1-R3"
+    ],
+    "constraints": [
+      "A1-H1-C1",
+      "A1-H1-C2",
+      "A1-H1-C3"
+    ],
+    "corroborating": [
+      "A1-H1-E1",
+      "A1-H1-E2",
+      "A1-H1-E3"
+    ],
+    "adverse": [
+      "A1-H1-A1",
+      "A1-H1-A2",
+      "A1-H1-A3"
+    ],
+    "options": {
+      "A1-H1-R1": [],
+      "A1-H1-R2": [],
+      "A1-H1-R3": []
+    },
+    "incompatibilities": [],
+    "dependencies": [],
+    "theory_id": "BTHEORY-5749221e6df7"
+  },
+  "A1-H2": {
+    "hypothesis_id": "A1-H2",
+    "required": [
+      "A1-H2-R1",
+      "A1-H2-R2",
+      "A1-H2-R3"
+    ],
+    "constraints": [
+      "A1-H2-C1",
+      "A1-H2-C2"
+    ],
+    "corroborating": [
+      "A1-H2-E1",
+      "A1-H2-E2",
+      "A1-H2-E3"
+    ],
+    "adverse": [
+      "A1-H2-A1"
+    ],
+    "options": {
+      "A1-H2-R1": [],
+      "A1-H2-R2": [],
+      "A1-H2-R3": []
+    },
+    "incompatibilities": [],
+    "dependencies": [],
+    "theory_id": "BTHEORY-bf1787467e48"
+  },
+  "A1-H3": {
+    "hypothesis_id": "A1-H3",
+    "required": [
+      "A1-H3-R1",
+      "A1-H3-R2",
+      "A1-H3-R3"
+    ],
+    "constraints": [
+      "A1-H3-C1",
+      "A1-H3-C2"
+    ],
+    "corroborating": [
+      "A1-H3-E1",
+      "A1-H3-E2",
+      "A1-H3-E3"
+    ],
+    "adverse": [
+      "A1-H3-A1"
+    ],
+    "options": {
+      "A1-H3-R1": [],
+      "A1-H3-R2": [],
+      "A1-H3-R3": []
+    },
+    "incompatibilities": [],
+    "dependencies": [],
+    "theory_id": "BTHEORY-175d3c88d78b"
+  }
+}

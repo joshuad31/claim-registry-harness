@@ -1,0 +1,43 @@
+{
+  "project": {
+    "name": "PTX for urination",
+    "run_prefix": "RUN-PTX"
+  },
+  "frame": {
+    "approval_note": "Axis 1 approved by Josh on 2026-09-12 (header v4.1); axis 2 is TEST-ONLY per the header and is reported as such."
+  },
+  "default_provider": "queue",
+  "providers": {
+    "queue": {
+      "type": "queue",
+      "dir": "queue",
+      "model": "claude-opus-5-5 (Claude, operating the file queue through fresh subagent contexts; 2026-10-29 session)"
+    }
+  },
+  "language": {
+    "mode": "off"
+  },
+  "queue_batch_size": {
+    "default": 15,
+    "witness_constructor": 19,
+    "witness_auditor": 19,
+    "matcher_a": 14,
+    "matcher_b": 14,
+    "match_adjudicator": 12
+  },
+  "queue_batch_max_chars": 240000,
+  "matching": {
+    "synonyms": [
+      [
+        "PTX",
+        "pentoxifylline",
+        "oxpentifylline",
+        "Trental"
+      ]
+    ],
+    "one_pass_policy": "accept"
+  },
+  "cache_fallback_providers": [
+    "queue"
+  ]
+}

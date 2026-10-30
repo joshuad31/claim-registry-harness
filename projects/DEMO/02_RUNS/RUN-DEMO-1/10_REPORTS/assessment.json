@@ -1,0 +1,29 @@
+{
+  "gauge": 64,
+  "allocations": {
+    "A1": {
+      "A1-H1": 22,
+      "A1-H2": 21,
+      "A1-H3": 21
+    }
+  },
+  "drivers": {
+    "A1-H1": [],
+    "A1-H2": [],
+    "A1-H3": []
+  },
+  "basis_confidence": {
+    "A1": "local bookkeeping only: count of witnesses sharing terminology with each hypothesis"
+  },
+  "strongest_objection": {
+    "A1": "see the evidence packets: no hypothesis reaches complete coverage"
+  },
+  "reversal_finding": {
+    "A1": "a single source reporting the missing required part"
+  },
+  "problems": [],
+  "call_key": "88a7520f5941775a81f77847",
+  "model": "local-rules-v1.8",
+  "time": "2026-10-30T03:39:07+00:00",
+  "caveat": "Uncalibrated working judgments about what this run's validated record warrants; not probabilities of truth and not validated by the crux result."
+}

@@ -1,0 +1,11 @@
+{
+  "round": 2,
+  "round_record": {
+    "packet_read": true,
+    "priorities_taken": [],
+    "priorities_set_aside": [],
+    "disagreement_with_packet": ""
+  },
+  "call_key": "8bca9599c370cad4f4ee03e4",
+  "packet_used": "R001-packet.md"
+}

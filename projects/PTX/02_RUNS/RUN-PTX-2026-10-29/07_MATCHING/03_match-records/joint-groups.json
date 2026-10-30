@@ -1,0 +1,36 @@
+[
+  {
+    "unit_id": "A1-H3-R3",
+    "witnesses": [
+      "W-FRD-SHIRAZI2015-01-Q0002",
+      "W-FRD-SHIRAZI2015-02-Q0002"
+    ],
+    "contributions": {
+      "W-FRD-SHIRAZI2015-01-Q0002": "In the rat BOO model PTX raised electrically (neurogenically) evoked detrusor-strip tension vs control: a functional effect present on one contractile measure.",
+      "W-FRD-SHIRAZI2015-02-Q0002": "In the same model, dose and 4-week timepoint, PTX did not change carbachol (direct muscarinic) evoked detrusor contractility vs control: a null on another contractile measure."
+    },
+    "trace": "The two findings share model, dose and timing yet disagree on the direction of PTX's functional detrusor effect (neurogenic-evoked contraction improved, muscarinic-evoked contraction unchanged), so the primary functional voiding outcome and its expected direction (section 1 measurement slot (c)) cannot be derived from supported premises. The conflict is visible only with both witnesses: one alone is a bare positive, the other a bare null, and neither alone leaves a slot underivable. No cross-model/human transfer is invoked; the claim is only about the unresolved state of the evidence.",
+    "proposal_key": "3ca0ddfd89efa827b92348fb",
+    "approved": false,
+    "verification": "no answer",
+    "member_contributions_verified": {},
+    "verify_key": "b75594d32ac8d273751edf45"
+  },
+  {
+    "unit_id": "A2-H3-R1",
+    "witnesses": [
+      "W-FRD-SHIRAZI2015-01-Q0002",
+      "W-FRD-SHIRAZI2015-02-Q0002"
+    ],
+    "contributions": {
+      "W-FRD-SHIRAZI2015-01-Q0002": "Same rat BOO model, 4-week PTX: improved electrically (neurogenically) evoked detrusor-strip tension vs control.",
+      "W-FRD-SHIRAZI2015-02-Q0002": "Same model, dose and 4-week timing: no improvement in carbachol (direct muscarinic) evoked detrusor contractility vs control."
+    },
+    "trace": "Within one model, dose and timepoint PTX improved the neurogenically evoked contractile response but not the direct muscarinic one, so the two findings conflict on which effect would carry any functional benefit - exactly the 'which effect carries the benefit ... conflicting' condition the unit accepts. Neither witness alone shows a conflict (one positive, one null); both are required, and the claim stays inside the shared model with no transfer asserted.",
+    "proposal_key": "707a9d80bf3ebebf61f463af",
+    "approved": false,
+    "verification": "no answer",
+    "member_contributions_verified": {},
+    "verify_key": "1eac4a2e00074838cbeeea3e"
+  }
+]

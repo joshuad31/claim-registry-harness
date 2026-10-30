@@ -1,0 +1,1922 @@
+[
+  {
+    "frd_id": "FRD-Q0001-01",
+    "qid": "Q0001",
+    "response_id": "R-Q0001-A01",
+    "origin_ref": "RESP-c74a3782",
+    "ordinal": 1,
+    "cluster": "synthetic-—-foliar-silicate-and-wheat-wa",
+    "label": "We tested whether foliar potassium silicate improves water …",
+    "source_files": [
+      "alvarez2021.md"
+    ],
+    "locator": "SYNTHETIC — Foliar silicate and wheat water relations in a controlled pot trial",
+    "claim": "We tested whether foliar potassium silicate improves water relations and yield components in drought-stressed wheat grown in a controlled greenhouse.",
+    "verification_instruction": "Find the quoted sentence in alvarez2021.md at 'SYNTHETIC — Foliar silicate and wheat water relations in a controlled pot trial' and check every number, qualifier and the direction of the finding.",
+    "evidence_label": "[SOURCE]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "the source authors",
+    "call_key": "d9adab233e231720dd4735b6"
+  },
+  {
+    "frd_id": "FRD-Q0001-02",
+    "qid": "Q0001",
+    "response_id": "R-Q0001-A01",
+    "origin_ref": "RESP-c74a3782",
+    "ordinal": 2,
+    "cluster": "synthetic-—-foliar-silicate-and-wheat-wa",
+    "label": "Foliar silicate increased relative water content of flag …",
+    "source_files": [
+      "alvarez2021.md"
+    ],
+    "locator": "SYNTHETIC — Foliar silicate and wheat water relations in a controlled pot trial",
+    "claim": "Foliar silicate increased relative water content of flag leaves by 9.4 percentage points compared with the water-sprayed control at 14 days after anthesis.",
+    "verification_instruction": "Find the quoted sentence in alvarez2021.md at 'SYNTHETIC — Foliar silicate and wheat water relations in a controlled pot trial' and check every number, qualifier and the direction of the finding.",
+    "evidence_label": "[SOURCE]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "the source authors",
+    "call_key": "d9adab233e231720dd4735b6"
+  },
+  {
+    "frd_id": "FRD-Q0001-03",
+    "qid": "Q0001",
+    "response_id": "R-Q0001-A01",
+    "origin_ref": "RESP-c74a3782",
+    "ordinal": 3,
+    "cluster": "results",
+    "label": "Foliar silicate was tested at three rainfed field …",
+    "source_files": [
+      "okafor2019.md"
+    ],
+    "locator": "Results",
+    "claim": "Foliar silicate was tested at three rainfed field sites over two seasons to determine whether it improves wheat grain yield under water-limited conditions.",
+    "verification_instruction": "Find the quoted sentence in okafor2019.md at 'Results' and check every number, qualifier and the direction of the finding.",
+    "evidence_label": "[SOURCE]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "the source authors",
+    "call_key": "d9adab233e231720dd4735b6"
+  },
+  {
+    "frd_id": "FRD-Q0001-04",
+    "qid": "Q0001",
+    "response_id": "R-Q0001-A01",
+    "origin_ref": "RESP-c74a3782",
+    "ordinal": 4,
+    "cluster": "results",
+    "label": "A two-season field experiment tested foliar silicate for …",
+    "source_files": [
+      "smidt2020.md"
+    ],
+    "locator": "Results",
+    "claim": "A two-season field experiment tested foliar silicate for lodging resistance and grain yield in irrigated wheat.",
+    "verification_instruction": "Find the quoted sentence in smidt2020.md at 'Results' and check every number, qualifier and the direction of the finding.",
+    "evidence_label": "[SOURCE]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "the source authors",
+    "call_key": "d9adab233e231720dd4735b6"
+  },
+  {
+    "frd_id": "FRD-Q0002-01",
+    "qid": "Q0002",
+    "response_id": "R-Q0002-A01",
+    "origin_ref": "RESP-339109b8",
+    "ordinal": 1,
+    "cluster": "synthetic-—-multi-site-field-trial-of-fo",
+    "label": "Possible reasons include lower effective leaf coverage in …",
+    "source_files": [
+      "okafor2019.md"
+    ],
+    "locator": "SYNTHETIC — Multi-site field trial of foliar silicate in rainfed wheat (okafor20",
+    "claim": "Possible reasons include lower effective leaf coverage in a field canopy, rain washing the foliar film, and milder drought than in pot experiments.",
+    "verification_instruction": "Find the quoted sentence in okafor2019.md at 'SYNTHETIC — Multi-site field trial of foliar silicate in rainfed wheat (okafor20' and check every number, qualifier and the direction of the finding.",
+    "evidence_label": "[SOURCE]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "the source authors",
+    "call_key": "fe63d283012d70be134c4918"
+  },
+  {
+    "frd_id": "FRD-Q0002-02",
+    "qid": "Q0002",
+    "response_id": "R-Q0002-A01",
+    "origin_ref": "RESP-339109b8",
+    "ordinal": 2,
+    "cluster": "synthetic-—-multi-site-field-trial-of-fo",
+    "label": "The trial cannot rule out a small yield …",
+    "source_files": [
+      "okafor2019.md"
+    ],
+    "locator": "SYNTHETIC — Multi-site field trial of foliar silicate in rainfed wheat (okafor20",
+    "claim": "The trial cannot rule out a small yield effect below its detection limit.",
+    "verification_instruction": "Find the quoted sentence in okafor2019.md at 'SYNTHETIC — Multi-site field trial of foliar silicate in rainfed wheat (okafor20' and check every number, qualifier and the direction of the finding.",
+    "evidence_label": "[SOURCE]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "the source authors",
+    "call_key": "fe63d283012d70be134c4918"
+  },
+  {
+    "frd_id": "FRD-Q0002-03",
+    "qid": "Q0002",
+    "response_id": "R-Q0002-A01",
+    "origin_ref": "RESP-339109b8",
+    "ordinal": 3,
+    "cluster": "synthetic-—-foliar-silicate,-lodging-and",
+    "label": "The experiment shows a structural effect of foliar …",
+    "source_files": [
+      "smidt2020.md"
+    ],
+    "locator": "SYNTHETIC — Foliar silicate, lodging and yield in irrigated wheat (smidt2020",
+    "claim": "The experiment shows a structural effect of foliar silicate on stem strength under irrigated conditions.",
+    "verification_instruction": "Find the quoted sentence in smidt2020.md at 'SYNTHETIC — Foliar silicate, lodging and yield in irrigated wheat (smidt2020' and check every number, qualifier and the direction of the finding.",
+    "evidence_label": "[SOURCE]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "the source authors",
+    "call_key": "fe63d283012d70be134c4918"
+  },
+  {
+    "frd_id": "FRD-Q0002-04",
+    "qid": "Q0002",
+    "response_id": "R-Q0002-A01",
+    "origin_ref": "RESP-339109b8",
+    "ordinal": 4,
+    "cluster": "synthetic-—-foliar-silicate,-lodging-and",
+    "label": "Grain yield was 8.12 tonnes per hectare in …",
+    "source_files": [
+      "smidt2020.md"
+    ],
+    "locator": "SYNTHETIC — Foliar silicate, lodging and yield in irrigated wheat (smidt2020",
+    "claim": "Grain yield was 8.12 tonnes per hectare in treated plots and 7.94 tonnes per hectare in controls; the difference was not significant.",
+    "verification_instruction": "Find the quoted sentence in smidt2020.md at 'SYNTHETIC — Foliar silicate, lodging and yield in irrigated wheat (smidt2020' and check every number, qualifier and the direction of the finding.",
+    "evidence_label": "[SOURCE]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "the source authors",
+    "call_key": "fe63d283012d70be134c4918"
+  },
+  {
+    "frd_id": "FRD-Q0003-01",
+    "qid": "Q0003",
+    "response_id": "R-Q0003-A01",
+    "origin_ref": "RESP-2fd3d8d5",
+    "ordinal": 1,
+    "cluster": "synthetic-—-foliar-silicate,-lodging-and",
+    "label": "A two-season field experiment tested foliar silicate for …",
+    "source_files": [
+      "smidt2020.md"
+    ],
+    "locator": "SYNTHETIC — Foliar silicate, lodging and yield in irrigated wheat (smidt2020",
+    "claim": "A two-season field experiment tested foliar silicate for lodging resistance and grain yield in irrigated wheat.",
+    "verification_instruction": "Find the quoted sentence in smidt2020.md at 'SYNTHETIC — Foliar silicate, lodging and yield in irrigated wheat (smidt2020' and check every number, qualifier and the direction of the finding.",
+    "evidence_label": "[SOURCE]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "the source authors",
+    "call_key": "26ca0527472c7a670cdb5891"
+  },
+  {
+    "frd_id": "FRD-Q0003-02",
+    "qid": "Q0003",
+    "response_id": "R-Q0003-A01",
+    "origin_ref": "RESP-2fd3d8d5",
+    "ordinal": 2,
+    "cluster": "synthetic-—-foliar-silicate,-lodging-and",
+    "label": "Grain yield was 8.12 tonnes per hectare in …",
+    "source_files": [
+      "smidt2020.md"
+    ],
+    "locator": "SYNTHETIC — Foliar silicate, lodging and yield in irrigated wheat (smidt2020",
+    "claim": "Grain yield was 8.12 tonnes per hectare in treated plots and 7.94 tonnes per hectare in controls; the difference was not significant.",
+    "verification_instruction": "Find the quoted sentence in smidt2020.md at 'SYNTHETIC — Foliar silicate, lodging and yield in irrigated wheat (smidt2020' and check every number, qualifier and the direction of the finding.",
+    "evidence_label": "[SOURCE]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "the source authors",
+    "call_key": "26ca0527472c7a670cdb5891"
+  },
+  {
+    "frd_id": "FRD-Q0003-03",
+    "qid": "Q0003",
+    "response_id": "R-Q0003-A01",
+    "origin_ref": "RESP-2fd3d8d5",
+    "ordinal": 3,
+    "cluster": "results",
+    "label": "Foliar silicate was tested at three rainfed field …",
+    "source_files": [
+      "okafor2019.md"
+    ],
+    "locator": "Results",
+    "claim": "Foliar silicate was tested at three rainfed field sites over two seasons to determine whether it improves wheat grain yield under water-limited conditions.",
+    "verification_instruction": "Find the quoted sentence in okafor2019.md at 'Results' and check every number, qualifier and the direction of the finding.",
+    "evidence_label": "[SOURCE]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "the source authors",
+    "call_key": "26ca0527472c7a670cdb5891"
+  },
+  {
+    "frd_id": "FRD-Q0003-04",
+    "qid": "Q0003",
+    "response_id": "R-Q0003-A01",
+    "origin_ref": "RESP-2fd3d8d5",
+    "ordinal": 4,
+    "cluster": "results",
+    "label": "We tested whether foliar potassium silicate improves water …",
+    "source_files": [
+      "alvarez2021.md"
+    ],
+    "locator": "Results",
+    "claim": "We tested whether foliar potassium silicate improves water relations and yield components in drought-stressed wheat grown in a controlled greenhouse.",
+    "verification_instruction": "Find the quoted sentence in alvarez2021.md at 'Results' and check every number, qualifier and the direction of the finding.",
+    "evidence_label": "[SOURCE]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "the source authors",
+    "call_key": "26ca0527472c7a670cdb5891"
+  },
+  {
+    "frd_id": "FRD-Q0004-01",
+    "qid": "Q0004",
+    "response_id": "R-Q0004-A01",
+    "origin_ref": "RESP-cf36c70b",
+    "ordinal": 1,
+    "cluster": "synthetic-—-silicon-in-cereals:-a-narrat",
+    "label": "Grain yield responses in pots are frequently positive …",
+    "source_files": [
+      "brennan2022.md"
+    ],
+    "locator": "SYNTHETIC — Silicon in cereals: a narrative review of yield evidence (brennan202",
+    "claim": "Grain yield responses in pots are frequently positive but vary with rate and timing.",
+    "verification_instruction": "Find the quoted sentence in brennan2022.md at 'SYNTHETIC — Silicon in cereals: a narrative review of yield evidence (brennan202' and check every number, qualifier and the direction of the finding.",
+    "evidence_label": "[SOURCE]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "the source authors",
+    "call_key": "44b64a955e5578edb15648a2"
+  },
+  {
+    "frd_id": "FRD-Q0004-02",
+    "qid": "Q0004",
+    "response_id": "R-Q0004-A01",
+    "origin_ref": "RESP-cf36c70b",
+    "ordinal": 2,
+    "cluster": "synthetic-—-silicate-improves-root-hydra",
+    "label": "Shoot dry weight was 12 percent higher in …",
+    "source_files": [
+      "li2024.md"
+    ],
+    "locator": "SYNTHETIC — Silicate improves root hydraulic conductance in a model plant under",
+    "claim": "Shoot dry weight was 12 percent higher in treated stressed seedlings.",
+    "verification_instruction": "Find the quoted sentence in li2024.md at 'SYNTHETIC — Silicate improves root hydraulic conductance in a model plant under' and check every number, qualifier and the direction of the finding.",
+    "evidence_label": "[SOURCE]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "the source authors",
+    "call_key": "44b64a955e5578edb15648a2"
+  },
+  {
+    "frd_id": "FRD-Q0004-03",
+    "qid": "Q0004",
+    "response_id": "R-Q0004-A01",
+    "origin_ref": "RESP-cf36c70b",
+    "ordinal": 3,
+    "cluster": "synthetic-—-silicon-in-cereals:-a-narrat",
+    "label": "This narrative review summarises reported effects of silicon …",
+    "source_files": [
+      "brennan2022.md"
+    ],
+    "locator": "SYNTHETIC — Silicon in cereals: a narrative review of yield evidence (brennan202",
+    "claim": "This narrative review summarises reported effects of silicon application on yield and drought tolerance in cereal crops, with attention to the gap between controlled and field studies.",
+    "verification_instruction": "Find the quoted sentence in brennan2022.md at 'SYNTHETIC — Silicon in cereals: a narrative review of yield evidence (brennan202' and check every number, qualifier and the direction of the finding.",
+    "evidence_label": "[SOURCE]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "the source authors",
+    "call_key": "44b64a955e5578edb15648a2"
+  },
+  {
+    "frd_id": "FRD-Q0004-04",
+    "qid": "Q0004",
+    "response_id": "R-Q0004-A01",
+    "origin_ref": "RESP-cf36c70b",
+    "ordinal": 4,
+    "cluster": "synthetic-—-silicate-improves-root-hydra",
+    "label": "It does not establish a grain yield effect …",
+    "source_files": [
+      "li2024.md"
+    ],
+    "locator": "SYNTHETIC — Silicate improves root hydraulic conductance in a model plant under",
+    "claim": "It does not establish a grain yield effect in any crop, and the model species differs from wheat in root anatomy and silicon accumulation.",
+    "verification_instruction": "Find the quoted sentence in li2024.md at 'SYNTHETIC — Silicate improves root hydraulic conductance in a model plant under' and check every number, qualifier and the direction of the finding.",
+    "evidence_label": "[SOURCE]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "the source authors",
+    "call_key": "44b64a955e5578edb15648a2"
+  },
+  {
+    "frd_id": "FRD-Q0005-01",
+    "qid": "Q0005",
+    "response_id": "R-Q0005-A01",
+    "origin_ref": "RESP-fd91201c",
+    "ordinal": 1,
+    "cluster": "synthetic-—-silicate-improves-root-hydra",
+    "label": "It does not establish a grain yield effect …",
+    "source_files": [
+      "li2024.md"
+    ],
+    "locator": "SYNTHETIC — Silicate improves root hydraulic conductance in a model plant under",
+    "claim": "It does not establish a grain yield effect in any crop, and the model species differs from wheat in root anatomy and silicon accumulation.",
+    "verification_instruction": "Find the quoted sentence in li2024.md at 'SYNTHETIC — Silicate improves root hydraulic conductance in a model plant under' and check every number, qualifier and the direction of the finding.",
+    "evidence_label": "[SOURCE]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "the source authors",
+    "call_key": "9eb823bc7a1f8cd89c449035"
+  },
+  {
+    "frd_id": "FRD-Q0005-02",
+    "qid": "Q0005",
+    "response_id": "R-Q0005-A01",
+    "origin_ref": "RESP-fd91201c",
+    "ordinal": 2,
+    "cluster": "synthetic-—-silicate-improves-root-hydra",
+    "label": "The result identifies a plausible water-transport mechanism for …",
+    "source_files": [
+      "li2024.md"
+    ],
+    "locator": "SYNTHETIC — Silicate improves root hydraulic conductance in a model plant under",
+    "claim": "The result identifies a plausible water-transport mechanism for silicate under osmotic stress.",
+    "verification_instruction": "Find the quoted sentence in li2024.md at 'SYNTHETIC — Silicate improves root hydraulic conductance in a model plant under' and check every number, qualifier and the direction of the finding.",
+    "evidence_label": "[SOURCE]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "the source authors",
+    "call_key": "9eb823bc7a1f8cd89c449035"
+  },
+  {
+    "frd_id": "FRD-Q0005-03",
+    "qid": "Q0005",
+    "response_id": "R-Q0005-A01",
+    "origin_ref": "RESP-fd91201c",
+    "ordinal": 3,
+    "cluster": "results",
+    "label": "Foliar silicate was tested at three rainfed field …",
+    "source_files": [
+      "okafor2019.md"
+    ],
+    "locator": "Results",
+    "claim": "Foliar silicate was tested at three rainfed field sites over two seasons to determine whether it improves wheat grain yield under water-limited conditions.",
+    "verification_instruction": "Find the quoted sentence in okafor2019.md at 'Results' and check every number, qualifier and the direction of the finding.",
+    "evidence_label": "[SOURCE]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "the source authors",
+    "call_key": "9eb823bc7a1f8cd89c449035"
+  },
+  {
+    "frd_id": "FRD-Q0005-04",
+    "qid": "Q0005",
+    "response_id": "R-Q0005-A01",
+    "origin_ref": "RESP-fd91201c",
+    "ordinal": 4,
+    "cluster": "results",
+    "label": "We tested whether foliar potassium silicate improves water …",
+    "source_files": [
+      "alvarez2021.md"
+    ],
+    "locator": "Results",
+    "claim": "We tested whether foliar potassium silicate improves water relations and yield components in drought-stressed wheat grown in a controlled greenhouse.",
+    "verification_instruction": "Find the quoted sentence in alvarez2021.md at 'Results' and check every number, qualifier and the direction of the finding.",
+    "evidence_label": "[SOURCE]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "the source authors",
+    "call_key": "9eb823bc7a1f8cd89c449035"
+  },
+  {
+    "frd_id": "FRD-Q0006-01",
+    "qid": "Q0006",
+    "response_id": "R-Q0006-A01",
+    "origin_ref": "RESP-67761fde",
+    "ordinal": 1,
+    "cluster": "synthetic-—-multi-site-field-trial-of-fo",
+    "label": "Possible reasons include lower effective leaf coverage in …",
+    "source_files": [
+      "okafor2019.md"
+    ],
+    "locator": "SYNTHETIC — Multi-site field trial of foliar silicate in rainfed wheat (okafor20",
+    "claim": "Possible reasons include lower effective leaf coverage in a field canopy, rain washing the foliar film, and milder drought than in pot experiments.",
+    "verification_instruction": "Find the quoted sentence in okafor2019.md at 'SYNTHETIC — Multi-site field trial of foliar silicate in rainfed wheat (okafor20' and check every number, qualifier and the direction of the finding.",
+    "evidence_label": "[SOURCE]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "the source authors",
+    "call_key": "fc9fa4111366f2dca7d9e6fc"
+  },
+  {
+    "frd_id": "FRD-Q0006-02",
+    "qid": "Q0006",
+    "response_id": "R-Q0006-A01",
+    "origin_ref": "RESP-67761fde",
+    "ordinal": 2,
+    "cluster": "synthetic-—-foliar-silicate-and-wheat-wa",
+    "label": "Because the trial used pots and a single …",
+    "source_files": [
+      "alvarez2021.md"
+    ],
+    "locator": "SYNTHETIC — Foliar silicate and wheat water relations in a controlled pot trial",
+    "claim": "Because the trial used pots and a single cultivar, the yield difference should not be extrapolated to field conditions without a field test.",
+    "verification_instruction": "Find the quoted sentence in alvarez2021.md at 'SYNTHETIC — Foliar silicate and wheat water relations in a controlled pot trial' and check every number, qualifier and the direction of the finding.",
+    "evidence_label": "[SOURCE]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "the source authors",
+    "call_key": "fc9fa4111366f2dca7d9e6fc"
+  },
+  {
+    "frd_id": "FRD-Q0006-03",
+    "qid": "Q0006",
+    "response_id": "R-Q0006-A01",
+    "origin_ref": "RESP-67761fde",
+    "ordinal": 3,
+    "cluster": "synthetic-—-foliar-silicate-and-wheat-wa",
+    "label": "We tested whether foliar potassium silicate improves water …",
+    "source_files": [
+      "alvarez2021.md"
+    ],
+    "locator": "SYNTHETIC — Foliar silicate and wheat water relations in a controlled pot trial",
+    "claim": "We tested whether foliar potassium silicate improves water relations and yield components in drought-stressed wheat grown in a controlled greenhouse.",
+    "verification_instruction": "Find the quoted sentence in alvarez2021.md at 'SYNTHETIC — Foliar silicate and wheat water relations in a controlled pot trial' and check every number, qualifier and the direction of the finding.",
+    "evidence_label": "[SOURCE]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "the source authors",
+    "call_key": "fc9fa4111366f2dca7d9e6fc"
+  },
+  {
+    "frd_id": "FRD-Q0006-04",
+    "qid": "Q0006",
+    "response_id": "R-Q0006-A01",
+    "origin_ref": "RESP-67761fde",
+    "ordinal": 4,
+    "cluster": "synthetic-—-multi-site-field-trial-of-fo",
+    "label": "Foliar silicate was tested at three rainfed field …",
+    "source_files": [
+      "okafor2019.md"
+    ],
+    "locator": "SYNTHETIC — Multi-site field trial of foliar silicate in rainfed wheat (okafor20",
+    "claim": "Foliar silicate was tested at three rainfed field sites over two seasons to determine whether it improves wheat grain yield under water-limited conditions.",
+    "verification_instruction": "Find the quoted sentence in okafor2019.md at 'SYNTHETIC — Multi-site field trial of foliar silicate in rainfed wheat (okafor20' and check every number, qualifier and the direction of the finding.",
+    "evidence_label": "[SOURCE]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "the source authors",
+    "call_key": "fc9fa4111366f2dca7d9e6fc"
+  },
+  {
+    "frd_id": "FRD-Q0007-01",
+    "qid": "Q0007",
+    "response_id": "R-Q0007-A01",
+    "origin_ref": "RESP-38ebdf8f",
+    "ordinal": 1,
+    "cluster": "synthetic-—-multi-site-field-trial-of-fo",
+    "label": "Foliar silicate was tested at three rainfed field …",
+    "source_files": [
+      "okafor2019.md"
+    ],
+    "locator": "SYNTHETIC — Multi-site field trial of foliar silicate in rainfed wheat (okafor20",
+    "claim": "Foliar silicate was tested at three rainfed field sites over two seasons to determine whether it improves wheat grain yield under water-limited conditions.",
+    "verification_instruction": "Find the quoted sentence in okafor2019.md at 'SYNTHETIC — Multi-site field trial of foliar silicate in rainfed wheat (okafor20' and check every number, qualifier and the direction of the finding.",
+    "evidence_label": "[SOURCE]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "the source authors",
+    "call_key": "d8986c51b6fa62046e29fb9c"
+  },
+  {
+    "frd_id": "FRD-Q0007-02",
+    "qid": "Q0007",
+    "response_id": "R-Q0007-A01",
+    "origin_ref": "RESP-38ebdf8f",
+    "ordinal": 2,
+    "cluster": "synthetic-—-multi-site-field-trial-of-fo",
+    "label": "Possible reasons include lower effective leaf coverage in …",
+    "source_files": [
+      "okafor2019.md"
+    ],
+    "locator": "SYNTHETIC — Multi-site field trial of foliar silicate in rainfed wheat (okafor20",
+    "claim": "Possible reasons include lower effective leaf coverage in a field canopy, rain washing the foliar film, and milder drought than in pot experiments.",
+    "verification_instruction": "Find the quoted sentence in okafor2019.md at 'SYNTHETIC — Multi-site field trial of foliar silicate in rainfed wheat (okafor20' and check every number, qualifier and the direction of the finding.",
+    "evidence_label": "[SOURCE]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "the source authors",
+    "call_key": "d8986c51b6fa62046e29fb9c"
+  },
+  {
+    "frd_id": "FRD-Q0007-03",
+    "qid": "Q0007",
+    "response_id": "R-Q0007-A01",
+    "origin_ref": "RESP-38ebdf8f",
+    "ordinal": 3,
+    "cluster": "results",
+    "label": "We tested whether foliar potassium silicate improves water …",
+    "source_files": [
+      "alvarez2021.md"
+    ],
+    "locator": "Results",
+    "claim": "We tested whether foliar potassium silicate improves water relations and yield components in drought-stressed wheat grown in a controlled greenhouse.",
+    "verification_instruction": "Find the quoted sentence in alvarez2021.md at 'Results' and check every number, qualifier and the direction of the finding.",
+    "evidence_label": "[SOURCE]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "the source authors",
+    "call_key": "d8986c51b6fa62046e29fb9c"
+  },
+  {
+    "frd_id": "FRD-Q0007-04",
+    "qid": "Q0007",
+    "response_id": "R-Q0007-A01",
+    "origin_ref": "RESP-38ebdf8f",
+    "ordinal": 4,
+    "cluster": "results",
+    "label": "A two-season field experiment tested foliar silicate for …",
+    "source_files": [
+      "smidt2020.md"
+    ],
+    "locator": "Results",
+    "claim": "A two-season field experiment tested foliar silicate for lodging resistance and grain yield in irrigated wheat.",
+    "verification_instruction": "Find the quoted sentence in smidt2020.md at 'Results' and check every number, qualifier and the direction of the finding.",
+    "evidence_label": "[SOURCE]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "the source authors",
+    "call_key": "d8986c51b6fa62046e29fb9c"
+  },
+  {
+    "frd_id": "FRD-Q0008-01",
+    "qid": "Q0008",
+    "response_id": "R-Q0008-A01",
+    "origin_ref": "RESP-778fff1e",
+    "ordinal": 1,
+    "cluster": "synthetic-—-silicon-in-cereals:-a-narrat",
+    "label": "This narrative review summarises reported effects of silicon …",
+    "source_files": [
+      "brennan2022.md"
+    ],
+    "locator": "SYNTHETIC — Silicon in cereals: a narrative review of yield evidence (brennan202",
+    "claim": "This narrative review summarises reported effects of silicon application on yield and drought tolerance in cereal crops, with attention to the gap between controlled and field studies.",
+    "verification_instruction": "Find the quoted sentence in brennan2022.md at 'SYNTHETIC — Silicon in cereals: a narrative review of yield evidence (brennan202' and check every number, qualifier and the direction of the finding.",
+    "evidence_label": "[SOURCE]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "the source authors",
+    "call_key": "5c683e584a6baf822cdcc94b"
+  },
+  {
+    "frd_id": "FRD-Q0008-02",
+    "qid": "Q0008",
+    "response_id": "R-Q0008-A01",
+    "origin_ref": "RESP-778fff1e",
+    "ordinal": 2,
+    "cluster": "synthetic-—-silicon-in-cereals:-a-narrat",
+    "label": "There is plausible mechanistic support for a drought-tolerance …",
+    "source_files": [
+      "brennan2022.md"
+    ],
+    "locator": "SYNTHETIC — Silicon in cereals: a narrative review of yield evidence (brennan202",
+    "claim": "There is plausible mechanistic support for a drought-tolerance effect in wheat, but the field yield evidence is mixed and does not establish a benefit.",
+    "verification_instruction": "Find the quoted sentence in brennan2022.md at 'SYNTHETIC — Silicon in cereals: a narrative review of yield evidence (brennan202' and check every number, qualifier and the direction of the finding.",
+    "evidence_label": "[SOURCE]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "the source authors",
+    "call_key": "5c683e584a6baf822cdcc94b"
+  },
+  {
+    "frd_id": "FRD-Q0008-03",
+    "qid": "Q0008",
+    "response_id": "R-Q0008-A01",
+    "origin_ref": "RESP-778fff1e",
+    "ordinal": 3,
+    "cluster": "synthetic-—-foliar-silicate,-lodging-and",
+    "label": "The experiment shows a structural effect of foliar …",
+    "source_files": [
+      "smidt2020.md"
+    ],
+    "locator": "SYNTHETIC — Foliar silicate, lodging and yield in irrigated wheat (smidt2020",
+    "claim": "The experiment shows a structural effect of foliar silicate on stem strength under irrigated conditions.",
+    "verification_instruction": "Find the quoted sentence in smidt2020.md at 'SYNTHETIC — Foliar silicate, lodging and yield in irrigated wheat (smidt2020' and check every number, qualifier and the direction of the finding.",
+    "evidence_label": "[SOURCE]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "the source authors",
+    "call_key": "5c683e584a6baf822cdcc94b"
+  },
+  {
+    "frd_id": "FRD-Q0008-04",
+    "qid": "Q0008",
+    "response_id": "R-Q0008-A01",
+    "origin_ref": "RESP-778fff1e",
+    "ordinal": 4,
+    "cluster": "synthetic-—-foliar-silicate,-lodging-and",
+    "label": "Grain yield was 8.12 tonnes per hectare in …",
+    "source_files": [
+      "smidt2020.md"
+    ],
+    "locator": "SYNTHETIC — Foliar silicate, lodging and yield in irrigated wheat (smidt2020",
+    "claim": "Grain yield was 8.12 tonnes per hectare in treated plots and 7.94 tonnes per hectare in controls; the difference was not significant.",
+    "verification_instruction": "Find the quoted sentence in smidt2020.md at 'SYNTHETIC — Foliar silicate, lodging and yield in irrigated wheat (smidt2020' and check every number, qualifier and the direction of the finding.",
+    "evidence_label": "[SOURCE]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "the source authors",
+    "call_key": "5c683e584a6baf822cdcc94b"
+  },
+  {
+    "frd_id": "FRD-Q0009-01",
+    "qid": "Q0009",
+    "response_id": "R-Q0009-A01",
+    "origin_ref": "RESP-8556f658",
+    "ordinal": 1,
+    "cluster": "synthetic-—-silicon-in-cereals:-a-narrat",
+    "label": "There is plausible mechanistic support for a drought-tolerance …",
+    "source_files": [
+      "brennan2022.md"
+    ],
+    "locator": "SYNTHETIC — Silicon in cereals: a narrative review of yield evidence (brennan202",
+    "claim": "There is plausible mechanistic support for a drought-tolerance effect in wheat, but the field yield evidence is mixed and does not establish a benefit.",
+    "verification_instruction": "Find the quoted sentence in brennan2022.md at 'SYNTHETIC — Silicon in cereals: a narrative review of yield evidence (brennan202' and check every number, qualifier and the direction of the finding.",
+    "evidence_label": "[SOURCE]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "the source authors",
+    "call_key": "8c3e2a21b606717bd1965181"
+  },
+  {
+    "frd_id": "FRD-Q0009-02",
+    "qid": "Q0009",
+    "response_id": "R-Q0009-A01",
+    "origin_ref": "RESP-8556f658",
+    "ordinal": 2,
+    "cluster": "synthetic-—-silicon-in-cereals:-a-narrat",
+    "label": "Among the field studies we located, results are …",
+    "source_files": [
+      "brennan2022.md"
+    ],
+    "locator": "SYNTHETIC — Silicon in cereals: a narrative review of yield evidence (brennan202",
+    "claim": "Among the field studies we located, results are inconsistent: some report no yield difference, while others report small increases that were not significant.",
+    "verification_instruction": "Find the quoted sentence in brennan2022.md at 'SYNTHETIC — Silicon in cereals: a narrative review of yield evidence (brennan202' and check every number, qualifier and the direction of the finding.",
+    "evidence_label": "[SOURCE]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "the source authors",
+    "call_key": "8c3e2a21b606717bd1965181"
+  },
+  {
+    "frd_id": "FRD-Q0009-03",
+    "qid": "Q0009",
+    "response_id": "R-Q0009-A01",
+    "origin_ref": "RESP-8556f658",
+    "ordinal": 3,
+    "cluster": "results",
+    "label": "Foliar silicate was tested at three rainfed field …",
+    "source_files": [
+      "okafor2019.md"
+    ],
+    "locator": "Results",
+    "claim": "Foliar silicate was tested at three rainfed field sites over two seasons to determine whether it improves wheat grain yield under water-limited conditions.",
+    "verification_instruction": "Find the quoted sentence in okafor2019.md at 'Results' and check every number, qualifier and the direction of the finding.",
+    "evidence_label": "[SOURCE]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "the source authors",
+    "call_key": "8c3e2a21b606717bd1965181"
+  },
+  {
+    "frd_id": "FRD-Q0009-04",
+    "qid": "Q0009",
+    "response_id": "R-Q0009-A01",
+    "origin_ref": "RESP-8556f658",
+    "ordinal": 4,
+    "cluster": "results",
+    "label": "We tested whether foliar potassium silicate improves water …",
+    "source_files": [
+      "alvarez2021.md"
+    ],
+    "locator": "Results",
+    "claim": "We tested whether foliar potassium silicate improves water relations and yield components in drought-stressed wheat grown in a controlled greenhouse.",
+    "verification_instruction": "Find the quoted sentence in alvarez2021.md at 'Results' and check every number, qualifier and the direction of the finding.",
+    "evidence_label": "[SOURCE]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "the source authors",
+    "call_key": "8c3e2a21b606717bd1965181"
+  },
+  {
+    "frd_id": "FRD-Q0010-01",
+    "qid": "Q0010",
+    "response_id": "R-Q0010-A01",
+    "origin_ref": "RESP-cd291e8f",
+    "ordinal": 1,
+    "cluster": "synthetic-—-foliar-silicate-and-wheat-wa",
+    "label": "We tested whether foliar potassium silicate improves water …",
+    "source_files": [
+      "alvarez2021.md"
+    ],
+    "locator": "SYNTHETIC — Foliar silicate and wheat water relations in a controlled pot trial",
+    "claim": "We tested whether foliar potassium silicate improves water relations and yield components in drought-stressed wheat grown in a controlled greenhouse.",
+    "verification_instruction": "Find the quoted sentence in alvarez2021.md at 'SYNTHETIC — Foliar silicate and wheat water relations in a controlled pot trial' and check every number, qualifier and the direction of the finding.",
+    "evidence_label": "[SOURCE]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "the source authors",
+    "call_key": "928359002f8d3419dd2bd2e4"
+  },
+  {
+    "frd_id": "FRD-Q0010-02",
+    "qid": "Q0010",
+    "response_id": "R-Q0010-A01",
+    "origin_ref": "RESP-cd291e8f",
+    "ordinal": 2,
+    "cluster": "synthetic-—-silicate-improves-root-hydra",
+    "label": "Shoot dry weight was 12 percent higher in …",
+    "source_files": [
+      "li2024.md"
+    ],
+    "locator": "SYNTHETIC — Silicate improves root hydraulic conductance in a model plant under",
+    "claim": "Shoot dry weight was 12 percent higher in treated stressed seedlings.",
+    "verification_instruction": "Find the quoted sentence in li2024.md at 'SYNTHETIC — Silicate improves root hydraulic conductance in a model plant under' and check every number, qualifier and the direction of the finding.",
+    "evidence_label": "[SOURCE]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "the source authors",
+    "call_key": "928359002f8d3419dd2bd2e4"
+  },
+  {
+    "frd_id": "FRD-Q0010-03",
+    "qid": "Q0010",
+    "response_id": "R-Q0010-A01",
+    "origin_ref": "RESP-cd291e8f",
+    "ordinal": 3,
+    "cluster": "synthetic-—-foliar-silicate-and-wheat-wa",
+    "label": "Foliar silicate increased relative water content of flag …",
+    "source_files": [
+      "alvarez2021.md"
+    ],
+    "locator": "SYNTHETIC — Foliar silicate and wheat water relations in a controlled pot trial",
+    "claim": "Foliar silicate increased relative water content of flag leaves by 9.4 percentage points compared with the water-sprayed control at 14 days after anthesis.",
+    "verification_instruction": "Find the quoted sentence in alvarez2021.md at 'SYNTHETIC — Foliar silicate and wheat water relations in a controlled pot trial' and check every number, qualifier and the direction of the finding.",
+    "evidence_label": "[SOURCE]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "the source authors",
+    "call_key": "928359002f8d3419dd2bd2e4"
+  },
+  {
+    "frd_id": "FRD-Q0010-04",
+    "qid": "Q0010",
+    "response_id": "R-Q0010-A01",
+    "origin_ref": "RESP-cd291e8f",
+    "ordinal": 4,
+    "cluster": "synthetic-—-silicate-improves-root-hydra",
+    "label": "It does not establish a grain yield effect …",
+    "source_files": [
+      "li2024.md"
+    ],
+    "locator": "SYNTHETIC — Silicate improves root hydraulic conductance in a model plant under",
+    "claim": "It does not establish a grain yield effect in any crop, and the model species differs from wheat in root anatomy and silicon accumulation.",
+    "verification_instruction": "Find the quoted sentence in li2024.md at 'SYNTHETIC — Silicate improves root hydraulic conductance in a model plant under' and check every number, qualifier and the direction of the finding.",
+    "evidence_label": "[SOURCE]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "the source authors",
+    "call_key": "928359002f8d3419dd2bd2e4"
+  },
+  {
+    "frd_id": "FRD-Q0011-01",
+    "qid": "Q0011",
+    "response_id": "R-Q0011-A01",
+    "origin_ref": "RESP-d927db5a",
+    "ordinal": 1,
+    "cluster": "synthetic-—-foliar-silicate-and-wheat-wa",
+    "label": "We tested whether foliar potassium silicate improves water …",
+    "source_files": [
+      "alvarez2021.md"
+    ],
+    "locator": "SYNTHETIC — Foliar silicate and wheat water relations in a controlled pot trial",
+    "claim": "We tested whether foliar potassium silicate improves water relations and yield components in drought-stressed wheat grown in a controlled greenhouse.",
+    "verification_instruction": "Find the quoted sentence in alvarez2021.md at 'SYNTHETIC — Foliar silicate and wheat water relations in a controlled pot trial' and check every number, qualifier and the direction of the finding.",
+    "evidence_label": "[SOURCE]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "the source authors",
+    "call_key": "8fa01315075b3bceddc75c24"
+  },
+  {
+    "frd_id": "FRD-Q0011-02",
+    "qid": "Q0011",
+    "response_id": "R-Q0011-A01",
+    "origin_ref": "RESP-d927db5a",
+    "ordinal": 2,
+    "cluster": "synthetic-—-foliar-silicate-and-wheat-wa",
+    "label": "Foliar silicate increased relative water content of flag …",
+    "source_files": [
+      "alvarez2021.md"
+    ],
+    "locator": "SYNTHETIC — Foliar silicate and wheat water relations in a controlled pot trial",
+    "claim": "Foliar silicate increased relative water content of flag leaves by 9.4 percentage points compared with the water-sprayed control at 14 days after anthesis.",
+    "verification_instruction": "Find the quoted sentence in alvarez2021.md at 'SYNTHETIC — Foliar silicate and wheat water relations in a controlled pot trial' and check every number, qualifier and the direction of the finding.",
+    "evidence_label": "[SOURCE]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "the source authors",
+    "call_key": "8fa01315075b3bceddc75c24"
+  },
+  {
+    "frd_id": "FRD-Q0011-03",
+    "qid": "Q0011",
+    "response_id": "R-Q0011-A01",
+    "origin_ref": "RESP-d927db5a",
+    "ordinal": 3,
+    "cluster": "results",
+    "label": "Foliar silicate was tested at three rainfed field …",
+    "source_files": [
+      "okafor2019.md"
+    ],
+    "locator": "Results",
+    "claim": "Foliar silicate was tested at three rainfed field sites over two seasons to determine whether it improves wheat grain yield under water-limited conditions.",
+    "verification_instruction": "Find the quoted sentence in okafor2019.md at 'Results' and check every number, qualifier and the direction of the finding.",
+    "evidence_label": "[SOURCE]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "the source authors",
+    "call_key": "8fa01315075b3bceddc75c24"
+  },
+  {
+    "frd_id": "FRD-Q0011-04",
+    "qid": "Q0011",
+    "response_id": "R-Q0011-A01",
+    "origin_ref": "RESP-d927db5a",
+    "ordinal": 4,
+    "cluster": "results",
+    "label": "Among the field studies we located, results are …",
+    "source_files": [
+      "brennan2022.md"
+    ],
+    "locator": "Results",
+    "claim": "Among the field studies we located, results are inconsistent: some report no yield difference, while others report small increases that were not significant.",
+    "verification_instruction": "Find the quoted sentence in brennan2022.md at 'Results' and check every number, qualifier and the direction of the finding.",
+    "evidence_label": "[SOURCE]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "the source authors",
+    "call_key": "8fa01315075b3bceddc75c24"
+  },
+  {
+    "frd_id": "FRD-Q0012-01",
+    "qid": "Q0012",
+    "response_id": "R-Q0012-A01",
+    "origin_ref": "RESP-7800d9d1",
+    "ordinal": 1,
+    "cluster": "synthetic-—-multi-site-field-trial-of-fo",
+    "label": "Possible reasons include lower effective leaf coverage in …",
+    "source_files": [
+      "okafor2019.md"
+    ],
+    "locator": "SYNTHETIC — Multi-site field trial of foliar silicate in rainfed wheat (okafor20",
+    "claim": "Possible reasons include lower effective leaf coverage in a field canopy, rain washing the foliar film, and milder drought than in pot experiments.",
+    "verification_instruction": "Find the quoted sentence in okafor2019.md at 'SYNTHETIC — Multi-site field trial of foliar silicate in rainfed wheat (okafor20' and check every number, qualifier and the direction of the finding.",
+    "evidence_label": "[SOURCE]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "the source authors",
+    "call_key": "0c920da1bcccff120c1a7fe0"
+  },
+  {
+    "frd_id": "FRD-Q0012-02",
+    "qid": "Q0012",
+    "response_id": "R-Q0012-A01",
+    "origin_ref": "RESP-7800d9d1",
+    "ordinal": 2,
+    "cluster": "synthetic-—-multi-site-field-trial-of-fo",
+    "label": "Foliar silicate was tested at three rainfed field …",
+    "source_files": [
+      "okafor2019.md"
+    ],
+    "locator": "SYNTHETIC — Multi-site field trial of foliar silicate in rainfed wheat (okafor20",
+    "claim": "Foliar silicate was tested at three rainfed field sites over two seasons to determine whether it improves wheat grain yield under water-limited conditions.",
+    "verification_instruction": "Find the quoted sentence in okafor2019.md at 'SYNTHETIC — Multi-site field trial of foliar silicate in rainfed wheat (okafor20' and check every number, qualifier and the direction of the finding.",
+    "evidence_label": "[SOURCE]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "the source authors",
+    "call_key": "0c920da1bcccff120c1a7fe0"
+  },
+  {
+    "frd_id": "FRD-Q0012-03",
+    "qid": "Q0012",
+    "response_id": "R-Q0012-A01",
+    "origin_ref": "RESP-7800d9d1",
+    "ordinal": 3,
+    "cluster": "synthetic-—-foliar-silicate,-lodging-and",
+    "label": "Grain yield was 8.12 tonnes per hectare in …",
+    "source_files": [
+      "smidt2020.md"
+    ],
+    "locator": "SYNTHETIC — Foliar silicate, lodging and yield in irrigated wheat (smidt2020",
+    "claim": "Grain yield was 8.12 tonnes per hectare in treated plots and 7.94 tonnes per hectare in controls; the difference was not significant.",
+    "verification_instruction": "Find the quoted sentence in smidt2020.md at 'SYNTHETIC — Foliar silicate, lodging and yield in irrigated wheat (smidt2020' and check every number, qualifier and the direction of the finding.",
+    "evidence_label": "[SOURCE]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "the source authors",
+    "call_key": "0c920da1bcccff120c1a7fe0"
+  },
+  {
+    "frd_id": "FRD-Q0012-04",
+    "qid": "Q0012",
+    "response_id": "R-Q0012-A01",
+    "origin_ref": "RESP-7800d9d1",
+    "ordinal": 4,
+    "cluster": "synthetic-—-foliar-silicate,-lodging-and",
+    "label": "Silicate treatment reduced lodging score from 4.1 to …",
+    "source_files": [
+      "smidt2020.md"
+    ],
+    "locator": "SYNTHETIC — Foliar silicate, lodging and yield in irrigated wheat (smidt2020",
+    "claim": "Silicate treatment reduced lodging score from 4.1 to 2.3 in the first season.",
+    "verification_instruction": "Find the quoted sentence in smidt2020.md at 'SYNTHETIC — Foliar silicate, lodging and yield in irrigated wheat (smidt2020' and check every number, qualifier and the direction of the finding.",
+    "evidence_label": "[SOURCE]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "the source authors",
+    "call_key": "0c920da1bcccff120c1a7fe0"
+  },
+  {
+    "frd_id": "FRD-Q0013-01",
+    "qid": "Q0013",
+    "response_id": "R-Q0013-A01",
+    "origin_ref": "RESP-7606dbcb",
+    "ordinal": 1,
+    "cluster": "synthetic-—-foliar-silicate,-lodging-and",
+    "label": "A two-season field experiment tested foliar silicate for …",
+    "source_files": [
+      "smidt2020.md"
+    ],
+    "locator": "SYNTHETIC — Foliar silicate, lodging and yield in irrigated wheat (smidt2020",
+    "claim": "A two-season field experiment tested foliar silicate for lodging resistance and grain yield in irrigated wheat.",
+    "verification_instruction": "Find the quoted sentence in smidt2020.md at 'SYNTHETIC — Foliar silicate, lodging and yield in irrigated wheat (smidt2020' and check every number, qualifier and the direction of the finding.",
+    "evidence_label": "[SOURCE]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "the source authors",
+    "call_key": "fc4f17f4d61e4fee18456991"
+  },
+  {
+    "frd_id": "FRD-Q0013-02",
+    "qid": "Q0013",
+    "response_id": "R-Q0013-A01",
+    "origin_ref": "RESP-7606dbcb",
+    "ordinal": 2,
+    "cluster": "synthetic-—-foliar-silicate,-lodging-and",
+    "label": "The experiment shows a structural effect of foliar …",
+    "source_files": [
+      "smidt2020.md"
+    ],
+    "locator": "SYNTHETIC — Foliar silicate, lodging and yield in irrigated wheat (smidt2020",
+    "claim": "The experiment shows a structural effect of foliar silicate on stem strength under irrigated conditions.",
+    "verification_instruction": "Find the quoted sentence in smidt2020.md at 'SYNTHETIC — Foliar silicate, lodging and yield in irrigated wheat (smidt2020' and check every number, qualifier and the direction of the finding.",
+    "evidence_label": "[SOURCE]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "the source authors",
+    "call_key": "fc4f17f4d61e4fee18456991"
+  },
+  {
+    "frd_id": "FRD-Q0013-03",
+    "qid": "Q0013",
+    "response_id": "R-Q0013-A01",
+    "origin_ref": "RESP-7606dbcb",
+    "ordinal": 3,
+    "cluster": "results",
+    "label": "Foliar silicate was tested at three rainfed field …",
+    "source_files": [
+      "okafor2019.md"
+    ],
+    "locator": "Results",
+    "claim": "Foliar silicate was tested at three rainfed field sites over two seasons to determine whether it improves wheat grain yield under water-limited conditions.",
+    "verification_instruction": "Find the quoted sentence in okafor2019.md at 'Results' and check every number, qualifier and the direction of the finding.",
+    "evidence_label": "[SOURCE]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "the source authors",
+    "call_key": "fc4f17f4d61e4fee18456991"
+  },
+  {
+    "frd_id": "FRD-Q0013-04",
+    "qid": "Q0013",
+    "response_id": "R-Q0013-A01",
+    "origin_ref": "RESP-7606dbcb",
+    "ordinal": 4,
+    "cluster": "results",
+    "label": "We tested whether foliar potassium silicate improves water …",
+    "source_files": [
+      "alvarez2021.md"
+    ],
+    "locator": "Results",
+    "claim": "We tested whether foliar potassium silicate improves water relations and yield components in drought-stressed wheat grown in a controlled greenhouse.",
+    "verification_instruction": "Find the quoted sentence in alvarez2021.md at 'Results' and check every number, qualifier and the direction of the finding.",
+    "evidence_label": "[SOURCE]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "the source authors",
+    "call_key": "fc4f17f4d61e4fee18456991"
+  },
+  {
+    "frd_id": "FRD-Q0014-01",
+    "qid": "Q0014",
+    "response_id": "R-Q0014-A01",
+    "origin_ref": "RESP-f83d396c",
+    "ordinal": 1,
+    "cluster": "synthetic-—-silicon-in-cereals:-a-narrat",
+    "label": "This narrative review summarises reported effects of silicon …",
+    "source_files": [
+      "brennan2022.md"
+    ],
+    "locator": "SYNTHETIC — Silicon in cereals: a narrative review of yield evidence (brennan202",
+    "claim": "This narrative review summarises reported effects of silicon application on yield and drought tolerance in cereal crops, with attention to the gap between controlled and field studies.",
+    "verification_instruction": "Find the quoted sentence in brennan2022.md at 'SYNTHETIC — Silicon in cereals: a narrative review of yield evidence (brennan202' and check every number, qualifier and the direction of the finding.",
+    "evidence_label": "[SOURCE]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "the source authors",
+    "call_key": "86a9456cd65a5df4c4a3e8f0"
+  },
+  {
+    "frd_id": "FRD-Q0014-02",
+    "qid": "Q0014",
+    "response_id": "R-Q0014-A01",
+    "origin_ref": "RESP-f83d396c",
+    "ordinal": 2,
+    "cluster": "synthetic-—-silicon-in-cereals:-a-narrat",
+    "label": "There is plausible mechanistic support for a drought-tolerance …",
+    "source_files": [
+      "brennan2022.md"
+    ],
+    "locator": "SYNTHETIC — Silicon in cereals: a narrative review of yield evidence (brennan202",
+    "claim": "There is plausible mechanistic support for a drought-tolerance effect in wheat, but the field yield evidence is mixed and does not establish a benefit.",
+    "verification_instruction": "Find the quoted sentence in brennan2022.md at 'SYNTHETIC — Silicon in cereals: a narrative review of yield evidence (brennan202' and check every number, qualifier and the direction of the finding.",
+    "evidence_label": "[SOURCE]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "the source authors",
+    "call_key": "86a9456cd65a5df4c4a3e8f0"
+  },
+  {
+    "frd_id": "FRD-Q0014-03",
+    "qid": "Q0014",
+    "response_id": "R-Q0014-A01",
+    "origin_ref": "RESP-f83d396c",
+    "ordinal": 3,
+    "cluster": "synthetic-—-silicate-improves-root-hydra",
+    "label": "It does not establish a grain yield effect …",
+    "source_files": [
+      "li2024.md"
+    ],
+    "locator": "SYNTHETIC — Silicate improves root hydraulic conductance in a model plant under",
+    "claim": "It does not establish a grain yield effect in any crop, and the model species differs from wheat in root anatomy and silicon accumulation.",
+    "verification_instruction": "Find the quoted sentence in li2024.md at 'SYNTHETIC — Silicate improves root hydraulic conductance in a model plant under' and check every number, qualifier and the direction of the finding.",
+    "evidence_label": "[SOURCE]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "the source authors",
+    "call_key": "86a9456cd65a5df4c4a3e8f0"
+  },
+  {
+    "frd_id": "FRD-Q0014-04",
+    "qid": "Q0014",
+    "response_id": "R-Q0014-A01",
+    "origin_ref": "RESP-f83d396c",
+    "ordinal": 4,
+    "cluster": "synthetic-—-silicate-improves-root-hydra",
+    "label": "Shoot dry weight was 12 percent higher in …",
+    "source_files": [
+      "li2024.md"
+    ],
+    "locator": "SYNTHETIC — Silicate improves root hydraulic conductance in a model plant under",
+    "claim": "Shoot dry weight was 12 percent higher in treated stressed seedlings.",
+    "verification_instruction": "Find the quoted sentence in li2024.md at 'SYNTHETIC — Silicate improves root hydraulic conductance in a model plant under' and check every number, qualifier and the direction of the finding.",
+    "evidence_label": "[SOURCE]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "the source authors",
+    "call_key": "86a9456cd65a5df4c4a3e8f0"
+  },
+  {
+    "frd_id": "FRD-Q0015-01",
+    "qid": "Q0015",
+    "response_id": "R-Q0015-A01",
+    "origin_ref": "RESP-8e042dcc",
+    "ordinal": 1,
+    "cluster": "synthetic-—-silicate-improves-root-hydra",
+    "label": "It does not establish a grain yield effect …",
+    "source_files": [
+      "li2024.md"
+    ],
+    "locator": "SYNTHETIC — Silicate improves root hydraulic conductance in a model plant under",
+    "claim": "It does not establish a grain yield effect in any crop, and the model species differs from wheat in root anatomy and silicon accumulation.",
+    "verification_instruction": "Find the quoted sentence in li2024.md at 'SYNTHETIC — Silicate improves root hydraulic conductance in a model plant under' and check every number, qualifier and the direction of the finding.",
+    "evidence_label": "[SOURCE]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "the source authors",
+    "call_key": "ebe1f3afdb8c539353d52de0"
+  },
+  {
+    "frd_id": "FRD-Q0015-02",
+    "qid": "Q0015",
+    "response_id": "R-Q0015-A01",
+    "origin_ref": "RESP-8e042dcc",
+    "ordinal": 2,
+    "cluster": "synthetic-—-silicate-improves-root-hydra",
+    "label": "The result identifies a plausible water-transport mechanism for …",
+    "source_files": [
+      "li2024.md"
+    ],
+    "locator": "SYNTHETIC — Silicate improves root hydraulic conductance in a model plant under",
+    "claim": "The result identifies a plausible water-transport mechanism for silicate under osmotic stress.",
+    "verification_instruction": "Find the quoted sentence in li2024.md at 'SYNTHETIC — Silicate improves root hydraulic conductance in a model plant under' and check every number, qualifier and the direction of the finding.",
+    "evidence_label": "[SOURCE]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "the source authors",
+    "call_key": "ebe1f3afdb8c539353d52de0"
+  },
+  {
+    "frd_id": "FRD-Q0015-03",
+    "qid": "Q0015",
+    "response_id": "R-Q0015-A01",
+    "origin_ref": "RESP-8e042dcc",
+    "ordinal": 3,
+    "cluster": "results",
+    "label": "Foliar silicate was tested at three rainfed field …",
+    "source_files": [
+      "okafor2019.md"
+    ],
+    "locator": "Results",
+    "claim": "Foliar silicate was tested at three rainfed field sites over two seasons to determine whether it improves wheat grain yield under water-limited conditions.",
+    "verification_instruction": "Find the quoted sentence in okafor2019.md at 'Results' and check every number, qualifier and the direction of the finding.",
+    "evidence_label": "[SOURCE]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "the source authors",
+    "call_key": "ebe1f3afdb8c539353d52de0"
+  },
+  {
+    "frd_id": "FRD-Q0015-04",
+    "qid": "Q0015",
+    "response_id": "R-Q0015-A01",
+    "origin_ref": "RESP-8e042dcc",
+    "ordinal": 4,
+    "cluster": "results",
+    "label": "We tested whether foliar potassium silicate improves water …",
+    "source_files": [
+      "alvarez2021.md"
+    ],
+    "locator": "Results",
+    "claim": "We tested whether foliar potassium silicate improves water relations and yield components in drought-stressed wheat grown in a controlled greenhouse.",
+    "verification_instruction": "Find the quoted sentence in alvarez2021.md at 'Results' and check every number, qualifier and the direction of the finding.",
+    "evidence_label": "[SOURCE]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "the source authors",
+    "call_key": "ebe1f3afdb8c539353d52de0"
+  },
+  {
+    "frd_id": "FRD-Q0016-01",
+    "qid": "Q0016",
+    "response_id": "R-Q0016-A01",
+    "origin_ref": "RESP-61903385",
+    "ordinal": 1,
+    "cluster": "synthetic-—-multi-site-field-trial-of-fo",
+    "label": "The absence of a yield response in the …",
+    "source_files": [
+      "okafor2019.md"
+    ],
+    "locator": "SYNTHETIC — Multi-site field trial of foliar silicate in rainfed wheat (okafor20",
+    "claim": "The absence of a yield response in the field contrasts with positive greenhouse reports.",
+    "verification_instruction": "Find the quoted sentence in okafor2019.md at 'SYNTHETIC — Multi-site field trial of foliar silicate in rainfed wheat (okafor20' and check every number, qualifier and the direction of the finding.",
+    "evidence_label": "[SOURCE]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "the source authors",
+    "call_key": "e233bcb4af0675d22e4c26d8"
+  },
+  {
+    "frd_id": "FRD-Q0016-02",
+    "qid": "Q0016",
+    "response_id": "R-Q0016-A01",
+    "origin_ref": "RESP-61903385",
+    "ordinal": 2,
+    "cluster": "synthetic-—-foliar-silicate-and-wheat-wa",
+    "label": "We tested whether foliar potassium silicate improves water …",
+    "source_files": [
+      "alvarez2021.md"
+    ],
+    "locator": "SYNTHETIC — Foliar silicate and wheat water relations in a controlled pot trial",
+    "claim": "We tested whether foliar potassium silicate improves water relations and yield components in drought-stressed wheat grown in a controlled greenhouse.",
+    "verification_instruction": "Find the quoted sentence in alvarez2021.md at 'SYNTHETIC — Foliar silicate and wheat water relations in a controlled pot trial' and check every number, qualifier and the direction of the finding.",
+    "evidence_label": "[SOURCE]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "the source authors",
+    "call_key": "e233bcb4af0675d22e4c26d8"
+  },
+  {
+    "frd_id": "FRD-Q0016-03",
+    "qid": "Q0016",
+    "response_id": "R-Q0016-A01",
+    "origin_ref": "RESP-61903385",
+    "ordinal": 3,
+    "cluster": "synthetic-—-foliar-silicate-and-wheat-wa",
+    "label": "Foliar silicate increased relative water content of flag …",
+    "source_files": [
+      "alvarez2021.md"
+    ],
+    "locator": "SYNTHETIC — Foliar silicate and wheat water relations in a controlled pot trial",
+    "claim": "Foliar silicate increased relative water content of flag leaves by 9.4 percentage points compared with the water-sprayed control at 14 days after anthesis.",
+    "verification_instruction": "Find the quoted sentence in alvarez2021.md at 'SYNTHETIC — Foliar silicate and wheat water relations in a controlled pot trial' and check every number, qualifier and the direction of the finding.",
+    "evidence_label": "[SOURCE]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "the source authors",
+    "call_key": "e233bcb4af0675d22e4c26d8"
+  },
+  {
+    "frd_id": "FRD-Q0016-04",
+    "qid": "Q0016",
+    "response_id": "R-Q0016-A01",
+    "origin_ref": "RESP-61903385",
+    "ordinal": 4,
+    "cluster": "synthetic-—-multi-site-field-trial-of-fo",
+    "label": "Stomatal conductance was higher in treated plots at …",
+    "source_files": [
+      "okafor2019.md"
+    ],
+    "locator": "SYNTHETIC — Multi-site field trial of foliar silicate in rainfed wheat (okafor20",
+    "claim": "Stomatal conductance was higher in treated plots at the driest site, by 0.04 mol per square metre per second, but the difference did not translate into a yield difference.",
+    "verification_instruction": "Find the quoted sentence in okafor2019.md at 'SYNTHETIC — Multi-site field trial of foliar silicate in rainfed wheat (okafor20' and check every number, qualifier and the direction of the finding.",
+    "evidence_label": "[SOURCE]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "the source authors",
+    "call_key": "e233bcb4af0675d22e4c26d8"
+  },
+  {
+    "frd_id": "FRD-Q0017-01",
+    "qid": "Q0017",
+    "response_id": "R-Q0017-A01",
+    "origin_ref": "RESP-f1002051",
+    "ordinal": 1,
+    "cluster": "synthetic-—-multi-site-field-trial-of-fo",
+    "label": "Foliar silicate was tested at three rainfed field …",
+    "source_files": [
+      "okafor2019.md"
+    ],
+    "locator": "SYNTHETIC — Multi-site field trial of foliar silicate in rainfed wheat (okafor20",
+    "claim": "Foliar silicate was tested at three rainfed field sites over two seasons to determine whether it improves wheat grain yield under water-limited conditions.",
+    "verification_instruction": "Find the quoted sentence in okafor2019.md at 'SYNTHETIC — Multi-site field trial of foliar silicate in rainfed wheat (okafor20' and check every number, qualifier and the direction of the finding.",
+    "evidence_label": "[SOURCE]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "the source authors",
+    "call_key": "e37f7e14cc6ca7486b9d3c40"
+  },
+  {
+    "frd_id": "FRD-Q0017-02",
+    "qid": "Q0017",
+    "response_id": "R-Q0017-A01",
+    "origin_ref": "RESP-f1002051",
+    "ordinal": 2,
+    "cluster": "synthetic-—-multi-site-field-trial-of-fo",
+    "label": "Possible reasons include lower effective leaf coverage in …",
+    "source_files": [
+      "okafor2019.md"
+    ],
+    "locator": "SYNTHETIC — Multi-site field trial of foliar silicate in rainfed wheat (okafor20",
+    "claim": "Possible reasons include lower effective leaf coverage in a field canopy, rain washing the foliar film, and milder drought than in pot experiments.",
+    "verification_instruction": "Find the quoted sentence in okafor2019.md at 'SYNTHETIC — Multi-site field trial of foliar silicate in rainfed wheat (okafor20' and check every number, qualifier and the direction of the finding.",
+    "evidence_label": "[SOURCE]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "the source authors",
+    "call_key": "e37f7e14cc6ca7486b9d3c40"
+  },
+  {
+    "frd_id": "FRD-Q0017-03",
+    "qid": "Q0017",
+    "response_id": "R-Q0017-A01",
+    "origin_ref": "RESP-f1002051",
+    "ordinal": 3,
+    "cluster": "results",
+    "label": "We tested whether foliar potassium silicate improves water …",
+    "source_files": [
+      "alvarez2021.md"
+    ],
+    "locator": "Results",
+    "claim": "We tested whether foliar potassium silicate improves water relations and yield components in drought-stressed wheat grown in a controlled greenhouse.",
+    "verification_instruction": "Find the quoted sentence in alvarez2021.md at 'Results' and check every number, qualifier and the direction of the finding.",
+    "evidence_label": "[SOURCE]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "the source authors",
+    "call_key": "e37f7e14cc6ca7486b9d3c40"
+  },
+  {
+    "frd_id": "FRD-Q0017-04",
+    "qid": "Q0017",
+    "response_id": "R-Q0017-A01",
+    "origin_ref": "RESP-f1002051",
+    "ordinal": 4,
+    "cluster": "results",
+    "label": "Among the field studies we located, results are …",
+    "source_files": [
+      "brennan2022.md"
+    ],
+    "locator": "Results",
+    "claim": "Among the field studies we located, results are inconsistent: some report no yield difference, while others report small increases that were not significant.",
+    "verification_instruction": "Find the quoted sentence in brennan2022.md at 'Results' and check every number, qualifier and the direction of the finding.",
+    "evidence_label": "[SOURCE]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "the source authors",
+    "call_key": "e37f7e14cc6ca7486b9d3c40"
+  },
+  {
+    "frd_id": "FRD-Q0018-01",
+    "qid": "Q0018",
+    "response_id": "R-Q0018-A01",
+    "origin_ref": "RESP-154b7baa",
+    "ordinal": 1,
+    "cluster": "synthetic-—-silicon-in-cereals:-a-narrat",
+    "label": "There is plausible mechanistic support for a drought-tolerance …",
+    "source_files": [
+      "brennan2022.md"
+    ],
+    "locator": "SYNTHETIC — Silicon in cereals: a narrative review of yield evidence (brennan202",
+    "claim": "There is plausible mechanistic support for a drought-tolerance effect in wheat, but the field yield evidence is mixed and does not establish a benefit.",
+    "verification_instruction": "Find the quoted sentence in brennan2022.md at 'SYNTHETIC — Silicon in cereals: a narrative review of yield evidence (brennan202' and check every number, qualifier and the direction of the finding.",
+    "evidence_label": "[SOURCE]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "the source authors",
+    "call_key": "04a30dab9315511e33bf22d3"
+  },
+  {
+    "frd_id": "FRD-Q0018-02",
+    "qid": "Q0018",
+    "response_id": "R-Q0018-A01",
+    "origin_ref": "RESP-154b7baa",
+    "ordinal": 2,
+    "cluster": "synthetic-—-silicon-in-cereals:-a-narrat",
+    "label": "This narrative review summarises reported effects of silicon …",
+    "source_files": [
+      "brennan2022.md"
+    ],
+    "locator": "SYNTHETIC — Silicon in cereals: a narrative review of yield evidence (brennan202",
+    "claim": "This narrative review summarises reported effects of silicon application on yield and drought tolerance in cereal crops, with attention to the gap between controlled and field studies.",
+    "verification_instruction": "Find the quoted sentence in brennan2022.md at 'SYNTHETIC — Silicon in cereals: a narrative review of yield evidence (brennan202' and check every number, qualifier and the direction of the finding.",
+    "evidence_label": "[SOURCE]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "the source authors",
+    "call_key": "04a30dab9315511e33bf22d3"
+  },
+  {
+    "frd_id": "FRD-Q0018-03",
+    "qid": "Q0018",
+    "response_id": "R-Q0018-A01",
+    "origin_ref": "RESP-154b7baa",
+    "ordinal": 3,
+    "cluster": "synthetic-—-foliar-silicate,-lodging-and",
+    "label": "Grain yield was 8.12 tonnes per hectare in …",
+    "source_files": [
+      "smidt2020.md"
+    ],
+    "locator": "SYNTHETIC — Foliar silicate, lodging and yield in irrigated wheat (smidt2020",
+    "claim": "Grain yield was 8.12 tonnes per hectare in treated plots and 7.94 tonnes per hectare in controls; the difference was not significant.",
+    "verification_instruction": "Find the quoted sentence in smidt2020.md at 'SYNTHETIC — Foliar silicate, lodging and yield in irrigated wheat (smidt2020' and check every number, qualifier and the direction of the finding.",
+    "evidence_label": "[SOURCE]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "the source authors",
+    "call_key": "04a30dab9315511e33bf22d3"
+  },
+  {
+    "frd_id": "FRD-Q0018-04",
+    "qid": "Q0018",
+    "response_id": "R-Q0018-A01",
+    "origin_ref": "RESP-154b7baa",
+    "ordinal": 4,
+    "cluster": "synthetic-—-foliar-silicate,-lodging-and",
+    "label": "Silicate treatment reduced lodging score from 4.1 to …",
+    "source_files": [
+      "smidt2020.md"
+    ],
+    "locator": "SYNTHETIC — Foliar silicate, lodging and yield in irrigated wheat (smidt2020",
+    "claim": "Silicate treatment reduced lodging score from 4.1 to 2.3 in the first season.",
+    "verification_instruction": "Find the quoted sentence in smidt2020.md at 'SYNTHETIC — Foliar silicate, lodging and yield in irrigated wheat (smidt2020' and check every number, qualifier and the direction of the finding.",
+    "evidence_label": "[SOURCE]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "the source authors",
+    "call_key": "04a30dab9315511e33bf22d3"
+  },
+  {
+    "frd_id": "FRD-Q0019-01",
+    "qid": "Q0019",
+    "response_id": "R-Q0019-A01",
+    "origin_ref": "RESP-53782f74",
+    "ordinal": 1,
+    "cluster": "synthetic-—-silicon-in-cereals:-a-narrat",
+    "label": "There is plausible mechanistic support for a drought-tolerance …",
+    "source_files": [
+      "brennan2022.md"
+    ],
+    "locator": "SYNTHETIC — Silicon in cereals: a narrative review of yield evidence (brennan202",
+    "claim": "There is plausible mechanistic support for a drought-tolerance effect in wheat, but the field yield evidence is mixed and does not establish a benefit.",
+    "verification_instruction": "Find the quoted sentence in brennan2022.md at 'SYNTHETIC — Silicon in cereals: a narrative review of yield evidence (brennan202' and check every number, qualifier and the direction of the finding.",
+    "evidence_label": "[SOURCE]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "the source authors",
+    "call_key": "183eb7d3314035161af06d6f"
+  },
+  {
+    "frd_id": "FRD-Q0019-02",
+    "qid": "Q0019",
+    "response_id": "R-Q0019-A01",
+    "origin_ref": "RESP-53782f74",
+    "ordinal": 2,
+    "cluster": "synthetic-—-silicon-in-cereals:-a-narrat",
+    "label": "Among the field studies we located, results are …",
+    "source_files": [
+      "brennan2022.md"
+    ],
+    "locator": "SYNTHETIC — Silicon in cereals: a narrative review of yield evidence (brennan202",
+    "claim": "Among the field studies we located, results are inconsistent: some report no yield difference, while others report small increases that were not significant.",
+    "verification_instruction": "Find the quoted sentence in brennan2022.md at 'SYNTHETIC — Silicon in cereals: a narrative review of yield evidence (brennan202' and check every number, qualifier and the direction of the finding.",
+    "evidence_label": "[SOURCE]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "the source authors",
+    "call_key": "183eb7d3314035161af06d6f"
+  },
+  {
+    "frd_id": "FRD-Q0019-03",
+    "qid": "Q0019",
+    "response_id": "R-Q0019-A01",
+    "origin_ref": "RESP-53782f74",
+    "ordinal": 3,
+    "cluster": "results",
+    "label": "Foliar silicate was tested at three rainfed field …",
+    "source_files": [
+      "okafor2019.md"
+    ],
+    "locator": "Results",
+    "claim": "Foliar silicate was tested at three rainfed field sites over two seasons to determine whether it improves wheat grain yield under water-limited conditions.",
+    "verification_instruction": "Find the quoted sentence in okafor2019.md at 'Results' and check every number, qualifier and the direction of the finding.",
+    "evidence_label": "[SOURCE]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "the source authors",
+    "call_key": "183eb7d3314035161af06d6f"
+  },
+  {
+    "frd_id": "FRD-Q0019-04",
+    "qid": "Q0019",
+    "response_id": "R-Q0019-A01",
+    "origin_ref": "RESP-53782f74",
+    "ordinal": 4,
+    "cluster": "results",
+    "label": "We tested whether foliar potassium silicate improves water …",
+    "source_files": [
+      "alvarez2021.md"
+    ],
+    "locator": "Results",
+    "claim": "We tested whether foliar potassium silicate improves water relations and yield components in drought-stressed wheat grown in a controlled greenhouse.",
+    "verification_instruction": "Find the quoted sentence in alvarez2021.md at 'Results' and check every number, qualifier and the direction of the finding.",
+    "evidence_label": "[SOURCE]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "the source authors",
+    "call_key": "183eb7d3314035161af06d6f"
+  },
+  {
+    "frd_id": "FRD-Q0020-01",
+    "qid": "Q0020",
+    "response_id": "R-Q0020-A01",
+    "origin_ref": "RESP-1ea9a0c0",
+    "ordinal": 1,
+    "cluster": "synthetic-—-foliar-silicate-and-wheat-wa",
+    "label": "Because the trial used pots and a single …",
+    "source_files": [
+      "alvarez2021.md"
+    ],
+    "locator": "SYNTHETIC — Foliar silicate and wheat water relations in a controlled pot trial",
+    "claim": "Because the trial used pots and a single cultivar, the yield difference should not be extrapolated to field conditions without a field test.",
+    "verification_instruction": "Find the quoted sentence in alvarez2021.md at 'SYNTHETIC — Foliar silicate and wheat water relations in a controlled pot trial' and check every number, qualifier and the direction of the finding.",
+    "evidence_label": "[SOURCE]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "the source authors",
+    "call_key": "40ccd551fe24109c3a25706c"
+  },
+  {
+    "frd_id": "FRD-Q0020-02",
+    "qid": "Q0020",
+    "response_id": "R-Q0020-A01",
+    "origin_ref": "RESP-1ea9a0c0",
+    "ordinal": 2,
+    "cluster": "synthetic-—-silicate-improves-root-hydra",
+    "label": "It does not establish a grain yield effect …",
+    "source_files": [
+      "li2024.md"
+    ],
+    "locator": "SYNTHETIC — Silicate improves root hydraulic conductance in a model plant under",
+    "claim": "It does not establish a grain yield effect in any crop, and the model species differs from wheat in root anatomy and silicon accumulation.",
+    "verification_instruction": "Find the quoted sentence in li2024.md at 'SYNTHETIC — Silicate improves root hydraulic conductance in a model plant under' and check every number, qualifier and the direction of the finding.",
+    "evidence_label": "[SOURCE]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "the source authors",
+    "call_key": "40ccd551fe24109c3a25706c"
+  },
+  {
+    "frd_id": "FRD-Q0020-03",
+    "qid": "Q0020",
+    "response_id": "R-Q0020-A01",
+    "origin_ref": "RESP-1ea9a0c0",
+    "ordinal": 3,
+    "cluster": "synthetic-—-silicate-improves-root-hydra",
+    "label": "Shoot dry weight was 12 percent higher in …",
+    "source_files": [
+      "li2024.md"
+    ],
+    "locator": "SYNTHETIC — Silicate improves root hydraulic conductance in a model plant under",
+    "claim": "Shoot dry weight was 12 percent higher in treated stressed seedlings.",
+    "verification_instruction": "Find the quoted sentence in li2024.md at 'SYNTHETIC — Silicate improves root hydraulic conductance in a model plant under' and check every number, qualifier and the direction of the finding.",
+    "evidence_label": "[SOURCE]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "the source authors",
+    "call_key": "40ccd551fe24109c3a25706c"
+  },
+  {
+    "frd_id": "FRD-Q0020-04",
+    "qid": "Q0020",
+    "response_id": "R-Q0020-A01",
+    "origin_ref": "RESP-1ea9a0c0",
+    "ordinal": 4,
+    "cluster": "synthetic-—-foliar-silicate-and-wheat-wa",
+    "label": "Foliar silicate increased relative water content of flag …",
+    "source_files": [
+      "alvarez2021.md"
+    ],
+    "locator": "SYNTHETIC — Foliar silicate and wheat water relations in a controlled pot trial",
+    "claim": "Foliar silicate increased relative water content of flag leaves by 9.4 percentage points compared with the water-sprayed control at 14 days after anthesis.",
+    "verification_instruction": "Find the quoted sentence in alvarez2021.md at 'SYNTHETIC — Foliar silicate and wheat water relations in a controlled pot trial' and check every number, qualifier and the direction of the finding.",
+    "evidence_label": "[SOURCE]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "the source authors",
+    "call_key": "40ccd551fe24109c3a25706c"
+  },
+  {
+    "frd_id": "FRD-Q0021-01",
+    "qid": "Q0021",
+    "response_id": "R-Q0021-A01",
+    "origin_ref": "RESP-5f82823b",
+    "ordinal": 1,
+    "cluster": "synthetic-—-foliar-silicate-and-wheat-wa",
+    "label": "We tested whether foliar potassium silicate improves water …",
+    "source_files": [
+      "alvarez2021.md"
+    ],
+    "locator": "SYNTHETIC — Foliar silicate and wheat water relations in a controlled pot trial",
+    "claim": "We tested whether foliar potassium silicate improves water relations and yield components in drought-stressed wheat grown in a controlled greenhouse.",
+    "verification_instruction": "Find the quoted sentence in alvarez2021.md at 'SYNTHETIC — Foliar silicate and wheat water relations in a controlled pot trial' and check every number, qualifier and the direction of the finding.",
+    "evidence_label": "[SOURCE]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "the source authors",
+    "call_key": "ac2a2119a5a10199ab20089b"
+  },
+  {
+    "frd_id": "FRD-Q0021-02",
+    "qid": "Q0021",
+    "response_id": "R-Q0021-A01",
+    "origin_ref": "RESP-5f82823b",
+    "ordinal": 2,
+    "cluster": "synthetic-—-foliar-silicate-and-wheat-wa",
+    "label": "Foliar silicate increased relative water content of flag …",
+    "source_files": [
+      "alvarez2021.md"
+    ],
+    "locator": "SYNTHETIC — Foliar silicate and wheat water relations in a controlled pot trial",
+    "claim": "Foliar silicate increased relative water content of flag leaves by 9.4 percentage points compared with the water-sprayed control at 14 days after anthesis.",
+    "verification_instruction": "Find the quoted sentence in alvarez2021.md at 'SYNTHETIC — Foliar silicate and wheat water relations in a controlled pot trial' and check every number, qualifier and the direction of the finding.",
+    "evidence_label": "[SOURCE]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "the source authors",
+    "call_key": "ac2a2119a5a10199ab20089b"
+  },
+  {
+    "frd_id": "FRD-Q0021-03",
+    "qid": "Q0021",
+    "response_id": "R-Q0021-A01",
+    "origin_ref": "RESP-5f82823b",
+    "ordinal": 3,
+    "cluster": "results",
+    "label": "Foliar silicate was tested at three rainfed field …",
+    "source_files": [
+      "okafor2019.md"
+    ],
+    "locator": "Results",
+    "claim": "Foliar silicate was tested at three rainfed field sites over two seasons to determine whether it improves wheat grain yield under water-limited conditions.",
+    "verification_instruction": "Find the quoted sentence in okafor2019.md at 'Results' and check every number, qualifier and the direction of the finding.",
+    "evidence_label": "[SOURCE]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "the source authors",
+    "call_key": "ac2a2119a5a10199ab20089b"
+  },
+  {
+    "frd_id": "FRD-Q0021-04",
+    "qid": "Q0021",
+    "response_id": "R-Q0021-A01",
+    "origin_ref": "RESP-5f82823b",
+    "ordinal": 4,
+    "cluster": "results",
+    "label": "A two-season field experiment tested foliar silicate for …",
+    "source_files": [
+      "smidt2020.md"
+    ],
+    "locator": "Results",
+    "claim": "A two-season field experiment tested foliar silicate for lodging resistance and grain yield in irrigated wheat.",
+    "verification_instruction": "Find the quoted sentence in smidt2020.md at 'Results' and check every number, qualifier and the direction of the finding.",
+    "evidence_label": "[SOURCE]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "the source authors",
+    "call_key": "ac2a2119a5a10199ab20089b"
+  },
+  {
+    "frd_id": "FRD-Q0022-01",
+    "qid": "Q0022",
+    "response_id": "R-Q0022-A01",
+    "origin_ref": "RESP-0cadac02",
+    "ordinal": 1,
+    "cluster": "synthetic-—-multi-site-field-trial-of-fo",
+    "label": "The absence of a yield response in the …",
+    "source_files": [
+      "okafor2019.md"
+    ],
+    "locator": "SYNTHETIC — Multi-site field trial of foliar silicate in rainfed wheat (okafor20",
+    "claim": "The absence of a yield response in the field contrasts with positive greenhouse reports.",
+    "verification_instruction": "Find the quoted sentence in okafor2019.md at 'SYNTHETIC — Multi-site field trial of foliar silicate in rainfed wheat (okafor20' and check every number, qualifier and the direction of the finding.",
+    "evidence_label": "[SOURCE]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "the source authors",
+    "call_key": "92310fb65b736177aa321ebd"
+  },
+  {
+    "frd_id": "FRD-Q0022-02",
+    "qid": "Q0022",
+    "response_id": "R-Q0022-A01",
+    "origin_ref": "RESP-0cadac02",
+    "ordinal": 2,
+    "cluster": "synthetic-—-multi-site-field-trial-of-fo",
+    "label": "Stomatal conductance was higher in treated plots at …",
+    "source_files": [
+      "okafor2019.md"
+    ],
+    "locator": "SYNTHETIC — Multi-site field trial of foliar silicate in rainfed wheat (okafor20",
+    "claim": "Stomatal conductance was higher in treated plots at the driest site, by 0.04 mol per square metre per second, but the difference did not translate into a yield difference.",
+    "verification_instruction": "Find the quoted sentence in okafor2019.md at 'SYNTHETIC — Multi-site field trial of foliar silicate in rainfed wheat (okafor20' and check every number, qualifier and the direction of the finding.",
+    "evidence_label": "[SOURCE]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "the source authors",
+    "call_key": "92310fb65b736177aa321ebd"
+  },
+  {
+    "frd_id": "FRD-Q0022-03",
+    "qid": "Q0022",
+    "response_id": "R-Q0022-A01",
+    "origin_ref": "RESP-0cadac02",
+    "ordinal": 3,
+    "cluster": "synthetic-—-foliar-silicate,-lodging-and",
+    "label": "Grain yield was 8.12 tonnes per hectare in …",
+    "source_files": [
+      "smidt2020.md"
+    ],
+    "locator": "SYNTHETIC — Foliar silicate, lodging and yield in irrigated wheat (smidt2020",
+    "claim": "Grain yield was 8.12 tonnes per hectare in treated plots and 7.94 tonnes per hectare in controls; the difference was not significant.",
+    "verification_instruction": "Find the quoted sentence in smidt2020.md at 'SYNTHETIC — Foliar silicate, lodging and yield in irrigated wheat (smidt2020' and check every number, qualifier and the direction of the finding.",
+    "evidence_label": "[SOURCE]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "the source authors",
+    "call_key": "92310fb65b736177aa321ebd"
+  },
+  {
+    "frd_id": "FRD-Q0022-04",
+    "qid": "Q0022",
+    "response_id": "R-Q0022-A01",
+    "origin_ref": "RESP-0cadac02",
+    "ordinal": 4,
+    "cluster": "synthetic-—-foliar-silicate,-lodging-and",
+    "label": "Silicate treatment reduced lodging score from 4.1 to …",
+    "source_files": [
+      "smidt2020.md"
+    ],
+    "locator": "SYNTHETIC — Foliar silicate, lodging and yield in irrigated wheat (smidt2020",
+    "claim": "Silicate treatment reduced lodging score from 4.1 to 2.3 in the first season.",
+    "verification_instruction": "Find the quoted sentence in smidt2020.md at 'SYNTHETIC — Foliar silicate, lodging and yield in irrigated wheat (smidt2020' and check every number, qualifier and the direction of the finding.",
+    "evidence_label": "[SOURCE]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "the source authors",
+    "call_key": "92310fb65b736177aa321ebd"
+  },
+  {
+    "frd_id": "FRD-Q0023-01",
+    "qid": "Q0023",
+    "response_id": "R-Q0023-A01",
+    "origin_ref": "RESP-af215d33",
+    "ordinal": 1,
+    "cluster": "synthetic-—-foliar-silicate,-lodging-and",
+    "label": "Grain yield was 8.12 tonnes per hectare in …",
+    "source_files": [
+      "smidt2020.md"
+    ],
+    "locator": "SYNTHETIC — Foliar silicate, lodging and yield in irrigated wheat (smidt2020",
+    "claim": "Grain yield was 8.12 tonnes per hectare in treated plots and 7.94 tonnes per hectare in controls; the difference was not significant.",
+    "verification_instruction": "Find the quoted sentence in smidt2020.md at 'SYNTHETIC — Foliar silicate, lodging and yield in irrigated wheat (smidt2020' and check every number, qualifier and the direction of the finding.",
+    "evidence_label": "[SOURCE]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "the source authors",
+    "call_key": "25058072e7d6c66ab3936b29"
+  },
+  {
+    "frd_id": "FRD-Q0023-02",
+    "qid": "Q0023",
+    "response_id": "R-Q0023-A01",
+    "origin_ref": "RESP-af215d33",
+    "ordinal": 2,
+    "cluster": "synthetic-—-foliar-silicate,-lodging-and",
+    "label": "A two-season field experiment tested foliar silicate for …",
+    "source_files": [
+      "smidt2020.md"
+    ],
+    "locator": "SYNTHETIC — Foliar silicate, lodging and yield in irrigated wheat (smidt2020",
+    "claim": "A two-season field experiment tested foliar silicate for lodging resistance and grain yield in irrigated wheat.",
+    "verification_instruction": "Find the quoted sentence in smidt2020.md at 'SYNTHETIC — Foliar silicate, lodging and yield in irrigated wheat (smidt2020' and check every number, qualifier and the direction of the finding.",
+    "evidence_label": "[SOURCE]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "the source authors",
+    "call_key": "25058072e7d6c66ab3936b29"
+  },
+  {
+    "frd_id": "FRD-Q0023-03",
+    "qid": "Q0023",
+    "response_id": "R-Q0023-A01",
+    "origin_ref": "RESP-af215d33",
+    "ordinal": 3,
+    "cluster": "results",
+    "label": "Foliar silicate was tested at three rainfed field …",
+    "source_files": [
+      "okafor2019.md"
+    ],
+    "locator": "Results",
+    "claim": "Foliar silicate was tested at three rainfed field sites over two seasons to determine whether it improves wheat grain yield under water-limited conditions.",
+    "verification_instruction": "Find the quoted sentence in okafor2019.md at 'Results' and check every number, qualifier and the direction of the finding.",
+    "evidence_label": "[SOURCE]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "the source authors",
+    "call_key": "25058072e7d6c66ab3936b29"
+  },
+  {
+    "frd_id": "FRD-Q0023-04",
+    "qid": "Q0023",
+    "response_id": "R-Q0023-A01",
+    "origin_ref": "RESP-af215d33",
+    "ordinal": 4,
+    "cluster": "results",
+    "label": "We tested whether foliar potassium silicate improves water …",
+    "source_files": [
+      "alvarez2021.md"
+    ],
+    "locator": "Results",
+    "claim": "We tested whether foliar potassium silicate improves water relations and yield components in drought-stressed wheat grown in a controlled greenhouse.",
+    "verification_instruction": "Find the quoted sentence in alvarez2021.md at 'Results' and check every number, qualifier and the direction of the finding.",
+    "evidence_label": "[SOURCE]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "the source authors",
+    "call_key": "25058072e7d6c66ab3936b29"
+  },
+  {
+    "frd_id": "FRD-Q0024-01",
+    "qid": "Q0024",
+    "response_id": "R-Q0024-A01",
+    "origin_ref": "RESP-934146db",
+    "ordinal": 1,
+    "cluster": "synthetic-—-silicon-in-cereals:-a-narrat",
+    "label": "There is plausible mechanistic support for a drought-tolerance …",
+    "source_files": [
+      "brennan2022.md"
+    ],
+    "locator": "SYNTHETIC — Silicon in cereals: a narrative review of yield evidence (brennan202",
+    "claim": "There is plausible mechanistic support for a drought-tolerance effect in wheat, but the field yield evidence is mixed and does not establish a benefit.",
+    "verification_instruction": "Find the quoted sentence in brennan2022.md at 'SYNTHETIC — Silicon in cereals: a narrative review of yield evidence (brennan202' and check every number, qualifier and the direction of the finding.",
+    "evidence_label": "[SOURCE]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "the source authors",
+    "call_key": "cc0ec28d1924ab6a6c56f03c"
+  },
+  {
+    "frd_id": "FRD-Q0024-02",
+    "qid": "Q0024",
+    "response_id": "R-Q0024-A01",
+    "origin_ref": "RESP-934146db",
+    "ordinal": 2,
+    "cluster": "synthetic-—-silicon-in-cereals:-a-narrat",
+    "label": "This narrative review summarises reported effects of silicon …",
+    "source_files": [
+      "brennan2022.md"
+    ],
+    "locator": "SYNTHETIC — Silicon in cereals: a narrative review of yield evidence (brennan202",
+    "claim": "This narrative review summarises reported effects of silicon application on yield and drought tolerance in cereal crops, with attention to the gap between controlled and field studies.",
+    "verification_instruction": "Find the quoted sentence in brennan2022.md at 'SYNTHETIC — Silicon in cereals: a narrative review of yield evidence (brennan202' and check every number, qualifier and the direction of the finding.",
+    "evidence_label": "[SOURCE]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "the source authors",
+    "call_key": "cc0ec28d1924ab6a6c56f03c"
+  },
+  {
+    "frd_id": "FRD-Q0024-03",
+    "qid": "Q0024",
+    "response_id": "R-Q0024-A01",
+    "origin_ref": "RESP-934146db",
+    "ordinal": 3,
+    "cluster": "synthetic-—-silicate-improves-root-hydra",
+    "label": "Shoot dry weight was 12 percent higher in …",
+    "source_files": [
+      "li2024.md"
+    ],
+    "locator": "SYNTHETIC — Silicate improves root hydraulic conductance in a model plant under",
+    "claim": "Shoot dry weight was 12 percent higher in treated stressed seedlings.",
+    "verification_instruction": "Find the quoted sentence in li2024.md at 'SYNTHETIC — Silicate improves root hydraulic conductance in a model plant under' and check every number, qualifier and the direction of the finding.",
+    "evidence_label": "[SOURCE]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "the source authors",
+    "call_key": "cc0ec28d1924ab6a6c56f03c"
+  },
+  {
+    "frd_id": "FRD-Q0024-04",
+    "qid": "Q0024",
+    "response_id": "R-Q0024-A01",
+    "origin_ref": "RESP-934146db",
+    "ordinal": 4,
+    "cluster": "synthetic-—-silicate-improves-root-hydra",
+    "label": "It does not establish a grain yield effect …",
+    "source_files": [
+      "li2024.md"
+    ],
+    "locator": "SYNTHETIC — Silicate improves root hydraulic conductance in a model plant under",
+    "claim": "It does not establish a grain yield effect in any crop, and the model species differs from wheat in root anatomy and silicon accumulation.",
+    "verification_instruction": "Find the quoted sentence in li2024.md at 'SYNTHETIC — Silicate improves root hydraulic conductance in a model plant under' and check every number, qualifier and the direction of the finding.",
+    "evidence_label": "[SOURCE]",
+    "provenance": "OWN_RESULT",
+    "status": "ordinary",
+    "speaker": "the source authors",
+    "call_key": "cc0ec28d1924ab6a6c56f03c"
+  }
+]

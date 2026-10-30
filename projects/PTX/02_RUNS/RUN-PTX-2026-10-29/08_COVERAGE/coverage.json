@@ -1,0 +1,243 @@
+{
+  "hypotheses": {
+    "A1-H1": {
+      "status": "NO_COMPLETE_COVERAGE",
+      "sets": [],
+      "uncovered_units": [
+        "A1-H1-R1",
+        "A1-H1-R2",
+        "A1-H1-R3",
+        "A1-H1-R4",
+        "A1-H1-R5",
+        "A1-H1-R6",
+        "A1-H1-R7",
+        "A1-H1-R8",
+        "A1-H1-R9"
+      ],
+      "search_status": "NOT_RUN",
+      "note": "At least one required unit has no coverage option; no complete set can be built.",
+      "hypothesis_id": "A1-H1",
+      "axis_id": "A1",
+      "required_units": [
+        "A1-H1-R1",
+        "A1-H1-R2",
+        "A1-H1-R3",
+        "A1-H1-R4",
+        "A1-H1-R5",
+        "A1-H1-R6",
+        "A1-H1-R7",
+        "A1-H1-R8",
+        "A1-H1-R9"
+      ],
+      "constraints": [
+        "A1-H1-C1",
+        "A1-H1-C2",
+        "A1-H1-C3",
+        "A1-H1-C4"
+      ],
+      "options_truncated": {},
+      "options": {
+        "A1-H1-R1": [],
+        "A1-H1-R2": [],
+        "A1-H1-R3": [],
+        "A1-H1-R4": [],
+        "A1-H1-R5": [],
+        "A1-H1-R6": [],
+        "A1-H1-R7": [],
+        "A1-H1-R8": [],
+        "A1-H1-R9": []
+      },
+      "constraint_violators": {},
+      "units_covered": 0
+    },
+    "A1-H2": {
+      "status": "NO_COMPLETE_COVERAGE",
+      "sets": [],
+      "uncovered_units": [
+        "A1-H2-R1",
+        "A1-H2-R2"
+      ],
+      "search_status": "NOT_RUN",
+      "note": "At least one required unit has no coverage option; no complete set can be built.",
+      "hypothesis_id": "A1-H2",
+      "axis_id": "A1",
+      "required_units": [
+        "A1-H2-R1",
+        "A1-H2-R2"
+      ],
+      "constraints": [
+        "A1-H2-C1",
+        "A1-H2-C2",
+        "A1-H2-C3",
+        "A1-H2-C4"
+      ],
+      "options_truncated": {},
+      "options": {
+        "A1-H2-R1": [],
+        "A1-H2-R2": []
+      },
+      "constraint_violators": {},
+      "units_covered": 0
+    },
+    "A1-H3": {
+      "status": "NO_COMPLETE_COVERAGE",
+      "sets": [],
+      "uncovered_units": [
+        "A1-H3-R2",
+        "A1-H3-R3"
+      ],
+      "search_status": "NOT_RUN",
+      "note": "At least one required unit has no coverage option; no complete set can be built.",
+      "hypothesis_id": "A1-H3",
+      "axis_id": "A1",
+      "required_units": [
+        "A1-H3-R1",
+        "A1-H3-R2",
+        "A1-H3-R3"
+      ],
+      "constraints": [
+        "A1-H3-C1",
+        "A1-H3-C2"
+      ],
+      "options_truncated": {},
+      "options": {
+        "A1-H3-R1": [
+          {
+            "option_id": "OPT-bc09f6616ac1",
+            "witnesses": [
+              "W-FRD-Q0001-01-Q0001"
+            ],
+            "relation": "WITNESS_ENTAILS_UNIT",
+            "joint": false
+          }
+        ],
+        "A1-H3-R2": [],
+        "A1-H3-R3": []
+      },
+      "constraint_violators": {},
+      "units_covered": 1
+    },
+    "A2-H1": {
+      "status": "NO_COMPLETE_COVERAGE",
+      "sets": [],
+      "uncovered_units": [
+        "A2-H1-R1",
+        "A2-H1-R2",
+        "A2-H1-R3",
+        "A2-H1-R4"
+      ],
+      "search_status": "NOT_RUN",
+      "note": "At least one required unit has no coverage option; no complete set can be built.",
+      "hypothesis_id": "A2-H1",
+      "axis_id": "A2",
+      "required_units": [
+        "A2-H1-R1",
+        "A2-H1-R2",
+        "A2-H1-R3",
+        "A2-H1-R4"
+      ],
+      "constraints": [
+        "A2-H1-C1",
+        "A2-H1-C2"
+      ],
+      "options_truncated": {},
+      "options": {
+        "A2-H1-R1": [],
+        "A2-H1-R2": [],
+        "A2-H1-R3": [],
+        "A2-H1-R4": []
+      },
+      "constraint_violators": {},
+      "units_covered": 0
+    },
+    "A2-H2": {
+      "status": "NO_COMPLETE_COVERAGE",
+      "sets": [],
+      "uncovered_units": [
+        "A2-H2-R1",
+        "A2-H2-R2",
+        "A2-H2-R3",
+        "A2-H2-R4"
+      ],
+      "search_status": "NOT_RUN",
+      "note": "At least one required unit has no coverage option; no complete set can be built.",
+      "hypothesis_id": "A2-H2",
+      "axis_id": "A2",
+      "required_units": [
+        "A2-H2-R1",
+        "A2-H2-R2",
+        "A2-H2-R3",
+        "A2-H2-R4"
+      ],
+      "constraints": [
+        "A2-H2-C1",
+        "A2-H2-C2",
+        "A2-H2-C3"
+      ],
+      "options_truncated": {},
+      "options": {
+        "A2-H2-R1": [],
+        "A2-H2-R2": [],
+        "A2-H2-R3": [],
+        "A2-H2-R4": []
+      },
+      "constraint_violators": {
+        "W-FRD-Q0019-01-Q0019": [
+          "A2-H2-C2"
+        ]
+      },
+      "units_covered": 0
+    },
+    "A2-H3": {
+      "status": "NO_COMPLETE_COVERAGE",
+      "sets": [],
+      "uncovered_units": [
+        "A2-H3-R1"
+      ],
+      "search_status": "NOT_RUN",
+      "note": "At least one required unit has no coverage option; no complete set can be built.",
+      "hypothesis_id": "A2-H3",
+      "axis_id": "A2",
+      "required_units": [
+        "A2-H3-R1",
+        "A2-H3-R2"
+      ],
+      "constraints": [
+        "A2-H3-C1"
+      ],
+      "options_truncated": {},
+      "options": {
+        "A2-H3-R1": [],
+        "A2-H3-R2": [
+          {
+            "option_id": "OPT-833683e27462",
+            "witnesses": [
+              "W-FRD-Q0001-01-Q0001"
+            ],
+            "relation": "WITNESS_ENTAILS_UNIT",
+            "joint": false
+          },
+          {
+            "option_id": "OPT-2bbf38c8d0a6",
+            "witnesses": [
+              "W-FRD-Q0001-02-r3-Q0001"
+            ],
+            "relation": "WITNESS_ENTAILS_UNIT",
+            "joint": false
+          },
+          {
+            "option_id": "OPT-ba7f4ffdf93d",
+            "witnesses": [
+              "W-FRD-Q0011-01-Q0011"
+            ],
+            "relation": "WITNESS_ENTAILS_UNIT",
+            "joint": false
+          }
+        ]
+      },
+      "constraint_violators": {},
+      "units_covered": 1
+    }
+  },
+  "time": "2026-10-29T19:09:04+00:00"
+}

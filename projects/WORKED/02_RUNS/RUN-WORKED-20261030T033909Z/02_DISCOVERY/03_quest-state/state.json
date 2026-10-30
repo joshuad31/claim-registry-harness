@@ -1,0 +1,104 @@
+{
+  "round": 4,
+  "phase": "done",
+  "status": "stopped",
+  "history": [
+    {
+      "round": 1,
+      "allocations": {
+        "A1": {
+          "A1-H1": 10,
+          "A1-H2": 44,
+          "A1-H3": 10
+        }
+      },
+      "problems": [],
+      "direction": "CONTINUE",
+      "qids": [
+        "Q0001",
+        "Q0002",
+        "Q0003"
+      ]
+    },
+    {
+      "round": 2,
+      "allocations": {
+        "A1": {
+          "A1-H1": 7,
+          "A1-H2": 50,
+          "A1-H3": 7
+        }
+      },
+      "problems": [],
+      "direction": "CONTINUE",
+      "qids": [
+        "Q0004",
+        "Q0005",
+        "Q0006"
+      ]
+    },
+    {
+      "round": 3,
+      "allocations": {
+        "A1": {
+          "A1-H1": 5,
+          "A1-H2": 54,
+          "A1-H3": 5
+        }
+      },
+      "problems": [],
+      "direction": "CONTINUE",
+      "qids": [
+        "Q0007",
+        "Q0008",
+        "Q0009"
+      ]
+    },
+    {
+      "round": 4,
+      "allocations": {
+        "A1": {
+          "A1-H1": 4,
+          "A1-H2": 56,
+          "A1-H3": 4
+        }
+      },
+      "problems": [],
+      "direction": "CONTINUE",
+      "qids": [
+        "Q0010",
+        "Q0011",
+        "Q0012"
+      ]
+    }
+  ],
+  "next_qid": 13,
+  "created": "2026-10-30T03:39:09+00:00",
+  "stop_basis": "OPERATIONAL_LIMIT",
+  "stop_evaluation": {
+    "gauge": 64,
+    "thresholds": {
+      "branch1_mean3": 0.334,
+      "branch2_mean4": 0.75
+    },
+    "axes": {
+      "A1": {
+        "deltas": [
+          6.0,
+          4.0,
+          2.0
+        ],
+        "branch1": false,
+        "branch2": false,
+        "mean3": 4.0,
+        "mean4": null
+      }
+    },
+    "numeric_rule_met": false,
+    "substantive_conditions_met": true,
+    "ab_covered": true,
+    "stop": false
+  },
+  "stopped": "2026-10-30T03:39:10+00:00",
+  "note": "max_rounds=4 reached; this is an operational stop, not a scientific completion finding"
+}

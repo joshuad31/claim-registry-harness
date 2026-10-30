@@ -1,0 +1,7 @@
+{
+  "checked_pairs": 0,
+  "candidate_witnesses": 0,
+  "definition": "SAME_QUANTITY_CONFLICT or OPPOSITE_POLARITY at the same scope, found by both independent passes",
+  "records": [],
+  "time": "2026-10-30T03:39:07+00:00"
+}

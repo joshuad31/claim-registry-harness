@@ -1,0 +1,13 @@
+{
+  "imported": "2026-10-29T15:13:32+00:00",
+  "from": "/mnt/user-data/uploads/FINAL SPECIFICATION DOCUMENTS/ChatGPT output/PTX-Full-Run-2026-10-24",
+  "frd_database": {
+    "source": "/mnt/user-data/uploads/FINAL SPECIFICATION DOCUMENTS/ChatGPT output/PTX-Full-Run-2026-10-24/Human Review/FRD database.json",
+    "sha256": "e06109fb2b1ccf532408d4161473cb9bd67af9d32de690d3c833c0d4f6ab4285"
+  },
+  "header_sha256": "82d89acb3212b566fbfbdc47a6cd8df53ff45cecb6ff386c12c8fbb4285cb2ae",
+  "questions": 62,
+  "usable_answers": 61,
+  "candidates": 77,
+  "validated_ready": 73
+}

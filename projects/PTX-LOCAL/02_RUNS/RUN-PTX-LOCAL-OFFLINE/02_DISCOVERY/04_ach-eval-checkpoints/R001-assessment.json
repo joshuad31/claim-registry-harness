@@ -1,0 +1,59 @@
+{
+  "round": 1,
+  "allocations": {
+    "A1": {
+      "A1-H1": 20,
+      "A1-H2": 30,
+      "A1-H3": 14
+    },
+    "A2": {
+      "A2-H1": 27,
+      "A2-H2": 21,
+      "A2-H3": 16
+    }
+  },
+  "problems": [],
+  "direction": "CONTINUE",
+  "qids": [
+    "Q0001",
+    "Q0002",
+    "Q0003",
+    "Q0004",
+    "Q0005"
+  ],
+  "substantive": {
+    "decisive_tests_oriented": true,
+    "every_live_hypothesis_adversely_tested": false,
+    "weakest_and_shared_links_tested": true,
+    "project_success_conditions_addressed": false,
+    "notes": "local engine: 7/11 decisive tests, 2/6 hypotheses adversely tested, 4/6 assumptions touched, 0/6 corroboration contexts touched"
+  },
+  "stop_evaluation": {
+    "gauge": 64,
+    "thresholds": {
+      "branch1_mean3": 0.334,
+      "branch2_mean4": 0.75
+    },
+    "axes": {
+      "A1": {
+        "deltas": [],
+        "branch1": false,
+        "branch2": false,
+        "mean3": null,
+        "mean4": null
+      },
+      "A2": {
+        "deltas": [],
+        "branch1": false,
+        "branch2": false,
+        "mean3": null,
+        "mean4": null
+      }
+    },
+    "numeric_rule_met": false,
+    "substantive_conditions_met": false,
+    "ab_covered": false,
+    "stop": false
+  },
+  "call_key": "aca2db7ed729d7afc0303355"
+}

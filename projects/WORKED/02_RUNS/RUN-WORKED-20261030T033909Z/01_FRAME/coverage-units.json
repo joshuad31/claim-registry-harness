@@ -1,0 +1,411 @@
+[
+  {
+    "unit_id": "A1-H1-R1",
+    "hypothesis_id": "A1-H1",
+    "axis_id": "A1",
+    "type": "REQUIRED_SUPPORT",
+    "text": "Foliar silicate increases grain yield of drought-stressed wheat in field trials",
+    "source_quote": "Foliar silicate increases grain yield of drought-stressed wheat in field trials",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "foliar",
+      "silicate",
+      "increases",
+      "grain",
+      "yield",
+      "drought-stressed",
+      "wheat",
+      "field",
+      "trials"
+    ],
+    "satisfied_by": "a source-reported finding stating that Foliar silicate increases grain yield of drought-stressed wheat in field trials",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "ae4bc77cafe53126409536b6"
+  },
+  {
+    "unit_id": "A1-H1-R2",
+    "hypothesis_id": "A1-H1",
+    "axis_id": "A1",
+    "type": "REQUIRED_SUPPORT",
+    "text": "The increase is reported at a foliar rate of two millilitres per litre",
+    "source_quote": "The increase is reported at a foliar rate of two millilitres per litre",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "increase",
+      "reported",
+      "foliar",
+      "rate",
+      "two",
+      "millilitres",
+      "litre"
+    ],
+    "satisfied_by": "a source-reported finding stating that The increase is reported at a foliar rate of two millilitres per litre",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "ae4bc77cafe53126409536b6"
+  },
+  {
+    "unit_id": "A1-H1-R3",
+    "hypothesis_id": "A1-H1",
+    "axis_id": "A1",
+    "type": "REQUIRED_SUPPORT",
+    "text": "The yield increase is larger when drought is severe",
+    "source_quote": "The yield increase is larger when drought is severe",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "yield",
+      "increase",
+      "larger",
+      "drought",
+      "severe"
+    ],
+    "satisfied_by": "a source-reported finding stating that The yield increase is larger when drought is severe",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "ae4bc77cafe53126409536b6"
+  },
+  {
+    "unit_id": "A1-H1-C1",
+    "hypothesis_id": "A1-H1",
+    "axis_id": "A1",
+    "type": "CONTEXTUAL_CONSTRAINT",
+    "text": "The foliar rate is two millilitres per litre and the trials are conducted under drought",
+    "source_quote": "The foliar rate is two millilitres per litre and the trials are conducted under drought",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "foliar",
+      "rate",
+      "two",
+      "millilitres",
+      "litre",
+      "trials",
+      "conducted",
+      "drought"
+    ],
+    "satisfied_by": "a source-reported finding stating that The foliar rate is two millilitres per litre and the trials are conducted under drought",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "ae4bc77cafe53126409536b6"
+  },
+  {
+    "unit_id": "A1-H1-A1",
+    "hypothesis_id": "A1-H1",
+    "axis_id": "A1",
+    "type": "ADVERSE_TEST",
+    "text": "Field trials at that rate report no yield difference",
+    "source_quote": "Field trials at that rate report no yield difference",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "field",
+      "trials",
+      "rate",
+      "report",
+      "yield",
+      "difference"
+    ],
+    "satisfied_by": "a source-reported finding stating that Field trials at that rate report no yield difference",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "ae4bc77cafe53126409536b6"
+  },
+  {
+    "unit_id": "A1-H1-E1",
+    "hypothesis_id": "A1-H1",
+    "axis_id": "A1",
+    "type": "CORROBORATING_EXPECTATION",
+    "text": "Field trials at that rate report a larger yield increase when drought is severe",
+    "source_quote": "Field trials at that rate report a larger yield increase when drought is severe",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "field",
+      "trials",
+      "rate",
+      "report",
+      "larger",
+      "yield",
+      "increase",
+      "drought",
+      "severe"
+    ],
+    "satisfied_by": "a source-reported finding stating that Field trials at that rate report a larger yield increase when drought is severe",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "ae4bc77cafe53126409536b6"
+  },
+  {
+    "unit_id": "A1-H2-R1",
+    "hypothesis_id": "A1-H2",
+    "axis_id": "A1",
+    "type": "REQUIRED_SUPPORT",
+    "text": "Foliar silicate does not increase grain yield of drought-stressed wheat in field trials",
+    "source_quote": "Foliar silicate does not increase grain yield of drought-stressed wheat in field trials",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "foliar",
+      "silicate",
+      "increase",
+      "grain",
+      "yield",
+      "drought-stressed",
+      "wheat",
+      "field",
+      "trials"
+    ],
+    "satisfied_by": "a source-reported finding stating that Foliar silicate does not increase grain yield of drought-stressed wheat in field trials",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "3c9570132cb4c0abc2ab02ae"
+  },
+  {
+    "unit_id": "A1-H2-R2",
+    "hypothesis_id": "A1-H2",
+    "axis_id": "A1",
+    "type": "REQUIRED_SUPPORT",
+    "text": "Field trials at a foliar rate of two millilitres per litre report no yield difference",
+    "source_quote": "Field trials at a foliar rate of two millilitres per litre report no yield difference",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "field",
+      "trials",
+      "foliar",
+      "rate",
+      "two",
+      "millilitres",
+      "litre",
+      "report",
+      "yield",
+      "difference"
+    ],
+    "satisfied_by": "a source-reported finding stating that Field trials at a foliar rate of two millilitres per litre report no yield difference",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "3c9570132cb4c0abc2ab02ae"
+  },
+  {
+    "unit_id": "A1-H2-C1",
+    "hypothesis_id": "A1-H2",
+    "axis_id": "A1",
+    "type": "CONTEXTUAL_CONSTRAINT",
+    "text": "The null trials used the same foliar rate of two millilitres per litre",
+    "source_quote": "The null trials used the same foliar rate of two millilitres per litre",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "null",
+      "trials",
+      "used",
+      "foliar",
+      "rate",
+      "two",
+      "millilitres",
+      "litre"
+    ],
+    "satisfied_by": "a source-reported finding stating that The null trials used the same foliar rate of two millilitres per litre",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "3c9570132cb4c0abc2ab02ae"
+  },
+  {
+    "unit_id": "A1-H2-A1",
+    "hypothesis_id": "A1-H2",
+    "axis_id": "A1",
+    "type": "ADVERSE_TEST",
+    "text": "A field trial at that rate reports a yield increase",
+    "source_quote": "A field trial at that rate reports a yield increase",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "field",
+      "trial",
+      "rate",
+      "reports",
+      "yield",
+      "increase"
+    ],
+    "satisfied_by": "a source-reported finding stating that A field trial at that rate reports a yield increase",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "3c9570132cb4c0abc2ab02ae"
+  },
+  {
+    "unit_id": "A1-H2-E1",
+    "hypothesis_id": "A1-H2",
+    "axis_id": "A1",
+    "type": "CORROBORATING_EXPECTATION",
+    "text": "Multi-site field trials report no yield difference at that rate",
+    "source_quote": "Multi-site field trials report no yield difference at that rate",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "multi-site",
+      "field",
+      "trials",
+      "report",
+      "yield",
+      "difference",
+      "rate"
+    ],
+    "satisfied_by": "a source-reported finding stating that Multi-site field trials report no yield difference at that rate",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "3c9570132cb4c0abc2ab02ae"
+  },
+  {
+    "unit_id": "A1-H3-R1",
+    "hypothesis_id": "A1-H3",
+    "axis_id": "A1",
+    "type": "REQUIRED_SUPPORT",
+    "text": "Existing field evidence cannot determine whether foliar silicate increases grain yield of drought-stressed wheat under drought",
+    "source_quote": "Existing field evidence cannot determine whether foliar silicate increases grain yield of drought-stressed wheat under drought",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "existing",
+      "field",
+      "evidence",
+      "determine",
+      "whether",
+      "foliar",
+      "silicate",
+      "increases",
+      "grain",
+      "yield"
+    ],
+    "satisfied_by": "a source-reported finding stating that Existing field evidence cannot determine whether foliar silicate increases grain yield of drought-stressed wheat under drought",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "b6329cc3c06a9c1b47cf929c"
+  },
+  {
+    "unit_id": "A1-H3-R2",
+    "hypothesis_id": "A1-H3",
+    "axis_id": "A1",
+    "type": "REQUIRED_SUPPORT",
+    "text": "The field findings are inconsistent across trials",
+    "source_quote": "The field findings are inconsistent across trials",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "field",
+      "findings",
+      "inconsistent",
+      "across",
+      "trials"
+    ],
+    "satisfied_by": "a source-reported finding stating that The field findings are inconsistent across trials",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "b6329cc3c06a9c1b47cf929c"
+  },
+  {
+    "unit_id": "A1-H3-C1",
+    "hypothesis_id": "A1-H3",
+    "axis_id": "A1",
+    "type": "CONTEXTUAL_CONSTRAINT",
+    "text": "Field trials at a comparable rate have been retrieved",
+    "source_quote": "Field trials at a comparable rate have been retrieved",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "field",
+      "trials",
+      "comparable",
+      "rate",
+      "retrieved"
+    ],
+    "satisfied_by": "a source-reported finding stating that Field trials at a comparable rate have been retrieved",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "b6329cc3c06a9c1b47cf929c"
+  },
+  {
+    "unit_id": "A1-H3-A1",
+    "hypothesis_id": "A1-H3",
+    "axis_id": "A1",
+    "type": "ADVERSE_TEST",
+    "text": "Consistent field trials establish either a yield benefit or its absence at that rate",
+    "source_quote": "Consistent field trials establish either a yield benefit or its absence at that rate",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "consistent",
+      "field",
+      "trials",
+      "establish",
+      "either",
+      "yield",
+      "benefit",
+      "rate"
+    ],
+    "satisfied_by": "a source-reported finding stating that Consistent field trials establish either a yield benefit or its absence at that rate",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "b6329cc3c06a9c1b47cf929c"
+  },
+  {
+    "unit_id": "A1-H3-E1",
+    "hypothesis_id": "A1-H3",
+    "axis_id": "A1",
+    "type": "CORROBORATING_EXPECTATION",
+    "text": "Field findings differ across trials without a clear rate or timing explanation",
+    "source_quote": "Field findings differ across trials without a clear rate or timing explanation",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "field",
+      "findings",
+      "differ",
+      "across",
+      "trials",
+      "clear",
+      "rate",
+      "timing",
+      "explanation"
+    ],
+    "satisfied_by": "a source-reported finding stating that Field findings differ across trials without a clear rate or timing explanation",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "b6329cc3c06a9c1b47cf929c"
+  }
+]

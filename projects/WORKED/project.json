@@ -1,0 +1,7 @@
+{
+  "project": {"name": "WORKED EXAMPLE - foliar silicate", "run_prefix": "RUN-WORKED"},
+  "default_provider": "local",
+  "providers": {"local": {"type": "local", "model": "local-rules-v1.8"}},
+  "quest": {"round_size": 3, "max_rounds": 4},
+  "matching": {"exhaustive_threshold": 60, "shortlist_k": 60, "shortlist_k_secondary": 60}
+}

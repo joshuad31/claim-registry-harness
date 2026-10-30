@@ -1,0 +1,402 @@
+{
+  "fixtures": 22,
+  "pass_a_correct": 22,
+  "pass_b_correct": 22,
+  "per_pattern": {
+    "actor_object_reversal": {
+      "n": 2,
+      "a_ok": 2,
+      "b_ok": 2
+    },
+    "active_passive_actor_kept": {
+      "n": 2,
+      "a_ok": 2,
+      "b_ok": 2
+    },
+    "affirmation_vs_denial": {
+      "n": 2,
+      "a_ok": 2,
+      "b_ok": 2
+    },
+    "possibility_vs_necessity": {
+      "n": 2,
+      "a_ok": 2,
+      "b_ok": 2
+    },
+    "report_vs_assertion": {
+      "n": 2,
+      "a_ok": 2,
+      "b_ok": 2
+    },
+    "condition_vs_unconditional": {
+      "n": 2,
+      "a_ok": 2,
+      "b_ok": 2
+    },
+    "high_overlap_changed_roles": {
+      "n": 2,
+      "a_ok": 2,
+      "b_ok": 2
+    },
+    "must_keep_reordered": {
+      "n": 1,
+      "a_ok": 1,
+      "b_ok": 1
+    },
+    "must_keep_specific_entails_general": {
+      "n": 1,
+      "a_ok": 1,
+      "b_ok": 1
+    },
+    "unrelated": {
+      "n": 2,
+      "a_ok": 2,
+      "b_ok": 2
+    },
+    "scope_transfer": {
+      "n": 1,
+      "a_ok": 1,
+      "b_ok": 1
+    },
+    "scope_transfer_null_is_not_contradiction": {
+      "n": 1,
+      "a_ok": 1,
+      "b_ok": 1
+    },
+    "quantity_conflict": {
+      "n": 1,
+      "a_ok": 1,
+      "b_ok": 1
+    },
+    "instance_establishes_capability": {
+      "n": 1,
+      "a_ok": 1,
+      "b_ok": 1
+    }
+  },
+  "qualified_patterns": [
+    "active_passive_actor_kept",
+    "actor_object_reversal",
+    "affirmation_vs_denial",
+    "condition_vs_unconditional",
+    "high_overlap_changed_roles",
+    "instance_establishes_capability",
+    "must_keep_reordered",
+    "must_keep_specific_entails_general",
+    "possibility_vs_necessity",
+    "quantity_conflict",
+    "report_vs_assertion",
+    "scope_transfer",
+    "scope_transfer_null_is_not_contradiction",
+    "unrelated"
+  ],
+  "unqualified_patterns": [],
+  "rows": [
+    {
+      "fixture": "FX-01",
+      "pattern": "actor_object_reversal",
+      "accept": [
+        "ABSTAIN",
+        "CONTRADICTS",
+        "NO_SEMANTIC_RELATION"
+      ],
+      "pass_a": "NO_SEMANTIC_RELATION",
+      "pass_b": "NO_SEMANTIC_RELATION",
+      "a_ok": true,
+      "b_ok": true,
+      "trace_a": "actor/object reversal: subject ['drug'] of the unit is reported as an object of the witness, whose subject ['animal', 'bladder', 'fibrosis', 'obstruct'] is an object of the unit [local-rules 1.8 pass A]",
+      "trace_b": "actor/object reversal: subject ['drug'] of the unit is reported as an object of the witness, whose subject ['animal', 'bladder', 'fibrosis', 'obstruct'] is an object of the unit [local-rules 1.8 pass B]"
+    },
+    {
+      "fixture": "FX-02",
+      "pattern": "actor_object_reversal",
+      "accept": [
+        "ABSTAIN",
+        "CONTRADICTS",
+        "NO_SEMANTIC_RELATION"
+      ],
+      "pass_a": "NO_SEMANTIC_RELATION",
+      "pass_b": "NO_SEMANTIC_RELATION",
+      "a_ok": true,
+      "b_ok": true,
+      "trace_a": "actor/object reversal: subject ['tamsulosin'] of the unit is reported as an object of the witness, whose subject ['bph', 'human', 'improve', 'qmax'] is an object of the unit [local-rules 1.8 pass A]",
+      "trace_b": "actor/object reversal: subject ['tamsulosin'] of the unit is reported as an object of the witness, whose subject ['bph', 'human', 'improve', 'qmax'] is an object of the unit [local-rules 1.8 pass B]"
+    },
+    {
+      "fixture": "FX-03",
+      "pattern": "active_passive_actor_kept",
+      "accept": [
+        "EQUIVALENT"
+      ],
+      "pass_a": "EQUIVALENT",
+      "pass_b": "EQUIVALENT",
+      "a_ok": true,
+      "b_ok": true,
+      "trace_a": "content coverage 1.00 both ways (1.00); no polarity, quantity, scope or modality conflict [local-rules 1.8 pass A]",
+      "trace_b": "content coverage 1.00 both ways (1.00); no polarity, quantity, scope or modality conflict [local-rules 1.8 pass B]"
+    },
+    {
+      "fixture": "FX-04",
+      "pattern": "active_passive_actor_kept",
+      "accept": [
+        "EQUIVALENT",
+        "WITNESS_ENTAILS_UNIT"
+      ],
+      "pass_a": "EQUIVALENT",
+      "pass_b": "EQUIVALENT",
+      "a_ok": true,
+      "b_ok": true,
+      "trace_a": "content coverage 1.00 both ways (0.86); no polarity, quantity, scope or modality conflict [local-rules 1.8 pass A]",
+      "trace_b": "content coverage 1.00 both ways (0.86); no polarity, quantity, scope or modality conflict [local-rules 1.8 pass B]"
+    },
+    {
+      "fixture": "FX-05",
+      "pattern": "affirmation_vs_denial",
+      "accept": [
+        "CONTRADICTS"
+      ],
+      "pass_a": "CONTRADICTS",
+      "pass_b": "CONTRADICTS",
+      "a_ok": true,
+      "b_ok": true,
+      "trace_a": "predicate ['UP'] asserted with opposite polarity (coverage 1.00) [local-rules 1.8 pass A]",
+      "trace_b": "predicate ['UP'] asserted with opposite polarity (coverage 1.00) [local-rules 1.8 pass B]"
+    },
+    {
+      "fixture": "FX-06",
+      "pattern": "affirmation_vs_denial",
+      "accept": [
+        "CONTRADICTS"
+      ],
+      "pass_a": "CONTRADICTS",
+      "pass_b": "CONTRADICTS",
+      "a_ok": true,
+      "b_ok": true,
+      "trace_a": "predicate ['DIFF'] asserted with opposite polarity (coverage 1.00) [local-rules 1.8 pass A]",
+      "trace_b": "predicate ['DIFF'] asserted with opposite polarity (coverage 1.00) [local-rules 1.8 pass B]"
+    },
+    {
+      "fixture": "FX-07",
+      "pattern": "possibility_vs_necessity",
+      "accept": [
+        "PARTIALLY_COVERS",
+        "UNIT_ENTAILS_WITNESS"
+      ],
+      "pass_a": "UNIT_ENTAILS_WITNESS",
+      "pass_b": "UNIT_ENTAILS_WITNESS",
+      "a_ok": true,
+      "b_ok": true,
+      "trace_a": "unit is stronger (must) than witness (may/suggest); coverage 1.00 [local-rules 1.8 pass A]",
+      "trace_b": "unit is stronger (must) than witness (may/suggest); coverage 1.00 [local-rules 1.8 pass B]"
+    },
+    {
+      "fixture": "FX-08",
+      "pattern": "possibility_vs_necessity",
+      "accept": [
+        "EQUIVALENT",
+        "WITNESS_ENTAILS_UNIT"
+      ],
+      "pass_a": "WITNESS_ENTAILS_UNIT",
+      "pass_b": "WITNESS_ENTAILS_UNIT",
+      "a_ok": true,
+      "b_ok": true,
+      "trace_a": "a concrete instance establishes the unit's existential/capability claim; coverage 0.78 [local-rules 1.8 pass A]",
+      "trace_b": "a concrete instance establishes the unit's existential/capability claim; coverage 0.78 [local-rules 1.8 pass B]"
+    },
+    {
+      "fixture": "FX-09",
+      "pattern": "report_vs_assertion",
+      "accept": [
+        "PARTIALLY_COVERS",
+        "UNIT_ENTAILS_WITNESS"
+      ],
+      "pass_a": "PARTIALLY_COVERS",
+      "pass_b": "PARTIALLY_COVERS",
+      "a_ok": true,
+      "b_ok": true,
+      "trace_a": "witness reports the claim at second hand; coverage 1.00 [local-rules 1.8 pass A]",
+      "trace_b": "witness reports the claim at second hand; coverage 1.00 [local-rules 1.8 pass B]"
+    },
+    {
+      "fixture": "FX-10",
+      "pattern": "report_vs_assertion",
+      "accept": [
+        "EQUIVALENT"
+      ],
+      "pass_a": "EQUIVALENT",
+      "pass_b": "EQUIVALENT",
+      "a_ok": true,
+      "b_ok": true,
+      "trace_a": "content coverage 0.95 both ways (0.86); no polarity, quantity, scope or modality conflict [local-rules 1.8 pass A]",
+      "trace_b": "content coverage 0.95 both ways (0.86); no polarity, quantity, scope or modality conflict [local-rules 1.8 pass B]"
+    },
+    {
+      "fixture": "FX-11",
+      "pattern": "condition_vs_unconditional",
+      "accept": [
+        "PARTIALLY_COVERS",
+        "UNIT_ENTAILS_WITNESS"
+      ],
+      "pass_a": "PARTIALLY_COVERS",
+      "pass_b": "PARTIALLY_COVERS",
+      "a_ok": true,
+      "b_ok": true,
+      "trace_a": "witness states the unit only conditionally; coverage 1.00 [local-rules 1.8 pass A]",
+      "trace_b": "witness states the unit only conditionally; coverage 1.00 [local-rules 1.8 pass B]"
+    },
+    {
+      "fixture": "FX-12",
+      "pattern": "condition_vs_unconditional",
+      "accept": [
+        "EQUIVALENT"
+      ],
+      "pass_a": "EQUIVALENT",
+      "pass_b": "EQUIVALENT",
+      "a_ok": true,
+      "b_ok": true,
+      "trace_a": "content coverage 1.00 both ways (1.00); no polarity, quantity, scope or modality conflict [local-rules 1.8 pass A]",
+      "trace_b": "content coverage 1.00 both ways (1.00); no polarity, quantity, scope or modality conflict [local-rules 1.8 pass B]"
+    },
+    {
+      "fixture": "FX-13",
+      "pattern": "high_overlap_changed_roles",
+      "accept": [
+        "ABSTAIN",
+        "NO_SEMANTIC_RELATION",
+        "PARTIALLY_COVERS"
+      ],
+      "pass_a": "PARTIALLY_COVERS",
+      "pass_b": "PARTIALLY_COVERS",
+      "a_ok": true,
+      "b_ok": true,
+      "trace_a": "combination partners differ: unit ['tamsulosin'] vs witness ['placebo']; coverage 1.00 [local-rules 1.8 pass A]",
+      "trace_b": "combination partners differ: unit ['tamsulosin'] vs witness ['placebo']; coverage 1.00 [local-rules 1.8 pass B]"
+    },
+    {
+      "fixture": "FX-14",
+      "pattern": "high_overlap_changed_roles",
+      "accept": [
+        "ABSTAIN",
+        "NO_SEMANTIC_RELATION",
+        "PARTIALLY_COVERS"
+      ],
+      "pass_a": "PARTIALLY_COVERS",
+      "pass_b": "PARTIALLY_COVERS",
+      "a_ok": true,
+      "b_ok": true,
+      "trace_a": "same quantities, different frequency (3 vs 1) [local-rules 1.8 pass A]",
+      "trace_b": "same quantities, different frequency (3 vs 1) [local-rules 1.8 pass B]"
+    },
+    {
+      "fixture": "FX-15",
+      "pattern": "must_keep_reordered",
+      "accept": [
+        "EQUIVALENT"
+      ],
+      "pass_a": "EQUIVALENT",
+      "pass_b": "EQUIVALENT",
+      "a_ok": true,
+      "b_ok": true,
+      "trace_a": "content coverage 1.00 both ways (1.00); no polarity, quantity, scope or modality conflict [local-rules 1.8 pass A]",
+      "trace_b": "content coverage 1.00 both ways (1.00); no polarity, quantity, scope or modality conflict [local-rules 1.8 pass B]"
+    },
+    {
+      "fixture": "FX-16",
+      "pattern": "must_keep_specific_entails_general",
+      "accept": [
+        "EQUIVALENT",
+        "WITNESS_ENTAILS_UNIT"
+      ],
+      "pass_a": "EQUIVALENT",
+      "pass_b": "EQUIVALENT",
+      "a_ok": true,
+      "b_ok": true,
+      "trace_a": "content coverage 1.00 both ways (0.58); no polarity, quantity, scope or modality conflict [local-rules 1.8 pass A]",
+      "trace_b": "content coverage 1.00 both ways (0.58); no polarity, quantity, scope or modality conflict [local-rules 1.8 pass B]"
+    },
+    {
+      "fixture": "FX-17",
+      "pattern": "unrelated",
+      "accept": [
+        "NO_SEMANTIC_RELATION"
+      ],
+      "pass_a": "NO_SEMANTIC_RELATION",
+      "pass_b": "NO_SEMANTIC_RELATION",
+      "a_ok": true,
+      "b_ok": true,
+      "trace_a": "content coverage 0.14 is too low [local-rules 1.8 pass A]",
+      "trace_b": "content coverage 0.14 is too low [local-rules 1.8 pass B]"
+    },
+    {
+      "fixture": "FX-18",
+      "pattern": "unrelated",
+      "accept": [
+        "NO_SEMANTIC_RELATION"
+      ],
+      "pass_a": "NO_SEMANTIC_RELATION",
+      "pass_b": "NO_SEMANTIC_RELATION",
+      "a_ok": true,
+      "b_ok": true,
+      "trace_a": "content coverage 0.00 is too low [local-rules 1.8 pass A]",
+      "trace_b": "content coverage 0.00 is too low [local-rules 1.8 pass B]"
+    },
+    {
+      "fixture": "FX-19",
+      "pattern": "scope_transfer",
+      "accept": [
+        "NO_SEMANTIC_RELATION",
+        "PARTIALLY_COVERS"
+      ],
+      "pass_a": "PARTIALLY_COVERS",
+      "pass_b": "PARTIALLY_COVERS",
+      "a_ok": true,
+      "b_ok": true,
+      "trace_a": "scope mismatch: unit is human, witness is animal; content coverage 0.33 [local-rules 1.8 pass A]",
+      "trace_b": "scope mismatch: unit is human, witness is animal; content coverage 0.33 [local-rules 1.8 pass B]"
+    },
+    {
+      "fixture": "FX-20",
+      "pattern": "scope_transfer_null_is_not_contradiction",
+      "accept": [
+        "ABSTAIN",
+        "NO_SEMANTIC_RELATION",
+        "PARTIALLY_COVERS"
+      ],
+      "pass_a": "PARTIALLY_COVERS",
+      "pass_b": "PARTIALLY_COVERS",
+      "a_ok": true,
+      "b_ok": true,
+      "trace_a": "scope mismatch: unit is human, witness is animal; content coverage 0.40 [local-rules 1.8 pass A]",
+      "trace_b": "scope mismatch: unit is human, witness is animal; content coverage 0.40 [local-rules 1.8 pass B]"
+    },
+    {
+      "fixture": "FX-21",
+      "pattern": "quantity_conflict",
+      "accept": [
+        "CONTRADICTS"
+      ],
+      "pass_a": "CONTRADICTS",
+      "pass_b": "CONTRADICTS",
+      "a_ok": true,
+      "b_ok": true,
+      "trace_a": "quantity conflict: ml/s=4.5 vs 1.2 [local-rules 1.8 pass A]",
+      "trace_b": "quantity conflict: ml/s=4.5 vs 1.2 [local-rules 1.8 pass B]"
+    },
+    {
+      "fixture": "FX-22",
+      "pattern": "instance_establishes_capability",
+      "accept": [
+        "EQUIVALENT",
+        "WITNESS_ENTAILS_UNIT"
+      ],
+      "pass_a": "WITNESS_ENTAILS_UNIT",
+      "pass_b": "WITNESS_ENTAILS_UNIT",
+      "a_ok": true,
+      "b_ok": true,
+      "trace_a": "a concrete instance establishes the unit's existential/capability claim; coverage 0.65 [local-rules 1.8 pass A]",
+      "trace_b": "a concrete instance establishes the unit's existential/capability claim; coverage 0.65 [local-rules 1.8 pass B]"
+    }
+  ],
+  "disclosure": "Fixtures use generic 'drug A' vocabulary plus any project fixtures in 01_FRAME/match-fixtures.json. Passing them qualifies the matcher only for these tested patterns; it does not prove general language understanding.",
+  "time": "2026-10-30T03:38:52+00:00"
+}
