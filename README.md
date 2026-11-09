@@ -38,13 +38,13 @@ Python 3.11 or newer, standard library only. The optional NotebookLM driver
 (`claimreg/notebooklm/`, `nlm.cmd`) also needs `pip install playwright` and Google Chrome.
 
 ```
-python cr.py selftest     # 43 tests (+1 browser test, run separately), no network
+python cr.py selftest     # 56 tests (+1 browser test, run separately), no network
 python cr.py demo         # a complete run of a bundled synthetic corpus, from an empty folder
 ```
 
 ## What is in this repository
 
-- the harness, its prompt library, 43 tests plus a NotebookLM driver test, and the documentation;
+- the harness, its prompt library, 56 tests plus a NotebookLM driver test, and the documentation;
 - the NotebookLM quest driver: one Chrome window, one tab per notebook copy, answers written
   straight to disk (`claimreg/notebooklm/`, `nlm.cmd`, `examples/quest-driver.PTX.json`);
 - two synthetic example corpora (`examples/demo`, `examples/worked`);

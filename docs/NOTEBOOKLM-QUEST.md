@@ -34,7 +34,7 @@ On Windows, `nlm.cmd login …` and `nlm.cmd run …` do the same.
 - **Questions in:** the Investigator writes `Qnnnn.json` files (`{"qid","attempt","text"}`) into `<answers_dir>/queue/`. The driver feeds them to free lanes.
 - **Answers out:** `<answers_dir>/Qnnnn-A01.json` holds the exact query, the answer as rendered, the lane, the notebook URL, the submit and capture times, and two flags: `contains_tool_output` and `outcome`.
 - **Status:** `<answers_dir>/driver-status.json` shows what every lane is doing.
-- **Pacing:** the driver holds new questions while more than `max_backlog` answers (default 12) are waiting for the Manager. Mark answers assessed with `quest_tool.py assessed <assessed_file> Q0001 …`. Without an `assessed_file`, the driver runs at full speed.
+- **Pacing:** the driver holds new questions while more than `max_backlog` answers (default 12) are waiting for the Manager. Mark answers assessed with `quest_tool.py assessed <assessed_file> Q0001 …`, or preferably `quest_tool.py sync <assessment-ledger.json> <assessed_file>`, which stamps each QID with its round's committed time. Without an `assessed_file`, the driver runs at full speed.
 - **Stop:** put a file named `STOP` in `queue/`. Lanes finish their current answer, and the driver exits.
 - **Restarts:** if a tab reloads or crashes, the driver reopens it and re-reads any answer that was already generated, instead of sending the question again.
 
@@ -52,11 +52,24 @@ Set `localStorage.crl_lanes` (notebook id → lane name) first. In this mode, sa
 ## 4. The loop
 
 ```
-Investigator: write 6-12 questions   ->  queue/Qnnnn.json   ->  lanes answer
-Investigator: collect answers        ->  quest_tool ingest  ->  query-responses/
-Manager:      every 5-6 new answers  ->  ACH_Eval, ledger   ->  feedback-packets/Rnnn.md
-Investigator: read the packet's priorities and ready questions, write the next batch
+Investigator: write 6-12 questions    ->  queue/Qnnnn.json     ->  lanes answer
+Investigator: stage new answers       ->  quest_tool stage     ->  Manager workspace answers/
+Manager:      every 5-6 new answers   ->  ACH_Eval, ledger     ->  packets/Rnnn.md
+Investigator: packet ready questions  ->  quest_tool packet    ->  queue/Qnnnn.json
+Investigator: sync the ledger         ->  quest_tool sync      ->  assessed-qids.json
 ```
+
+Three commands do the hand-offs, so no file is copied by hand:
+
+```
+python claimreg/notebooklm/quest_tool.py stage  <answers_dir> <manager-workspace>/answers
+python claimreg/notebooklm/quest_tool.py packet <manager-workspace>/packets/R001.md <answers_dir> --index <project>/01_FRAME/index.md
+python claimreg/notebooklm/quest_tool.py sync   <manager-workspace>/private/assessment-ledger.json <answers_dir>/assessed-qids.json
+```
+
+- `stage` writes each driver answer as the Manager's Markdown answer file: exact query, full answer, capture flags.
+- `packet` writes the packet's `## Ready questions` as queue files, continuing the numbering, and prints a firewall warning for any question with no exact source filename, a length ceiling, a stated length on a multi-source question, or project jargon.
+- `sync` copies each round's `committed_at` into `assessed-qids.json`, which both releases the next questions and is the scorecard's grading time.
 
 Every question must pass the header's query firewall:
 

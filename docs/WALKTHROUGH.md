@@ -196,19 +196,24 @@ It never touches NotebookLM or a browser. Every 5–6 new answers, it:
 ## 9. Run the loop
 
 ```
-Investigator: write 6-12 questions   ->  queue/        ->  lanes answer (45-110 s each)
-Investigator: collect answers        ->  hand 5-6 at a time to the Manager
-Manager:      ACH_Eval + packet      ->  feedback-packets/Rnnn.md
-Investigator: send the packet's ready questions, write the rest, repeat
+Investigator: write 6-12 questions    ->  queue/                       ->  lanes answer (45-110 s each)
+Investigator: stage the new answers   ->  Manager workspace answers/
+Manager:      ACH_Eval + packet       ->  packets/Rnnn.md
+Investigator: packet's ready questions ->  quest_tool.py packet        ->  queue/
+Investigator: sync the ledger         ->  quest_tool.py sync           ->  assessed-qids.json
 ```
 
-After each packet, mark the assessed answers so the driver keeps pacing:
+Three commands do the hand-offs, so nothing is copied by hand:
 
 ```
-python claimreg\notebooklm\quest_tool.py assessed <assessed_file> Q0001 Q0002 …
+python claimreg\notebooklm\quest_tool.py stage  <answers_dir> <manager-workspace>\answers
+python claimreg\notebooklm\quest_tool.py packet <manager-workspace>\packets\R001.md <answers_dir> --index projects\MyTopic\01_FRAME\index.md
+python claimreg\notebooklm\quest_tool.py sync   <manager-workspace>\private\assessment-ledger.json <answers_dir>\assessed-qids.json
 ```
 
-Lane speed is not throughput: answers only count once they are graded. The driver holds new questions while more than `max_backlog` answers are waiting, so the Manager's packets still steer the questions. Pace the quest to the Manager, not to NotebookLM. The Manager must mark each round assessed with `quest_tool.py assessed …`. That stamps each answer's grading time and releases the next questions.
+`stage` writes each driver answer as the Manager's Markdown answer file (exact query, full answer, capture flags). `packet` turns a packet's `## Ready questions` into `Qnnnn.json` queue files, continuing the numbering, and prints a firewall warning for any question with no exact source filename, a length ceiling, a stated length on a multi-source question, or project jargon. `sync` copies each round's `committed_at` into `assessed-qids.json`: that stamps the grading time and releases the next questions. `quest_tool.py assessed <assessed_file> Q…` still works for marking answers by hand.
+
+Lane speed is not throughput: answers only count once they are graded. The driver holds new questions while more than `max_backlog` answers are waiting, so the Manager's packets still steer the questions. Pace the quest to the Manager, not to NotebookLM. The Manager must commit each round to the assessment ledger and the Investigator must sync it; that stamps each answer's grading time and releases the next questions.
 
 **When answers go wrong**, check the flags in each answer file:
 

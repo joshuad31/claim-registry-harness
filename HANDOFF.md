@@ -57,7 +57,7 @@ This repository implements Josh's **Claim Registry (ACH 2.0)** specification. It
 
 ## 4. What works now (verified)
 
-- **`python cr.py selftest`:** 43 tests pass, plus 1 browser test that is skipped in selftest. That test is `python tests/test_notebooklm_driver.py`: an end-to-end driver run against a mock notebook, about 60 s, which passes.
+- **`python cr.py selftest`:** 56 tests pass, plus 1 browser test that is skipped in selftest. That test is `python tests/test_notebooklm_driver.py`: an end-to-end driver run against a mock notebook, about 60 s, which passes.
 - **The full offline pipeline:**
   - `python cr.py demo` runs from an empty folder to a report.
   - The default provider is the deterministic local engine `local-rules-v1.9` (`docs/LOCAL-ENGINE.md`). It is a lexical floor, not a language model.
@@ -142,3 +142,20 @@ The standard is Josh's Ready-Fire-Aim protocol, implemented in `cr quest-score`:
 | `claimreg/llm/local.py` | Local engine v1.9: the FRD generator reads NotebookLM's `claim (file.md, heading)` citations |
 | `docs/WALKTHROUGH.md`, `docs/NOTEBOOKLM-QUEST.md` | New-user walkthrough; quest reference including the scorecard (§6) |
 | `tests/test_quest_import.py`, `tests/test_scorecard.py`, `tests/test_notebooklm_driver.py` | Tests for the above |
+
+## 9. Update — later on 2026-11-09 (DeepSeek session): the throughput standard is proven
+
+A timed PTX quest ran **14:10:14–15:10:18 CST** on the six existing notebooks. The driver ran from the current repo code (six lanes ready at 13:58:11), the Manager was a fresh DeepSeek context, and the Investigator was the Lead session. Full record: `Claude output\quests\PTX-NLM-2026-11-09\` (answers, manager workspace, closeout, scorecard, evidence-run project).
+
+- **`cr quest-score` → PASS, all five checks:** start-up 0.3 min; 39 usable QIDs saved at 20 min; 130 graded in the first hour; 133 graded/h over the whole quest (142 graded of 144 questions, one repair Q0033-A02); backlog never above 12; median capture-to-graded 2 min.
+- 156 answers captured (Q0001–Q0156), 29 grading rounds (R001–R029). Round times ran 1–3 minutes once warm.
+- **Open item 2 is done.** The driver was launched from the repo (`python -m claimreg.notebooklm.driver run <config>`), so the 11-09 fixes were live; the previous long-running process had started before those files changed.
+- **Open item 3 is done.** `quest_tool.py` now has `stage` (driver answer JSON → Manager Markdown answers), `packet` (a packet's `## Ready questions` → queue files, with mechanical firewall warnings) and `sync` (assessment ledger → `assessed-qids.json`, stamping each round's `committed_at`). 13 new tests in `tests/test_quest_tool.py`; `cr selftest` is 56 tests (57 with the browser test), all passing. `docs/NOTEBOOKLM-QUEST.md` §4 and `docs/WALKTHROUGH.md` §9 document the commands.
+- **New learning — Manager context lifetime.** One Manager context degraded after about 27 rounds (it completed R027, then failed before replying). A fresh Manager context was spawned; it read `private/state.md` and graded R028–R029 and wrote the closeout. Plan on recycling the Manager context every ~20 rounds for long quests; the compact state file is what makes the handover safe.
+- **Evidence run.** `cr import-quest` imported 156 questions (154 usable; closeout's repair Q0033-A02 selected; stop labelled OPERATIONAL) and `cr run` completed: 605 candidate FRDs, 424 validated/retained, 327 witnesses, crux report and HTML audit browser written; `cr verify` ok. The local engine still reaches **no complete coverage and no crux candidates** — the quality limit is unchanged and is now the top open item.
+- **What is left, in priority order:**
+  1. Route `frd_generator`, `frd_validator` and the matching roles to a real model (file queue or API) on this 156-answer quest; the local-engine floor is now the only thing between the harness and a result someone can rely on.
+  2. Repo metadata: the GitHub description still says 31 tests / 19 stages; update it (56 tests) on the repo page.
+  3. The six NotebookLM notebook IDs are public in `examples/quest-driver.PTX.json` and the older committed run records — IDs, not credentials, but decide whether to scrub them before promoting the repo.
+  4. Optional: promote the Lead's ad-hoc `round.py` loop into a `nlm cycle` command and add a Manager checkpoint/restart helper.
+  5. Teaching: unchanged.
