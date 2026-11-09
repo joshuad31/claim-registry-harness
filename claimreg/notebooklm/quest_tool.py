@@ -121,11 +121,22 @@ def status(cfg_path):
 
 
 def mark_assessed(path, qids):
+    """Add QIDs to the assessed list, stamping when each was first marked (the scorecard's grading time).
+    Reads the older plain-list format too; the driver reads either."""
+    from datetime import datetime, timezone
     p = Path(path)
-    have = set(json.loads(p.read_text(encoding="utf-8"))) if p.exists() else set()
-    have |= set(qids)
+    d = json.loads(p.read_text(encoding="utf-8-sig")) if p.exists() else {}
+    if isinstance(d, list):
+        d = {"assessed": d, "times": {}}
+    have, times = set(d.get("assessed", [])), dict(d.get("times", {}))
+    now = datetime.now(timezone.utc).isoformat(timespec="seconds")
+    for q in qids:
+        have.add(q)
+        times.setdefault(q, now)
     p.parent.mkdir(parents=True, exist_ok=True)
-    p.write_text(json.dumps(sorted(have)), encoding="utf-8")
+    tmp = p.with_suffix(".tmp")
+    tmp.write_text(json.dumps({"assessed": sorted(have), "times": times}, indent=1), encoding="utf-8")
+    tmp.replace(p)
     print(json.dumps({"assessed": len(have)}))
 
 

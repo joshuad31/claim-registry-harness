@@ -208,7 +208,7 @@ After each packet, mark the assessed answers so the driver keeps pacing:
 python claimreg\notebooklm\quest_tool.py assessed <assessed_file> Q0001 Q0002 …
 ```
 
-The lanes produce about 250 answers an hour, but one Manager assesses about 70. The driver holds new questions while more than `max_backlog` answers are waiting, so the Manager's packets still steer the questions. Pace the quest to the Manager, not to NotebookLM.
+Lane speed is not throughput: answers only count once they are graded. The driver holds new questions while more than `max_backlog` answers are waiting, so the Manager's packets still steer the questions. Pace the quest to the Manager, not to NotebookLM. The Manager must mark each round assessed with `quest_tool.py assessed …`. That stamps each answer's grading time and releases the next questions.
 
 **When answers go wrong**, check the flags in each answer file:
 
@@ -225,6 +225,7 @@ Clear chat history only when answers degrade, not after every answer.
 ## 10. Stop and close out
 
 - **Operational stop.** You decide when time is up: write a file named `STOP` into `queue/`. Each lane finishes its current answer and the driver exits.
+- **Score the throughput.** Run `python cr.py quest-score <answers folder>`. It reports PASS or FAIL against the standard of 45 graded usable QIDs an hour, measured from the go-ahead, and names the bottleneck if it failed (`docs/NOTEBOOKLM-QUEST.md` §6).
 - **Scientific stop.** Only the Manager can direct STOP, and only when the header's numerical rule and every substantive requirement hold. Never stop for time or count reasons, and never call an operational stop a scientific one.
 
 Have the Manager write a closeout covering:

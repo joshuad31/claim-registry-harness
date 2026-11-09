@@ -121,7 +121,7 @@ const C = window.CRL = {
           // Off-target check: a long chat can make NotebookLM answer an earlier question instead.
           const wanted = (this.job.text.match(/[\w.@()\-]+\.(?:pdf\.)?(?:md|txt)/g) || []);
           rec.requested_sources = wanted;
-          rec.answer_names_requested_source = !wanted.length || wanted.some(f => txt.includes(f) || txt.includes(f.replace(/\.pdf\.md$|\.md$/, '')));
+          rec.answer_names_requested_source = !wanted.length || wanted.some(f => txt.includes(f) || txt.includes(f.replace(/\.pdf\.md$|\.md$/, '').slice(0, 30)));  // NotebookLM truncates long filenames in citations
           this.state = 'CAPTURING'; this.pub(); await this.writeOut(rec);
           this.job = null; this.pairEl = null; this.state = 'FREE'; this.pub({ last: rec.qid });
         } else this.pub({ chars: txt.length });

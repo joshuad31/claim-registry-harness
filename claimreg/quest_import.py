@@ -108,6 +108,10 @@ def _attempt(qid, att, query, answer, outcome, meta, source_file, flagged_file) 
     if tool_only:
         outcome = "FAILED"
     on_target = meta.get("answer_names_requested_source", True) is not False
+    if not on_target:
+        # older lane runners missed citations under a truncated filename: accept a 30-char stem prefix
+        wanted = re.findall(r"[\w@().,\-]+\.(?:pdf\.md|md|txt)", query or "")
+        on_target = any(re.sub(r"(\.pdf)?\.(md|txt)$", "", w)[:30] in answer for w in wanted)
     tool_output = bool(meta.get("contains_tool_output")) or bool(TOOL_OUTPUT.search(answer)) \
         or (qid, att) in flagged_file
     recorded_usable = meta.get("usable")

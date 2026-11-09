@@ -157,6 +157,13 @@ def cmd_import_quest(a) -> int:
     return 0
 
 
+def cmd_quest_score(a) -> int:
+    from .notebooklm.scorecard import main as score_main
+    argv = [a.folder] + (["--start", a.start] if a.start else []) + sum((["--exclude", e] for e in a.exclude), []) \
+        + (["--json"] if a.json else [])
+    return score_main(argv)
+
+
 def cmd_publish(a) -> int:
     from .publish import publish
     out = publish(Path(a.project), a.run, include_corpus=True if a.include_corpus else None)
@@ -341,6 +348,14 @@ def main(argv=None) -> int:
                    help="drop answers flagged for NotebookLM tool output instead of keeping them as candidates")
     s.add_argument("--force", action="store_true", help="re-import into a run that already has a quest")
     s.set_defaults(fn=cmd_import_quest)
+
+    s = sub.add_parser("quest-score", help="throughput scorecard for a NotebookLM quest (45/h standard)")
+    s.add_argument("folder", help="quest_tool recording, driver answers folder, or a run's 02_DISCOVERY")
+    s.add_argument("--start", help="the go-ahead time, e.g. 2026-11-10T09:00-06:00")
+    s.add_argument("--exclude", action="append", default=[], metavar="START/END",
+                   help="a disclosed interval when you were away (repeatable)")
+    s.add_argument("--json", action="store_true")
+    s.set_defaults(fn=cmd_quest_score)
 
     s = sub.add_parser("import-chatgpt", help="import the ChatGPT-era PTX full run")
     s.add_argument("chatgpt_run")

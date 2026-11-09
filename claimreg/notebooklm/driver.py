@@ -21,8 +21,11 @@ quest-driver.json:
     "profile_dir": ".notebooklm-profile",  # the driver's own browser profile (keep it private)
     "channel": "chrome",                   # use installed Google Chrome; "" for Playwright's Chromium
     "max_backlog": 12,                     # hold new questions while this many answers await assessment
-    "assessed_file": "artifacts/quest-state/assessed-qids.json"   # list of assessed QIDs (optional)
+    "assessed_file": "artifacts/quest-state/assessed-qids.json"   # assessed QIDs + times (optional)
   }
+
+On its first run for a quest the driver writes <answers_dir>/quest-clock.json (driver_started), the
+scorecard's default go-ahead time. Add "go_ahead": "<ISO time>" to it to set the go-ahead exactly.
 
 Needs Python 3.10+ and Playwright: `pip install playwright` (and `playwright install chromium` only
 if you are not using installed Chrome). The browser logic itself is lane-runner.js, unchanged.
@@ -219,8 +222,18 @@ class Driver:
             time.sleep(poll)
 
 
+def stamp_clock(cfg):
+    """Record when the driver first ran for this quest: the scorecard's default go-ahead time.
+    Never overwritten by a restart. Put {"go_ahead": "<ISO time>"} in the file to set it exactly."""
+    clock = cfg["_answers"] / "quest-clock.json"
+    if not clock.exists():
+        clock.write_text(json.dumps({"run_id": cfg.get("run_id", ""),
+                                     "driver_started": time.strftime("%Y-%m-%dT%H:%M:%S%z")}, indent=1))
+
+
 def run(cfg, headless=False, max_seconds=None):
     from playwright.sync_api import sync_playwright
+    stamp_clock(cfg)
     with sync_playwright() as p:
         d = Driver(cfg, headless=headless)
         d.start(p)

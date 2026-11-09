@@ -65,7 +65,20 @@ Every question must pass the header's query firewall:
 - it uses no hypothesis labels or project jargon;
 - it never asks for fewer than 900 words. Only a single-source question may state a length, and then only "about 900 words or more". Never ask for a short or brief answer.
 
-**Pace to the Manager, not to NotebookLM.** In the PTX test (111 sources, six copies, 2026-10-30), the lanes saved 112 answers in 27 minutes, about 250 an hour, with each answer taking 45–110 seconds. One Manager assessed about 70 an hour in 6-answer rounds. Measured from the first send, the quest finished in 1 h 28 min: 143 questions, all assessed, closed as an operational stop. Size `max_backlog` so the Manager's packets still steer the questions.
+**Pace to the Manager, not to NotebookLM.** Lane speed is not throughput. The standard comes from the Ready-Fire-Aim throughput protocol:
+
+- count unique usable QIDs that are captured **and graded**;
+- start the clock at the go-ahead, not the first send;
+- target 45 an hour, aspiration 60.
+
+On that standard, the 10-30 PTX test (111 sources, six copies) scored as follows:
+
+- The lanes alone answered fast: 45–110 seconds each, about 116 usable an hour once running.
+- Setup took 86 minutes before the first send, so the first hour produced nothing.
+- The whole quest made 50 graded an hour, go-ahead to grading complete.
+- Grading fell up to 111 answers behind, a median of 52 minutes. Most questions were therefore written without the Manager's feedback.
+
+The driver removes the setup time. `max_backlog` (default 12) keeps the lanes from outrunning the Manager, which makes the Manager's grading speed the throughput.
 
 ## 5. NotebookLM failure modes, and what the harness does about them
 
@@ -80,3 +93,45 @@ Every question must pass the header's query firewall:
 | Two answers were nothing but unexecuted tool calls | Recorded `FAILED`, not usable; re-ask in another lane |
 | One long chat kept repeating a wrong description of a source | Re-ask in a different notebook copy; the answer from the other chat was consistent with the rest |
 | One Manager could not keep up with six lanes | Backlog pacing (`max_backlog`) |
+
+## 6. Measuring throughput: the scorecard
+
+```
+python cr.py quest-score <quest folder> [--start 2026-11-10T09:00-06:00] [--exclude START/END]
+```
+
+The command reads a `quest_tool` recording, a driver answers folder, or a run's `02_DISCOVERY` folder, and prints PASS or FAIL against the standard:
+
+| Check | Pass when |
+|---|---|
+| Start-up | first question sent within 4 min of the go-ahead |
+| 20-minute check | at least 15 usable QIDs saved |
+| First hour | at least 45 usable QIDs captured **and graded** (aspiration 60) |
+| Whole quest | at least 45 graded usable QIDs per active hour, from the go-ahead to grading complete |
+| Steering | captured-but-ungraded answers never exceed 12 |
+
+**What counts:** each QID once. Retries, failed and unusable attempts are reported separately and never counted.
+
+**The clock:**
+
+- It starts at `--start`, else the recording's `requested_at`, else the driver's `quest-clock.json`. The driver writes that file the first time it runs, and a restart never changes it.
+- Only time you disclose with `--exclude` is subtracted.
+- With no go-ahead time at all, the scorecard says the clock started at the first send, which hides setup, and the start-up check reads UNKNOWN.
+
+**Grading times** come from the Manager's `assessment-ledger.json`, or from `assessed-qids.json`, where `quest_tool.py assessed` stamps each QID. Without grading times, the graded checks read UNKNOWN, never PASS.
+
+**The diagnostics** name the bottleneck:
+
+- setup;
+- grading lag;
+- idle lanes (question supply or pacing);
+- slow refill (save-to-refill over 60 s).
+
+Fix that bottleneck and nothing else.
+
+Past runs, rescored:
+
+| Run | Start-up | 20 min | First hour | Whole quest | Steering |
+|---|---|---|---|---|---|
+| 10-24 (ChatGPT, browser extension) | 5.3 min, FAIL | 9, FAIL | 61 captured; grading not recorded | 66/h captured | not recorded |
+| 10-30 (Claude, lane runner, no driver) | 86 min, FAIL | 0, FAIL | 0, FAIL | 50/h, PASS | backlog 111, FAIL |

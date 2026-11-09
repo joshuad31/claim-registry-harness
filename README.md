@@ -20,10 +20,12 @@ engine (`local-rules-v1.9`) that answers every role from the supplied text; a re
 to any role at any time. See `docs/LOCAL-ENGINE.md` for exactly what the local engine does and does
 not do.
 
+* **Taking over this project? Read `HANDOFF.md` first.**
 * **Start here:** `START HERE.md`
 * **Your first quest, step by step (NotebookLM):** `docs/WALKTHROUGH.md`
 * **The NotebookLM quest driver, in reference form:** `docs/NOTEBOOKLM-QUEST.md`
 * **Bring a finished NotebookLM quest into a run:** `cr import-quest` (`docs/USER-GUIDE.md` §3a)
+* **Did the quest meet the throughput standard?** `cr quest-score` (`docs/NOTEBOOKLM-QUEST.md` §6)
 * **How to use it:** `docs/USER-GUIDE.md`
 * **What the local engine is:** `docs/LOCAL-ENGINE.md`
 * **Decisions where the specification was open:** `docs/DECISIONS.md` (first build) and
@@ -36,13 +38,13 @@ Python 3.11 or newer, standard library only. The optional NotebookLM driver
 (`claimreg/notebooklm/`, `nlm.cmd`) also needs `pip install playwright` and Google Chrome.
 
 ```
-python cr.py selftest     # 36 tests (+1 browser test, run separately), no network
+python cr.py selftest     # 43 tests (+1 browser test, run separately), no network
 python cr.py demo         # a complete run of a bundled synthetic corpus, from an empty folder
 ```
 
 ## What is in this repository
 
-- the harness, its prompt library, 36 tests plus a NotebookLM driver test, and the documentation;
+- the harness, its prompt library, 43 tests plus a NotebookLM driver test, and the documentation;
 - the NotebookLM quest driver: one Chrome window, one tab per notebook copy, answers written
   straight to disk (`claimreg/notebooklm/`, `nlm.cmd`, `examples/quest-driver.PTX.json`);
 - two synthetic example corpora (`examples/demo`, `examples/worked`);

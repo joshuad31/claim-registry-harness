@@ -19,7 +19,7 @@ It is plain Python 3.11 or newer with **no third-party packages**. On Windows, u
 
 ```
 python cr.py --help
-python cr.py selftest            # 36 tests, about half a minute, no network and no model calls
+python cr.py selftest            # 43 tests, about half a minute, no network and no model calls
 python cr.py demo                # a complete run of a bundled synthetic corpus, offline
 ```
 
