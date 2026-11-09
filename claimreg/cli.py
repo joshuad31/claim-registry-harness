@@ -144,6 +144,19 @@ def cmd_import_chatgpt(a) -> int:
     return 0
 
 
+def cmd_import_quest(a) -> int:
+    from .quest_import import QuestImportError, import_quest
+    try:
+        out = import_quest(Path(a.project), Path(a.quest), run_id=a.run,
+                           closeout=Path(a.closeout) if a.closeout else None, select=a.select,
+                           stop=a.stop, exclude_tool_output=a.exclude_tool_output, force=a.force)
+    except QuestImportError as e:
+        print(f"import-quest: {e}", file=sys.stderr)
+        return 2
+    _print(out)
+    return 0
+
+
 def cmd_publish(a) -> int:
     from .publish import publish
     out = publish(Path(a.project), a.run, include_corpus=True if a.include_corpus else None)
@@ -239,7 +252,7 @@ def cmd_demo(a) -> int:
     write_json(dst / "project.json", {
         "project": {"name": "DEMO - synthetic silicate/wheat corpus", "run_prefix": "RUN-DEMO"},
         "default_provider": "local",
-        "providers": {"local": {"type": "local", "model": "local-rules-v1.8"}},
+        "providers": {"local": {"type": "local", "model": "local-rules-v1.9"}},
         "quest": {"round_size": 4, "max_rounds": 6},
     })
     ctx = RunContext(dst, a.run_id or "RUN-DEMO-1", create=True)
@@ -314,6 +327,20 @@ def main(argv=None) -> int:
     s.add_argument("--role")
     s.add_argument("--operator-model")
     s.set_defaults(fn=cmd_queue)
+
+    s = sub.add_parser("import-quest", help="import a recorded NotebookLM quest; cr run then continues at FRDs")
+    s.add_argument("project", help="project folder with corpus, header and index (made by cr init)")
+    s.add_argument("quest", help="the quest folder (quest_tool state or the driver's answers folder)")
+    s.add_argument("--run", help="run id to create (default: a new <prefix>-QUEST-... run)")
+    s.add_argument("--closeout", help="the Manager's closeout .md; its 'Selected repair attempts' line is honoured")
+    s.add_argument("--select", action="append", default=[], metavar="QNNNN-ANN",
+                   help="use this attempt for its question (repeatable); overrides the closeout")
+    s.add_argument("--stop", choices=["operational", "scientific"], default="operational",
+                   help="how the quest ended (default: operational)")
+    s.add_argument("--exclude-tool-output", action="store_true",
+                   help="drop answers flagged for NotebookLM tool output instead of keeping them as candidates")
+    s.add_argument("--force", action="store_true", help="re-import into a run that already has a quest")
+    s.set_defaults(fn=cmd_import_quest)
 
     s = sub.add_parser("import-chatgpt", help="import the ChatGPT-era PTX full run")
     s.add_argument("chatgpt_run")

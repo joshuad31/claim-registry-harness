@@ -237,11 +237,36 @@ Have the Manager write a closeout covering:
 
 `projects/PTX` and the PTX closeout are the worked example.
 
-## After the quest
+## After the quest: import it and build the evidence
 
-FRDs are built after the quest, never during it. FRD construction and blind source-only validation (`frd_generate`, `frd_validate` and the stages after them in `cr run`) are separate downstream stages. Nothing in a quest certifies source fidelity. Answers flagged for tool output stay *candidate* until their quotations are checked against the source files.
+FRDs are built after the quest, never during it. One command brings the quest into the project you made in step 3:
 
-> **Current gap.** The only importer from a recorded quest into `cr run` is still the PTX-specific `cr import-chatgpt`. A general importer for NotebookLM quest records is an open item. Until it exists, the quest's answer files and closeout are the deliverable of this stage.
+```
+python cr.py import-quest projects\MyTopic <quest folder> --closeout <quest folder>\CLOSEOUT.md
+python cr.py run          projects\MyTopic --run <the run id it printed>
+```
+
+`<quest folder>` can be either of these:
+
+- the folder `quest_tool.py` recorded into, the one that contains `recording\`;
+- just the driver's answers folder, for example `nlm-answers-mytopic`, if your Investigator queued questions straight into the driver.
+
+**What the import does:**
+
+- **It picks one answer per question.** When a question was re-asked (A01, A02, …), the Manager's "Selected repair attempts" line in the closeout wins. Otherwise the importer takes the newest usable answer without tool output. To override either, use `--select Q0101-A03`. Every attempt, and why it was or wasn't chosen, is kept in `02_DISCOVERY\02_query-responses\attempts.json`.
+- **It keeps answers flagged for NotebookLM tool output, labelled candidates** (`CANDIDATE_UNVERIFIED`). FRD validation then checks each quotation against the real source file, which clears or rejects it. Add `--exclude-tool-output` to drop them instead.
+- **It labels the stop honestly.** The import is recorded as an operational stop unless you pass `--stop scientific`. Only do that if the Manager actually directed STOP.
+- **It leaves the Manager's private files out.** The ACH_Eval fragments and the ledger are not imported. The run's own `assess` stage makes the final assessment.
+
+`cr run` then continues with FRD generation, blind source-only validation, witnesses, matching, coverage, crux and the report. Every quotation that goes forward is the source's own sentence, checked word for word by `cr verify`.
+
+**Who builds the FRDs.** On the default local engine this runs offline in under a minute. On the 10-30 PTX quest, 143 answers gave:
+
+- 572 candidate FRDs;
+- 473 that passed source validation;
+- 336 witnesses.
+
+But the local engine judges whether a source sentence supports NotebookLM's paraphrase by word overlap, not by understanding (`docs/LOCAL-ENGINE.md`). For a result you will rely on, route `frd_generator` and `frd_validator`, and ideally the matching roles, to a model or to the file queue answered by an agent (`docs/USER-GUIDE.md` §2–3).
 
 ## Where to read more
 

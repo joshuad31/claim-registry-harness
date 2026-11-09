@@ -6,7 +6,7 @@ engine removes that dependency. It is the default provider for every role, it ru
 needs no network, API key, queue or operator.
 
 ```
-provider type: local        model identity: local-rules-v1.8
+provider type: local        model identity: local-rules-v1.9
 ```
 
 ## The guarantee, and what it costs
@@ -19,7 +19,7 @@ twice produces byte-identical artifacts, and a rerun is served entirely from the
 **Cost.** It is a *lexical-structural analyst*, not a language model. It reads the same prompt the
 model roles read and applies explicit rules to the words in it. It does not understand a sentence.
 Everything it concludes is an approximation of the judgment the prompt asks for, and the artifacts say
-so: the run log records `local:local-rules-v1.8` as the provider and model for every call, and the
+so: the run log records `local:local-rules-v1.9` as the provider and model for every call, and the
 report discloses that the matching and assessment came from this engine.
 
 This is the trade the owner authorized: a mediocre harness that always finishes, with every step
@@ -34,7 +34,7 @@ auditable and overrulable, instead of a better harness that stops.
 | `investigator` | Rotates the ranked sources across the hypothesis clauses and decisive tests, one to two sources per question | `02_DISCOVERY/01_issued-questions/` |
 | `archivist` | **Extractive**: scores the supplied passages against the question, quotes the best sentences with their file and heading, and never composes a new claim | `02_DISCOVERY/02_query-responses/` |
 | `coordinator` | Cumulative bookkeeping split of the gauge over the hypotheses; substantive conditions computed from whether the round's answer blocks touch the decisive tests, falsification, assumptions and corroboration contexts | `04_ach-eval-checkpoints/` |
-| `frd_generator` | Turns each `[SOURCE] "quote" (file, section)` line into one FRD, at most four per response | `03_FRDS/01_candidates/` |
+| `frd_generator` | Turns each `[SOURCE] "quote" (file, section)` line into one FRD, at most four per response. If a response has none (a NotebookLM answer, for example), it takes statements cited as `claim (file.md, heading)` of at least 8 words instead: one per source file first, statements with numbers first (v1.9) | `03_FRDS/01_candidates/` |
 | `frd_validator` | Finds the source sentence that best supports the candidate claim and copies it **verbatim**; if nothing supports it, NOT FOUND | `03_FRDS/04_validation-results/` |
 | `unit_deriver` | Splits the human-written hypothesis into clause-level units, each anchored to an exact substring; caps 8 required / 4 constraint / 3 adverse / 3 corroborating / 1 evaluative | `01_FRAME/coverage-units.json` |
 | `witness_constructor` | States the validated claim declaratively and appends the source as a citation suffix, within the word ceiling | `05_WITNESSES/` |
@@ -117,3 +117,16 @@ The model identity is `local-rules-<version>`. It is part of the cache key, so c
 behaviour without changing the version would silently reuse old answers. **Bump `VERSION` in
 `claimreg/llm/local.py` whenever the engine's output changes**, then rerun; the run log will show both
 identities side by side, which is the honest record.
+
+## Version history
+
+- **v1.9 (2026-11-09).** `frd_generator` also reads statements cited as `claim (file.md, heading)`.
+  That is NotebookLM's citation style, so FRDs can now be built offline from an imported NotebookLM
+  quest (`cr import-quest`). Responses that contain `[SOURCE] "quote"` lines are handled exactly as
+  in v1.8. **Caveat for paraphrased answers:** `frd_validator` accepts the best-supporting source
+  sentence when it shares at least a quarter of the claim's content words, and rates it PARTLY RIGHT
+  below 0.6. On the 10-30 PTX quest, 349 of 473 READY validations were PARTLY RIGHT. The quotation
+  that goes forward is always the source's own sentence, checked verbatim by `cr verify`, but whether
+  it says what NotebookLM said is judged lexically. Route `frd_validator` to a model (or the file
+  queue) when that matters.
+- **v1.8.** First shipped version (see `DECISIONS-ADDENDUM.md`).

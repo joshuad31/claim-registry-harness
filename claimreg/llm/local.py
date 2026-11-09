@@ -48,8 +48,11 @@ from ..util import (MODAL_RE, NEGATION_RE, norm_for_match, norm_ws, read_text,
 from .base import LLMRequest, LLMResponse
 from .providers import BaseProvider
 
-MODEL = "local-rules-v1.8"
-VERSION = "1.8"
+MODEL = "local-rules-v1.9"
+VERSION = "1.9"
+
+# "claim (exact-filename.md, Section heading)": the citation style of NotebookLM and model Archivists
+_CITED_CLAIM = re.compile(r"(.+?)\s*\(([^()\n]{3,160}?\.(?:md|markdown|txt))\s*,\s*([^()\n]{1,160})\)")
 
 # --------------------------------------------------------------------------- #
 # 1. text engine
@@ -904,6 +907,36 @@ class LocalProvider(BaseProvider):
                         "status": "ordinary", "speaker": "the source authors"})
             if len(out) >= cap:
                 break
+        if not out:
+            # v1.9: NotebookLM (and most model Archivists) paraphrase and cite each statement as
+            # "claim (exact-filename.md, Section heading)".  Take cited statements of at least 8
+            # words, one per source file first so the four slots spread across sources, numbers
+            # first within that.  The validator then locates the source's own supporting sentence.
+            cited = []
+            for line in re.split(r"\n+", resp):
+                for m in _CITED_CLAIM.finditer(line):
+                    claim = norm_ws(re.sub(r"^\s*(?:[-*•\d.)]+\s*)?(?:\[[A-Z /_-]{2,30}\]\s*)?", "",
+                                           m.group(1))).strip(" .;:")
+                    if word_count(claim) >= 8:
+                        cited.append((claim, m.group(2).strip(), m.group(3).strip()))
+            seen_files, picked = set(), []
+            for rank in (0, 1):
+                for claim, fname, loc in sorted(cited, key=lambda x: not re.search(r"\d", x[0])):
+                    if len(picked) >= cap:
+                        break
+                    if (fname in seen_files) != bool(rank) or any(claim == p[0] for p in picked):
+                        continue
+                    seen_files.add(fname)
+                    picked.append((claim, fname, loc))
+            for claim, fname, loc in picked:
+                out.append({"cluster": (loc or "findings").lower().replace(" ", "-")[:40],
+                            "label": truncate_words(claim, 8),
+                            "source_files": [fname], "locator": loc or "Results",
+                            "claim": claim, "verification_instruction":
+                                f"Find the passage in {fname} at '{loc or 'Results'}' that states this "
+                                f"and check every number, qualifier and the direction of the finding.",
+                            "evidence_label": "[SOURCE]", "provenance": "OWN_RESULT",
+                            "status": "ordinary", "speaker": "the source authors"})
         if not out:
             for s in _sentences(resp, 10)[:cap]:
                 out.append({"cluster": "unattributed", "label": truncate_words(s, 8),

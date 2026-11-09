@@ -112,7 +112,7 @@ DEFAULT_CONFIG: dict[str, Any] = {
             # network, key or queue.  It is not a language model; see
             # claimreg/llm/local.py for exactly what it does and does not do.
             "type": "local",
-            "model": "local-rules-v1.8",
+            "model": "local-rules-v1.9",
         },
     },
     # role -> provider name (a key of "providers").  The local engine is the

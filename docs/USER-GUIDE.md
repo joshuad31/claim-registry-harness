@@ -19,7 +19,7 @@ It is plain Python 3.11 or newer with **no third-party packages**. On Windows, u
 
 ```
 python cr.py --help
-python cr.py selftest            # 31 tests, about half a minute, no network and no model calls
+python cr.py selftest            # 36 tests, about half a minute, no network and no model calls
 python cr.py demo                # a complete run of a bundled synthetic corpus, offline
 ```
 
@@ -149,6 +149,33 @@ requests. To set batch sizes per role:
 Rules for whoever answers are in `docs/AGENT-OPERATOR.md`. The most important rule: the witness
 constructor and the witness auditor, and matching pass A and pass B, must be answered in **different**
 contexts.
+
+## 3a. Importing a NotebookLM quest
+
+When discovery ran in NotebookLM through the local driver (`docs/NOTEBOOKLM-QUEST.md`), import it instead of running the harness's own quest stage:
+
+```
+python cr.py import-quest projects\MyTopic <quest folder> [--run RUN-ID] [--closeout CLOSEOUT.md]
+                          [--select Q0101-A03 ...] [--stop operational|scientific] [--exclude-tool-output]
+python cr.py run projects\MyTopic --run RUN-ID
+```
+
+**What it reads.** Either of these:
+
+- the `quest_tool.py` recording: `recording\questions\*.json` and `recording\captures\*.json`, plus `feedback-packets\` and `capture-flags.json` if present;
+- the driver's answer files alone: `Qnnnn-Ann.json`, with the questions in `queue\`.
+
+**What it does:**
+
+- runs the `corpus`, `index`, `archivist_prompt` and `frame` stages as usual;
+- writes the discovery records the later stages read;
+- marks the `quest` stage `imported`.
+
+**How it picks one answer per question:** an explicit choice wins. That is `--select`, then the closeout's "Selected repair attempts" line. Otherwise it takes the newest usable attempt without tool output. Otherwise it takes the newest usable attempt, labelled `CANDIDATE_UNVERIFIED`.
+
+**What it never imports:** the Manager's private assessment files.
+
+**The stop:** it is recorded as `OPERATIONAL_STOP (imported)` unless `--stop scientific` is given.
 
 ## 4. Reading the results
 

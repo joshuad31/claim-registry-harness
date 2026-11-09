@@ -8,7 +8,7 @@ A quest has exactly three parts. New to this? Start with `docs/WALKTHROUGH.md`, 
 | Investigator | An agent: Claude, Codex, Cursor, Grok and so on | Writes questions and files answers | Scores hypotheses or sees the Manager's numbers |
 | Manager | A second agent context | Runs ACH_Eval every 5–6 answers, writes the feedback packet and ready-to-send questions | Touches NotebookLM |
 
-No API key is needed. NotebookLM is the only model the harness talks to during the quest. The two agents only read and write files. FRDs are made after the quest, not during it.
+No API key is needed. NotebookLM is the only model the harness talks to during the quest. The two agents only read and write files. FRDs are made after the quest, not during it: `cr import-quest` brings the finished quest into a run, and `cr run` builds the evidence from it.
 
 ## 1. Before the quest (once per corpus)
 

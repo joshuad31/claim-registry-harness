@@ -191,6 +191,22 @@ class Corpus:
         if not name:
             return None
         n = name.strip().strip("`'\"()[] ")
+        r = self._resolve_exactish(n)
+        if r:
+            return r
+        # a citation pattern may have swallowed preceding words ("see Sánchez 2019.md"): try each
+        # shorter tail once.  (Each tail is checked directly, not recursively; the recursive form
+        # doubled its work per word and never finished on long NotebookLM answer phrases.)
+        words = n.split(" ")
+        for i in range(1, len(words)):
+            r = self._resolve_exactish(" ".join(words[i:]).strip("`'\"()[] "))
+            if r:
+                return r
+        return None
+
+    def _resolve_exactish(self, n: str) -> str | None:
+        if not n:
+            return None
         if n in self.by_name:
             return n
         low = n.lower()
@@ -206,12 +222,6 @@ class Corpus:
                 ks = re.sub(r"(\.pdf)?\.(md|markdown|txt)$", "", k.rsplit("/", 1)[-1])
                 if ks == stem:
                     return v
-        # a citation pattern may have swallowed preceding words ("see Sánchez 2019.md")
-        words = n.split(" ")
-        for i in range(1, len(words)):
-            r = self.resolve(" ".join(words[i:]))
-            if r:
-                return r
         return None
 
     # -------------------------------------------------------------- #
