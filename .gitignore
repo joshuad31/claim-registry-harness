@@ -25,3 +25,11 @@ projects/PTX/*.zip
 Thumbs.db
 desktop.ini
 .DS_Store
+
+# NotebookLM driver: the Chrome profile holds signed-in Google session cookies.
+# Never commit it.
+.notebooklm-profile/
+**/.notebooklm-profile/
+
+# NotebookLM driver output (answers, queue, status, assessed list)
+nlm-answers/

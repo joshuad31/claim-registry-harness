@@ -20,7 +20,7 @@ run, kept untouched for comparison.
 ## Prove it in two commands
 
 ```
-cd "C:\Users\joshu\Desktop\FINAL SPECIFICATION DOCUMENTS\DeepSeek_2 output"
+cd claim-registry-harness       # the folder you cloned or unzipped
 python cr.py selftest      # 31 tests, about 30 seconds, no network
 python cr.py demo          # builds a fresh project (projects\DEMO-2 if DEMO exists) and runs every stage
 ```
@@ -28,6 +28,18 @@ python cr.py demo          # builds a fresh project (projects\DEMO-2 if DEMO exi
 `cr selftest` includes an end-to-end offline pipeline test and a worked-example regression that fails
 if coverage sets or crux candidates stop being produced. `cr demo` prints the report and browser paths
 when it finishes.
+
+## Run your own quest with NotebookLM
+
+**`docs\WALKTHROUGH.md`** takes a new user from a question to a finished discovery quest. It covers:
+
+- finding and converting sources;
+- the index, the quest header and the Archivist custom prompt;
+- the NotebookLM notebook and its copies;
+- the local driver (`nlm run …`);
+- the two agents (Investigator and Manager).
+
+`docs\NOTEBOOKLM-QUEST.md` is the same material in reference form.
 
 ## Read these, in this order
 
@@ -114,9 +126,12 @@ Then run the same command. Only the roles you moved are asked again.
 | `claimreg\` | The harness (Python 3.11+, standard library only) |
 | `claimreg\llm\local.py` | The local engine: one handler per role, with its rules and traces |
 | `claimreg\prompts\` | The prompt library; your specification prompts are used verbatim from `prompts\spec\` |
+| `claimreg\notebooklm\` | The NotebookLM quest driver (`driver.py`), lane runner, quest tool and recorder, Investigator and Manager briefs (needs Playwright and Chrome) |
+| `nlm.cmd` | Starts the NotebookLM driver: `nlm login …`, `nlm run …` |
 | `cr.py`, `cr.cmd` | The command line (`selftest`, `demo`, `run`, `verify`, `fork`, `publish`, `queue`) |
 | `docs\` | User guide, local-engine guide, decisions (both builds), queue operator instructions |
-| `tests\` | 31 tests: solver vs brute force, header parsing, mechanical gates, mock pipeline, offline pipeline, worked example |
+| `tests\` | 31 tests plus the NotebookLM driver test against a mock notebook (run directly): solver vs brute force, header parsing, mechanical gates, mock pipeline, offline pipeline, worked example |
+| `examples\quest-driver.PTX.json` | Driver config for the six PTX notebook copies; copy it for a new corpus |
 | `examples\demo\` | The synthetic realistic corpus `cr demo` copies |
 | `examples\worked\` | The engineered corpus behind the coverage/crux regression |
 | `projects\PTX-LOCAL\` | The offline demonstration on the real PTX corpus (run records; the papers themselves are not committed) |

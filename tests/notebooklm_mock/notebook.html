@@ -1,0 +1,55 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Mock Notebook - Gemini Notebook</title></head>
+<body>
+<!-- A stand-in for the NotebookLM chat page, with the same selectors the lane runner relies on.
+     The web "Discover sources" box comes first on the page, as in the real product. -->
+<form id="discover"><textarea aria-label="Discover sources based on the inputted query"></textarea>
+  <button aria-label="Submit" disabled>go</button></form>
+<section class="chat-panel"><chat-panel><div class="chat-panel-content" id="chat"></div></chat-panel></section>
+<form id="ask"><textarea aria-label="Query box" placeholder="Ask a question or create something"></textarea>
+  <button aria-label="Submit" type="button" disabled>send</button></form>
+<script>
+const nb = location.pathname.split('/notebook/')[1];
+const KEY = 'mock_chat_' + nb;
+const chat = document.getElementById('chat');
+const ta = document.querySelector('textarea[aria-label="Query box"]');
+const btn = document.querySelector('#ask button');
+ta.addEventListener('input', () => { btn.disabled = !ta.value.trim(); });
+const load = () => JSON.parse(localStorage.getItem(KEY) || '[]');
+const save = (h) => localStorage.setItem(KEY, JSON.stringify(h));
+function answerFor(q) {
+  if (q.includes('TOOLCALLONLY')) return 'Tool call:default_api:view_file{AbsolutePath:/workspace/knowledge/x.md}Start line: 1 end_line: 300.0.0.0.0.0';
+  let body = '[CLINICAL] Mock finding for: ' + q.slice(0, 80) + ' (mock_source.pdf.md, RESULTS). ';
+  body += 'Second claim with a number 12.5 mL/s (other_source.pdf.md, Table 2).\n'.repeat(12);
+  if (q.includes('TOOLOUTPUT')) body = 'Tool response for view_file:\n{\n  "result":  "### Fake title"\n}\n' + body;
+  return body;
+}
+function render() {
+  chat.innerHTML = '';
+  for (const t of load()) {
+    const pair = document.createElement('div'); pair.className = 'chat-message-pair';
+    const u = document.createElement('chat-message'); u.className = 'individual-message';
+    u.innerHTML = '<div class="from-user-container"></div>'; u.firstChild.textContent = t.q; pair.appendChild(u);
+    if (Date.now() >= t.start) {
+      const m = document.createElement('chat-message'); m.className = 'individual-message';
+      const card = document.createElement('mat-card'); card.className = 'to-user-message-card-content';
+      const inner = document.createElement('mat-card-content'); inner.className = 'message-content to-user-message-inner-content';
+      const text = document.createElement('div'); text.className = 'message-text-content';
+      const done = Date.now() >= t.end;
+      text.innerText = 'Thoughts\nReading file...\nexpand_more\n' + (done ? answerFor(t.q) : answerFor(t.q).slice(0, 40));
+      inner.appendChild(text); card.appendChild(inner); m.appendChild(card);
+      if (done) { const c = document.createElement('button'); c.setAttribute('aria-label', 'Copy model response to clipboard'); c.textContent = 'copy'; m.appendChild(c); }
+      pair.appendChild(m);
+    }
+    chat.appendChild(pair);
+  }
+}
+btn.addEventListener('click', () => {
+  if (btn.disabled) return;
+  const q = ta.value; ta.value = ''; btn.disabled = true;
+  const h = load(); const n = Date.now(); const dur = 1500 + (q.length % 7) * 400;
+  h.push({ q, start: n + 300, end: n + 300 + dur }); save(h); render();
+});
+setInterval(render, 250);
+render();
+</script></body></html>

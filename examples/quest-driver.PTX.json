@@ -1,0 +1,17 @@
+{
+  "run_id": "PTX-LOCAL-DRIVER-TEST",
+  "notebooks": {
+    "primary": "https://notebook.google.com/notebook/3b728d29-628f-4c3e-9b0d-ce485d37d24a",
+    "clone-1": "https://notebook.google.com/notebook/4ffdb7f0-b402-4f08-92da-ab34503a9f01",
+    "clone-2": "https://notebook.google.com/notebook/466f348c-7541-43f9-936d-9f8539880774",
+    "clone-3": "https://notebook.google.com/notebook/f6a049d5-56f4-4ae8-be11-ed48f8d4cf31",
+    "clone-4": "https://notebook.google.com/notebook/5c481b42-32cd-4f53-bec9-4f11b664282f",
+    "clone-5": "https://notebook.google.com/notebook/cb66526c-e692-4e5b-98ed-b56df7cee09a"
+  },
+  "answers_dir": "../nlm-answers",
+  "profile_dir": "../.notebooklm-profile",
+  "channel": "chrome",
+  "max_backlog": 12,
+  "assessed_file": "../nlm-answers/assessed-qids.json",
+  "poll_seconds": 3
+}

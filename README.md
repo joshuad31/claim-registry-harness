@@ -21,6 +21,8 @@ to any role at any time. See `docs/LOCAL-ENGINE.md` for exactly what the local e
 not do.
 
 * **Start here:** `START HERE.md`
+* **Your first quest, step by step (NotebookLM):** `docs/WALKTHROUGH.md`
+* **The NotebookLM quest driver, in reference form:** `docs/NOTEBOOKLM-QUEST.md`
 * **How to use it:** `docs/USER-GUIDE.md`
 * **What the local engine is:** `docs/LOCAL-ENGINE.md`
 * **Decisions where the specification was open:** `docs/DECISIONS.md` (first build) and
@@ -29,16 +31,19 @@ not do.
 * **The offline PTX demonstration:** `projects/PTX-LOCAL/02_RUNS/RUN-PTX-LOCAL-OFFLINE/`
 * **The worked coverage/crux example:** `projects/WORKED/`
 
-Python 3.11 or newer, standard library only.
+Python 3.11 or newer, standard library only. The optional NotebookLM driver
+(`claimreg/notebooklm/`, `nlm.cmd`) also needs `pip install playwright` and Google Chrome.
 
 ```
-python cr.py selftest     # 31 tests, about half a minute, no network
+python cr.py selftest     # 31 tests (+1 browser test, run separately), no network
 python cr.py demo         # a complete run of a bundled synthetic corpus, from an empty folder
 ```
 
 ## What is in this repository
 
-- the harness, its prompt library, 31 tests, and the documentation;
+- the harness, its prompt library, 31 tests plus a NotebookLM driver test, and the documentation;
+- the NotebookLM quest driver: one Chrome window, one tab per notebook copy, answers written
+  straight to disk (`claimreg/notebooklm/`, `nlm.cmd`, `examples/quest-driver.PTX.json`);
 - two synthetic example corpora (`examples/demo`, `examples/worked`);
 - four completed runs with their reports and machine records:
   `projects/DEMO`, `projects/WORKED`, `projects/PTX` (the earlier queue-based run) and
