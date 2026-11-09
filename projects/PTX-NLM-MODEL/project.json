@@ -1,0 +1,57 @@
+{
+  "project": {
+    "name": "PTX timed quest 2026-11-09 model run",
+    "run_prefix": "RUN-PTX-NLM-MODEL"
+  },
+  "frame": {
+    "approval_note": "Axis 1 approved by Josh on 2026-09-12 (header v4.1); axis 2 is TEST-ONLY per the header."
+  },
+  "default_provider": "local",
+  "roles": {
+    "unit_deriver": "openai",
+    "frd_generator": "openai",
+    "frd_validator": "openai",
+    "witness_constructor": "openai",
+    "witness_auditor": "openai",
+    "matcher_a": "openai",
+    "matcher_b": "openai",
+    "match_adjudicator": "openai",
+    "joint_checker": "openai",
+    "incompat_checker": "openai",
+    "assessor": "openai",
+    "reporter": "openai"
+  },
+  "providers": {
+    "openai": {
+      "type": "openai",
+      "base_url": "https://api.openai.com/v1",
+      "model": "gpt-5.2",
+      "max_output_tokens": 16000,
+      "timeout_s": 900,
+      "json_mode": false,
+      "price_per_mtok_in": 2.0,
+      "price_per_mtok_out": 10.0,
+      "api_key_env": "OPENAI_API_KEY"
+    }
+  },
+  "budget": {
+    "max_calls": 4000,
+    "max_usd": 150,
+    "concurrency": 6,
+    "retries": 2
+  },
+  "language": {
+    "mode": "off"
+  },
+  "matching": {
+    "synonyms": [
+      [
+        "PTX",
+        "pentoxifylline",
+        "oxpentifylline",
+        "Trental"
+      ]
+    ],
+    "one_pass_policy": "accept"
+  }
+}

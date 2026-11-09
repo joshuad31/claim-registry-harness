@@ -5,7 +5,7 @@ and runs every stage of the ACH 2.0 specification through to a report, an audit 
 release. It does that **with no API key, no network and no operator** — the default provider is a
 deterministic local engine — and it also runs on a real model whenever you route one to a role.
 
-Four runs ship with it, because they prove different things:
+Five runs ship with it, because they prove different things:
 
 | Run | What it proves | Result in one line |
 |---|---|---|
@@ -13,9 +13,9 @@ Four runs ship with it, because they prove different things:
 | `projects\WORKED\` | coverage sets, incompatibility approval and crux identification actually produce artifacts | 73 complete relations → 42 deletion-minimal coverage sets for A1-H2, 49 approved incompatibilities, **7 crux candidates** with T1/T2 certificates |
 | `projects\DEMO\` | a new user can go from an empty folder to a report in one command | 24 questions, 96 FRDs, 77 witnesses, 4 complete relations, report written |
 | `projects\PTX\02_RUNS\RUN-PTX-2026-10-29\` | the earlier queue-based PTX run is preserved, with its answer cache restored | 56 released witnesses, 1,680 judged pairs, no complete coverage |
+| `projects\PTX-NLM-MODEL\` | the first run whose reasoning roles all ran on a frontier model (GPT-5.2) | 558 candidate FRDs, 655 source-validated (570 quote-gate rejections), 114 witnesses; still **no complete coverage** |
 
-The first three were produced entirely by this build's local engine. The fourth is the previous build's
-run, kept untouched for comparison.
+The first four were produced by this build's local engine. The fifth is the same 156-answer PTX quest as the 11-09 timed run, with every reasoning role routed to GPT-5.2.
 
 ## Prove it in two commands
 

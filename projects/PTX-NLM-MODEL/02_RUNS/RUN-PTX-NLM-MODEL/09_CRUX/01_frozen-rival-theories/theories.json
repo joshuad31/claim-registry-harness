@@ -1,0 +1,179 @@
+{
+  "A1-H1": {
+    "hypothesis_id": "A1-H1",
+    "required": [
+      "A1-H1-R1",
+      "A1-H1-R2",
+      "A1-H1-R3",
+      "A1-H1-R4"
+    ],
+    "constraints": [
+      "A1-H1-C1",
+      "A1-H1-C2"
+    ],
+    "corroborating": [
+      "A1-H1-E1"
+    ],
+    "adverse": [
+      "A1-H1-A1"
+    ],
+    "options": {
+      "A1-H1-R1": [],
+      "A1-H1-R2": [],
+      "A1-H1-R3": [],
+      "A1-H1-R4": []
+    },
+    "incompatibilities": [],
+    "dependencies": [],
+    "theory_id": "BTHEORY-5b287babc9bf"
+  },
+  "A1-H2": {
+    "hypothesis_id": "A1-H2",
+    "required": [
+      "A1-H2-R1",
+      "A1-H2-R2",
+      "A1-H2-R3",
+      "A1-H2-R4",
+      "A1-H2-R5"
+    ],
+    "constraints": [
+      "A1-H2-C1",
+      "A1-H2-C2"
+    ],
+    "corroborating": [
+      "A1-H2-E1"
+    ],
+    "adverse": [
+      "A1-H2-A1"
+    ],
+    "options": {
+      "A1-H2-R1": [],
+      "A1-H2-R2": [],
+      "A1-H2-R3": [],
+      "A1-H2-R4": [],
+      "A1-H2-R5": []
+    },
+    "incompatibilities": [],
+    "dependencies": [],
+    "theory_id": "BTHEORY-58d1a6213a92"
+  },
+  "A1-H3": {
+    "hypothesis_id": "A1-H3",
+    "required": [
+      "A1-H3-R1",
+      "A1-H3-R2",
+      "A1-H3-R3",
+      "A1-H3-R4"
+    ],
+    "constraints": [
+      "A1-H3-C1"
+    ],
+    "corroborating": [
+      "A1-H3-E1"
+    ],
+    "adverse": [
+      "A1-H3-A1"
+    ],
+    "options": {
+      "A1-H3-R1": [],
+      "A1-H3-R2": [],
+      "A1-H3-R3": [],
+      "A1-H3-R4": []
+    },
+    "incompatibilities": [],
+    "dependencies": [],
+    "theory_id": "BTHEORY-dbfc2ba35f5b"
+  },
+  "A2-H1": {
+    "hypothesis_id": "A2-H1",
+    "required": [
+      "A2-H1-R1",
+      "A2-H1-R2",
+      "A2-H1-R3"
+    ],
+    "constraints": [
+      "A2-H1-C1",
+      "A2-H1-C2"
+    ],
+    "corroborating": [
+      "A2-H1-E1"
+    ],
+    "adverse": [
+      "A2-H1-A1"
+    ],
+    "options": {
+      "A2-H1-R1": [],
+      "A2-H1-R2": [],
+      "A2-H1-R3": []
+    },
+    "incompatibilities": [],
+    "dependencies": [],
+    "theory_id": "BTHEORY-1a9355d3c0a0"
+  },
+  "A2-H2": {
+    "hypothesis_id": "A2-H2",
+    "required": [
+      "A2-H2-R1",
+      "A2-H2-R2",
+      "A2-H2-R3",
+      "A2-H2-R4",
+      "A2-H2-R5",
+      "A2-H2-R6"
+    ],
+    "constraints": [
+      "A2-H2-C1",
+      "A2-H2-C2"
+    ],
+    "corroborating": [
+      "A2-H2-E1",
+      "A2-H2-E2",
+      "A2-H2-E3"
+    ],
+    "adverse": [
+      "A2-H2-A1",
+      "A2-H2-A2",
+      "A2-H2-A3"
+    ],
+    "options": {
+      "A2-H2-R1": [],
+      "A2-H2-R2": [],
+      "A2-H2-R3": [],
+      "A2-H2-R4": [],
+      "A2-H2-R5": [],
+      "A2-H2-R6": []
+    },
+    "incompatibilities": [],
+    "dependencies": [],
+    "theory_id": "BTHEORY-9d1aaef8784d"
+  },
+  "A2-H3": {
+    "hypothesis_id": "A2-H3",
+    "required": [
+      "A2-H3-R1",
+      "A2-H3-R2",
+      "A2-H3-R3",
+      "A2-H3-R4",
+      "A2-H3-R5"
+    ],
+    "constraints": [
+      "A2-H3-C1",
+      "A2-H3-C2"
+    ],
+    "corroborating": [
+      "A2-H3-E1"
+    ],
+    "adverse": [
+      "A2-H3-A1"
+    ],
+    "options": {
+      "A2-H3-R1": [],
+      "A2-H3-R2": [],
+      "A2-H3-R3": [],
+      "A2-H3-R4": [],
+      "A2-H3-R5": []
+    },
+    "incompatibilities": [],
+    "dependencies": [],
+    "theory_id": "BTHEORY-95e39b9c0f14"
+  }
+}

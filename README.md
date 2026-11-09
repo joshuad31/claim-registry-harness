@@ -48,9 +48,10 @@ python cr.py demo         # a complete run of a bundled synthetic corpus, from a
 - the NotebookLM quest driver: one Chrome window, one tab per notebook copy, answers written
   straight to disk (`claimreg/notebooklm/`, `nlm.cmd`, `examples/quest-driver.PTX.json`);
 - two synthetic example corpora (`examples/demo`, `examples/worked`);
-- four completed runs with their reports and machine records:
-  `projects/DEMO`, `projects/WORKED`, `projects/PTX` (the earlier queue-based run) and
-  `projects/PTX-LOCAL` (the fully offline run on the 111-source PTX corpus).
+- five completed runs with their reports and machine records:
+  `projects/DEMO`, `projects/WORKED`, `projects/PTX` (the earlier queue-based run),
+  `projects/PTX-LOCAL` (the fully offline run on the 111-source PTX corpus) and
+  `projects/PTX-NLM-MODEL` (the same 156-answer PTX quest with every reasoning role on GPT-5.2).
 
 **Not committed, by design:**
 

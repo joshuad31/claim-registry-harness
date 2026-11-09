@@ -1,0 +1,10 @@
+{
+  "status": "OPERATIONAL_STOP (imported)",
+  "rounds": 0,
+  "questions_issued": 156,
+  "usable_answers": 154,
+  "candidate_answers_tool_output": 0,
+  "note": "Imported NotebookLM quest. The stop type was declared by the person importing it (--stop operational); the Manager's private ACH_Eval files are not part of this import, and the run's own assess stage makes the final assessment.",
+  "closeout_document": "closeout.md",
+  "closed": "2026-11-09T21:32:26+00:00"
+}

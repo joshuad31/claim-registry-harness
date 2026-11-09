@@ -1,0 +1,1447 @@
+[
+  {
+    "unit_id": "A1-H1-R1",
+    "hypothesis_id": "A1-H1",
+    "axis_id": "A1",
+    "type": "REQUIRED_SUPPORT",
+    "text": "In an identifiable subgroup of these men, there is a reversible physiological component contributing to persistent difficulty voiding that is not adequately addressed by tamsulosin and their prescribed pelvic-floor intervention.",
+    "source_quote": "Their persistent difficulty includes a reversible physiological component that tamsulosin and their prescribed pelvic-floor intervention do not adequately address.",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "reversible physiological component",
+      "persistent difficulty voiding",
+      "nonresponse to tamsulosin",
+      "pelvic-floor therapy failure",
+      "pelvic-floor therapy abandoned as ineffective",
+      "functional (not fixed) impairment",
+      "subgroup characteristics",
+      "mechanistic explanation for impaired voiding"
+    ],
+    "satisfied_by": "A source-attributed finding showing that among men matching this cohort, impaired voiding includes a reversible physiological dysfunction and that typical tamsulosin plus prescribed pelvic-floor intervention does not adequately address that dysfunction (including evidence separately covering pelvic-floor failure vs abandonment as ineffective).",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "778f1457411af20e54e1f8e8"
+  },
+  {
+    "unit_id": "A1-H1-R2",
+    "hypothesis_id": "A1-H1",
+    "axis_id": "A1",
+    "type": "REQUIRED_SUPPORT",
+    "text": "PTX or its metabolites can act on the proposed reversible physiological component at clinically attainable exposures.",
+    "source_quote": "PTX or its metabolites can act on that component at clinically attainable exposures.",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "pentoxifylline metabolite",
+      "clinically attainable exposure",
+      "plasma concentration",
+      "tissue concentration",
+      "pharmacokinetics",
+      "dose and duration",
+      "target engagement at therapeutic levels",
+      "mechanism active at achievable levels"
+    ],
+    "satisfied_by": "A source-attributed report that PTX (or a PTX metabolite) reaches concentrations/exposures achievable with plausible clinical dosing and that those exposures are sufficient to act on the specific physiological component proposed to be reversible in this cohort.",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "778f1457411af20e54e1f8e8"
+  },
+  {
+    "unit_id": "A1-H1-R3",
+    "hypothesis_id": "A1-H1",
+    "axis_id": "A1",
+    "type": "REQUIRED_SUPPORT",
+    "text": "The available pharmacological, physiological, and mechanistic evidence supports a coherent causal explanation for why PTX could meaningfully improve voiding in an identifiable subgroup of these men.",
+    "source_quote": "The available pharmacological, physiological, and mechanistic evidence supports a coherent causal explanation for why PTX could meaningfully improve voiding in an identifiable subgroup of these men.",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "coherent causal mechanism",
+      "pharmacological evidence",
+      "physiological evidence",
+      "mechanistic evidence",
+      "meaningful improvement in voiding",
+      "impaired voiding mechanism",
+      "subgroup responder rationale"
+    ],
+    "satisfied_by": "A source-attributed synthesis-level finding (or multiple convergent findings) that link PTX exposure to a plausible target/process and to improved voiding-relevant physiology/function in a way that plausibly applies to a defined subgroup of this cohort.",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "778f1457411af20e54e1f8e8"
+  },
+  {
+    "unit_id": "A1-H1-R4",
+    "hypothesis_id": "A1-H1",
+    "axis_id": "A1",
+    "type": "REQUIRED_SUPPORT",
+    "text": "The supported premises and discriminating predictions are sufficient to specify all four trial-specification elements—intervention/exposure, phenotype, measurement (direction and timing), and comparator—for a targeted clinical trial.",
+    "source_quote": "The supported premises and their discriminating predictions are sufficient to specify intervention, phenotype, measurement, and comparator for a targeted clinical trial",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "intervention route dose duration",
+      "clinically attainable exposure",
+      "enrichment phenotype",
+      "baseline measurable characteristics",
+      "primary outcome measure",
+      "expected direction of effect",
+      "expected timing of effect",
+      "comparator/control",
+      "discriminating prediction"
+    ],
+    "satisfied_by": "A source-attributed evidence package that supports a defensible trial design specifying (a) PTX intervention/exposure details, (b) pre-treatment measurable phenotype defining the subgroup, (c) primary functional outcome with expected direction and timing, and (d) a comparator that distinguishes the mechanism from leading alternatives.",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "778f1457411af20e54e1f8e8"
+  },
+  {
+    "unit_id": "A1-H1-C1",
+    "hypothesis_id": "A1-H1",
+    "axis_id": "A1",
+    "type": "CONTEXTUAL_CONSTRAINT",
+    "text": "Assume the relevant dysfunction occurs in this cohort; drug effects reach the relevant tissue under plausible treatment conditions; and changing those processes can improve urinary function.",
+    "source_quote": "Assumptions and antecedents: The relevant dysfunction occurs in this cohort; the proposed drug effects reach the relevant tissue under plausible treatment conditions; and changing those processes can improve urinary function.",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "dysfunction present in cohort",
+      "relevant tissue exposure",
+      "plausible treatment conditions",
+      "modifiable process",
+      "improve urinary function",
+      "urinary flow initiation emptying"
+    ],
+    "satisfied_by": "Any selected supporting findings must be consistent with (not contradict) the assumptions that the dysfunction exists in this cohort, PTX effects can reach the relevant tissue under plausible treatment, and modulating the process can improve urinary function.",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "778f1457411af20e54e1f8e8"
+  },
+  {
+    "unit_id": "A1-H1-C2",
+    "hypothesis_id": "A1-H1",
+    "axis_id": "A1",
+    "type": "CONTEXTUAL_CONSTRAINT",
+    "text": "Any necessary contribution from vitamin E or another cointervention must be explicit in the rationale and trial specification.",
+    "source_quote": "Any necessary contribution from vitamin E or another cointervention is explicit.",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "vitamin E coadministration",
+      "cointervention required",
+      "synergy combination therapy",
+      "attribution to PTX",
+      "separate PTX effect from cointervention"
+    ],
+    "satisfied_by": "If evidence implies benefit depends on vitamin E or another cointervention, the covered rationale must explicitly identify that dependency rather than attributing the effect to PTX alone.",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "778f1457411af20e54e1f8e8"
+  },
+  {
+    "unit_id": "A1-H1-A1",
+    "hypothesis_id": "A1-H1",
+    "axis_id": "A1",
+    "type": "ADVERSE_TEST",
+    "text": "Findings that would falsify or strongly count against H1 include unattainable relevant exposure, absent/incidental target, failure of target modulation to improve relevant function under informative conditions, or stronger evidence breaking a necessary link shared by non-speculative routes.",
+    "source_quote": "Potential falsification: Relevant exposure is unattainable; the proposed target is absent or incidental; target modulation fails to improve the relevant function under informative conditions; or stronger evidence breaks a link necessary to every route that is not speculative.",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "unattainable tissue concentration",
+      "PK shows inadequate exposure",
+      "target absent in relevant tissue",
+      "incidental target",
+      "no functional improvement despite engagement",
+      "negative informative experiment",
+      "breaks necessary mechanistic link",
+      "shared-link failure"
+    ],
+    "satisfied_by": "A source-attributed negative finding showing one of the listed falsifiers (e.g., clinically plausible PTX dosing cannot reach required exposure in relevant tissue, or modulating the target does not improve voiding-relevant function under informative conditions).",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "778f1457411af20e54e1f8e8"
+  },
+  {
+    "unit_id": "A1-H1-E1",
+    "hypothesis_id": "A1-H1",
+    "axis_id": "A1",
+    "type": "CORROBORATING_EXPECTATION",
+    "text": "Corroboration would consist of converging findings linking attainable exposure to target engagement, physiological improvement, and improved relevant function, with discrimination by timing, dose-response, predictors, and contrary results; and identifying measurable patient characteristics and trial outcomes that should reveal benefit.",
+    "source_quote": "Potential corroboration: Converging findings connect attainable exposure, target engagement, physiological improvement, and relevant function.",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "converging evidence",
+      "attainable exposure",
+      "target engagement biomarker",
+      "physiological improvement",
+      "improved voiding function",
+      "dose-response",
+      "timing of onset",
+      "response predictors",
+      "measurable patient characteristics",
+      "contrary results discriminate"
+    ],
+    "satisfied_by": "A source-attributed set of findings showing exposure→engagement→physiology→function linkage and providing discriminators (timing, dose-response, predictors, or informative contrary results) plus measurable phenotype/outcome expectations for a trial.",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "778f1457411af20e54e1f8e8"
+  },
+  {
+    "unit_id": "A1-H1-J1",
+    "hypothesis_id": "A1-H1",
+    "axis_id": "A1",
+    "type": "EVALUATIVE_JUDGMENT",
+    "text": "H1 is supported when the trial-specification elements form a coherent, source-grounded test of a materially supported therapeutic rationale that survives serious adverse testing; unresolved links are permissible if the proposed experiment can discriminate them.",
+    "source_quote": "H1 is supported when the four trial-specification elements form a coherent, source-grounded test of a materially supported therapeutic rationale that survives serious adverse testing.",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [],
+    "satisfied_by": "An analyst-level judgment that, after reviewing the evidence and adverse tests, the supported rationale is coherent and specific enough to design an informative targeted trial, with any remaining uncertainties being ones the trial can legitimately discriminate.",
+    "active": false,
+    "inactive_reason": "evaluative judgment: reported, not matched",
+    "call_key": "778f1457411af20e54e1f8e8"
+  },
+  {
+    "unit_id": "A1-H2-R1",
+    "hypothesis_id": "A1-H2",
+    "axis_id": "A1",
+    "type": "REQUIRED_SUPPORT",
+    "text": "Affirmative evidence demonstrates a consequential mismatch in exposure that prevents PTX’s reported biological effects from becoming a meaningful remedy for the dysfunction driving impaired voiding in this cohort, defeating the materially supported rationale.",
+    "source_quote": "Affirmative evidence demonstrates a consequential mismatch in exposure, tissue, disease process, timing, or the relationship between a biological marker and urinary function—and that mismatch defeats the materially supported rationale, not merely one route among many.",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "clinically attainable PTX exposure",
+      "insufficient concentration at target site",
+      "pharmacokinetics in pelvic/prostate/bladder",
+      "unreached effective dose",
+      "tissue levels below active range",
+      "duration of exposure inadequate",
+      "metabolite exposure mismatch",
+      "route-of-administration mismatch"
+    ],
+    "satisfied_by": "A source-attributed finding that clinically attainable PTX (or active metabolite) exposure does not reach the relevant urinary/pelvic tissue at concentrations/duration needed for the proposed effect, in conditions relevant to this cohort, and that this failure undermines the main supported causal rationale.",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "30c8f8b919faa83929915868"
+  },
+  {
+    "unit_id": "A1-H2-R2",
+    "hypothesis_id": "A1-H2",
+    "axis_id": "A1",
+    "type": "REQUIRED_SUPPORT",
+    "text": "Affirmative evidence demonstrates a consequential mismatch in tissue (target tissue access, presence, or engagement) such that PTX’s reported biological effects do not translate into a meaningful remedy for the cohort’s voiding dysfunction, defeating the materially supported rationale.",
+    "source_quote": "Affirmative evidence demonstrates a consequential mismatch in exposure, tissue, disease process, timing, or the relationship between a biological marker and urinary function—and that mismatch defeats the materially supported rationale, not merely one route among many.",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "absent target engagement in bladder/prostate/urethra",
+      "no effect in relevant smooth muscle/nerve tissue",
+      "tissue distribution does not include target",
+      "no receptor/target expression in relevant tissue",
+      "pelvic tissue concentrations low",
+      "no pharmacodynamic effect in urinary tract",
+      "histology/biopsy shows no engagement"
+    ],
+    "satisfied_by": "A source-attributed finding that in relevant urinary/pelvic tissues PTX does not engage the proposed target/process (or the target/process is not present/consequential there), and that this breaks the materially supported mechanism intended to improve voiding.",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "30c8f8b919faa83929915868"
+  },
+  {
+    "unit_id": "A1-H2-R3",
+    "hypothesis_id": "A1-H2",
+    "axis_id": "A1",
+    "type": "REQUIRED_SUPPORT",
+    "text": "Affirmative evidence demonstrates a consequential mismatch in disease process: the dysfunction driving impaired voiding in this cohort is not meaningfully addressed by PTX’s reported biological effects, defeating the materially supported rationale.",
+    "source_quote": "H1 is wrong because PTX's reported biological effects do not translate into a meaningful remedy for the dysfunction driving impaired voiding in this cohort.",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "mechanism not operative in BPH/shy bladder voiding dysfunction",
+      "pathophysiology inconsistent with PTX mechanism",
+      "primary driver is behavioral/neurologic not addressed",
+      "no effect on outlet obstruction component",
+      "no effect on detrusor underactivity component",
+      "mechanistic dissociation between model and cohort",
+      "non-concordant disease model"
+    ],
+    "satisfied_by": "A source-attributed finding that the main physiological driver(s) of impaired voiding in the defined cohort are not altered by PTX-relevant pathways (or are governed by a different process), in a way that defeats the materially supported therapeutic rationale rather than merely a minor subsidiary route.",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "30c8f8b919faa83929915868"
+  },
+  {
+    "unit_id": "A1-H2-R4",
+    "hypothesis_id": "A1-H2",
+    "axis_id": "A1",
+    "type": "REQUIRED_SUPPORT",
+    "text": "Affirmative evidence demonstrates a consequential mismatch in timing/reversibility: PTX’s effects occur on an incompatible timescale (or are non-reversal/preventive only) relative to meaningful improvement/recovery in impaired voiding for this cohort, defeating the materially supported rationale.",
+    "source_quote": "Affirmative evidence demonstrates a consequential mismatch in exposure, tissue, disease process, timing, or the relationship between a biological marker and urinary function",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "timing incompatible with symptom improvement",
+      "preventive not therapeutic",
+      "no reversal of established dysfunction",
+      "requires chronic exposure not feasible",
+      "onset too slow/too fast vs mechanism",
+      "acute effects absent despite dosing",
+      "irreversible injury model"
+    ],
+    "satisfied_by": "A source-attributed finding that PTX’s mechanistic effects require timing/duration inconsistent with clinically meaningful reversal of the cohort’s established voiding impairment (including rapid improvement and slower recovery scenarios), and that this timing mismatch undermines the materially supported rationale.",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "30c8f8b919faa83929915868"
+  },
+  {
+    "unit_id": "A1-H2-R5",
+    "hypothesis_id": "A1-H2",
+    "axis_id": "A1",
+    "type": "REQUIRED_SUPPORT",
+    "text": "Affirmative evidence demonstrates a consequential mismatch between a biological marker affected by PTX and actual urinary function, such that marker modulation does not translate into improved voiding in relevant conditions, defeating the materially supported rationale.",
+    "source_quote": "Affirmative evidence demonstrates a consequential mismatch in exposure, tissue, disease process, timing, or the relationship between a biological marker and urinary function",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "biomarker changed without functional improvement",
+      "target modulation no change in flow/voiding",
+      "no improvement in urodynamics",
+      "no change in initiation/hesitancy",
+      "no change in post-void residual",
+      "marker-function dissociation",
+      "surrogate endpoint failure"
+    ],
+    "satisfied_by": "A source-attributed finding that PTX (or PTX-relevant modulation) changes the proposed biomarker/PD readout but does not improve voiding-related function (or key urodynamic/functional measures) in relevant models/conditions, and that this breaks a necessary link in the materially supported rationale.",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "30c8f8b919faa83929915868"
+  },
+  {
+    "unit_id": "A1-H2-C1",
+    "hypothesis_id": "A1-H2",
+    "axis_id": "A1",
+    "type": "CONTEXTUAL_CONSTRAINT",
+    "text": "The mismatch evidence must be sufficiently relevant to test H1; unrelated models or exposures do not suffice.",
+    "source_quote": "The evidence demonstrating the mismatch is sufficiently relevant to test H1; failure in an unrelated model or exposure does not suffice.",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "relevant model/condition to cohort",
+      "clinically attainable exposure",
+      "route and dose comparable",
+      "urinary/voiding-relevant endpoint",
+      "transfer validity",
+      "species/tissue comparability",
+      "BPH/voiding dysfunction relevance"
+    ],
+    "satisfied_by": "Any selected witness evidence used to support H2 must come from conditions (model, tissue, disease context, exposure/route) that are relevant enough to be a valid test of the H1 rationale for this cohort, rather than an unrelated exposure or model.",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "30c8f8b919faa83929915868"
+  },
+  {
+    "unit_id": "A1-H2-C2",
+    "hypothesis_id": "A1-H2",
+    "axis_id": "A1",
+    "type": "CONTEXTUAL_CONSTRAINT",
+    "text": "H2 is scoped to defeating the materially supported rationale as it stands, not every imaginable route.",
+    "source_quote": "H2 targets the materially supported rationale as it currently stands in the ledger, not every route that could be imagined.",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "materially supported rationale",
+      "main causal chain",
+      "necessary link",
+      "shared-link dependence",
+      "defeats central mechanism",
+      "not merely alternative pathway",
+      "ledger-supported premise"
+    ],
+    "satisfied_by": "Coverage for H2 must show that the mismatch defeats the central, materially supported therapeutic rationale (or a necessary/shared link central to it), rather than only refuting a speculative or non-material subsidiary route.",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "30c8f8b919faa83929915868"
+  },
+  {
+    "unit_id": "A1-H2-A1",
+    "hypothesis_id": "A1-H2",
+    "axis_id": "A1",
+    "type": "ADVERSE_TEST",
+    "text": "A coherent, exposure-compatible causal chain survives the proposed objections and generates supported functional predictions in relevant conditions.",
+    "source_quote": "Potential falsification: A coherent, exposure-compatible causal chain survives the proposed objections and generates supported functional predictions in relevant conditions.",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "exposure-compatible mechanism",
+      "target engagement at attainable dose",
+      "functional urodynamic improvement",
+      "relevant condition/model",
+      "predicts timing of response",
+      "phenotype-linked response",
+      "replicated functional effect"
+    ],
+    "satisfied_by": "A source-attributed finding showing that, despite the proposed mismatch objections, PTX at clinically attainable exposure engages the relevant target and produces supported, predictive improvements in voiding-related function under relevant conditions.",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "30c8f8b919faa83929915868"
+  },
+  {
+    "unit_id": "A1-H2-E1",
+    "hypothesis_id": "A1-H2",
+    "axis_id": "A1",
+    "type": "CORROBORATING_EXPECTATION",
+    "text": "Relevant experiments demonstrate insufficient exposure, absent target engagement, persistent dysfunction despite target modulation, incompatible timing, or another affirmative failure of a necessary link.",
+    "source_quote": "Potential corroboration: Relevant experiments demonstrate insufficient exposure, absent target engagement, persistent dysfunction despite target modulation, incompatible timing, or another affirmative failure of a necessary link.",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "insufficient exposure demonstrated",
+      "absent target engagement",
+      "no functional improvement despite modulation",
+      "timing mismatch demonstrated",
+      "necessary link failure",
+      "negative urodynamic result",
+      "mechanistic null in relevant setting"
+    ],
+    "satisfied_by": "A source-attributed experiment in a relevant setting showing one of the named necessary-link failures (exposure, engagement, functional translation, or timing) supporting the claim that the rationale fails.",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "30c8f8b919faa83929915868"
+  },
+  {
+    "unit_id": "A1-H2-J1",
+    "hypothesis_id": "A1-H2",
+    "axis_id": "A1",
+    "type": "EVALUATIVE_JUDGMENT",
+    "text": "Overall: H1 is wrong because the best mechanistic story does not translate into a meaningful remedy for the cohort’s voiding dysfunction; supportive biological findings therefore do not justify the intervention via the proposed causal rationale.",
+    "source_quote": "H1 is wrong because PTX's reported biological effects do not translate into a meaningful remedy for the dysfunction driving impaired voiding in this cohort.",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [],
+    "satisfied_by": "An analyst-level synthesis judgment, after weighing all matched witnesses, that the central mechanistic rationale fails translation to meaningful voiding improvement in this cohort (not merely that evidence is incomplete).",
+    "active": false,
+    "inactive_reason": "evaluative judgment: reported, not matched",
+    "call_key": "30c8f8b919faa83929915868"
+  },
+  {
+    "unit_id": "A1-H3-R1",
+    "hypothesis_id": "A1-H3",
+    "axis_id": "A1",
+    "type": "REQUIRED_SUPPORT",
+    "text": "Existing evidence supports some components of the H1 mechanistic rationale, but not enough to distinguish a therapeutically consequential mechanism from the H2-type failure.",
+    "source_quote": "Existing evidence supports some components of H1 but cannot distinguish a therapeutically consequential mechanism from the failure described by H2.",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "mechanistic evidence supports some links",
+      "partial support for PTX mechanism",
+      "mixed/ambiguous mechanistic findings",
+      "cannot distinguish mechanism vs failure",
+      "both supportive and undermining data",
+      "indeterminate net mechanistic implication"
+    ],
+    "satisfied_by": "A source-attributed synthesis finding that some mechanistic/physiological/pharmacological links supporting PTX are evidenced, yet the evidence set remains unable to discriminate between a consequential therapeutic mechanism and a mechanism-consistent failure mode.",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "6027e6424d69987cc69cffbf"
+  },
+  {
+    "unit_id": "A1-H3-R2",
+    "hypothesis_id": "A1-H3",
+    "axis_id": "A1",
+    "type": "REQUIRED_SUPPORT",
+    "text": "At least one of the four trial-specification slots cannot be specified from supported premises because a decisive link remains unresolved (intervention/exposure, phenotype, measurement, or comparator).",
+    "source_quote": "at least one of intervention and exposure, phenotype, measurement, or comparator cannot be specified from supported premises.",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "trial-specification slot blocked",
+      "cannot specify dose/route/duration",
+      "cannot define responder phenotype",
+      "cannot select primary outcome timing",
+      "cannot choose comparator to distinguish mechanisms",
+      "supported premises insufficient to specify"
+    ],
+    "satisfied_by": "A source-attributed conclusion that, after reviewing supported premises, at least one of intervention/exposure, phenotype, measurement, or comparator remains non-defensible to specify due to a named unresolved causal link.",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "6027e6424d69987cc69cffbf"
+  },
+  {
+    "unit_id": "A1-H3-R3",
+    "hypothesis_id": "A1-H3",
+    "axis_id": "A1",
+    "type": "REQUIRED_SUPPORT",
+    "text": "The uncertainty is localized to identified links (not diffuse), and neither mechanistic endorsement (H1) nor mechanistic rejection (H2) is determined.",
+    "source_quote": "The uncertainty is localized to identified links, and neither a compelling mechanistic endorsement nor a mechanistic rejection is presently determined.",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "uncertainty localized to specific links",
+      "named unresolved causal links",
+      "no compelling endorsement",
+      "no decisive rejection",
+      "indeterminate mechanistic direction",
+      "uncertainty ledger identifies links"
+    ],
+    "satisfied_by": "A source-attributed finding that explicitly names the specific unresolved causal link(s) driving uncertainty and states that the current evidence does not warrant either a compelling mechanistic go-ahead or a mechanistic defeat.",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "6027e6424d69987cc69cffbf"
+  },
+  {
+    "unit_id": "A1-H3-R4",
+    "hypothesis_id": "A1-H3",
+    "axis_id": "A1",
+    "type": "REQUIRED_SUPPORT",
+    "text": "The unresolved links prevent the rationale from becoming specific enough to design the targeted clinical trial under the trial-specification test.",
+    "source_quote": "The unresolved links prevent the rationale from becoming specific enough to design the trial",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "cannot design specific informative trial",
+      "trial not specifiable",
+      "trial-specification test not met",
+      "rationale not specific/defensible",
+      "design parameters underdetermined",
+      "inability to operationalize trial design"
+    ],
+    "satisfied_by": "A source-attributed assessment that the remaining unresolved links, as identified, block trial design specificity such that the trial-specification test cannot be satisfied on materially supported premises.",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "6027e6424d69987cc69cffbf"
+  },
+  {
+    "unit_id": "A1-H3-C1",
+    "hypothesis_id": "A1-H3",
+    "axis_id": "A1",
+    "type": "CONTEXTUAL_CONSTRAINT",
+    "text": "Meaningful retrieval and adverse testing have been completed; remaining uncertainty is not due to unfinished investigation.",
+    "source_quote": "Meaningful retrieval and adverse testing have been completed; uncertainty is not merely an artifact of an unfinished investigation.",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "meaningful retrieval completed",
+      "adverse testing performed",
+      "not due to missing search",
+      "not an artifact of incomplete investigation",
+      "systematic review of adverse evidence",
+      "completed evidence sweep"
+    ],
+    "satisfied_by": "Any selected supporting witness set must not indicate that the uncertainty is simply because key sources were not searched/retrieved or adverse tests were not attempted/completed.",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "6027e6424d69987cc69cffbf"
+  },
+  {
+    "unit_id": "A1-H3-A1",
+    "hypothesis_id": "A1-H3",
+    "axis_id": "A1",
+    "type": "ADVERSE_TEST",
+    "text": "Evidence resolves the decisive links sufficiently to specify all four trial slots (favoring H1) or instead defeats the supported therapeutic rationale (favoring H2).",
+    "source_quote": "Evidence resolves the decisive links sufficiently to fill all four trial-specification slots (favoring H1) or to defeat the supported rationale (favoring H2).",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "specify intervention exposure phenotype measurement comparator",
+      "all four trial slots filled",
+      "decisive links resolved",
+      "mechanistic rationale defeated",
+      "inadequate exposure or target engagement",
+      "functional link broken"
+    ],
+    "satisfied_by": "A source-attributed finding that either (i) enables defensible completion of intervention/exposure, phenotype, measurement (direction/timing), and comparator from supported premises, or (ii) provides affirmative mechanistic evidence that breaks/defeats the materially supported rationale.",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "6027e6424d69987cc69cffbf"
+  },
+  {
+    "unit_id": "A1-H3-E1",
+    "hypothesis_id": "A1-H3",
+    "axis_id": "A1",
+    "type": "CORROBORATING_EXPECTATION",
+    "text": "Competing explanations remain compatible because key discriminators (exposure, tissue effects, functional consequences, response predictors) are unmeasured or not distinguished, blocking at least one trial-specification slot; and the investigation identifies the experiment that would resolve the uncertainty, recording which slot is blocked and by which link.",
+    "source_quote": "Plausible competing explanations remain compatible with the observations because relevant exposure, tissue effects, functional consequences, or response predictors are unmeasured or inadequately distinguished, and the resulting gap blocks at least one of the four specification slots. The investigation identifies the experiment that would resolve that uncertainty. Record which slot is blocked and by which link.",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "competing explanations remain compatible",
+      "unmeasured exposure/tissue effect",
+      "inadequately distinguished mechanisms",
+      "response predictors unmeasured",
+      "blocks phenotype/measurement/comparator/exposure slot",
+      "proposed decisive experiment to resolve"
+    ],
+    "satisfied_by": "A source-attributed account showing that multiple explanations remain viable due to specific missing or non-discriminating measurements, that this blocks a named trial-specification slot via a named link, and that a concrete experiment/measurement is identified to resolve it.",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "6027e6424d69987cc69cffbf"
+  },
+  {
+    "unit_id": "A1-H3-J1",
+    "hypothesis_id": "A1-H3",
+    "axis_id": "A1",
+    "type": "EVALUATIVE_JUDGMENT",
+    "text": "Under the trial-specification test, the current mechanistic evidence base is insufficiently discriminating to justify a specific informative targeted PTX trial design, but also insufficient to reject the mechanistic rationale; the uncertainty is localized and mapped to a slot-blocking link.",
+    "source_quote": "cannot distinguish a therapeutically consequential mechanism from the failure described by H2. The unresolved links prevent the rationale from becoming specific enough to design the trial",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [],
+    "satisfied_by": "Assessed by the analyst by applying the trial-specification test to the full evidence ledger, determining that at least one design slot remains blocked by a localized unresolved link, leaving neither endorsement (H1) nor rejection (H2) warranted.",
+    "active": false,
+    "inactive_reason": "evaluative judgment: reported, not matched",
+    "call_key": "6027e6424d69987cc69cffbf"
+  },
+  {
+    "unit_id": "A2-H1-R1",
+    "hypothesis_id": "A2-H1",
+    "axis_id": "A2",
+    "type": "REQUIRED_SUPPORT",
+    "text": "PTX’s materially supported mechanism for improved voiding in this cohort acts on current physiological function (not established tissue structure).",
+    "source_quote": "acts on current physiological function—such as perfusion, microcirculation, smooth-muscle behavior, or neural signaling—rather than on established tissue structure.",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "perfusion improvement",
+      "microcirculation",
+      "smooth muscle tone",
+      "neural signaling",
+      "functional mechanism",
+      "not structural remodeling",
+      "acute physiological effect",
+      "hemodynamic change",
+      "neuromodulation"
+    ],
+    "satisfied_by": "A source-attributed finding showing PTX (or metabolites) changes a functional physiological process relevant to voiding (e.g., perfusion/microcirculation/smooth muscle/neural signaling) without requiring structural tissue alteration to explain the effect.",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "8b4e53ae7e7aced6f3fd9900"
+  },
+  {
+    "unit_id": "A2-H1-R2",
+    "hypothesis_id": "A2-H1",
+    "axis_id": "A2",
+    "type": "REQUIRED_SUPPORT",
+    "text": "At clinically attainable exposures, PTX or its metabolites produce measurable improvement in voiding within days to a few weeks.",
+    "source_quote": "At clinically attainable exposures, PTX or its metabolites should produce measurable improvement in voiding within days to a few weeks",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "clinically attainable concentration",
+      "therapeutic dose",
+      "oral pentoxifylline",
+      "metabolites",
+      "improved voiding",
+      "increased flow rate",
+      "reduced residual volume",
+      "within days",
+      "within 1-3 weeks",
+      "early onset"
+    ],
+    "satisfied_by": "A source-attributed report (human or informative model with explicit transfer) where PTX/metabolite exposure plausibly attainable clinically is followed by measurable voiding improvement within days to a few weeks.",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "8b4e53ae7e7aced6f3fd9900"
+  },
+  {
+    "unit_id": "A2-H1-R3",
+    "hypothesis_id": "A2-H1",
+    "axis_id": "A2",
+    "type": "REQUIRED_SUPPORT",
+    "text": "If treatment stops, the voiding benefit diminishes (reversibility with withdrawal).",
+    "source_quote": "and benefit should diminish if treatment stops.",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "withdrawal",
+      "stopped treatment",
+      "washout",
+      "reversibility",
+      "benefit fades",
+      "symptoms return",
+      "effect not persistent",
+      "cessation"
+    ],
+    "satisfied_by": "A source-attributed observation that voiding-related improvement seen on PTX lessens or disappears after PTX is discontinued (or during a washout), consistent with a functional, not structural, effect.",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "8b4e53ae7e7aced6f3fd9900"
+  },
+  {
+    "unit_id": "A2-H1-C1",
+    "hypothesis_id": "A2-H1",
+    "axis_id": "A2",
+    "type": "CONTEXTUAL_CONSTRAINT",
+    "text": "A functional component of impaired voiding must be present and modifiable in this cohort.",
+    "source_quote": "A functional component of impaired voiding is present and modifiable in this cohort;",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "functional component",
+      "modifiable dysfunction",
+      "reversible urinary dysfunction",
+      "dynamic obstruction",
+      "detrusor underactivity reversible",
+      "neuromuscular component",
+      "vasomotor component"
+    ],
+    "satisfied_by": "Any selected supporting evidence set must not contradict that a modifiable functional (non-fixed structural) contributor to impaired voiding exists in the cohort under consideration.",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "8b4e53ae7e7aced6f3fd9900"
+  },
+  {
+    "unit_id": "A2-H1-C2",
+    "hypothesis_id": "A2-H1",
+    "axis_id": "A2",
+    "type": "CONTEXTUAL_CONSTRAINT",
+    "text": "Clinically attainable exposure must reach the relevant tissue quickly enough to act within the days-to-weeks window.",
+    "source_quote": "attainable exposure reaches the relevant tissue quickly enough to act within the proposed window.",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "tissue penetration",
+      "urogenital tissue levels",
+      "bladder/prostate concentration",
+      "time to steady state",
+      "rapid distribution",
+      "pharmacokinetics",
+      "onset within days",
+      "attainable exposure"
+    ],
+    "satisfied_by": "Any selected supporting evidence set must be compatible with PTX/metabolite exposure (at attainable dosing) reaching the relevant target tissue on a timescale consistent with days-to-weeks onset.",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "8b4e53ae7e7aced6f3fd9900"
+  },
+  {
+    "unit_id": "A2-H1-A1",
+    "hypothesis_id": "A2-H1",
+    "axis_id": "A2",
+    "type": "ADVERSE_TEST",
+    "text": "Findings against this hypothesis include no early functional change at informative exposures, benefit only after prolonged treatment in humans, or a route that requires structural change before function can improve.",
+    "source_quote": "Relevant models show no early functional change at informative exposures; human benefit, where reported, appears only after prolonged treatment; or the supported route requires structural change before function can improve.",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "no early functional change",
+      "no acute effect",
+      "only after months",
+      "delayed onset",
+      "requires fibrosis reversal",
+      "structural remodeling required",
+      "prolonged treatment only",
+      "no change in flow early"
+    ],
+    "satisfied_by": "A source-attributed result showing (i) no early functional improvement at relevant exposure, or (ii) reported human improvement only after weeks-to-months, or (iii) mechanistic evidence that functional improvement requires preceding structural change.",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "8b4e53ae7e7aced6f3fd9900"
+  },
+  {
+    "unit_id": "A2-H1-E1",
+    "hypothesis_id": "A2-H1",
+    "axis_id": "A2",
+    "type": "CORROBORATING_EXPECTATION",
+    "text": "Corroboration would include early improvement in functional endpoints; dose-tracked onset; fading benefit on withdrawal; and early change not explained by concurrent structural recovery.",
+    "source_quote": "Functional endpoints such as contractility or flow improve early after exposure; onset tracks dosing; benefit fades on withdrawal; and early change is not explained by concurrent structural recovery.",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "early contractility improvement",
+      "early flow improvement",
+      "dose-response onset",
+      "tracks dosing",
+      "withdrawal reverses",
+      "not due to structural recovery",
+      "no fibrosis change yet",
+      "acute urodynamics change"
+    ],
+    "satisfied_by": "A source-attributed finding where functional measures (e.g., contractility/flow) improve early after PTX exposure, timing aligns with dosing, the effect wanes on withdrawal, and structural recovery is absent or insufficient to explain the early change.",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "8b4e53ae7e7aced6f3fd9900"
+  },
+  {
+    "unit_id": "A2-H1-J1",
+    "hypothesis_id": "A2-H1",
+    "axis_id": "A2",
+    "type": "EVALUATIVE_JUDGMENT",
+    "text": "To count as A2-H1 rather than A2-H3, the evidence should allow a defensible, exposure-attainable prediction of measurable functional improvement within days to a few weeks, distinguishing rapid functional benefit from slow structural recovery.",
+    "source_quote": "A2-H1 requires the supported mechanism to predict measurable functional improvement within days to a few weeks at attainable exposure.",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [],
+    "satisfied_by": "Assessed by the analyst across the full evidence map: whether the best-supported mechanism and timing evidence jointly support a specific days-to-weeks onset expectation at attainable exposure (and are not equally compatible with a weeks-to-months structural-recovery account).",
+    "active": false,
+    "inactive_reason": "evaluative judgment: reported, not matched",
+    "call_key": "8b4e53ae7e7aced6f3fd9900"
+  },
+  {
+    "unit_id": "A2-H2-R1",
+    "hypothesis_id": "A2-H2",
+    "axis_id": "A2",
+    "type": "REQUIRED_SUPPORT",
+    "text": "PTX’s materially supported mechanism improves voiding by reversing or limiting structural change (e.g., fibrosis/remodeling/tissue damage) that contributes to impaired voiding.",
+    "source_quote": "acts by reversing or limiting structural change—such as fibrosis, remodeling, or other tissue damage—that contributes to impaired voiding.",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "pentoxifylline structural mechanism",
+      "anti-fibrotic remodeling reversal",
+      "collagen reduction",
+      "tissue damage limitation",
+      "bladder/urethra structural change",
+      "histologic improvement linked to voiding"
+    ],
+    "satisfied_by": "A source-attributed report that, in the relevant cohort/model of impaired voiding, PTX treatment produces reversal or limitation of measured structural pathology (e.g., fibrosis/remodeling) that is positioned as contributing to voiding impairment.",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "a364e28273223c61eec91c6b"
+  },
+  {
+    "unit_id": "A2-H2-R2",
+    "hypothesis_id": "A2-H2",
+    "axis_id": "A2",
+    "type": "REQUIRED_SUPPORT",
+    "text": "Meaningful voiding improvement with PTX should occur only after weeks to months of treatment (not within days to a few weeks).",
+    "source_quote": "Meaningful improvement should appear only after weeks to months of treatment",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "weeks to months onset",
+      "delayed improvement",
+      "time course",
+      "chronic dosing duration",
+      "voiding improvement at 4-12 weeks",
+      "no early response"
+    ],
+    "satisfied_by": "A source-attributed finding showing that measurable voiding improvement with PTX emerges on a weeks-to-months timeline (and not on a days-to-few-weeks timeline) at clinically attainable exposure.",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "a364e28273223c61eec91c6b"
+  },
+  {
+    "unit_id": "A2-H2-R3",
+    "hypothesis_id": "A2-H2",
+    "axis_id": "A2",
+    "type": "REQUIRED_SUPPORT",
+    "text": "There should be little early functional change in voiding during the first days to few weeks of PTX treatment.",
+    "source_quote": "with little early functional change",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "no early functional change",
+      "no acute effect",
+      "first week no improvement",
+      "early timepoint unchanged",
+      "urodynamics unchanged early",
+      "voiding metrics unchanged at 1-2 weeks"
+    ],
+    "satisfied_by": "A source-attributed report that early timepoints (days to a few weeks) show minimal/no meaningful improvement in voiding function with PTX, consistent with a non-rapid (structural) mechanism.",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "a364e28273223c61eec91c6b"
+  },
+  {
+    "unit_id": "A2-H2-R4",
+    "hypothesis_id": "A2-H2",
+    "axis_id": "A2",
+    "type": "REQUIRED_SUPPORT",
+    "text": "Structural change must contribute consequentially to impaired voiding in this cohort (i.e., it is present and functionally relevant).",
+    "source_quote": "Structural change contributes consequentially to impaired voiding in this cohort",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "fibrosis contributes to impaired voiding",
+      "remodeling associated with lower urinary tract dysfunction",
+      "tissue damage causes reduced compliance/contractility",
+      "structural pathology linked to urinary flow",
+      "bladder wall fibrosis",
+      "urethral stricture remodeling"
+    ],
+    "satisfied_by": "A source-attributed finding that, in the cohort scope, structural pathology (fibrosis/remodeling/tissue damage) is shown or argued to be causally/consequentially linked to impaired voiding (not merely co-occurring).",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "a364e28273223c61eec91c6b"
+  },
+  {
+    "unit_id": "A2-H2-R5",
+    "hypothesis_id": "A2-H2",
+    "axis_id": "A2",
+    "type": "REQUIRED_SUPPORT",
+    "text": "PTX must be capable of reversing or limiting existing structural change (not merely preventing it when given before injury).",
+    "source_quote": "PTX can reverse or limit that change rather than merely prevent it.",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "reversal of established fibrosis",
+      "treatment after injury",
+      "therapeutic (not prophylactic) dosing",
+      "post-injury PTX",
+      "regression of collagen",
+      "repair of established remodeling"
+    ],
+    "satisfied_by": "A source-attributed finding where PTX is administered after structural injury/dysfunction is established and structural pathology is reduced/limited versus control, supporting reversal/limitation rather than prevention-only.",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "a364e28273223c61eec91c6b"
+  },
+  {
+    "unit_id": "A2-H2-R6",
+    "hypothesis_id": "A2-H2",
+    "axis_id": "A2",
+    "type": "REQUIRED_SUPPORT",
+    "text": "If benefit occurs, it may persist after stopping PTX treatment (consistent with structural recovery).",
+    "source_quote": "and may persist after treatment stops.",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "persistent benefit after withdrawal",
+      "washout maintained improvement",
+      "durable response",
+      "post-treatment persistence",
+      "sustained voiding improvement",
+      "lasting functional gains"
+    ],
+    "satisfied_by": "A source-attributed report that voiding improvements (and/or the structural improvements that explain them) remain measurable after PTX discontinuation for a defined follow-up period.",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "a364e28273223c61eec91c6b"
+  },
+  {
+    "unit_id": "A2-H2-C1",
+    "hypothesis_id": "A2-H2",
+    "axis_id": "A2",
+    "type": "CONTEXTUAL_CONSTRAINT",
+    "text": "The mechanism classification must align with the axis discriminator: A2-H2 corresponds to improvement only after weeks to months, not within days to a few weeks, at attainable exposure.",
+    "source_quote": "A2-H2 requires the supported mechanism to act through reversal or limitation of tissue change, predicting improvement only after weeks to months.",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "attainable exposure",
+      "weeks to months timeline",
+      "structural reversal mechanism",
+      "delayed onset",
+      "not rapid within days",
+      "time-to-effect discriminator"
+    ],
+    "satisfied_by": "All selected supporting witnesses for A2-H2 must be compatible with delayed (weeks-to-months) onset at clinically attainable exposure and must not indicate primary improvement within days to a few weeks.",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "a364e28273223c61eec91c6b"
+  },
+  {
+    "unit_id": "A2-H2-C2",
+    "hypothesis_id": "A2-H2",
+    "axis_id": "A2",
+    "type": "CONTEXTUAL_CONSTRAINT",
+    "text": "Evidence limited to prevention-only models cannot be treated as supporting A2-H2’s reversal/limitation-of-established-change claim.",
+    "source_quote": "Evidence limited to prevention models does not by itself support A2-H2.",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "prevention model only",
+      "pre-injury dosing",
+      "prophylactic PTX",
+      "no established dysfunction at baseline",
+      "cannot infer reversal",
+      "timing of treatment relative to injury"
+    ],
+    "satisfied_by": "Any evidence used as support must not be prevention-only (treatment solely before injury) unless it also includes post-injury/established dysfunction treatment demonstrating reversal/limitation.",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "a364e28273223c61eec91c6b"
+  },
+  {
+    "unit_id": "A2-H2-A1",
+    "hypothesis_id": "A2-H2",
+    "axis_id": "A2",
+    "type": "ADVERSE_TEST",
+    "text": "A2-H2 is undermined if meaningful benefit appears too quickly to be structurally mediated.",
+    "source_quote": "or meaningful benefit appears too quickly to be structurally mediated.",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "rapid improvement",
+      "within days",
+      "within 1-2 weeks",
+      "acute effect",
+      "immediate voiding improvement",
+      "short-term response"
+    ],
+    "satisfied_by": "A source-attributed finding that PTX produces meaningful voiding improvement within days to a few weeks at attainable exposure, implying a rapid functional mechanism rather than structural recovery.",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "a364e28273223c61eec91c6b"
+  },
+  {
+    "unit_id": "A2-H2-A2",
+    "hypothesis_id": "A2-H2",
+    "axis_id": "A2",
+    "type": "ADVERSE_TEST",
+    "text": "A2-H2 is undermined if structural effects appear only when treatment precedes injury (prevention rather than reversal).",
+    "source_quote": "Structural effects appear only when treatment precedes injury (prevention, not reversal)",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "only prophylactic benefit",
+      "no effect post-injury",
+      "pre-treatment required",
+      "prevention not treatment",
+      "no reversal of established fibrosis",
+      "timing dependence"
+    ],
+    "satisfied_by": "A source-attributed record that PTX improves structural endpoints only when given before injury/insult and fails to improve them when started after dysfunction is established.",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "a364e28273223c61eec91c6b"
+  },
+  {
+    "unit_id": "A2-H2-A3",
+    "hypothesis_id": "A2-H2",
+    "axis_id": "A2",
+    "type": "ADVERSE_TEST",
+    "text": "A2-H2 is undermined if structural improvement does not accompany functional improvement.",
+    "source_quote": "structural improvement does not accompany functional improvement;",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "functional improvement without histologic change",
+      "no change in fibrosis despite better voiding",
+      "discordant structure-function",
+      "unchanged collagen with improved flow",
+      "structure unchanged",
+      "mechanism mismatch"
+    ],
+    "satisfied_by": "A source-attributed finding where voiding/function improves but measured structural endpoints (fibrosis/remodeling/damage) do not improve, arguing against structural mediation.",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "a364e28273223c61eec91c6b"
+  },
+  {
+    "unit_id": "A2-H2-E1",
+    "hypothesis_id": "A2-H2",
+    "axis_id": "A2",
+    "type": "CORROBORATING_EXPECTATION",
+    "text": "In established dysfunction, structural endpoints (e.g., stereology/collagen measures) should improve with PTX treatment.",
+    "source_quote": "Structural endpoints such as stereology or collagen measures improve with treatment of established dysfunction;",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "stereology improved",
+      "collagen decreased",
+      "hydroxyproline reduction",
+      "histomorphometry",
+      "fibrosis regression",
+      "established dysfunction treated"
+    ],
+    "satisfied_by": "A source-attributed report that, when PTX is started after dysfunction is established, structural measures (e.g., collagen, stereology) improve versus control.",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "a364e28273223c61eec91c6b"
+  },
+  {
+    "unit_id": "A2-H2-E2",
+    "hypothesis_id": "A2-H2",
+    "axis_id": "A2",
+    "type": "CORROBORATING_EXPECTATION",
+    "text": "Functional improvement should follow structural change in time (structure improves first, then voiding improves).",
+    "source_quote": "functional improvement follows structural change in time;",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "structure precedes function",
+      "time-lagged functional recovery",
+      "histology improves before urodynamics",
+      "sequenced improvements",
+      "temporal order",
+      "delayed functional gains"
+    ],
+    "satisfied_by": "A source-attributed time-course showing structural improvement occurs earlier than (and plausibly enables) subsequent functional/voiding improvement.",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "a364e28273223c61eec91c6b"
+  },
+  {
+    "unit_id": "A2-H2-E3",
+    "hypothesis_id": "A2-H2",
+    "axis_id": "A2",
+    "type": "CORROBORATING_EXPECTATION",
+    "text": "Benefit should accumulate with longer duration of treatment and persist after withdrawal.",
+    "source_quote": "benefit accumulates with duration and persists after withdrawal.",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "dose-duration response",
+      "longer treatment greater benefit",
+      "cumulative improvement",
+      "withdrawal follow-up",
+      "sustained after stopping",
+      "durable structural recovery"
+    ],
+    "satisfied_by": "A source-attributed finding that longer PTX exposure yields greater structural/functional benefit and that the benefit remains after treatment is stopped.",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "a364e28273223c61eec91c6b"
+  },
+  {
+    "unit_id": "A2-H2-J1",
+    "hypothesis_id": "A2-H2",
+    "axis_id": "A2",
+    "type": "EVALUATIVE_JUDGMENT",
+    "text": "Overall support for A2-H2 hinges on whether the evidence base can attribute voiding improvement primarily to structural reversal/limitation (not rapid functional effects) using timing, post-injury treatment, and linked structure-function endpoints at clinically attainable exposures.",
+    "source_quote": "Timing evidence is unmeasured, conflicting, poorly transferable, or compatible with both",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [],
+    "satisfied_by": "Assessed by the analyst by weighing the full set of matched witnesses for timing, reversibility vs prevention, and concordance of structural and functional endpoints without relying on any single study.",
+    "active": false,
+    "inactive_reason": "evaluative judgment: reported, not matched",
+    "call_key": "a364e28273223c61eec91c6b"
+  },
+  {
+    "unit_id": "A2-H3-R1",
+    "hypothesis_id": "A2-H3",
+    "axis_id": "A2",
+    "type": "REQUIRED_SUPPORT",
+    "text": "Existing evidence cannot distinguish rapid functional benefit from slow structural recovery.",
+    "source_quote": "Existing evidence cannot distinguish rapid functional benefit from slow structural recovery.",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "cannot distinguish",
+      "rapid functional",
+      "slow structural",
+      "timing ambiguity",
+      "functional vs structural mechanism",
+      "voiding improvement timing",
+      "onset not established"
+    ],
+    "satisfied_by": "A source-attributed synthesis or set of findings showing that available PTX evidence does not allow choosing between a rapid functional-onset mechanism and a slow structural-recovery mechanism for voiding improvement in this cohort.",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "8abda57b4e52107da2eb2d92"
+  },
+  {
+    "unit_id": "A2-H3-R2",
+    "hypothesis_id": "A2-H3",
+    "axis_id": "A2",
+    "type": "REQUIRED_SUPPORT",
+    "text": "Timing evidence is unmeasured.",
+    "source_quote": "Timing evidence is unmeasured, conflicting, poorly transferable, or compatible with both",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "timing not measured",
+      "no onset data",
+      "no time course",
+      "no follow-up schedule",
+      "missing early timepoints",
+      "unreported withdrawal",
+      "no persistence assessment"
+    ],
+    "satisfied_by": "A source-attributed finding that key PTX-relevant outcomes (functional or structural) were not measured with timing resolution sufficient to determine onset (days–weeks) versus delayed improvement (weeks–months).",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "8abda57b4e52107da2eb2d92"
+  },
+  {
+    "unit_id": "A2-H3-R3",
+    "hypothesis_id": "A2-H3",
+    "axis_id": "A2",
+    "type": "REQUIRED_SUPPORT",
+    "text": "Timing evidence is conflicting.",
+    "source_quote": "Timing evidence is unmeasured, conflicting, poorly transferable, or compatible with both",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "conflicting time course",
+      "early improvement in one report",
+      "delayed improvement in another",
+      "discordant onset",
+      "heterogeneous timing",
+      "inconsistent follow-up results"
+    ],
+    "satisfied_by": "A source-attributed set of results where some evidence indicates early functional improvement and other evidence indicates only delayed improvement (or different onset/persistence), creating a direct timing conflict relevant to this cohort.",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "8abda57b4e52107da2eb2d92"
+  },
+  {
+    "unit_id": "A2-H3-R4",
+    "hypothesis_id": "A2-H3",
+    "axis_id": "A2",
+    "type": "REQUIRED_SUPPORT",
+    "text": "Timing evidence is poorly transferable to this cohort.",
+    "source_quote": "Timing evidence is unmeasured, conflicting, poorly transferable, or compatible with both",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "animal model",
+      "different disease model",
+      "different tissue",
+      "dose/route mismatch",
+      "non-transferable timing",
+      "species differences",
+      "injury model mismatch"
+    ],
+    "satisfied_by": "A source-attributed finding where time-to-effect is reported, but the underlying model (species, injury type, tissue context, dosing/route, or phenotype) is such that onset/persistence timing cannot be defensibly transferred to the cohort in scope.",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "8abda57b4e52107da2eb2d92"
+  },
+  {
+    "unit_id": "A2-H3-R5",
+    "hypothesis_id": "A2-H3",
+    "axis_id": "A2",
+    "type": "REQUIRED_SUPPORT",
+    "text": "Timing evidence is compatible with both rapid and slow benefit, so onset and persistence cannot be specified from supported premises.",
+    "source_quote": "Timing evidence is unmeasured, conflicting, poorly transferable, or compatible with both, so the expected onset and persistence of benefit cannot be specified from supported premises.",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "compatible with both",
+      "functional and structural effects",
+      "no clear mediator of benefit",
+      "no onset vs remodeling separation",
+      "persistence unknown",
+      "withdrawal not assessed",
+      "duration-response unclear"
+    ],
+    "satisfied_by": "A source-attributed finding (or set) reporting effects consistent with both immediate functional modulation and longer-term structural change but lacking evidence that separates which mechanism carries the voiding benefit or defines onset/persistence.",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "8abda57b4e52107da2eb2d92"
+  },
+  {
+    "unit_id": "A2-H3-C1",
+    "hypothesis_id": "A2-H3",
+    "axis_id": "A2",
+    "type": "CONTEXTUAL_CONSTRAINT",
+    "text": "Uncertainty about timing is not due to an unfinished search or analysis; meaningful retrieval and adverse testing of timing evidence have been completed.",
+    "source_quote": "Meaningful retrieval and adverse testing of timing evidence have been completed; uncertainty is not merely an artifact of an unfinished investigation.",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "systematic retrieval completed",
+      "adverse testing completed",
+      "searched negative evidence",
+      "no additional timing sources found",
+      "comprehensive review",
+      "meaningful retrieval"
+    ],
+    "satisfied_by": "Meta-level documentation showing that timing-relevant evidence has been actively sought (including adverse/negative timing findings) and the remaining uncertainty is not simply because the investigation is incomplete.",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "8abda57b4e52107da2eb2d92"
+  },
+  {
+    "unit_id": "A2-H3-C2",
+    "hypothesis_id": "A2-H3",
+    "axis_id": "A2",
+    "type": "CONTEXTUAL_CONSTRAINT",
+    "text": "The uncertainty is localized to identified timing links (not generalized across the entire causal chain).",
+    "source_quote": "The uncertainty is localized to identified timing links.",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "localized uncertainty",
+      "timing link unresolved",
+      "specific causal link",
+      "onset link",
+      "persistence link",
+      "withdrawal timing"
+    ],
+    "satisfied_by": "A source-attributed analytic statement identifying exactly which timing-related causal link(s) remain unresolved (e.g., onset, duration-response, persistence) rather than claiming broad unspecific uncertainty.",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "8abda57b4e52107da2eb2d92"
+  },
+  {
+    "unit_id": "A2-H3-A1",
+    "hypothesis_id": "A2-H3",
+    "axis_id": "A2",
+    "type": "ADVERSE_TEST",
+    "text": "Evidence establishes onset, duration-response, or persistence clearly enough to favor A2-H1 or A2-H2.",
+    "source_quote": "Evidence establishes onset, duration-response, or persistence clearly enough to favor A2-H1 or A2-H2.",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "measurable improvement within days",
+      "within weeks",
+      "only after months",
+      "time-to-effect",
+      "withdrawal persistence",
+      "duration-response curve",
+      "clearly favors functional",
+      "clearly favors structural"
+    ],
+    "satisfied_by": "A source-attributed finding that clearly pins the time course (onset and/or persistence/duration-response) at clinically attainable exposure in a way that decisively supports rapid functional benefit (days–few weeks) or slow structural recovery (weeks–months).",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "8abda57b4e52107da2eb2d92"
+  },
+  {
+    "unit_id": "A2-H3-E1",
+    "hypothesis_id": "A2-H3",
+    "axis_id": "A2",
+    "type": "CORROBORATING_EXPECTATION",
+    "text": "Available findings report both functional and structural effects without establishing which carries the benefit, lack onset or withdrawal timing, or rest on models whose timing does not transfer to this cohort.",
+    "source_quote": "Available findings report both functional and structural effects without establishing which carries the benefit, lack onset or withdrawal timing, or rest on models whose timing does not transfer to this cohort.",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [
+      "functional effect",
+      "structural effect",
+      "fibrosis marker change",
+      "urodynamic improvement",
+      "no onset reported",
+      "no washout",
+      "no withdrawal",
+      "model timing not transferable"
+    ],
+    "satisfied_by": "A source-attributed report showing PTX-associated functional changes and structural/tissue changes but without temporal information (onset/withdrawal) or mechanistic attribution sufficient to decide which effect mediates voiding benefit in the cohort.",
+    "active": true,
+    "inactive_reason": "",
+    "call_key": "8abda57b4e52107da2eb2d92"
+  },
+  {
+    "unit_id": "A2-H3-J1",
+    "hypothesis_id": "A2-H3",
+    "axis_id": "A2",
+    "type": "EVALUATIVE_JUDGMENT",
+    "text": "The expected onset and persistence of benefit cannot be specified from supported premises, and the uncertainty should be recorded as specific unresolved timing links plus what measurement would distinguish rapid from slow benefit.",
+    "source_quote": "so the expected onset and persistence of benefit cannot be specified from supported premises. The uncertainty is localized to identified timing links.",
+    "quote_check": {
+      "found": true,
+      "method": "exact"
+    },
+    "evidence_terms": [],
+    "satisfied_by": "Analyst judgment that, after completed retrieval/adverse testing, the evidence base still cannot support a specific onset/persistence prediction; the correct handling is to log the exact timing link(s) and the discriminating measurement(s) needed.",
+    "active": false,
+    "inactive_reason": "evaluative judgment: reported, not matched",
+    "call_key": "8abda57b4e52107da2eb2d92"
+  }
+]

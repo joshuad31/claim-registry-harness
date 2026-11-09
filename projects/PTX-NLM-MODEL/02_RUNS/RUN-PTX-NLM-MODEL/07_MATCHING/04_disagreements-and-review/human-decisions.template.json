@@ -1,0 +1,12 @@
+{
+  "instructions": "Copy entries into human-decisions.json (same shape) to overrule a relation. relation must be one of EQUIVALENT, WITNESS_ENTAILS_UNIT, UNIT_ENTAILS_WITNESS, PARTIALLY_COVERS, CONTRADICTS, NO_SEMANTIC_RELATION, ABSTAIN.",
+  "decisions": [
+    {
+      "witness_id": "W-...",
+      "unit_id": "A1-H1-R1",
+      "relation": "NO_SEMANTIC_RELATION",
+      "reviewer": "your name",
+      "note": "why"
+    }
+  ]
+}

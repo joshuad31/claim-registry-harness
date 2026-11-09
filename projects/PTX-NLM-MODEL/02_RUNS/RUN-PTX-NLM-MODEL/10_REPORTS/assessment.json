@@ -1,0 +1,44 @@
+{
+  "gauge": 64,
+  "allocations": {
+    "A1": {
+      "A1-H1": 18,
+      "A1-H2": 14,
+      "A1-H3": 32
+    },
+    "A2": {
+      "A2-H1": 16,
+      "A2-H2": 12,
+      "A2-H3": 36
+    }
+  },
+  "drivers": {
+    "A1": [
+      "F007.a+F007.b: PDE IC50 (50–200 µM) vs likely achievable combined active forms ≤~10 µM raises exposure/route mismatch risk (Gap G001)",
+      "F001.b: PTX reported to improve detrusor contractions to electrical stimulation in obstructed bladder (bladder-relevant functional signal, but underspecified)",
+      "F004.b+F004.d: urodynamic phenotype definitions exist, but not linked to PTX-responsive subgroup; trial-specification remains blocked (Gap G003)"
+    ],
+    "A2": [
+      "G004: urinary timing/onset/withdrawal evidence not provided; cannot discriminate rapid functional vs slow structural",
+      "F001.b: contractility improvement conceptually compatible with functional mechanism but timing absent",
+      "F010.a: fibrosis rebound after stopping PTX+vitE suggests structural modulation but non-transferable to voiding"
+    ]
+  },
+  "basis_confidence": {
+    "A1": "mixed; low–medium",
+    "A2": "mixed; low"
+  },
+  "strongest_objection": {
+    "A1": "Key trial-warrant links are not supported in this ledger: clinically attainable exposure/target engagement in relevant tissue and a mechanism-to-voiding outcome bridge; PDE potency vs exposure mismatch is a concrete threat to a central proposed route.",
+    "A2": "No provided evidence reports onset/offset timing of urinary benefit with PTX at clinically relevant dosing; timing discrimination is therefore not supported."
+  },
+  "reversal_finding": {
+    "A1": "A bladder/voiding-relevant study showing PTX at clinically plausible dosing produces meaningful changes in voiding endpoints (Qmax/PVR/BCI etc.) and links them to a measurable mechanistic marker/phenotype enabling targeted inclusion criteria.",
+    "A2": "A study reporting time-to-onset and time-to-offset (withdrawal) of PTX-associated changes in voiding/urodynamic endpoints, distinguishing days–weeks functional effects from months-long structural recovery."
+  },
+  "problems": [],
+  "call_key": "4894187d4f9206f47cf66d75",
+  "model": "gpt-5.2-2025-12-11",
+  "time": "2026-11-09T22:30:42+00:00",
+  "caveat": "Uncalibrated working judgments about what this run's validated record warrants; not probabilities of truth and not validated by the crux result."
+}

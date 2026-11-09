@@ -33,3 +33,6 @@ desktop.ini
 
 # NotebookLM driver output (answers, queue, status, assessed list)
 nlm-answers/
+
+# The model-run demonstration uses the same third-party corpus as the other PTX runs.
+projects/PTX-NLM-MODEL/01_CORPUS/source-files/

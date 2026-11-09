@@ -119,15 +119,16 @@ The standard is Josh's Ready-Fire-Aim protocol, implemented in `cr quest-score`:
 
 ## 7. Open items, in priority order
 
-1. **Prove grading speed.** Run one timed PTX quest with a Manager model that can grade this material, and score it with `cr quest-score`. **First test a single R001 round on the 11-09 answers (Q0001–Q0006)** before starting a timed quest.
-2. **Restart the driver from the current code.** The 11-09 fixes (off-target detection under truncated filenames in `lane-runner.js`; pre-go-ahead records excluded from the scorecard; the driver's `quest-clock.json`) only take effect after copying `claimreg/notebooklm/` from the repo into `Claude output\claimreg\notebooklm\` (or running from the clone after `nlm login` there) and restarting `nlm run`.
-3. **A small Investigator↔Manager sync tool.** On 11-09 the Investigator did these by hand:
+0. **Evaluate and build the proposal in `docs/PROPOSAL-RELAY-AND-FAILOVER.md` (revision 2, by Claude).** It covers a model-agnostic quest relay (Investigator and Manager as API roles, the NotebookLM driver unchanged, an optional read-only LLM overseer for operations) and per-role provider failover, so one provider's refusal can no longer halt a quest. Josh has API key files at `C:\Users\joshu\Desktop\FINAL SPECIFICATION DOCUMENTS\ChatGPT output\API key`; reference them by path, never copy a key. **Its Step 0 is already done:** the `stage` / `packet` / `sync` commands and their tests are on `main` in commit `8708bf9`. Build v1 directly. Items 1 and 3 below are folded into the proposal.
+1. **DONE — see §9. Prove grading speed.** Run one timed PTX quest with a Manager model that can grade this material, and score it with `cr quest-score`. **First test a single R001 round on the 11-09 answers (Q0001–Q0006)** before starting a timed quest.
+2. **DONE — see §9. Restart the driver from the current code.** The 11-09 fixes (off-target detection under truncated filenames in `lane-runner.js`; pre-go-ahead records excluded from the scorecard; the driver's `quest-clock.json`) only take effect after copying `claimreg/notebooklm/` from the repo into `Claude output\claimreg\notebooklm\` (or running from the clone after `nlm login` there) and restarting `nlm run`.
+3. **DONE — see §9. A small Investigator↔Manager sync tool.** On 11-09 the Investigator did these by hand:
    - staging driver answers into the Manager workspace as Markdown;
    - parsing a packet's `## Ready questions` into queue files;
    - syncing `assessed-qids.json` from the ledger.
 
-   A `quest_tool.py` subcommand for each would remove the remaining manual glue.
-4. **FRD and matching quality.** The local engine is a lexical floor. Its validator accepts ≥ 25% content overlap (349 of 473 validations on 10-30 were PARTLY RIGHT), and it never reaches complete coverage. For a result anyone relies on, route `frd_generator`, `frd_validator` and the matching roles to a model or to the file queue (`docs/USER-GUIDE.md` §2–3).
+   `quest_tool.py` now has `stage`, `packet` and `sync` for exactly these.
+4. **FRD and matching quality.** The local engine is a lexical floor (349 of 473 validations on 10-30 were PARTLY RIGHT) and reaches no complete coverage. On 11-09 the 156-answer quest was also run end-to-end on **GPT-5.2** (`projects/PTX-NLM-MODEL/`): 655 READY FRDs (570 records failed the verbatim quote gate) and 114 witnesses, but still **0 complete relations, 0 coverage sets, 0 crux candidates**. So the zero-coverage wall is not only the lexical engine; the next diagnostic is the matching/witness stage itself — relation distribution, the 413 held witnesses, and the strictness of the `matching`/`witness` config — compared with `projects/WORKED/`, where 42 sets and 7 crux candidates are produced. Keep routing real models to `frd_generator`, `frd_validator` and the matching roles when the result matters.
 5. **Teaching.** `docs/WALKTHROUGH.md` covers the method end to end. Josh also wanted the harness to teach where to acquire sources (§2 there is a start).
 
 ## 8. Repo map (the parts touched since 10-30)

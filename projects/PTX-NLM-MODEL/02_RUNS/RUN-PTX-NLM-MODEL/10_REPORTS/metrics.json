@@ -1,0 +1,61 @@
+{
+  "corpus_bytes": 4923230,
+  "responses_usable": 154,
+  "frd_candidates": 558,
+  "validations": 1374,
+  "frds_retained": 527,
+  "witnesses_released": 114,
+  "witnesses_in_sets": 0,
+  "crux_witnesses": 0,
+  "frd_db_bytes": 823628,
+  "validated_db_bytes": 1684917,
+  "witness_db_bytes": 143174,
+  "set_witness_text_bytes": 0,
+  "frds_per_response_max": 4,
+  "responses_over_4_frds": 0,
+  "targets": [
+    {
+      "metric": "FRD database / corpus",
+      "value": 0.1673,
+      "target": "<= 0.189",
+      "met": true,
+      "note": ""
+    },
+    {
+      "metric": "validated FRD db / FRD db",
+      "value": 2.046,
+      "target": "< 2.0",
+      "met": false,
+      "note": "validated records carry the validator's explanation and the quotation check"
+    },
+    {
+      "metric": "witness db / validated FRD db",
+      "value": 0.085,
+      "target": "<= 0.25",
+      "met": true,
+      "note": ""
+    },
+    {
+      "metric": "witnesses used by deletion-minimal sets",
+      "value": 0.0,
+      "target": "< 0.33",
+      "met": null,
+      "note": "not applicable: no hypothesis has complete coverage"
+    },
+    {
+      "metric": "final witness text / corpus",
+      "value": 0.0,
+      "target": "about 0.01",
+      "met": null,
+      "note": "not applicable: no coverage sets"
+    },
+    {
+      "metric": "FRDs per response (max)",
+      "value": 4,
+      "target": "<= 4",
+      "met": true,
+      "note": ""
+    }
+  ],
+  "note": "Targets come from 'Problems with the ACH architecture' and are design goals, not demonstrated properties. Byte sizes are of the complete JSON databases."
+}

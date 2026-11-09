@@ -1,0 +1,402 @@
+{
+  "fixtures": 22,
+  "pass_a_correct": 22,
+  "pass_b_correct": 22,
+  "per_pattern": {
+    "actor_object_reversal": {
+      "n": 2,
+      "a_ok": 2,
+      "b_ok": 2
+    },
+    "active_passive_actor_kept": {
+      "n": 2,
+      "a_ok": 2,
+      "b_ok": 2
+    },
+    "affirmation_vs_denial": {
+      "n": 2,
+      "a_ok": 2,
+      "b_ok": 2
+    },
+    "possibility_vs_necessity": {
+      "n": 2,
+      "a_ok": 2,
+      "b_ok": 2
+    },
+    "report_vs_assertion": {
+      "n": 2,
+      "a_ok": 2,
+      "b_ok": 2
+    },
+    "condition_vs_unconditional": {
+      "n": 2,
+      "a_ok": 2,
+      "b_ok": 2
+    },
+    "high_overlap_changed_roles": {
+      "n": 2,
+      "a_ok": 2,
+      "b_ok": 2
+    },
+    "must_keep_reordered": {
+      "n": 1,
+      "a_ok": 1,
+      "b_ok": 1
+    },
+    "must_keep_specific_entails_general": {
+      "n": 1,
+      "a_ok": 1,
+      "b_ok": 1
+    },
+    "unrelated": {
+      "n": 2,
+      "a_ok": 2,
+      "b_ok": 2
+    },
+    "scope_transfer": {
+      "n": 1,
+      "a_ok": 1,
+      "b_ok": 1
+    },
+    "scope_transfer_null_is_not_contradiction": {
+      "n": 1,
+      "a_ok": 1,
+      "b_ok": 1
+    },
+    "quantity_conflict": {
+      "n": 1,
+      "a_ok": 1,
+      "b_ok": 1
+    },
+    "instance_establishes_capability": {
+      "n": 1,
+      "a_ok": 1,
+      "b_ok": 1
+    }
+  },
+  "qualified_patterns": [
+    "active_passive_actor_kept",
+    "actor_object_reversal",
+    "affirmation_vs_denial",
+    "condition_vs_unconditional",
+    "high_overlap_changed_roles",
+    "instance_establishes_capability",
+    "must_keep_reordered",
+    "must_keep_specific_entails_general",
+    "possibility_vs_necessity",
+    "quantity_conflict",
+    "report_vs_assertion",
+    "scope_transfer",
+    "scope_transfer_null_is_not_contradiction",
+    "unrelated"
+  ],
+  "unqualified_patterns": [],
+  "rows": [
+    {
+      "fixture": "FX-01",
+      "pattern": "actor_object_reversal",
+      "accept": [
+        "ABSTAIN",
+        "CONTRADICTS",
+        "NO_SEMANTIC_RELATION"
+      ],
+      "pass_a": "CONTRADICTS",
+      "pass_b": "CONTRADICTS",
+      "a_ok": true,
+      "b_ok": true,
+      "trace_a": "Unit affirms: \"Drug A reduced fibrosis in obstructed rat bladders.\" Witness states the opposite direction of effect: \"Fibrosis in obstructed rat bladders reduced drug A exposure\" (fibrosis affects drug exposure, not drug reducing fibrosis), so both cannot be the same claimed relationship under the same scope.",
+      "trace_b": "Witness states 'Fibrosis in obstructed rat bladders reduced drug A exposure' (fibrosis → reduced drug exposure), while the unit claims 'Drug A reduced fibrosis in obstructed rat bladders' (drug A → reduced fibrosis); these are opposite directionality on the reduction relationship within the same model."
+    },
+    {
+      "fixture": "FX-02",
+      "pattern": "actor_object_reversal",
+      "accept": [
+        "ABSTAIN",
+        "CONTRADICTS",
+        "NO_SEMANTIC_RELATION"
+      ],
+      "pass_a": "NO_SEMANTIC_RELATION",
+      "pass_b": "NO_SEMANTIC_RELATION",
+      "a_ok": true,
+      "b_ok": true,
+      "trace_a": "The unit claims a treatment effect: \"Tamsulosin improved maximum flow rate\" in men with BPH. The witness instead states the reverse direction of causality—\"Improvements in maximum flow rate... increased tamsulosin absorption\"—and does not assert that tamsulosin caused/improved maximum flow rate.",
+      "trace_b": "The witness says \"Improvements in maximum flow rate in men with BPH increased tamsulosin absorption,\" which treats flow-rate improvement as a factor affecting absorption, not as an outcome improved by tamsulosin; it does not state that \"tamsulosin improved maximum flow rate.\""
+    },
+    {
+      "fixture": "FX-03",
+      "pattern": "active_passive_actor_kept",
+      "accept": [
+        "EQUIVALENT"
+      ],
+      "pass_a": "EQUIVALENT",
+      "pass_b": "EQUIVALENT",
+      "a_ok": true,
+      "b_ok": true,
+      "trace_a": "The witness states verbatim that \"Detrusor tension was measured by Shirazi after four weeks,\" matching the unit's claim that \"Shirazi measured detrusor tension after four weeks\" with the same actor, action, object, and timing.",
+      "trace_b": "Witness states \"Detrusor tension was measured by Shirazi after four weeks,\" which matches the unit \"Shirazi measured detrusor tension after four weeks\" with the same actor, measurement, and timing."
+    },
+    {
+      "fixture": "FX-04",
+      "pattern": "active_passive_actor_kept",
+      "accept": [
+        "EQUIVALENT",
+        "WITNESS_ENTAILS_UNIT"
+      ],
+      "pass_a": "EQUIVALENT",
+      "pass_b": "EQUIVALENT",
+      "a_ok": true,
+      "b_ok": true,
+      "trace_a": "The witness states \"Sixty men were randomized to two treatment arms,\" matching the unit's claim that \"The trial randomized sixty men to two treatment arms\" with the same quantity (sixty), population (men), and design feature (randomized into two treatment arms).",
+      "trace_b": "Witness states: \"Sixty men were randomized to two treatment arms\" (same population/size and two arms) \"by the trial investigators\"; unit states: \"The trial randomized sixty men to two treatment arms.\" Same randomization event and scope, with witness adding the agent."
+    },
+    {
+      "fixture": "FX-05",
+      "pattern": "affirmation_vs_denial",
+      "accept": [
+        "CONTRADICTS"
+      ],
+      "pass_a": "CONTRADICTS",
+      "pass_b": "CONTRADICTS",
+      "a_ok": true,
+      "b_ok": true,
+      "trace_a": "The unit affirms a positive effect: \"Drug A increased evoked detrusor tension compared with control.\" The witness states the opposite polarity: \"produced no significant increase ... compared with control,\" denying an increase under the same outcome and comparator.",
+      "trace_b": "Witness states \"Drug A produced no significant increase in evoked detrusor tension compared with control,\" while the unit claims \"Drug A increased evoked detrusor tension compared with control\"—same measure and comparator but opposite polarity (increase vs no increase)."
+    },
+    {
+      "fixture": "FX-06",
+      "pattern": "affirmation_vs_denial",
+      "accept": [
+        "CONTRADICTS"
+      ],
+      "pass_a": "CONTRADICTS",
+      "pass_b": "CONTRADICTS",
+      "a_ok": true,
+      "b_ok": true,
+      "trace_a": "Unit asserts no difference: \"Carbachol-induced tension did not differ between the groups.\" Witness asserts the opposite polarity: \"differed significantly between the groups,\" so they cannot both be true for the same outcome and group comparison.",
+      "trace_b": "The witness states \"tension differed significantly between the groups,\" which directly opposes the unit claim \"did not differ between the groups\" for the same outcome (carbachol-induced tension) and comparison (between groups)."
+    },
+    {
+      "fixture": "FX-07",
+      "pattern": "possibility_vs_necessity",
+      "accept": [
+        "PARTIALLY_COVERS",
+        "UNIT_ENTAILS_WITNESS"
+      ],
+      "pass_a": "UNIT_ENTAILS_WITNESS",
+      "pass_b": "UNIT_ENTAILS_WITNESS",
+      "a_ok": true,
+      "b_ok": true,
+      "trace_a": "Unit says \"Drug A must improve voiding\" (strong necessity). Witness only says the authors \"suggest\" drug A \"may improve voiding\" (weaker, speculative modality) in the same cohort, so the unit would imply this weaker suggestion but not vice versa.",
+      "trace_b": "Witness says only that the authors \"suggest\" drug A \"may improve voiding\" in \"this cohort\" (speculative possibility), while the unit claims drug A \"must improve voiding\" in this cohort (strong necessity); if the unit were true it would imply 'may improve', but not vice versa."
+    },
+    {
+      "fixture": "FX-08",
+      "pattern": "possibility_vs_necessity",
+      "accept": [
+        "EQUIVALENT",
+        "WITNESS_ENTAILS_UNIT"
+      ],
+      "pass_a": "WITNESS_ENTAILS_UNIT",
+      "pass_b": "WITNESS_ENTAILS_UNIT",
+      "a_ok": true,
+      "b_ok": true,
+      "trace_a": "The witness states that \"after standard clinical oral doses, drug A was measured in human bladder tissue samples,\" which directly establishes that Drug A can reach human bladder tissue under clinically attainable oral dosing conditions.",
+      "trace_b": "The witness states that \"after standard clinical oral doses, drug A was measured in human bladder tissue samples,\" which directly establishes presence in human bladder tissue at clinically attainable oral dosing, satisfying the unit’s \"can reach\" capability claim."
+    },
+    {
+      "fixture": "FX-09",
+      "pattern": "report_vs_assertion",
+      "accept": [
+        "PARTIALLY_COVERS",
+        "UNIT_ENTAILS_WITNESS"
+      ],
+      "pass_a": "UNIT_ENTAILS_WITNESS",
+      "pass_b": "UNIT_ENTAILS_WITNESS",
+      "a_ok": true,
+      "b_ok": true,
+      "trace_a": "The unit asserts the substantive effect claim ('Drug A reduces fibrosis in obstructed bladders'). The witness is weaker because it only says a 'narrative review reports, without new data' that claim, i.e., attribution/reporting rather than presenting direct evidence; if the unit were true, it would be something a review could report.",
+      "trace_b": "The witness says only that \"A narrative review reports...that drug A reduces fibrosis in obstructed bladders\" (reported/attributed, secondary), while the unit directly claims \"Drug A reduces fibrosis in obstructed bladders\" without attribution; if the unit is true, it would support that a review could report it, but the witness does not itself establish the claim beyond reporting it."
+    },
+    {
+      "fixture": "FX-10",
+      "pattern": "report_vs_assertion",
+      "accept": [
+        "EQUIVALENT"
+      ],
+      "pass_a": "EQUIVALENT",
+      "pass_b": "EQUIVALENT",
+      "a_ok": true,
+      "b_ok": true,
+      "trace_a": "Both state the same attributed claim: \"Chung's review reports\" that \"drug A reduces fibrosis\" specifically in \"obstructed bladders,\" with matching polarity and scope.",
+      "trace_b": "Witness states 'According to Chung's review, drug A reduces fibrosis in obstructed bladders,' which matches the unit's wording 'Chung's review reports that drug A reduces fibrosis in obstructed bladders' in attribution, effect, and scope."
+    },
+    {
+      "fixture": "FX-11",
+      "pattern": "condition_vs_unconditional",
+      "accept": [
+        "PARTIALLY_COVERS",
+        "UNIT_ENTAILS_WITNESS"
+      ],
+      "pass_a": "UNIT_ENTAILS_WITNESS",
+      "pass_b": "PARTIALLY_COVERS",
+      "a_ok": true,
+      "b_ok": true,
+      "trace_a": "The unit asserts an unconditional outcome: \"Drug A reaches the detrusor and contractility improves.\" The witness is conditional and weaker: \"If drug A reaches the detrusor, contractility may improve\" (conditional + \"may\"), so the unit would imply this possibility but not vice versa.",
+      "trace_b": "The witness says only that \"If drug A reaches the detrusor, contractility may improve\" (conditional + 'may'), whereas the unit states \"Drug A reaches the detrusor and contractility improves\" (unconditional, affirmative improvement)."
+    },
+    {
+      "fixture": "FX-12",
+      "pattern": "condition_vs_unconditional",
+      "accept": [
+        "EQUIVALENT"
+      ],
+      "pass_a": "EQUIVALENT",
+      "pass_b": "EQUIVALENT",
+      "a_ok": true,
+      "b_ok": true,
+      "trace_a": "The witness states verbatim that \"Drug A increased evoked tension in obstructed rats,\" matching the unit’s population (obstructed rats), intervention (drug A), outcome (evoked tension), and direction (increased).",
+      "trace_b": "Witness states \"Drug A increased evoked tension in obstructed rats,\" which matches the unit text exactly in effect (increased evoked tension), population (obstructed rats), and polarity (increased)."
+    },
+    {
+      "fixture": "FX-13",
+      "pattern": "high_overlap_changed_roles",
+      "accept": [
+        "ABSTAIN",
+        "NO_SEMANTIC_RELATION",
+        "PARTIALLY_COVERS"
+      ],
+      "pass_a": "NO_SEMANTIC_RELATION",
+      "pass_b": "NO_SEMANTIC_RELATION",
+      "a_ok": true,
+      "b_ok": true,
+      "trace_a": "The unit requires a comparison of “Drug A plus tamsulosin” vs “tamsulosin alone” on flow in men with BPH. The witness instead compares “tamsulosin plus placebo” vs “drug A alone,” which is a different treatment contrast and does not address whether adding Drug A improves flow over tamsulosin alone.",
+      "trace_b": "Witness: \"Tamsulosin plus placebo increased flow more than drug A alone\"; Unit: \"Drug A plus tamsulosin increased flow more than tamsulosin alone.\" The treatment arms are different (placebo vs Drug A; tamsulosin+placebo vs Drug A+tamsulosin; comparator drug A alone vs tamsulosin alone), so the unit does not follow from the witness."
+    },
+    {
+      "fixture": "FX-14",
+      "pattern": "high_overlap_changed_roles",
+      "accept": [
+        "ABSTAIN",
+        "NO_SEMANTIC_RELATION",
+        "PARTIALLY_COVERS"
+      ],
+      "pass_a": "PARTIALLY_COVERS",
+      "pass_b": "PARTIALLY_COVERS",
+      "a_ok": true,
+      "b_ok": true,
+      "trace_a": "Unit requires 'Drug A 400 mg three times daily' increasing maximum flow rate, but the witness specifies '400 mg once daily'; same direction/effect but different dosing frequency/condition, so it does not entail the unit.",
+      "trace_b": "Witness: \"Drug A 400 mg once daily increased maximum flow rate\" matches the drug/dose and the increase in maximum flow rate, but does not meet the unit’s required dosing frequency of \"400 mg three times daily,\" so it only partially covers the unit."
+    },
+    {
+      "fixture": "FX-15",
+      "pattern": "must_keep_reordered",
+      "accept": [
+        "EQUIVALENT"
+      ],
+      "pass_a": "EQUIVALENT",
+      "pass_b": "EQUIVALENT",
+      "a_ok": true,
+      "b_ok": true,
+      "trace_a": "The witness states that 'Difficulty urinating when others are present characterizes paruresis,' which matches the unit claim that 'Paruresis is characterized by difficulty urinating when others are present' with the same predicate and scope.",
+      "trace_b": "Witness states: \"Difficulty urinating when others are present characterizes paruresis,\" which matches the unit claim \"Paruresis is characterized by difficulty urinating when others are present\" with the same affirmed characterization and condition."
+    },
+    {
+      "fixture": "FX-16",
+      "pattern": "must_keep_specific_entails_general",
+      "accept": [
+        "EQUIVALENT",
+        "WITNESS_ENTAILS_UNIT"
+      ],
+      "pass_a": "WITNESS_ENTAILS_UNIT",
+      "pass_b": "WITNESS_ENTAILS_UNIT",
+      "a_ok": true,
+      "b_ok": true,
+      "trace_a": "The witness states that \"drug A improved detrusor contractility in obstructed rats\" (after four weeks of oral dosing), which directly includes the unit’s claim that Drug A improved detrusor contractility in obstructed rats; the dosing duration/route are additional details not required by the unit.",
+      "trace_b": "Witness states: \"After four weeks of oral dosing, drug A improved detrusor contractility in obstructed rats,\" which includes the unit’s full claim \"Drug A improved detrusor contractility in obstructed rats\" with added dosing-duration detail."
+    },
+    {
+      "fixture": "FX-17",
+      "pattern": "unrelated",
+      "accept": [
+        "NO_SEMANTIC_RELATION"
+      ],
+      "pass_a": "NO_SEMANTIC_RELATION",
+      "pass_b": "NO_SEMANTIC_RELATION",
+      "a_ok": true,
+      "b_ok": true,
+      "trace_a": "The unit is about Drug A reducing collagen deposition in obstructed rat bladders, while the witness states that beta-blockers reduce mortality after myocardial infarction (different intervention, outcome, and population/tissue).",
+      "trace_b": "The witness states \"Beta-blockers reduce mortality after myocardial infarction,\" which concerns post-MI mortality, while the unit requires \"Drug A reduced collagen deposition in obstructed rat bladders\" (rat bladder fibrosis endpoint). These are different interventions (beta-blockers vs Drug A), different outcomes (mortality vs collagen deposition), and different models/tissues (post-MI vs obstructed rat bladder)."
+    },
+    {
+      "fixture": "FX-18",
+      "pattern": "unrelated",
+      "accept": [
+        "NO_SEMANTIC_RELATION"
+      ],
+      "pass_a": "NO_SEMANTIC_RELATION",
+      "pass_b": "NO_SEMANTIC_RELATION",
+      "a_ok": true,
+      "b_ok": true,
+      "trace_a": "The unit claims \"Adherence was assessed by returned diaries,\" but the witness only states \"Peak plasma concentration occurred at two hours\" and says nothing about adherence assessment methods or diaries.",
+      "trace_b": "The witness states only that \"Peak plasma concentration occurred at two hours,\" which is about PK timing, while the unit claims \"Adherence was assessed by returned diaries,\" which concerns adherence assessment method; neither implies the other."
+    },
+    {
+      "fixture": "FX-19",
+      "pattern": "scope_transfer",
+      "accept": [
+        "NO_SEMANTIC_RELATION",
+        "PARTIALLY_COVERS"
+      ],
+      "pass_a": "PARTIALLY_COVERS",
+      "pass_b": "PARTIALLY_COVERS",
+      "a_ok": true,
+      "b_ok": true,
+      "trace_a": "The unit requires that \"Drug A improves voiding function\" specifically \"in men with BPH\" (human male BPH population, voiding function). The witness instead reports improved \"detrusor contractility\" in \"obstructed rats\" (different species/model and not stated as men with BPH or voiding function), so it is only indirect/partial support.",
+      "trace_b": "Witness says \"Drug A improved detrusor contractility\" in \"obstructed rats,\" while the unit requires \"improves voiding function\" in \"men with BPH\"; the species/population and clinical condition differ, and the endpoint is narrower (detrusor contractility) than overall voiding function."
+    },
+    {
+      "fixture": "FX-20",
+      "pattern": "scope_transfer_null_is_not_contradiction",
+      "accept": [
+        "ABSTAIN",
+        "NO_SEMANTIC_RELATION",
+        "PARTIALLY_COVERS"
+      ],
+      "pass_a": "NO_SEMANTIC_RELATION",
+      "pass_b": "NO_SEMANTIC_RELATION",
+      "a_ok": true,
+      "b_ok": true,
+      "trace_a": "The unit claims drug A \"improves bladder perfusion in humans,\" whereas the witness reports that in \"healthy dogs\" drug A \"did not change renal blood flow\" (different species and different organ/endpoint, and null effect rather than improvement).",
+      "trace_b": "The witness says in \"healthy dogs\" drug A \"did not change renal blood flow\" (kidney, no improvement), while the unit is about \"improves bladder perfusion in humans\" (different species and different organ, and opposite direction 'improves' vs 'did not change' on a different outcome)."
+    },
+    {
+      "fixture": "FX-21",
+      "pattern": "quantity_conflict",
+      "accept": [
+        "CONTRADICTS"
+      ],
+      "pass_a": "CONTRADICTS",
+      "pass_b": "CONTRADICTS",
+      "a_ok": true,
+      "b_ok": true,
+      "trace_a": "Unit claims the mean maximum flow rate rose by \"4.5 mL/s\" in the drug A arm, while the witness claims it rose by \"1.2 mL/s\" in the same arm; these are incompatible specific quantitative changes for the same measure and scope.",
+      "trace_b": "Witness states the mean maximum flow rate 'rose by 1.2 mL/s' in the drug A arm, while the unit requires it 'rose by 4.5 mL/s' in the same arm; these are conflicting quantitative values for the same outcome and scope."
+    },
+    {
+      "fixture": "FX-22",
+      "pattern": "instance_establishes_capability",
+      "accept": [
+        "EQUIVALENT",
+        "WITNESS_ENTAILS_UNIT"
+      ],
+      "pass_a": "WITNESS_ENTAILS_UNIT",
+      "pass_b": "WITNESS_ENTAILS_UNIT",
+      "a_ok": true,
+      "b_ok": true,
+      "trace_a": "The witness states that in \"20 patients\" (human subjects), \"oral drug A ... reduced serum TNF-alpha\" after four weeks, which is a study report of drug A reducing serum TNF-alpha in humans, satisfying the unit's requirement of at least one such study report.",
+      "trace_b": "The witness states that in '20 patients' 'oral drug A ... reduced serum TNF-alpha by 30% after four weeks,' which is a report of drug A reducing serum TNF-alpha in humans; this meets the unit's 'at least one study reports' and 'human subjects' scope."
+    }
+  ],
+  "disclosure": "Fixtures use generic 'drug A' vocabulary plus any project fixtures in 01_FRAME/match-fixtures.json. Passing them qualifies the matcher only for these tested patterns; it does not prove general language understanding.",
+  "time": "2026-11-09T22:20:47+00:00"
+}

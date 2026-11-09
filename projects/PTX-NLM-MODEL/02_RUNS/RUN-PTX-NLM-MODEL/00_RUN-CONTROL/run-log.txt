@@ -1,0 +1,36 @@
+[2026-11-09T21:32:11+00:00] == stage corpus: Ingest, hash and index the corpus
+[2026-11-09T21:32:14+00:00]    corpus: {'manifest_id': 'MANIFEST-50cb0885852d', 'files': 111, 'bytes': 4923230, 'chunks': 3335, 'flagged_sources': ['hall2018.pdf.md', 'life-15-00613.pdf.md', 's00210-025-03845-1.pdf.md', 'vanreijn-baggen2022.pdf.md']}
+[2026-11-09T21:32:14+00:00] == stage index: Ranked index (supplied or generated)
+[2026-11-09T21:32:14+00:00]    index: {'index': 'supplied', 'path': 'C:\\Users\\joshu\\Desktop\\FINAL SPECIFICATION DOCUMENTS\\Claude output\\quests\\PTX-NLM-2026-11-09\\project-model\\01_FRAME\\index.md'}
+[2026-11-09T21:32:14+00:00] == stage archivist_prompt: Archivist custom prompt (supplied or generated)
+[2026-11-09T21:32:14+00:00]    archivist_prompt: {'archivist_prompt': 'supplied'}
+[2026-11-09T21:32:14+00:00] == stage frame: Parse and freeze the header, hypotheses and run configuration
+[2026-11-09T21:32:14+00:00]    frame: {'axes': 2, 'hypotheses': 6, 'decisive_tests': 11, 'gauge': 64, 'approval': {'A1': 'APPROVED', 'A2': 'TEST_ONLY'}}
+[2026-11-09T21:32:46+00:00] == stage units: Internal coverage units (verbatim-anchored)
+[2026-11-09T21:33:09+00:00]    units: {'units': 60, 'active': 54, 'unanchored': 0, 'by_hypothesis': {'A1-H1': {'REQUIRED_SUPPORT': 4, 'CONTEXTUAL_CONSTRAINT': 2, 'ADVERSE_TEST': 1, 'CORROBORATING_EXPECTATION': 1, 'EVALUATIVE_JUDGMENT': 1}, 'A1-H2': {'REQUIRED_SUPPORT': 5, 'CONTEXTUAL_CONSTRAINT': 2, 'ADVERSE_TEST': 1, 'CORROBORATING_EXPECTATION': 1, 'EVALUATIVE_JUDGMENT': 1}, 'A1-H3': {'REQUIRED_SUPPORT': 4, 'CONTEXTUAL_CONSTRAINT': 1, 'ADVERSE_TEST': 1, 'CORROBORATING_EXPECTATION': 1, 'EVALUATIVE_JUDGMENT': 1}, 'A2-H1': {'REQUIRED_SUPPORT': 3, 'CONTEXTUAL_CONSTRAINT': 2, 'ADVERSE_TEST': 1, 'CORROBORATING_EXPECTATION': 1, 'EVALUATIVE_JUDGMENT': 1}, 'A2-H2': {'REQUIRED_SUPPORT': 6, 'CONTEXTUAL_CONSTRAINT': 2, 'ADVERSE_TEST': 3, 'CORROBORATING_EXPECTATION': 3, 'EVALUATIVE_JUDGMENT': 1}, 'A2-H3': {'REQUIRED_SUPPORT': 5, 'CONTEXTUAL_CONSTRAINT': 2, 'ADVERSE_TEST': 1, 'CORROBORATING_EXPECTATION': 1, 'EVALUATIVE_JUDGMENT': 1}}}
+[2026-11-09T21:33:09+00:00] == stage frd_generate: Candidate FRDs (one response at a time)
+[2026-11-09T21:40:26+00:00]    frd_generate: {'responses': 154, 'candidates': 558, 'over_limit': 0}
+[2026-11-09T21:40:26+00:00] == stage frd_validate: Blind source-only validation + quote check
+[2026-11-09T22:00:29+00:00]    frd_validate: {'candidates': 558, 'validations': 1374, 'ready': 655, 'quote_unverified': 570}
+[2026-11-09T22:00:44+00:00] == stage frd_retain: Retention and archival (Problems-note budgets)
+[2026-11-09T22:00:55+00:00]    frd_retain: {'ready': 655, 'retained': 527, 'archived': 130, 'within_budget': False, 'budget_pct': 18.94}
+[2026-11-09T22:00:55+00:00] == stage language: Custom dictionary and canonicalizer
+[2026-11-09T22:00:55+00:00]    language: {'mode': 'off'}
+[2026-11-09T22:00:55+00:00] == stage witnesses: Question-guided witnesses + fidelity audit
+[2026-11-09T22:20:27+00:00]    witnesses: {'applications': 527, 'released': 114, 'held': 413, 'ceiling_exceptions': 0, 'audit_pass_first_round': 69, 'time': '2026-11-09T22:20:27+00:00'}
+[2026-11-09T22:20:27+00:00] == stage transcode: Transcode witnesses and units
+[2026-11-09T22:20:27+00:00]    transcode: {'mode': 'off', 'items': 168}
+[2026-11-09T22:20:27+00:00] == stage qualify: Matcher qualification on adversarial fixtures
+[2026-11-09T22:20:47+00:00]    qualify: {'fixtures': 22, 'pass_a_correct': 22, 'pass_b_correct': 22, 'unqualified_patterns': []}
+[2026-11-09T22:20:47+00:00] == stage match: Two-pass semantic matching
+[2026-11-09T22:29:15+00:00]    match: {'units': 54, 'witnesses': 110, 'pairs_assessed': 1380, 'pairs_not_assessed_prefilter': 4560, 'exhaustive': False, 'agreed': 559, 'model_adjudicated': 727, 'disputed_abstain': 0, 'missing_both_passes': 94, 'one_pass_only': 0, 'complete_relations': 0, 'contradictions': 0, 'text_mode': 'off', 'review_pairs': 727, 'human_decisions': 0}
+[2026-11-09T22:29:15+00:00] == stage joint: Jointly sufficient groups and incompatibilities
+[2026-11-09T22:29:18+00:00]    joint: {'joint_proposed': 0, 'joint_approved': 0, 'incompat_pairs_checked': 0, 'incompat_approved': 0}
+[2026-11-09T22:29:18+00:00] == stage coverage: Deletion-minimal coverage sets
+[2026-11-09T22:29:18+00:00]    coverage: {'A1-H1': {'status': 'NO_COMPLETE_COVERAGE', 'sets': 0, 'search': 'NOT_RUN', 'covered_units': '0/4'}, 'A1-H2': {'status': 'NO_COMPLETE_COVERAGE', 'sets': 0, 'search': 'NOT_RUN', 'covered_units': '0/5'}, 'A1-H3': {'status': 'NO_COMPLETE_COVERAGE', 'sets': 0, 'search': 'NOT_RUN', 'covered_units': '0/4'}, 'A2-H1': {'status': 'NO_COMPLETE_COVERAGE', 'sets': 0, 'search': 'NOT_RUN', 'covered_units': '0/3'}, 'A2-H2': {'status': 'NO_COMPLETE_COVERAGE', 'sets': 0, 'search': 'NOT_RUN', 'covered_units': '0/6'}, 'A2-H3': {'status': 'NO_COMPLETE_COVERAGE', 'sets': 0, 'search': 'NOT_RUN', 'covered_units': '0/5'}}
+[2026-11-09T22:29:18+00:00] == stage crux: Frozen rival theories, T1/T2, crux candidates
+[2026-11-09T22:29:18+00:00]    crux: {'coverage_recomputed': 0, 'crux_candidates': 0, 'conflict_recorded': 0, 'diagnostic_witnesses': 0, 'tests': 0, 'unknown_tests': 0}
+[2026-11-09T22:29:18+00:00] == stage assess: Final ACH_Eval assessment of the witness registry
+[2026-11-09T22:30:42+00:00]    assess: {'allocations': {'A1': {'A1-H1': 18, 'A1-H2': 14, 'A1-H3': 32}, 'A2': {'A2-H1': 16, 'A2-H2': 12, 'A2-H3': 36}}, 'problems': []}
+[2026-11-09T22:30:42+00:00] == stage report: Crux report and HTML audit browser
+[2026-11-09T22:30:49+00:00]    report: {'report_words': 2124, 'crux_candidates': 0}

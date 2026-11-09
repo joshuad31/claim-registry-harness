@@ -1,0 +1,3691 @@
+[
+  {
+    "app_id": "APP-FRD-Q0002-01-Q0002",
+    "vfrd_id": "FRD-Q0002-01",
+    "qid": "Q0002",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0002-01-Q0002"
+  },
+  {
+    "app_id": "APP-FRD-Q0003-01-Q0003",
+    "vfrd_id": "FRD-Q0003-01",
+    "qid": "Q0003",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0003-01-Q0003"
+  },
+  {
+    "app_id": "APP-FRD-Q0003-02-Q0003",
+    "vfrd_id": "FRD-Q0003-02",
+    "qid": "Q0003",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0003-02-Q0003"
+  },
+  {
+    "app_id": "APP-FRD-Q0003-03-c1-Q0003",
+    "vfrd_id": "FRD-Q0003-03-c1",
+    "qid": "Q0003",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0003-03-c1-Q0003"
+  },
+  {
+    "app_id": "APP-FRD-Q0003-03-c2-Q0003",
+    "vfrd_id": "FRD-Q0003-03-c2",
+    "qid": "Q0003",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0003-03-c2-Q0003"
+  },
+  {
+    "app_id": "APP-FRD-Q0003-03-c3-Q0003",
+    "vfrd_id": "FRD-Q0003-03-c3",
+    "qid": "Q0003",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0003-03-c3-Q0003"
+  },
+  {
+    "app_id": "APP-FRD-Q0003-03-c4-Q0003",
+    "vfrd_id": "FRD-Q0003-03-c4",
+    "qid": "Q0003",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0003-03-c4-Q0003"
+  },
+  {
+    "app_id": "APP-FRD-Q0003-03-c5-Q0003",
+    "vfrd_id": "FRD-Q0003-03-c5",
+    "qid": "Q0003",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0003-03-c5-Q0003"
+  },
+  {
+    "app_id": "APP-FRD-Q0003-04-c1-Q0003",
+    "vfrd_id": "FRD-Q0003-04-c1",
+    "qid": "Q0003",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0003-04-c1-Q0003"
+  },
+  {
+    "app_id": "APP-FRD-Q0003-04-c3-Q0003",
+    "vfrd_id": "FRD-Q0003-04-c3",
+    "qid": "Q0003",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0003-04-c3-Q0003"
+  },
+  {
+    "app_id": "APP-FRD-Q0005-02-c3-Q0005",
+    "vfrd_id": "FRD-Q0005-02-c3",
+    "qid": "Q0005",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0005-02-c3-Q0005"
+  },
+  {
+    "app_id": "APP-FRD-Q0005-03-Q0005",
+    "vfrd_id": "FRD-Q0005-03",
+    "qid": "Q0005",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0005-03-Q0005"
+  },
+  {
+    "app_id": "APP-FRD-Q0005-04-c1-Q0005",
+    "vfrd_id": "FRD-Q0005-04-c1",
+    "qid": "Q0005",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0005-04-c1-Q0005"
+  },
+  {
+    "app_id": "APP-FRD-Q0005-04-c2-Q0005",
+    "vfrd_id": "FRD-Q0005-04-c2",
+    "qid": "Q0005",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0005-04-c2-Q0005"
+  },
+  {
+    "app_id": "APP-FRD-Q0005-04-c3-Q0005",
+    "vfrd_id": "FRD-Q0005-04-c3",
+    "qid": "Q0005",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0005-04-c3-Q0005"
+  },
+  {
+    "app_id": "APP-FRD-Q0006-01-Q0006",
+    "vfrd_id": "FRD-Q0006-01",
+    "qid": "Q0006",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0006-01-Q0006"
+  },
+  {
+    "app_id": "APP-FRD-Q0006-02-Q0006",
+    "vfrd_id": "FRD-Q0006-02",
+    "qid": "Q0006",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0006-02-Q0006"
+  },
+  {
+    "app_id": "APP-FRD-Q0006-03-c1-Q0006",
+    "vfrd_id": "FRD-Q0006-03-c1",
+    "qid": "Q0006",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0006-03-c1-Q0006"
+  },
+  {
+    "app_id": "APP-FRD-Q0006-03-c3-Q0006",
+    "vfrd_id": "FRD-Q0006-03-c3",
+    "qid": "Q0006",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0006-03-c3-Q0006"
+  },
+  {
+    "app_id": "APP-FRD-Q0006-03-c4-Q0006",
+    "vfrd_id": "FRD-Q0006-03-c4",
+    "qid": "Q0006",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0006-03-c4-Q0006"
+  },
+  {
+    "app_id": "APP-FRD-Q0006-04-c1-Q0006",
+    "vfrd_id": "FRD-Q0006-04-c1",
+    "qid": "Q0006",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0006-04-c1-Q0006"
+  },
+  {
+    "app_id": "APP-FRD-Q0006-04-c2-Q0006",
+    "vfrd_id": "FRD-Q0006-04-c2",
+    "qid": "Q0006",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0006-04-c2-Q0006"
+  },
+  {
+    "app_id": "APP-FRD-Q0007-01-c1-Q0007",
+    "vfrd_id": "FRD-Q0007-01-c1",
+    "qid": "Q0007",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0007-01-c1-Q0007"
+  },
+  {
+    "app_id": "APP-FRD-Q0007-03-Q0007",
+    "vfrd_id": "FRD-Q0007-03",
+    "qid": "Q0007",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0007-03-Q0007"
+  },
+  {
+    "app_id": "APP-FRD-Q0007-04-c1-Q0007",
+    "vfrd_id": "FRD-Q0007-04-c1",
+    "qid": "Q0007",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0007-04-c1-Q0007"
+  },
+  {
+    "app_id": "APP-FRD-Q0007-04-c2-Q0007",
+    "vfrd_id": "FRD-Q0007-04-c2",
+    "qid": "Q0007",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0007-04-c2-Q0007"
+  },
+  {
+    "app_id": "APP-FRD-Q0007-04-c3-Q0007",
+    "vfrd_id": "FRD-Q0007-04-c3",
+    "qid": "Q0007",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0007-04-c3-Q0007"
+  },
+  {
+    "app_id": "APP-FRD-Q0007-04-c4-Q0007",
+    "vfrd_id": "FRD-Q0007-04-c4",
+    "qid": "Q0007",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0007-04-c4-Q0007"
+  },
+  {
+    "app_id": "APP-FRD-Q0008-01-Q0008",
+    "vfrd_id": "FRD-Q0008-01",
+    "qid": "Q0008",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0008-01-Q0008"
+  },
+  {
+    "app_id": "APP-FRD-Q0008-03-Q0008",
+    "vfrd_id": "FRD-Q0008-03",
+    "qid": "Q0008",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0008-03-Q0008"
+  },
+  {
+    "app_id": "APP-FRD-Q0008-04-Q0008",
+    "vfrd_id": "FRD-Q0008-04",
+    "qid": "Q0008",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0008-04-Q0008"
+  },
+  {
+    "app_id": "APP-FRD-Q0009-01-Q0009",
+    "vfrd_id": "FRD-Q0009-01",
+    "qid": "Q0009",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0009-01-Q0009"
+  },
+  {
+    "app_id": "APP-FRD-Q0009-02-c1-Q0009",
+    "vfrd_id": "FRD-Q0009-02-c1",
+    "qid": "Q0009",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0009-02-c1-Q0009"
+  },
+  {
+    "app_id": "APP-FRD-Q0009-02-c2-Q0009",
+    "vfrd_id": "FRD-Q0009-02-c2",
+    "qid": "Q0009",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0009-02-c2-Q0009"
+  },
+  {
+    "app_id": "APP-FRD-Q0009-04-Q0009",
+    "vfrd_id": "FRD-Q0009-04",
+    "qid": "Q0009",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0009-04-Q0009"
+  },
+  {
+    "app_id": "APP-FRD-Q0010-01-Q0010",
+    "vfrd_id": "FRD-Q0010-01",
+    "qid": "Q0010",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0010-01-Q0010"
+  },
+  {
+    "app_id": "APP-FRD-Q0010-02-Q0010",
+    "vfrd_id": "FRD-Q0010-02",
+    "qid": "Q0010",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0010-02-Q0010"
+  },
+  {
+    "app_id": "APP-FRD-Q0010-03-Q0010",
+    "vfrd_id": "FRD-Q0010-03",
+    "qid": "Q0010",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0010-03-Q0010"
+  },
+  {
+    "app_id": "APP-FRD-Q0010-04-c1-Q0010",
+    "vfrd_id": "FRD-Q0010-04-c1",
+    "qid": "Q0010",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0010-04-c1-Q0010"
+  },
+  {
+    "app_id": "APP-FRD-Q0010-04-c2-Q0010",
+    "vfrd_id": "FRD-Q0010-04-c2",
+    "qid": "Q0010",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0010-04-c2-Q0010"
+  },
+  {
+    "app_id": "APP-FRD-Q0011-01-Q0011",
+    "vfrd_id": "FRD-Q0011-01",
+    "qid": "Q0011",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0011-01-Q0011"
+  },
+  {
+    "app_id": "APP-FRD-Q0011-04-Q0011",
+    "vfrd_id": "FRD-Q0011-04",
+    "qid": "Q0011",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0011-04-Q0011"
+  },
+  {
+    "app_id": "APP-FRD-Q0013-01-c1-Q0013",
+    "vfrd_id": "FRD-Q0013-01-c1",
+    "qid": "Q0013",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0013-01-c1-Q0013"
+  },
+  {
+    "app_id": "APP-FRD-Q0013-01-c3-Q0013",
+    "vfrd_id": "FRD-Q0013-01-c3",
+    "qid": "Q0013",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0013-01-c3-Q0013"
+  },
+  {
+    "app_id": "APP-FRD-Q0013-01-c4-Q0013",
+    "vfrd_id": "FRD-Q0013-01-c4",
+    "qid": "Q0013",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0013-01-c4-Q0013"
+  },
+  {
+    "app_id": "APP-FRD-Q0013-03-c1-Q0013",
+    "vfrd_id": "FRD-Q0013-03-c1",
+    "qid": "Q0013",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0013-03-c1-Q0013"
+  },
+  {
+    "app_id": "APP-FRD-Q0013-03-c2-Q0013",
+    "vfrd_id": "FRD-Q0013-03-c2",
+    "qid": "Q0013",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0013-03-c2-Q0013"
+  },
+  {
+    "app_id": "APP-FRD-Q0013-03-c3-Q0013",
+    "vfrd_id": "FRD-Q0013-03-c3",
+    "qid": "Q0013",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0013-03-c3-Q0013"
+  },
+  {
+    "app_id": "APP-FRD-Q0013-03-c4-Q0013",
+    "vfrd_id": "FRD-Q0013-03-c4",
+    "qid": "Q0013",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0013-03-c4-Q0013"
+  },
+  {
+    "app_id": "APP-FRD-Q0013-03-c5-Q0013",
+    "vfrd_id": "FRD-Q0013-03-c5",
+    "qid": "Q0013",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0013-03-c5-Q0013"
+  },
+  {
+    "app_id": "APP-FRD-Q0013-03-c6-Q0013",
+    "vfrd_id": "FRD-Q0013-03-c6",
+    "qid": "Q0013",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0013-03-c6-Q0013"
+  },
+  {
+    "app_id": "APP-FRD-Q0013-03-c7-Q0013",
+    "vfrd_id": "FRD-Q0013-03-c7",
+    "qid": "Q0013",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0013-03-c7-Q0013"
+  },
+  {
+    "app_id": "APP-FRD-Q0013-04-Q0013",
+    "vfrd_id": "FRD-Q0013-04",
+    "qid": "Q0013",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0013-04-Q0013"
+  },
+  {
+    "app_id": "APP-FRD-Q0014-01-Q0014",
+    "vfrd_id": "FRD-Q0014-01",
+    "qid": "Q0014",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0014-01-Q0014"
+  },
+  {
+    "app_id": "APP-FRD-Q0014-02-Q0014",
+    "vfrd_id": "FRD-Q0014-02",
+    "qid": "Q0014",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0014-02-Q0014"
+  },
+  {
+    "app_id": "APP-FRD-Q0014-03-Q0014",
+    "vfrd_id": "FRD-Q0014-03",
+    "qid": "Q0014",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0014-03-Q0014"
+  },
+  {
+    "app_id": "APP-FRD-Q0014-04-c1-Q0014",
+    "vfrd_id": "FRD-Q0014-04-c1",
+    "qid": "Q0014",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0014-04-c1-Q0014"
+  },
+  {
+    "app_id": "APP-FRD-Q0014-04-c2-Q0014",
+    "vfrd_id": "FRD-Q0014-04-c2",
+    "qid": "Q0014",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0014-04-c2-Q0014"
+  },
+  {
+    "app_id": "APP-FRD-Q0015-04-Q0015",
+    "vfrd_id": "FRD-Q0015-04",
+    "qid": "Q0015",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0015-04-Q0015"
+  },
+  {
+    "app_id": "APP-FRD-Q0015-04-c1-Q0015",
+    "vfrd_id": "FRD-Q0015-04-c1",
+    "qid": "Q0015",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0015-04-c1-Q0015"
+  },
+  {
+    "app_id": "APP-FRD-Q0015-04-c2-Q0015",
+    "vfrd_id": "FRD-Q0015-04-c2",
+    "qid": "Q0015",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0015-04-c2-Q0015"
+  },
+  {
+    "app_id": "APP-FRD-Q0015-04-c3-Q0015",
+    "vfrd_id": "FRD-Q0015-04-c3",
+    "qid": "Q0015",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0015-04-c3-Q0015"
+  },
+  {
+    "app_id": "APP-FRD-Q0016-02-Q0016",
+    "vfrd_id": "FRD-Q0016-02",
+    "qid": "Q0016",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0016-02-Q0016"
+  },
+  {
+    "app_id": "APP-FRD-Q0016-03-Q0016",
+    "vfrd_id": "FRD-Q0016-03",
+    "qid": "Q0016",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0016-03-Q0016"
+  },
+  {
+    "app_id": "APP-FRD-Q0017-01-Q0017",
+    "vfrd_id": "FRD-Q0017-01",
+    "qid": "Q0017",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0017-01-Q0017"
+  },
+  {
+    "app_id": "APP-FRD-Q0017-03-Q0017",
+    "vfrd_id": "FRD-Q0017-03",
+    "qid": "Q0017",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0017-03-Q0017"
+  },
+  {
+    "app_id": "APP-FRD-Q0017-04-Q0017",
+    "vfrd_id": "FRD-Q0017-04",
+    "qid": "Q0017",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0017-04-Q0017"
+  },
+  {
+    "app_id": "APP-FRD-Q0018-01-Q0018",
+    "vfrd_id": "FRD-Q0018-01",
+    "qid": "Q0018",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0018-01-Q0018"
+  },
+  {
+    "app_id": "APP-FRD-Q0018-02-Q0018",
+    "vfrd_id": "FRD-Q0018-02",
+    "qid": "Q0018",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0018-02-Q0018"
+  },
+  {
+    "app_id": "APP-FRD-Q0018-03-Q0018",
+    "vfrd_id": "FRD-Q0018-03",
+    "qid": "Q0018",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0018-03-Q0018"
+  },
+  {
+    "app_id": "APP-FRD-Q0019-01-Q0019",
+    "vfrd_id": "FRD-Q0019-01",
+    "qid": "Q0019",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0019-01-Q0019"
+  },
+  {
+    "app_id": "APP-FRD-Q0019-02-Q0019",
+    "vfrd_id": "FRD-Q0019-02",
+    "qid": "Q0019",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0019-02-Q0019"
+  },
+  {
+    "app_id": "APP-FRD-Q0019-03-c1-Q0019",
+    "vfrd_id": "FRD-Q0019-03-c1",
+    "qid": "Q0019",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0019-03-c1-Q0019"
+  },
+  {
+    "app_id": "APP-FRD-Q0019-03-c2-Q0019",
+    "vfrd_id": "FRD-Q0019-03-c2",
+    "qid": "Q0019",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0019-03-c2-Q0019"
+  },
+  {
+    "app_id": "APP-FRD-Q0019-03-c3-Q0019",
+    "vfrd_id": "FRD-Q0019-03-c3",
+    "qid": "Q0019",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0019-03-c3-Q0019"
+  },
+  {
+    "app_id": "APP-FRD-Q0019-03-c5-Q0019",
+    "vfrd_id": "FRD-Q0019-03-c5",
+    "qid": "Q0019",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0019-03-c5-Q0019"
+  },
+  {
+    "app_id": "APP-FRD-Q0020-02-c1-Q0020",
+    "vfrd_id": "FRD-Q0020-02-c1",
+    "qid": "Q0020",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0020-02-c1-Q0020"
+  },
+  {
+    "app_id": "APP-FRD-Q0020-02-c2-Q0020",
+    "vfrd_id": "FRD-Q0020-02-c2",
+    "qid": "Q0020",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0020-02-c2-Q0020"
+  },
+  {
+    "app_id": "APP-FRD-Q0020-02-c3-Q0020",
+    "vfrd_id": "FRD-Q0020-02-c3",
+    "qid": "Q0020",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0020-02-c3-Q0020"
+  },
+  {
+    "app_id": "APP-FRD-Q0020-02-c4-Q0020",
+    "vfrd_id": "FRD-Q0020-02-c4",
+    "qid": "Q0020",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0020-02-c4-Q0020"
+  },
+  {
+    "app_id": "APP-FRD-Q0020-02-c6-Q0020",
+    "vfrd_id": "FRD-Q0020-02-c6",
+    "qid": "Q0020",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0020-02-c6-Q0020"
+  },
+  {
+    "app_id": "APP-FRD-Q0023-01-c1-Q0023",
+    "vfrd_id": "FRD-Q0023-01-c1",
+    "qid": "Q0023",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0023-01-c1-Q0023"
+  },
+  {
+    "app_id": "APP-FRD-Q0023-03-c1-Q0023",
+    "vfrd_id": "FRD-Q0023-03-c1",
+    "qid": "Q0023",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0023-03-c1-Q0023"
+  },
+  {
+    "app_id": "APP-FRD-Q0023-03-c2-Q0023",
+    "vfrd_id": "FRD-Q0023-03-c2",
+    "qid": "Q0023",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0023-03-c2-Q0023"
+  },
+  {
+    "app_id": "APP-FRD-Q0024-02-Q0024",
+    "vfrd_id": "FRD-Q0024-02",
+    "qid": "Q0024",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0024-02-Q0024"
+  },
+  {
+    "app_id": "APP-FRD-Q0024-03-Q0024",
+    "vfrd_id": "FRD-Q0024-03",
+    "qid": "Q0024",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0024-03-Q0024"
+  },
+  {
+    "app_id": "APP-FRD-Q0024-04-c1-Q0024",
+    "vfrd_id": "FRD-Q0024-04-c1",
+    "qid": "Q0024",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0024-04-c1-Q0024"
+  },
+  {
+    "app_id": "APP-FRD-Q0024-04-c2-Q0024",
+    "vfrd_id": "FRD-Q0024-04-c2",
+    "qid": "Q0024",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0024-04-c2-Q0024"
+  },
+  {
+    "app_id": "APP-FRD-Q0024-04-c3-Q0024",
+    "vfrd_id": "FRD-Q0024-04-c3",
+    "qid": "Q0024",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0024-04-c3-Q0024"
+  },
+  {
+    "app_id": "APP-FRD-Q0025-03-Q0025",
+    "vfrd_id": "FRD-Q0025-03",
+    "qid": "Q0025",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0025-03-Q0025"
+  },
+  {
+    "app_id": "APP-FRD-Q0026-01-Q0026",
+    "vfrd_id": "FRD-Q0026-01",
+    "qid": "Q0026",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0026-01-Q0026"
+  },
+  {
+    "app_id": "APP-FRD-Q0026-02-Q0026",
+    "vfrd_id": "FRD-Q0026-02",
+    "qid": "Q0026",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0026-02-Q0026"
+  },
+  {
+    "app_id": "APP-FRD-Q0026-04-c1-Q0026",
+    "vfrd_id": "FRD-Q0026-04-c1",
+    "qid": "Q0026",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0026-04-c1-Q0026"
+  },
+  {
+    "app_id": "APP-FRD-Q0026-04-c2-Q0026",
+    "vfrd_id": "FRD-Q0026-04-c2",
+    "qid": "Q0026",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0026-04-c2-Q0026"
+  },
+  {
+    "app_id": "APP-FRD-Q0026-04-c3-Q0026",
+    "vfrd_id": "FRD-Q0026-04-c3",
+    "qid": "Q0026",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0026-04-c3-Q0026"
+  },
+  {
+    "app_id": "APP-FRD-Q0026-04-c4-Q0026",
+    "vfrd_id": "FRD-Q0026-04-c4",
+    "qid": "Q0026",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0026-04-c4-Q0026"
+  },
+  {
+    "app_id": "APP-FRD-Q0027-01-c1-Q0027",
+    "vfrd_id": "FRD-Q0027-01-c1",
+    "qid": "Q0027",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0027-01-c1-Q0027"
+  },
+  {
+    "app_id": "APP-FRD-Q0027-01-c2-Q0027",
+    "vfrd_id": "FRD-Q0027-01-c2",
+    "qid": "Q0027",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0027-01-c2-Q0027"
+  },
+  {
+    "app_id": "APP-FRD-Q0027-01-c3-Q0027",
+    "vfrd_id": "FRD-Q0027-01-c3",
+    "qid": "Q0027",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0027-01-c3-Q0027"
+  },
+  {
+    "app_id": "APP-FRD-Q0027-03-2020ICUicu-c3-Q0027",
+    "vfrd_id": "FRD-Q0027-03-2020ICUicu-c3",
+    "qid": "Q0027",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0027-03-2020ICUicu-c3-Q0027"
+  },
+  {
+    "app_id": "APP-FRD-Q0027-04-c1-Q0027",
+    "vfrd_id": "FRD-Q0027-04-c1",
+    "qid": "Q0027",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0027-04-c1-Q0027"
+  },
+  {
+    "app_id": "APP-FRD-Q0028-01-Q0028",
+    "vfrd_id": "FRD-Q0028-01",
+    "qid": "Q0028",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0028-01-Q0028"
+  },
+  {
+    "app_id": "APP-FRD-Q0028-02-Q0028",
+    "vfrd_id": "FRD-Q0028-02",
+    "qid": "Q0028",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0028-02-Q0028"
+  },
+  {
+    "app_id": "APP-FRD-Q0029-02-c2-Q0029",
+    "vfrd_id": "FRD-Q0029-02-c2",
+    "qid": "Q0029",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0029-02-c2-Q0029"
+  },
+  {
+    "app_id": "APP-FRD-Q0029-04-c4-Q0029",
+    "vfrd_id": "FRD-Q0029-04-c4",
+    "qid": "Q0029",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0029-04-c4-Q0029"
+  },
+  {
+    "app_id": "APP-FRD-Q0029-04-c5-Q0029",
+    "vfrd_id": "FRD-Q0029-04-c5",
+    "qid": "Q0029",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0029-04-c5-Q0029"
+  },
+  {
+    "app_id": "APP-FRD-Q0029-04-c7-Q0029",
+    "vfrd_id": "FRD-Q0029-04-c7",
+    "qid": "Q0029",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0029-04-c7-Q0029"
+  },
+  {
+    "app_id": "APP-FRD-Q0030-02-c1-Q0030",
+    "vfrd_id": "FRD-Q0030-02-c1",
+    "qid": "Q0030",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0030-02-c1-Q0030"
+  },
+  {
+    "app_id": "APP-FRD-Q0030-02-c3-Q0030",
+    "vfrd_id": "FRD-Q0030-02-c3",
+    "qid": "Q0030",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0030-02-c3-Q0030"
+  },
+  {
+    "app_id": "APP-FRD-Q0030-02-c6-Q0030",
+    "vfrd_id": "FRD-Q0030-02-c6",
+    "qid": "Q0030",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0030-02-c6-Q0030"
+  },
+  {
+    "app_id": "APP-FRD-Q0030-02-c7-Q0030",
+    "vfrd_id": "FRD-Q0030-02-c7",
+    "qid": "Q0030",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0030-02-c7-Q0030"
+  },
+  {
+    "app_id": "APP-FRD-Q0031-01-Q0031",
+    "vfrd_id": "FRD-Q0031-01",
+    "qid": "Q0031",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0031-01-Q0031"
+  },
+  {
+    "app_id": "APP-FRD-Q0031-02-c2-Q0031",
+    "vfrd_id": "FRD-Q0031-02-c2",
+    "qid": "Q0031",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0031-02-c2-Q0031"
+  },
+  {
+    "app_id": "APP-FRD-Q0031-03-kim2017-c1-Q0031",
+    "vfrd_id": "FRD-Q0031-03-kim2017-c1",
+    "qid": "Q0031",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0031-03-kim2017-c1-Q0031"
+  },
+  {
+    "app_id": "APP-FRD-Q0031-03-kim2017-c2-Q0031",
+    "vfrd_id": "FRD-Q0031-03-kim2017-c2",
+    "qid": "Q0031",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0031-03-kim2017-c2-Q0031"
+  },
+  {
+    "app_id": "APP-FRD-Q0031-04-Q0031",
+    "vfrd_id": "FRD-Q0031-04",
+    "qid": "Q0031",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0031-04-Q0031"
+  },
+  {
+    "app_id": "APP-FRD-Q0032-01-c1-Q0032",
+    "vfrd_id": "FRD-Q0032-01-c1",
+    "qid": "Q0032",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0032-01-c1-Q0032"
+  },
+  {
+    "app_id": "APP-FRD-Q0032-01-c2-Q0032",
+    "vfrd_id": "FRD-Q0032-01-c2",
+    "qid": "Q0032",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0032-01-c2-Q0032"
+  },
+  {
+    "app_id": "APP-FRD-Q0032-01-c3-Q0032",
+    "vfrd_id": "FRD-Q0032-01-c3",
+    "qid": "Q0032",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0032-01-c3-Q0032"
+  },
+  {
+    "app_id": "APP-FRD-Q0032-04-c1-Q0032",
+    "vfrd_id": "FRD-Q0032-04-c1",
+    "qid": "Q0032",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0032-04-c1-Q0032"
+  },
+  {
+    "app_id": "APP-FRD-Q0032-04-c3-Q0032",
+    "vfrd_id": "FRD-Q0032-04-c3",
+    "qid": "Q0032",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0032-04-c3-Q0032"
+  },
+  {
+    "app_id": "APP-FRD-Q0033-02-c1-Q0033",
+    "vfrd_id": "FRD-Q0033-02-c1",
+    "qid": "Q0033",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0033-02-c1-Q0033"
+  },
+  {
+    "app_id": "APP-FRD-Q0033-02-c2-Q0033",
+    "vfrd_id": "FRD-Q0033-02-c2",
+    "qid": "Q0033",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0033-02-c2-Q0033"
+  },
+  {
+    "app_id": "APP-FRD-Q0033-02-c3-Q0033",
+    "vfrd_id": "FRD-Q0033-02-c3",
+    "qid": "Q0033",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0033-02-c3-Q0033"
+  },
+  {
+    "app_id": "APP-FRD-Q0033-02-c4-Q0033",
+    "vfrd_id": "FRD-Q0033-02-c4",
+    "qid": "Q0033",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0033-02-c4-Q0033"
+  },
+  {
+    "app_id": "APP-FRD-Q0033-04-Q0033",
+    "vfrd_id": "FRD-Q0033-04",
+    "qid": "Q0033",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0033-04-Q0033"
+  },
+  {
+    "app_id": "APP-FRD-Q0034-01-bortnick20-c1-Q0034",
+    "vfrd_id": "FRD-Q0034-01-bortnick20-c1",
+    "qid": "Q0034",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0034-01-bortnick20-c1-Q0034"
+  },
+  {
+    "app_id": "APP-FRD-Q0034-01-bortnick20-c2-Q0034",
+    "vfrd_id": "FRD-Q0034-01-bortnick20-c2",
+    "qid": "Q0034",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0034-01-bortnick20-c2-Q0034"
+  },
+  {
+    "app_id": "APP-FRD-Q0034-01-bortnick20-c3-Q0034",
+    "vfrd_id": "FRD-Q0034-01-bortnick20-c3",
+    "qid": "Q0034",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0034-01-bortnick20-c3-Q0034"
+  },
+  {
+    "app_id": "APP-FRD-Q0034-01-bortnick20-Q0034",
+    "vfrd_id": "FRD-Q0034-01-bortnick20",
+    "qid": "Q0034",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0034-01-bortnick20-Q0034"
+  },
+  {
+    "app_id": "APP-FRD-Q0034-02-bortnick20-c2-Q0034",
+    "vfrd_id": "FRD-Q0034-02-bortnick20-c2",
+    "qid": "Q0034",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0034-02-bortnick20-c2-Q0034"
+  },
+  {
+    "app_id": "APP-FRD-Q0034-02-bortnick20-c3-Q0034",
+    "vfrd_id": "FRD-Q0034-02-bortnick20-c3",
+    "qid": "Q0034",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0034-02-bortnick20-c3-Q0034"
+  },
+  {
+    "app_id": "APP-FRD-Q0034-02-bortnick20-c2-Q0034",
+    "vfrd_id": "FRD-Q0034-02-bortnick20-c2",
+    "qid": "Q0034",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0034-02-bortnick20-c2-Q0034"
+  },
+  {
+    "app_id": "APP-FRD-Q0034-02-bortnick20-c3-Q0034",
+    "vfrd_id": "FRD-Q0034-02-bortnick20-c3",
+    "qid": "Q0034",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0034-02-bortnick20-c3-Q0034"
+  },
+  {
+    "app_id": "APP-FRD-Q0034-03-c1-Q0034",
+    "vfrd_id": "FRD-Q0034-03-c1",
+    "qid": "Q0034",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0034-03-c1-Q0034"
+  },
+  {
+    "app_id": "APP-FRD-Q0034-03-c2-Q0034",
+    "vfrd_id": "FRD-Q0034-03-c2",
+    "qid": "Q0034",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0034-03-c2-Q0034"
+  },
+  {
+    "app_id": "APP-FRD-Q0034-03-c3-Q0034",
+    "vfrd_id": "FRD-Q0034-03-c3",
+    "qid": "Q0034",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0034-03-c3-Q0034"
+  },
+  {
+    "app_id": "APP-FRD-Q0034-03-c4-Q0034",
+    "vfrd_id": "FRD-Q0034-03-c4",
+    "qid": "Q0034",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0034-03-c4-Q0034"
+  },
+  {
+    "app_id": "APP-FRD-Q0034-03-c5-Q0034",
+    "vfrd_id": "FRD-Q0034-03-c5",
+    "qid": "Q0034",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0034-03-c5-Q0034"
+  },
+  {
+    "app_id": "APP-FRD-Q0034-04-bortnick20-c1-Q0034",
+    "vfrd_id": "FRD-Q0034-04-bortnick20-c1",
+    "qid": "Q0034",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0034-04-bortnick20-c1-Q0034"
+  },
+  {
+    "app_id": "APP-FRD-Q0034-04-bortnick20-c2-Q0034",
+    "vfrd_id": "FRD-Q0034-04-bortnick20-c2",
+    "qid": "Q0034",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0034-04-bortnick20-c2-Q0034"
+  },
+  {
+    "app_id": "APP-FRD-Q0034-04-bortnick20-c1-Q0034",
+    "vfrd_id": "FRD-Q0034-04-bortnick20-c1",
+    "qid": "Q0034",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0034-04-bortnick20-c1-Q0034"
+  },
+  {
+    "app_id": "APP-FRD-Q0034-04-bortnick20-c2-Q0034",
+    "vfrd_id": "FRD-Q0034-04-bortnick20-c2",
+    "qid": "Q0034",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0034-04-bortnick20-c2-Q0034"
+  },
+  {
+    "app_id": "APP-FRD-Q0035-01-Q0035",
+    "vfrd_id": "FRD-Q0035-01",
+    "qid": "Q0035",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0035-01-Q0035"
+  },
+  {
+    "app_id": "APP-FRD-Q0035-02-Q0035",
+    "vfrd_id": "FRD-Q0035-02",
+    "qid": "Q0035",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0035-02-Q0035"
+  },
+  {
+    "app_id": "APP-FRD-Q0036-01-Q0036",
+    "vfrd_id": "FRD-Q0036-01",
+    "qid": "Q0036",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0036-01-Q0036"
+  },
+  {
+    "app_id": "APP-FRD-Q0036-02-c1-Q0036",
+    "vfrd_id": "FRD-Q0036-02-c1",
+    "qid": "Q0036",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0036-02-c1-Q0036"
+  },
+  {
+    "app_id": "APP-FRD-Q0036-02-c2-Q0036",
+    "vfrd_id": "FRD-Q0036-02-c2",
+    "qid": "Q0036",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0036-02-c2-Q0036"
+  },
+  {
+    "app_id": "APP-FRD-Q0036-02-c3-Q0036",
+    "vfrd_id": "FRD-Q0036-02-c3",
+    "qid": "Q0036",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0036-02-c3-Q0036"
+  },
+  {
+    "app_id": "APP-FRD-Q0036-03-Q0036",
+    "vfrd_id": "FRD-Q0036-03",
+    "qid": "Q0036",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0036-03-Q0036"
+  },
+  {
+    "app_id": "APP-FRD-Q0036-04-c1-Q0036",
+    "vfrd_id": "FRD-Q0036-04-c1",
+    "qid": "Q0036",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0036-04-c1-Q0036"
+  },
+  {
+    "app_id": "APP-FRD-Q0036-04-c2-Q0036",
+    "vfrd_id": "FRD-Q0036-04-c2",
+    "qid": "Q0036",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0036-04-c2-Q0036"
+  },
+  {
+    "app_id": "APP-FRD-Q0037-02-Q0037",
+    "vfrd_id": "FRD-Q0037-02",
+    "qid": "Q0037",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0037-02-Q0037"
+  },
+  {
+    "app_id": "APP-FRD-Q0037-03-c1-Q0037",
+    "vfrd_id": "FRD-Q0037-03-c1",
+    "qid": "Q0037",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0037-03-c1-Q0037"
+  },
+  {
+    "app_id": "APP-FRD-Q0037-03-c4-Q0037",
+    "vfrd_id": "FRD-Q0037-03-c4",
+    "qid": "Q0037",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0037-03-c4-Q0037"
+  },
+  {
+    "app_id": "APP-FRD-Q0038-01-c1-Q0038",
+    "vfrd_id": "FRD-Q0038-01-c1",
+    "qid": "Q0038",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0038-01-c1-Q0038"
+  },
+  {
+    "app_id": "APP-FRD-Q0038-01-c2-Q0038",
+    "vfrd_id": "FRD-Q0038-01-c2",
+    "qid": "Q0038",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0038-01-c2-Q0038"
+  },
+  {
+    "app_id": "APP-FRD-Q0038-03-c1-Q0038",
+    "vfrd_id": "FRD-Q0038-03-c1",
+    "qid": "Q0038",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0038-03-c1-Q0038"
+  },
+  {
+    "app_id": "APP-FRD-Q0038-03-c2-Q0038",
+    "vfrd_id": "FRD-Q0038-03-c2",
+    "qid": "Q0038",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0038-03-c2-Q0038"
+  },
+  {
+    "app_id": "APP-FRD-Q0038-03-c3-Q0038",
+    "vfrd_id": "FRD-Q0038-03-c3",
+    "qid": "Q0038",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0038-03-c3-Q0038"
+  },
+  {
+    "app_id": "APP-FRD-Q0038-03-c4-Q0038",
+    "vfrd_id": "FRD-Q0038-03-c4",
+    "qid": "Q0038",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0038-03-c4-Q0038"
+  },
+  {
+    "app_id": "APP-FRD-Q0038-03-c5-Q0038",
+    "vfrd_id": "FRD-Q0038-03-c5",
+    "qid": "Q0038",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0038-03-c5-Q0038"
+  },
+  {
+    "app_id": "APP-FRD-Q0038-04-Q0038",
+    "vfrd_id": "FRD-Q0038-04",
+    "qid": "Q0038",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0038-04-Q0038"
+  },
+  {
+    "app_id": "APP-FRD-Q0039-01-c1-Q0039",
+    "vfrd_id": "FRD-Q0039-01-c1",
+    "qid": "Q0039",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0039-01-c1-Q0039"
+  },
+  {
+    "app_id": "APP-FRD-Q0039-01-c2-Q0039",
+    "vfrd_id": "FRD-Q0039-01-c2",
+    "qid": "Q0039",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0039-01-c2-Q0039"
+  },
+  {
+    "app_id": "APP-FRD-Q0039-01-c3-Q0039",
+    "vfrd_id": "FRD-Q0039-01-c3",
+    "qid": "Q0039",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0039-01-c3-Q0039"
+  },
+  {
+    "app_id": "APP-FRD-Q0039-01-c4-Q0039",
+    "vfrd_id": "FRD-Q0039-01-c4",
+    "qid": "Q0039",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0039-01-c4-Q0039"
+  },
+  {
+    "app_id": "APP-FRD-Q0039-02-Q0039",
+    "vfrd_id": "FRD-Q0039-02",
+    "qid": "Q0039",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0039-02-Q0039"
+  },
+  {
+    "app_id": "APP-FRD-Q0041-03-c2-Q0041",
+    "vfrd_id": "FRD-Q0041-03-c2",
+    "qid": "Q0041",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0041-03-c2-Q0041"
+  },
+  {
+    "app_id": "APP-FRD-Q0042-01-Q0042",
+    "vfrd_id": "FRD-Q0042-01",
+    "qid": "Q0042",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0042-01-Q0042"
+  },
+  {
+    "app_id": "APP-FRD-Q0042-02-Q0042",
+    "vfrd_id": "FRD-Q0042-02",
+    "qid": "Q0042",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0042-02-Q0042"
+  },
+  {
+    "app_id": "APP-FRD-Q0042-03-c1-Q0042",
+    "vfrd_id": "FRD-Q0042-03-c1",
+    "qid": "Q0042",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0042-03-c1-Q0042"
+  },
+  {
+    "app_id": "APP-FRD-Q0042-03-c2-Q0042",
+    "vfrd_id": "FRD-Q0042-03-c2",
+    "qid": "Q0042",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0042-03-c2-Q0042"
+  },
+  {
+    "app_id": "APP-FRD-Q0042-03-c3-Q0042",
+    "vfrd_id": "FRD-Q0042-03-c3",
+    "qid": "Q0042",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0042-03-c3-Q0042"
+  },
+  {
+    "app_id": "APP-FRD-Q0042-04-Q0042",
+    "vfrd_id": "FRD-Q0042-04",
+    "qid": "Q0042",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0042-04-Q0042"
+  },
+  {
+    "app_id": "APP-FRD-Q0043-01-c1-Q0043",
+    "vfrd_id": "FRD-Q0043-01-c1",
+    "qid": "Q0043",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0043-01-c1-Q0043"
+  },
+  {
+    "app_id": "APP-FRD-Q0043-02-Q0043",
+    "vfrd_id": "FRD-Q0043-02",
+    "qid": "Q0043",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0043-02-Q0043"
+  },
+  {
+    "app_id": "APP-FRD-Q0043-03-Q0043",
+    "vfrd_id": "FRD-Q0043-03",
+    "qid": "Q0043",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0043-03-Q0043"
+  },
+  {
+    "app_id": "APP-FRD-Q0044-01-Q0044",
+    "vfrd_id": "FRD-Q0044-01",
+    "qid": "Q0044",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0044-01-Q0044"
+  },
+  {
+    "app_id": "APP-FRD-Q0044-04-c1-Q0044",
+    "vfrd_id": "FRD-Q0044-04-c1",
+    "qid": "Q0044",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0044-04-c1-Q0044"
+  },
+  {
+    "app_id": "APP-FRD-Q0044-04-c2-Q0044",
+    "vfrd_id": "FRD-Q0044-04-c2",
+    "qid": "Q0044",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0044-04-c2-Q0044"
+  },
+  {
+    "app_id": "APP-FRD-Q0045-03-Q0045",
+    "vfrd_id": "FRD-Q0045-03",
+    "qid": "Q0045",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0045-03-Q0045"
+  },
+  {
+    "app_id": "APP-FRD-Q0045-03-c1-Q0045",
+    "vfrd_id": "FRD-Q0045-03-c1",
+    "qid": "Q0045",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0045-03-c1-Q0045"
+  },
+  {
+    "app_id": "APP-FRD-Q0045-03-c2-Q0045",
+    "vfrd_id": "FRD-Q0045-03-c2",
+    "qid": "Q0045",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0045-03-c2-Q0045"
+  },
+  {
+    "app_id": "APP-FRD-Q0045-03-c3-Q0045",
+    "vfrd_id": "FRD-Q0045-03-c3",
+    "qid": "Q0045",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0045-03-c3-Q0045"
+  },
+  {
+    "app_id": "APP-FRD-Q0045-04-Q0045",
+    "vfrd_id": "FRD-Q0045-04",
+    "qid": "Q0045",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0045-04-Q0045"
+  },
+  {
+    "app_id": "APP-FRD-Q0046-03-c2-Q0046",
+    "vfrd_id": "FRD-Q0046-03-c2",
+    "qid": "Q0046",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0046-03-c2-Q0046"
+  },
+  {
+    "app_id": "APP-FRD-Q0046-03-c3-Q0046",
+    "vfrd_id": "FRD-Q0046-03-c3",
+    "qid": "Q0046",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0046-03-c3-Q0046"
+  },
+  {
+    "app_id": "APP-FRD-Q0048-02-c1-Q0048",
+    "vfrd_id": "FRD-Q0048-02-c1",
+    "qid": "Q0048",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0048-02-c1-Q0048"
+  },
+  {
+    "app_id": "APP-FRD-Q0049-02-Q0049",
+    "vfrd_id": "FRD-Q0049-02",
+    "qid": "Q0049",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0049-02-Q0049"
+  },
+  {
+    "app_id": "APP-FRD-Q0049-03-Q0049",
+    "vfrd_id": "FRD-Q0049-03",
+    "qid": "Q0049",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0049-03-Q0049"
+  },
+  {
+    "app_id": "APP-FRD-Q0050-01-Q0050",
+    "vfrd_id": "FRD-Q0050-01",
+    "qid": "Q0050",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0050-01-Q0050"
+  },
+  {
+    "app_id": "APP-FRD-Q0050-02-Q0050",
+    "vfrd_id": "FRD-Q0050-02",
+    "qid": "Q0050",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0050-02-Q0050"
+  },
+  {
+    "app_id": "APP-FRD-Q0050-03-Q0050",
+    "vfrd_id": "FRD-Q0050-03",
+    "qid": "Q0050",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0050-03-Q0050"
+  },
+  {
+    "app_id": "APP-FRD-Q0051-01-Q0051",
+    "vfrd_id": "FRD-Q0051-01",
+    "qid": "Q0051",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0051-01-Q0051"
+  },
+  {
+    "app_id": "APP-FRD-Q0052-01-Q0052",
+    "vfrd_id": "FRD-Q0052-01",
+    "qid": "Q0052",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0052-01-Q0052"
+  },
+  {
+    "app_id": "APP-FRD-Q0052-02-c2-Q0052",
+    "vfrd_id": "FRD-Q0052-02-c2",
+    "qid": "Q0052",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0052-02-c2-Q0052"
+  },
+  {
+    "app_id": "APP-FRD-Q0052-02-c3-Q0052",
+    "vfrd_id": "FRD-Q0052-02-c3",
+    "qid": "Q0052",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0052-02-c3-Q0052"
+  },
+  {
+    "app_id": "APP-FRD-Q0052-02-c4-Q0052",
+    "vfrd_id": "FRD-Q0052-02-c4",
+    "qid": "Q0052",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0052-02-c4-Q0052"
+  },
+  {
+    "app_id": "APP-FRD-Q0052-02-c5-Q0052",
+    "vfrd_id": "FRD-Q0052-02-c5",
+    "qid": "Q0052",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0052-02-c5-Q0052"
+  },
+  {
+    "app_id": "APP-FRD-Q0052-04-c1-Q0052",
+    "vfrd_id": "FRD-Q0052-04-c1",
+    "qid": "Q0052",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0052-04-c1-Q0052"
+  },
+  {
+    "app_id": "APP-FRD-Q0053-01-Q0053",
+    "vfrd_id": "FRD-Q0053-01",
+    "qid": "Q0053",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0053-01-Q0053"
+  },
+  {
+    "app_id": "APP-FRD-Q0053-02-c1-Q0053",
+    "vfrd_id": "FRD-Q0053-02-c1",
+    "qid": "Q0053",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0053-02-c1-Q0053"
+  },
+  {
+    "app_id": "APP-FRD-Q0053-02-c2-Q0053",
+    "vfrd_id": "FRD-Q0053-02-c2",
+    "qid": "Q0053",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0053-02-c2-Q0053"
+  },
+  {
+    "app_id": "APP-FRD-Q0053-02-c3-Q0053",
+    "vfrd_id": "FRD-Q0053-02-c3",
+    "qid": "Q0053",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0053-02-c3-Q0053"
+  },
+  {
+    "app_id": "APP-FRD-Q0053-02-c4-Q0053",
+    "vfrd_id": "FRD-Q0053-02-c4",
+    "qid": "Q0053",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0053-02-c4-Q0053"
+  },
+  {
+    "app_id": "APP-FRD-Q0053-04-c3-Q0053",
+    "vfrd_id": "FRD-Q0053-04-c3",
+    "qid": "Q0053",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0053-04-c3-Q0053"
+  },
+  {
+    "app_id": "APP-FRD-Q0053-04-c4-Q0053",
+    "vfrd_id": "FRD-Q0053-04-c4",
+    "qid": "Q0053",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0053-04-c4-Q0053"
+  },
+  {
+    "app_id": "APP-FRD-Q0053-04-c5-Q0053",
+    "vfrd_id": "FRD-Q0053-04-c5",
+    "qid": "Q0053",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0053-04-c5-Q0053"
+  },
+  {
+    "app_id": "APP-FRD-Q0054-03-Q0054",
+    "vfrd_id": "FRD-Q0054-03",
+    "qid": "Q0054",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0054-03-Q0054"
+  },
+  {
+    "app_id": "APP-FRD-Q0054-04-Q0054",
+    "vfrd_id": "FRD-Q0054-04",
+    "qid": "Q0054",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0054-04-Q0054"
+  },
+  {
+    "app_id": "APP-FRD-Q0054-04-c1-Q0054",
+    "vfrd_id": "FRD-Q0054-04-c1",
+    "qid": "Q0054",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0054-04-c1-Q0054"
+  },
+  {
+    "app_id": "APP-FRD-Q0054-04-c2-Q0054",
+    "vfrd_id": "FRD-Q0054-04-c2",
+    "qid": "Q0054",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0054-04-c2-Q0054"
+  },
+  {
+    "app_id": "APP-FRD-Q0055-03-c2-Q0055",
+    "vfrd_id": "FRD-Q0055-03-c2",
+    "qid": "Q0055",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0055-03-c2-Q0055"
+  },
+  {
+    "app_id": "APP-FRD-Q0055-03-c3-Q0055",
+    "vfrd_id": "FRD-Q0055-03-c3",
+    "qid": "Q0055",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0055-03-c3-Q0055"
+  },
+  {
+    "app_id": "APP-FRD-Q0057-01-c3-Q0057",
+    "vfrd_id": "FRD-Q0057-01-c3",
+    "qid": "Q0057",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0057-01-c3-Q0057"
+  },
+  {
+    "app_id": "APP-FRD-Q0057-03-c1-Q0057",
+    "vfrd_id": "FRD-Q0057-03-c1",
+    "qid": "Q0057",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0057-03-c1-Q0057"
+  },
+  {
+    "app_id": "APP-FRD-Q0057-04-c2-Q0057",
+    "vfrd_id": "FRD-Q0057-04-c2",
+    "qid": "Q0057",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0057-04-c2-Q0057"
+  },
+  {
+    "app_id": "APP-FRD-Q0058-04-Q0058",
+    "vfrd_id": "FRD-Q0058-04",
+    "qid": "Q0058",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0058-04-Q0058"
+  },
+  {
+    "app_id": "APP-FRD-Q0059-01-Q0059",
+    "vfrd_id": "FRD-Q0059-01",
+    "qid": "Q0059",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0059-01-Q0059"
+  },
+  {
+    "app_id": "APP-FRD-Q0059-03-c1-Q0059",
+    "vfrd_id": "FRD-Q0059-03-c1",
+    "qid": "Q0059",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0059-03-c1-Q0059"
+  },
+  {
+    "app_id": "APP-FRD-Q0059-04-c3-Q0059",
+    "vfrd_id": "FRD-Q0059-04-c3",
+    "qid": "Q0059",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0059-04-c3-Q0059"
+  },
+  {
+    "app_id": "APP-FRD-Q0060-01-Q0060",
+    "vfrd_id": "FRD-Q0060-01",
+    "qid": "Q0060",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0060-01-Q0060"
+  },
+  {
+    "app_id": "APP-FRD-Q0060-02-c2-Q0060",
+    "vfrd_id": "FRD-Q0060-02-c2",
+    "qid": "Q0060",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0060-02-c2-Q0060"
+  },
+  {
+    "app_id": "APP-FRD-Q0061-02-c1-Q0061",
+    "vfrd_id": "FRD-Q0061-02-c1",
+    "qid": "Q0061",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0061-02-c1-Q0061"
+  },
+  {
+    "app_id": "APP-FRD-Q0061-02-c2-Q0061",
+    "vfrd_id": "FRD-Q0061-02-c2",
+    "qid": "Q0061",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0061-02-c2-Q0061"
+  },
+  {
+    "app_id": "APP-FRD-Q0061-02-c3-Q0061",
+    "vfrd_id": "FRD-Q0061-02-c3",
+    "qid": "Q0061",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0061-02-c3-Q0061"
+  },
+  {
+    "app_id": "APP-FRD-Q0061-02-c4-Q0061",
+    "vfrd_id": "FRD-Q0061-02-c4",
+    "qid": "Q0061",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0061-02-c4-Q0061"
+  },
+  {
+    "app_id": "APP-FRD-Q0061-02-c5-Q0061",
+    "vfrd_id": "FRD-Q0061-02-c5",
+    "qid": "Q0061",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0061-02-c5-Q0061"
+  },
+  {
+    "app_id": "APP-FRD-Q0061-03-Q0061",
+    "vfrd_id": "FRD-Q0061-03",
+    "qid": "Q0061",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0061-03-Q0061"
+  },
+  {
+    "app_id": "APP-FRD-Q0061-04-c1-Q0061",
+    "vfrd_id": "FRD-Q0061-04-c1",
+    "qid": "Q0061",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0061-04-c1-Q0061"
+  },
+  {
+    "app_id": "APP-FRD-Q0061-04-c2-Q0061",
+    "vfrd_id": "FRD-Q0061-04-c2",
+    "qid": "Q0061",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0061-04-c2-Q0061"
+  },
+  {
+    "app_id": "APP-FRD-Q0061-04-c3-Q0061",
+    "vfrd_id": "FRD-Q0061-04-c3",
+    "qid": "Q0061",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0061-04-c3-Q0061"
+  },
+  {
+    "app_id": "APP-FRD-Q0063-01-c1-Q0063",
+    "vfrd_id": "FRD-Q0063-01-c1",
+    "qid": "Q0063",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0063-01-c1-Q0063"
+  },
+  {
+    "app_id": "APP-FRD-Q0063-01-c2-Q0063",
+    "vfrd_id": "FRD-Q0063-01-c2",
+    "qid": "Q0063",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0063-01-c2-Q0063"
+  },
+  {
+    "app_id": "APP-FRD-Q0063-01-c3-Q0063",
+    "vfrd_id": "FRD-Q0063-01-c3",
+    "qid": "Q0063",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0063-01-c3-Q0063"
+  },
+  {
+    "app_id": "APP-FRD-Q0063-01-c4-Q0063",
+    "vfrd_id": "FRD-Q0063-01-c4",
+    "qid": "Q0063",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0063-01-c4-Q0063"
+  },
+  {
+    "app_id": "APP-FRD-Q0063-01-c5-Q0063",
+    "vfrd_id": "FRD-Q0063-01-c5",
+    "qid": "Q0063",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0063-01-c5-Q0063"
+  },
+  {
+    "app_id": "APP-FRD-Q0063-01-c6-Q0063",
+    "vfrd_id": "FRD-Q0063-01-c6",
+    "qid": "Q0063",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0063-01-c6-Q0063"
+  },
+  {
+    "app_id": "APP-FRD-Q0063-01-c7-Q0063",
+    "vfrd_id": "FRD-Q0063-01-c7",
+    "qid": "Q0063",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0063-01-c7-Q0063"
+  },
+  {
+    "app_id": "APP-FRD-Q0064-02-Q0064",
+    "vfrd_id": "FRD-Q0064-02",
+    "qid": "Q0064",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0064-02-Q0064"
+  },
+  {
+    "app_id": "APP-FRD-Q0064-04-c1-Q0064",
+    "vfrd_id": "FRD-Q0064-04-c1",
+    "qid": "Q0064",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0064-04-c1-Q0064"
+  },
+  {
+    "app_id": "APP-FRD-Q0064-04-c2-Q0064",
+    "vfrd_id": "FRD-Q0064-04-c2",
+    "qid": "Q0064",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0064-04-c2-Q0064"
+  },
+  {
+    "app_id": "APP-FRD-Q0064-04-c5-Q0064",
+    "vfrd_id": "FRD-Q0064-04-c5",
+    "qid": "Q0064",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0064-04-c5-Q0064"
+  },
+  {
+    "app_id": "APP-FRD-Q0065-01-Q0065",
+    "vfrd_id": "FRD-Q0065-01",
+    "qid": "Q0065",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0065-01-Q0065"
+  },
+  {
+    "app_id": "APP-FRD-Q0065-02-c1-Q0065",
+    "vfrd_id": "FRD-Q0065-02-c1",
+    "qid": "Q0065",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0065-02-c1-Q0065"
+  },
+  {
+    "app_id": "APP-FRD-Q0065-02-c2-Q0065",
+    "vfrd_id": "FRD-Q0065-02-c2",
+    "qid": "Q0065",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0065-02-c2-Q0065"
+  },
+  {
+    "app_id": "APP-FRD-Q0065-02-c3-Q0065",
+    "vfrd_id": "FRD-Q0065-02-c3",
+    "qid": "Q0065",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0065-02-c3-Q0065"
+  },
+  {
+    "app_id": "APP-FRD-Q0067-01-Q0067",
+    "vfrd_id": "FRD-Q0067-01",
+    "qid": "Q0067",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0067-01-Q0067"
+  },
+  {
+    "app_id": "APP-FRD-Q0067-02-Q0067",
+    "vfrd_id": "FRD-Q0067-02",
+    "qid": "Q0067",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0067-02-Q0067"
+  },
+  {
+    "app_id": "APP-FRD-Q0067-03-c1-Q0067",
+    "vfrd_id": "FRD-Q0067-03-c1",
+    "qid": "Q0067",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0067-03-c1-Q0067"
+  },
+  {
+    "app_id": "APP-FRD-Q0067-03-c2-Q0067",
+    "vfrd_id": "FRD-Q0067-03-c2",
+    "qid": "Q0067",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0067-03-c2-Q0067"
+  },
+  {
+    "app_id": "APP-FRD-Q0067-04-Q0067",
+    "vfrd_id": "FRD-Q0067-04",
+    "qid": "Q0067",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0067-04-Q0067"
+  },
+  {
+    "app_id": "APP-FRD-Q0069-01-c1-Q0069",
+    "vfrd_id": "FRD-Q0069-01-c1",
+    "qid": "Q0069",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0069-01-c1-Q0069"
+  },
+  {
+    "app_id": "APP-FRD-Q0069-01-c2-Q0069",
+    "vfrd_id": "FRD-Q0069-01-c2",
+    "qid": "Q0069",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0069-01-c2-Q0069"
+  },
+  {
+    "app_id": "APP-FRD-Q0069-01-c3-Q0069",
+    "vfrd_id": "FRD-Q0069-01-c3",
+    "qid": "Q0069",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0069-01-c3-Q0069"
+  },
+  {
+    "app_id": "APP-FRD-Q0069-01-c4-Q0069",
+    "vfrd_id": "FRD-Q0069-01-c4",
+    "qid": "Q0069",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0069-01-c4-Q0069"
+  },
+  {
+    "app_id": "APP-FRD-Q0069-01-c5-Q0069",
+    "vfrd_id": "FRD-Q0069-01-c5",
+    "qid": "Q0069",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0069-01-c5-Q0069"
+  },
+  {
+    "app_id": "APP-FRD-Q0069-01-c6-Q0069",
+    "vfrd_id": "FRD-Q0069-01-c6",
+    "qid": "Q0069",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0069-01-c6-Q0069"
+  },
+  {
+    "app_id": "APP-FRD-Q0069-01-c7-Q0069",
+    "vfrd_id": "FRD-Q0069-01-c7",
+    "qid": "Q0069",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0069-01-c7-Q0069"
+  },
+  {
+    "app_id": "APP-FRD-Q0069-02-c1-Q0069",
+    "vfrd_id": "FRD-Q0069-02-c1",
+    "qid": "Q0069",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0069-02-c1-Q0069"
+  },
+  {
+    "app_id": "APP-FRD-Q0069-02-c2-Q0069",
+    "vfrd_id": "FRD-Q0069-02-c2",
+    "qid": "Q0069",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0069-02-c2-Q0069"
+  },
+  {
+    "app_id": "APP-FRD-Q0069-02-c3-Q0069",
+    "vfrd_id": "FRD-Q0069-02-c3",
+    "qid": "Q0069",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0069-02-c3-Q0069"
+  },
+  {
+    "app_id": "APP-FRD-Q0069-02-c4-Q0069",
+    "vfrd_id": "FRD-Q0069-02-c4",
+    "qid": "Q0069",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0069-02-c4-Q0069"
+  },
+  {
+    "app_id": "APP-FRD-Q0070-02-Q0070",
+    "vfrd_id": "FRD-Q0070-02",
+    "qid": "Q0070",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0070-02-Q0070"
+  },
+  {
+    "app_id": "APP-FRD-Q0071-02-Q0071",
+    "vfrd_id": "FRD-Q0071-02",
+    "qid": "Q0071",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0071-02-Q0071"
+  },
+  {
+    "app_id": "APP-FRD-Q0071-03-Q0071",
+    "vfrd_id": "FRD-Q0071-03",
+    "qid": "Q0071",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0071-03-Q0071"
+  },
+  {
+    "app_id": "APP-FRD-Q0072-02-Q0072",
+    "vfrd_id": "FRD-Q0072-02",
+    "qid": "Q0072",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0072-02-Q0072"
+  },
+  {
+    "app_id": "APP-FRD-Q0072-03-Q0072",
+    "vfrd_id": "FRD-Q0072-03",
+    "qid": "Q0072",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0072-03-Q0072"
+  },
+  {
+    "app_id": "APP-FRD-Q0072-03-c1-Q0072",
+    "vfrd_id": "FRD-Q0072-03-c1",
+    "qid": "Q0072",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0072-03-c1-Q0072"
+  },
+  {
+    "app_id": "APP-FRD-Q0072-03-c2-Q0072",
+    "vfrd_id": "FRD-Q0072-03-c2",
+    "qid": "Q0072",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0072-03-c2-Q0072"
+  },
+  {
+    "app_id": "APP-FRD-Q0072-04-c1-Q0072",
+    "vfrd_id": "FRD-Q0072-04-c1",
+    "qid": "Q0072",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0072-04-c1-Q0072"
+  },
+  {
+    "app_id": "APP-FRD-Q0072-04-c2-Q0072",
+    "vfrd_id": "FRD-Q0072-04-c2",
+    "qid": "Q0072",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0072-04-c2-Q0072"
+  },
+  {
+    "app_id": "APP-FRD-Q0072-04-c3-Q0072",
+    "vfrd_id": "FRD-Q0072-04-c3",
+    "qid": "Q0072",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0072-04-c3-Q0072"
+  },
+  {
+    "app_id": "APP-FRD-Q0073-02-c1-Q0073",
+    "vfrd_id": "FRD-Q0073-02-c1",
+    "qid": "Q0073",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0073-02-c1-Q0073"
+  },
+  {
+    "app_id": "APP-FRD-Q0073-02-c2-Q0073",
+    "vfrd_id": "FRD-Q0073-02-c2",
+    "qid": "Q0073",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0073-02-c2-Q0073"
+  },
+  {
+    "app_id": "APP-FRD-Q0073-02-c3-Q0073",
+    "vfrd_id": "FRD-Q0073-02-c3",
+    "qid": "Q0073",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0073-02-c3-Q0073"
+  },
+  {
+    "app_id": "APP-FRD-Q0073-02-c4-Q0073",
+    "vfrd_id": "FRD-Q0073-02-c4",
+    "qid": "Q0073",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0073-02-c4-Q0073"
+  },
+  {
+    "app_id": "APP-FRD-Q0073-03-Q0073",
+    "vfrd_id": "FRD-Q0073-03",
+    "qid": "Q0073",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0073-03-Q0073"
+  },
+  {
+    "app_id": "APP-FRD-Q0075-01-Q0075",
+    "vfrd_id": "FRD-Q0075-01",
+    "qid": "Q0075",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0075-01-Q0075"
+  },
+  {
+    "app_id": "APP-FRD-Q0075-02-Q0075",
+    "vfrd_id": "FRD-Q0075-02",
+    "qid": "Q0075",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0075-02-Q0075"
+  },
+  {
+    "app_id": "APP-FRD-Q0075-03-Q0075",
+    "vfrd_id": "FRD-Q0075-03",
+    "qid": "Q0075",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0075-03-Q0075"
+  },
+  {
+    "app_id": "APP-FRD-Q0075-04-Q0075",
+    "vfrd_id": "FRD-Q0075-04",
+    "qid": "Q0075",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0075-04-Q0075"
+  },
+  {
+    "app_id": "APP-FRD-Q0075-04-c1-Q0075",
+    "vfrd_id": "FRD-Q0075-04-c1",
+    "qid": "Q0075",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0075-04-c1-Q0075"
+  },
+  {
+    "app_id": "APP-FRD-Q0075-04-c2-Q0075",
+    "vfrd_id": "FRD-Q0075-04-c2",
+    "qid": "Q0075",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0075-04-c2-Q0075"
+  },
+  {
+    "app_id": "APP-FRD-Q0075-04-c3-Q0075",
+    "vfrd_id": "FRD-Q0075-04-c3",
+    "qid": "Q0075",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0075-04-c3-Q0075"
+  },
+  {
+    "app_id": "APP-FRD-Q0076-03-c2-Q0076",
+    "vfrd_id": "FRD-Q0076-03-c2",
+    "qid": "Q0076",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0076-03-c2-Q0076"
+  },
+  {
+    "app_id": "APP-FRD-Q0076-03-c4-Q0076",
+    "vfrd_id": "FRD-Q0076-03-c4",
+    "qid": "Q0076",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0076-03-c4-Q0076"
+  },
+  {
+    "app_id": "APP-FRD-Q0076-03-c6-Q0076",
+    "vfrd_id": "FRD-Q0076-03-c6",
+    "qid": "Q0076",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0076-03-c6-Q0076"
+  },
+  {
+    "app_id": "APP-FRD-Q0077-02-Q0077",
+    "vfrd_id": "FRD-Q0077-02",
+    "qid": "Q0077",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0077-02-Q0077"
+  },
+  {
+    "app_id": "APP-FRD-Q0077-04-c1-Q0077",
+    "vfrd_id": "FRD-Q0077-04-c1",
+    "qid": "Q0077",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0077-04-c1-Q0077"
+  },
+  {
+    "app_id": "APP-FRD-Q0078-02-c1-Q0078",
+    "vfrd_id": "FRD-Q0078-02-c1",
+    "qid": "Q0078",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0078-02-c1-Q0078"
+  },
+  {
+    "app_id": "APP-FRD-Q0078-03-Q0078",
+    "vfrd_id": "FRD-Q0078-03",
+    "qid": "Q0078",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0078-03-Q0078"
+  },
+  {
+    "app_id": "APP-FRD-Q0078-04-c1-Q0078",
+    "vfrd_id": "FRD-Q0078-04-c1",
+    "qid": "Q0078",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0078-04-c1-Q0078"
+  },
+  {
+    "app_id": "APP-FRD-Q0078-04-c2-Q0078",
+    "vfrd_id": "FRD-Q0078-04-c2",
+    "qid": "Q0078",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0078-04-c2-Q0078"
+  },
+  {
+    "app_id": "APP-FRD-Q0079-01-c2-Q0079",
+    "vfrd_id": "FRD-Q0079-01-c2",
+    "qid": "Q0079",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0079-01-c2-Q0079"
+  },
+  {
+    "app_id": "APP-FRD-Q0079-01-c3-Q0079",
+    "vfrd_id": "FRD-Q0079-01-c3",
+    "qid": "Q0079",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0079-01-c3-Q0079"
+  },
+  {
+    "app_id": "APP-FRD-Q0079-04-c3-Q0079",
+    "vfrd_id": "FRD-Q0079-04-c3",
+    "qid": "Q0079",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0079-04-c3-Q0079"
+  },
+  {
+    "app_id": "APP-FRD-Q0080-03-c5-Q0080",
+    "vfrd_id": "FRD-Q0080-03-c5",
+    "qid": "Q0080",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0080-03-c5-Q0080"
+  },
+  {
+    "app_id": "APP-FRD-Q0080-04-Q0080",
+    "vfrd_id": "FRD-Q0080-04",
+    "qid": "Q0080",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0080-04-Q0080"
+  },
+  {
+    "app_id": "APP-FRD-Q0081-01-c2-Q0081",
+    "vfrd_id": "FRD-Q0081-01-c2",
+    "qid": "Q0081",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0081-01-c2-Q0081"
+  },
+  {
+    "app_id": "APP-FRD-Q0081-01-c4-Q0081",
+    "vfrd_id": "FRD-Q0081-01-c4",
+    "qid": "Q0081",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0081-01-c4-Q0081"
+  },
+  {
+    "app_id": "APP-FRD-Q0081-02-c1-Q0081",
+    "vfrd_id": "FRD-Q0081-02-c1",
+    "qid": "Q0081",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0081-02-c1-Q0081"
+  },
+  {
+    "app_id": "APP-FRD-Q0081-03-zabel1989-c1-Q0081",
+    "vfrd_id": "FRD-Q0081-03-zabel1989-c1",
+    "qid": "Q0081",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0081-03-zabel1989-c1-Q0081"
+  },
+  {
+    "app_id": "APP-FRD-Q0083-01-c1-Q0083",
+    "vfrd_id": "FRD-Q0083-01-c1",
+    "qid": "Q0083",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0083-01-c1-Q0083"
+  },
+  {
+    "app_id": "APP-FRD-Q0083-01-c2-Q0083",
+    "vfrd_id": "FRD-Q0083-01-c2",
+    "qid": "Q0083",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0083-01-c2-Q0083"
+  },
+  {
+    "app_id": "APP-FRD-Q0083-02-Q0083",
+    "vfrd_id": "FRD-Q0083-02",
+    "qid": "Q0083",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0083-02-Q0083"
+  },
+  {
+    "app_id": "APP-FRD-Q0083-03-c2-Q0083",
+    "vfrd_id": "FRD-Q0083-03-c2",
+    "qid": "Q0083",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0083-03-c2-Q0083"
+  },
+  {
+    "app_id": "APP-FRD-Q0083-03-c3-Q0083",
+    "vfrd_id": "FRD-Q0083-03-c3",
+    "qid": "Q0083",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0083-03-c3-Q0083"
+  },
+  {
+    "app_id": "APP-FRD-Q0084-01-Q0084",
+    "vfrd_id": "FRD-Q0084-01",
+    "qid": "Q0084",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0084-01-Q0084"
+  },
+  {
+    "app_id": "APP-FRD-Q0084-02-Q0084",
+    "vfrd_id": "FRD-Q0084-02",
+    "qid": "Q0084",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0084-02-Q0084"
+  },
+  {
+    "app_id": "APP-FRD-Q0085-01-c3-Q0085",
+    "vfrd_id": "FRD-Q0085-01-c3",
+    "qid": "Q0085",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0085-01-c3-Q0085"
+  },
+  {
+    "app_id": "APP-FRD-Q0085-01-c4-Q0085",
+    "vfrd_id": "FRD-Q0085-01-c4",
+    "qid": "Q0085",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0085-01-c4-Q0085"
+  },
+  {
+    "app_id": "APP-FRD-Q0085-03-c1-Q0085",
+    "vfrd_id": "FRD-Q0085-03-c1",
+    "qid": "Q0085",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0085-03-c1-Q0085"
+  },
+  {
+    "app_id": "APP-FRD-Q0085-03-c2-Q0085",
+    "vfrd_id": "FRD-Q0085-03-c2",
+    "qid": "Q0085",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0085-03-c2-Q0085"
+  },
+  {
+    "app_id": "APP-FRD-Q0085-03-c3-Q0085",
+    "vfrd_id": "FRD-Q0085-03-c3",
+    "qid": "Q0085",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0085-03-c3-Q0085"
+  },
+  {
+    "app_id": "APP-FRD-Q0085-03-c4-Q0085",
+    "vfrd_id": "FRD-Q0085-03-c4",
+    "qid": "Q0085",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0085-03-c4-Q0085"
+  },
+  {
+    "app_id": "APP-FRD-Q0085-04-Q0085",
+    "vfrd_id": "FRD-Q0085-04",
+    "qid": "Q0085",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0085-04-Q0085"
+  },
+  {
+    "app_id": "APP-FRD-Q0087-01-Q0087",
+    "vfrd_id": "FRD-Q0087-01",
+    "qid": "Q0087",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0087-01-Q0087"
+  },
+  {
+    "app_id": "APP-FRD-Q0087-03-c2-Q0087",
+    "vfrd_id": "FRD-Q0087-03-c2",
+    "qid": "Q0087",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0087-03-c2-Q0087"
+  },
+  {
+    "app_id": "APP-FRD-Q0088-02-Q0088",
+    "vfrd_id": "FRD-Q0088-02",
+    "qid": "Q0088",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0088-02-Q0088"
+  },
+  {
+    "app_id": "APP-FRD-Q0089-01-c1-Q0089",
+    "vfrd_id": "FRD-Q0089-01-c1",
+    "qid": "Q0089",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0089-01-c1-Q0089"
+  },
+  {
+    "app_id": "APP-FRD-Q0089-01-c2-Q0089",
+    "vfrd_id": "FRD-Q0089-01-c2",
+    "qid": "Q0089",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0089-01-c2-Q0089"
+  },
+  {
+    "app_id": "APP-FRD-Q0089-01-c3-Q0089",
+    "vfrd_id": "FRD-Q0089-01-c3",
+    "qid": "Q0089",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0089-01-c3-Q0089"
+  },
+  {
+    "app_id": "APP-FRD-Q0089-01-c4-Q0089",
+    "vfrd_id": "FRD-Q0089-01-c4",
+    "qid": "Q0089",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0089-01-c4-Q0089"
+  },
+  {
+    "app_id": "APP-FRD-Q0089-01-c5-Q0089",
+    "vfrd_id": "FRD-Q0089-01-c5",
+    "qid": "Q0089",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0089-01-c5-Q0089"
+  },
+  {
+    "app_id": "APP-FRD-Q0089-02-Q0089",
+    "vfrd_id": "FRD-Q0089-02",
+    "qid": "Q0089",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0089-02-Q0089"
+  },
+  {
+    "app_id": "APP-FRD-Q0089-04-Q0089",
+    "vfrd_id": "FRD-Q0089-04",
+    "qid": "Q0089",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0089-04-Q0089"
+  },
+  {
+    "app_id": "APP-FRD-Q0089-04-c1-Q0089",
+    "vfrd_id": "FRD-Q0089-04-c1",
+    "qid": "Q0089",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0089-04-c1-Q0089"
+  },
+  {
+    "app_id": "APP-FRD-Q0089-04-c2-Q0089",
+    "vfrd_id": "FRD-Q0089-04-c2",
+    "qid": "Q0089",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0089-04-c2-Q0089"
+  },
+  {
+    "app_id": "APP-FRD-Q0090-04-c1-Q0090",
+    "vfrd_id": "FRD-Q0090-04-c1",
+    "qid": "Q0090",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0090-04-c1-Q0090"
+  },
+  {
+    "app_id": "APP-FRD-Q0090-04-c2-Q0090",
+    "vfrd_id": "FRD-Q0090-04-c2",
+    "qid": "Q0090",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0090-04-c2-Q0090"
+  },
+  {
+    "app_id": "APP-FRD-Q0090-04-c3-Q0090",
+    "vfrd_id": "FRD-Q0090-04-c3",
+    "qid": "Q0090",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0090-04-c3-Q0090"
+  },
+  {
+    "app_id": "APP-FRD-Q0090-04-c5-Q0090",
+    "vfrd_id": "FRD-Q0090-04-c5",
+    "qid": "Q0090",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0090-04-c5-Q0090"
+  },
+  {
+    "app_id": "APP-FRD-Q0092-03-c1-Q0092",
+    "vfrd_id": "FRD-Q0092-03-c1",
+    "qid": "Q0092",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0092-03-c1-Q0092"
+  },
+  {
+    "app_id": "APP-FRD-Q0092-03-c2-Q0092",
+    "vfrd_id": "FRD-Q0092-03-c2",
+    "qid": "Q0092",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0092-03-c2-Q0092"
+  },
+  {
+    "app_id": "APP-FRD-Q0092-03-c3-Q0092",
+    "vfrd_id": "FRD-Q0092-03-c3",
+    "qid": "Q0092",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0092-03-c3-Q0092"
+  },
+  {
+    "app_id": "APP-FRD-Q0092-03-c4-Q0092",
+    "vfrd_id": "FRD-Q0092-03-c4",
+    "qid": "Q0092",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0092-03-c4-Q0092"
+  },
+  {
+    "app_id": "APP-FRD-Q0092-03-c5-Q0092",
+    "vfrd_id": "FRD-Q0092-03-c5",
+    "qid": "Q0092",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0092-03-c5-Q0092"
+  },
+  {
+    "app_id": "APP-FRD-Q0092-04-delanian20-c1-Q0092",
+    "vfrd_id": "FRD-Q0092-04-delanian20-c1",
+    "qid": "Q0092",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0092-04-delanian20-c1-Q0092"
+  },
+  {
+    "app_id": "APP-FRD-Q0092-04-desouza200-c1-Q0092",
+    "vfrd_id": "FRD-Q0092-04-desouza200-c1",
+    "qid": "Q0092",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0092-04-desouza200-c1-Q0092"
+  },
+  {
+    "app_id": "APP-FRD-Q0092-04-desouza200-c2-Q0092",
+    "vfrd_id": "FRD-Q0092-04-desouza200-c2",
+    "qid": "Q0092",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0092-04-desouza200-c2-Q0092"
+  },
+  {
+    "app_id": "APP-FRD-Q0093-01-c1-Q0093",
+    "vfrd_id": "FRD-Q0093-01-c1",
+    "qid": "Q0093",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0093-01-c1-Q0093"
+  },
+  {
+    "app_id": "APP-FRD-Q0093-01-c2-Q0093",
+    "vfrd_id": "FRD-Q0093-01-c2",
+    "qid": "Q0093",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0093-01-c2-Q0093"
+  },
+  {
+    "app_id": "APP-FRD-Q0093-02-c1-Q0093",
+    "vfrd_id": "FRD-Q0093-02-c1",
+    "qid": "Q0093",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0093-02-c1-Q0093"
+  },
+  {
+    "app_id": "APP-FRD-Q0093-02-c2-Q0093",
+    "vfrd_id": "FRD-Q0093-02-c2",
+    "qid": "Q0093",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0093-02-c2-Q0093"
+  },
+  {
+    "app_id": "APP-FRD-Q0094-01-Q0094",
+    "vfrd_id": "FRD-Q0094-01",
+    "qid": "Q0094",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0094-01-Q0094"
+  },
+  {
+    "app_id": "APP-FRD-Q0094-02-c2-Q0094",
+    "vfrd_id": "FRD-Q0094-02-c2",
+    "qid": "Q0094",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0094-02-c2-Q0094"
+  },
+  {
+    "app_id": "APP-FRD-Q0094-02-c5-Q0094",
+    "vfrd_id": "FRD-Q0094-02-c5",
+    "qid": "Q0094",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0094-02-c5-Q0094"
+  },
+  {
+    "app_id": "APP-FRD-Q0095-02-c1-Q0095",
+    "vfrd_id": "FRD-Q0095-02-c1",
+    "qid": "Q0095",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0095-02-c1-Q0095"
+  },
+  {
+    "app_id": "APP-FRD-Q0095-02-c2-Q0095",
+    "vfrd_id": "FRD-Q0095-02-c2",
+    "qid": "Q0095",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0095-02-c2-Q0095"
+  },
+  {
+    "app_id": "APP-FRD-Q0095-03-c2-Q0095",
+    "vfrd_id": "FRD-Q0095-03-c2",
+    "qid": "Q0095",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0095-03-c2-Q0095"
+  },
+  {
+    "app_id": "APP-FRD-Q0096-02-Q0096",
+    "vfrd_id": "FRD-Q0096-02",
+    "qid": "Q0096",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0096-02-Q0096"
+  },
+  {
+    "app_id": "APP-FRD-Q0097-02-c2-Q0097",
+    "vfrd_id": "FRD-Q0097-02-c2",
+    "qid": "Q0097",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0097-02-c2-Q0097"
+  },
+  {
+    "app_id": "APP-FRD-Q0097-02-c7-Q0097",
+    "vfrd_id": "FRD-Q0097-02-c7",
+    "qid": "Q0097",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0097-02-c7-Q0097"
+  },
+  {
+    "app_id": "APP-FRD-Q0097-02-c8-Q0097",
+    "vfrd_id": "FRD-Q0097-02-c8",
+    "qid": "Q0097",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0097-02-c8-Q0097"
+  },
+  {
+    "app_id": "APP-FRD-Q0097-03-c1-Q0097",
+    "vfrd_id": "FRD-Q0097-03-c1",
+    "qid": "Q0097",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0097-03-c1-Q0097"
+  },
+  {
+    "app_id": "APP-FRD-Q0097-04-Q0097",
+    "vfrd_id": "FRD-Q0097-04",
+    "qid": "Q0097",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0097-04-Q0097"
+  },
+  {
+    "app_id": "APP-FRD-Q0098-01-Q0098",
+    "vfrd_id": "FRD-Q0098-01",
+    "qid": "Q0098",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0098-01-Q0098"
+  },
+  {
+    "app_id": "APP-FRD-Q0098-04-Q0098",
+    "vfrd_id": "FRD-Q0098-04",
+    "qid": "Q0098",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0098-04-Q0098"
+  },
+  {
+    "app_id": "APP-FRD-Q0098-04-c1-Q0098",
+    "vfrd_id": "FRD-Q0098-04-c1",
+    "qid": "Q0098",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0098-04-c1-Q0098"
+  },
+  {
+    "app_id": "APP-FRD-Q0098-04-c2-Q0098",
+    "vfrd_id": "FRD-Q0098-04-c2",
+    "qid": "Q0098",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0098-04-c2-Q0098"
+  },
+  {
+    "app_id": "APP-FRD-Q0098-04-c3-Q0098",
+    "vfrd_id": "FRD-Q0098-04-c3",
+    "qid": "Q0098",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0098-04-c3-Q0098"
+  },
+  {
+    "app_id": "APP-FRD-Q0098-04-c4-Q0098",
+    "vfrd_id": "FRD-Q0098-04-c4",
+    "qid": "Q0098",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0098-04-c4-Q0098"
+  },
+  {
+    "app_id": "APP-FRD-Q0098-04-c5-Q0098",
+    "vfrd_id": "FRD-Q0098-04-c5",
+    "qid": "Q0098",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0098-04-c5-Q0098"
+  },
+  {
+    "app_id": "APP-FRD-Q0098-04-c6-Q0098",
+    "vfrd_id": "FRD-Q0098-04-c6",
+    "qid": "Q0098",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0098-04-c6-Q0098"
+  },
+  {
+    "app_id": "APP-FRD-Q0100-03-Q0100",
+    "vfrd_id": "FRD-Q0100-03",
+    "qid": "Q0100",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0100-03-Q0100"
+  },
+  {
+    "app_id": "APP-FRD-Q0100-03-c1-Q0100",
+    "vfrd_id": "FRD-Q0100-03-c1",
+    "qid": "Q0100",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0100-03-c1-Q0100"
+  },
+  {
+    "app_id": "APP-FRD-Q0100-03-c2-Q0100",
+    "vfrd_id": "FRD-Q0100-03-c2",
+    "qid": "Q0100",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0100-03-c2-Q0100"
+  },
+  {
+    "app_id": "APP-FRD-Q0100-03-c3-Q0100",
+    "vfrd_id": "FRD-Q0100-03-c3",
+    "qid": "Q0100",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0100-03-c3-Q0100"
+  },
+  {
+    "app_id": "APP-FRD-Q0101-01-Q0101",
+    "vfrd_id": "FRD-Q0101-01",
+    "qid": "Q0101",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0101-01-Q0101"
+  },
+  {
+    "app_id": "APP-FRD-Q0101-02-Q0101",
+    "vfrd_id": "FRD-Q0101-02",
+    "qid": "Q0101",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0101-02-Q0101"
+  },
+  {
+    "app_id": "APP-FRD-Q0102-02-Q0102",
+    "vfrd_id": "FRD-Q0102-02",
+    "qid": "Q0102",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0102-02-Q0102"
+  },
+  {
+    "app_id": "APP-FRD-Q0102-04-c1-Q0102",
+    "vfrd_id": "FRD-Q0102-04-c1",
+    "qid": "Q0102",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0102-04-c1-Q0102"
+  },
+  {
+    "app_id": "APP-FRD-Q0102-04-c2-Q0102",
+    "vfrd_id": "FRD-Q0102-04-c2",
+    "qid": "Q0102",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0102-04-c2-Q0102"
+  },
+  {
+    "app_id": "APP-FRD-Q0103-03-zabel1989-c1-Q0103",
+    "vfrd_id": "FRD-Q0103-03-zabel1989-c1",
+    "qid": "Q0103",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0103-03-zabel1989-c1-Q0103"
+  },
+  {
+    "app_id": "APP-FRD-Q0104-01-c2-Q0104",
+    "vfrd_id": "FRD-Q0104-01-c2",
+    "qid": "Q0104",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0104-01-c2-Q0104"
+  },
+  {
+    "app_id": "APP-FRD-Q0104-01-c3-Q0104",
+    "vfrd_id": "FRD-Q0104-01-c3",
+    "qid": "Q0104",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0104-01-c3-Q0104"
+  },
+  {
+    "app_id": "APP-FRD-Q0104-01-c5-Q0104",
+    "vfrd_id": "FRD-Q0104-01-c5",
+    "qid": "Q0104",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0104-01-c5-Q0104"
+  },
+  {
+    "app_id": "APP-FRD-Q0104-01-c6-Q0104",
+    "vfrd_id": "FRD-Q0104-01-c6",
+    "qid": "Q0104",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0104-01-c6-Q0104"
+  },
+  {
+    "app_id": "APP-FRD-Q0104-03-c6-Q0104",
+    "vfrd_id": "FRD-Q0104-03-c6",
+    "qid": "Q0104",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0104-03-c6-Q0104"
+  },
+  {
+    "app_id": "APP-FRD-Q0105-03-c1-Q0105",
+    "vfrd_id": "FRD-Q0105-03-c1",
+    "qid": "Q0105",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0105-03-c1-Q0105"
+  },
+  {
+    "app_id": "APP-FRD-Q0105-03-c2-Q0105",
+    "vfrd_id": "FRD-Q0105-03-c2",
+    "qid": "Q0105",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0105-03-c2-Q0105"
+  },
+  {
+    "app_id": "APP-FRD-Q0105-03-c3-Q0105",
+    "vfrd_id": "FRD-Q0105-03-c3",
+    "qid": "Q0105",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0105-03-c3-Q0105"
+  },
+  {
+    "app_id": "APP-FRD-Q0105-03-c4-Q0105",
+    "vfrd_id": "FRD-Q0105-03-c4",
+    "qid": "Q0105",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0105-03-c4-Q0105"
+  },
+  {
+    "app_id": "APP-FRD-Q0105-03-c5-Q0105",
+    "vfrd_id": "FRD-Q0105-03-c5",
+    "qid": "Q0105",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0105-03-c5-Q0105"
+  },
+  {
+    "app_id": "APP-FRD-Q0105-04-c4-Q0105",
+    "vfrd_id": "FRD-Q0105-04-c4",
+    "qid": "Q0105",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0105-04-c4-Q0105"
+  },
+  {
+    "app_id": "APP-FRD-Q0107-01-Q0107",
+    "vfrd_id": "FRD-Q0107-01",
+    "qid": "Q0107",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0107-01-Q0107"
+  },
+  {
+    "app_id": "APP-FRD-Q0107-02-c3-Q0107",
+    "vfrd_id": "FRD-Q0107-02-c3",
+    "qid": "Q0107",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0107-02-c3-Q0107"
+  },
+  {
+    "app_id": "APP-FRD-Q0107-02-c4-Q0107",
+    "vfrd_id": "FRD-Q0107-02-c4",
+    "qid": "Q0107",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0107-02-c4-Q0107"
+  },
+  {
+    "app_id": "APP-FRD-Q0107-03-c1-Q0107",
+    "vfrd_id": "FRD-Q0107-03-c1",
+    "qid": "Q0107",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0107-03-c1-Q0107"
+  },
+  {
+    "app_id": "APP-FRD-Q0107-03-c2-Q0107",
+    "vfrd_id": "FRD-Q0107-03-c2",
+    "qid": "Q0107",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0107-03-c2-Q0107"
+  },
+  {
+    "app_id": "APP-FRD-Q0108-03-Q0108",
+    "vfrd_id": "FRD-Q0108-03",
+    "qid": "Q0108",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0108-03-Q0108"
+  },
+  {
+    "app_id": "APP-FRD-Q0108-04-Q0108",
+    "vfrd_id": "FRD-Q0108-04",
+    "qid": "Q0108",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0108-04-Q0108"
+  },
+  {
+    "app_id": "APP-FRD-Q0109-01-c1-Q0109",
+    "vfrd_id": "FRD-Q0109-01-c1",
+    "qid": "Q0109",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0109-01-c1-Q0109"
+  },
+  {
+    "app_id": "APP-FRD-Q0109-01-c2-Q0109",
+    "vfrd_id": "FRD-Q0109-01-c2",
+    "qid": "Q0109",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0109-01-c2-Q0109"
+  },
+  {
+    "app_id": "APP-FRD-Q0109-01-c3-Q0109",
+    "vfrd_id": "FRD-Q0109-01-c3",
+    "qid": "Q0109",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0109-01-c3-Q0109"
+  },
+  {
+    "app_id": "APP-FRD-Q0109-01-c4-Q0109",
+    "vfrd_id": "FRD-Q0109-01-c4",
+    "qid": "Q0109",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0109-01-c4-Q0109"
+  },
+  {
+    "app_id": "APP-FRD-Q0109-02-Q0109",
+    "vfrd_id": "FRD-Q0109-02",
+    "qid": "Q0109",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0109-02-Q0109"
+  },
+  {
+    "app_id": "APP-FRD-Q0110-01-c1-Q0110",
+    "vfrd_id": "FRD-Q0110-01-c1",
+    "qid": "Q0110",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0110-01-c1-Q0110"
+  },
+  {
+    "app_id": "APP-FRD-Q0110-01-c3-Q0110",
+    "vfrd_id": "FRD-Q0110-01-c3",
+    "qid": "Q0110",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0110-01-c3-Q0110"
+  },
+  {
+    "app_id": "APP-FRD-Q0110-01-c4-Q0110",
+    "vfrd_id": "FRD-Q0110-01-c4",
+    "qid": "Q0110",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0110-01-c4-Q0110"
+  },
+  {
+    "app_id": "APP-FRD-Q0110-01-c5-Q0110",
+    "vfrd_id": "FRD-Q0110-01-c5",
+    "qid": "Q0110",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0110-01-c5-Q0110"
+  },
+  {
+    "app_id": "APP-FRD-Q0110-01-c6-Q0110",
+    "vfrd_id": "FRD-Q0110-01-c6",
+    "qid": "Q0110",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0110-01-c6-Q0110"
+  },
+  {
+    "app_id": "APP-FRD-Q0110-01-c8-Q0110",
+    "vfrd_id": "FRD-Q0110-01-c8",
+    "qid": "Q0110",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0110-01-c8-Q0110"
+  },
+  {
+    "app_id": "APP-FRD-Q0111-01-Q0111",
+    "vfrd_id": "FRD-Q0111-01",
+    "qid": "Q0111",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0111-01-Q0111"
+  },
+  {
+    "app_id": "APP-FRD-Q0111-03-c3-Q0111",
+    "vfrd_id": "FRD-Q0111-03-c3",
+    "qid": "Q0111",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0111-03-c3-Q0111"
+  },
+  {
+    "app_id": "APP-FRD-Q0111-04-Q0111",
+    "vfrd_id": "FRD-Q0111-04",
+    "qid": "Q0111",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0111-04-Q0111"
+  },
+  {
+    "app_id": "APP-FRD-Q0113-01-c1-Q0113",
+    "vfrd_id": "FRD-Q0113-01-c1",
+    "qid": "Q0113",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0113-01-c1-Q0113"
+  },
+  {
+    "app_id": "APP-FRD-Q0113-01-c2-Q0113",
+    "vfrd_id": "FRD-Q0113-01-c2",
+    "qid": "Q0113",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0113-01-c2-Q0113"
+  },
+  {
+    "app_id": "APP-FRD-Q0114-02-Q0114",
+    "vfrd_id": "FRD-Q0114-02",
+    "qid": "Q0114",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0114-02-Q0114"
+  },
+  {
+    "app_id": "APP-FRD-Q0114-03-c2-Q0114",
+    "vfrd_id": "FRD-Q0114-03-c2",
+    "qid": "Q0114",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0114-03-c2-Q0114"
+  },
+  {
+    "app_id": "APP-FRD-Q0114-03-c3-Q0114",
+    "vfrd_id": "FRD-Q0114-03-c3",
+    "qid": "Q0114",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0114-03-c3-Q0114"
+  },
+  {
+    "app_id": "APP-FRD-Q0115-01-c1-Q0115",
+    "vfrd_id": "FRD-Q0115-01-c1",
+    "qid": "Q0115",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0115-01-c1-Q0115"
+  },
+  {
+    "app_id": "APP-FRD-Q0115-01-c2-Q0115",
+    "vfrd_id": "FRD-Q0115-01-c2",
+    "qid": "Q0115",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0115-01-c2-Q0115"
+  },
+  {
+    "app_id": "APP-FRD-Q0115-01-c3-Q0115",
+    "vfrd_id": "FRD-Q0115-01-c3",
+    "qid": "Q0115",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0115-01-c3-Q0115"
+  },
+  {
+    "app_id": "APP-FRD-Q0115-02-Q0115",
+    "vfrd_id": "FRD-Q0115-02",
+    "qid": "Q0115",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0115-02-Q0115"
+  },
+  {
+    "app_id": "APP-FRD-Q0115-03-c5-Q0115",
+    "vfrd_id": "FRD-Q0115-03-c5",
+    "qid": "Q0115",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0115-03-c5-Q0115"
+  },
+  {
+    "app_id": "APP-FRD-Q0115-04-c1-Q0115",
+    "vfrd_id": "FRD-Q0115-04-c1",
+    "qid": "Q0115",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0115-04-c1-Q0115"
+  },
+  {
+    "app_id": "APP-FRD-Q0115-04-c2-Q0115",
+    "vfrd_id": "FRD-Q0115-04-c2",
+    "qid": "Q0115",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0115-04-c2-Q0115"
+  },
+  {
+    "app_id": "APP-FRD-Q0115-04-c3-Q0115",
+    "vfrd_id": "FRD-Q0115-04-c3",
+    "qid": "Q0115",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0115-04-c3-Q0115"
+  },
+  {
+    "app_id": "APP-FRD-Q0116-01-Q0116",
+    "vfrd_id": "FRD-Q0116-01",
+    "qid": "Q0116",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0116-01-Q0116"
+  },
+  {
+    "app_id": "APP-FRD-Q0116-04-c1-Q0116",
+    "vfrd_id": "FRD-Q0116-04-c1",
+    "qid": "Q0116",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0116-04-c1-Q0116"
+  },
+  {
+    "app_id": "APP-FRD-Q0116-04-c3-Q0116",
+    "vfrd_id": "FRD-Q0116-04-c3",
+    "qid": "Q0116",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0116-04-c3-Q0116"
+  },
+  {
+    "app_id": "APP-FRD-Q0117-01-c1-Q0117",
+    "vfrd_id": "FRD-Q0117-01-c1",
+    "qid": "Q0117",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0117-01-c1-Q0117"
+  },
+  {
+    "app_id": "APP-FRD-Q0117-01-c2-Q0117",
+    "vfrd_id": "FRD-Q0117-01-c2",
+    "qid": "Q0117",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0117-01-c2-Q0117"
+  },
+  {
+    "app_id": "APP-FRD-Q0117-01-c3-Q0117",
+    "vfrd_id": "FRD-Q0117-01-c3",
+    "qid": "Q0117",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0117-01-c3-Q0117"
+  },
+  {
+    "app_id": "APP-FRD-Q0117-01-c4-Q0117",
+    "vfrd_id": "FRD-Q0117-01-c4",
+    "qid": "Q0117",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0117-01-c4-Q0117"
+  },
+  {
+    "app_id": "APP-FRD-Q0117-01-c5-Q0117",
+    "vfrd_id": "FRD-Q0117-01-c5",
+    "qid": "Q0117",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0117-01-c5-Q0117"
+  },
+  {
+    "app_id": "APP-FRD-Q0117-02-Q0117",
+    "vfrd_id": "FRD-Q0117-02",
+    "qid": "Q0117",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0117-02-Q0117"
+  },
+  {
+    "app_id": "APP-FRD-Q0117-03-Q0117",
+    "vfrd_id": "FRD-Q0117-03",
+    "qid": "Q0117",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0117-03-Q0117"
+  },
+  {
+    "app_id": "APP-FRD-Q0118-01-Q0118",
+    "vfrd_id": "FRD-Q0118-01",
+    "qid": "Q0118",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0118-01-Q0118"
+  },
+  {
+    "app_id": "APP-FRD-Q0118-02-Q0118",
+    "vfrd_id": "FRD-Q0118-02",
+    "qid": "Q0118",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0118-02-Q0118"
+  },
+  {
+    "app_id": "APP-FRD-Q0118-03-c1-Q0118",
+    "vfrd_id": "FRD-Q0118-03-c1",
+    "qid": "Q0118",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0118-03-c1-Q0118"
+  },
+  {
+    "app_id": "APP-FRD-Q0118-03-c2-Q0118",
+    "vfrd_id": "FRD-Q0118-03-c2",
+    "qid": "Q0118",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0118-03-c2-Q0118"
+  },
+  {
+    "app_id": "APP-FRD-Q0118-03-c3-Q0118",
+    "vfrd_id": "FRD-Q0118-03-c3",
+    "qid": "Q0118",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0118-03-c3-Q0118"
+  },
+  {
+    "app_id": "APP-FRD-Q0118-03-c4-Q0118",
+    "vfrd_id": "FRD-Q0118-03-c4",
+    "qid": "Q0118",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0118-03-c4-Q0118"
+  },
+  {
+    "app_id": "APP-FRD-Q0118-03-c5-Q0118",
+    "vfrd_id": "FRD-Q0118-03-c5",
+    "qid": "Q0118",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0118-03-c5-Q0118"
+  },
+  {
+    "app_id": "APP-FRD-Q0118-04-Q0118",
+    "vfrd_id": "FRD-Q0118-04",
+    "qid": "Q0118",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0118-04-Q0118"
+  },
+  {
+    "app_id": "APP-FRD-Q0120-03-c1-Q0120",
+    "vfrd_id": "FRD-Q0120-03-c1",
+    "qid": "Q0120",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0120-03-c1-Q0120"
+  },
+  {
+    "app_id": "APP-FRD-Q0120-03-c2-Q0120",
+    "vfrd_id": "FRD-Q0120-03-c2",
+    "qid": "Q0120",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0120-03-c2-Q0120"
+  },
+  {
+    "app_id": "APP-FRD-Q0120-03-c3-Q0120",
+    "vfrd_id": "FRD-Q0120-03-c3",
+    "qid": "Q0120",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0120-03-c3-Q0120"
+  },
+  {
+    "app_id": "APP-FRD-Q0120-03-c5-Q0120",
+    "vfrd_id": "FRD-Q0120-03-c5",
+    "qid": "Q0120",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0120-03-c5-Q0120"
+  },
+  {
+    "app_id": "APP-FRD-Q0121-01-Q0121",
+    "vfrd_id": "FRD-Q0121-01",
+    "qid": "Q0121",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0121-01-Q0121"
+  },
+  {
+    "app_id": "APP-FRD-Q0121-02-c1-Q0121",
+    "vfrd_id": "FRD-Q0121-02-c1",
+    "qid": "Q0121",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0121-02-c1-Q0121"
+  },
+  {
+    "app_id": "APP-FRD-Q0121-02-c3-Q0121",
+    "vfrd_id": "FRD-Q0121-02-c3",
+    "qid": "Q0121",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0121-02-c3-Q0121"
+  },
+  {
+    "app_id": "APP-FRD-Q0122-01-c1-Q0122",
+    "vfrd_id": "FRD-Q0122-01-c1",
+    "qid": "Q0122",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0122-01-c1-Q0122"
+  },
+  {
+    "app_id": "APP-FRD-Q0122-03-c3-Q0122",
+    "vfrd_id": "FRD-Q0122-03-c3",
+    "qid": "Q0122",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0122-03-c3-Q0122"
+  },
+  {
+    "app_id": "APP-FRD-Q0123-01-c1-Q0123",
+    "vfrd_id": "FRD-Q0123-01-c1",
+    "qid": "Q0123",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0123-01-c1-Q0123"
+  },
+  {
+    "app_id": "APP-FRD-Q0123-01-c2-Q0123",
+    "vfrd_id": "FRD-Q0123-01-c2",
+    "qid": "Q0123",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0123-01-c2-Q0123"
+  },
+  {
+    "app_id": "APP-FRD-Q0123-01-c3-Q0123",
+    "vfrd_id": "FRD-Q0123-01-c3",
+    "qid": "Q0123",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0123-01-c3-Q0123"
+  },
+  {
+    "app_id": "APP-FRD-Q0123-01-c4-Q0123",
+    "vfrd_id": "FRD-Q0123-01-c4",
+    "qid": "Q0123",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0123-01-c4-Q0123"
+  },
+  {
+    "app_id": "APP-FRD-Q0123-01-c5-Q0123",
+    "vfrd_id": "FRD-Q0123-01-c5",
+    "qid": "Q0123",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0123-01-c5-Q0123"
+  },
+  {
+    "app_id": "APP-FRD-Q0123-02-c3-Q0123",
+    "vfrd_id": "FRD-Q0123-02-c3",
+    "qid": "Q0123",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0123-02-c3-Q0123"
+  },
+  {
+    "app_id": "APP-FRD-Q0125-01-Q0125",
+    "vfrd_id": "FRD-Q0125-01",
+    "qid": "Q0125",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0125-01-Q0125"
+  },
+  {
+    "app_id": "APP-FRD-Q0126-01-Q0126",
+    "vfrd_id": "FRD-Q0126-01",
+    "qid": "Q0126",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0126-01-Q0126"
+  },
+  {
+    "app_id": "APP-FRD-Q0126-02-Q0126",
+    "vfrd_id": "FRD-Q0126-02",
+    "qid": "Q0126",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0126-02-Q0126"
+  },
+  {
+    "app_id": "APP-FRD-Q0130-02-Q0130",
+    "vfrd_id": "FRD-Q0130-02",
+    "qid": "Q0130",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0130-02-Q0130"
+  },
+  {
+    "app_id": "APP-FRD-Q0130-03-Q0130",
+    "vfrd_id": "FRD-Q0130-03",
+    "qid": "Q0130",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0130-03-Q0130"
+  },
+  {
+    "app_id": "APP-FRD-Q0131-02-c1-Q0131",
+    "vfrd_id": "FRD-Q0131-02-c1",
+    "qid": "Q0131",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0131-02-c1-Q0131"
+  },
+  {
+    "app_id": "APP-FRD-Q0131-02-c2-Q0131",
+    "vfrd_id": "FRD-Q0131-02-c2",
+    "qid": "Q0131",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0131-02-c2-Q0131"
+  },
+  {
+    "app_id": "APP-FRD-Q0131-02-c3-Q0131",
+    "vfrd_id": "FRD-Q0131-02-c3",
+    "qid": "Q0131",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0131-02-c3-Q0131"
+  },
+  {
+    "app_id": "APP-FRD-Q0131-02-c4-Q0131",
+    "vfrd_id": "FRD-Q0131-02-c4",
+    "qid": "Q0131",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0131-02-c4-Q0131"
+  },
+  {
+    "app_id": "APP-FRD-Q0131-03-Q0131",
+    "vfrd_id": "FRD-Q0131-03",
+    "qid": "Q0131",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0131-03-Q0131"
+  },
+  {
+    "app_id": "APP-FRD-Q0131-03-c1-Q0131",
+    "vfrd_id": "FRD-Q0131-03-c1",
+    "qid": "Q0131",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0131-03-c1-Q0131"
+  },
+  {
+    "app_id": "APP-FRD-Q0131-03-c2-Q0131",
+    "vfrd_id": "FRD-Q0131-03-c2",
+    "qid": "Q0131",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0131-03-c2-Q0131"
+  },
+  {
+    "app_id": "APP-FRD-Q0131-03-c3-Q0131",
+    "vfrd_id": "FRD-Q0131-03-c3",
+    "qid": "Q0131",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0131-03-c3-Q0131"
+  },
+  {
+    "app_id": "APP-FRD-Q0131-03-c4-Q0131",
+    "vfrd_id": "FRD-Q0131-03-c4",
+    "qid": "Q0131",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0131-03-c4-Q0131"
+  },
+  {
+    "app_id": "APP-FRD-Q0131-04-Q0131",
+    "vfrd_id": "FRD-Q0131-04",
+    "qid": "Q0131",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0131-04-Q0131"
+  },
+  {
+    "app_id": "APP-FRD-Q0131-04-c1-Q0131",
+    "vfrd_id": "FRD-Q0131-04-c1",
+    "qid": "Q0131",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0131-04-c1-Q0131"
+  },
+  {
+    "app_id": "APP-FRD-Q0131-04-c2-Q0131",
+    "vfrd_id": "FRD-Q0131-04-c2",
+    "qid": "Q0131",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0131-04-c2-Q0131"
+  },
+  {
+    "app_id": "APP-FRD-Q0131-04-c3-Q0131",
+    "vfrd_id": "FRD-Q0131-04-c3",
+    "qid": "Q0131",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0131-04-c3-Q0131"
+  },
+  {
+    "app_id": "APP-FRD-Q0133-03-c1-Q0133",
+    "vfrd_id": "FRD-Q0133-03-c1",
+    "qid": "Q0133",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0133-03-c1-Q0133"
+  },
+  {
+    "app_id": "APP-FRD-Q0133-03-c2-Q0133",
+    "vfrd_id": "FRD-Q0133-03-c2",
+    "qid": "Q0133",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0133-03-c2-Q0133"
+  },
+  {
+    "app_id": "APP-FRD-Q0133-03-c3-Q0133",
+    "vfrd_id": "FRD-Q0133-03-c3",
+    "qid": "Q0133",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0133-03-c3-Q0133"
+  },
+  {
+    "app_id": "APP-FRD-Q0133-03-c4-Q0133",
+    "vfrd_id": "FRD-Q0133-03-c4",
+    "qid": "Q0133",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0133-03-c4-Q0133"
+  },
+  {
+    "app_id": "APP-FRD-Q0134-01-c4-Q0134",
+    "vfrd_id": "FRD-Q0134-01-c4",
+    "qid": "Q0134",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0134-01-c4-Q0134"
+  },
+  {
+    "app_id": "APP-FRD-Q0134-01-c5-Q0134",
+    "vfrd_id": "FRD-Q0134-01-c5",
+    "qid": "Q0134",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0134-01-c5-Q0134"
+  },
+  {
+    "app_id": "APP-FRD-Q0134-02-c5-Q0134",
+    "vfrd_id": "FRD-Q0134-02-c5",
+    "qid": "Q0134",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0134-02-c5-Q0134"
+  },
+  {
+    "app_id": "APP-FRD-Q0134-03-Q0134",
+    "vfrd_id": "FRD-Q0134-03",
+    "qid": "Q0134",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0134-03-Q0134"
+  },
+  {
+    "app_id": "APP-FRD-Q0136-01-Q0136",
+    "vfrd_id": "FRD-Q0136-01",
+    "qid": "Q0136",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0136-01-Q0136"
+  },
+  {
+    "app_id": "APP-FRD-Q0137-03-Q0137",
+    "vfrd_id": "FRD-Q0137-03",
+    "qid": "Q0137",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0137-03-Q0137"
+  },
+  {
+    "app_id": "APP-FRD-Q0138-02-Q0138",
+    "vfrd_id": "FRD-Q0138-02",
+    "qid": "Q0138",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0138-02-Q0138"
+  },
+  {
+    "app_id": "APP-FRD-Q0138-04-Q0138",
+    "vfrd_id": "FRD-Q0138-04",
+    "qid": "Q0138",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0138-04-Q0138"
+  },
+  {
+    "app_id": "APP-FRD-Q0139-02-Q0139",
+    "vfrd_id": "FRD-Q0139-02",
+    "qid": "Q0139",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0139-02-Q0139"
+  },
+  {
+    "app_id": "APP-FRD-Q0139-03-Q0139",
+    "vfrd_id": "FRD-Q0139-03",
+    "qid": "Q0139",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0139-03-Q0139"
+  },
+  {
+    "app_id": "APP-FRD-Q0140-03-c3-Q0140",
+    "vfrd_id": "FRD-Q0140-03-c3",
+    "qid": "Q0140",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0140-03-c3-Q0140"
+  },
+  {
+    "app_id": "APP-FRD-Q0143-02-Q0143",
+    "vfrd_id": "FRD-Q0143-02",
+    "qid": "Q0143",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0143-02-Q0143"
+  },
+  {
+    "app_id": "APP-FRD-Q0144-01-c2-Q0144",
+    "vfrd_id": "FRD-Q0144-01-c2",
+    "qid": "Q0144",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0144-01-c2-Q0144"
+  },
+  {
+    "app_id": "APP-FRD-Q0144-01-c3-Q0144",
+    "vfrd_id": "FRD-Q0144-01-c3",
+    "qid": "Q0144",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0144-01-c3-Q0144"
+  },
+  {
+    "app_id": "APP-FRD-Q0144-03-c5-Q0144",
+    "vfrd_id": "FRD-Q0144-03-c5",
+    "qid": "Q0144",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0144-03-c5-Q0144"
+  },
+  {
+    "app_id": "APP-FRD-Q0145-02-Q0145",
+    "vfrd_id": "FRD-Q0145-02",
+    "qid": "Q0145",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0145-02-Q0145"
+  },
+  {
+    "app_id": "APP-FRD-Q0145-03-Q0145",
+    "vfrd_id": "FRD-Q0145-03",
+    "qid": "Q0145",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0145-03-Q0145"
+  },
+  {
+    "app_id": "APP-FRD-Q0147-01-c1-Q0147",
+    "vfrd_id": "FRD-Q0147-01-c1",
+    "qid": "Q0147",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0147-01-c1-Q0147"
+  },
+  {
+    "app_id": "APP-FRD-Q0147-01-c4-Q0147",
+    "vfrd_id": "FRD-Q0147-01-c4",
+    "qid": "Q0147",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0147-01-c4-Q0147"
+  },
+  {
+    "app_id": "APP-FRD-Q0147-01-c5-Q0147",
+    "vfrd_id": "FRD-Q0147-01-c5",
+    "qid": "Q0147",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0147-01-c5-Q0147"
+  },
+  {
+    "app_id": "APP-FRD-Q0148-01-c1-Q0148",
+    "vfrd_id": "FRD-Q0148-01-c1",
+    "qid": "Q0148",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0148-01-c1-Q0148"
+  },
+  {
+    "app_id": "APP-FRD-Q0148-01-c2-Q0148",
+    "vfrd_id": "FRD-Q0148-01-c2",
+    "qid": "Q0148",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0148-01-c2-Q0148"
+  },
+  {
+    "app_id": "APP-FRD-Q0148-01-c4-Q0148",
+    "vfrd_id": "FRD-Q0148-01-c4",
+    "qid": "Q0148",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0148-01-c4-Q0148"
+  },
+  {
+    "app_id": "APP-FRD-Q0148-02-c2-Q0148",
+    "vfrd_id": "FRD-Q0148-02-c2",
+    "qid": "Q0148",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0148-02-c2-Q0148"
+  },
+  {
+    "app_id": "APP-FRD-Q0148-02-c4-Q0148",
+    "vfrd_id": "FRD-Q0148-02-c4",
+    "qid": "Q0148",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0148-02-c4-Q0148"
+  },
+  {
+    "app_id": "APP-FRD-Q0148-04-Q0148",
+    "vfrd_id": "FRD-Q0148-04",
+    "qid": "Q0148",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0148-04-Q0148"
+  },
+  {
+    "app_id": "APP-FRD-Q0149-01-Q0149",
+    "vfrd_id": "FRD-Q0149-01",
+    "qid": "Q0149",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0149-01-Q0149"
+  },
+  {
+    "app_id": "APP-FRD-Q0149-02-Q0149",
+    "vfrd_id": "FRD-Q0149-02",
+    "qid": "Q0149",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0149-02-Q0149"
+  },
+  {
+    "app_id": "APP-FRD-Q0149-04-c1-Q0149",
+    "vfrd_id": "FRD-Q0149-04-c1",
+    "qid": "Q0149",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0149-04-c1-Q0149"
+  },
+  {
+    "app_id": "APP-FRD-Q0149-04-c2-Q0149",
+    "vfrd_id": "FRD-Q0149-04-c2",
+    "qid": "Q0149",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0149-04-c2-Q0149"
+  },
+  {
+    "app_id": "APP-FRD-Q0149-04-c3-Q0149",
+    "vfrd_id": "FRD-Q0149-04-c3",
+    "qid": "Q0149",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0149-04-c3-Q0149"
+  },
+  {
+    "app_id": "APP-FRD-Q0149-04-c4-Q0149",
+    "vfrd_id": "FRD-Q0149-04-c4",
+    "qid": "Q0149",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0149-04-c4-Q0149"
+  },
+  {
+    "app_id": "APP-FRD-Q0150-04-yangetal19-c1-Q0150",
+    "vfrd_id": "FRD-Q0150-04-yangetal19-c1",
+    "qid": "Q0150",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0150-04-yangetal19-c1-Q0150"
+  },
+  {
+    "app_id": "APP-FRD-Q0150-04-yangetal19-c2-Q0150",
+    "vfrd_id": "FRD-Q0150-04-yangetal19-c2",
+    "qid": "Q0150",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0150-04-yangetal19-c2-Q0150"
+  },
+  {
+    "app_id": "APP-FRD-Q0151-02-c1-Q0151",
+    "vfrd_id": "FRD-Q0151-02-c1",
+    "qid": "Q0151",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0151-02-c1-Q0151"
+  },
+  {
+    "app_id": "APP-FRD-Q0151-02-c2-Q0151",
+    "vfrd_id": "FRD-Q0151-02-c2",
+    "qid": "Q0151",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0151-02-c2-Q0151"
+  },
+  {
+    "app_id": "APP-FRD-Q0151-02-c3-Q0151",
+    "vfrd_id": "FRD-Q0151-02-c3",
+    "qid": "Q0151",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0151-02-c3-Q0151"
+  },
+  {
+    "app_id": "APP-FRD-Q0151-02-c5-Q0151",
+    "vfrd_id": "FRD-Q0151-02-c5",
+    "qid": "Q0151",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0151-02-c5-Q0151"
+  },
+  {
+    "app_id": "APP-FRD-Q0151-02-c6-Q0151",
+    "vfrd_id": "FRD-Q0151-02-c6",
+    "qid": "Q0151",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0151-02-c6-Q0151"
+  },
+  {
+    "app_id": "APP-FRD-Q0151-02-c7-Q0151",
+    "vfrd_id": "FRD-Q0151-02-c7",
+    "qid": "Q0151",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0151-02-c7-Q0151"
+  },
+  {
+    "app_id": "APP-FRD-Q0152-01-Q0152",
+    "vfrd_id": "FRD-Q0152-01",
+    "qid": "Q0152",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0152-01-Q0152"
+  },
+  {
+    "app_id": "APP-FRD-Q0152-02-c1-Q0152",
+    "vfrd_id": "FRD-Q0152-02-c1",
+    "qid": "Q0152",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0152-02-c1-Q0152"
+  },
+  {
+    "app_id": "APP-FRD-Q0152-02-c2-Q0152",
+    "vfrd_id": "FRD-Q0152-02-c2",
+    "qid": "Q0152",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0152-02-c2-Q0152"
+  },
+  {
+    "app_id": "APP-FRD-Q0152-02-c3-Q0152",
+    "vfrd_id": "FRD-Q0152-02-c3",
+    "qid": "Q0152",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0152-02-c3-Q0152"
+  },
+  {
+    "app_id": "APP-FRD-Q0153-03-Comparison-c1-Q0153",
+    "vfrd_id": "FRD-Q0153-03-Comparison-c1",
+    "qid": "Q0153",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0153-03-Comparison-c1-Q0153"
+  },
+  {
+    "app_id": "APP-FRD-Q0153-03-Comparison-c2-Q0153",
+    "vfrd_id": "FRD-Q0153-03-Comparison-c2",
+    "qid": "Q0153",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0153-03-Comparison-c2-Q0153"
+  },
+  {
+    "app_id": "APP-FRD-Q0153-03-Comparison-c3-Q0153",
+    "vfrd_id": "FRD-Q0153-03-Comparison-c3",
+    "qid": "Q0153",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0153-03-Comparison-c3-Q0153"
+  },
+  {
+    "app_id": "APP-FRD-Q0153-03-Comparison-c4-Q0153",
+    "vfrd_id": "FRD-Q0153-03-Comparison-c4",
+    "qid": "Q0153",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0153-03-Comparison-c4-Q0153"
+  },
+  {
+    "app_id": "APP-FRD-Q0154-02-Q0154",
+    "vfrd_id": "FRD-Q0154-02",
+    "qid": "Q0154",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0154-02-Q0154"
+  },
+  {
+    "app_id": "APP-FRD-Q0155-03-Q0155",
+    "vfrd_id": "FRD-Q0155-03",
+    "qid": "Q0155",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0155-03-Q0155"
+  },
+  {
+    "app_id": "APP-FRD-Q0156-03-c1-Q0156",
+    "vfrd_id": "FRD-Q0156-03-c1",
+    "qid": "Q0156",
+    "kind": "origin",
+    "witness_id": "W-FRD-Q0156-03-c1-Q0156"
+  }
+]

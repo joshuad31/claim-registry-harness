@@ -1,0 +1,314 @@
+{
+  "corpus": {
+    "status": "done",
+    "updated": "2026-11-09T21:32:14+00:00",
+    "started": "2026-11-09T21:32:11+00:00",
+    "summary": {
+      "manifest_id": "MANIFEST-50cb0885852d",
+      "files": 111,
+      "bytes": 4923230,
+      "chunks": 3335,
+      "flagged_sources": [
+        "hall2018.pdf.md",
+        "life-15-00613.pdf.md",
+        "s00210-025-03845-1.pdf.md",
+        "vanreijn-baggen2022.pdf.md"
+      ]
+    }
+  },
+  "index": {
+    "status": "done",
+    "updated": "2026-11-09T21:32:14+00:00",
+    "started": "2026-11-09T21:32:14+00:00",
+    "summary": {
+      "index": "supplied",
+      "path": "C:\\Users\\joshu\\Desktop\\FINAL SPECIFICATION DOCUMENTS\\Claude output\\quests\\PTX-NLM-2026-11-09\\project-model\\01_FRAME\\index.md"
+    }
+  },
+  "archivist_prompt": {
+    "status": "done",
+    "updated": "2026-11-09T21:32:14+00:00",
+    "started": "2026-11-09T21:32:14+00:00",
+    "summary": {
+      "archivist_prompt": "supplied"
+    }
+  },
+  "frame": {
+    "status": "done",
+    "updated": "2026-11-09T21:32:14+00:00",
+    "started": "2026-11-09T21:32:14+00:00",
+    "summary": {
+      "axes": 2,
+      "hypotheses": 6,
+      "decisive_tests": 11,
+      "gauge": 64,
+      "approval": {
+        "A1": "APPROVED",
+        "A2": "TEST_ONLY"
+      }
+    }
+  },
+  "quest": {
+    "status": "imported",
+    "updated": "2026-11-09T21:32:26+00:00",
+    "summary": {
+      "questions": 156,
+      "usable": 154,
+      "candidates_tool_output": 0,
+      "attempts": 157,
+      "repairs_selected": {
+        "Q0033": "A02"
+      },
+      "packets": 0,
+      "layout": "driver",
+      "stop": "OPERATIONAL_STOP (imported)",
+      "source": "C:\\Users\\joshu\\Desktop\\FINAL SPECIFICATION DOCUMENTS\\Claude output\\quests\\PTX-NLM-2026-11-09"
+    }
+  },
+  "units": {
+    "status": "done",
+    "updated": "2026-11-09T21:33:09+00:00",
+    "started": "2026-11-09T21:32:46+00:00",
+    "summary": {
+      "units": 60,
+      "active": 54,
+      "unanchored": 0,
+      "by_hypothesis": {
+        "A1-H1": {
+          "REQUIRED_SUPPORT": 4,
+          "CONTEXTUAL_CONSTRAINT": 2,
+          "ADVERSE_TEST": 1,
+          "CORROBORATING_EXPECTATION": 1,
+          "EVALUATIVE_JUDGMENT": 1
+        },
+        "A1-H2": {
+          "REQUIRED_SUPPORT": 5,
+          "CONTEXTUAL_CONSTRAINT": 2,
+          "ADVERSE_TEST": 1,
+          "CORROBORATING_EXPECTATION": 1,
+          "EVALUATIVE_JUDGMENT": 1
+        },
+        "A1-H3": {
+          "REQUIRED_SUPPORT": 4,
+          "CONTEXTUAL_CONSTRAINT": 1,
+          "ADVERSE_TEST": 1,
+          "CORROBORATING_EXPECTATION": 1,
+          "EVALUATIVE_JUDGMENT": 1
+        },
+        "A2-H1": {
+          "REQUIRED_SUPPORT": 3,
+          "CONTEXTUAL_CONSTRAINT": 2,
+          "ADVERSE_TEST": 1,
+          "CORROBORATING_EXPECTATION": 1,
+          "EVALUATIVE_JUDGMENT": 1
+        },
+        "A2-H2": {
+          "REQUIRED_SUPPORT": 6,
+          "CONTEXTUAL_CONSTRAINT": 2,
+          "ADVERSE_TEST": 3,
+          "CORROBORATING_EXPECTATION": 3,
+          "EVALUATIVE_JUDGMENT": 1
+        },
+        "A2-H3": {
+          "REQUIRED_SUPPORT": 5,
+          "CONTEXTUAL_CONSTRAINT": 2,
+          "ADVERSE_TEST": 1,
+          "CORROBORATING_EXPECTATION": 1,
+          "EVALUATIVE_JUDGMENT": 1
+        }
+      }
+    }
+  },
+  "frd_generate": {
+    "status": "done",
+    "updated": "2026-11-09T21:40:26+00:00",
+    "started": "2026-11-09T21:33:09+00:00",
+    "summary": {
+      "responses": 154,
+      "candidates": 558,
+      "over_limit": 0
+    }
+  },
+  "frd_validate": {
+    "status": "done",
+    "updated": "2026-11-09T22:00:29+00:00",
+    "started": "2026-11-09T21:40:26+00:00",
+    "summary": {
+      "candidates": 558,
+      "validations": 1374,
+      "ready": 655,
+      "quote_unverified": 570
+    }
+  },
+  "frd_retain": {
+    "status": "done",
+    "updated": "2026-11-09T22:00:55+00:00",
+    "started": "2026-11-09T22:00:44+00:00",
+    "summary": {
+      "ready": 655,
+      "retained": 527,
+      "archived": 130,
+      "within_budget": false,
+      "budget_pct": 18.94
+    }
+  },
+  "language": {
+    "status": "done",
+    "updated": "2026-11-09T22:00:55+00:00",
+    "started": "2026-11-09T22:00:55+00:00",
+    "summary": {
+      "mode": "off"
+    }
+  },
+  "witnesses": {
+    "status": "done",
+    "updated": "2026-11-09T22:20:27+00:00",
+    "started": "2026-11-09T22:00:55+00:00",
+    "summary": {
+      "applications": 527,
+      "released": 114,
+      "held": 413,
+      "ceiling_exceptions": 0,
+      "audit_pass_first_round": 69,
+      "time": "2026-11-09T22:20:27+00:00"
+    }
+  },
+  "transcode": {
+    "status": "done",
+    "updated": "2026-11-09T22:20:27+00:00",
+    "started": "2026-11-09T22:20:27+00:00",
+    "summary": {
+      "mode": "off",
+      "items": 168
+    }
+  },
+  "qualify": {
+    "status": "done",
+    "updated": "2026-11-09T22:20:47+00:00",
+    "started": "2026-11-09T22:20:27+00:00",
+    "summary": {
+      "fixtures": 22,
+      "pass_a_correct": 22,
+      "pass_b_correct": 22,
+      "unqualified_patterns": []
+    }
+  },
+  "match": {
+    "status": "done",
+    "updated": "2026-11-09T22:29:15+00:00",
+    "started": "2026-11-09T22:20:47+00:00",
+    "summary": {
+      "units": 54,
+      "witnesses": 110,
+      "pairs_assessed": 1380,
+      "pairs_not_assessed_prefilter": 4560,
+      "exhaustive": false,
+      "agreed": 559,
+      "model_adjudicated": 727,
+      "disputed_abstain": 0,
+      "missing_both_passes": 94,
+      "one_pass_only": 0,
+      "complete_relations": 0,
+      "contradictions": 0,
+      "text_mode": "off",
+      "review_pairs": 727,
+      "human_decisions": 0
+    }
+  },
+  "joint": {
+    "status": "done",
+    "updated": "2026-11-09T22:29:18+00:00",
+    "started": "2026-11-09T22:29:15+00:00",
+    "summary": {
+      "joint_proposed": 0,
+      "joint_approved": 0,
+      "incompat_pairs_checked": 0,
+      "incompat_approved": 0
+    }
+  },
+  "coverage": {
+    "status": "done",
+    "updated": "2026-11-09T22:29:18+00:00",
+    "started": "2026-11-09T22:29:18+00:00",
+    "summary": {
+      "A1-H1": {
+        "status": "NO_COMPLETE_COVERAGE",
+        "sets": 0,
+        "search": "NOT_RUN",
+        "covered_units": "0/4"
+      },
+      "A1-H2": {
+        "status": "NO_COMPLETE_COVERAGE",
+        "sets": 0,
+        "search": "NOT_RUN",
+        "covered_units": "0/5"
+      },
+      "A1-H3": {
+        "status": "NO_COMPLETE_COVERAGE",
+        "sets": 0,
+        "search": "NOT_RUN",
+        "covered_units": "0/4"
+      },
+      "A2-H1": {
+        "status": "NO_COMPLETE_COVERAGE",
+        "sets": 0,
+        "search": "NOT_RUN",
+        "covered_units": "0/3"
+      },
+      "A2-H2": {
+        "status": "NO_COMPLETE_COVERAGE",
+        "sets": 0,
+        "search": "NOT_RUN",
+        "covered_units": "0/6"
+      },
+      "A2-H3": {
+        "status": "NO_COMPLETE_COVERAGE",
+        "sets": 0,
+        "search": "NOT_RUN",
+        "covered_units": "0/5"
+      }
+    }
+  },
+  "crux": {
+    "status": "done",
+    "updated": "2026-11-09T22:29:18+00:00",
+    "started": "2026-11-09T22:29:18+00:00",
+    "summary": {
+      "coverage_recomputed": 0,
+      "crux_candidates": 0,
+      "conflict_recorded": 0,
+      "diagnostic_witnesses": 0,
+      "tests": 0,
+      "unknown_tests": 0
+    }
+  },
+  "assess": {
+    "status": "done",
+    "updated": "2026-11-09T22:30:42+00:00",
+    "started": "2026-11-09T22:29:18+00:00",
+    "summary": {
+      "allocations": {
+        "A1": {
+          "A1-H1": 18,
+          "A1-H2": 14,
+          "A1-H3": 32
+        },
+        "A2": {
+          "A2-H1": 16,
+          "A2-H2": 12,
+          "A2-H3": 36
+        }
+      },
+      "problems": []
+    }
+  },
+  "report": {
+    "status": "done",
+    "updated": "2026-11-09T22:30:49+00:00",
+    "started": "2026-11-09T22:30:42+00:00",
+    "summary": {
+      "report_words": 2124,
+      "crux_candidates": 0
+    }
+  }
+}

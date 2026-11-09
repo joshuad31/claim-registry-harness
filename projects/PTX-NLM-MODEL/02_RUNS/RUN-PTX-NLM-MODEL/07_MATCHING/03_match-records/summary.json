@@ -1,0 +1,15 @@
+{
+  "units": 54,
+  "witnesses": 110,
+  "pairs_assessed": 1380,
+  "pairs_not_assessed_prefilter": 4560,
+  "exhaustive": false,
+  "agreed": 559,
+  "model_adjudicated": 727,
+  "disputed_abstain": 0,
+  "missing_both_passes": 94,
+  "one_pass_only": 0,
+  "complete_relations": 0,
+  "contradictions": 0,
+  "text_mode": "off"
+}
