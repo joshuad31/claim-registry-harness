@@ -13,7 +13,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from claimreg.corpus import find_quote  # noqa: E402
 from claimreg.coverage import Option, Problem, complete, solve  # noqa: E402
 from claimreg.crux import test_t1, test_t2  # noqa: E402
-from claimreg.header import parse_header  # noqa: E402
+from claimreg.header import normalize_hypothesis_ids, parse_header  # noqa: E402
 from claimreg.llm.jsonparse import extract_json  # noqa: E402
 from claimreg.quest import delta_units, evaluate_stop, firewall, render_packet, stop_thresholds  # noqa: E402
 
@@ -200,6 +200,29 @@ class HeaderTest(unittest.TestCase):
         self.assertTrue(h1["falsification"] and h1["corroboration"])
         self.assertEqual(f["axes"][0]["approval"], "APPROVED")
         self.assertEqual(len(f["decisive_tests"]), 2)
+
+    def test_noncanonical_axis_ids_are_normalised(self):
+        # A drafting model may label the axis "AXIS" or "HYP" instead of A1. The harness still parses it:
+        # non-canonical prefixes are rewritten in first-appearance order.
+        text = (FIX / "header.md").read_text(encoding="utf-8").replace("A1-H", "AXIS-H")
+        fixed, mapping = normalize_hypothesis_ids(text)
+        self.assertEqual(mapping, {"AXIS": "A1"})
+        self.assertIn("A1-H1", fixed)
+        self.assertNotIn("AXIS-H1", fixed)
+        f = parse_header(text)
+        self.assertEqual([h["id"] for h in f["axes"][0]["hypotheses"]], ["A1-H1", "A1-H2", "A1-H3"])
+        self.assertEqual(f["axes"][0]["approval"], "APPROVED")
+        # canonical ids are left alone
+        self.assertEqual(normalize_hypothesis_ids("A1-H1 and A2-H3"), ("A1-H1 and A2-H3", {}))
+
+    def test_approval_marker_beats_model_prose(self):
+        text = (FIX / "header.md").read_text(encoding="utf-8").replace(
+            "The analyst reviewed and approved this H1/H2/H3 set on 2026-10-01.",
+            "The drafting model supplied this frame.")
+        self.assertEqual(parse_header(text)["axes"][0]["approval"], "UNKNOWN")
+        marked = text.replace("# Mini investigation",
+                              "# Mini investigation\n\n<!-- APPROVED: Test Reviewer on 2026-11-10 -->", 1)
+        self.assertEqual(parse_header(marked)["axes"][0]["approval"], "APPROVED")
 
 
 class CruxTest(unittest.TestCase):

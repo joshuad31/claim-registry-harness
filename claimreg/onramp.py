@@ -288,7 +288,12 @@ def cmd_frame(a) -> int:
         res = s.llm.call(LLMRequest(role="investigator", system=system, user=user, expect_json=False,
                                     tag="header-draft", max_output_tokens=32000))
         inv, _, coord = res.text.partition("=====COORDINATOR=====")
-        hd.write_text(inv.strip() + "\n", encoding="utf-8")
+        from .header import normalize_hypothesis_ids
+        inv, id_map = normalize_hypothesis_ids(inv.strip() + "\n")
+        if id_map:
+            print("header: normalised axis ids for parsing: "
+                  + ", ".join(f"{k} -> {v}" for k, v in id_map.items()))
+        hd.write_text(inv, encoding="utf-8")
         if coord.strip():
             (frame / "coordinator-handoff-DRAFT.md").write_text(coord.strip() + "\n", encoding="utf-8")
         ok, msg = check_header(inv)
@@ -330,12 +335,21 @@ def cmd_approve(a) -> int:
     if dst.exists() and src.exists() and not a.force and read_text(src) != read_text(dst):
         print(f"{dst} already exists and differs from {src.name}. Use --force to replace it.", file=sys.stderr)
         return 2
-    text = read_text(src if src.exists() else dst)
+    from .header import normalize_hypothesis_ids
+    text, id_map = normalize_hypothesis_ids(read_text(src if src.exists() else dst))
+    if id_map:
+        print("normalised axis ids for parsing: " + ", ".join(f"{k} -> {v}" for k, v in id_map.items()))
     ok, msg = check_header(text)
     print(msg)
     if not ok:
         print("Not approved: fix the draft and run this again.", file=sys.stderr)
         return 2
+    # machine-readable approval marker: the parser trusts this, never a model's prose
+    if not re.search(r"<!--\s*APPROVED[:\s].*?-->", text, re.S | re.I):
+        marker = f"<!-- APPROVED: {a.by} on {utcnow()[:10]} -->"
+        lines = text.splitlines()
+        lines.insert(1 if lines and lines[0].startswith("#") else 0, marker)
+        text = "\n".join(lines) + "\n"
     dst.write_text(text, encoding="utf-8")
     cfg = read_json(proj / "project.json", default={}) or {}
     cfg.setdefault("frame", {})["approval_note"] = f"Header approved by {a.by} on {utcnow()[:10]}."

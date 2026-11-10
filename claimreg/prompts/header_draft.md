@@ -21,4 +21,6 @@ ARCHIVIST>>>
 DEPLOYMENT AND ASSESSMENT SETTINGS:
 run id: {{RUN_ID}}; Archivist: local retrieval database driven by the Claim Registry harness (the harness carries each query and saves exact captures); assessment prompt: ACH_Eval_NLM_Super; evidence contract: notebooklm_only; gauge G = {{GAUGE}}; enabled axes: {{AXES}}; output locations: managed by the harness.
 
+Use canonical identifiers: label the axes A1, A2, ... and each hypothesis `<axis>-H<n>` (A1-H1, A1-H2, ...) in both the summary table and each section heading; the harness parses those IDs.
+
 Return the complete Investigator header (title and sections 1-8), then a line containing only "=====COORDINATOR=====", then the Part III Coordinator handoff.

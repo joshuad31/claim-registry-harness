@@ -22,6 +22,38 @@ from .util import norm_ws, read_json, read_text, sha256_text, utcnow
 
 HID_RE = re.compile(r"\b([A-Z][A-Za-z]?\d+-H\d+)\b")
 
+# A model drafting a header does not always follow the A<n>-H<n> convention: it may label an axis
+# "AXIS" or "HYP", producing "AXIS-H1".  coverage/quest/assess downstream all key on A1-H1..., so
+# non-canonical axis prefixes are rewritten in order of first appearance before parsing.
+# upper-case prefixes only, so ordinary words such as "anti-H2" (a drug class) are never rewritten
+HID_ANY_RE = re.compile(r"\b([A-Z][A-Z0-9]*)-H(\d+)\b")
+CANONICAL_AXIS_RE = re.compile(r"^A\d+$")
+
+
+def normalize_hypothesis_ids(text: str) -> tuple[str, dict[str, str]]:
+    """Rewrite non-canonical axis prefixes (AXIS-H1, HYP-H2, ...) to A1, A2, ... in place.
+
+    Canonical A<n> prefixes are kept and set the numbering base.  Returns the rewritten text and
+    the prefix mapping that was applied (empty when the text was already canonical)."""
+    prefixes: list[str] = []
+    for m in HID_ANY_RE.finditer(text):
+        if m.group(1) not in prefixes:
+            prefixes.append(m.group(1))
+    used = {int(p[1:]) for p in prefixes if CANONICAL_AXIS_RE.match(p)}
+    next_n = (max(used) if used else 0) + 1
+    mapping: dict[str, str] = {}
+    for p in prefixes:
+        if CANONICAL_AXIS_RE.match(p):
+            continue
+        while next_n in used:
+            next_n += 1
+        mapping[p] = f"A{next_n}"
+        used.add(next_n)
+        next_n += 1
+    if not mapping:
+        return text, {}
+    return HID_ANY_RE.sub(lambda m: f"{mapping.get(m.group(1), m.group(1))}-H{m.group(2)}", text), mapping
+
 FRAME_JSON_EXAMPLE = {
     "title": "Investigation title",
     "gauge": 64,
@@ -97,6 +129,7 @@ def _extract_fields(block: str) -> dict:
 
 
 def parse_header(text: str, default_gauge: int = 64) -> dict:
+    text, _id_map = normalize_hypothesis_ids(text)
     secs = _sections(text)
     title = next((h for lvl, h, _, _ in secs if lvl == 1), "Untitled investigation")
     gm = re.search(r"\bG\s*=\s*\**\s*(\d{2,3})", text)
@@ -143,6 +176,9 @@ def parse_header(text: str, default_gauge: int = 64) -> dict:
             nxt = [s2 for _, _, s2, _ in axis_heads if s2 > s]
             end = min(nxt) if nxt else e
             axis_blocks[f"A{n}"] = text[s:end]
+    # a machine-readable approval marker written by `cr approve` beats anything the model wrote:
+    # a drafting model's prose must never be able to claim human approval
+    approved_marker = re.search(r"<!--\s*APPROVED[:\s].*?-->", text, re.S | re.I)
     axes = []
     for a in axis_ids:
         block = axis_blocks.get(a, "")
@@ -156,6 +192,8 @@ def parse_header(text: str, default_gauge: int = 64) -> dict:
         if re.search(r"TEST-ONLY|not been reviewed or approved|must not govern", block, re.I):
             approval = "TEST_ONLY"
         elif re.search(r"\b(reviewed and approved|approved this)\b", block, re.I):
+            approval = "APPROVED"
+        if approved_marker and approval != "TEST_ONLY":
             approval = "APPROVED"
         hyps = []
         for hid in [i for i in ids if i.split("-")[0] == a]:

@@ -49,7 +49,12 @@ class FakeDriver(threading.Thread):
                 for f in sorted(self.queue.glob("Q*.json")):
                     if f.name in self.pushed:
                         continue
-                    j = json.loads(f.read_text(encoding="utf-8"))
+                    # the relay may be writing/replacing queue files at the same time; on Windows a
+                    # transient PermissionError must not kill the stand-in driver thread
+                    try:
+                        j = json.loads(f.read_text(encoding="utf-8"))
+                    except (OSError, ValueError):
+                        continue
                     self.pushed.append(f.name)
                     write_json(self.answers / "driver-state.json", {"pushed": self.pushed})
                     att = j.get("attempt", "A01")

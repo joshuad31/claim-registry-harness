@@ -522,6 +522,10 @@ class Relay:
                 ready = self.ready_to_grade()
                 qs = self.queue_state()
                 stopping = self.stop_event.is_set()
+                if stopping and self._hard_expired():
+                    # a wedged provider or driver must not hold the relay open: close out with what is graded
+                    self.note_error("manager loop: hard deadline reached after stop; closing with rounds graded so far")
+                    return
                 idle = not qs["unsent"] and not qs["in_flight"]
                 waited = 0.0
                 if ready:
@@ -550,6 +554,10 @@ class Relay:
                 self.note_error(f"manager loop: {type(e).__name__}: {e}")
                 time.sleep(5)
             time.sleep(1.0)
+
+    def _hard_expired(self) -> bool:
+        limit = float(self.cfg["drain_minutes"]) + float(self.cfg.get("hard_stop_minutes", 10))
+        return bool(self.stop_at) and time.time() - self.stop_at > 60 * limit
 
     def _drain_expired(self) -> bool:
         return bool(self.stop_at) and time.time() - self.stop_at > 60 * float(self.cfg["drain_minutes"])

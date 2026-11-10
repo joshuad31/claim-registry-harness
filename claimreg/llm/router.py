@@ -16,8 +16,11 @@ reproducibility record required by specification module 20.1.
 
 from __future__ import annotations
 
+import os
 import re
+import sys
 import threading
+import time
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 from typing import Callable
@@ -29,6 +32,73 @@ from .providers import BaseProvider, backoff_sleep, make_provider
 
 JSON_REPAIR = ("Your previous reply could not be parsed as JSON. Reply again with ONLY "
                "the JSON value requested, no prose and no code fence.")
+
+
+def _fmt_secs(s: float) -> str:
+    s = int(max(0, s))
+    return f"{s // 3600}h{(s % 3600) // 60:02d}m" if s >= 3600 else f"{s // 60}m{s % 60:02d}s"
+
+
+class Progress:
+    """A one-line progress bar for a batch of model calls.
+
+    It is drawn on the console, never into a redirected log: on stderr when that is a terminal,
+    otherwise straight to the console device if there is one.  Batches under 4 calls draw nothing.
+    Set CR_NO_PROGRESS=1 to turn it off."""
+
+    def __init__(self, label: str, total: int, min_total: int = 4):
+        self.label, self.total, self.done = label, total, 0
+        self.t0 = self.last = time.time()
+        self.lock = threading.Lock()
+        self.out, self.own = None, False
+        if total < min_total or os.environ.get("CR_NO_PROGRESS") or "unittest" in sys.modules:
+            return
+        try:
+            if sys.stderr and sys.stderr.isatty():
+                self.out = sys.stderr
+            else:
+                self.out = open("CONOUT$" if os.name == "nt" else "/dev/tty", "w", encoding="utf-8",
+                                errors="replace")
+                self.own = True
+        except Exception:  # noqa: BLE001 - no console: run silently
+            self.out = None
+        self._draw()
+
+    def _draw(self) -> None:
+        if not self.out:
+            return
+        el = time.time() - self.t0
+        frac = self.done / self.total if self.total else 1.0
+        left = f", about {_fmt_secs(el / self.done * (self.total - self.done))} left" if 0 < self.done < self.total else ""
+        fill = int(30 * frac)
+        line = (f"\r  {self.label[:22]:<22} [{'#' * fill}{'.' * (30 - fill)}] {self.done}/{self.total} "
+                f"{int(100 * frac):3d}%  {_fmt_secs(el)} elapsed{left}")
+        try:
+            self.out.write(line.ljust(100)[:118])
+            self.out.flush()
+        except Exception:  # noqa: BLE001
+            self.out = None
+
+    def step(self) -> None:
+        with self.lock:
+            self.done += 1
+            if self.done >= self.total or time.time() - self.last >= 0.5:
+                self.last = time.time()
+                self._draw()
+
+    def close(self) -> None:
+        with self.lock:
+            if not self.out:
+                return
+            self._draw()
+            try:
+                self.out.write("\n")
+                self.out.flush()
+                if self.own:
+                    self.out.close()
+            except Exception:  # noqa: BLE001
+                pass
+            self.out = None
 
 
 class LLM:
@@ -405,8 +475,20 @@ class LLM:
         if live_idx:
             conc = max(1, int(self.cfg.get("budget", {}).get("concurrency", 4)))
             errors: list[Exception] = []
-            with ThreadPoolExecutor(max_workers=conc) as ex:
-                list(ex.map(lambda i: run_one(i, errors), live_idx))
+            label = (reqs[live_idx[0]].tag or "").split(":")[0] or reqs[live_idx[0]].role
+            bar = Progress(label, len(live_idx))
+
+            def run_live(i: int) -> None:
+                try:
+                    run_one(i, errors)
+                finally:
+                    bar.step()
+
+            try:
+                with ThreadPoolExecutor(max_workers=conc) as ex:
+                    list(ex.map(run_live, live_idx))
+            finally:
+                bar.close()
             hard = [e for e in errors if isinstance(e, BudgetExceeded)]
             if hard:
                 raise hard[0]
