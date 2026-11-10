@@ -109,6 +109,7 @@ def _load_all(ctx) -> dict:
     d["questions"] = {q["qid"]: q for q in (ctx.load("discovery", "01_issued-questions/questions.json", default=[]) or [])}
     d["responses"] = {r["qid"]: r for r in (ctx.load("discovery", "02_query-responses/responses.json", default=[]) or [])}
     d["coverage"] = (ctx.load("coverage", "coverage.json", default={}) or {}).get("hypotheses", {})
+    d["ledger"] = ctx.load("coverage", "premise-ledger.json", default={}) or {}
     d["crux"] = ctx.load("crux", "05_candidates/crux-candidates.json", default={}) or {}
     d["tests"] = ctx.load("crux", "03_portability-tests/tests.json", default=[]) or []
     from .matching import relations_index
@@ -369,6 +370,43 @@ def build_report(ctx, metrics: dict, summary_text: str | None, stamp: bool = Tru
                                        f"{len(c.get('sets', []))} sets)" for h, c in d["coverage"].items()) + " |",
           f"| Crux | {len(d['crux'].get('candidates', []))} candidates; "
           f"{len(d['crux'].get('diagnostic_witnesses', []))} diagnostic witnesses (extended review) |", ""]
+    # premise ledger: where each required part stands
+    led = d.get("ledger", {}).get("hypotheses", {})
+    if led:
+        name = {"ESTABLISHED": "established", "CONTESTED": "contested", "SUPPORTED_WITH_ASSUMPTION":
+                "supported if a transfer is granted", "PARTIAL_ONLY": "partly supported",
+                "CONTRADICTED": "contradicted", "UNADDRESSED": "not addressed"}
+        L += ["## What each hypothesis rests on", "",
+              "Each hypothesis is broken into required parts that one published finding could establish. "
+              "`08_COVERAGE/PREMISE-LEDGER.md` lists every part with its witnesses; this is the short form.", ""]
+        for ax in frame["axes"]:
+            for h in ax["hypotheses"]:
+                rows = [r for r in led.get(h["id"], []) if r["type"] == "REQUIRED_SUPPORT"]
+                cov = d["coverage"].get(h["id"], {})
+                if not rows:
+                    L.append(f"- **{h['id']}** - no finding-sized requirement"
+                             + (": a judgment about the state of the evidence, which stands to the extent its "
+                                "rivals' parts stay open." if cov.get("residual") else "."))
+                    continue
+                counts = {}
+                for r in rows:
+                    counts[r["status"]] = counts.get(r["status"], 0) + 1
+                L.append(f"- **{h['id']}** - {cov.get('status', 'n/a').replace('_', ' ').lower()}: "
+                         + ", ".join(f"{n} {name[s]}" for s, n in counts.items()))
+                for r in rows:
+                    if r["status"] == "ESTABLISHED":
+                        continue
+                    extra = ""
+                    if r["status"] == "CONTESTED":
+                        extra = (f" (for: {', '.join('`' + w + '`' for w in r['established_by'][:2])}; "
+                                 f"against: {', '.join('`' + w + '`' for w in r['contradicted_by'][:2])})")
+                    elif r["status"] == "SUPPORTED_WITH_ASSUMPTION" and r["assumed_from"]:
+                        a = r["assumed_from"][0]
+                        extra = f" (`{a['witness_id']}`, if: {truncate_words(a['assumption'], 22)})"
+                    elif r["status"] == "CONTRADICTED":
+                        extra = f" (against: {', '.join('`' + w + '`' for w in r['contradicted_by'][:2])})"
+                    L.append(f"  - {name[r['status']]} `{r['unit_id']}`: {truncate_words(r['text'], 28)}{extra}")
+        L.append("")
     # crux candidates
     L += ["## Crux candidates", ""]
     cands = d["crux"].get("candidates", [])
@@ -378,7 +416,9 @@ def build_report(ctx, metrics: dict, summary_text: str | None, stamp: bool = Tru
               "hypotheses reached complete coverage and which required parts remain uncovered.", ""]
     for c in cands[:12]:
         w = d["witnesses"].get(c["witness_id"], {})
-        L += [f"### {c['witness_id']} — home {c['home']}, defeats {', '.join(c['defeats'])}", "",
+        L += [f"### {c['witness_id']} — home {c['home']}, defeats {', '.join(c['defeats'])}"
+              + (" (home coverage depends on named assumptions)"
+                 if c.get("home_coverage") == "COMPLETE_WITH_ASSUMPTIONS" else ""), "",
               f"> {w.get('text', '')}", ""]
         for r in c["defeats"]:
             t = next((x for x in d["tests"] if x["witness_id"] == c["witness_id"] and x["rival"] == r), None)
@@ -423,6 +463,9 @@ def build_report(ctx, metrics: dict, summary_text: str | None, stamp: bool = Tru
             if c.get("sets"):
                 s = c["sets"][0]
                 L.append(f"  - example set `{s['set_id']}`: " + ", ".join(f"`{w}`" for w in s["witnesses"]))
+                for a in s.get("assumptions", [])[:4]:
+                    L.append(f"    - assumes for `{a['unit_id']}` (from `{a['witness_id']}`): "
+                             f"{truncate_words(a['assumption'], 30)}")
             ev = [u for u in d["units"].values() if u["hypothesis_id"] == h["id"] and u["type"] == "EVALUATIVE_JUDGMENT"]
             if ev:
                 L.append(f"  - evaluative judgments left to the analyst: " +

@@ -1,20 +1,42 @@
-<!-- prompt: units_derive | spec 2.2 internal coverage representation; module 28-29 unit types -->
+<!-- prompt: units_derive | spec 2.2 internal coverage representation; module 28-29 unit types | v2: finding-sized premises -->
 ## SYSTEM
-You derive the internal coverage representation of ONE frozen, human-approved hypothesis for semantic matching. The human-written hypothesis remains the controlling statement. You may clarify and tag what the human wrote, but you may not introduce a new factual commitment, weaken or strengthen it, or rewrite the hypothesis.
+You derive the internal coverage representation of ONE frozen, human-approved hypothesis for semantic matching. The human-written hypothesis remains the controlling statement. You clarify and decompose what the human wrote. You never add a factual commitment the text does not make, and you never weaken or strengthen it.
 
-Unit types:
-- REQUIRED_SUPPORT - a part of the written hypothesis that must receive affirmative witness coverage before the hypothesis has complete coverage. Phrase each so that a source-attributed empirical finding (a witness) could establish it: a capability or possibility claim ("X can do Y at Z") is established by a reported instance meeting its stated scope. Keep the hypothesis's own scope words (population, exposure, tissue, timing) in the unit.
-- CONTEXTUAL_CONSTRAINT - an assumption, antecedent condition, boundary or qualification that every coverage set must continue to satisfy (a selected witness must not contradict it).
-- ADVERSE_TEST - a recorded finding that would count against or falsify the hypothesis (from its potential-falsification context). Visible, not mandatory.
-- CORROBORATING_EXPECTATION - a finding the hypothesis leads the analyst to expect (from its potential-corroboration context). Visible, not mandatory.
-- EVALUATIVE_JUDGMENT - a holistic judgment about the evidence base as a whole (for example "the evidence is sufficient to design a trial", "the evidence cannot distinguish A from B", "uncertainty is localized") that no single source finding or small group of findings could establish. Record it so it stays visible; it is assessed by the analyst and the final assessment, not by witness matching. Do not use this type to avoid hard empirical requirements: if a judgment decomposes into empirical requirements that the header itself defines, write those as REQUIRED_SUPPORT units and cite the header passage that defines them.
+WHAT A UNIT IS FOR. Later, short witness statements are compared with each unit, one pair at a time. A witness is a faithful compression of ONE published finding from ONE source, at most 60 words. A REQUIRED_SUPPORT unit counts as covered only when a single witness, accepted as written, makes the unit true. So every REQUIRED_SUPPORT unit must be FINDING-SIZED: one empirical proposition that one published finding could establish.
 
-Rules:
-1. Every unit carries "source_quote": an EXACT, contiguous quotation (at least 6 words) from the hypothesis text or the header passages supplied below, copied character-for-character. It is checked mechanically.
-2. Atomic: one requirement per unit. Typically 3-8 REQUIRED_SUPPORT units, 1-4 CONTEXTUAL_CONSTRAINT units, and the ADVERSE_TEST and CORROBORATING_EXPECTATION units the text actually states. Do not pad.
-3. "evidence_terms": 5-15 words or short phrases a satisfying source finding would likely contain (used only to shortlist candidates for matching; never used to decide a match).
-4. "satisfied_by": one sentence describing what kind of source-attributed finding would establish (or for ADVERSE_TEST, realize) the unit.
-5. Never instruct anyone to think in units; this is an internal representation only.
+FINDING-SIZED VERSUS VERDICT-SIZED.
+- Verdict-sized: a statement about the evidence base as a whole, or about what it justifies. "The available evidence supports a coherent explanation." "The supported premises are sufficient to specify the trial." "Affirmative evidence demonstrates a mismatch that defeats the rationale." "The uncertainty is localized." No single finding can establish a verdict, so a verdict is never a REQUIRED_SUPPORT unit.
+- Finding-sized: what the world must be like for the verdict to hold. "Drug X reaches tissue T at doses used clinically." "Drug X increases contractile force in an animal model of condition C." "In patients with C, adding X to standard care improved measure M."
+
+HOW TO DECOMPOSE. A hypothesis sentence is usually a verdict resting on several premises. For each sentence of the hypothesis statement:
+1. Ask which separate empirical facts must be true for the sentence to hold. The hypothesis's own assumptions and the header's decisive-test questions (supplied below) name the links the human cares about, for example exposure, target, functional effect, timing, transfer between models, attribution, and who responds. Use them.
+2. Write one REQUIRED_SUPPORT unit per necessary fact, as a plain declarative proposition. State its scope inside the unit: the agent, the effect, and the population, species, model, tissue or exposure level that the hypothesis's own wording requires. Do not make the scope narrower than the hypothesis needs. When the hypothesis needs only that a capability or mechanism exists ("X can do Y"), write the unit so that one reported instance in a relevant model or in humans establishes it. When the hypothesis needs a fact about its own population, say so in the unit.
+3. When the hypothesis says that any ONE of several findings would do ("a mismatch in exposure, tissue, timing or ..."), write ONE unit that names the alternatives: "At least one of the following is reported: (a) ...; (b) ...; (c) ...". Never split alternatives into separate REQUIRED_SUPPORT units. Every REQUIRED_SUPPORT unit must be covered, so splitting would wrongly demand all of them.
+4. Whatever is still verdict-sized after this (sufficiency, coherence, "cannot distinguish", "not determined") is recorded as an EVALUATIVE_JUDGMENT unit. A hypothesis that says only that the evidence is insufficient or unresolved may have no REQUIRED_SUPPORT unit at all. That is correct: record its sentences as EVALUATIVE_JUDGMENT, and put any concrete finding it predicts (for example "no source reports tissue concentrations of X") under CORROBORATING_EXPECTATION.
+
+UNIT TYPES.
+- REQUIRED_SUPPORT - a finding-sized fact that must receive affirmative witness coverage before the hypothesis has complete coverage.
+- CONTEXTUAL_CONSTRAINT - an assumption, boundary or qualification that every coverage set must continue to satisfy. A selected witness must not contradict it. Finding-sized.
+- ADVERSE_TEST - ONE finding-sized result that would count against or falsify the hypothesis (from its potential-falsification text). One result per unit. Visible, not mandatory.
+- CORROBORATING_EXPECTATION - ONE finding-sized result the hypothesis leads the analyst to expect (from its potential-corroboration text). Visible, not mandatory.
+- EVALUATIVE_JUDGMENT - a verdict about the evidence base as a whole. It stays visible and is assessed by the analyst and the final assessment, not by witness matching.
+
+RULES.
+1. Every unit carries "source_quote": an EXACT, contiguous quotation of at least 6 words, copied character for character from the hypothesis text or the header passages below. It is the passage that licenses the unit. Several units may quote the same sentence. The quote is checked mechanically, and a unit whose quote is not found is dropped.
+2. Typical counts: 4-9 REQUIRED_SUPPORT units for an affirmative hypothesis; 1-3 for a hypothesis that needs only a defeating finding; 0 for a purely "unresolved" hypothesis. Also 1-3 CONTEXTUAL_CONSTRAINT, 2-6 ADVERSE_TEST and 2-6 CORROBORATING_EXPECTATION units, when the text states them. No padding and no near-duplicates.
+3. Write each unit in plain words that a reader outside the project understands. Do not mention hypothesis labels (H1, H2), "the rationale", "the evidence", "the premises" or "the trial specification" in a REQUIRED_SUPPORT, CONTEXTUAL_CONSTRAINT, ADVERSE_TEST or CORROBORATING_EXPECTATION unit.
+4. "evidence_terms": 5-15 words or short phrases that a satisfying source finding would likely contain. They are used only to shortlist candidates for matching, never to decide a match.
+5. "satisfied_by": one sentence naming the kind of published finding that would make the unit true, for example "a pharmacokinetic study that measures X in tissue T after clinical dosing".
+6. "serves": a few words naming the hypothesis sentence or decisive test the unit comes from, for example "exposure" or "functional link".
+
+WORKED EXAMPLE (a different domain; follow the method, not the content).
+Hypothesis sentence: "The available engineering evidence supports a coherent explanation for why sealing the deck would meaningfully slow reinforcement corrosion in coastal bridges. Chloride reaches the steel through the deck, and a sealer can block that route at field application rates."
+Wrong: REQUIRED_SUPPORT "The available engineering evidence supports a coherent explanation for why sealing the deck would slow corrosion" (verdict-sized).
+Right:
+- REQUIRED_SUPPORT "In coastal bridge decks, chloride concentration at reinforcement depth reaches the level at which steel corrosion starts." (serves: cause is present)
+- REQUIRED_SUPPORT "A deck sealer applied at a field application rate reduces chloride ingress into concrete, in a laboratory or field test." (serves: the intervention acts on the cause)
+- REQUIRED_SUPPORT "Reducing chloride ingress slows reinforcement corrosion, measured as corrosion rate, section loss or time to cracking." (serves: functional link)
+- EVALUATIVE_JUDGMENT "The available engineering evidence supports a coherent explanation for why sealing the deck would meaningfully slow reinforcement corrosion in coastal bridges."
 
 ## USER
 AXIS {{AXIS_ID}} QUESTION: {{AXIS_QUESTION}}
@@ -31,16 +53,16 @@ HEADER PASSAGES THAT DEFINE TERMS THIS HYPOTHESIS USES (mission / discriminator 
 <<<HEADER_DEFINITIONS
 {{HEADER_DEFINITIONS}}
 HEADER_DEFINITIONS>>>
-
+{{REVISION_NOTE}}
 Return ONLY a JSON object:
 {
   "hypothesis_id": "{{HID}}",
   "units": [
-    {"code": "R1", "type": "REQUIRED_SUPPORT", "text": "", "source_quote": "", "evidence_terms": [""], "satisfied_by": ""},
-    {"code": "C1", "type": "CONTEXTUAL_CONSTRAINT", "text": "", "source_quote": "", "evidence_terms": [""], "satisfied_by": ""},
-    {"code": "A1", "type": "ADVERSE_TEST", "text": "", "source_quote": "", "evidence_terms": [""], "satisfied_by": ""},
-    {"code": "E1", "type": "CORROBORATING_EXPECTATION", "text": "", "source_quote": "", "evidence_terms": [""], "satisfied_by": ""},
-    {"code": "J1", "type": "EVALUATIVE_JUDGMENT", "text": "", "source_quote": "", "evidence_terms": [], "satisfied_by": ""}
+    {"code": "R1", "type": "REQUIRED_SUPPORT", "text": "", "serves": "", "source_quote": "", "evidence_terms": [""], "satisfied_by": ""},
+    {"code": "C1", "type": "CONTEXTUAL_CONSTRAINT", "text": "", "serves": "", "source_quote": "", "evidence_terms": [""], "satisfied_by": ""},
+    {"code": "A1", "type": "ADVERSE_TEST", "text": "", "serves": "", "source_quote": "", "evidence_terms": [""], "satisfied_by": ""},
+    {"code": "E1", "type": "CORROBORATING_EXPECTATION", "text": "", "serves": "", "source_quote": "", "evidence_terms": [""], "satisfied_by": ""},
+    {"code": "J1", "type": "EVALUATIVE_JUDGMENT", "text": "", "serves": "", "source_quote": "", "evidence_terms": [], "satisfied_by": ""}
   ],
   "notes": "anything the analyst should know about this representation"
 }

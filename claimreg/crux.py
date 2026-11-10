@@ -237,6 +237,7 @@ def crux_stage(ctx) -> dict:
                 if defeats:
                     candidates.append({"witness_id": w, "home": home, "axis": axis_of[home],
                                        "defeats": defeats, "crux_strength": len(defeats),
+                                       "home_coverage": cov_all[home].get("status"),
                                        "home_sets": [s["set_id"] for s in cov_all[home]["sets"]
                                                      if w in s["witnesses"]]})
     candidates.sort(key=lambda c: (-c["crux_strength"], c["axis"], c["home"], c["witness_id"]))

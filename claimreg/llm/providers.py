@@ -131,18 +131,25 @@ class OpenAICompatible(BaseProvider):
         started = utcnow()
         data = _post_json(url, body, headers, float(self.cfg.get("timeout_s", 900)))
         try:
-            msg = data["choices"][0]["message"]
+            choice = data["choices"][0]
+            msg = choice["message"]
             text = msg.get("content") or ""
             if isinstance(text, list):
                 text = "".join(p.get("text", "") for p in text if isinstance(p, dict))
+            finish = str(choice.get("finish_reason") or "")
+            if msg.get("refusal"):
+                finish = "refusal"
         except Exception as e:
             raise ProviderError(f"unexpected response shape: {str(data)[:500]}") from e
         u = data.get("usage") or {}
         usage = {"input_tokens": u.get("prompt_tokens", 0),
                  "output_tokens": u.get("completion_tokens", 0)}
+        think = (u.get("completion_tokens_details") or {}).get("reasoning_tokens")
+        if think:
+            usage["reasoning_tokens"] = think
         return LLMResponse(text=text, provider=self.name, model=data.get("model", self.model),
                            usage=usage, cost_usd=self.cost(usage), started=started,
-                           finished=utcnow(), key=key)
+                           finished=utcnow(), key=key, finish_reason=finish)
 
 
 class Anthropic(BaseProvider):
@@ -174,7 +181,7 @@ class Anthropic(BaseProvider):
                  "output_tokens": u.get("output_tokens", 0)}
         return LLMResponse(text=text, provider=self.name, model=data.get("model", self.model),
                            usage=usage, cost_usd=self.cost(usage), started=started,
-                           finished=utcnow(), key=key)
+                           finished=utcnow(), key=key, finish_reason=str(data.get("stop_reason") or ""))
 
 
 class QueueProvider(BaseProvider):
@@ -242,8 +249,14 @@ class ReplayProvider(BaseProvider):
                             f"({req.role} {req.tag})")
 
 
+# Extra provider types registered at run time (the test suite registers a scripted API stand-in).
+EXTRA_TYPES: dict = {}
+
+
 def make_provider(name: str, pcfg: dict, project_dir: Path) -> BaseProvider:
     t = pcfg.get("type", name)
+    if t in EXTRA_TYPES:
+        return EXTRA_TYPES[t](name, pcfg, project_dir)
     if t == "openai":
         return OpenAICompatible(name, pcfg, project_dir)
     if t == "anthropic":

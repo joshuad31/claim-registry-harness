@@ -81,7 +81,7 @@ def find_layout(src: Path) -> dict:
                 f"no quest record in {src}: expected recording/captures/ (quest_tool) or "
                 f"Qnnnn-Ann.json answer files (driver)")
         layout = {"mode": "driver", "answers": sorted({p.parent for p in answers})[0], "root": src}
-    layout["packets"] = _first_dir(src, "feedback-packets")
+    layout["packets"] = _first_dir(src, "feedback-packets") or _first_dir(src, "packets")
     flags = sorted(src.rglob("capture-flags.json"))
     layout["flags"] = flags[0] if flags else None
     return layout

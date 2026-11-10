@@ -111,6 +111,17 @@ def norm_rel(r: str) -> str:
     return "ABSTAIN"
 
 
+GAP_TYPES = ("SCOPE", "ELEMENT", "STRENGTH", "OTHER")
+
+
+def norm_gap(g) -> str:
+    g = re.sub(r"[^A-Z]", "", str(g or "").upper())
+    for k in GAP_TYPES:
+        if g.startswith(k):
+            return k
+    return ""
+
+
 # --------------------------------------------------------------------------- #
 # texts used for matching (transcoded when the language layer produced PASS)
 # --------------------------------------------------------------------------- #
@@ -163,6 +174,41 @@ def shortlist(unit: dict, utext: str, wtexts: dict, k: int, synonyms: list | Non
     return [wid for _, wid in scored[:k]]
 
 
+def route_pairs(ctx, units: dict, utexts: dict, wtexts: dict) -> tuple[dict, dict]:
+    """Ask the routing role which units each witness could bear on.  Returns ({unit_id: {witness ids}},
+    info).  Routing never decides a relation: it only chooses which pairs the two matching passes
+    judge.  A batch the model does not answer simply contributes no routes."""
+    mcfg = ctx.cfg["matching"]
+    bs = int(mcfg.get("route_batch", 12))
+    max_units = int(mcfg.get("route_max_units", 8))
+    order = sorted(units)
+    ulist = "\n".join(f"[{uid}] ({units[uid]['type']}) {truncate_words(utexts[uid], 70)}" for uid in order)
+    reqs, idx = [], []
+    for bno, batch in enumerate(chunked(sorted(wtexts), bs)):
+        system, user, _ = ctx.prompts.render("match_route.md", UNITS=ulist, WITNESSES=_wlist(batch, wtexts),
+                                             MAX_UNITS=max_units)
+        reqs.append(LLMRequest(role="match_router", system=system, user=user, tag=f"route:{bno}",
+                               meta={"witnesses": batch, "units": order}))
+        idx.append(batch)
+    results = ctx.llm.call_many(reqs) if reqs else []
+    routed: dict = {}
+    answered = pairs = 0
+    for batch, res in zip(idx, results):
+        data = res.parsed if res and isinstance(res.parsed, dict) else {}
+        rows = as_list(data.get("routes") if data else (res.parsed if res else []), "routes")
+        if rows:
+            answered += 1
+        for r in rows:
+            if not isinstance(r, dict) or r.get("witness_id") not in batch:
+                continue
+            for uid in (r.get("unit_ids") or [])[:max_units]:
+                if uid in units:
+                    routed.setdefault(uid, set()).add(r["witness_id"])
+                    pairs += 1
+    return routed, {"mode": "model routing + lexical shortlist", "batches": len(reqs),
+                    "answered_batches": answered, "routed_pairs": pairs}
+
+
 def _wlist(wids: list[str], wtexts: dict) -> str:
     return "\n".join(f"[{wid}] {wtexts[wid]}" for wid in wids)
 
@@ -210,6 +256,9 @@ def run_passes(ctx, plan: list[tuple[dict, list[str]]], utexts: dict, wtexts: di
             rec = out.setdefault((wid, uid), {})
             rec[pas] = norm_rel(j.get("relation")) if j else "MISSING"
             rec["trace_" + pas] = (j.get("trace") or "") if j else "no judgment returned"
+            if j and rec[pas] in PARTIAL:
+                rec["gap_type_" + pas] = norm_gap(j.get("gap_type"))
+                rec["gap_" + pas] = str(j.get("gap") or "").strip()
             rec["key_" + pas] = res.key if res else ""
             if not j and res is not None and "skipped by the queue operator" in str(res.parse_error or ""):
                 rec["skipped_" + pas] = True
@@ -247,8 +296,10 @@ def adjudicate(ctx, pairs: dict, units: dict, utexts: dict, wtexts: dict, stage_
             d = ds.get(wid)
             if skipped:
                 continue        # no adjudication happened: the pair stays DISPUTED (ABSTAIN)
-            out[(wid, uid)] = ((norm_rel(d.get("relation")), d.get("trace", ""), res.key if res else "")
-                               if d else ("ABSTAIN", "adjudicator returned no decision", res.key if res else ""))
+            out[(wid, uid)] = ((norm_rel(d.get("relation")), d.get("trace", ""), res.key if res else "",
+                                norm_gap(d.get("gap_type")), str(d.get("gap") or "").strip())
+                               if d else ("ABSTAIN", "adjudicator returned no decision", res.key if res else "",
+                                          "", ""))
     return out
 
 
@@ -270,6 +321,11 @@ def combine(ctx, raw: dict, units: dict, utexts: dict, wtexts: dict, stage_tag: 
                "b": rec.get("b"), "trace_b": rec.get("trace_b", ""), "stage": stage_tag}
         if rec.get("a") == rec.get("b") and rec.get("a") not in ("MISSING",):
             row.update(final=rec["a"], basis="AGREED", trace=rec.get("trace_a", ""))
+            if rec["a"] in PARTIAL:
+                ga, gb = rec.get("gap_type_a", ""), rec.get("gap_type_b", "")
+                # both passes must name the same kind of gap for it to be used downstream
+                row.update(gap_type=ga if ga == gb else "", gap=rec.get("gap_a", "") or rec.get("gap_b", ""),
+                           gap_type_a=ga, gap_type_b=gb)
         elif rec.get("a") == "MISSING" and rec.get("b") == "MISSING":
             row.update(final="ABSTAIN", basis="MISSING", trace="neither pass returned a judgment for this pair")
         elif rec.get("skipped_a") or rec.get("skipped_b"):
@@ -283,8 +339,11 @@ def combine(ctx, raw: dict, units: dict, utexts: dict, wtexts: dict, stage_tag: 
                            trace=f"only one pass judged this pair ({single}); the other pass's request was not "
                                  f"answered. Not used for coverage; a human can confirm it in human-decisions.json")
         elif (wid, uid) in adj:
-            rel, tr, key = adj[(wid, uid)]
+            rel, tr, key, gt, gap = adj[(wid, uid)]
             row.update(final=rel, basis="MODEL_ADJUDICATED", trace=tr, key_adj=key)
+            if rel in PARTIAL:
+                row.update(gap_type=gt, gap=gap, gap_type_a=rec.get("gap_type_a", ""),
+                           gap_type_b=rec.get("gap_type_b", ""))
         else:
             row.update(final="ABSTAIN", basis="DISPUTED",
                        trace="pass A and pass B disagree; no adjudication" + (
@@ -350,10 +409,20 @@ def match_stage(ctx) -> dict:
     k = int(mcfg.get("shortlist_k", 30))
     k2 = int(mcfg.get("shortlist_k_secondary", 15))
     exhaustive = len(wtexts) <= int(mcfg.get("exhaustive_threshold", 45))
+    # With a model matcher, a model also routes witnesses to the units they could bear on, so the
+    # pairs that get judged no longer depend on shared vocabulary alone.  The lexical shortlist is
+    # kept (halved) as a second net.  "route": auto (model roles only) | on | off.
+    route_mode = str(mcfg.get("route", "auto")).lower()
+    use_router = (not exhaustive) and (route_mode == "on" or (
+        route_mode == "auto" and ctx.llm.is_api_role("matcher_a") and ctx.llm.is_api_role("match_router")))
+    routed, route_info = (route_pairs(ctx, units, utexts, wtexts) if use_router else ({}, {}))
+    if use_router and route_info.get("answered_batches", 0) > 0:
+        k, k2 = max(5, k // 2), max(3, k2 // 2)
     plan = []
     for uid, u in sorted(units.items()):
         kk = k if u["type"] in ("REQUIRED_SUPPORT", "CONTEXTUAL_CONSTRAINT") else k2
         wids = sorted(wtexts) if exhaustive else shortlist(u, utexts[uid], wtexts, kk, mcfg.get("synonyms"))
+        wids = sorted(set(wids) | set(routed.get(uid, ())))
         plan.append((u, wids))
     raw = run_passes(ctx, plan, utexts, wtexts, "match")
     rows = combine(ctx, raw, units, utexts, wtexts, "match")
@@ -371,6 +440,9 @@ def match_stage(ctx) -> dict:
                "one_pass_only": sum(1 for r in rows if r["basis"] == "ONE_PASS_ONLY"),
                "complete_relations": sum(1 for r in rows if r["final"] in COMPLETE),
                "contradictions": sum(1 for r in rows if r["final"] == "CONTRADICTS"),
+               "partial_relations": sum(1 for r in rows if r["final"] in PARTIAL),
+               "partial_scope_gap": sum(1 for r in rows if r["final"] in PARTIAL and r.get("gap_type") == "SCOPE"),
+               "routing": route_info or {"mode": "lexical shortlist only"},
                "text_mode": meta["mode"]}
     ctx.save("matching", "03_match-records/summary.json", summary, "match-summary")
     summary.update(write_review_packet(ctx))

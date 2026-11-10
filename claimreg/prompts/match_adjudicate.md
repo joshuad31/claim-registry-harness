@@ -12,4 +12,4 @@ DISPUTED PAIRS:
 {{DISPUTES}}
 
 Return ONLY a JSON object with one decision per disputed pair:
-{"unit_id": "{{UNIT_ID}}", "decisions": [{"witness_id": "", "relation": "", "trace": "", "agrees_with": "A | B | neither"}]}
+{"unit_id": "{{UNIT_ID}}", "decisions": [{"witness_id": "", "relation": "", "trace": "", "gap_type": "", "gap": "", "agrees_with": "A | B | neither"}]}

@@ -337,9 +337,12 @@ README_TEXT = {
                     "Each relation shows pass A, pass B, the final relation and its basis "
                     "(AGREED / MODEL_ADJUDICATED / DISPUTED).",
                     "Coverage (08).", "Passing fixtures does not prove general language understanding."),
-    "08_COVERAGE": ("Deletion-minimal hypothesis coverage sets with removal certificates and search status.",
+    "08_COVERAGE": ("Deletion-minimal hypothesis coverage sets with removal certificates and search status, and "
+                    "the premise ledger: where every required part of every hypothesis stands.",
                     "The approved matching record, joint groups, incompatibilities.",
-                    "coverage.json", "Recheck any set by deleting each witness: every deletion must break coverage.",
+                    "coverage.json, premise-ledger.json, PREMISE-LEDGER.md",
+                    "Recheck any set by deleting each witness: every deletion must break coverage. A set marked "
+                    "COMPLETE_WITH_ASSUMPTIONS lists each transfer it relies on.",
                     "Crux identification (09).",
                     "Deletion-minimal is not smallest, unique, or strongest."),
     "09_CRUX": ("Frozen rival theories, portability tests (T1/T2) with certificates, crux candidates.",

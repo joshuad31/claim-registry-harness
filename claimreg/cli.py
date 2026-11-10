@@ -271,6 +271,17 @@ def cmd_demo(a) -> int:
     return 0 if out["status"] in ("complete", "waiting") else 2
 
 
+def cmd_funnel(a) -> int:
+    from .funnel import funnel, render
+    from .runctx import RunContext
+    f = funnel(RunContext(a.project, a.run, quiet=True))
+    if a.json:
+        _print(f)
+    else:
+        print(render(f))
+    return 0
+
+
 def cmd_selftest(a) -> int:
     import unittest
     here = Path(__file__).resolve().parent.parent / "tests"
@@ -388,6 +399,60 @@ def main(argv=None) -> int:
     s.add_argument("project")
     s.add_argument("--run")
     s.set_defaults(fn=cmd_verify)
+
+    from . import onramp
+    s = sub.add_parser("new", help="start a project: copy sources in, find your model keys, write the question template")
+    s.add_argument("project")
+    s.add_argument("--name")
+    s.add_argument("--corpus", help="folder of Markdown sources (copied into the project)")
+    s.add_argument("--keys", help="folder that holds your API key files (one .txt per provider)")
+    s.add_argument("--key", action="append", default=[], metavar="PROVIDER=FILE",
+                   help="one key file, e.g. deepseek=C:\\keys\\deepseek.txt (repeatable)")
+    s.add_argument("--prefer", help="provider order, e.g. deepseek,openai,gemini (default: openai,deepseek,gemini,anthropic)")
+    s.add_argument("--notebook", action="append", default=[], help="NotebookLM notebook link (repeat for each copy)")
+    s.add_argument("--force", action="store_true")
+    s.set_defaults(fn=onramp.cmd_new)
+
+    s = sub.add_parser("frame", help="draft the index, the Archivist prompt and the quest header from 01_FRAME/question.md")
+    s.add_argument("project")
+    s.add_argument("--gauge", type=int, default=64)
+    s.add_argument("--axes", default="1")
+    s.add_argument("--force", action="store_true", help="redo files that already exist")
+    s.set_defaults(fn=onramp.cmd_frame)
+
+    s = sub.add_parser("approve", help="a person approves the header draft (required before a quest)")
+    s.add_argument("project")
+    s.add_argument("--by", required=True, help="who approves it")
+    s.add_argument("--header", help="approve this file instead of 01_FRAME/header-DRAFT.md")
+    s.add_argument("--force", action="store_true", help="replace an existing header.md")
+    s.set_defaults(fn=onramp.cmd_approve)
+
+    s = sub.add_parser("doctor", help="check everything a quest needs: Python, Chrome, header, notebooks, each model key")
+    s.add_argument("project", nargs="?")
+    s.add_argument("--offline", action="store_true", help="do not contact the model providers")
+    s.add_argument("--fix", action="store_true", help="when a configured model name is not offered, pick one that is")
+    s.add_argument("--models", action="store_true", help="also list the models each key offers")
+    s.set_defaults(fn=onramp.cmd_doctor)
+
+    s = sub.add_parser("quest", help="run the NotebookLM discovery quest unattended, then import it")
+    s.add_argument("project")
+    s.add_argument("--notebook", action="append", default=[], help="NotebookLM notebook link (repeat for each copy)")
+    s.add_argument("--id", help="quest folder name (default: resume the open quest, else a new dated one)")
+    s.add_argument("--new", action="store_true", help="start a new quest even if one is open")
+    s.add_argument("--hours", default="3", help="time limit in hours (default 3)")
+    s.add_argument("--max-questions", dest="max_questions", default="400")
+    s.add_argument("--profile", help="Chrome profile folder the driver signs in with")
+    s.add_argument("--no-driver", dest="no_driver", action="store_true",
+                   help="do not start the NotebookLM driver (it is already running on this quest folder)")
+    s.add_argument("--then-run", dest="then_run", action="store_true",
+                   help="continue straight into the evidence pipeline and the report")
+    s.set_defaults(fn=onramp.cmd_quest)
+
+    s = sub.add_parser("funnel", help="where a run loses material, stage by stage, and what limits it")
+    s.add_argument("project")
+    s.add_argument("--run")
+    s.add_argument("--json", action="store_true")
+    s.set_defaults(fn=cmd_funnel)
 
     s = sub.add_parser("header-draft", help="draft a quest header (human approval required)")
     s.add_argument("project")

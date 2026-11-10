@@ -16,4 +16,4 @@ What would satisfy it: {{SATISFIED_BY}}
 Hypothesis context (for scope only): {{HYP_BRIEF}}
 
 Return ONLY a JSON object with one entry per witness listed above:
-{"unit_id": "{{UNIT_ID}}", "judgments": [{"witness_id": "", "elements_compared": "short element-by-element note", "relation": "EQUIVALENT | WITNESS_ENTAILS_UNIT | UNIT_ENTAILS_WITNESS | PARTIALLY_COVERS | CONTRADICTS | NO_SEMANTIC_RELATION | ABSTAIN", "trace": ""}]}
+{"unit_id": "{{UNIT_ID}}", "judgments": [{"witness_id": "", "elements_compared": "short element-by-element note", "relation": "EQUIVALENT | WITNESS_ENTAILS_UNIT | UNIT_ENTAILS_WITNESS | PARTIALLY_COVERS | CONTRADICTS | NO_SEMANTIC_RELATION | ABSTAIN", "trace": "", "gap_type": "", "gap": ""}]}

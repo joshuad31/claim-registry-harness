@@ -61,6 +61,20 @@ def ensure_dir(p: str | os.PathLike) -> Path:
     return p
 
 
+def replace_file(tmp: str | os.PathLike, path: str | os.PathLike, tries: int = 40, wait: float = 0.05) -> None:
+    """os.replace that waits out a reader.  On Windows a file cannot be replaced while another
+    process or thread has it open, even for reading; the reader is done within milliseconds."""
+    import time
+    for n in range(tries):
+        try:
+            os.replace(tmp, path)
+            return
+        except PermissionError:
+            if n == tries - 1:
+                raise
+            time.sleep(wait)
+
+
 def atomic_write_text(path: str | os.PathLike, text: str) -> None:
     path = Path(path)
     ensure_dir(path.parent)
@@ -68,7 +82,7 @@ def atomic_write_text(path: str | os.PathLike, text: str) -> None:
     try:
         with os.fdopen(fd, "w", encoding="utf-8", newline="\n") as f:
             f.write(text)
-        os.replace(tmp, path)
+        replace_file(tmp, path)
     except BaseException:
         try:
             os.unlink(tmp)

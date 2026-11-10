@@ -10,3 +10,10 @@ RELATIONS (assign exactly one per witness-unit pair; the relation is between wha
 Protected properties to check: attribution (who says it), actor and object, polarity (affirmed/denied), modality (may/must, suggests/shows), conditions, alternatives, identity and role, time, quantity, scope (population, species, model, organ/tissue, dose, route). High word overlap with changed roles is a classic trap. A source REPORTING a claim is weaker than the claim itself. A claim inside a condition is weaker than the unconditional claim. Never infer coverage from metadata, source prestige, or the number of witnesses; judge the text only.
 
 Every judgment needs a TRACE: one or two sentences naming the exact words and the protected properties that justify the relation.
+
+For PARTIALLY_COVERS and UNIT_ENTAILS_WITNESS also give "gap_type" and "gap" (leave both empty for every other relation):
+- gap_type SCOPE - the witness reports the unit's own effect or predicate, with the same direction, but in a different population, species, model, tissue, dose, route or timing than the unit requires. Nothing else is missing.
+- gap_type ELEMENT - the witness supplies only one of several elements or links the unit requires.
+- gap_type STRENGTH - the witness is weaker in modality or status: it says may / suggests / is associated, it reports someone else's claim, or it holds only under a condition.
+- gap_type OTHER - anything else.
+- gap - one sentence stating exactly what would have to be true, beyond what the witness says, for the unit to follow (for SCOPE: the transfer that would have to hold, for example "the effect seen in obstructed rat bladder also occurs in men with outlet obstruction").

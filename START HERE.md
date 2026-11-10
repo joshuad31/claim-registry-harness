@@ -1,4 +1,8 @@
-# START HERE — Claim Registry harness (final build, 2026-10-30)
+# START HERE — Claim Registry harness
+
+> **New user?** Read `README.md`, then follow `docs/WALKTHROUGH.md`. This file is the build record: what each shipped run demonstrates and the known limits.
+>
+> **Update, 2026-11-10.** The harness now runs a NotebookLM quest unattended (`cr quest`), moves to another model provider when one refuses or fails, and breaks hypotheses into finding-sized parts so that coverage can form on real corpora. `docs/DECISIONS-2026-11-10.md` records what changed and why. The runs listed below were produced before that change.
 
 This folder holds a **finished Claim Registry harness**: it takes a corpus and an approved quest header
 and runs every stage of the ACH 2.0 specification through to a report, an audit browser and a hashed

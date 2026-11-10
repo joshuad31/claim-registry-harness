@@ -1,70 +1,89 @@
 # Claim Registry (ACH 2.0) harness
 
-A working implementation of Josh Davis's Claim Registry specification: a custom agent harness that
-distills a document corpus into source-anchored evidence and tests competing hypotheses against it.
+Claim Registry is a method for testing competing answers to a question against a body of published sources, in a way that anyone can audit. This harness runs it. You bring the sources; it produces a report in which every claim traces back to a word-for-word quotation from a named source.
+
+It is for people who can download peer-reviewed research, convert it to Markdown and upload it to NotebookLM. It implements Josh Davis's Claim Registry (ACH 2.0) specification.
+
+## What it does
+
+1. **NotebookLM holds your sources** and answers one narrow, source-cited question at a time. It never sees your hypotheses.
+2. **An Investigator model writes the questions.** A separate **Manager model** grades the answers against your hypotheses and steers the next questions. The Investigator never sees the grades.
+3. **Every answer is broken into claims, and every claim is checked against its source file.** A claim goes forward only if its quotation is found word for word in the source.
+4. **Each hypothesis is broken into parts that a single published finding could establish.** The harness finds the smallest sets of findings that cover each hypothesis, the parts no source addresses, and the findings on which the sources disagree.
+
+You get a **premise ledger** (what each hypothesis rests on and where each part stands), a **crux report**, and an **audit browser** where any finding can be followed back to its source sentence.
+
+## Quick start
+
+You need Python 3.11 or newer, Google Chrome, a Google account for NotebookLM, and at least one model API key saved as a text file (two from different providers is better).
 
 ```
-corpus + approved quest header
-  -> firewalled discovery quest (Coordinator / Investigator / Archivist, ACH_Eval, gauge-keyed stop rule)
-  -> FRDs (<= 4 per answer) -> blind single-source validation with a mechanical verbatim-quote check
-  -> retention -> question-guided 60-word witnesses + independent fidelity audit
-  -> optional language tools (Mr. Dictionary, Mr. Canonicalizer, Mr. Transcoder)
-  -> two-pass semantic matching + adjudication -> deletion-minimal coverage sets
-  -> frozen rival theories, T1/T2 portability tests, crux candidates
-  -> ACH_Eval assessment, crux report (< 4,000 words), evidence packets, HTML audit browser
-  -> hashed releases and declared forks
+pip install playwright
+python cr.py selftest                 # about a minute, no network
+python cr.py demo                     # a complete offline run of a small synthetic corpus
 ```
 
-**It runs with no key, no network and no operator.** The default provider is a deterministic local
-engine (`local-rules-v1.9`) that answers every role from the supplied text; a real model can be routed
-to any role at any time. See `docs/LOCAL-ENGINE.md` for exactly what the local engine does and does
-not do.
-
-* **Taking over this project? Read `HANDOFF.md` first.**
-* **Start here:** `START HERE.md`
-* **Your first quest, step by step (NotebookLM):** `docs/WALKTHROUGH.md`
-* **The NotebookLM quest driver, in reference form:** `docs/NOTEBOOKLM-QUEST.md`
-* **Bring a finished NotebookLM quest into a run:** `cr import-quest` (`docs/USER-GUIDE.md` §3a)
-* **Did the quest meet the throughput standard?** `cr quest-score` (`docs/NOTEBOOKLM-QUEST.md` §6)
-* **How to use it:** `docs/USER-GUIDE.md`
-* **What the local engine is:** `docs/LOCAL-ENGINE.md`
-* **Decisions where the specification was open:** `docs/DECISIONS.md` (first build) and
-  `docs/DECISIONS-ADDENDUM.md` (this build)
-* **Answering model calls by hand, in NotebookLM, or with an agent:** `docs/AGENT-OPERATOR.md`
-* **The offline PTX demonstration:** `projects/PTX-LOCAL/02_RUNS/RUN-PTX-LOCAL-OFFLINE/`
-* **The worked coverage/crux example:** `projects/WORKED/`
-
-Python 3.11 or newer, standard library only. The optional NotebookLM driver
-(`claimreg/notebooklm/`, `nlm.cmd`) also needs `pip install playwright` and Google Chrome.
+Then, for your own question:
 
 ```
-python cr.py selftest     # 56 tests (+1 browser test, run separately), no network
-python cr.py demo         # a complete run of a bundled synthetic corpus, from an empty folder
+python cr.py new     projects\MyTopic --corpus "D:\my sources" --keys "D:\my keys" --notebook <NotebookLM link>
+   (write your question in projects\MyTopic\01_FRAME\question.md)
+python cr.py frame   projects\MyTopic     # drafts the source index, the NotebookLM prompt and the quest header
+   (read and edit 01_FRAME\header-DRAFT.md; paste archivist-custom-prompt.txt into NotebookLM: Configure Chat -> Custom + Longer)
+python cr.py approve projects\MyTopic --by "Your Name"
+python cr.py doctor  projects\MyTopic     # checks everything, including each model key
+python cr.py quest   projects\MyTopic     # the discovery quest: up to 3 hours, unattended
+python cr.py run     projects\MyTopic     # claims, validation, matching, coverage, report
 ```
 
-## What is in this repository
+**`docs/WALKTHROUGH.md` explains every step**, including where to find sources and how to set up the notebook. On Windows you can type `cr` in place of `python cr.py`.
 
-- the harness, its prompt library, 56 tests plus a NotebookLM driver test, and the documentation;
-- the NotebookLM quest driver: one Chrome window, one tab per notebook copy, answers written
-  straight to disk (`claimreg/notebooklm/`, `nlm.cmd`, `examples/quest-driver.PTX.json`);
-- two synthetic example corpora (`examples/demo`, `examples/worked`);
-- five completed runs with their reports and machine records:
-  `projects/DEMO`, `projects/WORKED`, `projects/PTX` (the earlier queue-based run),
-  `projects/PTX-LOCAL` (the fully offline run on the 111-source PTX corpus) and
-  `projects/PTX-NLM-MODEL` (the same 156-answer PTX quest with every reasoning role on GPT-5.2).
+## What is in a result
 
-**Not committed, by design:**
+In `projects\MyTopic\02_RUNS\<run>\`:
 
-- `projects/*/01_CORPUS/source-files/` — the third-party published papers the PTX corpus was built
-  from. Their manifests, hashes and provenance records are committed; the papers are not, because
-  redistributing them is not mine to do. Without them, `cr verify` on a PTX run checks everything
-  except the quotations, and says so in a `warnings` entry instead of failing.
-- `projects/*/cache/` and `projects/*/04_RELEASES/` — model-answer caches (exact prompts and answers,
-  including source excerpts) and duplicate hashed releases.
-- the previous build's 9 MB model-call archive and its session transcript.
+| File | What it tells you |
+|---|---|
+| `08_COVERAGE\PREMISE-LEDGER.md` | Each hypothesis, part by part: established, contested, supported only if a named transfer is granted, or not addressed by any source |
+| `10_REPORTS\CRUX-REPORT.md` | The run at a glance, the crux candidates, coverage of each hypothesis, limits |
+| `10_REPORTS\report.html` | Click any finding to see its claim, its word-for-word source quotation and the question that found it |
+| `10_REPORTS\EVIDENCE-PACKETS.md` | Per hypothesis: the controlling findings, the strongest objections and the gaps |
 
-## License
+`python cr.py funnel projects\MyTopic` shows where a run lost material and what limited it.
 
-No license has been granted. The harness, the specification documents and the PTX research header are
-Josh Davis's work. The third-party papers referenced by the committed manifests are not included and
-remain under their own licenses.
+## Things worth knowing
+
+- **Models are interchangeable, and a refusal cannot stop a run.** Each role has an ordered list of providers. If one refuses, filters, errors or times out, the next is asked, and the switch is recorded with its reason. DeepSeek, OpenAI, Gemini, Anthropic and any OpenAI-compatible endpoint work.
+- **A person approves the header.** `cr frame` only drafts. No quest starts without `cr approve`.
+- **Nothing is accepted on a model's word.** Quotations are checked mechanically against the source files. Matching is done twice, independently, and disagreements are labelled.
+- **Mechanistic and animal evidence counts, with its assumptions shown.** When a finding shows the right effect in another species, model, tissue or dose, it can cover a part of a hypothesis only with the transfer it relies on written beside it. Such coverage is reported as `COMPLETE_WITH_ASSUMPTIONS`, never as `COMPLETE`.
+- **It also runs with no key and no network.** The default offline engine (`docs/LOCAL-ENGINE.md`) finishes every stage by fixed rules. It is a floor for testing the machinery, not a substitute for a model.
+- **A result is the best reading of this corpus in this run.** It does not establish that a covered hypothesis is true.
+
+## Commands
+
+| Command | What it does |
+|---|---|
+| `cr new`, `cr frame`, `cr approve` | Start a project, draft its frame, approve the header |
+| `cr doctor` | Check Python, Chrome, the corpus, the header, the notebooks and each model key (`--fix` repairs model names) |
+| `cr quest` | Run the NotebookLM quest unattended, score it, and import it (`--then-run` continues into the report) |
+| `cr run` | Run or resume the evidence pipeline (`--from <stage>` redoes a stage and everything after it) |
+| `cr funnel`, `cr status`, `cr verify` | Diagnose a run, show stage status, re-check a run's records |
+| `cr quest-score`, `cr import-quest` | Score or import a quest recorded another way |
+| `cr fork`, `cr diff`, `cr publish` | Fork a run with declared changes, compare runs, write a hashed release |
+| `cr demo`, `cr selftest` | The offline demonstration and the test suite |
+
+## Where things are
+
+| Path | What it is |
+|---|---|
+| `docs/WALKTHROUGH.md` | Your first investigation, step by step |
+| `docs/NOTEBOOKLM-QUEST.md` | The quest in reference form: driver, relay, scorecard, failure modes |
+| `docs/USER-GUIDE.md` | Every command, providers and failover, the file queue, forks, publishing |
+| `docs/DECISIONS*.md` | Every place the specification was open, and what was chosen |
+| `claimreg/` | The harness (standard library only; the NotebookLM driver also needs Playwright) |
+| `claimreg/prompts/` | The prompt library. The specification prompts in `prompts/spec/` are used unchanged |
+| `projects/` | Example runs: `DEMO` (offline), `WORKED` (coverage and crux), and the PTX runs |
+| `HANDOFF.md` | For whoever maintains this code next |
+
+The third-party source papers, the model-answer caches and browser profiles are not in this repository.

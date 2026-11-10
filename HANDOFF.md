@@ -160,3 +160,18 @@ A timed PTX quest ran **14:10:14–15:10:18 CST** on the six existing notebooks.
   3. The six NotebookLM notebook IDs are public in `examples/quest-driver.PTX.json` and the older committed run records — IDs, not credentials, but decide whether to scrub them before promoting the repo.
   4. Optional: promote the Lead's ad-hoc `round.py` loop into a `nlm cycle` command and add a Manager checkpoint/restart helper.
   5. Teaching: unchanged.
+
+## 10. Update — 2026-11-10 (Claude Fable 5.2 session)
+
+Josh brought the project back to Claude and asked for it to be finished without consulting him at each fork. `docs/DECISIONS-2026-11-10.md` records every choice. In short:
+
+- **The zero-coverage wall had three causes, all found in the 11-09 GPT-5.2 run's own records** (`cr funnel` shows them): required units that were verdicts about the evidence; witnesses judged as answers to the whole producing question, which lost 78% of them; and a lexical shortlist that left 77% of pairs unjudged. All three are changed (decisions 2 to 5).
+- **New in the evidence pipeline:** finding-sized units with one revision round; witness prompts scoped to the FRD's claim; model routing before matching; gap-typed partial matches; an assumption-labelled coverage tier (`COMPLETE_WITH_ASSUMPTIONS`); the premise ledger (`08_COVERAGE/PREMISE-LEDGER.md`); `cr funnel`.
+- **Provider failover** is in the router for every role (ordered lists; mechanical triggers; provenance in the call log).
+- **The quest relay is built** (`claimreg/notebooklm/relay.py`): Investigator and Manager as model roles, the driver unchanged. Open item 0 of §7 is done except the optional overseer.
+- **New-user commands:** `cr new`, `cr frame`, `cr approve`, `cr doctor`, `cr quest`. `README.md` and `docs/WALKTHROUGH.md` are rewritten around them.
+- **Tests:** `cr selftest` runs 86 tests (87 with the browser test). The new ones use a scripted stand-in for a model API (`tests/fakes.py`) and a stand-in driver, so failover, the relay and the whole new-user path are tested with no network.
+
+**What a live run still has to show.** Everything above was built and tested offline. See the session's closing message, or `docs/LIVE-RESULTS-2026-11-10.md` if it exists, for what the live PTX re-run and the levothyroxine quest showed.
+
+**Working with Claude on this corpus.** On 11-09 two Claude contexts were stopped by a safety classifier while grading PTX answers. Nothing in the current design has Claude, or any agent session, grade answers: the Manager and Investigator are API roles with failover. Put `anthropic` last in a provider list for pharmacology corpora, or leave it out.

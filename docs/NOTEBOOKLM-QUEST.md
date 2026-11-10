@@ -10,6 +10,34 @@ A quest has exactly three parts. New to this? Start with `docs/WALKTHROUGH.md`, 
 
 No API key is needed. NotebookLM is the only model the harness talks to during the quest. The two agents only read and write files. FRDs are made after the quest, not during it: `cr import-quest` brings the finished quest into a run, and `cr run` builds the evidence from it.
 
+## 0. The short version: one command
+
+```
+python cr.py quest projects\\MyTopic --notebook <link> [--notebook <link> ...]
+```
+
+`cr quest` starts the local driver (§2) and the **relay** (`claimreg/notebooklm/relay.py`), and both run unattended until the quest stops. The relay is the plumbing between the two agents:
+
+- it asks the **Investigator** model (`quest_investigator`) for questions and checks each against the query firewall;
+- it stages each answer for the **Manager** model (`quest_manager`), which grades six at a time with ACH_Eval and writes the feedback packet;
+- it commits each round to the ledger, releases the driver's pacing hold, queues the packet's ready questions (newest packet first), and re-asks failed or flagged answers once;
+- it writes `relay-status.json` and `relay.log`, then `CLOSEOUT.md` and `SCORECARD.txt`, and imports the quest into a run.
+
+Both roles are ordinary model calls with provider failover (`USER-GUIDE.md` §2). The relay makes no research judgment, and the Investigator's prompt is built only from the header, the index, the public packets and the list of questions asked.
+
+| Setting in `quest\\<id>\\quest.json` | Default | Meaning |
+|---|---|---|
+| `round_size` | 6 | answers graded per round |
+| `max_backlog` | 12 | the driver holds new questions while this many answers await grading |
+| `queue_ahead` | 12 | questions kept queued ahead of the lanes |
+| `max_hours` | 3 | time limit; grading continues until the record is closed |
+| `max_questions` | 400 | question limit |
+| `max_wait_seconds` | 240 | a short round is graded once an answer has waited this long |
+
+Stop early with an empty file named `STOP` in the quest folder. Run `cr quest` again to resume: committed rounds are never graded twice and the go-ahead time is never reset.
+
+The rest of this file describes the parts `cr quest` drives, for running them by hand or with agent sessions in place of API models.
+
 ## 1. Before the quest (once per corpus)
 
 1. **Convert sources to Markdown.** Run PDFs through datalab.to or another converter, and check that the tables survived.

@@ -30,11 +30,17 @@ ROLES = [
     "matcher_a",             # semantic matching pass A
     "matcher_b",             # semantic matching pass B (independent)
     "match_adjudicator",     # resolves A/B disagreements (labelled as model adjudication)
+    "match_router",          # routes witnesses to the units they could bear on (never decides a relation)
     "joint_checker",         # jointly-sufficient group approval
     "incompat_checker",      # witness-witness incompatibility approval
     "assessor",              # final ACH_Eval-style assessment over the witness registry
     "reporter",              # optional plain-language analyst summary
+    "quest_manager",         # NotebookLM quest relay: ACH_Eval grading round + feedback packet
+    "quest_investigator",    # NotebookLM quest relay: writes the next questions
 ]
+
+# A role the user did not route follows another role's routing instead of the global default.
+ROLE_FOLLOWS = {"match_router": "matcher_a", "quest_manager": "coordinator", "quest_investigator": "investigator"}
 
 DEFAULT_CONFIG: dict[str, Any] = {
     "project": {
@@ -158,6 +164,9 @@ DEFAULT_CONFIG: dict[str, Any] = {
         "max_revisions": 1,
         "cluster_best": False,        # spec 24.4 experiment, off by default
     },
+    "units": {
+        "finding_sized": True,        # model-written required units must be finding-sized (one revision, then demoted)
+    },
     "language": {
         "mode": "off",                # off | labels  (labels = dictionary + transcoder)
         "min_sentences": 3,           # three distinct example sentences per active sense
@@ -172,6 +181,9 @@ DEFAULT_CONFIG: dict[str, Any] = {
         "dispute_policy": "adjudicate",   # adjudicate | abstain
         "synonyms": [],               # e.g. [["PTX", "pentoxifylline"]]: shortlist only, never shown to the matcher
         "one_pass_policy": "abstain",  # a pass left unanswered (cr queue skip): abstain | accept (labelled ONE_PASS_ONLY)
+        "route": "auto",              # model routing of witnesses to units: auto (model matchers only) | on | off
+        "route_batch": 12,            # witnesses per routing call
+        "route_max_units": 8,         # units one witness may be routed to
         "qualify": True,
     },
     "coverage": {
@@ -182,6 +194,10 @@ DEFAULT_CONFIG: dict[str, Any] = {
         "max_joint_candidates": 10,
         "max_incompat_pairs": 200,    # witness pairs sent to the incompatibility check
         "constraint_veto": True,      # a member contradicting a constraint unit invalidates a set
+        # second tier: a unit with no complete match may be covered by a finding from another
+        # population / species / model / dose, with the transfer recorded as a named assumption
+        # (status COMPLETE_WITH_ASSUMPTIONS).  [] turns the tier off.
+        "assume_gaps": ["SCOPE"],
     },
     "crux": {
         "diagnostic_top_n": 15,
@@ -213,6 +229,9 @@ def load_config(project_dir: str | Path) -> dict:
         for r in ROLES:
             if r not in (user.get("roles") or {}):
                 cfg["roles"][r] = dp
+    for r, follows in ROLE_FOLLOWS.items():
+        if r not in (user.get("roles") or {}):
+            cfg["roles"][r] = copy.deepcopy(cfg["roles"].get(follows, cfg["roles"].get(r)))
     cfg["_project_dir"] = str(project_dir.resolve())
     return cfg
 

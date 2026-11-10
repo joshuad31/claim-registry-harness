@@ -64,6 +64,8 @@ class LLMResponse:
     cached: bool = False
     attempts: int = 1
     parse_error: str = ""
+    finish_reason: str = ""        # the provider's own stop signal ("stop", "length", "content_filter", "refusal" ...)
+    failover: list = field(default_factory=list)   # providers tried before this one, and why each was skipped
 
     def to_record(self) -> dict:
         return asdict(self)

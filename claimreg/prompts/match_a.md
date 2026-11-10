@@ -16,4 +16,4 @@ WITNESSES:
 {{WITNESSES}}
 
 Return ONLY a JSON object with one entry per witness listed above, in the same order:
-{"unit_id": "{{UNIT_ID}}", "judgments": [{"witness_id": "", "relation": "EQUIVALENT | WITNESS_ENTAILS_UNIT | UNIT_ENTAILS_WITNESS | PARTIALLY_COVERS | CONTRADICTS | NO_SEMANTIC_RELATION | ABSTAIN", "trace": ""}]}
+{"unit_id": "{{UNIT_ID}}", "judgments": [{"witness_id": "", "relation": "EQUIVALENT | WITNESS_ENTAILS_UNIT | UNIT_ENTAILS_WITNESS | PARTIALLY_COVERS | CONTRADICTS | NO_SEMANTIC_RELATION | ABSTAIN", "trace": "", "gap_type": "", "gap": ""}]}

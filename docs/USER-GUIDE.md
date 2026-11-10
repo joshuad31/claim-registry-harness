@@ -14,12 +14,14 @@ This harness runs the ACH 2.0 chain end to end.
 | Crux | Frozen rival theories with T1/T2 certificates |
 | Results | A final ACH_Eval assessment, a crux report under 4,000 words, evidence packets, an HTML audit browser, and hashed releases and forks |
 
+New here? `docs/WALKTHROUGH.md` is the step-by-step path (`cr new`, `cr frame`, `cr approve`, `cr doctor`, `cr quest`, `cr run`). This guide is the reference.
+
 It is plain Python 3.11 or newer with **no third-party packages**. On Windows, use `cr.cmd` in place of
 `python cr.py`.
 
 ```
 python cr.py --help
-python cr.py selftest            # 56 tests, about a minute, no network and no model calls
+python cr.py selftest            # about a minute, no network and no model calls
 python cr.py demo                # a complete run of a bundled synthetic corpus, offline
 ```
 
@@ -81,6 +83,28 @@ Every model-facing role can go to its own provider. There are 19 roles, listed i
   "budget": { "max_calls": 3000, "max_usd": 100, "concurrency": 4 }
 }
 ```
+
+### Failover: more than one provider for a role
+
+A role, or `default_provider`, may name an ordered list instead of one provider:
+
+```json
+{
+  "default_provider": ["deepseek", "openai", "gemini"],
+  "roles": { "quest_manager": ["openai", "deepseek"] }
+}
+```
+
+The first provider is asked. The next one is asked instead when it:
+
+- cannot be reached or times out, after the usual retries;
+- rejects the request with a content-policy error, or stops the answer with a content-filter or refusal signal;
+- returns an empty answer;
+- returns output that still fails JSON parsing or validation after one repair attempt.
+
+These checks are mechanical. The wording of an answer is never searched for refusal phrases, so a hedged answer is not mistaken for a refusal. Each request makes at most one pass through the list. Every skip is written to the call log with its reason, and the answer records which provider gave it (`failover` in `llm-calls.jsonl`). Checks that do not depend on a model, such as the word-for-word quotation check, apply whichever provider answered.
+
+`cr new --keys <folder>` writes this list for you from the key files it finds. `cr doctor <project>` tests each provider and checks each model name against the provider's own list.
 
 ### Provider types
 
