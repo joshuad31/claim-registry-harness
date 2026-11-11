@@ -33,5 +33,30 @@ def gate_contract(axis: dict, options: dict) -> str:
     return bedtime_gate.CONTRACT if _applies(axis, options) else ""
 
 
-def gate(axis: dict, report: dict | None, options: dict) -> list[dict]:
-    return bedtime_gate.check(report) if _applies(axis, options) else []
+def gate(axis: dict, report: dict | None, options: dict, facts: dict | None = None) -> list[dict]:
+    """The declared-use gate, plus three checks against facts the harness supplies (interim, until
+    the fuller harness-side gate is installed):
+
+    - the frame's target population and food gaps come from the module options, not the assessor;
+    - R16: no allocation driver may be an FRD drawn from a non-citable synthesis file;
+    - R17: every FRD named as an allocation driver must also be declared in the gate report.
+    """
+    if not _applies(axis, options):
+        return []
+    facts = facts or {}
+    errors = []
+    if isinstance(report, dict):
+        report = {**report, "frame": {**(report.get("frame") or {}),
+                                      "target_population": options.get("target_population", "persistent_high_tsh_boundary"),
+                                      "target_bedtime_min_gap_minutes": int(options.get("bedtime_gap_minutes", 180)),
+                                      "target_morning_min_gap_minutes": int(options.get("morning_gap_minutes", 60))}}
+        declared = {str(d.get("frd_id", "")).strip() for d in report.get("drivers", []) if isinstance(d, dict)}
+        missing = [d["frd_id"] for d in facts.get("drivers", []) if d["frd_id"] not in declared]
+        if missing:
+            errors.append({"rule": "R17", "message": "Allocation drivers not declared in the gate report: "
+                                                     + ", ".join(missing[:8])})
+    synth = [d["frd_id"] for d in facts.get("drivers", []) if d.get("is_synthesis")]
+    if synth:
+        errors.append({"rule": "R16", "message": "Allocation drivers drawn from non-citable synthesis files: "
+                                                 + ", ".join(synth[:8])})
+    return bedtime_gate.check(report) + errors

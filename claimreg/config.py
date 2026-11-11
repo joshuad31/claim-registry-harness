@@ -55,6 +55,15 @@ DEFAULT_CONFIG: dict[str, Any] = {
         "chunk_words": 320,
         "chunk_overlap_words": 40,
         "extensions": [".md", ".markdown", ".txt"],
+        # files that are someone's synthesis of other sources (for example AI-written analyses): kept
+        # for reading, never citable.  FRDs drawn from them are left out of the FRD evaluation.
+        # File names or glob patterns.
+        "synthesis_sources": [],
+        # second copies of a source already in the corpus: {"copy file": "the file to cite instead"}.
+        # FRDs drawn from a copy are left out of the FRD evaluation.
+        "duplicates": {},
+        # words of each source file read when the harness drafts the index
+        "index_max_words": 60000,
     },
     "frame": {
         "header_file": "01_FRAME/header.md",
@@ -193,6 +202,9 @@ DEFAULT_CONFIG: dict[str, Any] = {
         "enabled": True,
         "combined": True,             # also assess each axis's hypotheses against every axis's FRDs
         "partition_words": 30000,     # registry words per ACH_Eval call; a larger set is split
+        "max_output_tokens": 32000,   # per call; a cut-off answer is asked for once more with a larger budget
+        "axis_only": [],              # axes that get no combined reading (other axes' FRDs are kept out)
+        "gate_retry_cap": 2,          # corrections a domain gate may ask for before a person must look
     },
     # investigation-specific evidence rules (claimreg/domains/); none unless a project names one,
     # e.g. {"levo": {"bedtime_axis": "A2"}}

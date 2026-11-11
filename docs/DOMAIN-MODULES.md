@@ -31,3 +31,18 @@ person still reads the drivers against their sources.
 - Applies only to the axis named by `bedtime_axis` (default `A2`).
 - Not in the module yet: the new practical-strategy and decision-to-offer frames. Those are header
   changes and need the researcher's approval.
+
+## Added 2026-11-11 (evening), from the pre-run audit
+
+- A gate now receives `facts` from the harness: the allocation drivers with each FRD's real source
+  file, and the non-citable synthesis list. The `levo` gate uses them for three interim checks:
+  the frame's population and food gaps come from the module options, not the assessor; R16 (no
+  driver from a synthesis file); R17 (every allocation driver must be declared).
+- `corpus.synthesis_sources` and `corpus.duplicates`: FRDs from those files are left out of the FRD
+  evaluation and counted on the page.
+- `frd_assess.axis_only`: axes that get no combined reading.
+- `frd_assess.max_output_tokens` (default 32000); a cut-off answer is asked for once more.
+- `frd_assess.gate_retry_cap` (default 2): after that many corrections a person must look. Every
+  earlier evaluation is kept in `evaluation-history.jsonl` beside `evaluation.json`.
+- Still to install: the fuller harness-side gate (`bedtime_gate_v2.py`), rules R16 to R22 and the
+  A2-P-v1 / A2-D-v1 frames from the audit's `proposed/` folder.

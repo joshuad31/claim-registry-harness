@@ -90,6 +90,33 @@ class IsolationTest(unittest.TestCase):
         self.assertTrue(any("returned for correction" in p for p in rec["problems"]))
         self.assertTrue(rec["table"]["A1"]["axis_only"])         # the other axis is scored as usual
 
+    def test_corrections_are_capped_and_every_rejected_evaluation_is_kept(self):
+        proj = two_axis_project(self.tmp, extra=LEVO)
+        ctx = RunContext(proj, "RUN-K", create=True, quiet=True)
+        run_pipeline(ctx, stop="frd_assess")
+        for _ in range(4):
+            run_pipeline(RunContext(proj, "RUN-K", quiet=True), only=["frd_assess"], force=["frd_assess"])
+        d = ctx.for_axis("A2").p("frds", "06_evaluation")
+        kept = (d / "evaluation-history.jsonl").read_text(encoding="utf-8").splitlines()
+        self.assertEqual(len(kept), 2)                         # first report + 2 corrections, then it stops asking
+        self.assertTrue((d / "evaluation-attempt-01.md").exists())
+        rec = read_json(ctx.run_dir / "frd-evaluation.json")
+        self.assertTrue(any("no further automatic correction" in p for p in rec["problems"]))
+
+    def test_the_gate_checks_the_declaration_against_what_the_harness_knows(self):
+        from claimreg.domains import levo
+        fx = json.loads((Path(bedtime_gate.HERE) / "gate_examples.json").read_text(encoding="utf-8"))
+        axis, opt = {"axis_id": "A2"}, {"bedtime_axis": "A2"}
+        report = bedtime_gate.merge(fx["base_report"], {"frame": {"target_population": "broad_adults"}, "drivers": [
+            {"source_id": "bolk_2010", "frd_id": "FRD-1", "direction": "favors_bedtime", "inference_type": "direct_target_estimate"}]})
+        facts = {"drivers": [{"frd_id": "FRD-1", "favors": "A2-H1", "source_file": "bolk2010.pdf.md", "is_synthesis": False},
+                             {"frd_id": "FRD-2", "favors": "A2-H2", "source_file": "ai-summary.md", "is_synthesis": True}]}
+        rules = {e["rule"] for e in levo.gate(axis, report, opt, facts)}
+        self.assertIn("R9", rules)        # the assessor cannot widen the target population to dodge the boundary check
+        self.assertIn("R16", rules)       # a driver from a synthesis file
+        self.assertIn("R17", rules)       # an allocation driver left out of the declaration
+        self.assertEqual(levo.gate({"axis_id": "A1"}, None, opt, facts), [])
+
     def test_a_rerun_tells_the_assessor_what_the_gate_found(self):
         proj = two_axis_project(self.tmp, extra=LEVO)
         ctx = RunContext(proj, "RUN-R", create=True, quiet=True)

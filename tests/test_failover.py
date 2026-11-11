@@ -136,6 +136,21 @@ class FailoverTest(unittest.TestCase):
         self.assertEqual(r.provider, "a")
         self.assertEqual(seen, [None, 32000])
 
+    def test_a_cut_off_answer_is_asked_for_again_when_the_request_says_it_must_be_whole(self):
+        import dataclasses
+        seen = []
+
+        def cut_off(req, prov):
+            seen.append(req.max_output_tokens)
+            if len(seen) == 1:
+                return LLMResponse(text='{"ok": tr', finish_reason="length")
+            return {"ok": True, "from": prov.name}
+        llm = self.llm({"frd_validator": ["a", "b"]}, {"a": cut_off, "b": good})
+        r = llm.call(dataclasses.replace(self.req(), meta={"retry_if_truncated": True}))
+        self.assertEqual(r.provider, "a")
+        self.assertEqual(len(seen), 2)
+        self.assertGreaterEqual(seen[1], 32000)
+
     def test_call_many_survives_one_provider_refusing_everything(self):
         def filtered(req, prov):
             return LLMResponse(text="", finish_reason="content_filter")

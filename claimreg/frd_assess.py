@@ -27,6 +27,8 @@ This is not the final assessment.  The witness-level `assess` stage remains the 
 
 from __future__ import annotations
 
+import fnmatch
+import json
 import re
 import sqlite3
 import time
@@ -109,6 +111,26 @@ def max_diff(a: dict | None, b: dict | None) -> int | None:
     return max(abs(int(a.get(i, 0)) - int(b.get(i, 0))) for i in set(a) | set(b))
 
 
+def citable(ctx, frds: list[dict]) -> tuple[list[dict], dict]:
+    """Drop FRDs drawn from non-citable synthesis files and from duplicate copies of a source."""
+    c = ctx.cfg.get("corpus", {}) or {}
+    synth, dups = list(c.get("synthesis_sources") or []), dict(c.get("duplicates") or {})
+    keep, out = [], {"synthesis": [], "duplicate_copy": []}
+    for f in frds:
+        src = str(f.get("source_file", ""))
+        if any(fnmatch.fnmatch(src, p) for p in synth):
+            out["synthesis"].append(frd_id(f))
+        elif src in dups:
+            out["duplicate_copy"].append(frd_id(f))
+        else:
+            keep.append(f)
+    return keep, out
+
+
+def is_synthesis(ctx, source_file) -> bool:
+    return any(fnmatch.fnmatch(str(source_file), p) for p in ((ctx.cfg.get("corpus", {}) or {}).get("synthesis_sources") or []))
+
+
 def combined_rows(per_axis: dict[str, list[dict]]) -> list[dict]:
     """The disjoint union of the axes' validated FRDs, each row labelled with its home axis."""
     rows = [dict(f, home_axis=a) for a, fs in per_axis.items() for f in fs]
@@ -183,6 +205,14 @@ class _Job:
         self.problems: list[str] = []
         self.calls: list[dict] = []
         self.final: dict = {}
+        # every earlier evaluation of this axis and scope is kept; a gate may ask for a limited
+        # number of corrections, after which a person has to look
+        self.history = self.out / "evaluation-history.jsonl"
+        self.previous = read_json(self.out / "evaluation.json", default=None)
+        past = [json.loads(x) for x in read_text(self.history).splitlines() if x.strip()]
+        rejected = sum(1 for r in past + ([self.previous] if self.previous else []) if (r.get("gate") or {}).get("accepted") is False)
+        cap = int((ctx.cfg.get("frd_assess", {}) or {}).get("gate_retry_cap", 2))
+        self.capped = rejected > cap
 
     def _request(self, registry: str, fragments: str, tag: str, meta: dict, final: bool = False) -> LLMRequest:
         rules = domains.axis_rules(self.ctx.cfg, self.axis)
@@ -206,8 +236,10 @@ class _Job:
             else "frd id | source | validation verdict | claim",
             REGISTRY=registry)
         return LLMRequest(role="frd_assessor", system=system, user=user, expect_json=False,
-                          tag=f"frd-assess-{self.aid}-{self.scope}-{tag}", max_output_tokens=24000,
-                          meta={"axis": self.axis, "gauge": self.gauge, "hypothesis_ids": self.ids, **meta})
+                          tag=f"frd-assess-{self.aid}-{self.scope}-{tag}",
+                          max_output_tokens=int((self.ctx.cfg.get("frd_assess", {}) or {}).get("max_output_tokens", 32000)),
+                          meta={"axis": self.axis, "gauge": self.gauge, "hypothesis_ids": self.ids,
+                                "retry_if_truncated": True, **meta})
 
     def partition_requests(self) -> list[LLMRequest]:
         n = len(self.parts)
@@ -251,6 +283,20 @@ class _Job:
                               "partition_counts": [p["frd_count"] for p in good]})
 
     def finish(self, synthesis) -> dict:
+        if self.capped:
+            rec = dict(self.previous)
+            msg = (f"{self.aid} {self.scope}: the gate has returned this assessment {len(read_text(self.history).splitlines()) + 1} "
+                   f"times; no further automatic correction. A person must read the drivers (raise "
+                   f"frd_assess.gate_retry_cap to allow another attempt)")
+            rec["problems"] = [p for p in rec.get("problems", []) if "no further automatic" not in p] + [msg]
+            self.problems.append(msg)
+            return rec
+        if self.previous:
+            with open(self.history, "a", encoding="utf-8") as fh:
+                fh.write(json.dumps(self.previous, ensure_ascii=False) + "\n")
+            n = len(read_text(self.history).splitlines())
+            if (self.out / "evaluation.md").exists():
+                atomic_write_text(self.out / f"evaluation-attempt-{n:02d}.md", read_text(self.out / "evaluation.md"))
         good = [p for p in self.part_results if p.get("allocations")]
         mech = mechanical_mean([p["allocations"] for p in good], [p["frd_count"] for p in good], self.ids,
                                self.gauge) if good and len(good) == len(self.parts) else None
@@ -285,7 +331,11 @@ class _Job:
             if isinstance(report, dict):       # the harness, not the model, supplies the arithmetic the gate checks
                 report = {**report, "allocations": vec,
                           "frame": {**(report.get("frame") or {}), "hypothesis_ids": self.ids, "gauge": self.gauge}}
-            gate = domains.run_gates(self.ctx.cfg, self.axis, report)
+            facts = {"hypothesis_ids": self.ids, "gauge": self.gauge,
+                     "drivers": [{"frd_id": d["frd_id"], "favors": d["favors"], "source_file": d["source_file"],
+                                  "is_synthesis": is_synthesis(self.ctx, d["source_file"])} for d in drivers],
+                     "synthesis_sources": list((self.ctx.cfg.get("corpus", {}) or {}).get("synthesis_sources") or [])}
+            gate = domains.run_gates(self.ctx.cfg, self.axis, report, facts)
             if gate and not gate["accepted"]:
                 rules = sorted({e["rule"] for e in gate["errors"]})
                 self.problems.append(f"{self.aid} {self.scope}: returned for correction by the {'/'.join(gate['modules'])} "
@@ -409,8 +459,11 @@ def frd_assess_stage(ctx) -> dict:
     mix, dbs = {}, {}
     if ctx.axis_layout:
         scopes = {sc.axis_id: sc for sc in ctx.scopes()}
-        per_axis = {a: _rows(sc, REL_RETAINED) for a, sc in scopes.items()}
+        per_axis, excluded = {}, {}
+        for a, sc in scopes.items():
+            per_axis[a], excluded[a] = citable(ctx, _rows(sc, REL_RETAINED))
         rows = combined_rows(per_axis)
+        axis_only = set(cfg.get("axis_only") or [])
         shared = ctx.axis_dir(SHARED_FOLDER) / COMBINED_DIR
         for a, sc in scopes.items():
             mix[a] = _source_mix(sc)
@@ -423,14 +476,15 @@ def frd_assess_stage(ctx) -> dict:
                 "labelled `home_axis`. The canonical record is in the home axis's folder. `for-<axis>/` holds the "
                 "preliminary assessment of that axis's hypotheses against this whole set.\n\n"
                 + "\n".join(f"- {a}: {len(fs)}" for a, fs in per_axis.items()) + f"\n- combined: {len(rows)}\n"))
-            jobs += [_Job(ctx, axes[a], rows, "combined", shared / f"for-{a}", gauge, words) for a in axes]
+            jobs += [_Job(ctx, axes[a], rows, "combined", shared / f"for-{a}", gauge, words) for a in axes
+                     if a not in axis_only]
     else:
         # single-database run: the FRDs are not filed by axis, so only the whole-set reading exists
-        rows = sorted(_rows(ctx, REL_RETAINED), key=frd_id)
-        per_axis = {}
+        rows, ex = citable(ctx, _rows(ctx, REL_RETAINED))
+        rows, per_axis, excluded = sorted(rows, key=frd_id), {}, {"all": ex}
         jobs = [_Job(ctx, a, rows, "combined", ctx.p("frds", f"{EVAL_DIR}/for-{aid}"), gauge, words)
                 for aid, a in axes.items()]
-    live = [j for j in jobs if j.frds]
+    live = [j for j in jobs if j.frds and not j.capped]
     reqs = [(j, r) for j in live for r in j.partition_requests()]
     resp = ctx.llm.call_many([r for _, r in reqs]) if reqs else []
     pos = 0
@@ -458,6 +512,8 @@ def frd_assess_stage(ctx) -> dict:
     record = {
         "run": ctx.run_id, "label": "PRELIMINARY, evidence-level assessment of the validated FRDs", "gauge": gauge,
         "frd_counts": {**{a: len(fs) for a, fs in per_axis.items()}, "combined": len(rows)},
+        "excluded_frds": {a: {k: len(v) for k, v in e.items()} for a, e in excluded.items()},
+        "excluded_frd_ids": excluded,
         "combined_is_disjoint_union": (len(rows) == sum(len(fs) for fs in per_axis.values())) if per_axis else None,
         "table": table,
         "final_score_rule": "none chosen: the axis-only and combined vectors are reported side by side; the "
@@ -490,6 +546,10 @@ def render(ctx, rec: dict, axes: dict) -> str:
             f"{a}: {f['assigned_after_the_fact']} of {tot[a]} questions were filed under the axis after the fact"
             for a, f in rec["axis_filing"].items()) +
             ". The axis filing is provisional, so the axis-only vectors below are provisional too.", ""]
+    if any(n for e in rec.get("excluded_frds", {}).values() for n in e.values()):
+        out += ["Left out of every reading as not citable: " + "; ".join(
+            f"{a}: {e['synthesis']} from synthesis files, {e['duplicate_copy']} from duplicate copies"
+            for a, e in rec["excluded_frds"].items()) + ".", ""]
     out += [f"Each row sums to the gauge, G = {g}. No blended score is chosen: read the first two rows; the third is "
             f"for comparison only.", ""]
     for a, t in rec["table"].items():

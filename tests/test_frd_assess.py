@@ -175,6 +175,26 @@ class FrdAssessPipelineTest(unittest.TestCase):
             finally:
                 con.close()
 
+    def test_frds_from_synthesis_files_and_duplicate_copies_are_left_out(self):
+        proj = project(self.tmp)
+        ctx = RunContext(proj, "RUN-C", create=True, quiet=True)
+        self.run_it(ctx, stop="frd_retain")
+        rows = fa._rows(ctx.for_axis("A1"), fa.REL_RETAINED)
+        files = sorted({r["source_file"] for r in rows})
+        self.assertGreater(len(files), 1)
+        ctx2 = RunContext(proj, "RUN-C", quiet=True)
+        ctx2.cfg["corpus"]["synthesis_sources"] = [files[0]]
+        ctx2.cfg["frd_assess"]["axis_only"] = ["A2"]
+        self.run_it(ctx2)
+        rec = read_json(ctx.run_dir / "frd-evaluation.json")
+        gone = [fa.frd_id(r) for r in rows if r["source_file"] == files[0]]
+        self.assertEqual(sorted(rec["excluded_frd_ids"]["A1"]["synthesis"]), sorted(gone))
+        self.assertEqual(rec["frd_counts"]["A1"], len(rows) - len(gone))
+        self.assertTrue(all(d["source_file"] != files[0] for d in rec["results"]["A1"]["axis-only"]["drivers"]))
+        self.assertIn("not citable", (ctx.run_dir / "FRD-EVALUATION.md").read_text(encoding="utf-8"))
+        self.assertNotIn("combined", rec["results"]["A2"])           # axis_only: no other axis's FRDs reach A2
+        self.assertIn("combined", rec["results"]["A1"])
+
     def test_a_single_database_run_gets_the_whole_set_reading_only(self):
         proj = project(self.tmp, axes={"separate_databases": False})
         ctx = RunContext(proj, "RUN-O", create=True, quiet=True)

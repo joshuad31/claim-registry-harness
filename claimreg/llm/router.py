@@ -302,7 +302,10 @@ class LLM:
         resp.attempts = attempt
         # A reasoning model can spend its whole output budget thinking and return no text
         # (finish "length").  Ask once more with a larger budget before giving up on it.
-        if is_live and not (resp.text or "").strip() and (resp.finish_reason or "").lower() in ("length", "max_tokens"):
+        # A request can also say its answer is useless if cut off (the part the harness reads is at the
+        # end): then a partial answer is retried the same way.
+        cut = (resp.finish_reason or "").lower() in ("length", "max_tokens")
+        if is_live and cut and (not (resp.text or "").strip() or (req.meta or {}).get("retry_if_truncated")):
             import dataclasses
             cur = int(req.max_output_tokens or prov.cfg.get("max_output_tokens") or 8000)
             bigger = dataclasses.replace(req, max_output_tokens=min(max(cur * 4, 32000), 64000))
@@ -310,7 +313,8 @@ class LLM:
                 r2 = prov.complete(bigger, key)
                 r2.attempts = attempt + 1
                 r2.cost_usd = (r2.cost_usd or 0) + (resp.cost_usd or 0) or None
-                if (r2.text or "").strip():
+                if (r2.text or "").strip() and ((r2.finish_reason or "").lower() not in ("length", "max_tokens")
+                                               or not (resp.text or "").strip()):
                     resp = r2
             except ProviderError:
                 pass

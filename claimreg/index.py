@@ -110,7 +110,8 @@ def compact_index(parsed: dict, corpus=None, max_words_per_entry: int = 45) -> s
     return "\n".join(rows)
 
 
-def build_index_requests(ctx, question: str, max_words: int = 6000) -> list[LLMRequest]:
+def build_index_requests(ctx, question: str, max_words: int | None = None) -> list[LLMRequest]:
+    max_words = int(max_words or (ctx.cfg.get("corpus", {}) or {}).get("index_max_words", 60000))
     reqs = []
     for fn in ctx.corpus.filenames:
         text = ctx.corpus.text(fn)
