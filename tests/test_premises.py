@@ -55,7 +55,8 @@ class UnitRevisionTest(unittest.TestCase):
         ctx = RunContext(proj, "RUN-U", create=True, quiet=True)
         out = run_pipeline(ctx, stop="units")
         self.assertEqual(out["status"], "complete", out)
-        return ctx, ctx.load("matching", "01_hypothesis-units/units.json"), ctx.stage_state()["units"]["summary"]
+        # one evidence database per axis: the units stage reports per axis (these frames have one)
+        return ctx, ctx.load("matching", "01_hypothesis-units/units.json"), ctx.stage_state()["units"]["summary"]["A1"]
 
     def test_verdict_sized_units_get_one_revision(self):
         def script(req, prov):
@@ -182,8 +183,8 @@ class RoutedMatchingPipelineTest(unittest.TestCase):
         led = ctx.load("coverage", "premise-ledger.json")
         self.assertTrue(any(r["status"] == "SUPPORTED_WITH_ASSUMPTION"
                             for rows in led["hypotheses"].values() for r in rows))
-        self.assertTrue(ctx.p("coverage", "PREMISE-LEDGER.md").exists())
-        report = ctx.p("reports", "CRUX-REPORT.md").read_text(encoding="utf-8")
+        self.assertTrue(ctx.scopes()[0].p("coverage", "PREMISE-LEDGER.md").exists())
+        report = ctx.scopes()[0].p("reports", "CRUX-REPORT.md").read_text(encoding="utf-8")
         self.assertIn("What each hypothesis rests on", report)
         self.assertIn("supported if a transfer is granted", report)
         from claimreg.funnel import funnel

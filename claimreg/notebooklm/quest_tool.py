@@ -35,6 +35,8 @@ THOUGHTS = re.compile(r"^\s*Thoughts\s*\n(?:[\s\S]*?\n)?\s*expand_(more|less)\s*
 
 READY = re.compile(r"^##\s+Ready questions\s*$", re.I | re.M)
 NUMBERED = re.compile(r"^\s*(\d+)[.)]\s+(.*)$")
+# a ready question is filed under exactly one axis: "[axis: A2] [target: ...] question"
+AXIS_PREFIX = re.compile(r"^\[\s*axis\s*:?\s*(?P<axis>A\d+)\s*\]\s*", re.I)
 TARGET_PREFIX = re.compile(r"^\[\s*target\s*:\s*(?P<target>.+?)\]\s*", re.I)
 HEADING2 = re.compile(r"^##\s+", re.M)
 SOURCE_TOKEN = re.compile(r"[A-Za-z0-9][A-Za-z0-9._-]*\.(?:md|pdf|txt)\b", re.I)
@@ -301,16 +303,21 @@ def packet(packet_path, answers_dir, index=None, start=None, dry_run=False):
     nxt = _next_qid(answers_dir, start)
     queued = []
     for i, item in enumerate(items):
-        target = None
+        target = axis = None
+        match = AXIS_PREFIX.match(item)
+        if match:
+            axis = match.group("axis").upper()
+            item = item[match.end():].strip()
         match = TARGET_PREFIX.match(item)
         if match:
             target = match.group("target").strip()
             item = item[match.end():].strip()
         qid = "Q%04d" % (nxt + i)
-        entry = {"qid": qid, "target": target, "text": item,
+        entry = {"qid": qid, "axis": axis, "target": target, "text": item,
                  "warnings": firewall_warnings(item, known, asked)}
         queued.append(entry)
         if not dry_run:
+            # the queue file is what reaches the notebook page: the question and nothing else
             (queue / (qid + ".json")).write_text(
                 json.dumps({"qid": qid, "attempt": "A01", "text": item}, ensure_ascii=False, indent=1),
                 encoding="utf-8")

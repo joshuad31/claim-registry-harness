@@ -1243,6 +1243,34 @@ class LocalProvider(BaseProvider):
                  "artifact.", "", "```json", json.dumps(data, ensure_ascii=False, indent=1), "```", ""]
         return "\n".join(lines)
 
+    def _role_frd_assessor(self, req: LLMRequest) -> str:
+        """Bookkeeping only: counts the validated FRDs that share each hypothesis's terminology."""
+        from ..frd_assess import largest_remainder, mechanical_mean
+        axis = req.meta.get("axis") or {}
+        gauge = int(req.meta.get("gauge", 64) or 64)
+        ids = [h["id"] for h in axis.get("hypotheses", [])]
+        drivers = []
+        if req.meta.get("partition_vectors"):
+            vec = mechanical_mean(req.meta["partition_vectors"], req.meta["partition_counts"], ids, gauge)
+        else:
+            rows = [ln.split(" | ") for ln in self._between(req.user, "VALIDATED FRD REGISTRY", "END OF REGISTRY").splitlines()
+                    if " | " in ln and not ln.startswith("(")]
+            scores = {}
+            for h in axis.get("hypotheses", []):
+                hc = _content(h.get("statement", "") + " " + h.get("assumptions", ""))
+                hits = [r for r in rows if _coverage(hc, _content(r[-1])) >= 0.45]
+                scores[h["id"]] = 1 + len(hits)
+                drivers += [{"frd_id": r[0].strip(), "favors": h["id"], "why": "shares the hypothesis's terminology"}
+                            for r in hits[:6]]
+            vec = largest_remainder(scores, gauge)
+        data = {"allocations": vec, "basis_confidence": "local bookkeeping only: count of validated FRDs sharing "
+                "terminology with each hypothesis", "drivers": drivers[:25],
+                "strongest_objection": "not assessed by the local engine",
+                "reversal_finding": "not assessed by the local engine"}
+        return ("# Preliminary FRD assessment (local engine)\n\nThese allocations count shared terminology. They are "
+                "**not** an ACH_Eval judgment. Route a model to the `frd_assessor` role to replace this artifact.\n\n"
+                "```json\n" + json.dumps(data, ensure_ascii=False, indent=1) + "\n```\n")
+
     def _role_reporter(self, req: LLMRequest) -> dict:
         m = req.meta.get("metrics") or {}
         cov = req.meta.get("coverage") or {}

@@ -26,3 +26,14 @@ def scratch_dir(tag: str = "crtest") -> Path:
 
 def cleanup(path: Path) -> None:
     shutil.rmtree(path, ignore_errors=True)
+
+
+# The researcher's stop after the preliminary FRD evaluation is on by default.  The pipeline tests
+# were written to run straight through, so it is off for the suite; tests/test_frd_assess.py turns
+# it back on to test it.
+import sys as _sys  # noqa: E402
+
+_sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+from claimreg import config as _config  # noqa: E402
+
+_config.DEFAULT_CONFIG["pipeline"]["stop_after"] = ""

@@ -43,6 +43,54 @@ RUN_SUBFOLDERS = [
 ]
 
 
+# --------------------------------------------------------------------------- #
+# axis databases (docs/AXIS-DATABASES.md)
+# --------------------------------------------------------------------------- #
+# Every axis of the header has its own evidence database: one folder that holds that axis's
+# questions, answers, FRDs, validations, witnesses, units, match records, coverage, crux and reports.
+# No file in an axis folder holds material of another axis.  Records that belong to more than one
+# axis by nature (the Manager's cross-axis quest state and feedback, and relations between one axis's
+# witnesses and another axis's units) live in the SHARED database.  Run control and the frozen frame
+# inputs (header, index, Archivist prompt) stay at run level.
+AXIS_LAYOUT = "axis-databases-v1"
+SHARED_FOLDER = "SHARED"
+# What is never individualized per axis (spec 10, section 6.4, rule 7): tools and run machinery
+# that no assessment is run on.  Recorded in RUN-CONFIG.json so a verifier can assert that each
+# exists once and that no axis folder holds a copy.
+SHARED_RESOURCES = [
+    {"resource": "run control", "path": "00_RUN-CONTROL/"},
+    {"resource": "frozen frame inputs (header, index, Archivist prompt, frame)", "path": "01_FRAME/"},
+    {"resource": "quest machinery (Manager state, checkpoints, feedback, closeout)", "path": "SHARED/02_DISCOVERY/"},
+    {"resource": "language tools (dictionary, canonicalizer rulebook)", "path": "SHARED/04_LANGUAGE-TOOLS/"},
+    {"resource": "matcher qualification", "path": "SHARED/07_MATCHING/02_match-fixtures/"},
+]
+SHARED_FRAME_FILES = {"header.md", "index.md", "archivist-custom-prompt.txt", "frame.json", "README.md"}
+SHARED_DISCOVERY = ("03_quest-state", "04_ach-eval-checkpoints", "05_feedback", "06_closeout", "99_superseded")
+_SLUG_STOP = {"the", "a", "an", "of", "about", "for", "to", "and", "or", "in", "on", "with", "from", "by", "is",
+              "does", "do", "should", "be", "that", "this", "at", "as"}
+
+
+def axis_slug(axis: dict, labels: dict | None = None) -> str:
+    """A short, readable label for an axis folder, e.g. 'bedtime-dosing'."""
+    label = (labels or {}).get(axis.get("axis_id", "")) or axis.get("name") or axis.get("question") or ""
+    words = [w for w in re.findall(r"[a-z0-9]+", label.lower()) if w not in _SLUG_STOP]
+    out: list[str] = []
+    for w in words:
+        if len(out) >= 4 or len("-".join(out + [w])) > 34:
+            break
+        out.append(w)
+    return "-".join(out)
+
+
+def axis_folder_name(axis: dict, labels: dict | None = None) -> str:
+    slug = axis_slug(axis, labels)
+    return f"AXIS-{axis['axis_id']}" + (f"__{slug}" if slug else "")
+
+
+def axis_of_hypothesis(hid: str) -> str:
+    return str(hid).split("-")[0]
+
+
 def new_run_id(prefix: str = "RUN") -> str:
     ts = _dt.datetime.now(_dt.timezone.utc).strftime("%Y%m%dT%H%M%SZ")
     return f"{prefix}-{ts}"
@@ -80,10 +128,20 @@ class RunContext:
             if not create:
                 raise FileNotFoundError(f"run not found: {self.run_dir}")
             ensure_dir(self.run_dir)
-            for f in RUN_FOLDERS.values():
-                ensure_dir(self.run_dir / f)
-            for sub in RUN_SUBFOLDERS:
-                ensure_dir(self.run_dir / sub)
+            if bool((self.cfg.get("axes") or {}).get("separate_databases", True)):
+                # one evidence database per axis: only run control and the frame live at run level;
+                # the axis folders are made when the frame is frozen
+                for f in ("00_RUN-CONTROL", "01_FRAME", "00_RUN-CONTROL/model-and-human-decisions",
+                          "00_RUN-CONTROL/prompt-snapshots"):
+                    ensure_dir(self.run_dir / f)
+                write_json(self.run_dir / "RUN-CONFIG.json",
+                           {"run_id": run_id, "created": utcnow(), "project": self.cfg["project"],
+                            "layout": AXIS_LAYOUT, "shared_resources": SHARED_RESOURCES})
+            else:
+                for f in RUN_FOLDERS.values():
+                    ensure_dir(self.run_dir / f)
+                for sub in RUN_SUBFOLDERS:
+                    ensure_dir(self.run_dir / sub)
             write_json(self.project_dir / "02_RUNS" / "CURRENT.json",
                        {"run_id": run_id, "updated": utcnow()})
         # a run may pin its own config overrides (forks use this)
@@ -100,6 +158,46 @@ class RunContext:
         self._frame: dict | None = None
 
     # ------------------------------------------------------------------ #
+    axis_id = None        # a RunContext is the whole run; AxisContext narrows it to one axis
+
+    @property
+    def axis_layout(self) -> bool:
+        """True when this run keeps one evidence database per axis (new runs do; old runs do not)."""
+        if getattr(self, "_axis_layout", None) is None:
+            rc = self.run_config
+            if not rc:
+                return False
+            self._axis_layout = rc.get("layout") == AXIS_LAYOUT
+        return self._axis_layout
+
+    def axis_ids(self) -> list[str]:
+        return [a["axis_id"] for a in self.frame.get("axes", [])]
+
+    def axis_dir(self, axis_id: str) -> Path:
+        if axis_id == SHARED_FOLDER:
+            return self.run_dir / SHARED_FOLDER
+        labels = (self.cfg.get("axes") or {}).get("labels") or {}
+        for a in self.frame.get("axes", []):
+            if a["axis_id"] == axis_id:
+                return self.run_dir / axis_folder_name(a, labels)
+        raise KeyError(f"no axis {axis_id} in the frame")
+
+    def for_axis(self, axis_id: str) -> "AxisContext":
+        return AxisContext(self, axis_id)
+
+    def shared(self) -> "AxisContext":
+        return AxisContext(self, SHARED_FOLDER)
+
+    def scopes(self) -> list:
+        """The contexts a per-axis stage runs in: one per axis, or just this run for an old-layout run."""
+        if not self.axis_layout:
+            return [self]
+        return [self.for_axis(a) for a in self.axis_ids()]
+
+    def discovery_ctx(self):
+        """Where the quest's cross-axis working records live (SHARED in an axis-database run)."""
+        return self.shared() if self.axis_layout else self
+
     def p(self, folder_key: str, *parts: str) -> Path:
         base = self.run_dir / RUN_FOLDERS.get(folder_key, folder_key)
         return base.joinpath(*parts) if parts else base
@@ -167,7 +265,40 @@ class RunContext:
         return path
 
     def load(self, folder_key: str, rel: str, default=None):
-        return read_json(self.p(folder_key, rel), default=default)
+        path = self.p(folder_key, rel)
+        if path.exists() or not self.axis_layout:
+            return read_json(path, default=default)
+        return self.load_whole_run(folder_key, rel, default)
+
+    def load_whole_run(self, folder_key: str, rel: str, default=None):
+        """A read-only view of one record type across every axis database (plus SHARED), for tools
+        that report on the whole run (`cr verify`, `cr funnel`, `cr status`).  Nothing is stored this
+        way: on disk each axis keeps its own file."""
+        sh = self.shared().p(folder_key, rel)
+        if sh.exists():
+            return read_json(sh, default=default)
+        try:
+            scopes = self.scopes()
+        except FileNotFoundError:
+            return default
+        parts = [read_json(sc.p(folder_key, rel), default=None) for sc in scopes]
+        if (folder_key, rel) == ("matching", "03_match-records/relations.json"):
+            for a in self.axis_ids():
+                parts.append(read_json(self.axis_dir(SHARED_FOLDER) / f"CROSS-AXIS-into-{a}" / "07_MATCHING"
+                                       / "03_match-records" / "relations.json", default=None))
+        parts = [x for x in parts if x is not None]
+        if not parts:
+            return default
+        out = parts[0]
+        for x in parts[1:]:
+            out = _combine(out, x)
+        return out
+
+    def artifact_paths(self, folder_key: str, *parts: str) -> list[tuple[str, Path]]:
+        """(axis, path) of the same document in every axis database - or the one path of an old-layout run."""
+        if not self.axis_layout:
+            return [("", self.p(folder_key, *parts))]
+        return [(sc.axis_id, sc.p(folder_key, *parts)) for sc in self.scopes()]
 
     def register(self, path: Path, kind: str, parents: list[str] | None = None) -> None:
         rel = path.relative_to(self.run_dir).as_posix()
@@ -193,6 +324,122 @@ class RunContext:
     def archivist_instructions(self) -> str:
         p = self.p("frame", "archivist-custom-prompt.txt")
         return read_text(p) if p.exists() else ""
+
+
+def _combine(a, b):
+    """Join two axes' copies of the same record type for a whole-run view."""
+    if isinstance(a, list) and isinstance(b, list):
+        return a + b
+    if isinstance(a, dict) and isinstance(b, dict):
+        out = dict(a)
+        for k, v in b.items():
+            out[k] = _combine(out[k], v) if k in out else v
+        return out
+    if isinstance(a, bool) or isinstance(b, bool):
+        return a and b
+    if isinstance(a, (int, float)) and isinstance(b, (int, float)):
+        return a + b
+    return a
+
+
+class AxisContext:
+    """One axis's view of a run (or the SHARED database's).
+
+    Stage code is written against a RunContext and never mentions axes.  Given an AxisContext it
+    reads and writes only inside that axis's folder, and sees a frame that contains only that axis,
+    so its questions, FRDs, witnesses, units, matches, coverage, crux and reports all land in the
+    axis's own database.  Run control (log, registry, model calls, stage state) and the frozen frame
+    inputs stay with the run."""
+
+    def __init__(self, base: RunContext, axis_id: str):
+        self._base = base
+        self.axis_id = axis_id
+        self._frame: dict | None = None
+        # True while a later stage of this axis runs (joint, coverage, crux, assess, report): reads
+        # then include the SHARED cross-axis evidence that bears on this axis's units
+        self.merge_shared: bool = False
+
+    def __getattr__(self, name):            # cfg, llm, prompts, corpus, log, run_dir, project_dir, ...
+        return getattr(self._base, name)
+
+    @property
+    def axis_layout(self) -> bool:
+        return True
+
+    @property
+    def is_shared(self) -> bool:
+        return self.axis_id == SHARED_FOLDER
+
+    @property
+    def root(self) -> Path:
+        return self._base.axis_dir(self.axis_id)
+
+    @property
+    def frame(self) -> dict:
+        if self._frame is None:
+            full = self._base.frame
+            if self.is_shared:
+                self._frame = full
+            else:
+                ids = {a["axis_id"] for a in full.get("axes", [])}
+
+                def mine(test: dict) -> bool:
+                    named = set(re.findall(r"\bA\d+\b", str(test.get("test", "")))) & ids
+                    return not named or self.axis_id in named
+                self._frame = {**full, "axes": [a for a in full.get("axes", []) if a["axis_id"] == self.axis_id],
+                               "decisive_tests": [t for t in full.get("decisive_tests", []) if mine(t)],
+                               "axis_scope": self.axis_id}
+        return self._frame
+
+    def p(self, folder_key: str, *parts: str) -> Path:
+        folder = RUN_FOLDERS.get(folder_key, folder_key)
+        if folder_key == "control" or folder == "00_RUN-CONTROL":
+            return self._base.p(folder_key, *parts)
+        if folder == "01_FRAME" and parts and parts[0] in SHARED_FRAME_FILES:
+            return self._base.p(folder_key, *parts)
+        root = self.root
+        if folder == "02_DISCOVERY" and parts and str(parts[0]).split("/")[0] in SHARED_DISCOVERY:
+            root = self._base.axis_dir(SHARED_FOLDER)      # the Manager's cross-axis records
+        if folder == "07_MATCHING" and parts and str(parts[0]).split("/")[0] == "02_match-fixtures":
+            root = self._base.axis_dir(SHARED_FOLDER)      # the matcher is qualified once, for every axis
+        if folder == "04_LANGUAGE-TOOLS":
+            # the dictionary and the canonicalizer rulebook are one shared resource for every axis:
+            # nobody assesses them, and one vocabulary must serve all the axes' witnesses and units
+            root = self._base.axis_dir(SHARED_FOLDER)
+        base = root / folder
+        return base.joinpath(*parts) if parts else base
+
+    def save(self, folder_key: str, rel: str, obj, kind: str | None = None,
+             parents: list[str] | None = None) -> Path:
+        if self.merge_shared and (folder_key, rel) == ("matching", "03_match-records/relations.json"):
+            from .axes import split_relations_on_save
+            obj = split_relations_on_save(self, obj)
+        path = self.p(folder_key, rel)
+        write_json(path, obj)
+        self._base.register(path, f"{self.axis_id}:{kind or rel}", parents)
+        return path
+
+    def load(self, folder_key: str, rel: str, default=None):
+        if self.merge_shared:
+            from .axes import merged_load
+            return merged_load(self, folder_key, rel, default)
+        path = self.p(folder_key, rel)
+        if self.is_shared and not path.exists():
+            # a shared stage (the language tools) reads every axis's records together
+            return self._base.load_whole_run(folder_key, rel, default)
+        return read_json(path, default=default)
+
+    def register(self, path: Path, kind: str, parents: list[str] | None = None) -> None:
+        self._base.register(path, f"{self.axis_id}:{kind}", parents)
+
+    def archivist_instructions(self) -> str:
+        return self._base.archivist_instructions()
+
+    def scopes(self) -> list:
+        return [self]
+
+    def discovery_ctx(self):
+        return self._base.discovery_ctx()
 
 
 def append_text(path: Path, text: str) -> None:

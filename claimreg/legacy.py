@@ -68,6 +68,13 @@ def import_chatgpt_ptx(chatgpt_run: Path, project_dir: Path, run_id: str, copy_c
             "default_provider": "queue",
         })
     ctx = RunContext(project_dir, run_id, create=True)
+    # an imported legacy run carries no record of which axis each question was asked for, so it keeps
+    # the single-database layout it was produced in (docs/AXIS-DATABASES.md, "Old runs")
+    rc = ctx.run_config
+    if rc.get("layout"):
+        rc.pop("layout")
+        write_json(ctx.run_dir / "RUN-CONFIG.json", rc)
+    ctx._axis_layout = False
     ctx.set_stage("corpus", "running")
     ctx.set_stage("corpus", "done", stage_corpus(ctx))
     ctx.set_stage("index", "done", {"index": "supplied (imported)"})

@@ -929,8 +929,11 @@ def cmd_quest(a) -> int:
         res = run_pipeline(ctx)
         print(json.dumps(res, indent=2, default=str))
         if res.get("status") == "complete":
-            print(f"\nreport:  {ctx.p('reports', 'CRUX-REPORT.md')}\nledger:  {ctx.p('coverage', 'PREMISE-LEDGER.md')}"
-                  f"\nbrowser: {ctx.p('reports', 'report.html')}")
-        return 0 if res.get("status") in ("complete", "waiting") else 2
+            from .pipeline import print_outputs
+            print_outputs(ctx)
+        if res.get("status") == "halted":
+            print(f"\nHalted for your decision after {res['gate']}. Read {ctx.run_dir / res['read']}\n"
+                  f"To run the later stages:\n  {res['continue_with']}")
+        return 0 if res.get("status") in ("complete", "waiting", "halted") else 2
     print(f"Next: {cmd}")
     return 0

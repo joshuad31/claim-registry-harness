@@ -98,7 +98,7 @@ class LocalPipelineTest(unittest.TestCase):
         ws = ctx.load("witnesses", "05_released/witnesses.json")
         self.assertTrue(ws, "the local engine released no witnesses")
         self.assertTrue(all(w["words"] <= w["ceiling"] for w in ws))
-        self.assertTrue((ctx.p("reports", "report.html")).exists())
+        self.assertTrue((ctx.scopes()[0].p("reports", "report.html")).exists())
         # a rerun with the same inputs must not ask anything again
         from claimreg.util import read_jsonl
         log = ctx.p("control", "model-and-human-decisions", "llm-calls.jsonl")

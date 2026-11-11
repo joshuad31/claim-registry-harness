@@ -63,13 +63,19 @@ Useful flags:
 | `--only report` | Run only the listed stages |
 | `--force report` | Rerun a finished stage |
 | `--run RUN-…` | Choose a run (the default is the current one) |
+| `--continue` | Release the run past the stop after `frd_assess` and run the later stages |
 
 Stages, in order: `corpus, index, archivist_prompt, frame, units, quest, frd_generate, frd_validate,
-frd_retain, language, witnesses, transcode, qualify, match, joint, coverage, crux, assess, report`.
+frd_retain, frd_assess, language, witnesses, transcode, qualify, match, joint, coverage, crux, assess, report`.
+
+**The run halts after `frd_assess`.** That stage runs ACH_Eval on each axis's validated FRDs and on
+the combined set, and writes `FRD-EVALUATION.md` at the run root. Read it, then decide whether the
+dictionary, witnesses and matching are worth building: `cr run <project> --run <id> --continue`.
+To never halt, set `"pipeline": {"stop_after": ""}` in `project.json`. See `docs/FRD-EVALUATION.md`.
 
 ## 2. Choose who answers the model calls
 
-Every model-facing role can go to its own provider. There are 19 roles, listed in
+Every model-facing role can go to its own provider. There are 20 roles, listed in
 `claimreg/config.py`. Set the routing in `project.json`:
 
 ```json
@@ -208,6 +214,8 @@ Everything is inside `02_RUNS\<run>\`. Each stage folder has a README.md that ex
 - what the stage takes and what it produces;
 - how to check it;
 - what it does **not** establish.
+
+A run keeps one evidence database per axis (`AXIS-A1__<name>`, `AXIS-A2__<name>`, ... and `SHARED`); the paths below are inside each axis folder. `RUN-MAP.md` lists them. Full rules: `docs/AXIS-DATABASES.md`.
 
 | Open first | What it is |
 |---|---|

@@ -12,7 +12,7 @@ from .config import resolve_path
 from .corpus import current_manifest, ingest
 from .llm.base import BudgetExceeded, LLMRequest, Pending, ProviderError
 from .llm.queue_tools import export_batches, queue_dir, queue_status
-from .runctx import RUN_FOLDERS, RunContext
+from .runctx import RUN_FOLDERS, SHARED_FOLDER, RunContext
 from .util import atomic_write_text, read_json, read_text, utcnow, write_json
 
 
@@ -128,9 +128,10 @@ def _reset_quest(ctx: RunContext) -> list[str]:
     """Move the quest's saved state aside (never deleted) so a forced, forked or upstream-changed
     quest starts again from round 1.  Cached model answers make identical rounds free."""
     import shutil
-    d = ctx.p("discovery")
-    moved = []
+    from .axes import reset_axis_discovery
+    d = ctx.discovery_ctx().p("discovery")
     stamp = utcnow().replace(":", "").replace("-", "")
+    moved = reset_axis_discovery(ctx, stamp)
     for sub in ("01_issued-questions", "02_query-responses", "03_quest-state", "04_ach-eval-checkpoints",
                 "05_feedback", "06_closeout"):
         src = d / sub
@@ -153,6 +154,8 @@ STAGES = [
     Stage("frd_generate", "frds", _wrap("frd.generate_frds"), "Candidate FRDs (one response at a time)"),
     Stage("frd_validate", "frds", _wrap("frd.validate_frds"), "Blind source-only validation + quote check"),
     Stage("frd_retain", "frds", _wrap("frd.retain_frds"), "Retention and archival (Problems-note budgets)"),
+    Stage("frd_assess", "frds", _wrap("frd_assess.frd_assess_stage"),
+          "Preliminary ACH_Eval on the validated FRDs: per axis, then combined"),
     Stage("language", "language", _wrap("language.language_stage"), "Custom dictionary and canonicalizer"),
     Stage("witnesses", "witnesses", _wrap("witness.build_witnesses"), "Question-guided witnesses + fidelity audit"),
     Stage("transcode", "transcoding", _wrap("language.transcode_stage"), "Transcode witnesses and units"),
@@ -165,6 +168,71 @@ STAGES = [
     Stage("report", "reports", _wrap("report.report_stage"), "Crux report and HTML audit browser"),
 ]
 STAGE_NAMES = [s.name for s in STAGES]
+# In a run that keeps one evidence database per axis, these stages run once per axis, each inside
+# that axis's own folder and seeing only that axis's part of the frame (docs/AXIS-DATABASES.md).
+# The language stage is not per axis: the dictionary and canonicalizer are SHARED resources.
+PER_AXIS_STAGES = {"units", "frd_generate", "frd_validate", "frd_retain", "witnesses", "transcode",
+                   "match", "joint", "coverage", "crux", "assess", "report"}
+# run once for the whole run, into SHARED: tools nobody assesses (spec 10, 6.4 rule 7)
+SHARED_STAGES = {"language", "qualify"}
+# ... and these read the SHARED cross-axis evidence that bears on the axis's units
+MERGE_SHARED_STAGES = {"joint", "coverage", "crux", "assess", "report"}
+
+
+# A stage nothing downstream reads: running it does not make the later stages stale.
+READ_ONLY_STAGES = {"frd_assess"}
+
+
+def release_path(ctx: RunContext, gate: str):
+    return ctx.p("control", "model-and-human-decisions") / f"released-after-{gate}.json"
+
+
+def gate_state(ctx: RunContext) -> dict | None:
+    """The researcher's stop: after `pipeline.stop_after` the run halts until it is released with
+    `cr run --continue`.  Returns the halt record while the run is halted there, else None."""
+    gate = (ctx.cfg.get("pipeline", {}) or {}).get("stop_after") or ""
+    if gate not in STAGE_NAMES:
+        return None
+    if gate == "frd_assess" and not (ctx.cfg.get("frd_assess", {}) or {}).get("enabled", True):
+        return None
+    state = ctx.stage_state()
+    later = STAGE_NAMES[STAGE_NAMES.index(gate) + 1:]
+    if state.get(gate, {}).get("status") != "done" or release_path(ctx, gate).exists():
+        return None
+    if all(state.get(n, {}).get("status") in ("done", "imported") for n in later):
+        return None
+    return {"gate": gate, "next_stage": next(n for n in later if state.get(n, {}).get("status") not in ("done", "imported")),
+            "read": "FRD-EVALUATION.md" if gate == "frd_assess" else "RUN-MAP.md",
+            "continue_with": f'cr run "{ctx.project_dir}" --run {ctx.run_id} --continue'}
+
+
+def run_stage(ctx: RunContext, st: Stage) -> dict:
+    """Run one stage: once for an old-layout run, or once per axis database."""
+    if not ctx.axis_layout or (st.name not in PER_AXIS_STAGES | SHARED_STAGES and st.name != "quest"):
+        return st.func(ctx)
+    from . import axes
+    axes.ensure_axis_folders(ctx)
+    if st.name in SHARED_STAGES:
+        # one dictionary, one rulebook and one matcher qualification for the whole run
+        return st.func(ctx.shared())
+    if st.name == "quest":
+        # one quest serves every axis, so its working records are SHARED; each question and answer
+        # is then filed in the database of the one axis the question was asked for
+        out = st.func(ctx.shared()) or {}
+        return {**out, "by_axis": axes.partition_discovery(ctx)}
+    use_shared = st.name in MERGE_SHARED_STAGES and axes.cross_enabled(ctx) and len(ctx.axis_ids()) > 1
+    per: dict = {}
+    for sc in ctx.scopes():
+        sc.merge_shared = use_shared
+        ctx.log(f"   [{sc.axis_id}] {st.name}")
+        per[sc.axis_id] = st.func(sc) or {}
+    if st.name == "match":
+        shared = axes.cross_axis_match(ctx)
+        if shared:
+            per[SHARED_FOLDER] = shared
+    if st.name == "match" or use_shared:
+        axes.stage_cross_evidence(ctx)        # keep SHARED's copies and membership list current
+    return per
 
 
 def record_config_amendments(ctx: RunContext) -> list[str]:
@@ -204,8 +272,18 @@ def record_config_amendments(ctx: RunContext) -> list[str]:
 
 
 def run_pipeline(ctx: RunContext, start: str | None = None, stop: str | None = None,
-                 only: list[str] | None = None, force: list[str] | None = None) -> dict:
+                 only: list[str] | None = None, force: list[str] | None = None,
+                 release: bool = False) -> dict:
     force = set(force or [])
+    gate = (ctx.cfg.get("pipeline", {}) or {}).get("stop_after") or ""
+    if release and gate in STAGE_NAMES and ctx.stage_state().get(gate, {}).get("status") == "done":
+        from .util import utcnow, write_json
+        if not release_path(ctx, gate).exists():
+            write_json(release_path(ctx, gate), {"gate": gate, "released": utcnow(), "by": "cr run --continue",
+                                                 "meaning": "the researcher read the results and asked for the later stages"})
+            ctx.log(f"released after {gate}: the later stages may run")
+    # an explicit --from or --only is itself the researcher's decision; a plain run or resume halts at the gate
+    gated = bool(gate) and not start and not only
     record_config_amendments(ctx)
     names = STAGE_NAMES
     i0 = names.index(start) if start else 0
@@ -222,6 +300,12 @@ def run_pipeline(ctx: RunContext, start: str | None = None, stop: str | None = N
     for st in STAGES[i0:i1 + 1]:
         if only and st.name not in only:
             continue
+        halt = gate_state(ctx) if gated and gate in STAGE_NAMES and STAGE_NAMES.index(st.name) > STAGE_NAMES.index(gate) else None
+        if halt:
+            ctx.log(f"== halted for researcher decision after {gate}. Read {halt['read']}, then continue with: "
+                    f"{halt['continue_with']}")
+            outcome.update(status="halted", stage=gate, **halt)
+            break
         prev = state.get(st.name, {})
         if prev.get("status") in ("done", "imported") and not dirty and st.name not in force:
             outcome["skipped"].append(st.name)
@@ -238,7 +322,7 @@ def run_pipeline(ctx: RunContext, start: str | None = None, stop: str | None = N
         ctx.set_stage(st.name, "running")
         errors_before = ctx.llm.error_count
         try:
-            summary = st.func(ctx)
+            summary = run_stage(ctx, st)
         except Pending as p:
             qd = queue_dir(ctx.project_dir, ctx.cfg["providers"].get("queue", {}).get("dir", "queue"))
             bs = ctx.cfg.get("queue_batch_size", 8)
@@ -275,7 +359,8 @@ def run_pipeline(ctx: RunContext, start: str | None = None, stop: str | None = N
         else:
             ctx.set_stage(st.name, "done", summary)
             ctx.log(f"   {st.name}: {summary}")
-        dirty = True
+        if st.name not in READ_ONLY_STAGES:
+            dirty = True
         outcome["ran"].append(st.name)
     try:
         from .prompts import PromptLibrary  # noqa: F401
@@ -360,9 +445,135 @@ README_TEXT = {
 STAGE_FOLDER = {s.name: RUN_FOLDERS[s.folder] for s in STAGES}
 
 
+AXIS_CONTENTS = [   # what a reader looks for -> where it is inside an axis folder
+    ("Questions asked for this axis", "02_DISCOVERY/01_issued-questions/questions.json"),
+    ("Query responses (the notebook's exact answers)", "02_DISCOVERY/02_query-responses/responses.json"),
+    ("FRD candidates", "03_FRDS/01_candidates/candidates.json"),
+    ("FRD validations", "03_FRDS/04_validation-results/validations.json"),
+    ("Validated FRDs", "03_FRDS/05_validated/validated-frds.json"),
+    ("Retained validated FRDs", "03_FRDS/05_validated/retained-frds.json"),
+    ("Preliminary evaluation of this axis's validated FRDs", "03_FRDS/06_evaluation/evaluation.json"),
+    ("Database file of the questions, answers and FRDs (generated from the JSON records)", "axis.db"),
+    ("Witnesses (released)", "05_WITNESSES/05_released/witnesses.json"),
+    ("Witnesses held back by the audit", "05_WITNESSES/04_repaired-or-held/held.json"),
+    ("Transcoded witnesses and units", "06_TRANSCODING/transcoded.json"),
+    ("Coverage units of this axis's hypotheses", "07_MATCHING/01_hypothesis-units/units.json"),
+    ("Match records (this axis's witnesses against this axis's units)", "07_MATCHING/03_match-records/relations.json"),
+    ("Coverage sets", "08_COVERAGE/coverage.json"),
+    ("Premise ledger", "08_COVERAGE/PREMISE-LEDGER.md"),
+    ("Crux candidates", "09_CRUX/05_candidates/crux-candidates.json"),
+    ("Assessment", "10_REPORTS/assessment.json"),
+    ("Report", "10_REPORTS/CRUX-REPORT.md"),
+    ("Evidence packets", "10_REPORTS/EVIDENCE-PACKETS.md"),
+    ("Audit browser", "10_REPORTS/report.html"),
+]
+
+
+def _count(path) -> str:
+    if not path.exists():
+        return "not made yet"
+    if path.suffix != ".json":
+        return "written"
+    d = read_json(path, default=None)
+    if isinstance(d, list):
+        return str(len(d))
+    if isinstance(d, dict):
+        for k in ("items", "hypotheses", "candidates"):
+            if isinstance(d.get(k), (list, dict)):
+                return str(len(d[k]))
+    return "written"
+
+
+def print_outputs(ctx: RunContext) -> None:
+    """Tell the person where the results are: one report per axis in an axis-database run."""
+    if not ctx.axis_layout:
+        print(f"\nreport:  {ctx.p('reports', 'CRUX-REPORT.md')}\nledger:  {ctx.p('coverage', 'PREMISE-LEDGER.md')}"
+              f"\nbrowser: {ctx.p('reports', 'report.html')}")
+        return
+    print(f"\nEach axis has its own database. Map of the run: {ctx.run_dir / 'RUN-MAP.md'}")
+    for sc in ctx.scopes():
+        print(f"\n{sc.axis_id}  {sc.root}\n  report:  {sc.p('reports', 'CRUX-REPORT.md')}"
+              f"\n  ledger:  {sc.p('coverage', 'PREMISE-LEDGER.md')}\n  browser: {sc.p('reports', 'report.html')}")
+
+
+def write_axis_navigation(ctx: RunContext, st: dict) -> str:
+    """AXIS.md in every axis folder, a README in each of its stage folders and in SHARED.  Returns
+    the lines RUN-MAP.md lists the databases with."""
+    from .axes import cross_dir
+    lines = []
+    for sc in ctx.scopes():
+        ax = sc.frame["axes"][0]
+        root, a = sc.root, sc.axis_id
+        if not root.exists():
+            continue
+        rows = ["| What | File | Records |", "|---|---|---|"]
+        for label, rel in AXIS_CONTENTS:
+            rows.append(f"| {label} | `{rel}` | {_count(root / rel)} |")
+        hyps = "\n".join(f"- **{h['id']}** {h.get('title', '')}" for h in ax.get("hypotheses", []))
+        how: dict = {}
+        for q in read_json(root / "02_DISCOVERY" / "01_issued-questions" / "questions.json", default=[]) or []:
+            how[q.get("axis_source", "not recorded")] = how.get(q.get("axis_source", "not recorded"), 0) + 1
+        filed = ("; ".join(f"{n} by {k}" for k, n in sorted(how.items())) or "no questions yet") + \
+            (". \"Assigned after the fact\" means the question was asked before questions carried an axis, "
+             "and was filed here afterwards by reading it against the axes."
+             if any("after-the-fact" in k for k in how) else ".")
+        cross = cross_dir(ctx, a)
+        atomic_write_text(root / "AXIS.md", (
+            f"# Axis {a}: {ax.get('name') or root.name.split('__')[-1].replace('-', ' ')}\n\n"
+            f"**Everything in this folder belongs to axis {a} and to no other axis.**\n\n"
+            f"Question: {ax.get('question', '')}\n\nHypotheses:\n{hyps}\n\n"
+            f"How this axis's questions were filed here: {filed}\n\n"
+            f"## Where things are\n\n" + "\n".join(rows) + "\n\n"
+            f"## What is not here\n\n"
+            f"- Findings from another axis's questions that bear on this axis's hypotheses are SHARED records: "
+            f"`../{SHARED_FOLDER}/{cross.name}/`"
+            f"{'' if cross.exists() else ' (none recorded)'}. This axis's coverage, ledger and report read them and "
+            f"label them with their home axis.\n"
+            f"- The Manager's quest state and feedback packets cover every axis: `../{SHARED_FOLDER}/02_DISCOVERY/`.\n"
+            f"- The dictionary and canonicalizer rulebook are one shared resource: `../{SHARED_FOLDER}/04_LANGUAGE-TOOLS/`.\n"
+            f"- The header, source index and Archivist prompt are the run's shared inputs: `../01_FRAME/`.\n"))
+        for folder, (purpose, inputs, outputs, verify, nxt, notest) in README_TEXT.items():
+            if not (root / folder).exists():
+                continue
+            stages = [s.name for s in STAGES if RUN_FOLDERS[s.folder] == folder]
+            status = "; ".join(f"{n}: {st.get(n, {}).get('status', 'not started')}" for n in stages) or "n/a"
+            atomic_write_text(root / folder / "README.md", (
+                f"# {folder} - axis {a} only\n\n## Purpose\n{purpose}\n\n## Allowed inputs\n{inputs}\n\n"
+                f"## Expected outputs\n{outputs}\n\n## Current status\n{status}\n\n## How to verify this stage\n"
+                f"{verify}\n\n## Next handoff\n{nxt}\n\n## What this stage does not establish\n{notest}\n"))
+        lines.append(f"- **{a}: {ax.get('name') or root.name.split('__')[-1].replace('-', ' ')}** - [{root.name}/AXIS.md]({root.name}/AXIS.md) · "
+                     f"[report]({root.name}/10_REPORTS/CRUX-REPORT.md) · "
+                     f"[premise ledger]({root.name}/08_COVERAGE/PREMISE-LEDGER.md) · "
+                     f"[audit browser]({root.name}/10_REPORTS/report.html)")
+    sh = ctx.axis_dir(SHARED_FOLDER)
+    if sh.exists():
+        cross = sorted(p.name for p in sh.glob("CROSS-AXIS-into-*"))
+        atomic_write_text(sh / "README.md", (
+            f"# SHARED - records that belong to more than one axis\n\n"
+            f"Nothing here is a question: every question is asked for exactly one axis and is kept, with its "
+            f"answer, FRDs and witnesses, in that axis's own folder.\n\n"
+            f"- `02_DISCOVERY/` - the Manager's quest state, assessment checkpoints, feedback packets and closeout. "
+            f"One quest serves every axis, so these cover all of them.\n"
+            f"- `04_LANGUAGE-TOOLS/` - the custom dictionary and canonicalizer rulebook. They are tools, not "
+            f"evidence: one vocabulary serves every axis, and no assessment is run on them.\n"
+            f"- `CROSS-AXIS-into-<axis>/07_MATCHING/` - relations between the OTHER axes' witnesses and that axis's "
+            f"units: evidence found while asking about one axis that bears on another."
+            f"{' Present: ' + ', '.join(cross) + '.' if cross else ' None recorded.'}\n"))
+        lines.append(f"- **SHARED** (records that belong to more than one axis) - [{SHARED_FOLDER}/README.md]({SHARED_FOLDER}/README.md)")
+    return "\n".join(lines)
+
+
 def write_navigation(ctx: RunContext) -> None:
     st = ctx.stage_state()
+    axis_lines = None
+    if ctx.axis_layout:
+        try:
+            axis_lines = write_axis_navigation(ctx, st)
+        except FileNotFoundError:        # the frame is not frozen yet: there are no axis folders to describe
+            axis_lines = ""
     for folder, (purpose, inputs, outputs, verify, nxt, notest) in README_TEXT.items():
+        if axis_lines is not None and folder != "01_FRAME":
+            continue
         stages = [s.name for s in STAGES if RUN_FOLDERS[s.folder] == folder]
         status = "; ".join(f"{n}: {st.get(n, {}).get('status', 'not started')}" for n in stages) or "n/a"
         text = (f"# {folder}\n\n## Purpose\n{purpose}\n\n## Allowed inputs\n{inputs}\n\n## Expected outputs\n"
@@ -376,6 +587,10 @@ def write_navigation(ctx: RunContext) -> None:
         stat = rec.get("status", "not started")
         summ = rec.get("summary", {})
         short = ", ".join(f"{k}={v}" for k, v in list(summ.items())[:5]) if isinstance(summ, dict) else str(summ)
+        if axis_lines is not None and isinstance(summ, dict) and summ and all(isinstance(v, dict) for v in summ.values()):
+            # a per-axis stage: one short line per axis database
+            short = "<br>".join(f"**{a}** " + ", ".join(f"{k}={v}" for k, v in list(s.items())[:4])[:150]
+                                for a, s in summ.items())
         nxt = ""
         if not next_set and stat not in ("done", "imported"):
             nxt = {"waiting": "answer queued requests, then `cr queue import` and `cr run`",
@@ -383,12 +598,27 @@ def write_navigation(ctx: RunContext) -> None:
                    "budget": "raise the budget in project.json, rerun",
                    "partial": "some model calls failed; `cr run` asks them again"}.get(stat, "`cr run`")
             next_set = True
-        rows.append(f"| {s.name} | {stat} | {short[:160]} | {nxt} |")
+        rows.append(f"| {s.name} | {stat} | {short[:160] if '<br>' not in short else short} | {nxt} |")
+    halt = gate_state(ctx)
+    banner = (f"**Halted for researcher decision** after `{halt['gate']}`. Read `{halt['read']}`, then continue with "
+              f"`{halt['continue_with']}`\n\n") if halt else ""
     atomic_write_text(ctx.run_dir / "RUN-STATUS.md",
-                      f"# RUN-STATUS — {ctx.run_id}\n\nUpdated {utcnow()}\n\n" + "\n".join(rows) + "\n")
+                      f"# RUN-STATUS — {ctx.run_id}\n\nUpdated {utcnow()}\n\n" + banner + "\n".join(rows) + "\n")
+    if axis_lines is not None:
+        atomic_write_text(ctx.run_dir / "RUN-MAP.md", (
+            f"# RUN-MAP - {ctx.run_id}\n\n"
+            f"This run keeps **one evidence database per axis**. Each axis folder holds only that axis's questions, "
+            f"answers, FRDs, validated FRDs, witnesses, units, match records, coverage, crux and reports. "
+            f"No file holds two axes; records that belong to more than one axis are in SHARED.\n\n"
+            f"## The databases\n\n{axis_lines or '(made when the frame is frozen)'}\n\n## The run\n\n"
+            f"- [RUN-STATUS.md](RUN-STATUS.md)\n- [RUN-CONFIG.json](RUN-CONFIG.json)\n- [FRD-EVALUATION.md](FRD-EVALUATION.md): preliminary ACH_Eval on the validated FRDs, per axis and combined\n"
+            f"- [01_FRAME](01_FRAME/README.md) - the approved header, source index and Archivist prompt (shared inputs)\n"
+            f"- [Model call log](00_RUN-CONTROL/model-and-human-decisions/llm-calls.jsonl)\n"
+            f"- [Artifact registry](00_RUN-CONTROL/artifact-registry.jsonl)\n"))
+        return
     links = "\n".join(f"- [{f}]({f}/README.md)" for f in README_TEXT)
     atomic_write_text(ctx.run_dir / "RUN-MAP.md",
-                      f"# RUN-MAP — {ctx.run_id}\n\n- [RUN-STATUS.md](RUN-STATUS.md)\n- [RUN-CONFIG.json](RUN-CONFIG.json)\n"
+                      f"# RUN-MAP — {ctx.run_id}\n\n- [RUN-STATUS.md](RUN-STATUS.md)\n- [RUN-CONFIG.json](RUN-CONFIG.json)\n- [FRD-EVALUATION.md](FRD-EVALUATION.md): preliminary ACH_Eval on the validated FRDs, per axis and combined\n"
                       f"- [Crux report](10_REPORTS/CRUX-REPORT.md) · [Audit browser](10_REPORTS/report.html)\n{links}\n"
                       f"- [Model call log](00_RUN-CONTROL/model-and-human-decisions/llm-calls.jsonl)\n"
                       f"- [Artifact registry](00_RUN-CONTROL/artifact-registry.jsonl)\n")

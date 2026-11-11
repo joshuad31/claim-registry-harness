@@ -42,6 +42,8 @@ python cr.py run     projects\MyTopic     # claims, validation, matching, covera
 
 In `projects\MyTopic\02_RUNS\<run>\`:
 
+Each axis of your header gets its **own database**: a folder `AXIS-A1__<name>` inside the run that holds only that axis's questions, answers, FRDs, witnesses and reports. Open `RUN-MAP.md` in the run folder first. The files below are inside each axis folder. See `docs/AXIS-DATABASES.md`.
+
 | File | What it tells you |
 |---|---|
 | `08_COVERAGE\PREMISE-LEDGER.md` | Each hypothesis, part by part: established, contested, supported only if a named transfer is granted, or not addressed by any source |

@@ -236,9 +236,12 @@ class OnrampTest(unittest.TestCase):
         st = read_json(runs[0] / "00_RUN-CONTROL" / "stage-state.json")
         self.assertEqual(st["quest"]["status"], "imported")
         self.assertEqual(st["report"]["status"], "done")
-        self.assertTrue((runs[0] / "10_REPORTS" / "CRUX-REPORT.md").exists())
-        self.assertTrue((runs[0] / "08_COVERAGE" / "PREMISE-LEDGER.md").exists())
-        self.assertEqual(len(read_json(runs[0] / "02_DISCOVERY" / "01_issued-questions" / "questions.json")), 12)
+        # one evidence database per axis: the report is in the axis folder
+        self.assertTrue(list(runs[0].glob("AXIS-*/10_REPORTS/CRUX-REPORT.md")))
+        self.assertTrue(list(runs[0].glob("AXIS-*/08_COVERAGE/PREMISE-LEDGER.md")))
+        filed = list(runs[0].glob("AXIS-*/02_DISCOVERY/01_issued-questions/questions.json"))
+        self.assertEqual(sum(len(read_json(f)) for f in filed), 12)
+        self.assertFalse((runs[0] / "02_DISCOVERY").exists())          # nothing is kept outside an axis or SHARED
 
 
 class NotebookLinkTest(unittest.TestCase):

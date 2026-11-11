@@ -193,6 +193,8 @@ This runs the rest of the chain. Finished stages are skipped if you run it again
 
 Open these, in this order, in `02_RUNS\<run>\`:
 
+Each axis of the header has its own folder in the run (`AXIS-A1__<name>` and so on). Open `RUN-MAP.md` first; the three files below are inside each axis folder.
+
 1. **`08_COVERAGE\PREMISE-LEDGER.md`**: what each hypothesis rests on, and where each part stands:
    - *established*: a finding states it;
    - *contested*: one finding establishes it and another contradicts it. This is where the sources disagree;

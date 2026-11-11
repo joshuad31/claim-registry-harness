@@ -583,7 +583,9 @@ def write_review_packet(ctx) -> dict:
     atomic_write_text(ctx.p("matching", "04_disagreements-and-review", "review-packet.md"), "\n".join(lines))
     tmpl = {"instructions": "Copy entries into human-decisions.json (same shape) to overrule a relation. "
                             "relation must be one of " + ", ".join(RELATIONS) + ".",
-            "decisions": [{"witness_id": "W-...", "unit_id": "A1-H1-R1", "relation": "NO_SEMANTIC_RELATION",
+            "decisions": [{"witness_id": "W-...", "unit_id": f"{(getattr(ctx, 'axis_id', None) or 'A1')}-H1-R1"
+                           if getattr(ctx, "axis_id", None) != "SHARED" else "<unit id>",
+                           "relation": "NO_SEMANTIC_RELATION",
                            "reviewer": "your name", "note": "why"}]}
     from .util import write_json
     write_json(ctx.p("matching", "04_disagreements-and-review", "human-decisions.template.json"), tmpl)

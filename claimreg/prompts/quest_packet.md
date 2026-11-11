@@ -21,7 +21,9 @@ A numbered list of at most 8 gaps, most important first, each one line: the miss
 
 ## Ready questions
 8 to 10 numbered questions the Investigator can send unchanged, each on one line in this form:
-1. [target: <the decisive test or causal link it serves>] <exact question text>
+1. [axis: A1] [target: <the decisive test or causal link it serves>] <exact question text>
+
+Each ready question is asked for exactly one axis of the header: name that one axis in the "[axis: ...]" tag. Never write a ready question meant to serve two axes; if two axes need the same source, write one question for each.
 
 Every ready question must pass the query firewall:
 - it names one to three EXACT source filenames, copied from the index below;

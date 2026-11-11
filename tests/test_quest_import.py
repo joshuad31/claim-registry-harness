@@ -136,7 +136,7 @@ class QuestImportTest(unittest.TestCase):
             self.assertEqual(st[s]["status"], "done", s)
         co = ctx.load("discovery", "06_closeout/closeout.json")
         self.assertEqual(co["status"], "OPERATIONAL_STOP (imported)")
-        self.assertTrue((ctx.p("discovery") / "05_feedback" / "R001-packet.md").exists())
+        self.assertTrue((ctx.discovery_ctx().p("discovery") / "05_feedback" / "R001-packet.md").exists())
         qs = ctx.load("discovery", "01_issued-questions/questions.json")
         self.assertEqual({q["qid"]: q["status"] for q in qs}["Q0004"], "UNUSABLE")
         # cr run continues at FRDs, and the local engine reads NotebookLM's (file, heading) citations

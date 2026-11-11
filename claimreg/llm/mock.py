@@ -228,5 +228,17 @@ class MockProvider(BaseProvider):
             alloc[ax["axis_id"]] = dict(zip(ids, vec))
         return "Mock assessment.\n\n```json\n" + json.dumps({"allocations": alloc, "drivers": {}}) + "\n```\n"
 
+    def _frd_assessor(self, req):
+        ids = req.meta["hypothesis_ids"]
+        g = int(req.meta.get("gauge", 64))
+        vec = [g // len(ids)] * len(ids)
+        vec[-1] = g - sum(vec[:-1])
+        frds = req.meta.get("frd_ids") or []
+        cited = list(dict.fromkeys(frds[:2] + frds[-2:]))
+        return "Mock preliminary assessment.\n\n```json\n" + json.dumps({
+            "allocations": dict(zip(ids, vec)), "basis_confidence": "mock",
+            "drivers": [{"frd_id": f, "favors": ids[0], "why": "mock"} for f in cited],
+            "strongest_objection": "mock", "reversal_finding": "mock"}) + "\n```\n"
+
     def _reporter(self, req):
         return {"summary": "Mock summary of the run record."}

@@ -181,12 +181,15 @@ def packet_problem(text: str) -> str:
 def ready_questions(packet_text: str) -> list[dict]:
     out = []
     for item in quest_tool._ready_items(packet_text or "") or []:
-        target = None
+        target = axis = None
+        m = quest_tool.AXIS_PREFIX.match(item)
+        if m:
+            axis, item = m.group("axis").upper(), item[m.end():].strip()
         m = quest_tool.TARGET_PREFIX.match(item)
         if m:
             target, item = m.group("target").strip(), item[m.end():].strip()
         if item:
-            out.append({"text": item, "target": target})
+            out.append({"text": item, "target": target, "axis": axis})
     return out
 
 
@@ -245,6 +248,10 @@ class Relay:
         self.axes_enabled = [ax["axis_id"] for ax in fr.get("axes", [])
                              if str(ax.get("approval", "")).upper() != "TEST_ONLY"] or \
                             [ax["axis_id"] for ax in fr.get("axes", [])]
+        # every question is filed under exactly one of these axes (docs/AXIS-DATABASES.md)
+        self.axis_ids = [ax["axis_id"] for ax in fr.get("axes", [])]
+        self.axis_names = {ax["axis_id"]: (ax.get("name") or ax.get("question") or "") for ax in fr.get("axes", [])}
+        self.axes_list = "\n".join(f"{a}: {n}" for a, n in self.axis_names.items()) or "(one axis)"
         self.axes_text = "; ".join(f"{ax['axis_id']} ({str(ax.get('approval') or 'approval not stated').lower()})"
                                    for ax in fr.get("axes", [])) or "as the header defines"
 
@@ -323,15 +330,44 @@ class Relay:
                 return a
         return None
 
+    def axis_dir(self, axis: str | None) -> Path:
+        """Where one axis's questions and answers are kept in the quest folder (the quest folder
+        itself for a single-axis quest, or for a question with no axis recorded)."""
+        return self.q / f"AXIS-{axis}" if axis and len(self.axis_ids) > 1 else self.q
+
+    def resolve_axis(self, axis, target) -> str | None:
+        """The one axis a question is asked for: stated by its author, else named by a single axis
+        label in its target ("A2 trial results").  None when neither gives exactly one axis."""
+        if len(self.axis_ids) == 1:
+            return self.axis_ids[0]
+        a = str(axis or "").strip().upper()
+        if a in self.axis_ids:
+            return a
+        named = {"A" + n for n in re.findall(r"\bA(\d+)\b", str(target or ""))} & set(self.axis_ids)
+        return next(iter(named)) if len(named) == 1 else None
+
+    def axis_of(self, qid: str) -> str | None:
+        for r in self.asked():
+            if r.get("qid") == qid and r.get("axis"):
+                return r["axis"]
+        return None
+
+    def answer_md(self, stem: str) -> Path:
+        """The staged Markdown of one answer, kept under its question's axis."""
+        axis = self.axis_of(stem.split("-")[0])
+        base = self.ws / "answers"
+        return (base / f"AXIS-{axis}" if axis and len(self.axis_ids) > 1 else base) / (stem + ".md")
+
     def asked(self) -> list[dict]:
         rows = []
-        p = self.q / "asked.jsonl"
-        if p.exists():
-            for line in p.read_text(encoding="utf-8").splitlines():
-                try:
-                    rows.append(json.loads(line))
-                except ValueError:
-                    pass
+        for p in [self.q / "asked.jsonl"] + sorted(self.q.glob("AXIS-*/asked.jsonl")):
+            if p.exists():
+                for line in p.read_text(encoding="utf-8").splitlines():
+                    try:
+                        rows.append(json.loads(line))
+                    except ValueError:
+                        pass
+        rows.sort(key=lambda r: (str(r.get("qid")), str(r.get("attempt", "A01"))))
         have = {(r.get("qid"), r.get("attempt", "A01")) for r in rows}
         # questions queued by hand or by an earlier tool are part of the record too
         for f in sorted(self.queue.glob("Q*.json")):
@@ -382,7 +418,7 @@ class Relay:
     # ---------------------------------------------------------------- staging
     def stage(self) -> None:
         for f in sorted(self.answers.glob("Q*-A*.json")):
-            target = self.ws / "answers" / (f.stem + ".md")
+            target = self.answer_md(f.stem)
             if target.exists() and target.stat().st_mtime >= f.stat().st_mtime:
                 continue
             d = read_json(f)
@@ -423,7 +459,7 @@ class Relay:
         _, state = self.state_text()
         blocks = []
         for a in members:
-            md = self.ws / "answers" / (a["file"].stem + ".md")
+            md = self.answer_md(a["file"].stem)
             body = md.read_text(encoding="utf-8") if md.exists() else quest_tool.stage_markdown(
                 read_json(a["file"]) or {}, a["file"].name)
             blocks.append(f"=== {a['qid']}-{a['attempt']} ===\n{body}")
@@ -575,7 +611,11 @@ class Relay:
         for r in rows:
             for m in quest_tool.SOURCE_TOKEN.finditer(r.get("text", "")):
                 counts[m.group(0)] = counts.get(m.group(0), 0) + 1
-        lines = [f"{r['qid']}: {' '.join(str(r.get('text', '')).split()[:32])}" for r in rows[-150:]]
+        lines = [f"{r['qid']}{' [' + r['axis'] + ']' if r.get('axis') else ''}: "
+                 f"{' '.join(str(r.get('text', '')).split()[:32])}" for r in rows[-150:]]
+        if len(self.axis_ids) > 1:
+            per = {a: sum(1 for r in rows if r.get("axis") == a) for a in self.axis_ids}
+            lines.append("Questions asked so far per axis: " + ", ".join(f"{a} {n}" for a, n in per.items()))
         cnt = ", ".join(f"{k} x{v}" for k, v in sorted(counts.items(), key=lambda kv: (-kv[1], kv[0]))[:80])
         return ("\n".join(lines) or "(none yet)") + ("\n\nTimes each source has been named: " + cnt if cnt else ""), len(rows)
 
@@ -590,28 +630,42 @@ class Relay:
         return out
 
     def enqueue(self, text: str, origin: str, target: str | None = None, qid: str | None = None,
-                attempt: str = "A01") -> str | None:
-        """Queue one question if it passes the firewall.  Returns its QID, or None when refused."""
+                attempt: str = "A01", axis: str | None = None) -> str | None:
+        """Queue one question if it passes the firewall.  Returns its QID, or None when refused.
+
+        A question belongs to exactly one axis, chosen by whoever wrote it.  A question that does
+        not name one axis is refused: questions are never shared between axes."""
         with self.lock:
             asked_rows = self.asked()
             if attempt == "A01":
+                axis = self.resolve_axis(axis, target)
                 asked = {norm_q(r.get("text", "")) for r in asked_rows}
                 warnings = quest_tool.firewall_warnings(text, self.known, asked)
                 if norm_q(text) in asked and "identical question is already in the queue" not in warnings:
                     warnings.append("identical question is already in the queue")
+                if not axis and len(self.axis_ids) > 1:
+                    warnings.append("the question is not filed under exactly one axis (give \"axis\": one of "
+                                    + ", ".join(self.axis_ids) + ")")
                 if warnings:
-                    with open(self.q / "rejected.jsonl", "a", encoding="utf-8") as f:
-                        f.write(json.dumps({"at": utc_now(), "text": text, "origin": origin, "warnings": warnings},
-                                           ensure_ascii=False) + "\n")
+                    d = self.axis_dir(axis)
+                    d.mkdir(parents=True, exist_ok=True)
+                    with open(d / "rejected.jsonl", "a", encoding="utf-8") as f:
+                        f.write(json.dumps({"at": utc_now(), "axis": axis, "text": text, "origin": origin,
+                                            "warnings": warnings}, ensure_ascii=False) + "\n")
                     return None
                 qid = "Q%04d" % quest_tool._next_qid(self.answers)
                 name = qid + ".json"
             else:
                 name = f"{qid}-{attempt}.json"
+                axis = axis or next((r.get("axis") for r in asked_rows if r.get("qid") == qid and r.get("axis")), None)
+            # the queue file is what reaches the notebook page: the question and nothing else.  The
+            # axis and target are recorded in the axis's own asked.jsonl below.
             write_json(self.queue / name, {"qid": qid, "attempt": attempt, "text": text})
-            with open(self.q / "asked.jsonl", "a", encoding="utf-8") as f:
-                f.write(json.dumps({"qid": qid, "attempt": attempt, "text": text, "target": target, "origin": origin,
-                                    "queued_at": utc_now()}, ensure_ascii=False) + "\n")
+            d = self.axis_dir(axis)
+            d.mkdir(parents=True, exist_ok=True)
+            with open(d / "asked.jsonl", "a", encoding="utf-8") as f:
+                f.write(json.dumps({"qid": qid, "attempt": attempt, "axis": axis, "text": text, "target": target,
+                                    "origin": origin, "queued_at": utc_now()}, ensure_ascii=False) + "\n")
             return qid
 
     def queue_repairs(self) -> int:
@@ -650,7 +704,7 @@ class Relay:
         asked_txt, count = self.asked_summary()
         system, user, _ = self.prompts.render(
             "quest_questions.md", HEADER=self.header, INDEX=self.index_compact, PACKET=packet,
-            ASKED=asked_txt, ASKED_COUNT=count, N=n)
+            ASKED=asked_txt, ASKED_COUNT=count, N=n, AXES=self.axes_list)
         self.last_investigator_prompt = system + "\n" + user          # kept for the information-barrier test
         req = LLMRequest(role="quest_investigator", system=system, user=user, tag=f"questions:{count}",
                          meta={"asked": count, "n": n})
@@ -658,7 +712,7 @@ class Relay:
         def problem(parsed) -> str:
             qs = parsed.get("questions") if isinstance(parsed, dict) else None
             return "" if isinstance(qs, list) and any(isinstance(q, dict) and q.get("text") for q in qs) \
-                else "return {\"questions\": [{\"target\", \"sources\", \"text\"}]} with at least one question"
+                else "return {\"questions\": [{\"axis\", \"target\", \"sources\", \"text\"}]} with at least one question"
         try:
             resp = self.llm.call(req, validate=problem)
         except (ProviderError, BudgetExceeded, Pending) as e:
@@ -671,7 +725,7 @@ class Relay:
         made = 0
         for q in resp.parsed.get("questions", []):
             if isinstance(q, dict) and str(q.get("text", "")).strip():
-                if self.enqueue(str(q["text"]).strip(), "investigator", q.get("target")):
+                if self.enqueue(str(q["text"]).strip(), "investigator", q.get("target"), axis=q.get("axis")):
                     made += 1
         self.log(f"Investigator wrote {made} usable question(s) of {len(resp.parsed.get('questions', []))}")
         return made
@@ -689,7 +743,7 @@ class Relay:
         for q in self.pool():
             if need <= 0:
                 break
-            if self.enqueue(q["text"], q["origin"], q.get("target")):
+            if self.enqueue(q["text"], q["origin"], q.get("target"), axis=q.get("axis")):
                 need -= 1
         if need <= 0:
             return
@@ -719,6 +773,14 @@ class Relay:
             time.sleep(float(self.cfg["poll_seconds"]))
 
     # ---------------------------------------------------------------- status and stop
+    def by_axis(self, usable: set, graded: set) -> dict:
+        rows = [r for r in self.asked() if r.get("attempt", "A01") == "A01"]
+        out = {}
+        for a in self.axis_ids:
+            qids = {r["qid"] for r in rows if r.get("axis") == a}
+            out[a] = {"asked": len(qids), "usable": len(qids & usable), "graded": len(qids & graded)}
+        return out
+
     def status(self) -> dict:
         atts = self.attempts()
         usable = {q for q, a in atts.items() if self.best(a)}
@@ -728,6 +790,7 @@ class Relay:
         led = self.ledger()["assessments"]
         st = {"at": local_now(), "run_id": self.run_id, "elapsed_minutes": round(hours * 60, 1),
               "questions_asked": len({r["qid"] for r in self.asked()}),
+              "by_axis": self.by_axis(usable, graded),
               "answers_usable": len(usable), "answers_graded": len(graded),
               "grading_backlog": len(usable - graded), "graded_per_hour": round(len(graded) / hours, 1) if hours > 0.02 else None,
               "rounds_committed": len(led), "last_round": led[-1]["assessment_id"] if led else None,
@@ -814,6 +877,9 @@ class Relay:
                  "", f"- Stop reason: {self.stop_reason or 'not recorded'}",
                  f"- Questions asked: {st['questions_asked']}; usable answers: {st['answers_usable']}; graded: "
                  f"{st['answers_graded']} in {st['rounds_committed']} round(s)",
+                 "- By axis (asked / usable / graded): " + ("; ".join(
+                     f"{a} {v['asked']} / {v['usable']} / {v['graded']}" for a, v in st.get("by_axis", {}).items())
+                     or "one axis"),
                  f"- Elapsed: {st['elapsed_minutes']} minutes; graded per hour: {st['graded_per_hour']}",
                  f"- Provider failovers: {st['failovers']}; model calls: {st['model_calls']}; estimated cost: "
                  f"${st['estimated_usd']}",

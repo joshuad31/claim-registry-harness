@@ -25,7 +25,7 @@ The first four were produced by this build's local engine. The fifth is the same
 
 ```
 cd claim-registry-harness       # the folder you cloned or unzipped
-python cr.py selftest      # 108 tests, about two minutes, no network
+python cr.py selftest      # 129 tests, about two minutes, no network
 python cr.py demo          # builds a fresh project (projects\DEMO-2 if DEMO exists) and runs every stage
 ```
 
@@ -134,7 +134,7 @@ Then run the same command. Only the roles you moved are asked again.
 | `nlm.cmd` | Starts the NotebookLM driver: `nlm login …`, `nlm run …` |
 | `cr.py`, `cr.cmd` | The command line (`selftest`, `demo`, `run`, `verify`, `fork`, `publish`, `queue`) |
 | `docs\` | User guide, local-engine guide, decisions (both builds), queue operator instructions |
-| `tests\` | 108 tests plus the NotebookLM driver test against a mock notebook (run directly): solver vs brute force, header parsing, mechanical gates, mock pipeline, offline pipeline, worked example, quest tool sync commands, driver backlog sanitising, quest preflight and notebook-link checks |
+| `tests\` | 129 tests plus the NotebookLM driver test against a mock notebook (run directly): solver vs brute force, header parsing, mechanical gates, mock pipeline, offline pipeline, worked example, quest tool sync commands, driver backlog sanitising, quest preflight and notebook-link checks |
 | `examples\quest-driver.PTX.json` | Driver config for the six PTX notebook copies; copy it for a new corpus |
 | `examples\demo\` | The synthetic realistic corpus `cr demo` copies |
 | `examples\worked\` | The engineered corpus behind the coverage/crux regression |

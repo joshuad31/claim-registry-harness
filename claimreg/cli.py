@@ -91,14 +91,17 @@ def cmd_run(a) -> int:
     ctx = RunContext(a.project, a.run, create=True)
     out = run_pipeline(ctx, start=a.from_stage, stop=a.to_stage,
                        only=a.only.split(",") if a.only else None,
-                       force=a.force.split(",") if a.force else None)
+                       force=a.force.split(",") if a.force else None, release=getattr(a, "release", False))
     _print(out)
+    if out["status"] == "halted":
+        print(f"\nHalted for your decision after {out['gate']}. Read {ctx.run_dir / out['read']}\n"
+              f"To run the later stages:\n  {out['continue_with']}")
     if out["status"] == "waiting":
         print(f"\n{out['pending']} model request(s) are queued. Batch files are in {Path(out['queue_dir']) / 'batches'} "
               f"(one .json and one .md per batch). Write each answer to <BATCH>.response.json "
               f"({{\"<key>\": \"<answer>\"}}) or <BATCH>.response.md, then run:\n"
               f"  cr queue import \"{a.project}\"\n  cr run \"{a.project}\"")
-    return 0 if out["status"] in ("complete", "waiting") else 2
+    return 0 if out["status"] in ("complete", "waiting", "halted") else 2
 
 
 def cmd_status(a) -> int:
@@ -261,24 +264,35 @@ def cmd_demo(a) -> int:
         "default_provider": "local",
         "providers": {"local": {"type": "local", "model": "local-rules-v1.9"}},
         "quest": {"round_size": 4, "max_rounds": 6},
+        "pipeline": {"stop_after": ""},      # the demo shows every stage; a real project halts after frd_assess
     })
     ctx = RunContext(dst, a.run_id or "RUN-DEMO-1", create=True)
     out = run_pipeline(ctx)
     _print(out)
     if out["status"] == "complete":
-        print(f"\nreport:  {ctx.p('reports', 'CRUX-REPORT.md')}")
-        print(f"browser: {ctx.p('reports', 'report.html')}")
+        from .pipeline import print_outputs
+        print_outputs(ctx)
     return 0 if out["status"] in ("complete", "waiting") else 2
 
 
 def cmd_funnel(a) -> int:
     from .funnel import funnel, render
     from .runctx import RunContext
-    f = funnel(RunContext(a.project, a.run, quiet=True))
+    ctx = RunContext(a.project, a.run, quiet=True)
+    if not ctx.axis_layout:
+        f = funnel(ctx)
+        _print(f) if a.json else print(render(f))
+        return 0
+    # one evidence database per axis: one funnel per axis, never a mixed one
+    per = {}
+    for sc in ctx.scopes():
+        f = funnel(sc)
+        f["run"] = f"{ctx.run_id} - axis {sc.axis_id}"
+        per[sc.axis_id] = f
     if a.json:
-        _print(f)
+        _print(per)
     else:
-        print(render(f))
+        print("\n\n".join(render(f) for f in per.values()))
     return 0
 
 
@@ -328,6 +342,8 @@ def main(argv=None) -> int:
     s.add_argument("--to", dest="to_stage")
     s.add_argument("--only")
     s.add_argument("--force")
+    s.add_argument("--continue", dest="release", action="store_true",
+                   help="release the run past the researcher's stop (pipeline.stop_after) and run the later stages")
     s.set_defaults(fn=cmd_run)
 
     s = sub.add_parser("status", help="show stage status")

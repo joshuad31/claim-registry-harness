@@ -116,3 +116,15 @@ testable fix. Full incident log: `Claude output\LEVO\HANDOFF-LEVO.md` Appendix A
 Tests: `tests/test_driver_state.py` (backlog sanitising), `tests/test_relay.py`
 (`test_short_round_breaks_a_driver_hold`), and the browser mock test now runs a second quest on the same
 profile to prove stale claims are cleared and listens for the lane-level failure behaviour.
+
+6. **Assessment on frames with more than two axes** (2026-11-11, found by the LEVO evidence run). The
+   assessment prompt is written for one enabled axis per pass ("use one axis unless a second distinct
+   question warrants another"), but v2-generated headers can carry four axes; a single combined call
+   wrote allocations only for A1 and A2, leaving A3 and A4 at 0. **Chosen:** one assessment call per axis
+   (its own question, hypotheses and coverage summary), issued in parallel with `call_many` and merged.
+   A single call cannot be trusted to cover an arbitrary number of axes.
+7. **`cr verify` and COMPLETE_WITH_ASSUMPTIONS sets** (2026-11-11). Verify recomputed each coverage set
+   with strict relations only, so every designed assumption-bearing set was reported as "not complete"
+   and the run failed verification. **Chosen:** when the recorded status is COMPLETE_WITH_ASSUMPTIONS,
+   re-check the set against the configured `coverage.assume_gaps`; list such sets under
+   `coverage_sets.assumption_sets` rather than as problems. Strict sets are still checked strictly.

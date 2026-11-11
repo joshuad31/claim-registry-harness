@@ -170,10 +170,16 @@ def load_record(layout: dict) -> tuple[dict, dict]:
                 meta, p, flagged))
             if qid not in questions:
                 qf = queue / f"{qid}.json"
-                qtext = (read_json(qf, default={}) or {}).get("text") if qf.exists() else None
+                qrec = (read_json(qf, default={}) or {}) if qf.exists() else {}
+                qtext = qrec.get("text")
+                # the relay records, for every question, the one axis the Investigator asked it for
+                # and the test it serves: in the queue file and in asked.jsonl beside the answers
+                led = _asked_ledger(queue.parent.parent).get(qid, {})
                 questions[qid] = {"qid": qid, "run_id": a.get("run_id", ""),
                                   "text": qtext or a.get("query", ""), "sources_as_sent": [],
-                                  "round": None, "order_in_round": None, "target": "",
+                                  "round": None, "order_in_round": None,
+                                  "target": qrec.get("target") or led.get("target") or "",
+                                  "axis": qrec.get("axis") or led.get("axis") or "",
                                   "packet_priority_id": None, "header_version": "",
                                   "issued": a.get("submitted_at", ""),
                                   "source_file": str(qf if qf.exists() else p)}
@@ -184,6 +190,29 @@ def load_record(layout: dict) -> tuple[dict, dict]:
                                    "target": "", "packet_priority_id": None, "header_version": "",
                                    "issued": atts[0]["submitted_at"], "source_file": ""})
     return questions, attempts
+
+
+_ASKED_CACHE: dict[str, dict] = {}
+
+
+def _asked_ledger(quest_dir: Path) -> dict:
+    """qid -> the relay's record of the question (asked.jsonl, or the per-axis asked files)."""
+    key = str(quest_dir)
+    if key not in _ASKED_CACHE:
+        out: dict[str, dict] = {}
+        files = [quest_dir / "asked.jsonl"] + sorted(quest_dir.glob("AXIS-*/asked.jsonl"))
+        for f in files:
+            if not f.exists():
+                continue
+            for line in f.read_text(encoding="utf-8", errors="replace").splitlines():
+                try:
+                    r = json.loads(line)
+                except ValueError:
+                    continue
+                if r.get("qid") and r.get("attempt", "A01") == "A01":
+                    out[r["qid"]] = r
+        _ASKED_CACHE[key] = out
+    return _ASKED_CACHE[key]
 
 
 # --------------------------------------------------------------------------- #
@@ -261,7 +290,7 @@ def import_quest(project_dir: Path, quest_dir: Path, run_id: str | None = None,
                                    f"run `cr run {project_dir} --run {run_id} --to frame` and fix what it reports")
     corpus = ctx.corpus
 
-    d = ctx.p("discovery")
+    d = ctx.discovery_ctx().p("discovery")
     for sub in ("01_issued-questions", "02_query-responses", "03_quest-state", "05_feedback", "06_closeout"):
         ensure_dir(d / sub)
 
@@ -288,6 +317,7 @@ def import_quest(project_dir: Path, quest_dir: Path, run_id: str | None = None,
             "text": q["text"],
             "firewall": {"status": "IMPORTED", "repairs": [], "original_text": q["text"]},
             "sources_as_sent": voices, "sources_resolved": resolved, "target": q["target"],
+            **({"axis": q["axis"]} if q.get("axis") else {}),
             "packet_priority_id": q["packet_priority_id"], "header_version": q["header_version"],
             "issued": q["issued"], "status": status, "response_ids": [rid] if rid else [],
             "attempts": [a["attempt"] for a in atts], "frd_ids": [], "witness_ids": [],
@@ -362,6 +392,10 @@ def import_quest(project_dir: Path, quest_dir: Path, run_id: str | None = None,
                "attempts": len(a_out), "repairs_selected": {q: a for q, a in overrides.items()},
                "packets": len(packets), "layout": layout["mode"], "stop": stop_label,
                "source": str(Path(quest_dir).resolve())}
+    if ctx.axis_layout:
+        # every question and its answer go into the database of the one axis the question was asked for
+        from .axes import partition_discovery
+        summary["by_axis"] = partition_discovery(ctx)
     ctx.set_stage("quest", "imported", summary)
     try:
         from .pipeline import write_navigation

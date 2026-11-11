@@ -66,9 +66,9 @@ class PipelineMockTest(unittest.TestCase):
         ws = ctx.load("witnesses", "05_released/witnesses.json")
         self.assertTrue(ws)
         self.assertTrue(all(w["words"] <= w["ceiling"] for w in ws))
-        rep = (ctx.p("reports", "CRUX-REPORT.md")).read_text(encoding="utf-8")
+        rep = (ctx.scopes()[0].p("reports", "CRUX-REPORT.md")).read_text(encoding="utf-8")
         self.assertIn("best understood from this corpus and this run", rep)
-        self.assertTrue((ctx.p("reports", "report.html")).exists())
+        self.assertTrue((ctx.scopes()[0].p("reports", "report.html")).exists())
         v = verify_run(proj, "RUN-TEST")
         self.assertTrue(v["ok"], v["problems"])
         # rerun is free and identical (everything cached): no new model answer may be needed
@@ -87,7 +87,7 @@ class PipelineMockTest(unittest.TestCase):
         write_json(ctx.p("matching", "04_disagreements-and-review", "human-decisions.json"),
                    {"decisions": [{"witness_id": r0["witness_id"], "unit_id": r0["unit_id"],
                                    "relation": flip, "reviewer": "test", "note": "override"}]})
-        self.assertTrue(ctx.p("matching", "04_disagreements-and-review", "review-packet.md").exists())
+        self.assertTrue(ctx.scopes()[0].p("matching", "04_disagreements-and-review", "review-packet.md").exists())
         out3 = run_pipeline(RunContext(proj, "RUN-TEST", quiet=True), start="coverage")
         self.assertEqual(out3["status"], "complete")
         self.assertIn("coverage", out3["ran"])        # --from reruns the named stage ...

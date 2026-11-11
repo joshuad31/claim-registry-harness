@@ -166,6 +166,7 @@ def parse_header(text: str, default_gauge: int = 64) -> dict:
     # axes
     axis_ids = sorted({i.split("-")[0] for i in ids}, key=lambda a: int(re.sub(r"\D", "", a) or 0))
     axis_blocks: dict[str, str] = {}
+    axis_names: dict[str, str] = {}
     axis_heads = [(lvl, h, s, e) for lvl, h, s, e in secs if re.search(r"\baxis\b", h, re.I)]
     word_num = {"one": 1, "two": 2, "three": 3, "four": 4, "1": 1, "2": 2, "3": 3, "4": 4}
     for lvl, h, s, e in axis_heads:
@@ -176,6 +177,9 @@ def parse_header(text: str, default_gauge: int = 64) -> dict:
             nxt = [s2 for _, _, s2, _ in axis_heads if s2 > s]
             end = min(nxt) if nxt else e
             axis_blocks[f"A{n}"] = text[s:end]
+            # "Axis two — bedtime dosing" -> "bedtime dosing": the label used for the axis's own database
+            axis_names[f"A{n}"] = _clean(re.sub(r"^.*?axis\s*(?:one|two|three|four|\d)\s*[-\u2013\u2014:.]*\s*", "", h,
+                                                flags=re.I))
     # a machine-readable approval marker written by `cr approve` beats anything the model wrote:
     # a drafting model's prose must never be able to claim human approval
     approved_marker = re.search(r"<!--\s*APPROVED[:\s].*?-->", text, re.S | re.I)
@@ -205,7 +209,7 @@ def parse_header(text: str, default_gauge: int = 64) -> dict:
                 "falsification": sec.get("falsification", ""),
                 "corroboration": sec.get("corroboration", ""),
             })
-        axes.append({"axis_id": a, "question": q,
+        axes.append({"axis_id": a, "name": axis_names.get(a, ""), "question": q,
                      "boundary": _clean(bm.group(1)) if bm else "",
                      "scope": _clean(cm.group(1)) if cm else "",
                      "approval": approval, "hypotheses": hyps})

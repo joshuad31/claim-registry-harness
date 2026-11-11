@@ -34,13 +34,14 @@ ROLES = [
     "joint_checker",         # jointly-sufficient group approval
     "incompat_checker",      # witness-witness incompatibility approval
     "assessor",              # final ACH_Eval-style assessment over the witness registry
+    "frd_assessor",          # preliminary ACH_Eval over the validated FRDs (per axis, then combined)
     "reporter",              # optional plain-language analyst summary
     "quest_manager",         # NotebookLM quest relay: ACH_Eval grading round + feedback packet
     "quest_investigator",    # NotebookLM quest relay: writes the next questions
 ]
 
 # A role the user did not route follows another role's routing instead of the global default.
-ROLE_FOLLOWS = {"match_router": "matcher_a", "quest_manager": "coordinator", "quest_investigator": "investigator"}
+ROLE_FOLLOWS = {"frd_assessor": "assessor", "match_router": "matcher_a", "quest_manager": "coordinator", "quest_investigator": "investigator"}
 
 DEFAULT_CONFIG: dict[str, Any] = {
     "project": {
@@ -186,6 +187,25 @@ DEFAULT_CONFIG: dict[str, Any] = {
         "route_max_units": 8,         # units one witness may be routed to
         "qualify": True,
     },
+    "frd_assess": {
+        # preliminary ACH_Eval on the validated FRDs, per axis and then on the combined set
+        # (docs/FRD-EVALUATION.md); it runs before the dictionary, witnesses and matching
+        "enabled": True,
+        "combined": True,             # also assess each axis's hypotheses against every axis's FRDs
+        "partition_words": 30000,     # registry words per ACH_Eval call; a larger set is split
+    },
+    "pipeline": {
+        # the run halts after this stage until the researcher releases it with `cr run --continue`
+        # ("" = never halt)
+        "stop_after": "frd_assess",
+    },
+    "axes": {
+        # one evidence database per axis (docs/AXIS-DATABASES.md); false keeps the single-database layout
+        "separate_databases": True,
+        # ask whether one axis's witnesses bear on another axis's units; the answers are SHARED records
+        "cross_axis_evidence": True,
+        "labels": {},                 # optional short folder labels, e.g. {"A1": "antidepressant-gap"}
+    },
     "coverage": {
         "max_sets": 200,
         "max_states": 3000,
@@ -252,7 +272,7 @@ def resolve_path(cfg: dict, p: str | None) -> Path | None:
 def scientific_config(cfg: dict) -> dict:
     """The part of the config that can change results (recorded per run)."""
     keep = ["quest", "frd", "retention", "witness", "language", "units", "matching",
-            "coverage", "crux", "assess", "report", "roles"]
+            "coverage", "crux", "assess", "report", "roles", "frd_assess"]
     out = {k: copy.deepcopy(cfg.get(k)) for k in keep}
     prov = {}
     for name, p in cfg.get("providers", {}).items():

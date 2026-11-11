@@ -8,7 +8,7 @@ from .corpus import find_quote
 from .coverage import build_problem, complete, covers
 from .matching import relations_index
 from .runctx import RunContext
-from .util import read_jsonl, read_text, sha256_file, word_count
+from .util import read_json, read_jsonl, read_text, sha256_file, word_count
 
 
 def verify_run(project_dir: Path, run_id: str | None = None) -> dict:
@@ -67,24 +67,42 @@ def verify_run(project_dir: Path, run_id: str | None = None) -> dict:
     from .joint import incompatibility_records
     inc = incompatibility_records(ctx)
     cov = (ctx.load("coverage", "coverage.json", default={}) or {}).get("hypotheses", {})
+    assume = tuple(g for g in (ctx.cfg["coverage"].get("assume_gaps") or []) if g)
     set_issues = []
+    assumption_sets = []
     n_sets = 0
     for hid, c in cov.items():
         pb, _ = build_problem(hid, units, rel, groups, inc,
                               veto=bool(ctx.cfg["coverage"].get("constraint_veto", True)),
                               max_options=int(ctx.cfg["coverage"].get("max_options_per_unit", 12)))
+        pb_assumed = None
+        if assume and c.get("status") == "COMPLETE_WITH_ASSUMPTIONS":
+            pb_assumed, _ = build_problem(hid, units, rel, groups, inc,
+                                          veto=bool(ctx.cfg["coverage"].get("constraint_veto", True)),
+                                          max_options=int(ctx.cfg["coverage"].get("max_options_per_unit", 12)),
+                                          assume_gaps=assume)
         for s in c.get("sets", []):
             n_sets += 1
             ws_set = set(s["witnesses"])
-            if not complete(pb, ws_set):
-                set_issues.append(f"{s['set_id']}: not complete")
+            if complete(pb, ws_set):
+                check_pb = pb
+            elif pb_assumed is not None and complete(pb_assumed, ws_set):
+                # A designed COMPLETE_WITH_ASSUMPTIONS set: complete only if the named transfers are
+                # granted.  That is a reported state, not a failed check; record it separately.
+                check_pb = pb_assumed
+                assumption_sets.append(s["set_id"])
+            else:
+                set_issues.append(f"{s['set_id']}: not complete"
+                                  + (" even when the configured assumptions are granted" if pb_assumed else ""))
+                continue
             for w in ws_set:
-                if complete(pb, ws_set - {w}):
+                if complete(check_pb, ws_set - {w}):
                     set_issues.append(f"{s['set_id']}: {w} removable (not deletion-minimal)")
         for u in c.get("uncovered_units", []):
             if pb.options.get(u):
                 set_issues.append(f"{hid}: {u} reported uncovered but has options")
-    out["checks"]["coverage_sets"] = {"sets": n_sets, "issues": set_issues}
+    out["checks"]["coverage_sets"] = {"sets": n_sets, "assumption_sets": assumption_sets,
+                                      "issues": set_issues}
     problems += set_issues
     # 5. crux candidates
     crux = ctx.load("crux", "05_candidates/crux-candidates.json", default={}) or {}
@@ -109,12 +127,46 @@ def verify_run(project_dir: Path, run_id: str | None = None) -> dict:
     out["checks"]["crux"] = {"candidates": len(crux.get("candidates", [])), "issues": c_issues}
     problems += c_issues
     # 6. report length
-    rp = ctx.p("reports", "CRUX-REPORT.md")
-    if rp.exists():
-        wc = word_count(read_text(rp))
-        out["checks"]["report_words"] = wc
-        if wc >= 4000:
-            problems.append(f"report has {wc} words (limit 4,000)")
+    for axis, rp in ctx.artifact_paths("reports", "CRUX-REPORT.md"):
+        if rp.exists():
+            wc = word_count(read_text(rp))
+            out["checks"]["report_words" + (f"_{axis}" if axis else "")] = wc
+            if wc >= 4000:
+                problems.append(f"{axis + ' ' if axis else ''}report has {wc} words (limit 4,000)")
+    # 7. one evidence database per axis: do the databases add up, and is nothing shared duplicated?
+    if ctx.axis_layout:
+        from .axes import reconcile
+        from .runctx import SHARED_FOLDER
+        rec = reconcile(ctx)
+        copies = [str(p.relative_to(ctx.run_dir)) for sc in ctx.scopes() for sub in ("04_LANGUAGE-TOOLS",
+                  "07_MATCHING/02_match-fixtures") for p in [sc.root / sub] if p.exists()]
+        declared = ctx.run_config.get("shared_resources") or []
+        missing = [r["path"] for r in declared
+                   if not (ctx.run_dir / r["path"]).exists() and not r["path"].startswith(SHARED_FOLDER + "/0")]
+        out["checks"]["axis_databases"] = {**{k: rec[k] for k in ("by_axis", "totals", "quest_questions", "unassigned")},
+                                           "shared_resources_declared": len(declared),
+                                           "shared_resource_copies_in_axis_folders": copies}
+        problems += rec["problems"] + [f"shared resource copied into an axis folder: {c}" for c in copies] \
+            + [f"declared shared resource is missing: {m}" for m in missing]
+    # 8. the preliminary evaluation of the validated FRDs: vectors sum to the gauge, the combined
+    #    set is a disjoint union of the axis sets, and each axis.db matches its JSON records
+    ev = read_json(ctx.run_dir / "frd-evaluation.json", default=None)
+    if ev:
+        from . import frd_assess as fa
+        bad = [f"{a} {k}" for a, t in ev["table"].items() for k, v in t.items() if v and sum(v.values()) != ev["gauge"]]
+        db_bad = []
+        if ctx.axis_layout:
+            for sc in ctx.scopes():
+                db = Path(sc.root) / "axis.db"
+                have = fa.axis_db_counts(db) if db.exists() else {}
+                db_bad += [f"{sc.axis_id}.{t}" for t, (rel, _) in fa.DB_TABLES.items() if have.get(t) != len(fa._rows(sc, rel))]
+        out["checks"]["frd_evaluation"] = {"frd_counts": ev["frd_counts"], "provisional": ev["provisional"],
+                                           "combined_is_disjoint_union": ev["combined_is_disjoint_union"],
+                                           "vectors_not_summing_to_gauge": bad, "axis_db_out_of_step": db_bad}
+        problems += [f"FRD evaluation: {b} does not sum to the gauge" for b in bad] + ev.get("problems", []) \
+            + ([] if ev["combined_is_disjoint_union"] in (True, None) else ["FRD evaluation: combined set is not a disjoint union"])
+        warnings += ev.get("warnings", []) + [f"axis.db is out of step with the JSON records ({b}); rerun frd_assess "
+                                               f"(cr run --only frd_assess --force frd_assess)" for b in db_bad]
     out["problems"] = problems
     if warnings:
         out["warnings"] = warnings

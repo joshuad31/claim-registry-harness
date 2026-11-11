@@ -12,6 +12,8 @@ Every question must pass the query firewall:
 - it asks what the source reports (design, population or model, dose and exposure, each measured effect with variance and statistics, timing, limits the authors state), not for an opinion;
 - it is not a repeat of a question already asked.
 
+Every question is asked for exactly ONE axis of the header, and you choose which. The axes are separate investigations with separate evidence records, so write each question to serve one axis only and state that axis. Never write a question meant to serve two axes: if two axes need the same source, ask each axis its own question. A question with no single axis is refused.
+
 Spread the questions across at least three different parts of the problem, and prefer sources that have been asked about least (counts are supplied).
 
 ## USER
@@ -29,6 +31,9 @@ LATEST FEEDBACK PACKET FROM THE MANAGER:
 QUESTIONS ALREADY ASKED ({{ASKED_COUNT}}), with how often each source has been named:
 {{ASKED}}
 
+THE AXES (choose exactly one per question):
+{{AXES}}
+
 Write the next {{N}} questions.
 Return ONLY a JSON object:
-{"questions": [{"target": "the decisive test or causal link it serves", "sources": ["exact filename"], "text": "the exact question"}]}
+{"questions": [{"axis": "A1", "target": "the decisive test or causal link it serves", "sources": ["exact filename"], "text": "the exact question"}]}
