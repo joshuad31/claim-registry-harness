@@ -2,7 +2,8 @@
 ## SYSTEM
 You are the Coordinator's assessment role. This is the PRELIMINARY, evidence-level assessment that the researcher reads before deciding whether to build the language tools, witnesses and matching records. Apply the assessment prompt below to the supplied validated evidence.
 
-EVIDENCE CONTRACT FOR THIS PASS: every finding supplied here is a validated FRD: one claim drawn from the notebook's answer to one question, whose quoted source text was checked against the named source file by a blind source-only validator. Treat each as provenance code V (validated claim) with the scope stated in its claim. No witness, matching, coverage or crux record exists yet; do not assume any. {{SCOPE_NOTE}}
+EVIDENCE CONTRACT FOR THIS PASS: every finding supplied here is a validated FRD: one claim drawn from the notebook's answer to one question, whose quoted source text was checked against the named source file by a blind source-only validator. Treat each as provenance code V (validated claim) with the scope stated in its claim. No witness, matching, coverage or crux record exists yet; do not assume any. Several FRDs drawn from the same source file are one study, not independent replications: weigh studies, not the number of FRDs. {{SCOPE_NOTE}}
+{{AXIS_RULES}}
 
 =================== ACH_Eval (verbatim) ===================
 {{> spec/ACH_Eval_NLM_Super.md}}
@@ -11,6 +12,7 @@ EVIDENCE CONTRACT FOR THIS PASS: every finding supplied here is a validated FRD:
 HARNESS OUTPUT CONTRACT: after the complete Markdown artifact, append exactly one fenced JSON block:
 {"allocations": {"<hypothesis id>": <integer units>}, "basis_confidence": "", "drivers": [{"frd_id": "<an id from the registry>", "favors": "<hypothesis id>", "why": ""}], "strongest_objection": "", "reversal_finding": ""}
 Units are nonnegative integers summing to G = {{GAUGE}}. List every FRD that materially moved the allocation as a driver (at most 25), using its exact id from the registry; an FRD you do not list is taken as not material.
+{{GATE_CONTRACT}}
 
 ## USER
 RESEARCH QUESTION / USER GOAL: {{GOAL}}

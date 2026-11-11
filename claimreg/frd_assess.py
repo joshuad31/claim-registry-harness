@@ -33,6 +33,7 @@ import time
 from collections import Counter
 from pathlib import Path
 
+from . import domains
 from .assess import _axis_context
 from .llm.base import LLMRequest
 from .llm.jsonparse import JSONExtractError, extract_json
@@ -138,6 +139,13 @@ def _parse(res, ids: list[str], gauge: int, axis_id: str, label: str) -> tuple[d
             break
     if not data:
         return {}, [f"{label}: no allocation JSON block"]
+    for block in re.findall(r"```json\s*\n(.*?)\n?```", res.text or "", re.S):
+        try:
+            cand = extract_json(block)
+        except JSONExtractError:
+            continue
+        if isinstance(cand, dict) and isinstance(cand.get("gate_report"), dict):
+            data["gate_report"] = cand["gate_report"]
     vec = data.get("allocations") or {}
     if isinstance(vec.get(axis_id), dict):          # a model that nested the vector under the axis id
         vec = vec[axis_id]
@@ -176,7 +184,14 @@ class _Job:
         self.calls: list[dict] = []
         self.final: dict = {}
 
-    def _request(self, registry: str, fragments: str, tag: str, meta: dict) -> LLMRequest:
+    def _request(self, registry: str, fragments: str, tag: str, meta: dict, final: bool = False) -> LLMRequest:
+        rules = domains.axis_rules(self.ctx.cfg, self.axis)
+        contract = domains.gate_contract(self.ctx.cfg, self.axis) if final else ""
+        prior = (read_json(self.out / "evaluation.json", default={}) or {}).get("gate") or {} if contract else {}
+        if prior.get("errors"):
+            contract += ("\n\nYOUR PREVIOUS REPORT FOR THIS AXIS WAS RETURNED FOR CORRECTION. Correct the reasoning, not "
+                         "only the declaration. The gate found:\n"
+                         + "\n".join(f"- {e['rule']}: {e['message']}" for e in prior["errors"]))
         note = ("SCOPE OF THIS PASS: the registry holds the validated FRDs of EVERY axis of this investigation, "
                 "each labelled with its home axis; assess only the axis named below, and use an FRD from "
                 "another axis only where it really bears on this axis's hypotheses."
@@ -184,6 +199,7 @@ class _Job:
                 "SCOPE OF THIS PASS: the registry holds only the validated FRDs filed under the axis named below.")
         system, user, _ = self.ctx.prompts.render(
             "frd_assess.md", GAUGE=self.gauge, GOAL=self.axis.get("question", ""), SCOPE_NOTE=note,
+            AXIS_RULES=rules, GATE_CONTRACT=contract,
             INVESTIGATION_ID=f"{self.ctx.run_id}:{self.aid}:frd-{self.scope}:{tag}",
             FRAGMENTS=fragments, HYPOTHESES=_axis_context(self.axis),
             REGISTRY_COLUMNS="frd id | home axis | source | validation verdict | claim" if self.combined
@@ -198,7 +214,7 @@ class _Job:
         return [self._request(
             "\n".join(registry_line(f, self.combined) for f in part),
             "none" if n == 1 else f"none; this is partition {k} of {n} of the registry, assessed alone",
-            f"p{k:02d}", {"frd_ids": [frd_id(f) for f in part]}) for k, part in enumerate(self.parts, 1)]
+            f"p{k:02d}", {"frd_ids": [frd_id(f) for f in part]}, final=n == 1) for k, part in enumerate(self.parts, 1)]
 
     def take_partitions(self, responses: list) -> None:
         self.out.mkdir(parents=True, exist_ok=True)
@@ -216,7 +232,9 @@ class _Job:
         if len(self.parts) < 2 or len(good) != len(self.parts):
             return None
         frag = [f"{len(good)} partition fragments follow. Together the partitions held all {len(self.frds)} "
-                f"validated FRDs. Produce the single assessment of this axis from these fragments alone."]
+                f"validated FRDs. Produce the single assessment of this axis from these fragments alone. Treat them "
+                f"as one cumulative record, not as votes: a partition that happened to hold little diagnostic "
+                f"evidence must not dilute diagnostic evidence held in another."]
         for p, part in zip(good, self.parts):
             text = read_text(self.out / f"partition-{p['partition']:02d}.md")
             body = " ".join(re.sub(r"```json.*?```", "", text, flags=re.S).split()[:1200])
@@ -227,7 +245,7 @@ class _Job:
                         f"reversal finding: {p.get('reversal_finding', '')}\n"
                         f"commentary (start): {body}")
         return self._request("(none in this pass: the evidence was assessed in the partitions above; cite drivers by "
-                             "the FRD ids the fragments name)", "\n\n".join(frag), "synthesis",
+                             "the FRD ids the fragments name)", "\n\n".join(frag), "synthesis", final=True, meta=
                              {"frd_ids": [frd_id(f) for f in self.frds],
                               "partition_vectors": [p["allocations"] for p in good],
                               "partition_counts": [p["frd_count"] for p in good]})
@@ -261,6 +279,19 @@ class _Job:
             drivers.append({**d, "source_file": f.get("source_file"), "qid": f.get("qid"),
                             "home_axis": f.get("home_axis", self.aid), "claim": f.get("claim")})
         vec = self.final.get("allocations") or None
+        gate, withheld = None, None
+        if vec:
+            report = self.final.get("gate_report")
+            if isinstance(report, dict):       # the harness, not the model, supplies the arithmetic the gate checks
+                report = {**report, "allocations": vec,
+                          "frame": {**(report.get("frame") or {}), "hypothesis_ids": self.ids, "gauge": self.gauge}}
+            gate = domains.run_gates(self.ctx.cfg, self.axis, report)
+            if gate and not gate["accepted"]:
+                rules = sorted({e["rule"] for e in gate["errors"]})
+                self.problems.append(f"{self.aid} {self.scope}: returned for correction by the {'/'.join(gate['modules'])} "
+                                     f"gate ({', '.join(rules)}). The allocation is withheld and no units are moved; "
+                                     f"rerun with --only frd_assess --force frd_assess")
+                withheld, vec = vec, None
         spread = max((max(p["allocations"].get(i, 0) for p in good) - min(p["allocations"].get(i, 0) for p in good)
                       for i in self.ids), default=0) if len(good) > 1 else 0
         diff = max_diff(vec, mech) if len(self.parts) > 1 else 0
@@ -270,6 +301,8 @@ class _Job:
                             f"{diff} units; the conclusion depends on how the FRDs were partitioned")
         rec = {"axis": self.aid, "scope": self.scope, "label": "PRELIMINARY, evidence-level (validated FRDs)",
                "gauge": self.gauge, "frd_count": len(self.frds), "allocations": vec,
+               "gate": gate, "allocation_withheld_pending_correction": withheld,
+               "gate_report": self.final.get("gate_report"),
                "partition_rule": rule, "partition_count": len(self.parts),
                "partitions": [{k: p.get(k) for k in ("partition", "frd_count", "first_frd", "last_frd", "allocations")}
                               for p in self.part_results],

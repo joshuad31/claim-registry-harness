@@ -1,0 +1,53 @@
+{
+  "synthetic_tests_not_scientific_allocations": true,
+  "base_report": {
+    "frame": {
+      "comparison_type": "practical_strategy",
+      "target_bedtime_min_gap_minutes": 180,
+      "target_morning_min_gap_minutes": 60,
+      "target_population": "persistent_high_tsh_boundary",
+      "success_logic": "any",
+      "accepted_outcomes": ["tsh_target", "ft4", "symptoms"],
+      "hypothesis_ids": ["A2-H1", "A2-H2", "A2-H3"],
+      "gauge": 64
+    },
+    "allocations": {"A2-H1": 24, "A2-H2": 16, "A2-H3": 24},
+    "exposure_ledger": {
+      "morning": [{"factor": "coffee", "status": "documented_near_dose"}],
+      "bedtime": [{"factor": "last_food_gap", "status": "reported_at_least_180_minutes"}]
+    },
+    "drivers": [{
+      "source_id": "bolk_2010",
+      "direction": "favors_bedtime",
+      "inference_type": "indirect",
+      "transfer_justification": "Biochemical timing effect in a different cohort; the target exposure pattern could make the mechanism relevant, but boundary-matched efficacy remains unproved."
+    }],
+    "causal_uses": [{"mechanism": "better_adherence", "caused_by_schedule": true, "interpretation": "benefit_mechanism"}],
+    "alternative_uses": [],
+    "endpoint_uses": [{"endpoint": "quality_of_life", "result": "null", "conclusion_scope": "this_endpoint_only"}],
+    "equivalence_uses": [],
+    "ppi_resolved_by_clock_separation": false,
+    "population_weighting": {"numerical_population_effect_claimed": false, "joint_prevalence_measured": false},
+    "scored_gap_ids": ["refractory_transport"],
+    "exclude_repaired_claim_only_because_legacy_wrong": false,
+    "weighting_method": "holistic_study_and_comparison_assessment"
+  },
+  "cases": [
+    {"name": "Valid conditional interpretation", "expect_accept": true, "patch": {}},
+    {"name": "Same compliant reasoning can accompany an H2 lead", "expect_accept": true, "patch": {"allocations": {"A2-H1": 4, "A2-H2": 52, "A2-H3": 8}}},
+    {"name": "Same compliant reasoning can accompany an H3 lead", "expect_accept": true, "patch": {"allocations": {"A2-H1": 5, "A2-H2": 5, "A2-H3": 54}}},
+    {"name": "One hour bedtime cannot directly refute three hour regimen", "expect_accept": false, "expected_rules": ["R4"], "patch": {"frame": {"target_population": "broad_adults"}, "drivers": [{"source_id": "de_mello_2022", "direction": "against_bedtime", "inference_type": "direct_target_refutation"}]}},
+    {"name": "Two hour bedtime cannot directly estimate three hour target", "expect_accept": false, "expected_rules": ["R4"], "patch": {"frame": {"target_population": "broad_adults"}, "drivers": [{"source_id": "bach_huynh_2009", "direction": "against_bedtime", "inference_type": "direct_target_estimate"}]}},
+    {"name": "Favorable trial also needs the correct optimized morning comparator", "expect_accept": false, "expected_rules": ["R4"], "patch": {"frame": {"comparison_type": "optimized_schedules", "target_population": "broad_adults"}, "drivers": [{"source_id": "bolk_2010", "direction": "favors_bedtime", "inference_type": "direct_target_estimate"}]}},
+    {"name": "Schedule caused adherence benefit cannot be erased", "expect_accept": false, "expected_rules": ["R2"], "patch": {"causal_uses": [{"mechanism": "better_adherence", "caused_by_schedule": true, "interpretation": "erase_effect"}]}},
+    {"name": "Correcting morning as an alternative is not disproof", "expect_accept": false, "expected_rules": ["R3"], "patch": {"alternative_uses": [{"alternative_could_work": true, "conclusion": "bedtime_has_no_benefit"}]}},
+    {"name": "Null QoL cannot refute OR defined biochemical H1", "expect_accept": false, "expected_rules": ["R10"], "patch": {"endpoint_uses": [{"endpoint": "quality_of_life", "result": "null", "conclusion_scope": "whole_h1"}]}},
+    {"name": "Nonsignificance is not equivalence", "expect_accept": false, "expected_rules": ["R11"], "patch": {"equivalence_uses": [{"claim": "equivalent", "basis": "nonsignificant_difference"}]}},
+    {"name": "PPI acid suppression not assumed removed at night", "expect_accept": false, "expected_rules": ["R6"], "patch": {"ppi_resolved_by_clock_separation": true}},
+    {"name": "No invented joint exposure weights", "expect_accept": false, "expected_rules": ["R8"], "patch": {"population_weighting": {"numerical_population_effect_claimed": true}}},
+    {"name": "Same missing cohort gap counted once", "expect_accept": false, "expected_rules": ["R12"], "patch": {"scored_gap_ids": ["refractory_transport", "refractory_transport"]}},
+    {"name": "Legacy wrong label does not discard repaired claim", "expect_accept": false, "expected_rules": ["R13"], "patch": {"exclude_repaired_claim_only_because_legacy_wrong": true}},
+    {"name": "FRD count is not study independence", "expect_accept": false, "expected_rules": ["R14"], "patch": {"weighting_method": "count_frds"}},
+    {"name": "Invalid vector rejected", "expect_accept": false, "expected_rules": ["ARITHMETIC"], "patch": {"allocations": {"A2-H1": 24, "A2-H2": 16, "A2-H3": 25}}}
+  ]
+}

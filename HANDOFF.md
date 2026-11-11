@@ -57,7 +57,7 @@ This repository implements Josh's **Claim Registry (ACH 2.0)** specification. It
 
 ## 4. What works now (verified)
 
-- **`python cr.py selftest`:** 129 tests pass, plus 1 browser test that is skipped in selftest. That test is `python tests/test_notebooklm_driver.py`: an end-to-end driver run against a mock notebook, about 90 s, which passes.
+- **`python cr.py selftest`:** 135 tests pass, plus 1 browser test that is skipped in selftest. That test is `python tests/test_notebooklm_driver.py`: an end-to-end driver run against a mock notebook, about 90 s, which passes.
 - **The full offline pipeline:**
   - `python cr.py demo` runs from an empty folder to a report.
   - The default provider is the deterministic local engine `local-rules-v1.9` (`docs/LOCAL-ENGINE.md`). It is a lexical floor, not a language model.
@@ -151,12 +151,12 @@ A timed PTX quest ran **14:10:14–15:10:18 CST** on the six existing notebooks.
 - **`cr quest-score` → PASS, all five checks:** start-up 0.3 min; 39 usable QIDs saved at 20 min; 130 graded in the first hour; 133 graded/h over the whole quest (142 graded of 144 questions, one repair Q0033-A02); backlog never above 12; median capture-to-graded 2 min.
 - 156 answers captured (Q0001–Q0156), 29 grading rounds (R001–R029). Round times ran 1–3 minutes once warm.
 - **Open item 2 is done.** The driver was launched from the repo (`python -m claimreg.notebooklm.driver run <config>`), so the 11-09 fixes were live; the previous long-running process had started before those files changed.
-- **Open item 3 is done.** `quest_tool.py` now has `stage` (driver answer JSON → Manager Markdown answers), `packet` (a packet's `## Ready questions` → queue files, with mechanical firewall warnings) and `sync` (assessment ledger → `assessed-qids.json`, stamping each round's `committed_at`). 13 new tests in `tests/test_quest_tool.py`; `cr selftest` is 129 tests (109 with the browser test), all passing. `docs/NOTEBOOKLM-QUEST.md` §4 and `docs/WALKTHROUGH.md` §9 document the commands.
+- **Open item 3 is done.** `quest_tool.py` now has `stage` (driver answer JSON → Manager Markdown answers), `packet` (a packet's `## Ready questions` → queue files, with mechanical firewall warnings) and `sync` (assessment ledger → `assessed-qids.json`, stamping each round's `committed_at`). 13 new tests in `tests/test_quest_tool.py`; `cr selftest` is 135 tests (109 with the browser test), all passing. `docs/NOTEBOOKLM-QUEST.md` §4 and `docs/WALKTHROUGH.md` §9 document the commands.
 - **New learning — Manager context lifetime.** One Manager context degraded after about 27 rounds (it completed R027, then failed before replying). A fresh Manager context was spawned; it read `private/state.md` and graded R028–R029 and wrote the closeout. Plan on recycling the Manager context every ~20 rounds for long quests; the compact state file is what makes the handover safe.
 - **Evidence run.** `cr import-quest` imported 156 questions (154 usable; closeout's repair Q0033-A02 selected; stop labelled OPERATIONAL) and `cr run` completed: 605 candidate FRDs, 424 validated/retained, 327 witnesses, crux report and HTML audit browser written; `cr verify` ok. The local engine still reaches **no complete coverage and no crux candidates** — the quality limit is unchanged and is now the top open item.
 - **What is left, in priority order:**
   1. Route `frd_generator`, `frd_validator` and the matching roles to a real model (file queue or API) on this 156-answer quest; the local-engine floor is now the only thing between the harness and a result someone can rely on.
-  2. Repo metadata: the GitHub description still says 31 tests / 19 stages; update it (129 tests) on the repo page.
+  2. Repo metadata: the GitHub description still says 31 tests / 19 stages; update it (135 tests) on the repo page.
   3. The six NotebookLM notebook IDs are public in `examples/quest-driver.PTX.json` and the older committed run records — IDs, not credentials, but decide whether to scrub them before promoting the repo.
   4. Optional: promote the Lead's ad-hoc `round.py` loop into a `nlm cycle` command and add a Manager checkpoint/restart helper.
   5. Teaching: unchanged.
@@ -170,7 +170,7 @@ Josh brought the project back to Claude and asked for it to be finished without 
 - **Provider failover** is in the router for every role (ordered lists; mechanical triggers; provenance in the call log).
 - **The quest relay is built** (`claimreg/notebooklm/relay.py`): Investigator and Manager as model roles, the driver unchanged. Open item 0 of §7 is done except the optional overseer.
 - **New-user commands:** `cr new`, `cr frame`, `cr approve`, `cr doctor`, `cr quest`. `README.md` and `docs/WALKTHROUGH.md` are rewritten around them.
-- **Tests:** `cr selftest` runs 129 tests (109 with the browser test). The new ones use a scripted stand-in for a model API (`tests/fakes.py`) and a stand-in driver, so failover, the relay and the whole new-user path are tested with no network.
+- **Tests:** `cr selftest` runs 135 tests (109 with the browser test). The new ones use a scripted stand-in for a model API (`tests/fakes.py`) and a stand-in driver, so failover, the relay and the whole new-user path are tested with no network.
 
 **What a live run still has to show.** Everything above was built and tested offline. See the session's closing message, or `docs/LIVE-RESULTS-2026-11-10.md` if it exists, for what the live PTX re-run and the levothyroxine quest showed.
 
@@ -198,7 +198,7 @@ Specification: `docs/AXIS-DATABASES.md`. Decisions: `docs/DECISIONS-2026-11-11.m
 - Not done: one Manager state per axis (the Manager's quest records are SHARED); the internal offline quest
   (`quest.py`) does not ask its Investigator for an axis, so its questions are filed by label or wording;
   `quest_tool.py` (the hand-run path) parses `[axis: ...]` but keeps no ledger of it.
-- Tests: `tests/test_axes.py`; suite is 129 tests.
+- Tests: `tests/test_axes.py`; suite is 135 tests.
 
 
 ## 13. Preliminary FRD evaluation and the researcher's stop (2026-11-11)
@@ -207,4 +207,14 @@ Specification: `docs/AXIS-DATABASES.md`. Decisions: `docs/DECISIONS-2026-11-11.m
 - A plain `cr run` now halts after it (`pipeline.stop_after`). Continue with `cr run <project> --run <id> --continue`.
 - Outputs: `FRD-EVALUATION.md` and `frd-evaluation.json` at the run root; `AXIS-<id>/axis.db` per axis.
 - No blended final score is implemented. Josh decides the rule after seeing LEVO output.
-- Tests: `tests/test_frd_assess.py`; suite is 129 tests.
+- Tests: `tests/test_frd_assess.py`; suite is 135 tests.
+
+## 12. Bedtime-dosing repair attempt (2026-11-11)
+
+Josh rejected the A2 null results (prior FRD ACH_Eval A2 12/18/34; harness run A2 8/12/44). The repair package is in `ChatGPT output\Bedtime Dosing Protocol Repair 2026-11-11\`: an audit of the framing/evidence-use defects, a 15-rule bedtime-dosing ruleset, and a deterministic acceptance gate (`evaluation_gate.py`, 16/16 synthetic self-tests). The new-attempt handoff is `HANDOFF-NEW-ATTEMPT-A2-BEDTIME.md` in that folder: it defines the repaired practical frame `A2-P-v1`, the required evidence extraction and exposure ledger, the gate contract, the source facts (including the corrected Willems 2024 numbers), and the definition of done. Read it before touching Axis A2 again; the *practical* question must be evaluated on its own terms, not as a rerun of the frozen two-comparator A2.
+
+## 14. Domain modules (2026-11-11)
+
+- Investigation-specific rules live in `claimreg/domains/<name>/` and load only when a project names them under `domain_modules`. Spec: `docs/DOMAIN-MODULES.md`.
+- `levo` holds the bedtime-dosing ruleset and acceptance gate. A rejected report is withheld for correction, never scored.
+- Tests: `tests/test_domain_levo.py`; suite is 135 tests.
