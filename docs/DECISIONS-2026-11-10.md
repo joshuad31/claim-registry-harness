@@ -80,3 +80,39 @@ Built from `PROPOSAL-RELAY-AND-FAILOVER.md` revision 2, with these choices:
 - Changing the fixed quest design: NotebookLM as Archivist, two agents, no FRDs during the quest, three hours.
 - Changing the specification prompts in `prompts/spec/`.
 - FRD condensation by QID, which stays experimental.
+
+## 11. Fixes forced by the 2026-11-10 LEVO quest (2026-11-11)
+
+The first real 4-lane quest captured 142 sourced, graded answers but scored 42 graded/h against the 45/h
+standard (2/5 scorecard checks). The shortfall was operational, and the five causes each got a small,
+testable fix. Full incident log: `Claude output\LEVO\HANDOFF-LEVO.md` Appendix A.
+
+1. **Stale lane-runner state on a reused profile** (`driver.py`, `lane-runner.js`). The lane runner keeps
+   its jobs and claims in IndexedDB `crl` + `crl_*` localStorage keyed only by qid, and a new quest restarts
+   numbering at Q0001, so the previous quest's claims idled every lane of the new quest. **Chosen:** the
+   driver clears that state when the quest `run_id` differs; on a restart of the same quest the state is kept
+   so `CRL_recover()` can re-read in-flight answers from the chat. Alternative rejected: wiping the profile
+   between quests, which would force a Google sign-in every time.
+2. **Lost questions pinned the backlog** (`driver.py: sanitise_pushed`). `pushed - saved` counted a question
+   lost to a page wedge or a restart as outstanding forever, holding the feed at its limit. **Chosen:** at
+   startup, keep only `pushed` entries whose question has an answer file; unanswered in-flight questions
+   live in the lane runner's IndexedDB and are recovered, so nothing is lost. Raising `max_backlog` is
+   explicitly not the fix (it fails the steering check by construction).
+3. **A wedged lane held its claim forever** (`lane-runner.js`, v7). When the chat pair could not be found
+   the old code returned before its `MAX_GEN_MS` timeout could fire. **Chosen:** a lane that cannot submit or
+   find its answer card releases the claim after two tries and records a `FAILED` answer; the backlog is
+   released and the relay re-asks it as A02 elsewhere.
+4. **Driver HOLD deadlock** (`relay.py`). With the driver reporting HOLD, no lane busy and answers waiting,
+   the relay waited for `max_wait_seconds` before taking a short round. **Chosen:** that state triggers a
+   short grading round immediately.
+5. **Minimized browser window and link typos** (`driver.py`, `cr doctor`, `cr quest`). Chrome throttles
+   hidden tabs; a minimized window stalls the lanes, and the persistent context re-opens minimized. A
+   one-character notebook-link typo silently killed one lane for a whole quest. **Chosen:** launch Chrome
+   maximized and restore a minimized notebook window on each driver poll; **headless is explicitly not
+   supported** (a headless renderer froze after ~20 minutes). `cr doctor --notebooks` resolves every link
+   with the driver profile, and `cr quest` preflights the lanes and refuses to start the relay if they do
+   not all come up. `cr quest` also starts the driver with `PYTHONUNBUFFERED=1` so `driver.log` is live.
+
+Tests: `tests/test_driver_state.py` (backlog sanitising), `tests/test_relay.py`
+(`test_short_round_breaks_a_driver_hold`), and the browser mock test now runs a second quest on the same
+profile to prove stale claims are cleared and listens for the lane-level failure behaviour.

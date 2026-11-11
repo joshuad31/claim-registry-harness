@@ -63,8 +63,10 @@ On Windows, `nlm.cmd login …` and `nlm.cmd run …` do the same.
 - **Answers out:** `<answers_dir>/Qnnnn-A01.json` holds the exact query, the answer as rendered, the lane, the notebook URL, the submit and capture times, and two flags: `contains_tool_output` and `outcome`.
 - **Status:** `<answers_dir>/driver-status.json` shows what every lane is doing.
 - **Pacing:** the driver holds new questions while more than `max_backlog` answers (default 12) are waiting for the Manager. Mark answers assessed with `quest_tool.py assessed <assessed_file> Q0001 …`, or preferably `quest_tool.py sync <assessment-ledger.json> <assessed_file>`, which stamps each QID with its round's committed time. Without an `assessed_file`, the driver runs at full speed.
+- **Window:** leave the driver's Chrome window open and **unminimized**. A minimized or fully hidden window throttles the notebook tabs and can stall every lane; the driver now launches maximized and restores a minimized window automatically. Do not use `--headless`: a headless renderer froze after about twenty minutes in the 2026-11-10 run.
 - **Stop:** put a file named `STOP` in `queue/`. Lanes finish their current answer, and the driver exits.
-- **Restarts:** if a tab reloads or crashes, the driver reopens it and re-reads any answer that was already generated, instead of sending the question again.
+- **Restarts:** if a tab reloads or crashes, the driver reopens it and re-reads any answer that was already generated, instead of sending the question again. On startup it also clears the lane runner's IndexedDB claims whenever the quest's `run_id` changes (a new quest on the same signed-in profile would otherwise see the old quest's QID claims and idle every lane), and drops `pushed` entries with no answer file so a lost question cannot pin the backlog forever.
+- **Wedged lanes:** if a tab loses its chat (wrong notebook, frozen page), the lane releases its claim after two tries and records a `FAILED` answer; the backlog is released and the relay re-asks the question as A02 on another lane.
 
 A mock-notebook test checks all of this end to end: `python tests/test_notebooklm_driver.py`.
 
@@ -134,6 +136,15 @@ The driver removes the setup time. `max_backlog` (default 12) keeps the lanes fr
 | Two answers were nothing but unexecuted tool calls | Recorded `FAILED`, not usable; re-ask in another lane |
 | One long chat kept repeating a wrong description of a source | Re-ask in a different notebook copy; the answer from the other chat was consistent with the rest |
 | One Manager could not keep up with six lanes | Backlog pacing (`max_backlog`) |
+| The driver's Chrome window was minimized during the quest (11-10) | The driver launches maximized and restores a minimized notebook window on every poll; never minimize it by hand |
+| A new quest on the reused sign-in profile idled every lane (11-10; the 11-09 profile still held claims for Q0001…) | The driver clears the lane runner's `crl` IndexedDB and `crl_*` localStorage when the quest `run_id` changes; state is kept when the same quest restarts, so in-flight answers still recover |
+| Questions lost to a page wedge or driver restart stayed counted as `pushed` and pinned the backlog (11-10) | The driver recomputes `pushed` from the answer files on disk at startup |
+| A lane held its claim forever when its chat pair could not be found; `MAX_GEN_MS` never fired (11-10) | The lane releases the claim after two failed tries and records a `FAILED` answer, which frees the backlog for an A02 re-ask elsewhere |
+| The relay would not grade a short round while the driver reported `HOLD` with no lane busy (11-10 deadlock) | A driver `HOLD` with no busy lane and answers waiting now triggers a short grading round immediately |
+| A one-character typo in a notebook link silently killed one lane for a whole quest (11-10) | `cr doctor --notebooks` resolves each link with the driver profile; `cr quest` preflights the lanes and refuses to start the relay if they do not all come up |
+| A headless driver froze after ~20 minutes (11-10) | Headless is not a supported workaround; run the visible driver and restart only the driver if a lane wedges |
+
+**If the driver stalls during a quest:** never restart the relay (`cr quest`) — it holds the recorded state and will grade the tail. Restore/unminimize the Chrome window first (the driver now does this itself). If a tab is genuinely wedged, kill only the driver's Python process and run `python -m claimreg.notebooklm.driver run "<quest>\quest.json"` from the repo; a restart re-injects the lanes and re-reads in-flight answers from each chat (`CRL_recover`). Do not raise `max_backlog` to work around lost questions — the driver now drops them at startup, and raising it makes the steering check fail by construction.
 
 ## 6. Measuring throughput: the scorecard
 

@@ -36,7 +36,69 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 RUNNER_JS = HERE / "lane-runner.js"
 NO_THROTTLE = ["--disable-background-timer-throttling", "--disable-backgrounding-occluded-windows",
-               "--disable-renderer-backgrounding", "--disable-blink-features=AutomationControlled"]
+               "--disable-renderer-backgrounding", "--disable-blink-features=AutomationControlled",
+               "--start-maximized"]
+
+
+def sanitise_pushed(pushed, saved):
+    """Keep only pushed-question entries that have an answer file on disk.
+
+    A question that was pushed but then lost (page wedge, driver restart, dead lane) would otherwise be
+    counted as outstanding forever: `pushed - saved` pins the backlog at its limit and the lanes idle.
+    Unanswered questions still in flight are held by the lane runner's IndexedDB and are recovered from
+    the chat on restart, so dropping their pushed entries loses nothing."""
+    keep = set()
+    saved = set(saved or ())
+    for name in pushed or ():
+        qid = str(name).split("-")[0].replace(".json", "")
+        if qid in saved:
+            keep.add(name)
+    return keep
+
+
+def restore_minimized_windows(log=None):
+    """Best-effort on Windows: restore a minimized Chrome window whose title mentions Notebook.
+
+    Chrome throttles hidden tabs to about one tick a minute, and when every tab is hidden the lane
+    runner's cross-tab tick stops entirely, so a minimized quest window silently stalls the whole
+    quest.  Playwright's persistent context also re-opens with the last window state, so a window
+    minimized before a restart comes back minimized.  Returns the number of windows restored."""
+    if os.name != "nt":
+        return 0
+    try:
+        import ctypes
+        from ctypes import wintypes
+        user32 = ctypes.windll.user32
+    except Exception:  # noqa: BLE001 - non-Windows or a constrained interpreter: run without it
+        return 0
+    restored = []
+    try:
+        proc_type = ctypes.WINFUNCTYPE(wintypes.BOOL, wintypes.HWND, wintypes.LPARAM)
+    except Exception:  # noqa: BLE001
+        return 0
+
+    def _callback(hwnd, _lparam):
+        try:
+            if user32.IsIconic(hwnd):
+                n = user32.GetWindowTextLengthW(hwnd)
+                if n:
+                    buf = ctypes.create_unicode_buffer(n + 1)
+                    user32.GetWindowTextW(hwnd, buf, n + 1)
+                    title = buf.value
+                    if "notebook" in title.lower():
+                        user32.ShowWindow(hwnd, 9)  # SW_RESTORE
+                        restored.append(title)
+        except Exception:  # noqa: BLE001
+            pass
+        return True
+
+    try:
+        user32.EnumWindows(proc_type(_callback), 0)
+    except Exception:  # noqa: BLE001
+        return 0
+    if restored and log:
+        log("restored minimized window(s): " + "; ".join(restored))
+    return len(restored)
 
 
 def load(cfg_path):
@@ -92,7 +154,16 @@ class Driver:
         self.pushed = set()
         self.state_file = cfg["_answers"] / "driver-state.json"
         if self.state_file.exists():
-            self.pushed = set(json.loads(self.state_file.read_text()).get("pushed", []))
+            try:
+                recorded = set(json.loads(self.state_file.read_text()).get("pushed", []))
+            except Exception:  # noqa: BLE001 - a corrupt state file must not stop a quest
+                recorded = set()
+            saved = {f.name.split("-")[0] for f in cfg["_answers"].glob("Q*-A*.json")}
+            self.pushed = sanitise_pushed(recorded, saved)
+            dropped = len(recorded - self.pushed)
+            if dropped:
+                self.state_file.write_text(json.dumps({"pushed": sorted(self.pushed)}))
+                log("driver: dropped %d lost question(s) from the backlog" % dropped)
 
     # ---- browser ----
     def start(self, p):
@@ -103,6 +174,7 @@ class Driver:
         self.ctx = p.chromium.launch_persistent_context(str(self.cfg["_profile"]), **kw)
         for name, url in self.cfg["notebooks"].items():
             self.open_lane(name, url)
+        restore_minimized_windows(self.log)
 
     def open_lane(self, name, url):
         page = self.ctx.pages[0] if (not self.pages and self.ctx.pages and self.ctx.pages[0].url in ("about:blank", "")) else self.ctx.new_page()
@@ -113,8 +185,29 @@ class Driver:
     def inject(self, name):
         page = self.pages[name]
         page.wait_for_selector('textarea[aria-label="Query box"]', timeout=120000)
-        page.evaluate("([lanes, run]) => { localStorage.setItem('crl_lanes', JSON.stringify(lanes)); localStorage.setItem('crl_run', JSON.stringify(run)); }",
-                      [self.cfg["_lanes"], self.cfg.get("run_id", "UNSET")])
+        # The lane runner keeps its job queue and claims in IndexedDB 'crl' plus crl_* localStorage on
+        # the notebook origin. That state is shared across quests on the same signed-in profile, and a
+        # new quest restarts numbering at Q0001, so a stale claim for Q0001-A01 silently idles every
+        # lane. Clear it whenever the run_id differs; keep it on a restart of the same quest so
+        # CRL_recover() can re-read in-flight answers from the chat.
+        page.evaluate(
+            """async ([lanes, run]) => {
+              let prev = null;
+              try { prev = JSON.parse(localStorage.getItem('crl_run')); } catch (e) { prev = null; }
+              if (prev !== run) {
+                for (const k of Object.keys(localStorage)) if (k.startsWith('crl')) localStorage.removeItem(k);
+                await new Promise(resolve => {
+                  try {
+                    const req = indexedDB.deleteDatabase('crl');
+                    req.onsuccess = req.onerror = req.onblocked = () => resolve();
+                  } catch (e) { resolve(); }
+                  setTimeout(resolve, 3000);
+                });
+              }
+              localStorage.setItem('crl_lanes', JSON.stringify(lanes));
+              localStorage.setItem('crl_run', JSON.stringify(run));
+            }""",
+            [self.cfg["_lanes"], self.cfg.get("run_id", "UNSET")])
         page.evaluate(RUNNER_JS.read_text(encoding="utf-8"))
         rec = page.evaluate("() => window.CRL_recover ? window.CRL_recover() : ''")
         self.log("lane %s ready%s" % (name, (" - " + rec) if rec and "nothing" not in rec else ""))
@@ -209,6 +302,7 @@ class Driver:
     def loop(self, max_seconds=None, poll=3.0):
         t0, last_print = time.time(), 0
         while max_seconds is None or time.time() - t0 < max_seconds:
+            restore_minimized_windows(self.log)
             self.heal()
             self.harvest()
             note = self.feed()

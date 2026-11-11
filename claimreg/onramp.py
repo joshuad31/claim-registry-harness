@@ -22,6 +22,7 @@ import subprocess
 import sys
 import time
 import urllib.error
+import urllib.parse
 import urllib.request
 from pathlib import Path
 
@@ -405,6 +406,140 @@ def pick_model(name: str, available: list[str]) -> str | None:
     return None
 
 
+# NotebookLM notebook links.  One notebook copy is one lane, so a link that silently fails to open
+# costs a quarter of a six-lane quest's throughput for the whole run.  These checks are offline and
+# cheap; `cr doctor --notebooks` additionally opens each link with Playwright.
+
+NOTEBOOK_HOSTS = ("notebook.google.com", "notebooklm.google.com")
+_NOTEBOOK_PATH_RE = re.compile(r"/notebook/([^/?#]+)")
+_NOTEBOOK_ID_RE = re.compile(r"[0-9a-f-]{16,}", re.I)
+
+
+def notebook_link_problems(links) -> list[tuple[int, str]]:
+    """What is wrong with each saved notebook link, checked without any network call.
+
+    Returns ``[(1-based index, problem), ...]``; an empty list means every link looks usable.  A
+    usable link is an https URL on ``notebook.google.com`` or ``notebooklm.google.com``, with
+    ``/notebook/<id>`` in its path where the id has at least 16 hex/dash characters, and no id is
+    repeated (a repeated id means two lanes would open the same notebook).
+    """
+    problems: list[tuple[int, str]] = []
+    seen: dict[str, int] = {}
+    for i, raw in enumerate(links or [], 1):
+        bad: list[str] = []
+        link = "" if raw is None else str(raw).strip()
+        try:
+            parts = urllib.parse.urlsplit(link)
+        except ValueError as e:
+            bad.append(f"not a URL ({e})")
+            parts = None
+        if parts is not None:
+            if parts.scheme.lower() != "https":
+                bad.append("not an https URL")
+            host = (parts.hostname or "").lower()
+            if host not in NOTEBOOK_HOSTS:
+                bad.append("the host is not notebook.google.com or notebooklm.google.com"
+                           + (f" (got {host})" if host else " (no host in the link)"))
+            m = _NOTEBOOK_PATH_RE.search(parts.path or "")
+            if not m:
+                bad.append("the path has no /notebook/<id>")
+            else:
+                nb_id = m.group(1)
+                if not _NOTEBOOK_ID_RE.fullmatch(nb_id) or not re.search(r"[0-9a-f]", nb_id, re.I):
+                    bad.append(f"the notebook id {nb_id!r} is not plausible (needs 16+ hex/dash characters)")
+                elif nb_id.lower() in seen:
+                    bad.append(f"duplicate of notebook {seen[nb_id.lower()]} (id {nb_id})")
+                else:
+                    seen[nb_id.lower()] = i
+        if bad:
+            problems.append((i, "; ".join(bad)))
+    return problems
+
+
+_NOT_FOUND_PHRASES = ("not found", "couldn't find", "could not find", "request access", "requesting access",
+                      "you need permission", "you don't have permission", "access denied",
+                      "no longer available", "doesn't exist", "does not exist")
+
+
+def _notebook_page_problem(title: str, url: str, body: str) -> str | None:
+    """Why an opened page does not look like the notebook the link named, or None when it does.
+
+    NotebookLM answers a bad or unshared id with an error page ("Couldn't find that notebook",
+    "Request access") or by sending the browser to the Google sign-in page.  Either way the page is
+    not the notebook, so the link is not usable for a quest.
+    """
+    text = f"{title or ''}\n{(body or '')[:20000]}".lower()
+    for phrase in _NOT_FOUND_PHRASES:
+        if phrase in text:
+            return f"the page says the notebook is unavailable ({phrase!r})"
+    if not re.search(r"/notebook/[0-9a-f-]{16,}", url or "", re.I):
+        return f"the final URL is not a notebook URL: {url}"
+    return None
+
+
+def check_notebooks_online(notebooks, profile_dir, timeout_ms: int = 45000):
+    """Open each notebook link in the driver's own Chrome profile and see whether it resolves.
+
+    Returns ``[(ok, detail), ...]`` aligned with *notebooks*, or ``None`` when Playwright is not
+    importable (the caller prints a warning and skips).  The context is a persistent one on
+    ``profile_dir`` so the saved Google sign-in is used; installed Chrome is used via
+    ``channel="chrome"`` and headless is tried first, then a visible window.  The context is always
+    closed.
+    """
+    try:
+        from playwright.sync_api import sync_playwright
+    except ImportError:
+        return None
+    profile = str(Path(os.path.expanduser(str(profile_dir))).resolve())
+    results: list[tuple[bool, str]] = []
+    with sync_playwright() as p:
+        ctx = None
+        failure = ""
+        try:
+            for headless in (True, False):
+                try:
+                    ctx = p.chromium.launch_persistent_context(
+                        profile, headless=headless, channel="chrome",
+                        args=["--disable-background-timer-throttling", "--disable-backgrounding-occluded-windows",
+                              "--disable-renderer-backgrounding"],
+                        ignore_default_args=["--enable-automation"], bypass_csp=True)
+                    break
+                except Exception as e:  # noqa: BLE001
+                    failure = f"{type(e).__name__}: {e}"[:300]
+            if ctx is None:
+                return [(False, f"could not open Chrome with the driver profile: {failure}")] * len(notebooks)
+            page = ctx.pages[0] if ctx.pages else ctx.new_page()
+            for url in notebooks:
+                try:
+                    page.goto(url, wait_until="domcontentloaded", timeout=timeout_ms)
+                    # A page with the notebook's chat box is the notebook, whatever its text says: its
+                    # body holds the chat history, and Archivist answers often say "not found in the
+                    # sources", which must not read as an error page.
+                    try:
+                        page.wait_for_selector('textarea[aria-label="Query box"]', timeout=20000)
+                        results.append((True, f"title: {(page.title() or '').strip()}"))
+                        continue
+                    except Exception:  # noqa: BLE001 - no chat box: look for the error page below
+                        pass
+                    title = (page.title() or "").strip()
+                    final = page.url or ""
+                    try:
+                        body = page.locator("body").inner_text(timeout=10000)
+                    except Exception:  # noqa: BLE001
+                        body = ""
+                    problem = _notebook_page_problem(title, final, body)
+                    results.append((problem is None, f"title: {title}" if problem is None else problem))
+                except Exception as e:  # noqa: BLE001
+                    results.append((False, f"{type(e).__name__}: {str(e)[:180]}"))
+        finally:
+            if ctx is not None:
+                try:
+                    ctx.close()
+                except Exception:  # noqa: BLE001
+                    pass
+    return results
+
+
 def cmd_doctor(a) -> int:
     rows: list[tuple[str, str, str]] = []
 
@@ -421,6 +556,8 @@ def cmd_doctor(a) -> int:
     add("PASS" if find_chrome() else "WARN", "Google Chrome " + ("found" if find_chrome() else "not found"),
         "" if find_chrome() else "install Chrome, or set \"channel\": \"\" in quest.json and run: playwright install chromium")
     if not a.project:
+        if getattr(a, "notebooks", False):
+            add("WARN", "notebook link check skipped", "pass a project folder so its saved notebook links can be read")
         return _doctor_print(rows)
     proj = Path(a.project)
     if not (proj / "project.json").exists():
@@ -453,6 +590,30 @@ def cmd_doctor(a) -> int:
     add("PASS" if nbs else "WARN", f"NotebookLM: {len(nbs)} notebook link(s) saved" if nbs else "NotebookLM: no notebook link saved",
         "one link = one lane; 3 to 6 copies of the notebook give the 45+ answers an hour the method assumes"
         if len(nbs) < 3 else "")
+    if nbs:
+        # one row per link: the offline shape check always runs; --notebooks also opens each link
+        bad = dict(notebook_link_problems(nbs))
+        online = bool(getattr(a, "notebooks", False)) and not bool(getattr(a, "offline", False))
+        opened: dict[int, tuple[bool, str]] = {}
+        if online:
+            to_open = [(i, str(u)) for i, u in enumerate(nbs, 1) if i not in bad]
+            if to_open:
+                profile = (cfg.get("notebooklm") or {}).get("profile_dir") or str(HARNESS_ROOT / ".notebooklm-profile")
+                results = check_notebooks_online([u for _, u in to_open], profile)
+                if results is None:
+                    add("WARN", "notebook online check skipped", "Playwright is not installed: pip install playwright")
+                else:
+                    for (i, _), (ok, detail) in zip(to_open, results):
+                        opened[i] = (ok, detail)
+        for i in range(1, len(nbs) + 1):
+            if i in bad:
+                add("FAIL", f"notebook {i}: link is not usable", bad[i])
+            elif i in opened:
+                ok, detail = opened[i]
+                add("PASS" if ok else "FAIL",
+                    f"notebook {i}: " + ("opens in NotebookLM" if ok else "does not open in NotebookLM"), detail)
+            else:
+                add("PASS", f"notebook {i}: link looks valid")
     # providers actually used by the roles that matter
     from .llm.router import LLM
     llm = LLM(cfg, log_name="doctor-llm-calls.jsonl")
@@ -586,6 +747,70 @@ def _quest_dir(proj: Path, quest_id: str | None, new: bool) -> Path:
     return d
 
 
+# The driver prints "lane <name> ready" once per notebook once its tab has the runner in it.  The
+# quest fits as many lanes as there are notebooks, so a missing lane line means a link did not open.
+DRIVER_PREFLIGHT_S = 150.0
+MINIMIZED_WINDOW_WARNING = (
+    "Keep the driver's Chrome window unminimized for the whole quest; a minimized window throttles the "
+    "notebook tabs. The driver now tries to restore a minimized window automatically.")
+_LANE_READY_RE = re.compile(r"lane (.+?) ready(?:\s|$)")
+
+
+def _driver_env(environ=None) -> dict:
+    """The driver's environment: unbuffered stdout so driver.log is live while the quest runs."""
+    return {**(os.environ if environ is None else environ), "PYTHONUNBUFFERED": "1"}
+
+
+def _driver_log_lines(log_path) -> list[str]:
+    try:
+        return Path(log_path).read_text(encoding="utf-8", errors="replace").splitlines()
+    except OSError:
+        return []
+
+
+def _ready_lanes(text: str) -> set[str]:
+    """The distinct lane names that have printed ``lane <name> ready`` in a chunk of driver log."""
+    return {m.group(1).strip() for line in (text or "").splitlines()
+            if (m := _LANE_READY_RE.match(line.strip()))}
+
+
+def _preflight_lanes(proc, log_path, expected: int, timeout: float = DRIVER_PREFLIGHT_S,
+                     poll: float = 1.0, start_lines: int = 0) -> tuple[set[str], bool, list[str]]:
+    """Wait until the driver has brought up *expected* lanes, or it exits, or the timeout passes.
+
+    *start_lines* is the number of lines already in the log before this driver started, so lines
+    left by an earlier run of the same quest do not count (a resume would otherwise pass at once).
+    Returns ``(ready lane names, whether every lane came up, last 30 log lines)``.
+    """
+    deadline = time.time() + float(timeout)
+    while True:
+        lines = _driver_log_lines(log_path)
+        new_lines = lines[int(start_lines):] if int(start_lines) <= len(lines) else lines
+        ready = _ready_lanes("\n".join(new_lines))
+        if len(ready) >= expected:
+            return ready, True, lines[-30:]
+        if proc is not None and proc.poll() is not None:
+            return ready, False, lines[-30:]
+        if time.time() >= deadline:
+            return ready, False, lines[-30:]
+        time.sleep(poll)
+
+
+def _stop_process(proc, wait: float = 10.0) -> None:
+    """Stop the driver process without letting a failure to stop it hide the original problem."""
+    if proc is None:
+        return
+    try:
+        proc.terminate()
+        proc.wait(timeout=wait)
+    except Exception:  # noqa: BLE001
+        try:
+            proc.kill()
+            proc.wait(timeout=5)
+        except Exception:  # noqa: BLE001
+            pass
+
+
 def cmd_quest(a) -> int:
     from .notebooklm import driver as drv
     from .notebooklm.relay import Relay, local_now
@@ -619,10 +844,6 @@ def cmd_quest(a) -> int:
     qcfg = read_json(qj)
     ensure_dir(q / "answers" / "queue")
     clock = q / "answers" / "quest-clock.json"
-    c = read_json(clock, default={}) or {}
-    if not c.get("go_ahead"):
-        write_json(clock, {**c, "run_id": qcfg.get("run_id", ""), "go_ahead": go,
-                           "note": "go-ahead = the moment `cr quest` was started"})
     stale = q / "answers" / "queue" / "STOP"
     if stale.exists():
         stale.unlink()
@@ -640,11 +861,41 @@ def cmd_quest(a) -> int:
             drv.login(drv.load(qj))
             write_json(clock, {**(read_json(clock, default={}) or {}), "go_ahead": local_now(),
                                "note": "go-ahead = after the one-time Google sign-in"})
-        log = open(q / "driver.log", "a", encoding="utf-8")
-        proc = subprocess.Popen([sys.executable, "-m", "claimreg.notebooklm.driver", "run", str(qj)],
-                                cwd=str(HARNESS_ROOT), stdout=log, stderr=subprocess.STDOUT)
-        print(f"NotebookLM driver started (log: {q / 'driver.log'}). A Chrome window opens with one tab per notebook; "
+        print(MINIMIZED_WINDOW_WARNING)
+        driver_log = q / "driver.log"
+        start_lines = len(_driver_log_lines(driver_log))
+        log = open(driver_log, "a", encoding="utf-8")
+        try:
+            proc = subprocess.Popen([sys.executable, "-m", "claimreg.notebooklm.driver", "run", str(qj)],
+                                    cwd=str(HARNESS_ROOT), stdout=log, stderr=subprocess.STDOUT,
+                                    env=_driver_env())
+        finally:
+            log.close()
+        print(f"NotebookLM driver started (log: {driver_log}). A Chrome window opens with one tab per notebook; "
               f"leave it open.")
+        expected = len(qcfg.get("notebooks") or {})
+        if expected:
+            print(f"Waiting up to {int(DRIVER_PREFLIGHT_S)}s for {expected} notebook lane(s) to be ready "
+                  f"(log: {driver_log}) ...")
+            ready, ok, tail = _preflight_lanes(proc, driver_log, expected, start_lines=start_lines)
+            if not ok:
+                print(f"quest: only {len(ready)} of {expected} notebook lane(s) came up within "
+                      f"{int(DRIVER_PREFLIGHT_S)}s. Check {driver_log}: a typo in a notebook link is the usual "
+                      f"cause (run `cr doctor --notebooks` to open each link online).", file=sys.stderr)
+                if tail:
+                    print(f"--- {driver_log} (last {len(tail)} lines) ---", file=sys.stderr)
+                    for line in tail:
+                        print(line, file=sys.stderr)
+                    print("--- end of log ---", file=sys.stderr)
+                _stop_process(proc)
+                return 2
+            print(f"All {len(ready)} notebook lane(s) ready: {', '.join(sorted(ready))}")
+    # Stamp the go-ahead only now: the driver (and, with a profile, every lane) is up, so a failed
+    # preflight cannot leave an early clock behind that would make a later, fixed attempt look slow.
+    c = read_json(clock, default={}) or {}
+    if not c.get("go_ahead"):
+        write_json(clock, {**c, "run_id": qcfg.get("run_id", ""), "go_ahead": go,
+                           "note": "go-ahead = the moment `cr quest` started the quest"})
     print(f"Status file: {q / 'relay-status.json'}.  To stop early: create an empty file named STOP in {q}.")
     relay = Relay(qj)
     try:

@@ -432,6 +432,8 @@ def main(argv=None) -> int:
     s.add_argument("--offline", action="store_true", help="do not contact the model providers")
     s.add_argument("--fix", action="store_true", help="when a configured model name is not offered, pick one that is")
     s.add_argument("--models", action="store_true", help="also list the models each key offers")
+    s.add_argument("--notebooks", action="store_true",
+                   help="also open each saved notebook link in Chrome to check it resolves")
     s.set_defaults(fn=onramp.cmd_doctor)
 
     s = sub.add_parser("quest", help="run the NotebookLM discovery quest unattended, then import it")

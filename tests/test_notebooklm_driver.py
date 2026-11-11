@@ -41,6 +41,9 @@ class Handler(http.server.BaseHTTPRequestHandler):
 class DriverTest(unittest.TestCase):
     def test_end_to_end(self):
         from claimreg.notebooklm import driver as D
+        # Production runs on installed Chrome (`channel: "chrome"`); use it when present so the mock
+        # notebook exercises the same browser, and fall back to Playwright's bundled Chromium.
+        channel = "chrome" if D.find_chrome() else ""
         srv = socketserver.TCPServer(("127.0.0.1", 0), Handler)
         port = srv.server_address[1]
         threading.Thread(target=srv.serve_forever, daemon=True).start()
@@ -48,7 +51,7 @@ class DriverTest(unittest.TestCase):
         try:
             cfg_path = tmp / "quest-driver.json"
             cfg_path.write_text(json.dumps({
-                "run_id": "TEST-RUN", "channel": "", "answers_dir": "answers", "profile_dir": "profile",
+                "run_id": "TEST-RUN", "channel": channel, "answers_dir": "answers", "profile_dir": "profile",
                 "max_backlog": 4, "assessed_file": "assessed.json", "poll_seconds": 0.5,
                 "notebooks": {n: "http://127.0.0.1:%d/notebook/%s" % (port, i) for n, i in NBS.items()}}))
             (tmp / "assessed.json").write_text("[]")
@@ -118,6 +121,27 @@ class DriverTest(unittest.TestCase):
             cap1 = json.loads((state / "artifacts/quest-state/recording/captures/Q0001-A01.json").read_text())
             self.assertEqual(cap1["outcome"], "COMPLETE")
             self.assertTrue(cap1["metadata"]["cited_sources"])
+            # 4) a NEW quest on the reused driver profile: stale lane-runner state must be cleared.
+            #    Before the fix the old IndexedDB claims for Q0001-A01... idled every lane of the new
+            #    quest (this is exactly what killed the first LEVO pilot on the 11-09 profile).
+            cfg2_path = tmp / "quest-driver-2.json"
+            cfg2_path.write_text(json.dumps({
+                "run_id": "TEST-RUN-2", "channel": channel, "answers_dir": "answers2", "profile_dir": "profile",
+                "max_backlog": 8, "assessed_file": "assessed2.json", "poll_seconds": 0.5,
+                "notebooks": {n: "http://127.0.0.1:%d/notebook/%s" % (port, i) for n, i in NBS.items()}}))
+            (tmp / "assessed2.json").write_text("[]")
+            cfg2 = D.load(cfg2_path)
+            for q in ("Q0001", "Q0002", "Q0003", "Q0004"):
+                (cfg2["_queue"] / (q + ".json")).write_text(
+                    json.dumps({"qid": q, "attempt": "A01",
+                                "text": "Using mock_source.pdf.md, second quest question %s?" % q}))
+            with sync_playwright() as p2:
+                d2 = D.Driver(cfg2, headless=True, log=logs.append)
+                d2.start(p2)
+                d2.loop(max_seconds=30, poll=0.5)
+                d2.ctx.close()
+            self.assertEqual(sorted(d2.saved_qids()), ["Q0001", "Q0002", "Q0003", "Q0004"],
+                             "a new run_id on a reused profile starts with a clean lane-runner state")
         finally:
             srv.shutdown()
             shutil.rmtree(tmp, ignore_errors=True)

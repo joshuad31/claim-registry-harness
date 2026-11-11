@@ -73,7 +73,10 @@ class FakeDriver(threading.Thread):
                     write_json(self.answers / f"{key}.json", rec)
                     break
             write_json(self.answers / "driver-status.json",
-                       {"at": now(), "feed": "STOP" if stop else "idle", "lanes": {"primary": {"state": "FREE"}}})
+                       {"at": now(), "feed": ("STOP" if stop else
+                                              ("HOLD (backlog %d, limit %d)" % (backlog, self.max_backlog)
+                                               if backlog >= self.max_backlog else "idle")),
+                        "lanes": {"primary": {"state": "FREE"}}})
             time.sleep(0.01)
 
 
@@ -291,6 +294,21 @@ class RelayTest(unittest.TestCase):
         st = r.run(max_seconds=60)
         self.assertEqual(st["answers_graded"], 6)
         self.assertEqual(sum(read_json(r.ledger_path)["assessments"][0]["vectors"]["A1"].values()), 64)
+
+    def test_short_round_breaks_a_driver_hold(self):
+        # The 11-09 LEVO run deadlocked when the driver held its feed (backlog at the limit, no lane
+        # busy) while answers were waiting to be graded: the relay would not take a short round, so
+        # nothing released the backlog.  With max_backlog=1 the fake driver reports HOLD after the
+        # first answer; the relay must grade it immediately, not wait max_wait_seconds (120 s here).
+        s = Script()
+        r, d = self.make({"m": s}, quest={"max_questions": 4, "max_wait_seconds": 120,
+                                          "investigator_min_interval": 0},
+                         driver={"max_backlog": 1})
+        st = r.run(max_seconds=25)
+        led = read_json(r.ledger_path)["assessments"]
+        self.assertGreaterEqual(st["answers_graded"], 2)
+        self.assertTrue(any(len(a["members"]) < 6 for a in led),
+                        "taking the available answers released the driver hold")
 
     def test_validators(self):
         self.assertEqual(assessment_problem(assessment("R001"), 64, ["A1"]), "")

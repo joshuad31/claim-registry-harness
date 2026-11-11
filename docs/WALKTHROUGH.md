@@ -141,7 +141,7 @@ python cr.py approve projects\MyTopic --by "Your Name"
 python cr.py doctor projects\MyTopic
 ```
 
-It checks the corpus, the header, the index, the notebook links and each model key, and it sends each model a one-word test. If a model name is no longer offered, `cr doctor --fix` picks one that is. Fix anything marked FAIL before the quest.
+It checks the corpus, the header, the index, the notebook links and each model key, and it sends each model a one-word test. If a model name is no longer offered, `cr doctor --fix` picks one that is. Add `--notebooks` to resolve every notebook link with the driver's browser profile — a one-character typo in a link otherwise silently costs you a lane for the whole quest. Fix anything marked FAIL before the quest.
 
 ## 7. Run the quest
 
@@ -149,15 +149,17 @@ It checks the corpus, the header, the index, the notebook links and each model k
 python cr.py quest projects\MyTopic
 ```
 
-The first time, a Chrome window opens: sign in to the Google account that owns the notebooks, check that a notebook opens, and close the window. After that the quest runs by itself for up to three hours:
+The first time, a Chrome window opens: sign in to the Google account that owns the notebooks, check that a notebook opens, and close the window. After that the quest runs by itself for up to three hours. `cr quest` first checks that every lane comes up (it refuses to start if a notebook link does not resolve) and starts the driver with a live log:
 
-- A Chrome window opens with one tab per notebook copy. Leave it open. You can watch questions and answers arrive.
+- A Chrome window opens with one tab per notebook copy. Leave it open and **unminimized** — a minimized window throttles the tabs, and the driver now launches maximized and restores a minimized window automatically. Never use a headless driver.
 - The **Investigator** (a model) writes questions. Each one must pass the firewall: it names one to three exact source filenames, asks for (filename, section heading) beside each number, uses no project vocabulary, and never asks for fewer than 900 words.
 - **NotebookLM** answers. Every answer is saved exactly as shown, with its query, its lane and its times.
 - The **Manager** (a second model call, which the Investigator never sees) runs ACH_Eval on every six answers, commits the round, and writes a feedback packet with ready-to-send questions for the next batch.
 - The harness never lets more than 12 answers wait for grading, so the Manager's feedback keeps steering the questions.
 
 Watch `quest\<quest id>\relay-status.json` for progress. To stop early, create an empty file named `STOP` in the quest folder: the lanes finish their current answers, the Manager grades what is left, and the quest closes. Running `cr quest` again resumes an unfinished quest; committed rounds are never graded twice.
+
+If a lane stalls, do not restart the relay: unminimize the window first, and if the tab is genuinely wedged, restart only the driver (`python -m claimreg.notebooklm.driver run "<quest>\quest.json"`) — in-flight answers are re-read from the chat. `docs\NOTEBOOKLM-QUEST.md` §5 lists every failure mode and what the harness now does about it.
 
 When it ends, the harness writes `CLOSEOUT.md` and `SCORECARD.txt` (PASS or FAIL against the throughput standard) and imports the quest into a new run. No FRDs are made during the quest.
 

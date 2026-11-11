@@ -1,4 +1,4 @@
-// Claim Registry - NotebookLM lane runner (v6).
+// Claim Registry - NotebookLM lane runner (v7).
 //
 // Paste this into each notebook tab (one tab per notebook copy). Every tab becomes a "lane":
 // it takes the next question from the shared queue, types it into the chat box, waits for the
@@ -17,7 +17,11 @@
 //  * localStorage is not consistent across tabs fast enough for claiming; IndexedDB is;
 //  * one localStorage key per pending answer, so two tabs never overwrite each other;
 //  * the collapsible "Thoughts" panel is page chrome, not part of the answer;
-//  * after a browser restart, CRL_recover() re-reads answers that were already generated.
+//  * after a browser restart, CRL_recover() re-reads answers that were already generated;
+//  * a lane that cannot find its chat pair must release the claim (twice) and then record a
+//    FAILED answer, instead of holding the claim forever and wedging until MAX_GEN_MS;
+//  * a page that has lost its chat (wrong notebook, wedged tab) cannot answer anything: fail
+//    that question quickly so the driver's backlog is released and the relay can re-ask it.
 (() => {
 if (window.CRL && window.CRL.timer) clearInterval(window.CRL.timer);
 const LANES = window.CRL_LANES || JSON.parse(localStorage.getItem('crl_lanes') || '{}');
@@ -36,7 +40,7 @@ window.CRL_push = newJobs => window.CRL_tx((jobs, claims) => { const have = new 
 async function folder() { const d = await idbGet('inbox'); if (!d) return null; try { return (await d.queryPermission({ mode: 'readwrite' })) === 'granted' ? d : null; } catch (e) { return null; } }
 
 const C = window.CRL = {
-  lane, nbId, state: 'FREE', job: null, pairEl: null, lastLen: -1, stableTicks: 0, busy: false, log: [], version: 'v6',
+  lane, nbId, state: 'FREE', job: null, pairEl: null, lastLen: -1, stableTicks: 0, busy: false, log: [], version: 'v7',
   note(m) { this.log.push(now() + ' ' + m); if (this.log.length > 50) this.log.shift(); },
   pub(extra) { jset('crl_lane:' + lane, Object.assign({ state: this.state, qid: this.job && this.job.qid, ts: now(), url: location.href }, this.job ? { submitted_at: this.job.submitted_at } : {}, extra || {})); },
   pairs() { return [...document.querySelectorAll('.chat-message-pair')]; },
@@ -71,6 +75,32 @@ const C = window.CRL = {
     btn.click();
   },
   async writeOut(rec) { LS.setItem('crl_pend:' + rec.qid + '-' + rec.attempt + '.json', JSON.stringify(rec, null, 1)); await this.flush(); },
+  async failJob(job, reason, outcome) {
+    // A question the lane cannot even be asked must become a recorded answer, not a held claim:
+    // the driver then frees its backlog slot and the relay can re-ask it (A02) on another lane.
+    try {
+      const rec = { run_id: jget('crl_run', 'UNSET'), qid: job.qid, attempt: job.attempt || 'A01', lane,
+        notebook_url: location.href.split('?')[0], query: job.text, query_seen_in_user_message: false,
+        submitted_at: job.submitted_at || now(), captured_at: now(), outcome: outcome || 'FAILED',
+        generation_seconds: job.submit_wall ? Math.round((Date.now() - job.submit_wall) / 1000) : 0,
+        capture_method: 'lane-runner v7: the lane could not complete this question',
+        answer_chars: 0, answer: '', contains_tool_output: false, requested_sources: [],
+        answer_names_requested_source: false, note: reason };
+      await this.writeOut(rec);
+      this.note('failed ' + job.qid + ' (' + reason + ')');
+    } catch (e) { this.note('fail write ' + e.message); }
+    // keep the claim: it stops this tab (and the others) re-claiming a question this page cannot ask
+    this.job = null; this.pairEl = null; this.state = 'FREE'; this.pub({ err: reason, failed: true });
+  },
+  async retryOrFail(job, reason) {
+    const key = job.qid + '-' + (job.attempt || 'A01');
+    const n = Number(LS.getItem('crl_fail:' + key) || 0) + 1;
+    LS.setItem('crl_fail:' + key, String(n));
+    this.note('release ' + key + ' (' + reason + '), try ' + n);
+    if (n >= 2) { await this.failJob(job, reason + ' (failed twice)'); return; }
+    await window.CRL_tx((jobs, claims) => { delete claims[key]; });
+    this.job = null; this.pairEl = null; this.state = 'FREE'; this.pub({ err: reason });
+  },
   async flush() {
     const keys = []; for (let i = 0; i < LS.length; i++) { const k = LS.key(i); if (k && k.startsWith('crl_pend:')) keys.push(k); }
     if (!keys.length) return 0; const dir = await folder(); if (!dir) return -1;
@@ -88,20 +118,30 @@ const C = window.CRL = {
         this.job = job; this.state = 'RESERVED'; this.pub();
         try { await this.submit(job); } catch (e) {
           this.note('submit error ' + e.message);
-          await window.CRL_tx((jobs, claims) => { delete claims[job.qid + '-' + (job.attempt || 'A01')]; });
-          this.job = null; this.state = 'FREE'; this.pub({ err: e.message }); return;
+          await this.retryOrFail(job, e.message);
+          return;
         }
         job.submitted_at = now(); job.submit_wall = Date.now(); this.state = 'SUBMITTING'; this.pub(); return;
       }
       if (this.state === 'SUBMITTING') {
         const p = this.findPair(this.job.text);
         if (p) { this.pairEl = p; this.state = 'GENERATING'; this.lastLen = -1; this.stableTicks = 0; this.pub(); }
-        else if (Date.now() - this.job.submit_wall > 60000) { this.state = 'AMBIGUOUS'; this.pub({ err: 'query not visible 60 s after submit' }); }
+        else if (Date.now() - this.job.submit_wall > 60000) {
+          // the click happened but no matching user message ever appeared: retry once, then fail
+          await this.retryOrFail(this.job, 'query not visible 60 s after submit');
+        }
         return;
       }
       if (this.state === 'GENERATING') {
         const p = this.pairEl && this.pairEl.isConnected ? this.pairEl : this.findPair(this.job.text);
-        if (!p) { this.pub({ note: 'pair not found' }); return; }
+        if (!p) {
+          // Keep waiting while the page settles, but never hold a claim past MAX_GEN_MS: the old
+          // code returned here forever, so its timeout never fired and the lane wedged.
+          if (Date.now() - this.job.submit_wall > MAX_GEN_MS) {
+            await this.failJob(this.job, 'answer card not found before MAX_GEN_MS', 'INCOMPLETE');
+          } else this.pub({ note: 'pair not found' });
+          return;
+        }
         this.pairEl = p;
         const txt = this.answerText(p), done = this.finished(p);
         this.stableTicks = (done && txt.length === this.lastLen) ? this.stableTicks + 1 : 0; this.lastLen = txt.length;
@@ -136,6 +176,7 @@ window.CRL_recover = async () => {
   const lost = Object.entries(cl).filter(([k, v]) => v.lane === lane && !LS.getItem('crl_wrote:' + k + '.json') && !LS.getItem('crl_pend:' + k + '.json'));
   if (!lost.length) return lane + ': nothing to recover';
   const [k, v] = lost[0]; const job = Object.assign({}, jobs.find(j => (j.qid + '-' + (j.attempt || 'A01')) === k));
+  if (!job || !job.text) return lane + ': ' + k + ' job missing';
   const p = C.findPair(job.text); if (!p) return lane + ': ' + k + ' not in this chat';
   job.submitted_at = v.at; job.submit_wall = Date.parse(v.at);
   job.note = 'Recapture after browser restart; submitted_at is the claim time recorded just before the original send.';
@@ -155,5 +196,5 @@ if (window.CRL_driver) clearInterval(window.CRL_driver);
 window.CRL_driver = setInterval(() => { if (!document.hidden) { bc.postMessage(Date.now()); C.tick(); } }, 3000);
 new MutationObserver(() => { if (C.state === 'GENERATING' && !C.busy) C.tick(); }).observe(document.querySelector('.chat-panel-content') || document.body, { childList: true, subtree: true });
 C.pub({ started: now() });
-return 'lane runner v6 started: ' + lane;
+return 'lane runner v7 started: ' + lane;
 })()

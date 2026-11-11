@@ -527,6 +527,12 @@ class Relay:
                     self.note_error("manager loop: hard deadline reached after stop; closing with rounds graded so far")
                     return
                 idle = not qs["unsent"] and not qs["in_flight"]
+                lanes = self.lanes()
+                # A driver HOLD means its backlog (answers waiting for grading + in-flight) is at the
+                # limit.  If no lane is busy and answers are ready, the hold is what is stopping the
+                # queue: take a short round now instead of waiting for max_wait_seconds, so grading
+                # releases the driver and it can push more questions (the LEVO deadlock).
+                holding = str(lanes.get("feed", "")).startswith("HOLD") and int(lanes.get("busy") or 0) == 0
                 waited = 0.0
                 if ready:
                     try:
@@ -541,7 +547,7 @@ class Relay:
                 if len(ready) >= size:
                     take = ready[:size]
                 elif ready and ((stopping and (idle or self._drain_expired())) or (idle and spent)
-                                or waited > float(self.cfg["max_wait_seconds"])):
+                                or (holding and ready) or waited > float(self.cfg["max_wait_seconds"])):
                     take = ready
                 if take:
                     ok = self.run_round(take)
