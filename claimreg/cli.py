@@ -96,6 +96,9 @@ def cmd_run(a) -> int:
     if out["status"] == "halted":
         print(f"\nHalted for your decision after {out['gate']}. Read {ctx.run_dir / out['read']}\n"
               f"To run the later stages:\n  {out['continue_with']}")
+        if (ctx.run_dir / "QUESTIONS.md").exists():
+            print(f"Before you continue: {ctx.run_dir / 'QUESTIONS.md'} lists every question this run asked. Give it "
+                  f"and the source index to another model to check whether the questioning was thorough enough.")
     if out["status"] == "waiting":
         print(f"\n{out['pending']} model request(s) are queued. Batch files are in {Path(out['queue_dir']) / 'batches'} "
               f"(one .json and one .md per batch). Write each answer to <BATCH>.response.json "
@@ -157,6 +160,23 @@ def cmd_import_quest(a) -> int:
         print(f"import-quest: {e}", file=sys.stderr)
         return 2
     _print(out)
+    return 0
+
+
+def cmd_questions(a) -> int:
+    """Write the question database (QUESTIONS.md) of a run and say where it is."""
+    from .question_db import QUESTIONS_MD, write_question_database
+    from .runctx import RunContext
+    ctx = RunContext(a.project, a.run, quiet=True)
+    db = write_question_database(ctx.run_dir, ctx.run_id)
+    if not db:
+        print(f"{ctx.run_id} has asked no questions yet; nothing written.")
+        return 0
+    t, src = db["totals"], db["sources"]
+    print(f"{ctx.run_dir / QUESTIONS_MD}\n{t['questions']} questions, {t['answered']} answered, {t['flagged']} flagged; "
+          f"{len(src['named'])} source file(s) named" + (f" of {src['indexed']} indexed" if src["indexed"] else "") + ".\n"
+          f"To check the questioning, give that file and {ctx.run_dir / '01_FRAME' / 'index.md'} to another model. "
+          f"The prompt is inside the file.")
     return 0
 
 
@@ -375,6 +395,11 @@ def main(argv=None) -> int:
                    help="drop answers flagged for NotebookLM tool output instead of keeping them as candidates")
     s.add_argument("--force", action="store_true", help="re-import into a run that already has a quest")
     s.set_defaults(fn=cmd_import_quest)
+
+    s = sub.add_parser("questions", help="write QUESTIONS.md: every question a run asked, for a coverage check by another model")
+    s.add_argument("project")
+    s.add_argument("--run")
+    s.set_defaults(fn=cmd_questions)
 
     s = sub.add_parser("quest-score", help="throughput scorecard for a NotebookLM quest (45/h standard)")
     s.add_argument("folder", help="quest_tool recording, driver answers folder, or a run's 02_DISCOVERY")

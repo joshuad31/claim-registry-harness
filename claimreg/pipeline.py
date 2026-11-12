@@ -563,8 +563,26 @@ def write_axis_navigation(ctx: RunContext, st: dict) -> str:
     return "\n".join(lines)
 
 
+def write_question_db(ctx: RunContext) -> str:
+    """QUESTIONS.md at the top of the run: every question asked, the sources it named and what it
+    yielded.  Returns the line RUN-MAP.md and RUN-STATUS.md point to it with ("" before any question)."""
+    try:
+        from .question_db import QUESTIONS_MD, write_question_database
+        db = write_question_database(ctx.run_dir, ctx.run_id)
+    except Exception as e:                # navigation must never stop a run
+        ctx.log(f"   question database not written: {e}")
+        return ""
+    if not db:
+        return ""
+    return (f"[{QUESTIONS_MD}]({QUESTIONS_MD}): all {db['totals']['questions']} questions this run asked, the sources "
+            f"they named and what each yielded. Give it and `01_FRAME/index.md` to another model to check whether "
+            f"the questioning was thorough enough")
+
+
 def write_navigation(ctx: RunContext) -> None:
     st = ctx.stage_state()
+    qdb = write_question_db(ctx)
+    qdb_line = f"- {qdb}\n" if qdb else ""
     axis_lines = None
     if ctx.axis_layout:
         try:
@@ -603,7 +621,8 @@ def write_navigation(ctx: RunContext) -> None:
     banner = (f"**Halted for researcher decision** after `{halt['gate']}`. Read `{halt['read']}`, then continue with "
               f"`{halt['continue_with']}`\n\n") if halt else ""
     atomic_write_text(ctx.run_dir / "RUN-STATUS.md",
-                      f"# RUN-STATUS — {ctx.run_id}\n\nUpdated {utcnow()}\n\n" + banner + "\n".join(rows) + "\n")
+                      f"# RUN-STATUS — {ctx.run_id}\n\nUpdated {utcnow()}\n\n" + banner
+                      + (f"Question database: {qdb}.\n\n" if qdb else "") + "\n".join(rows) + "\n")
     if axis_lines is not None:
         atomic_write_text(ctx.run_dir / "RUN-MAP.md", (
             f"# RUN-MAP - {ctx.run_id}\n\n"
@@ -611,14 +630,14 @@ def write_navigation(ctx: RunContext) -> None:
             f"answers, FRDs, validated FRDs, witnesses, units, match records, coverage, crux and reports. "
             f"No file holds two axes; records that belong to more than one axis are in SHARED.\n\n"
             f"## The databases\n\n{axis_lines or '(made when the frame is frozen)'}\n\n## The run\n\n"
-            f"- [RUN-STATUS.md](RUN-STATUS.md)\n- [RUN-CONFIG.json](RUN-CONFIG.json)\n- [FRD-EVALUATION.md](FRD-EVALUATION.md): preliminary ACH_Eval on the validated FRDs, per axis and combined\n"
+            f"- [RUN-STATUS.md](RUN-STATUS.md)\n{qdb_line}- [RUN-CONFIG.json](RUN-CONFIG.json)\n- [FRD-EVALUATION.md](FRD-EVALUATION.md): preliminary ACH_Eval on the validated FRDs, per axis and combined\n"
             f"- [01_FRAME](01_FRAME/README.md) - the approved header, source index and Archivist prompt (shared inputs)\n"
             f"- [Model call log](00_RUN-CONTROL/model-and-human-decisions/llm-calls.jsonl)\n"
             f"- [Artifact registry](00_RUN-CONTROL/artifact-registry.jsonl)\n"))
         return
     links = "\n".join(f"- [{f}]({f}/README.md)" for f in README_TEXT)
     atomic_write_text(ctx.run_dir / "RUN-MAP.md",
-                      f"# RUN-MAP — {ctx.run_id}\n\n- [RUN-STATUS.md](RUN-STATUS.md)\n- [RUN-CONFIG.json](RUN-CONFIG.json)\n- [FRD-EVALUATION.md](FRD-EVALUATION.md): preliminary ACH_Eval on the validated FRDs, per axis and combined\n"
+                      f"# RUN-MAP — {ctx.run_id}\n\n- [RUN-STATUS.md](RUN-STATUS.md)\n{qdb_line}- [RUN-CONFIG.json](RUN-CONFIG.json)\n- [FRD-EVALUATION.md](FRD-EVALUATION.md): preliminary ACH_Eval on the validated FRDs, per axis and combined\n"
                       f"- [Crux report](10_REPORTS/CRUX-REPORT.md) · [Audit browser](10_REPORTS/report.html)\n{links}\n"
                       f"- [Model call log](00_RUN-CONTROL/model-and-human-decisions/llm-calls.jsonl)\n"
                       f"- [Artifact registry](00_RUN-CONTROL/artifact-registry.jsonl)\n")

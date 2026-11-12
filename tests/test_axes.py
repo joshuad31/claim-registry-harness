@@ -90,9 +90,13 @@ class AxisPipelineTest(unittest.TestCase):
         ctx = self.run_two_axes()
         self.assertEqual(ctx.run_config["layout"], AXIS_LAYOUT)
         top = sorted(p.name for p in ctx.run_dir.iterdir())
+        # QUESTIONS.md / .json are a generated listing of every axis's questions, one section per axis;
+        # the records themselves stay in each axis's own database
         self.assertEqual(top, ["00_RUN-CONTROL", "01_FRAME", "AXIS-A1__flow-improvement", "AXIS-A2__tissue-exposure",
-                               "FRD-EVALUATION.md", "RUN-CONFIG.json", "RUN-MAP.md", "RUN-STATUS.md", "SHARED",
-                               "frd-evaluation.json"])
+                               "FRD-EVALUATION.md", "QUESTIONS.json", "QUESTIONS.md", "RUN-CONFIG.json", "RUN-MAP.md",
+                               "RUN-STATUS.md", "SHARED", "frd-evaluation.json"])
+        listing = (ctx.run_dir / "QUESTIONS.md").read_text(encoding="utf-8")
+        self.assertLess(listing.index("### Axis A1"), listing.index("### Axis A2"))
         a1, a2 = ctx.scopes()
         owners = {}
         for sc in (a1, a2):
