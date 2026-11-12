@@ -95,12 +95,19 @@ def stage_frame(ctx: RunContext) -> dict:
         shutil.copyfile(ip, fdir / "index.md")
     if ap and ap.exists():
         shutil.copyfile(ap, fdir / "archivist-custom-prompt.txt")
+    from . import frame_gate
+    signed, signed_why = frame_gate.verify(ctx.project_dir)
+    for name in (frame_gate.CERT_MD, frame_gate.CERT_JSON):       # the signed frame certificate travels with the run
+        src = ctx.project_dir / "01_FRAME" / name
+        if signed and src.exists():
+            shutil.copyfile(src, fdir / name)
     write_json(fdir / "frame.json", frame)
     ctx._frame = frame
     man = current_manifest(ctx.project_dir)
     ctx.freeze_run_config(frame.get("header_sha256", ""), man["manifest_id"] if man else "",
                           {"approval": {ax["axis_id"]: ax.get("approval") for ax in frame["axes"]},
-                           "approval_note": ctx.cfg["frame"].get("approval_note", "")})
+                           "approval_note": ctx.cfg["frame"].get("approval_note", ""),
+                           "frame_signed": signed, "frame_signature": signed_why})
     return {"axes": len(frame["axes"]), "hypotheses": sum(len(a["hypotheses"]) for a in frame["axes"]),
             "decisive_tests": len(frame.get("decisive_tests", [])), "gauge": frame.get("gauge"),
             "approval": {ax["axis_id"]: ax.get("approval") for ax in frame["axes"]}}
@@ -583,6 +590,9 @@ def write_navigation(ctx: RunContext) -> None:
     st = ctx.stage_state()
     qdb = write_question_db(ctx)
     qdb_line = f"- {qdb}\n" if qdb else ""
+    qdb_line += ("- [Frame certificate](01_FRAME/FRAME-CERTIFICATE.md): what the signer typed, read and accepted "
+                 "before this run\n" if ctx.p("frame", "FRAME-CERTIFICATE.md").exists()
+                 else "- Frame certificate: none. Nobody signed the frame of this run.\n")
     axis_lines = None
     if ctx.axis_layout:
         try:

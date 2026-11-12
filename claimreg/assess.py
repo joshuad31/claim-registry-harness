@@ -88,6 +88,9 @@ def assess_stage(ctx) -> dict:
         return {"skipped": True}
     frame = ctx.frame
     gauge = int(frame.get("gauge") or ctx.cfg["quest"].get("gauge", 64))
+    # Large registries (300+ witnesses) make the Markdown artifact run past the provider's output
+    # cap before the contract block at the end. Ask for the block first and allow more room.
+    max_out = int((ctx.cfg.get("assess") or {}).get("max_output_tokens") or 48000)
     ws = ctx.load("witnesses", "05_released/witnesses.json", default=[]) or []
     reg = "\n".join(f"{w['witness_id']} | {w['vfrd_id']} | {w['qid']} | {w['source_file']} | {w['text']}" for w in ws)
     axes = frame["axes"]
@@ -108,8 +111,12 @@ def assess_stage(ctx) -> dict:
             HYPOTHESES=_axis_context(axis),
             WITNESSES=reg or "(no released witnesses)",
             COVERAGE_SUMMARY=coverage_summary_text(ctx, ax_id))
+        user = (user + "\n\nORDER OVERRIDE (must follow): put the required fenced JSON contract block "
+                "FIRST in your response, before the Markdown artifact. The witness registry is long and "
+                "the artifact may be cut off; the allocation block must not be lost. One fenced ```json "
+                "block, allocations for this axis only, integer units summing to the gauge.")
         requests.append(LLMRequest(role="assessor", system=system, user=user, expect_json=False,
-                                   tag=f"final-assessment-{ax_id}", max_output_tokens=24000,
+                                   tag=f"final-assessment-{ax_id}", max_output_tokens=max_out,
                                    meta={"frame": frame, "gauge": gauge, "axis": ax_id}))
         axis_order.append(ax_id)
     # The axes are independent, so ask for all of them at once instead of one slow call after another.

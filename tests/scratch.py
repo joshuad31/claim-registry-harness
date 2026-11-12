@@ -37,3 +37,11 @@ _sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from claimreg import config as _config  # noqa: E402
 
 _config.DEFAULT_CONFIG["pipeline"]["stop_after"] = ""
+
+# The frame gate keeps its signer and its lock in the user's home folder.  The suite must neither
+# read the real ones nor be stopped by a locked gate, so both point into the scratch area here.
+from claimreg import frame_gate as _frame_gate  # noqa: E402
+
+_gate_home = Path(os.environ.get("CR_TEST_TMP") or (_ROOT / ".tmp")) / "frame-gate-home"
+_frame_gate.SIGNER_FILE = _gate_home / "signer.json"
+_frame_gate.LOCK_FILE = _gate_home / "FRAME-GATE-LOCKED"

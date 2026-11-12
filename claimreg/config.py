@@ -41,7 +41,8 @@ ROLES = [
 ]
 
 # A role the user did not route follows another role's routing instead of the global default.
-ROLE_FOLLOWS = {"frd_assessor": "assessor", "match_router": "matcher_a", "quest_manager": "coordinator", "quest_investigator": "investigator"}
+ROLE_FOLLOWS = {"frd_assessor": "assessor", "match_router": "matcher_a", "quest_manager": "coordinator", "quest_investigator": "investigator",
+                "frame_gate": "assessor"}   # the frame gate (cr sign) consults the model that will score the run
 
 DEFAULT_CONFIG: dict[str, Any] = {
     "project": {

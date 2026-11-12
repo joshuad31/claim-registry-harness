@@ -4,6 +4,8 @@ The evaluation must compare the schedules patients can actually follow. A benefi
 
 This addendum governs evidence use and report acceptance. It specifies no winning hypothesis, minimum H1 allocation, maximum H3 allocation, or numerical bonus. It does not replace the existing frozen hypotheses silently. See [the audit and implementation plan](A2-AUDIT-AND-REPAIR-PLAN.md) for the proposed new frame and the defects in the previous assessment.
 
+**Current axis question (2026-11-12).** The frozen Axis-two question is `A2-C-v1`: should patients whose TSH stays above target be offered the option of bedtime dosing — should they and their clinicians think about it, ask about it and discuss it. Some rules below explain themselves with the earlier efficacy frame (`A2-P-v1`); the evidence-use principle in each rule still applies, but the approved header's hypothesis statements control what H1, H2 and H3 mean. Evidence that a trial average was null is not evidence that no patient gains, and evidence about following the morning instructions is evidence about the alternative, not a rebuttal of the option (R3).
+
 ## Specify the comparison before judging evidence
 
 Every assessment must declare which question it answers:
@@ -21,7 +23,7 @@ An optimized-morning trial cannot by itself settle the practical-strategy compar
 
 **R1 Preserve the exact frame.** Print population, comparator, formulation, dose policy, meal and medicine separation, endpoints and follow-up. A new subgroup, question or success criterion receives a new frame version. Never describe a narrower proposed question as the original frozen A2.
 
-**R2 Keep the intervention's mechanisms.** If assignment to a schedule causes better adherence or fewer near-dose interferents, those changes are mediators of its total effect. Do not adjust them away, relabel them as evidence of no benefit, or dismiss the outcome as merely behavioral. If additional counseling or a dose change differs between groups, identify that cointervention and the effect the study can actually estimate.
+**R2 Keep the intervention's mechanisms.** If assignment to a schedule causes better adherence or fewer near-dose interferents, those changes are mediators of its total effect. Do not adjust them away, relabel them as evidence of no benefit, or dismiss the outcome as merely behavioral. If additional counseling or a dose change differs between groups, identify that cointervention and the effect the study can actually estimate. A schedule-caused *harm* (for example, nocturnal food or supplement contamination that reduces absorption, or worse bedtime adherence) is evidence against H1 and may be declared `"direction": "harm"`; R2 forbids erasing a schedule-caused benefit, not recording a schedule-caused harm.
 
 **R3 Distinguish an alternative from a rebuttal.** Evidence that correcting the morning routine might also help establishes an alternative intervention. It does not disprove a benefit from moving to bedtime. Comparative preference needs evidence about achievable adherence, outcomes and burdens under both options. A hypothetical dose increase is a third intervention; equivalent TSH correction would not establish equivalent burden, variability or patient preference.
 

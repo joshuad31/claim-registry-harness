@@ -85,9 +85,24 @@ def cmd_new_run(a) -> int:
     return 0
 
 
+def _frame_gate(project, action: str, always: bool = False) -> bool:
+    """False when the frame gate refuses.  A run that uses no model (the offline engine, the tests)
+    spends nothing and is not gated; everything else needs a frame a person has signed."""
+    from . import frame_gate
+    from .config import load_config
+    if not always and not frame_gate.uses_models(load_config(project)):
+        return True
+    ok, msg = frame_gate.gate(Path(project), action)
+    if msg:
+        print(msg, file=sys.stderr if not ok or "NOT YET LOCKED" in msg else sys.stdout)
+    return ok
+
+
 def cmd_run(a) -> int:
     from .pipeline import run_pipeline
     from .runctx import RunContext
+    if not _frame_gate(a.project, "run"):
+        return 2
     ctx = RunContext(a.project, a.run, create=True)
     out = run_pipeline(ctx, start=a.from_stage, stop=a.to_stage,
                        only=a.only.split(",") if a.only else None,
@@ -152,6 +167,8 @@ def cmd_import_chatgpt(a) -> int:
 
 def cmd_import_quest(a) -> int:
     from .quest_import import QuestImportError, import_quest
+    if not _frame_gate(a.project, "import", always=True):
+        return 2
     try:
         out = import_quest(Path(a.project), Path(a.quest), run_id=a.run,
                            closeout=Path(a.closeout) if a.closeout else None, select=a.select,
@@ -441,7 +458,7 @@ def main(argv=None) -> int:
     s.add_argument("--run")
     s.set_defaults(fn=cmd_verify)
 
-    from . import onramp
+    from . import frame_gate, onramp
     s = sub.add_parser("new", help="start a project: copy sources in, find your model keys, write the question template")
     s.add_argument("project")
     s.add_argument("--name")
@@ -461,7 +478,21 @@ def main(argv=None) -> int:
     s.add_argument("--force", action="store_true", help="redo files that already exist")
     s.set_defaults(fn=onramp.cmd_frame)
 
-    s = sub.add_parser("approve", help="a person approves the header draft (required before a quest)")
+    s = sub.add_parser("signer", help="create or show the key a person signs frames with (once per computer)")
+    s.add_argument("--name", help="your name, as it will stand on certificates")
+    s.add_argument("--new", action="store_true", help="replace the signer (frames signed with the old one must be signed again)")
+    s.set_defaults(fn=frame_gate.cmd_signer)
+
+    s = sub.add_parser("sign", help="a person types, reads and signs the frame; required before a quest or a model-backed run")
+    s.add_argument("project")
+    s.add_argument("--axis", help="sign this axis only (for example A2); default: every axis not yet signed")
+    s.add_argument("--header", help="sign this draft instead of the project's header")
+    s.add_argument("--resign", action="store_true",
+                   help="sign again after the index, the settings or another frame file changed (not the axis wording)")
+    s.add_argument("--check", action="store_true", help="only say whether the frame is signed")
+    s.set_defaults(fn=frame_gate.cmd_sign)
+
+    s = sub.add_parser("approve", help="(superseded by `cr sign`) mark the header draft approved; refused once the frame gate is locked")
     s.add_argument("project")
     s.add_argument("--by", required=True, help="who approves it")
     s.add_argument("--header", help="approve this file instead of 01_FRAME/header-DRAFT.md")

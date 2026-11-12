@@ -31,7 +31,7 @@ CONTRACT = """GATE REPORT (required for this axis). After the allocation JSON bl
               "direction": "favors_bedtime | against_bedtime | neither",
               "inference_type": "direct_target_estimate | direct_target_refutation | indirect | background",
               "transfer_justification": ""}],
- "causal_uses": [{"mechanism": "", "caused_by_schedule": true, "interpretation": "benefit_mechanism | refute_h1 | erase_effect | not_used"}],
+ "causal_uses": [{"mechanism": "", "caused_by_schedule": true, "direction": "benefit | harm", "interpretation": "benefit_mechanism | refute_h1 | erase_effect | not_used"}],
  "alternative_uses": [{"alternative_could_work": true, "conclusion": "alternative_option_only | bedtime_has_no_benefit"}],
  "endpoint_uses": [{"endpoint": "", "result": "null | positive | negative", "conclusion_scope": "this_endpoint_only | whole_h1"}],
  "equivalence_uses": [{"claim": "equivalent | not_claimed", "basis": "nonsignificant_difference | equivalence_design"}],
@@ -113,7 +113,11 @@ def check(report):
             fail("R9", "Indirect evidence requires an explicit transfer argument and limitation")
 
     for c in report.get("causal_uses", []):
-        if c.get("caused_by_schedule") and c.get("interpretation") in ("refute_h1", "erase_effect"):
+        # R2 forbids erasing a schedule-caused BENEFIT (better adherence/less interference). A
+        # schedule-caused HARM (e.g. nocturnal contamination reducing absorption) may legitimately
+        # be declared "harm" and used against H1; that is evidence, not an adjustment.
+        if (c.get("caused_by_schedule") and c.get("direction", "benefit") != "harm"
+                and c.get("interpretation") in ("refute_h1", "erase_effect")):
             fail("R2", "A schedule-caused adherence or exposure improvement cannot erase its total effect")
     for a in report.get("alternative_uses", []):
         if a.get("alternative_could_work") and a.get("conclusion") == "bedtime_has_no_benefit":

@@ -21,9 +21,9 @@ LEVO = {"domain_modules": {"levo": {"bedtime_axis": "A2"}}}
 
 
 class GateTest(unittest.TestCase):
-    def test_the_gate_accepts_and_rejects_its_sixteen_reference_cases(self):
+    def test_the_gate_accepts_and_rejects_its_reference_cases(self):
         r = bedtime_gate.self_test()
-        self.assertEqual((r["tests"], r["passed"]), (16, 16))
+        self.assertEqual((r["tests"], r["passed"]), (17, 17))
 
     def test_the_gate_does_not_care_which_hypothesis_leads(self):
         fx = json.loads((Path(bedtime_gate.HERE) / "gate_examples.json").read_text(encoding="utf-8"))
