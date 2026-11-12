@@ -42,13 +42,13 @@ Each axis is signed when you finish it, so a header with several axes can be don
 
 - there is no certificate, or an axis of the header is not signed;
 - the header changed after signing;
-- a file that shapes the result changed after signing: the source index, the Archivist prompt, `01_FRAME/match-fixtures.json`, any prompt override in `90_METHOD/prompts`, the `corpus`, `frd_assess` and `domain_modules` settings in `project.json`, or the rule files of a domain module the project uses;
+- a file that shapes the result changed after signing: the source index, the Archivist prompt, `01_FRAME/match-fixtures.json`, any prompt override in `90_METHOD/prompts`, or the `corpus` and `frd_assess` settings in `project.json`;
 - the certificate was edited, or was signed by a different signer;
 - `01_FRAME/frame.json` exists (it would override the header).
 
 There is no flag that overrides this. `cr approve` is refused as well.
 
-If the wording of an axis changed, sign that axis again: `cr sign <project> --axis A2`. If something else changed (the index gained a source, a rule file was fixed), `cr sign <project> --resign` shows you what changed; you accept it by typing and sign again.
+If the wording of an axis changed, sign that axis again: `cr sign <project> --axis A2`. If something else changed (the index gained a source, a setting changed), `cr sign <project> --resign` shows you what changed; you accept it by typing and sign again.
 
 `cr sign <project> --check` says whether a frame is signed. `cr doctor` reports it too.
 
@@ -61,3 +61,7 @@ The block switches itself on the first time a frame is fully signed on a compute
 - If no model is reachable, signing still works, and the certificate says which steps the model did not do.
 - The gate stops shortcuts, not fraud. Someone with full control of the computer can replace the signing key or edit this program. That leaves traces (a different signer fingerprint on the certificate, a changed file in version control), and it is a deliberate act, which is the point: the easy path and the honest path are now the same path.
 - The paragraphs under each hypothesis (assumptions, falsification, corroboration) and the boundary are not rewritten by the gate. You read them, and the second model call reports where they contradict your wording. If they do, type CHANGE, have them corrected, and sign again.
+
+## No topic-specific rules
+
+The harness has no modules that add rules or gates for one topic. An earlier levothyroxine module gave the assessor 22 bedtime-dosing rules and could send an assessment back for correction. It was removed on 2026-11-12: it shaped the result from outside the header, where nobody signs for it. A rule you believe in goes in the axis's governing boundary, where you read it and sign it and a reader can see it.

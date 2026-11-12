@@ -854,8 +854,7 @@ def certify_axis(con, model, project: Path, text: str, axis: dict, gauge: int, p
 
 def _frame_files(project: Path) -> dict[str, str]:
     """Every file besides the header that shapes the result: the source index, the Archivist prompt,
-    the matcher's fixtures, any prompt the project overrides, the settings that exclude sources or
-    set gates, and the rule files of any domain module the project turns on."""
+    the matcher's fixtures, any prompt the project overrides, and the settings that exclude sources."""
     project = Path(project)
     where = _configured(project)
     files = [where["index"], where["archivist_prompt"], project / "01_FRAME" / "match-fixtures.json"]
@@ -872,15 +871,9 @@ def _frame_files(project: Path) -> dict[str, str]:
                 key = str(p)
             out[key] = digest(p)
     cfg = read_json(project / "project.json", default={}) or {}
-    for key in ("domain_modules", "frd_assess", "corpus"):
+    for key in ("frd_assess", "corpus"):
         if key in cfg:
             out[f"project.json#{key}"] = sha256_text(canonical_json(cfg[key]))
-    for name in sorted(cfg.get("domain_modules") or {}):
-        d = Path(__file__).resolve().parent / "domains" / str(name)
-        if d.is_dir():
-            for p in sorted(d.iterdir()):
-                if p.is_file() and p.suffix in (".md", ".py", ".json"):
-                    out[f"claimreg/domains/{name}/{p.name}"] = digest(p)
     return out
 
 

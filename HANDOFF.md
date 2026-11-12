@@ -225,11 +225,15 @@ Josh rejected the A2 null results (prior FRD ACH_Eval A2 12/18/34; harness run A
 
 **What.** `claimreg/frame_gate.py`, commands `cr signer` and `cr sign`, guide `docs/FRAME-GATE.md`, tests `tests/test_frame_gate.py`. A person says which hypothesis they want to win, sees forecasts for alternative frames, types the question and every hypothesis by hand, reads the restated wording, accepts each consequence by typing it, and signs each axis with a passphrase (Ed25519; the key is derived from the passphrase and stored nowhere). The result is `01_FRAME/FRAME-CERTIFICATE.md`, copied into every run.
 
-**What is refused.** Once a frame has been fully signed on a computer, `cr quest`, `cr import-quest`, `cr approve` and any `cr run` that uses a model refuse to start on a frame that is not signed, or whose header, index, Archivist prompt, prompt overrides, `corpus` / `frd_assess` / `domain_modules` settings or domain rule files changed after signing. There is no override flag.
+**What is refused.** Once a frame has been fully signed on a computer, `cr quest`, `cr import-quest`, `cr approve` and any `cr run` that uses a model refuse to start on a frame that is not signed, or whose header, index, Archivist prompt, prompt overrides or `corpus` / `frd_assess` settings changed after signing. There is no override flag.
 
 **Rules for agents.**
 
 - Do not try to sign. `cr sign` needs a keyboard and Josh's passphrase. Never ask for the passphrase and never accept it in a chat.
 - When a command is refused, tell Josh the exact reason it printed and the command it names (`cr sign <project>`, `--axis A2`, or `--resign`). Do not work around it: no editing of `frame_gate.py`, the certificate, the signer file or the lock file, and no calling the pipeline from Python to skip the check.
-- If you change anything the certificate covers (the header, the index, a rule file, those settings), say so before you do it. Josh will have to sign again.
+- If you change anything the certificate covers (the header, the index, those settings), say so before you do it. Josh will have to sign again.
 - Josh's design intent: the header is the one place where a researcher may tilt a run toward the hypothesis they prefer, and the tilt is on the record. Nothing downstream of the header may be tilted. Do not down-rank, exclude or re-grade sources to move a result.
+
+## 16. Domain modules removed (2026-11-12)
+
+Section 14 is obsolete. `claimreg/domains/` (the levothyroxine bedtime rules R1 to R22 and their gate), `tests/test_domain_levo.py` and `docs/DOMAIN-MODULES.md` are removed, with the three hooks in `frd_assess.py` and the `domain_modules` setting. Josh's decision: a topic-specific rule set is a tilt outside the header, however openly it is done. Do not add one back. A rule that matters belongs in the header's governing boundary, which a person signs. RUN-LEVO-A2-v3 to v6 were scored with the module on; their numbers carry that.

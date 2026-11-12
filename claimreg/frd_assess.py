@@ -35,7 +35,6 @@ import time
 from collections import Counter
 from pathlib import Path
 
-from . import domains
 from .assess import _axis_context
 from .llm.base import LLMRequest
 from .llm.jsonparse import JSONExtractError, extract_json
@@ -205,23 +204,15 @@ class _Job:
         self.problems: list[str] = []
         self.calls: list[dict] = []
         self.final: dict = {}
-        # every earlier evaluation of this axis and scope is kept; a gate may ask for a limited
-        # number of corrections, after which a person has to look
+        # every earlier evaluation of this axis and scope is kept
         self.history = self.out / "evaluation-history.jsonl"
         self.previous = read_json(self.out / "evaluation.json", default=None)
-        past = [json.loads(x) for x in read_text(self.history).splitlines() if x.strip()]
-        rejected = sum(1 for r in past + ([self.previous] if self.previous else []) if (r.get("gate") or {}).get("accepted") is False)
-        cap = int((ctx.cfg.get("frd_assess", {}) or {}).get("gate_retry_cap", 2))
-        self.capped = rejected > cap
+        self.capped = False              # there are no gates; nothing can hold an assessment back
 
     def _request(self, registry: str, fragments: str, tag: str, meta: dict, final: bool = False) -> LLMRequest:
-        rules = domains.axis_rules(self.ctx.cfg, self.axis)
-        contract = domains.gate_contract(self.ctx.cfg, self.axis) if final else ""
-        prior = (read_json(self.out / "evaluation.json", default={}) or {}).get("gate") or {} if contract else {}
-        if prior.get("errors"):
-            contract += ("\n\nYOUR PREVIOUS REPORT FOR THIS AXIS WAS RETURNED FOR CORRECTION. Correct the reasoning, not "
-                         "only the declaration. The gate found:\n"
-                         + "\n".join(f"- {e['rule']}: {e['message']}" for e in prior["errors"]))
+        # No topic-specific rules or gates: the header is the only place a frame is set, and a person
+        # signs it (frame_gate.py).  The two prompt slots stay empty.
+        rules, contract = "", ""
         note = ("SCOPE OF THIS PASS: the registry holds the validated FRDs of EVERY axis of this investigation, "
                 "each labelled with its home axis; assess only the axis named below, and use an FRD from "
                 "another axis only where it really bears on this axis's hypotheses."
@@ -326,25 +317,6 @@ class _Job:
                             "home_axis": f.get("home_axis", self.aid), "claim": f.get("claim")})
         vec = self.final.get("allocations") or None
         gate, withheld = None, None
-        if vec:
-            report = self.final.get("gate_report")
-            if isinstance(report, dict):       # the harness, not the model, supplies the arithmetic the gate checks
-                report = {**report, "allocations": vec,
-                          "frame": {**(report.get("frame") or {}), "hypothesis_ids": self.ids, "gauge": self.gauge}}
-            facts = {"hypothesis_ids": self.ids, "gauge": self.gauge,
-                     "drivers": [{"frd_id": d["frd_id"], "favors": d["favors"], "source_file": d["source_file"],
-                                  "is_synthesis": is_synthesis(self.ctx, d["source_file"])} for d in drivers],
-                     "driver_ids_not_in_registry": unknown,
-                     "unknown_driver_ids": unknown,
-                     "synthesis_sources": list((self.ctx.cfg.get("corpus", {}) or {}).get("synthesis_sources") or []),
-                     "duplicates": dict((self.ctx.cfg.get("corpus", {}) or {}).get("duplicates") or {})}
-            gate = domains.run_gates(self.ctx.cfg, self.axis, report, facts)
-            if gate and not gate["accepted"]:
-                rules = sorted({e["rule"] for e in gate["errors"]})
-                self.problems.append(f"{self.aid} {self.scope}: returned for correction by the {'/'.join(gate['modules'])} "
-                                     f"gate ({', '.join(rules)}). The allocation is withheld and no units are moved; "
-                                     f"rerun with --only frd_assess --force frd_assess")
-                withheld, vec = vec, None
         spread = max((max(p["allocations"].get(i, 0) for p in good) - min(p["allocations"].get(i, 0) for p in good)
                       for i in self.ids), default=0) if len(good) > 1 else 0
         diff = max_diff(vec, mech) if len(self.parts) > 1 else 0

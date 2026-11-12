@@ -205,11 +205,7 @@ DEFAULT_CONFIG: dict[str, Any] = {
         "partition_words": 30000,     # registry words per ACH_Eval call; a larger set is split
         "max_output_tokens": 32000,   # per call; a cut-off answer is asked for once more with a larger budget
         "axis_only": [],              # axes that get no combined reading (other axes' FRDs are kept out)
-        "gate_retry_cap": 2,          # corrections a domain gate may ask for before a person must look
     },
-    # investigation-specific evidence rules (claimreg/domains/); none unless a project names one,
-    # e.g. {"levo": {"bedtime_axis": "A2"}}
-    "domain_modules": {},
     "pipeline": {
         # the run halts after this stage until the researcher releases it with `cr run --continue`
         # ("" = never halt)
@@ -288,7 +284,7 @@ def resolve_path(cfg: dict, p: str | None) -> Path | None:
 def scientific_config(cfg: dict) -> dict:
     """The part of the config that can change results (recorded per run)."""
     keep = ["quest", "frd", "retention", "witness", "language", "units", "matching",
-            "coverage", "crux", "assess", "report", "roles", "frd_assess", "domain_modules"]
+            "coverage", "crux", "assess", "report", "roles", "frd_assess"]
     out = {k: copy.deepcopy(cfg.get(k)) for k in keep}
     prov = {}
     for name, p in cfg.get("providers", {}).items():
