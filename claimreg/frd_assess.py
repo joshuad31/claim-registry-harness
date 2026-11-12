@@ -334,7 +334,10 @@ class _Job:
             facts = {"hypothesis_ids": self.ids, "gauge": self.gauge,
                      "drivers": [{"frd_id": d["frd_id"], "favors": d["favors"], "source_file": d["source_file"],
                                   "is_synthesis": is_synthesis(self.ctx, d["source_file"])} for d in drivers],
-                     "synthesis_sources": list((self.ctx.cfg.get("corpus", {}) or {}).get("synthesis_sources") or [])}
+                     "driver_ids_not_in_registry": unknown,
+                     "unknown_driver_ids": unknown,
+                     "synthesis_sources": list((self.ctx.cfg.get("corpus", {}) or {}).get("synthesis_sources") or []),
+                     "duplicates": dict((self.ctx.cfg.get("corpus", {}) or {}).get("duplicates") or {})}
             gate = domains.run_gates(self.ctx.cfg, self.axis, report, facts)
             if gate and not gate["accepted"]:
                 rules = sorted({e["rule"] for e in gate["errors"]})

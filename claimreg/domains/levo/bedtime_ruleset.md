@@ -62,6 +62,36 @@ Each report must contain:
 7. The G=64 vector, exact hypothesis IDs, strongest objection, reversal finding, unresolved gaps and provenance of any newly added evidence.
 8. Every rule violation found and its repair. A report with an unresolved prohibited inference is rejected for correction before its allocation is released.
 
+## Addendum rules R16–R22
+
+*Installed 2026-11-11 from the pre-run audit; `bedtime_gate_v2.py` enforces R16–R21 and the harness enforces R22.*
+
+* **R16 — AI-synthesis and secondary-dossier exclusion:** Documents flagged in `corpus.synthesis_sources` (including AI-generated research memos, Google Docs, and compiled label dossiers) and uncanonicalized duplicate copies (`corpus.duplicates`) are **non-citable leads, never empirical evidence**. Citing any synthesis or duplicate file as an allocation driver triggers automatic gate rejection.
+
+* **R17 — Allocation-to-gate driver bijection:** Every `frd_id` listed in the primary `allocations` JSON `drivers` array **must** appear in `gate_report.drivers` with a matching directional assignment (`favors == A2-H1` ↔ `"favors_bedtime"`; `favors in (A2-H2, A2-H3)` ↔ `"against_bedtime"` or `"neither"`), and `gate_report` is verified against the harness's true FRD `source_file` registry and frozen `frame`. A report that names fewer than three allocation drivers is rejected: an allocation must say what moved it.
+
+* **R18 — Stratum conditioning for pooled and enforced-fasting trial averages:** Unconditioned meta-analyses (`Pang 2020`, `Bianchini 2024`, `da Rocha 2025`) and trials enforcing strict `60-minute` morning fasting (`Bach-Huynh 2009`) or short `< 180-minute` bedtime food gaps (`de Mello 2022` at `60 min`; `Bach-Huynh 2009` / `Skelin 2018` / `Rajput 2011` at `120 min`) estimate effects conditional on their tested protocols and baseline strata.
+  1. Pooled null averages refute *unconditional population superiority*, **not** conditional benefit in the timing-removable morning-interference stratum (`S1`).
+  2. Any driver from a pooled analysis or protocol-mismatched trial used against (or for) bedtime must be declared `"indirect"` and must explicitly name both the protocol gap and the exposure stratum (`documented_removable_morning_interference`, `persistent_non_timing_cause`, or `no_documented_interference`) to which it applies. Never invent joint population prevalence weights (`R8`).
+
+* **R19 — Symmetric mechanistic transport and mandatory 3-stratum conclusions (direction-neutral):** When no single RCT combines every target eligibility clause simultaneously, `H3` does **not** win by default. Evaluate causal transportability **symmetrically**:
+  * If primary human studies quantify (i) the TSH/absorption penalty of the baseline exposure AND (ii) the effect of the tested schedule separation, weight `H1` vs `H2` according to the empirical direction, magnitude, and protocol fidelity of both links — applying the exact same `"indirect"` bridge requirement to favorable trials (`Bolk 2010` 30-min morning comparator; `Bolk 2007` non-randomized switch) and unfavorable trials (`de Mello 2022` 60-min bedtime gap; `Bach-Huynh 2009` 120-min bedtime gap).
+  * Every report must output explicit `stratified_conclusions` across all three clinical strata:
+    1. `documented_removable_morning_interference` (with clean `>= 3h` evening window),
+    2. `persistent_non_timing_cause` (chronic PPIs, *H. pylori*/atrophic gastritis, celiac/bariatric malabsorption, or true pill-omission pseudo-malabsorption), and
+    3. `no_documented_interference` (already adherent `60-min` morning fasters, or patients with `< 3h` late dinners / nocturnal cation supplements / shift work).
+
+* **R20 — Persistent acid-suppression routing (Axis A3 boundary) and mandatory 5-point patient safety block:** Proton-pump inhibitors irreversibly inactivate gastric H+/K+-ATPase across 24 hours (`Awasthi 2023`, `Centanni 2006`); **never claim that moving an LT4 tablet to bedtime overcomes PPI-induced hypochlorhydria** (route persistent PPI/gastritis malabsorption to Axis A3 liquid/softgel formulations or GI management). Furthermore, every report must populate the `safety` block addressing all five clinical hazards:
+  1. `overreplacement_recheck_weeks`: Mandatory `6–8 week` TSH recheck because removing a chronic morning chelator in previously up-titrated patients (`> 1.6–2.0 mcg/kg/day`) can abruptly jump absorption and cause iatrogenic thyrotoxicosis (`Bugdaci 2011`).
+  2. `bedtime_interferents_checked`: Explicit `>= 3h` post-meal/snack rule (no bedtime cow's milk [`Chon 2018`] or soy) and `>= 4h` separation from bedtime calcium (carbonate, citrate, or acetate [`Zamfirescu 2011`]), magnesium sleep supplements, iron, sucralfate, antacids, or bile-acid binders; caution on GLP-1 RAs/gastroparesis and rotating shift work.
+  3. `sampling_time_standardised`: Anchor titration to morning TSH drawn at a consistent clock hour; warn clinicians not to misread the ~9-hour post-dose serum FT4 elevation (`Ain 1993`) on an 8 AM lab draw after a 10–11 PM bedtime dose.
+  4. `no_dose_change_at_switch`: Do not escalate tablet mcg simultaneously when switching to bedtime (and consider proactive clinician dose review if baseline dose was markedly supraphysiologic).
+  5. `high_risk_groups_named`: Explicit supervision precautions for elderly (`>= 65–70y`), atrial fibrillation / coronary disease, severe osteoporosis, pregnancy, and thyroid-cancer TSH-suppression patients.
+
+* **R21 — Explicit separation of efficacy (A2-P-v1) and decision-to-offer (A2-D-v1):** Every report must state a separate `decision_to_offer` conclusion evaluating whether a monitored `6–8 week` bedtime trial is warranted in eligible patients, distinct from unstratified population efficacy.
+
+* **R22 — Gate retry cap and audit preservation:** Automated or manual gate-correction retries for any axis are capped at **`max_gate_attempts = 2`**, with every rejected allocation and error list preserved in `evaluation-history.jsonl`. Re-running an axis to shop for a preferred allocation vector is prohibited; if Attempt 2 fails the gate, execution halts for human audit.
+
 ## Enforcement and its limits
 
 Use a source protocol catalog whose key facts are extracted and checked before judging. The included [evaluation gate](evaluation_gate.py) rejects direct-rebuttal claims that contradict that catalog, endpoint cancellation, dismissal of mediated benefits, invented equivalence, invented prevalence and invalid vectors. [Examples](gate_examples.json) exercise both favorable and unfavorable directions.

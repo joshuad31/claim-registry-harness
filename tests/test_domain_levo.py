@@ -110,7 +110,8 @@ class IsolationTest(unittest.TestCase):
         report = bedtime_gate.merge(fx["base_report"], {"frame": {"target_population": "broad_adults"}, "drivers": [
             {"source_id": "bolk_2010", "frd_id": "FRD-1", "direction": "favors_bedtime", "inference_type": "direct_target_estimate"}]})
         facts = {"drivers": [{"frd_id": "FRD-1", "favors": "A2-H1", "source_file": "bolk2010.pdf.md", "is_synthesis": False},
-                             {"frd_id": "FRD-2", "favors": "A2-H2", "source_file": "ai-summary.md", "is_synthesis": True}]}
+                             {"frd_id": "FRD-2", "favors": "A2-H2", "source_file": "ai-summary.md", "is_synthesis": True}],
+                 "synthesis_sources": ["ai-summary.md"], "duplicates": {}}
         rules = {e["rule"] for e in levo.gate(axis, report, opt, facts)}
         self.assertIn("R9", rules)        # the assessor cannot widen the target population to dodge the boundary check
         self.assertIn("R16", rules)       # a driver from a synthesis file

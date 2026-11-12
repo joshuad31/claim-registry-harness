@@ -24,13 +24,18 @@ person still reads the drivers against their sources.
 
 ## `levo`
 
-- `bedtime_ruleset.md`: rules R1 to R15 for the bedtime-dosing axis. They govern evidence use and
-  name no winning hypothesis.
-- `bedtime_gate.py`: the acceptance gate, with a catalog of three trial protocols (Bolk 2010,
+- `bedtime_ruleset.md`: rules R1 to R15, plus the R16-R22 addendum installed 2026-11-11 from the
+  pre-run audit. They govern evidence use and name no winning hypothesis.
+- `bedtime_gate.py`: the v1 acceptance gate, with a catalog of three trial protocols (Bolk 2010,
   Bach-Huynh 2009, de Mello 2022) and 16 reference cases in `gate_examples.json`.
+- `bedtime_gate_v2.py`: the hardened gate installed 2026-11-11. It is fed, by the harness, the frozen
+  A2-P-v1 frame, each allocation driver's real source file, the non-citable synthesis list and the
+  duplicate-copy map; it enforces R16-R21 (driver bijection, pooled-average strata, three mandatory
+  stratified conclusions, the five-point safety block and the separate decision-to-offer conclusion).
 - Applies only to the axis named by `bedtime_axis` (default `A2`).
-- Not in the module yet: the new practical-strategy and decision-to-offer frames. Those are header
-  changes and need the researcher's approval.
+- Frame values the harness supplies live in `FRAME_DEFAULTS`; a project or run may override them
+  under `domain_modules.levo`. The approved header still supplies the controlling wording for
+  A2-P-v1 and the A2-D-v1 decision question.
 
 ## Added 2026-11-11 (evening), from the pre-run audit
 

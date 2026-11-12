@@ -15,6 +15,11 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 
+# NOTE (2026-11-11, pre-run audit): the harness actually runs `bedtime_gate_v2.check`, which the
+# harness feeds the frozen frame, every `allocation_drivers` entry with its real FRD source file,
+# the non-citable synthesis list and the duplicate map; v2 enforces R16-R21 on top of this gate.
+# This v1 module keeps the audited source catalog, the base CONTRACT and the 16 fixture cases.
+
 CONTRACT = """GATE REPORT (required for this axis). After the allocation JSON block append one more fenced JSON block:
 {"gate_report": {
  "frame": {"comparison_type": "practical_strategy | optimized_schedules | clock_time | decision_to_offer",
