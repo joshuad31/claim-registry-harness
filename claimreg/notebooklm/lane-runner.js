@@ -1,4 +1,4 @@
-// Claim Registry - NotebookLM lane runner (v7).
+// Claim Registry - NotebookLM lane runner (v8).
 //
 // Paste this into each notebook tab (one tab per notebook copy). Every tab becomes a "lane":
 // it takes the next question from the shared queue, types it into the chat box, waits for the
@@ -21,7 +21,10 @@
 //  * a lane that cannot find its chat pair must release the claim (twice) and then record a
 //    FAILED answer, instead of holding the claim forever and wedging until MAX_GEN_MS;
 //  * a page that has lost its chat (wrong notebook, wedged tab) cannot answer anything: fail
-//    that question quickly so the driver's backlog is released and the relay can re-ask it.
+//    that question quickly so the driver's backlog is released and the relay can re-ask it;
+//  * questions may contain markdown (e.g. backticks around filenames). NotebookLM renders the user
+//    message WITHOUT those characters, so pair matching must strip markdown on both sides or every
+//    such question fails with 'query not visible 60 s after submit'.
 (() => {
 if (window.CRL && window.CRL.timer) clearInterval(window.CRL.timer);
 const LANES = window.CRL_LANES || JSON.parse(localStorage.getItem('crl_lanes') || '{}');
@@ -31,6 +34,7 @@ const LS = localStorage;
 const jget = (k, d) => { try { const v = LS.getItem(k); return v ? JSON.parse(v) : d; } catch (e) { return d; } };
 const jset = (k, v) => LS.setItem(k, JSON.stringify(v));
 const norm = s => (s || '').replace(/\s+/g, ' ').trim();
+const clean = s => norm((s || '').replace(/[`*_~]+/g, ''));
 const now = () => new Date().toISOString();
 const MAX_GEN_MS = 12 * 60 * 1000;
 const open = () => new Promise((res, rej) => { const r = indexedDB.open('crl', 1); r.onupgradeneeded = () => r.result.createObjectStore('kv'); r.onsuccess = () => res(r.result); r.onerror = () => rej(r.error); });
@@ -40,7 +44,7 @@ window.CRL_push = newJobs => window.CRL_tx((jobs, claims) => { const have = new 
 async function folder() { const d = await idbGet('inbox'); if (!d) return null; try { return (await d.queryPermission({ mode: 'readwrite' })) === 'granted' ? d : null; } catch (e) { return null; } }
 
 const C = window.CRL = {
-  lane, nbId, state: 'FREE', job: null, pairEl: null, lastLen: -1, stableTicks: 0, busy: false, log: [], version: 'v7',
+  lane, nbId, state: 'FREE', job: null, pairEl: null, lastLen: -1, stableTicks: 0, busy: false, log: [], version: 'v8',
   note(m) { this.log.push(now() + ' ' + m); if (this.log.length > 50) this.log.shift(); },
   pub(extra) { jset('crl_lane:' + lane, Object.assign({ state: this.state, qid: this.job && this.job.qid, ts: now(), url: location.href }, this.job ? { submitted_at: this.job.submitted_at } : {}, extra || {})); },
   pairs() { return [...document.querySelectorAll('.chat-message-pair')]; },
@@ -49,7 +53,7 @@ const C = window.CRL = {
   finished(p) { const m = this.modelMsg(p); return !!(m && m.querySelector('button[aria-label="Copy model response to clipboard"]')); },
   answerText(p) { const m = this.modelMsg(p); if (!m) return ''; const el = m.querySelector('.to-user-message-inner-content .message-text-content') || m.querySelector('.to-user-message-inner-content'); return el ? el.innerText.replace(/^\s*Thoughts\s*\n(?:[\s\S]*?\n)?\s*expand_(more|less)\s*\n/, '') : ''; },
   busyChat() { const ps = this.pairs(); if (!ps.length) return false; const p = ps[ps.length - 1]; return !this.modelMsg(p) || !this.finished(p); },
-  findPair(q) { const key = norm(q).slice(0, 90); const ps = this.pairs(); for (let i = ps.length - 1; i >= 0; i--) if (norm(this.userText(ps[i])).startsWith(key)) return ps[i]; return null; },
+  findPair(q) { const key = clean(q).slice(0, 90); const ps = this.pairs(); for (let i = ps.length - 1; i >= 0; i--) if (clean(this.userText(ps[i])).startsWith(key)) return ps[i]; return null; },
   async pullFolder() {
     const dir = await folder(); if (!dir) return 0;
     let qd; try { qd = await dir.getDirectoryHandle('queue'); } catch (e) { return 0; }
@@ -148,7 +152,7 @@ const C = window.CRL = {
         const timedOut = Date.now() - this.job.submit_wall > MAX_GEN_MS;
         if ((done && this.stableTicks >= 1) || timedOut) {
           const rec = { run_id: jget('crl_run', 'UNSET'), qid: this.job.qid, attempt: this.job.attempt || 'A01', lane, notebook_url: location.href.split('?')[0],
-            query: this.job.text, query_seen_in_user_message: norm(this.userText(p)).startsWith(norm(this.job.text).slice(0, 90)),
+            query: this.job.text, query_seen_in_user_message: clean(this.userText(p)).startsWith(clean(this.job.text).slice(0, 90)),
             submitted_at: this.job.submitted_at, captured_at: now(), outcome: done ? (txt.trim() ? 'COMPLETE' : 'FAILED') : 'INCOMPLETE',
             generation_seconds: Math.round((Date.now() - this.job.submit_wall) / 1000),
             capture_method: 'lane-runner v6: rendered answer card innerText of the user message matching this query', answer_chars: txt.length, answer: txt };
@@ -196,5 +200,5 @@ if (window.CRL_driver) clearInterval(window.CRL_driver);
 window.CRL_driver = setInterval(() => { if (!document.hidden) { bc.postMessage(Date.now()); C.tick(); } }, 3000);
 new MutationObserver(() => { if (C.state === 'GENERATING' && !C.busy) C.tick(); }).observe(document.querySelector('.chat-panel-content') || document.body, { childList: true, subtree: true });
 C.pub({ started: now() });
-return 'lane runner v7 started: ' + lane;
+return 'lane runner v8 started: ' + lane;
 })()

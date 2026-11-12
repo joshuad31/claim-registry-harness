@@ -165,27 +165,127 @@ def word_count(s: str) -> int:
     return len((s or "").split())
 
 
+# --- math / HTML markup folding --------------------------------------------- #
+# PDF -> markdown conversion leaves LaTeX math ($36.3 \pm 16.7$) and inline HTML
+# (<sub>, <sup>, <i>, <br>) in the corpus, while validators quote the rendered
+# text (36.3 ± 16.7, T4).  Fold both sides to the same plain form before the
+# markdown strip.  This is representation-only: no numeral is added or removed.
+_TAG_BR = re.compile(r"<br\s*/?>", re.I)
+# Inline tags carry no word boundary: "T<sub>4</sub>" must fold to "T4".
+_TAG_INLINE = re.compile(
+    r"</?(?:sub|sup|i|b|u|em|strong|math|span|small|big|tt|del|ins|font)\s*/?>", re.I)
+# Any remaining HTML-shaped tag.  Autolinks such as <https://...> are not tags
+# (the ':' after the scheme fails the identifier pattern), so URLs survive.
+_TAG_OTHER = re.compile(r"</?[A-Za-z][A-Za-z0-9]*(?:\s[^<>]*)?/?>")
+
+_LATEX_MAP = {
+    # operators / relations
+    "pm": "±", "mp": "∓", "times": "×", "cdot": "·", "div": "÷",
+    "le": "<=", "leq": "<=", "ge": ">=", "geq": ">=",
+    "approx": "~", "sim": "~", "simeq": "~", "cong": "~", "propto": "~",
+    "ne": "!=", "neq": "!=",
+    # greek / symbols (the corpus uses these for ΔT4, µg and degrees)
+    "mu": "μ", "Delta": "Δ", "delta": "Δ", "alpha": "α", "beta": "β",
+    "tau": "τ", "chi": "χ", "circ": "°",
+    # layout-only commands: drop the command name, keep the argument text
+    "text": "", "textrm": "", "textit": "", "textbf": "", "mathrm": "",
+    "mathit": "", "mathbf": "", "left": "", "right": "",
+    # genuine spacing commands become a word break
+    "quad": " ", "qquad": " ",
+}
+_LATEX_CMD = re.compile(r"\\([A-Za-z]+)")
+# LaTeX unit commands leave a space the rendered text does not have
+# ("$\mu$ g" -> " μ g", quoted as "μg"); bind Greek symbols and degree signs to
+# the following unit.  Applied before the quote map (for Δ) and again after the
+# markdown strip (bold markers such as "**2.34 ± 1.3**" re-introduce the space).
+_SYMBOL_SPACE = re.compile(
+    r"\s*([\u00b5\u03bc\u03b1\u03b2\u03c4\u03c7\u0394\u00b0])\s*")
+
+# Validators prefix a quotation with the section it came from ("Abstract - Results:",
+# "Results - Evening administration:", "Footnote c:", "Section 3.5. Results of
+# syntheses:").  That label is the validator's own scaffolding, not source text, so
+# it is folded away on both sides.  Word labels may not carry digits (a numeral in a
+# label is data, not scaffolding); section/table/figure/case/footnote labels may.
+_LOCATOR_WORD_LABEL = re.compile(
+    r"(^|[\n.;:!?\u2026])[ \t]*(?:abstract|results?|methods?|discussion|conclusions?|"
+    r"background|objectives?|aims?|design|study design|patients and methods|subjects|"
+    r"interventions?|outcomes?|measurements|statistical analysis)"
+    r"(?![A-Za-z0-9_-])(?:[ \t]+[A-Za-z()\-\u2010-\u2015]+){0,6}[ \t]*:[ \t]*", re.I)
+_LOCATOR_NUM_LABEL = re.compile(
+    r"(^|[\n.;:!?\u2026])[ \t]*(?:section|appendix|table|figure|fig|footnote|case|"
+    r"panel|part|phase|supplementary)(?![A-Za-z0-9_-])(?:[ \t]+[^\s:]{1,24}){0,6}"
+    r"[ \t]*:[ \t]*", re.I)
+# "Section 3.5." headings end with a period instead of a colon.
+_LOCATOR_SECTION_DOT = re.compile(
+    r"(^|[\n.;:!?\u2026])[ \t]*(?i:section|appendix|part|phase)"
+    r"(?![A-Za-z0-9_-])(?:[ \t]+[^\s:]{1,24}){0,5}?[ \t]*\.[ \t]+(?=[A-Z(])")
+
+
+def _fold_locator_labels(s: str) -> str:
+    """Drop validator-added locator labels ("Results - Evening administration:").
+
+    The numbered-section pattern runs first: it consumes "Section 3.5. " while a
+    following space still separates it from the label body, before the word-label
+    pattern removes the body and its trailing whitespace.
+    """
+    for pat in (_LOCATOR_SECTION_DOT, _LOCATOR_WORD_LABEL, _LOCATOR_NUM_LABEL):
+        s = pat.sub(lambda m: m.group(1), s)
+    return s
+
+
+def _fold_markup(s: str) -> str:
+    """Fold LaTeX math and inline HTML to plain text (representation only)."""
+    s = _TAG_BR.sub(" ", s)                      # <br> is a line/word break
+    s = _TAG_INLINE.sub("", s)                   # <sub>4</sub> -> 4 (no break)
+    s = _TAG_OTHER.sub(" ", s)                   # remaining tags are markup
+    s = s.replace("$", "")                       # math delimiters
+    # Commands are mapped before the backslash strip so \pm etc. never become
+    # the literal tokens "pm"/"times"; unknown command names are markup.
+    s = _LATEX_CMD.sub(lambda m: _LATEX_MAP.get(m.group(1), ""), s)
+    s = s.replace("{", "").replace("}", "")      # grouping braces
+    s = s.replace("^", "").replace("_", "")      # superscript / subscript markers
+    s = _SYMBOL_SPACE.sub(r"\1", s)              # μ g -> μg (first pass; see norm_for_match)
+    return s
+
+
 _QUOTE_MAP = {
     "‘": "'", "’": "'", "‚": "'", "‛": "'",
     "“": '"', "”": '"', "„": '"', "′": "'", "″": '"',
     "‐": "-", "‑": "-", "‒": "-", "–": "-", "—": "-",
     "―": "-", "−": "-", " ": " ", " ": " ", " ": " ",
     "·": ".", "•": " ", "×": "x",
+    "±": "+-", "∓": "-+", "≤": "<=", "≥": ">=", "≈": "~", "∼": "~",
+    "≠": "!=", "Δ": "delta",
+    # Validators wrap a quotation in quote marks ("..."), the source does not.
+    # They carry no semantic content for a verbatim check, so drop them.
+    '"': "",
 }
-_STRIP_MD = re.compile(r"[*_`#>|\\]")
+_STRIP_MD = re.compile(r"[*`#>|\\]")
 _PUNCT_SPACE = re.compile(r"\s*([,.;:()\[\]{}%/=<>+-])\s*")
 
 
 def norm_for_match(s: str) -> str:
     """Aggressive normalisation used for verbatim-quote verification.
 
-    It folds unicode compatibility forms, typographic quotes and dashes,
-    markdown emphasis and table pipes, letter case, and whitespace around
-    punctuation.  Two passages that differ only in those respects compare equal.
+    It folds unicode compatibility forms, LaTeX math and inline HTML markup,
+    typographic quotes and dashes, markdown emphasis and table pipes, letter
+    case, and whitespace around punctuation.  Two passages that differ only in
+    those respects compare equal.
     """
     s = unicodedata.normalize("NFKC", s or "")
+    s = _fold_markup(s)
     s = "".join(_QUOTE_MAP.get(ch, ch) for ch in s)
+    # _QUOTE_MAP maps curly quotes to ASCII '"' in the same pass that would have to
+    # drop them; the output is not re-examined, so drop quote marks explicitly.
+    s = s.replace('"', "")
     s = _STRIP_MD.sub(" ", s)
+    # Locator-label folding runs after the markdown strip so a bold label
+    # ("**Results:**") is already plain ("Results:").
+    s = _fold_locator_labels(s)
+    # Markdown emphasis markers become spaces, which can re-split a unit from the
+    # number (source "**2.34 ± 1.3** µIU/mL" would otherwise fold to
+    # "2.34+-1.3 μiu/ml"), so bind unit symbols again after the strip.
+    s = _SYMBOL_SPACE.sub(r"\1", s)
     s = re.sub(r"-{2,}|={2,}|:-+|-+:", "-", s)      # table rules of any length
     s = s.lower()
     s = _PUNCT_SPACE.sub(r"\1", s)

@@ -202,7 +202,26 @@ class Corpus:
             r = self._resolve_exactish(" ".join(words[i:]).strip("`'\"()[] "))
             if r:
                 return r
-        return None
+        # NotebookLM truncates long source filenames in its citations (e.g. "...the-bioava.md").
+        # Accept a unique prefix of one known filename, so a long-name citation still resolves.
+        return self._resolve_truncated_prefix(n)
+
+    def _resolve_truncated_prefix(self, n: str) -> str | None:
+        low = (n or "").lower().strip().strip("`'\"()[] ").rsplit("/", 1)[-1]
+        if len(low) < 24:
+            return None
+        stem = re.sub(r"(\.pdf)?\.(md|markdown|txt)$", "", low)
+        if len(stem) < 20:
+            return None
+        hits = []
+        for k, v in self._lower.items():
+            kb = k.rsplit("/", 1)[-1]
+            ks = re.sub(r"(\.pdf)?\.(md|markdown|txt)$", "", kb)
+            if len(ks) > len(stem) and ks.startswith(stem):
+                hits.append(v)
+                if len(hits) > 1:
+                    return None  # ambiguous prefix: never guess
+        return hits[0] if hits else None
 
     def _resolve_exactish(self, n: str) -> str | None:
         if not n:
