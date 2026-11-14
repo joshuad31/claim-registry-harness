@@ -337,17 +337,33 @@ def crux_stage(ctx) -> dict:
                                                      if w in s["witnesses"]]})
     candidates.sort(key=lambda c: (len(c["defeats_only_with_assumptions"]) == len(c["defeats"]),
                                    -c["crux_strength"], c["axis"], c["home"], c["witness_id"]))
+    by_study: dict = {}
+    try:
+        from . import studies
+        of = studies.witness_studies(ctx)
+        for c in candidates:
+            a = of.get(c["witness_id"])
+            if a:
+                c["study"], c["study_role"] = a["study"], a["role"]
+                if a["role"] != "direct":
+                    c["study_via"] = a["via"]
+        cc = studies.count(of.get(c["witness_id"]) for c in candidates)
+        by_study = {"candidates": cc["items"], "studies": cc["studies"], "secondary_reports": cc["secondary_reports"],
+                    "note": "candidates sharing a study are one study told more than once; none is merged"}
+    except Exception as e:  # noqa: BLE001
+        ctx.log(f"   crux: study identity not recorded ({type(e).__name__}: {e})")
     H = {ax["axis_id"]: len(ax["hypotheses"]) for ax in frame["axes"]}
     cost = sum(2 * len(set(home_sets.get(h, []))) * (H[axis_of[h]] - 1) for h in rivals)
     ctx.save("crux", "03_portability-tests/tests.json", tests, "portability-tests")
     ctx.save("crux", "05_candidates/crux-candidates.json",
-             {"candidates": candidates, "conflict_recorded": conflict_recorded,
+             {"candidates": candidates, "candidates_by_study": by_study, "conflict_recorded": conflict_recorded,
               "diagnostic_witnesses": diagnostic,
               "cost": {"formula": "C = 2 x sum_h W_h x (H_axis - 1)", "tests": cost},
               "definitions": "see claimreg/crux.py module docstring", "time": utcnow()},
              "crux-candidates")
     return {"coverage_recomputed": recomputed,
             "crux_candidates": len(candidates),
+            "crux_candidate_studies": len(by_study.get("studies", [])),
             "crux_candidates_with_assumptions": sum(1 for c in candidates
                                                     if len(c["defeats_only_with_assumptions"]) == len(c["defeats"])), "conflict_recorded": len(conflict_recorded),
             "diagnostic_witnesses": len(diagnostic), "tests": len(tests),

@@ -34,6 +34,8 @@ ROLES = [
     "joint_checker",         # jointly-sufficient group approval
     "incompat_checker",      # witness-witness incompatibility approval
     "assessor",              # final ACH_Eval-style assessment over the witness registry
+    "assessor_b",            # a second reader of the same final assessment (another model); follows
+                             # "assessor" until it is routed elsewhere, and is only asked when it differs
     "frd_assessor",          # preliminary ACH_Eval over the validated FRDs (per axis, then combined)
     "reporter",              # optional plain-language analyst summary
     "quest_manager",         # NotebookLM quest relay: ACH_Eval grading round + feedback packet
@@ -41,7 +43,7 @@ ROLES = [
 ]
 
 # A role the user did not route follows another role's routing instead of the global default.
-ROLE_FOLLOWS = {"frd_assessor": "assessor", "match_router": "matcher_a", "quest_manager": "coordinator", "quest_investigator": "investigator",
+ROLE_FOLLOWS = {"frd_assessor": "assessor", "assessor_b": "assessor", "match_router": "matcher_a", "quest_manager": "coordinator", "quest_investigator": "investigator",
                 "frame_gate": "assessor"}   # the coach (cr sign, the checkpoints) consults the model that scores the run
 
 DEFAULT_CONFIG: dict[str, Any] = {
@@ -201,6 +203,7 @@ DEFAULT_CONFIG: dict[str, Any] = {
         "qualify": True,
     },
     "frd_assess": {
+        "study_identity": True,       # as assess.study_identity, for the preliminary evaluation of the FRDs
         # preliminary ACH_Eval on the validated FRDs, per axis and then on the combined set
         # (docs/FRD-EVALUATION.md); it runs before the dictionary, witnesses and matching
         "enabled": True,
@@ -246,7 +249,12 @@ DEFAULT_CONFIG: dict[str, Any] = {
         "completion_matching": True,  # judge crux-tested witnesses against rival units
         "diagnostic_units_per_rival": 8,  # shortlist size for diagnostic (extended-review) witnesses
     },
-    "assess": {"enabled": True},
+    "assess": {"enabled": True,
+               # give the assessor the STUDIES list: which registry rows are the same study told again
+               "study_identity": True,
+               # a second model reads the same final assessment and both are reported: auto (when the
+               # role assessor_b is routed to a different model than assessor) | on | off
+               "second_reader": "auto"},
     "report": {"max_words": 3900, "llm_summary": True},
 }
 

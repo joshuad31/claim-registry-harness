@@ -30,6 +30,21 @@ def _bytes(obj) -> int:
     return len(json.dumps(obj, ensure_ascii=False).encode("utf-8"))
 
 
+def _study_metrics(ctx, retained, ws, set_ws, crux_ws) -> dict:
+    """Counts of studies beside the counts of findings and witnesses (claimreg/studies.py)."""
+    from . import studies
+    try:
+        by_frd = studies.frd_studies(ctx, retained)
+        of = {w["witness_id"]: by_frd.get(w.get("vfrd_id")) for w in ws}
+        cf, cw = studies.count(by_frd.values()), studies.count(of.values())
+        cs, cc = studies.count(of.get(w) for w in set_ws), studies.count(of.get(w) for w in crux_ws)
+        return {"studies_behind_retained_frds": cf["n_studies"], "secondary_reports_among_frds": cf["n_secondary_reports"],
+                "studies_behind_witnesses": cw["n_studies"], "witness_independence_ratio": cw["independence_ratio"],
+                "studies_behind_set_witnesses": cs["n_studies"], "studies_behind_crux_witnesses": cc["n_studies"]}
+    except Exception as e:  # noqa: BLE001 - a metric must never stop a report
+        return {"studies_not_counted": f"{type(e).__name__}: {e}"}
+
+
 def compute_metrics(ctx) -> dict:
     corpus_bytes = ctx.corpus.total_bytes()
     cands = ctx.load("frds", "01_candidates/candidates.json", default=[]) or []
@@ -55,6 +70,7 @@ def compute_metrics(ctx) -> dict:
         "frd_db_bytes": _bytes(cands), "validated_db_bytes": _bytes(retained),
         "witness_db_bytes": _bytes(ws),
         "set_witness_text_bytes": sum(len(wtext.get(w, "").encode("utf-8")) for w in set_ws),
+        **_study_metrics(ctx, retained, ws, set_ws, crux_ws),
         "frds_per_response_max": max(per_resp.values()) if per_resp else 0,
         "responses_over_4_frds": sum(1 for v in per_resp.values() if v > 4),
     }
@@ -128,6 +144,11 @@ def _load_all(ctx) -> dict:
     return d
 
 
+def _study_phrase(ctx, d, wids) -> str:
+    from . import studies
+    return studies.phrase(studies.count([study_of(ctx, d, w) for w in wids]))
+
+
 def _direct(c: dict) -> str:
     """'2 of 5 parts directly, 5 with a named transfer' - direct support and assumed support, apart."""
     n, cov = len(c.get("required_units", [])), c.get("units_covered", 0)
@@ -175,45 +196,35 @@ def _held_reasons(held: list[dict]) -> list[tuple[str, int]]:
     return sorted(c.items(), key=lambda x: -x[1])
 
 
-_ANCESTOR = re.compile(r"DERIVED_FROM\s*\(\s*(.+?)\s*\)\s*$", re.I | re.S)
-
-
 def study_of(ctx, d, wid: str) -> dict:
-    """The study a witness's finding rests on, as far as the validated FRD's provenance label shows.
-
-    OWN_RESULT: the source file itself.  DERIVED_FROM(x): x, when x is another file of this corpus;
-    otherwise (x is the file itself, or is not in the corpus) the finding is a secondary report
-    whose original is not identified.  Witnesses are never merged; this only says which of them
-    are the same study told again, so a count of witnesses is not read as a count of studies."""
+    """The study a witness's finding rests on (claimreg/studies.py).  Witnesses are never merged;
+    this only says which of them are the same study told again."""
+    from . import studies
+    if "_studies" not in d:
+        d["_studies"] = (studies.load_map(ctx), None)
+        d["_studies"] = (d["_studies"][0], studies._citation_index(d["_studies"][0]))
+    smap, index = d["_studies"]
     w = d["witnesses"].get(wid, {})
-    v = d["vfrds"].get(w.get("vfrd_id"), {})
-    src = w.get("source_file") or v.get("source_file") or "?"
-    prov = str(v.get("provenance") or "").strip()
-    m = _ANCESTOR.search(prov)
-    if m:
-        anc = ctx.corpus.resolve(m.group(1)) if ctx.corpus else None
-        if anc and anc != src:
-            return {"study": anc, "via": src, "secondary": True, "identified": True}
-        return {"study": src, "via": src, "secondary": True, "identified": False}
-    if prov.upper().startswith("DERIVATIVE_UNKNOWN"):
-        return {"study": src, "via": src, "secondary": True, "identified": False}
-    return {"study": src, "via": src, "secondary": False, "identified": True}
+    v = d["vfrds"].get(w.get("vfrd_id")) or {"vfrd_id": w.get("vfrd_id"), "source_file": w.get("source_file")}
+    return studies.attribute(v, smap, ctx.corpus, index)
 
 
 def crux_groups(ctx, d) -> list[dict]:
-    """Crux candidates grouped by underlying study, direct reports first."""
+    """Crux candidates grouped by underlying study: studies first, then secondary reports."""
     groups: dict = {}
     for c in d["crux"].get("candidates", []):
         st = study_of(ctx, d, c["witness_id"])
-        key = (st["study"], st["secondary"] and not st["identified"])
-        g = groups.setdefault(key, {"study": st["study"], "unidentified_secondary": key[1], "candidates": [],
-                                    "restated_in": set()})
+        own = st["role"] in ("direct", "restated")
+        key = (st["study"], not own)
+        g = groups.setdefault(key, {"study": st["study"], "unidentified_secondary": not own, "candidates": [],
+                                    "restated_in": set(), "summarises": set()})
         g["candidates"].append(c)
-        if st["secondary"] and st["identified"]:
+        if st["role"] == "restated":
             g["restated_in"].add(st["via"])
+        g["summarises"].update(st.get("summarises", []))
     out = sorted(groups.values(), key=lambda g: (g["unidentified_secondary"], -len(g["candidates"]), g["study"]))
     for g in out:
-        g["restated_in"] = sorted(g["restated_in"])
+        g["restated_in"], g["summarises"] = sorted(g["restated_in"]), sorted(g["summarises"])
     return out
 
 
@@ -438,7 +449,9 @@ def build_report(ctx, metrics: dict, summary_text: str | None, stamp: bool = Tru
           f"({d['closeout'].get('status', 'n/a')}) |",
           f"| FRDs | {m['frd_candidates']} candidates → {m['frds_retained']} retained READY"
           + _budget_note(d["retention"]) + " |",
-          f"| Witnesses | {m['witnesses_released']} released, {len(d['held'])} held |",
+          f"| Witnesses | {m['witnesses_released']} released, {len(d['held'])} held"
+          + (f"; they rest on {m['studies_behind_witnesses']} studies" if m.get("studies_behind_witnesses") is not None
+             else "") + " |",
           f"| Matching | {d['match_summary'].get('pairs_assessed', 0)} pairs judged "
           f"({d['match_summary'].get('agreed', 0)} agreed, {d['match_summary'].get('model_adjudicated', 0)} "
           f"model-adjudicated) |",
@@ -496,18 +509,20 @@ def build_report(ctx, metrics: dict, summary_text: str | None, stamp: bool = Tru
         cond = [c for c in cands if c.get("defeats_only_with_assumptions")]
         homes = sorted({c["home"] for c in cands} | {r for c in cands for r in c["defeats"]})
         L += [f"{len(cands)} candidate witness{'es' if len(cands) != 1 else ''} from "
-              f"{len({d['witnesses'].get(c['witness_id'], {}).get('source_file') for c in cands})} source file(s). "
-              f"By the provenance labels they rest on {len(groups)} underlying "
-              f"stud{'ies' if len(groups) != 1 else 'y'}; witnesses of one study are one study told more than once, "
-              "not independent support. The labels come from validation and can be wrong: read a review that "
-              "restates a study as that study."
+              f"{len({d['witnesses'].get(c['witness_id'], {}).get('source_file') for c in cands})} source file(s): "
+              f"{_study_phrase(ctx, d, [c['witness_id'] for c in cands])}. Witnesses of one study are one study "
+              "told more than once, not independent support. Which finding is which study is in "
+              "`01_FRAME/STUDY-MAP.md`; it is worked out from file names, titles, provenance labels and "
+              "author-year citations, and can be corrected there."
               + (f" {len(cond)} of the {len(cands)} defeat a rival only if a finding transfers to the scope the "
                  "rival's part is about; the transfer is named under each." if cond else ""), "",
               "Coverage behind these results: " + "; ".join(
                   f"{h} {_direct(d['coverage'].get(h, {}))}" for h in homes if d["coverage"].get(h)) + ".", ""]
     shown = 0
     for g in groups:
-        label = (f"`{g['study']}`" + (" (a secondary report; the original study is not identified)"
+        label = (f"`{g['study']}`" + ((" (a summary of " + ", ".join(f"`{x}`" for x in g["summarises"]) + "; not a "
+                                       "study of its own)") if g["unidentified_secondary"] and g["summarises"] else
+                                      " (a secondary report; the original study is not identified)"
                                       if g["unidentified_secondary"] else "")
                  + (f", also as restated in {', '.join('`' + x + '`' for x in g['restated_in'])}"
                     if g["restated_in"] else ""))
@@ -611,6 +626,17 @@ def build_report(ctx, metrics: dict, summary_text: str | None, stamp: bool = Tru
                 L.append(f"  - driver: {truncate_words(str(drv), 40)}")
             if (a.get("strongest_objection") or {}).get(ax):
                 L.append(f"  - strongest objection: {truncate_words(a['strongest_objection'][ax], 45)}")
+            sr = a.get("second_reading") or {}
+            if (sr.get("allocations") or {}).get(ax):
+                L.append(f"  - second reader ({sr.get('model', '')}): "
+                         + ", ".join(f"{k} {v}/{a.get('gauge', '')}" for k, v in sr["allocations"][ax].items())
+                         + f" — the two readers differ by up to {sr.get('difference_from_first', {}).get(ax, '?')} "
+                           f"units (first reader: {(a.get('models') or {}).get(ax, 'not recorded')}). Neither is the "
+                           "correct one; the gap is how much the reader matters.")
+            au = ((a.get("study_identity") or {}).get("driver_audit") or {}).get(ax) or {}
+            for rpt in au.get("one_study_cited_as_several_drivers", [])[:3]:
+                L.append(f"  - note: {len(rpt['rows'])} drivers rest on one study (`{rpt['study']}`): "
+                         + ", ".join(f"`{w}`" for w in rpt["rows"][:4]))
         L.append("")
     lad = _ladder_lines(ctx, frame) if not summary_record else []
     if lad:

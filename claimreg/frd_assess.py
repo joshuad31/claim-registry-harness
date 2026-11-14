@@ -231,6 +231,7 @@ class _Job:
                     "row as unverified (provenance N) and read this as a provisional early reading. The row id is the "
                     "question id; use it where a driver's FRD id is asked for.")
         tag = f"{tag}-{self.label}" if self.label else tag
+        note += self._study_note(meta.get("frd_ids"))
         system, user, _ = self.ctx.prompts.render(
             "frd_assess.md", GAUGE=self.gauge, GOAL=self.axis.get("question", ""), SCOPE_NOTE=note,
             AXIS_RULES=rules, GATE_CONTRACT=contract,
@@ -244,6 +245,22 @@ class _Job:
                           max_output_tokens=int((self.ctx.cfg.get("frd_assess", {}) or {}).get("max_output_tokens", 32000)),
                           meta={"axis": self.axis, "gauge": self.gauge, "hypothesis_ids": self.ids,
                                 "retry_if_truncated": True, **meta})
+
+    def _study_note(self, ids) -> str:
+        """The STUDIES list for the rows of one request (validated FRDs only; quest answers have no study yet)."""
+        if self.evidence == "answers" or not (self.ctx.cfg.get("frd_assess", {}) or {}).get("study_identity", True):
+            return ""
+        try:
+            from . import studies
+            if getattr(self, "_study_of", None) is None:
+                self._study_of = studies.frd_studies(self.ctx, self.frds)
+            rows = {i: self._study_of[i] for i in (ids or self._study_of) if i in self._study_of}
+            if not rows:
+                return ""
+            return ("\n\n" + studies.STUDY_NOTE.replace("witness", "FRD") + "\n\nSTUDIES (study: FRD ids):\n"
+                    + studies.studies_block(rows, "FRD"))
+        except Exception:  # noqa: BLE001 - score without it rather than not at all
+            return ""
 
     def partition_requests(self) -> list[LLMRequest]:
         n = len(self.parts)

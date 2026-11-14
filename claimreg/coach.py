@@ -471,6 +471,13 @@ def record_final(ctx) -> None:
                                                "the witnesses (final assessment)", res,
                                                model=(data.get("models") or {}).get(ax["axis_id"])
                                                or scored_by(ctx, "assessor")))
+            sr = data.get("second_reading") or {}
+            vec2 = (sr.get("allocations") or {}).get(ax["axis_id"])
+            if isinstance(vec2, dict):
+                ladder_add(ctx.project_dir, _entry(ctx.run_id, as_read_now(ctx, ax), pref, gauge,
+                                                   target_units(ctx.cfg, gauge), "the witnesses (final assessment)",
+                                                   summarize([{"allocations": vec2}], ids, gauge),
+                                                   note="second reader", model=sr.get("model", "not recorded")))
 
 
 def question_check(model, ctx, axis: dict, pref: str) -> dict:

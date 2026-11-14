@@ -288,6 +288,26 @@ def coverage_stage(ctx) -> dict:
                 "evaluative_units": evaluative,
             })
             out[h["id"]] = res
+    # Which study each covering witness rests on.  This is reported, never used: coverage is decided
+    # from text alone, and neither source counts nor independence alter a coverage relation (spec 28, 29).
+    try:
+        from . import studies
+        of = studies.witness_studies(ctx)
+        for res in out.values():
+            per_unit = {u: studies.count(of.get(w) for o in opts for w in o["witnesses"])
+                        for u, opts in res.get("options", {}).items()}
+            in_sets = sorted({w for s in res.get("sets", []) for w in s["witnesses"]})
+            res["studies"] = {
+                "per_required_unit": {u: {"witnesses": c["items"], "studies": c["studies"],
+                                          "secondary_reports": c["secondary_reports"]} for u, c in per_unit.items()},
+                "set_witnesses": studies.count(of.get(w) for w in in_sets),
+                "sets_that_use_one_study_more_than_once": sum(
+                    1 for s in res.get("sets", [])
+                    if len([w for w in s["witnesses"] if of.get(w)]) >
+                    len({of[w]["study"] for w in s["witnesses"] if of.get(w)})),
+                "note": "reported only; coverage is decided from text and is not changed by study identity"}
+    except Exception as e:  # noqa: BLE001 - never let a reporting aid stop coverage
+        ctx.log(f"   coverage: study identity not recorded ({type(e).__name__}: {e})")
     ctx.save("coverage", "coverage.json", {"hypotheses": out, "time": utcnow()}, "coverage-sets")
     from .ledger import write_ledger
     led = write_ledger(ctx, out)

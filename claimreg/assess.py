@@ -112,6 +112,37 @@ def _parse_assessment(res, gauge: int, axis_id: str, ids: list[str] | None = Non
     return data, problems
 
 
+def _second_reading(ctx, requests, axis_order, ids_of, gauge, first: dict, problems: list) -> dict:
+    """Ask a second model the identical questions.  Returns {} when no second reader is set up."""
+    mode = str((ctx.cfg.get("assess") or {}).get("second_reader", "auto")).lower()
+    if mode == "off" or not requests:
+        return {}
+    try:
+        a, b = ctx.llm.provider_for("assessor"), ctx.llm.provider_for("assessor_b")
+    except Exception as e:  # noqa: BLE001
+        if mode == "on":
+            problems.append(f"second reader: {e}")
+        return {}
+    if mode != "on" and (a.name, a.model) == (b.name, b.model):
+        return {}
+    reqs = [LLMRequest(role="assessor_b", system=r.system, user=r.user, expect_json=False,
+                       tag=r.tag.replace("final-assessment-", "final-assessment-second-reader-"),
+                       salt="second-reader", max_output_tokens=r.max_output_tokens, meta=r.meta) for r in requests]
+    out = {"model": f"{b.name}/{b.model}", "allocations": {}, "problems": [], "difference_from_first": {}}
+    for ax_id, res in zip(axis_order, ctx.llm.call_many(reqs)):
+        if res is None or str(getattr(res, "parse_error", "") or "").startswith("provider error"):
+            out["problems"].append(f"{ax_id}: no second reading ({getattr(res, 'parse_error', 'no response')})")
+            continue
+        data, probs = _parse_assessment(res, gauge, ax_id, ids_of[ax_id])
+        out["problems"] += probs
+        vec = ((data or {}).get("allocations") or {}).get(ax_id)
+        if vec:
+            out["allocations"][ax_id] = vec
+            if first.get(ax_id):
+                out["difference_from_first"][ax_id] = max(abs(vec[h] - first[ax_id].get(h, 0)) for h in vec)
+    return out
+
+
 def assess_stage(ctx) -> dict:
     if not ctx.cfg.get("assess", {}).get("enabled", True):
         return {"skipped": True}
@@ -123,6 +154,14 @@ def assess_stage(ctx) -> dict:
     ws = ctx.load("witnesses", "05_released/witnesses.json", default=[]) or []
     reg = "\n".join(f"{w['witness_id']} | {w['vfrd_id']} | {w['qid']} | {w['source_file']} | {w['text']}" for w in ws)
     axes = frame["axes"]
+    acfg = ctx.cfg.get("assess") or {}
+    study_of: dict = {}
+    if acfg.get("study_identity", True) and ws:
+        try:
+            from . import studies
+            study_of = studies.witness_studies(ctx)
+        except Exception as e:  # noqa: BLE001 - assess without it rather than not at all
+            ctx.log(f"   assess: study identity not available ({type(e).__name__}: {e})")
     merged = {key: {} for key in ("allocations", "basis_confidence", "drivers", "strongest_objection",
                                   "reversal_finding")}
     problems: list[str] = []
@@ -146,6 +185,9 @@ def assess_stage(ctx) -> dict:
                 "FIRST in your response, before the Markdown artifact. The witness registry is long and "
                 "the artifact may be cut off; the allocation block must not be lost. One fenced ```json "
                 "block, allocations for this axis only, integer units summing to the gauge.")
+        if study_of:
+            from . import studies
+            user += "\n\n" + studies.STUDY_NOTE + "\n\nSTUDIES (study: witness ids):\n" + studies.studies_block(study_of)
         requests.append(LLMRequest(role="assessor", system=system, user=user, expect_json=False,
                                    tag=f"final-assessment-{ax_id}", max_output_tokens=max_out,
                                    meta={"frame": frame, "gauge": gauge, "axis": ax_id}))
@@ -169,10 +211,19 @@ def assess_stage(ctx) -> dict:
             value = (data or {}).get(key) or {}
             if isinstance(value, dict) and value.get(ax_id) not in (None, ""):
                 merged[key][ax_id] = value[ax_id]
+    # the same assessment read by a second model: two models have been measured about ten units
+    # apart on the same evidence, so one reading alone hides the largest known source of variation
+    second = _second_reading(ctx, requests, axis_order, ids_of, gauge, merged["allocations"], problems)
+    audit = {}
+    if study_of:
+        from . import studies
+        audit = {ax: studies.driver_audit(merged["drivers"].get(ax), study_of) for ax in merged["drivers"]}
     atomic_write_text(ctx.p("reports", "assessment-fragment.md"),
                       "\n\n".join(fragments) or "(no assessment fragment was produced)")
     out = {"gauge": gauge, **merged, "problems": problems,
            **({"rejected_allocations": rejected} if rejected else {}), "call_keys": call_keys, "models": models,
+           **({"second_reading": second} if second else {}),
+           **({"study_identity": {"given_to_assessor": True, "driver_audit": audit}} if study_of else {}),
            "time": utcnow(),
            "caveat": "Uncalibrated working judgments about what this run's validated record warrants; "
                      "not probabilities of truth and not validated by the crux result."}

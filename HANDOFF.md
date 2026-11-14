@@ -302,3 +302,25 @@ ChatGPT reviewed revision `3cc3016` and found six defects; Claude reproduced all
 
 **To get these into a result:** an existing run keeps its records. Matching prompts changed, so `cr run <project> --run <RUN> --from qualify` asks the matcher again (model calls).
 
+## 20. One study, one voice; the second reader; the control run (2026-11-14, Claude Fable 5.2 session)
+
+Built from DeepSeek's plan for two of the upgrades in the review. Tests: `tests/test_studies.py`.
+
+**One study, one voice (`claimreg/studies.py`, `cr studies <project>`)**
+- `01_FRAME/STUDY-MAP.json` and `.md`: every source file with its study and kind (primary, review, meta-analysis, guideline, commentary, synthesis). The kind is a first guess from the title; a second copy named in `corpus.duplicates` belongs to the first copy's study. Correct either under `overrides` in the same file and run `cr studies` again.
+- Each validated finding is attributed to the study it rests on. From a primary source: that study. From a secondary source, or labelled DERIVED_FROM / DERIVATIVE_UNKNOWN by validation: the one other study of the corpus it names by author and year (restated); several (a summary); none (a secondary report, original not identified). Summaries and unidentified secondary reports are listed and are not counted as studies.
+- Used in: the report (crux candidates grouped by study, "n witnesses from k studies"), `coverage.json` (`studies` per hypothesis), `crux-candidates.json` (`study` per candidate, `candidates_by_study`), `metrics.json`, and both assessors, which are given a STUDIES list and told that rows of one study are one study (`assess.study_identity`, `frd_assess.study_identity`). After the final assessment a driver audit flags one study cited as several drivers.
+- Not done on purpose: study identity never changes a coverage relation, a coverage set or a crux test. The spec decides coverage from text alone (28, 29), and a test holds this. Witnesses are never merged. The ACH_Eval prompt file is unchanged; the STUDIES list is added to what the assessor is shown.
+- Nothing is signed. The map is a plain editable file.
+
+**Second reader (`assess.second_reader`, role `assessor_b`)**
+- Route `assessor_b` to a different model than `assessor` in `project.json` and the final assessment is read by both, with the same question. `assessment.json` gets `second_reading`, the report prints both and their difference, and the ladder gets a second entry under the second model. With one model routed, nothing changes.
+
+**Control run (`claimreg/control.py`)**
+- `cr control <project> <new folder>`: a sibling project with the same corpus (read in place), index, Archivist prompt and study map; the coach off; no preferred hypothesis; `01_FRAME/CONTROL-NOTE.md` to fill in before the quest. The parent's header is deliberately not copied.
+- `cr structure <project> [--run R] [--against <project> --against-run R]`: the shape of a run, alone or beside another: findings per answer, quote and verdict rates, witnesses held, studies behind the witnesses, how often the two matching passes answer and agree, coverage direct and with a transfer, crux candidates and their studies, the share of the last-listed hypothesis, the gap between two readers. Written to `STRUCTURE.md` in the run.
+
+**To apply to an existing run** (no new quest, FRDs or matching): `cr studies <project> --run <RUN>`, read `STUDY-MAP.md`, then fork and redo from coverage: `cr fork <project> --from <RUN> --name <RUN>-STUDIES`, `cr run <project> --run <RUN>-STUDIES --from coverage`. The assessment and the report summary are asked again (a few model calls).
+
+**Open:** which question the control asks is Josh's to choose. The preference-symmetry arm of DeepSeek's plan (a randomly assigned preferred hypothesis) is not built.
+

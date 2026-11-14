@@ -9,7 +9,7 @@ import sys
 from pathlib import Path
 
 from . import __version__
-from .util import ensure_dir, read_json, read_text, utcnow, write_json
+from .util import atomic_write_text, ensure_dir, read_json, read_text, utcnow, write_json
 
 
 def _print(obj) -> None:
@@ -316,6 +316,75 @@ def cmd_demo(a) -> int:
     return 0 if out["status"] in ("complete", "waiting") else 2
 
 
+def cmd_studies(a) -> int:
+    """Write or refresh 01_FRAME/STUDY-MAP.json and .md; with a run, list the findings that are not a study of their own."""
+    from . import studies
+    from .runctx import RunContext
+    try:
+        ctx = RunContext(a.project, a.run, quiet=True)
+    except FileNotFoundError as e:
+        print(f"{e}\nThe study map is made from a run's corpus and findings; run the pipeline first.", file=sys.stderr)
+        return 2
+    path = studies.map_path(ctx.project_dir)
+    smap = studies.build_map(ctx.project_dir, ctx.corpus, ctx.cfg, read_json(path, default=None))
+    write_json(path, smap)
+    ctx._study_map = smap
+    attrs = []
+    for sc in ctx.scopes():
+        sc._study_map = smap
+        attrs += list(studies.frd_studies(sc).values())
+    seen, uniq = set(), []
+    for x in attrs:
+        if x["vfrd_id"] not in seen:
+            seen.add(x["vfrd_id"])
+            uniq.append(x)
+    atomic_write_text(path.with_name(studies.MAP_MD), studies.render_map(smap, uniq))
+    c = studies.count(uniq)
+    kinds: dict = {}
+    for r in smap["files"].values():
+        kinds[r["kind"]] = kinds.get(r["kind"], 0) + 1
+    out = {"study_map": str(path), "read": str(path.with_name(studies.MAP_MD)), "run": ctx.run_id,
+           "source_files": len(smap["files"]), "studies": len(smap["studies"]), "kinds_of_source": kinds,
+           "retained_findings": studies.phrase(c, "finding"),
+           "findings_restating_another_study": sum(1 for x in uniq if x["role"] == "restated"),
+           "findings_from_summaries_or_unidentified_secondary_reports": sum(1 for x in uniq if x["role"] in ("summary", "secondary")),
+           "to_correct": f"edit 'overrides' in {path.name}, then run this command again",
+           "to_apply": f'cr run "{a.project}" --run {ctx.run_id} --from coverage'}
+    _print(out)
+    return 0
+
+
+def cmd_control(a) -> int:
+    from .control import make_control
+    try:
+        _print(make_control(Path(a.project), Path(a.new_project), a.name))
+    except (FileNotFoundError, FileExistsError) as e:
+        print(str(e), file=sys.stderr)
+        return 2
+    return 0
+
+
+def cmd_structure(a) -> int:
+    from .control import render, run_shape
+    from .runctx import RunContext
+    cols = []
+    for proj, run in ((a.project, a.run), (a.against, a.against_run)):
+        if not proj:
+            continue
+        ctx = RunContext(proj, run, quiet=True)
+        for key, s in run_shape(ctx).items():
+            cols.append((f"{Path(proj).name} {ctx.run_id}" + ("" if key == ctx.run_id else f" {key}"), s))
+    if a.json:
+        _print({t: s for t, s in cols})
+        return 0
+    text = render(cols)
+    ctx = RunContext(a.project, a.run, quiet=True)
+    atomic_write_text(ctx.run_dir / "STRUCTURE.md", text)
+    print(text)
+    print(f"written to {ctx.run_dir / 'STRUCTURE.md'}")
+    return 0
+
+
 def cmd_funnel(a) -> int:
     from .funnel import funnel, render
     from .runctx import RunContext
@@ -531,6 +600,27 @@ def main(argv=None) -> int:
     s.add_argument("--then-run", dest="then_run", action="store_true",
                    help="continue straight into the evidence pipeline and the report")
     s.set_defaults(fn=onramp.cmd_quest)
+
+    s = sub.add_parser("studies", help="which findings are the same study told again: write 01_FRAME/STUDY-MAP")
+    s.add_argument("project")
+    s.add_argument("--run")
+    s.set_defaults(fn=cmd_studies)
+
+    s = sub.add_parser("control", help="set up a control project beside this one: same corpus, a question with no "
+                                       "preferred answer, the coach off")
+    s.add_argument("project")
+    s.add_argument("new_project")
+    s.add_argument("--name")
+    s.set_defaults(fn=cmd_control)
+
+    s = sub.add_parser("structure", help="the shape of a run (what survives each stage, studies, agreement), "
+                                         "alone or beside another run")
+    s.add_argument("project")
+    s.add_argument("--run")
+    s.add_argument("--against", help="a second project to set beside the first")
+    s.add_argument("--against-run", dest="against_run")
+    s.add_argument("--json", action="store_true")
+    s.set_defaults(fn=cmd_structure)
 
     s = sub.add_parser("funnel", help="where a run loses material, stage by stage, and what limits it")
     s.add_argument("project")

@@ -371,17 +371,20 @@ class RunLevelTest(unittest.TestCase):
         from claimreg import report
         for sc in ctx.scopes():
             d = report._load_all(sc)
-            wid = next(iter(d["witnesses"]))
+            from claimreg import studies
+            wid = next(w for w in d["witnesses"] if report.study_of(sc, d, w)["role"] == "direct")
+            src = d["witnesses"][wid]["source_file"]
             st = report.study_of(sc, d, wid)
-            self.assertEqual((st["study"], st["secondary"]), (d["witnesses"][wid]["source_file"], False))
-            # a review restating another file of the corpus is that study; one naming itself is not
-            other = next(f for f in sc.corpus.filenames if f != st["study"])
+            self.assertEqual(st["study"], studies.study_id_for(src))
+            # a finding restating another file of the corpus is that study; one naming only itself is not
+            other = next(f for f in sc.corpus.filenames if f != src)
             v = d["vfrds"][d["witnesses"][wid]["vfrd_id"]]
             v["provenance"] = f"DERIVED_FROM({other})"
-            self.assertEqual(report.study_of(sc, d, wid), {"study": other, "via": st["study"], "secondary": True,
-                                                           "identified": True})
-            v["provenance"] = f"DERIVED_FROM({st['study']})"
-            self.assertFalse(report.study_of(sc, d, wid)["identified"])
+            got = report.study_of(sc, d, wid)
+            self.assertEqual((got["study"], got["role"], got["via"]), (studies.study_id_for(other), "restated", src))
+            v["provenance"] = f"DERIVED_FROM({src})"
+            self.assertEqual(report.study_of(sc, d, wid)["role"], "secondary")
+            v["provenance"] = "OWN_RESULT"
             d["crux"] = {"candidates": [{"witness_id": w, "home": "H", "defeats": ["R"]} for w in list(d["witnesses"])[:3]]}
             groups = report.crux_groups(sc, d)
             self.assertEqual(sum(len(g["candidates"]) for g in groups), 3)
