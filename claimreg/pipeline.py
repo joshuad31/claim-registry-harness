@@ -376,11 +376,11 @@ def run_pipeline(ctx: RunContext, start: str | None = None, stop: str | None = N
         else:
             ctx.set_stage(st.name, "done", summary)
             ctx.log(f"   {st.name}: {summary}")
-            if st.name == "frd_assess":
+            if st.name in ("frd_assess", "assess"):
                 try:
-                    coach.checkpoint(ctx, 2)
+                    coach.checkpoint(ctx, 2) if st.name == "frd_assess" else coach.record_final(ctx)
                 except Exception as e:  # noqa: BLE001 - the coach never fails a stage
-                    ctx.log(f"   coach checkpoint 2 could not be made ({type(e).__name__}: {e})")
+                    ctx.log(f"   the coach's record after {st.name} could not be made ({type(e).__name__}: {e})")
         if st.name not in READ_ONLY_STAGES:
             dirty = True
         outcome["ran"].append(st.name)

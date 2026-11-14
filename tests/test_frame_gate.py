@@ -59,6 +59,10 @@ class FakeModel:
             raise RuntimeError("model unavailable")
         if kind in ("corner", "openings"):
             return self.corner(kind, user)
+        if kind == "question-check":
+            self.check_prompt = user
+            return {"needs": [{"evidence_on": "harms of compound Z", "covered_by": "not asked"}],
+                    "ask_next": ["Ask jones2021 for adverse events."]}
         if kind == "forecast":
             h1 = 50 if "offered" in user.split("A1-H1:")[1].split("A1-H2:")[0] else 30
             h1 += {"forecast-1": -2, "forecast-2": 0, "forecast-3": 2}[salt]

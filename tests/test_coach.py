@@ -27,8 +27,8 @@ def scorer(*h1_values):
     """A stand-in for the scoring calls: each scoring gives A1-H1 the next value."""
     seen = []
 
-    def fake(ctx, axis, rows, out_dir, times, evidence, label):
-        seen.append({"axis": axis["axis_id"], "rows": len(rows), "times": times, "evidence": evidence,
+    def fake(ctx, axis, rows, out_dir, times, evidence, label, gauge=None):
+        seen.append({"gauge": gauge, "axis": axis["axis_id"], "rows": len(rows), "times": times, "evidence": evidence,
                      "claim": axis["hypotheses"][0]["statement"]})
         vals = [h1_values[min(len(seen) - 1 + k, len(h1_values) - 1)] for k in range(times)]
         recs = [{"allocations": {"A1-H1": v, "A1-H2": 54 - v, "A1-H3": 10}, "strongest_objection": "small trials",
@@ -53,6 +53,11 @@ class CoachTest(unittest.TestCase):
         ctx = RunContext(self.proj, "RUN-C", create=True, quiet=True)
         with mock.patch.object(coach, "score", fake), mock.patch.object(coach, "_ask", lambda ctx: self.model):
             return ctx, run_pipeline(ctx, **kw)
+
+    def test_what_the_researcher_chose_in_the_session_wins_over_the_setting(self):
+        self.assertEqual(coach.preferred(self.proj, read_json(self.proj / "project.json")), {"A1": "A1-H1"})
+        write_json(self.proj / "01_FRAME" / "frame-certificate.json", {"axes": {"A1": {"preferred": "A1-H2"}}})
+        self.assertEqual(coach.preferred(self.proj, read_json(self.proj / "project.json")), {"A1": "A1-H2"})
 
     def test_without_a_preferred_hypothesis_the_coach_stays_out_of_the_way(self):
         cfg = read_json(self.proj / "project.json")
@@ -131,11 +136,18 @@ class CoachTest(unittest.TestCase):
         self.assertEqual(fake.seen, [])                                    # at target on the first scoring: no more calls
         self.assertIn("You are where you wanted to be.", (ctx.run_dir / "COACH-CHECKPOINT-2.md").read_text(encoding="utf-8"))
 
-        ctx, rec, fake = self.checkpoint_2(40, 41, 44)                     # mean 42, but one scoring reached 43
+        ctx, rec, fake = self.checkpoint_2(40, 41, 44)                     # mean 42: within two units of 43
         a = rec["axes"]["A1"]
         self.assertEqual(([v["A1-H1"] for v in a["vectors"]], a["mean"]["A1-H1"]), ([40, 41, 44], 42))
         self.assertEqual((a["standing"], rec["hold"]), ("within noise of target", False))
-        self.assertIn("too close to call", (ctx.run_dir / "COACH-CHECKPOINT-2.md").read_text(encoding="utf-8"))
+        talk = (ctx.run_dir / "COACH-CHECKPOINT-2.md").read_text(encoding="utf-8")
+        self.assertIn("too close to call", talk)
+        self.assertIn("The target is a guide for you, not a pass mark.", talk)
+        self.assertIn("This is the findings-level score. The final score is made later, from the witnesses", talk)
+
+        ctx, rec, fake = self.checkpoint_2(34, 35, 45)                     # one lucky scoring does not excuse a mean of 38
+        a = rec["axes"]["A1"]
+        self.assertEqual((a["mean"]["A1-H1"], a["standing"], rec["hold"]), (38, "below target", True))
 
         ctx, rec, fake = self.checkpoint_2(36, 34, 35)
         a = rec["axes"]["A1"]
@@ -175,6 +187,31 @@ class CoachTest(unittest.TestCase):
         rows = [ln for ln in ladder.splitlines() if "| the validated findings |" in ln]
         self.assertTrue(any(new in ln and "**49** of 64" in ln and "47, 49, 51" in ln and "at target" in ln for ln in rows), ladder)
         self.assertTrue(any(old[:40] in ln and "**34** of 64" in ln and "below target" in ln for ln in rows), ladder)
+        self.assertIn("The target is a guide for the researcher, not a pass mark.", ladder)
+        self.assertIn("Scores can be compared only within one run and one kind of evidence.", ladder)
+        self.assertIn(f'On RUN-C, scored on the validated findings: at or near target: "{new}" (49). Fell short: "', ladder)
+        coach.rescore(ctx, scorer=scorer(40, 40, 40))                      # scored again: the earlier scoring is kept
+        ladder = (self.proj / "01_FRAME" / coach.LADDER_MD).read_text(encoding="utf-8")
+        # checkpoint 2's own scoring of this claim, and the two re-scores
+        self.assertEqual(sum(old[:40] in ln for ln in ladder.splitlines() if "| the validated findings |" in ln), 3)
+
+        # a claim the run's questions were not written for: the coach says what it still needs (advice, no gate)
+        got = coach.rescore(ctx, header=alt, scorer=scorer(47), times=1, model=self.model)
+        check = (self.proj / "01_FRAME" / "QUESTION-CHECK-A1.md").read_text(encoding="utf-8")
+        self.assertIn("| harms of compound Z | not asked |", check)
+        self.assertIn("- Ask jones2021 for adverse events.", check)
+        self.assertIn("QUESTIONS ALREADY PUT TO THE CORPUS", self.model.check_prompt)
+        self.assertIn(new, self.model.check_prompt)
+        self.assertNotIn("question_check", coach.rescore(ctx, scorer=scorer(40), times=1, model=self.model)[0])   # the run's own claim
+
+        # the gauge is the re-scored header's own, and a missing preferred hypothesis is said out loud
+        self.assertEqual(fake.seen[0]["gauge"], 64)
+        cfg = read_json(self.proj / "project.json")
+        cfg["coach"] = {"preferred": {"A1": "A1-H9"}}
+        write_json(self.proj / "project.json", cfg)
+        e = coach.rescore(RunContext(self.proj, "RUN-C", quiet=True), scorer=scorer(40), times=1)[0]
+        self.assertIn("A1-H9 is not in this header", e["warning"])
+        self.assertEqual(e["preferred"], "A1-H1")
 
         out, err = io.StringIO(), io.StringIO()                            # the command, with the offline engine
         with redirect_stdout(out), redirect_stderr(err):

@@ -32,6 +32,7 @@ LADDER_JSON = "FRAME-LADDER.json"
 LADDER_MD = "FRAME-LADDER.md"
 DEFAULTS = {"enabled": True, "target_share": frame_gate.TARGET_SHARE, "times": 3, "require_acceptance": True,
             "preferred": {}}
+NOISE = 2                     # a mean this many units under the target is too close to call
 HOLD_BEFORE = {"frd_generate": 1, "language": 2}      # the stage a checkpoint is decided in front of
 BASIS = {1: "the quest's answers (not yet validated)", 2: "the validated findings"}
 
@@ -43,9 +44,9 @@ def settings(cfg: dict) -> dict:
 def preferred(project: Path, cfg: dict) -> dict[str, str]:
     """{axis id: the hypothesis the researcher wants to win}, from the frame session, or from
     coach.preferred in project.json where there has been no session."""
-    out = {a: r.get("preferred") for a, r in ((frame_gate.load_certificate(project) or {}).get("axes") or {}).items()
-           if r.get("preferred")}
-    out.update({str(a).upper(): str(h) for a, h in (settings(cfg).get("preferred") or {}).items()})
+    out = {str(a).upper(): str(h) for a, h in (settings(cfg).get("preferred") or {}).items()}
+    out.update({a: r["preferred"] for a, r in ((frame_gate.load_certificate(project) or {}).get("axes") or {}).items()
+                if r.get("preferred")})                 # what the researcher chose in the session wins
     return out
 
 
@@ -85,11 +86,12 @@ def answer_rows(ctx, axis_id: str) -> list[dict]:
             for r in rs if isinstance(r, dict) and r.get("usable", True) and str(r.get("text", "")).strip()]
 
 
-def score(ctx, axis: dict, rows: list[dict], out_dir: Path, times: int, evidence: str, label: str) -> dict:
+def score(ctx, axis: dict, rows: list[dict], out_dir: Path, times: int, evidence: str, label: str,
+          gauge: int | None = None) -> dict:
     """Score `rows` against one axis `times` times.  Returns the vectors, their mean and what the
     assessments said."""
     from .frd_assess import _Job
-    gauge = int(ctx.frame.get("gauge") or ctx.cfg["quest"].get("gauge", 64))
+    gauge = int(gauge or ctx.frame.get("gauge") or ctx.cfg["quest"].get("gauge", 64))
     words = int((ctx.cfg.get("frd_assess", {}) or {}).get("partition_words", 30000))
     ids = [h["id"] for h in axis["hypotheses"]]
     jobs = [_Job(ctx, axis, rows, "axis-only", Path(out_dir) / f"scoring-{n}", gauge, words,
@@ -123,17 +125,16 @@ def standing(vectors: list[dict], mean: dict | None, pref: str, target: int) -> 
         return "no score"
     if mean[pref] >= target:
         return "at target"
-    return "within noise of target" if max(v[pref] for v in vectors) >= target else "below target"
+    return "within noise of target" if target - mean[pref] <= NOISE else "below target"
 
 
 # --------------------------------------------------------------------------- #
 # The ladder: every frame tried and how it scored.
 
 def ladder_add(project: Path, entry: dict) -> None:
+    """Every scoring is kept; nothing is replaced."""
     path = Path(project) / "01_FRAME" / LADDER_JSON
-    log = read_json(path, default=[]) or []
-    log = [e for e in log if (e.get("run"), e.get("axis"), e.get("frame_key"), e.get("basis")) !=
-           (entry.get("run"), entry.get("axis"), entry.get("frame_key"), entry.get("basis"))] + [entry]
+    log = (read_json(path, default=[]) or []) + [entry]
     write_json(path, log)
     atomic_write_text(Path(project) / "01_FRAME" / LADDER_MD, ladder_render(log))
 
@@ -141,21 +142,43 @@ def ladder_add(project: Path, entry: dict) -> None:
 def ladder_render(log: list[dict]) -> str:
     out = ["# Frame ladder", "",
            "Every frame that has been scored against this project's evidence, and how it scored. The result of an "
-           "investigation is the ladder: the strongest claim the evidence supports, shown beside the stronger claims "
-           "it does not support. Scores are units of a gauge divided among the hypotheses. They are not "
-           "probabilities, and one scoring moves by several units on its own.", ""]
+           "investigation is the ladder: the claims the evidence supports, shown beside the stronger claims it does "
+           "not support.", "",
+           "- Scores are units of a gauge divided among the hypotheses. They are not probabilities.",
+           "- One scoring moves by several units on its own, so each scoring is listed.",
+           "- The target is a guide for the researcher, not a pass mark.",
+           "- Scores can be compared only within one run and one kind of evidence. Findings-level and final "
+           "(witness-level) scores of the same run differ by several units.", ""]
     cell = lambda t: " ".join(str(t).split()).replace("|", "\\|")
     for axis in sorted({e["axis"] for e in log}):
+        rows = [e for e in log if e["axis"] == axis]
         out += [f"## Axis {axis}", "", "| When | Run | Scored on | The claim (hypothesis the researcher wants) | Score | Each scoring | Standing |",
                 "|---|---|---|---|---|---|---|"]
-        for e in [e for e in log if e["axis"] == axis]:
+        for e in rows:
             pref = e.get("preferred", "")
             mean = e.get("mean") or {}
-            out.append(f"| {str(e.get('time', ''))[:10]} | {e.get('run', '')} | {e.get('basis', '')} | "
+            out.append(f"| {str(e.get('time', ''))[:16].replace('T', ' ')} | {e.get('run', '')} | {e.get('basis', '')} | "
                        f"{cell((e.get('statements') or {}).get(pref, ''))} | "
                        f"**{mean.get(pref, '-')}** of {e.get('gauge', 64)} ({', '.join(f'{k} {v}' for k, v in mean.items())}) | "
                        f"{', '.join(str(v.get(pref)) for v in e.get('vectors', []))} | {e.get('standing', '')} |")
         out.append("")
+        # one line per run and kind of evidence: which claims reached the target and which fell short
+        latest: dict = {}
+        for e in rows:
+            if e.get("mean"):
+                latest[(e.get("run"), e.get("basis"), e.get("frame_key"))] = e
+        groups: dict = {}
+        for (run, basis, _), e in latest.items():
+            groups.setdefault((run, basis), []).append(e)
+        for (run, basis), es in groups.items():
+            if len(es) < 2:
+                continue
+            say = lambda e: f"\"{cell(e['statements'].get(e['preferred'], ''))}\" ({e['mean'][e['preferred']]})"
+            up = [say(e) for e in es if e["standing"] != "below target"]
+            down = [say(e) for e in es if e["standing"] == "below target"]
+            out.append(f"On {run}, scored on {basis}: " + ("at or near target: " + "; ".join(up) + ". " if up else
+                       "no claim reached the target. ") + ("Fell short: " + "; ".join(down) + "." if down else ""))
+            out.append("")
     return "\n".join(out) + "\n"
 
 
@@ -238,8 +261,10 @@ def render_checkpoint(ctx, n: int, rec: dict) -> str:
     proj, run = ctx.project_dir, ctx.run_id
     out = [f"# Coach checkpoint {n}: where you stand after " + ("the quest" if n == 1 else "the findings were validated"), "",
            f"Scored on {BASIS[n]}. Scores are units of the gauge divided among the hypotheses. They are not "
-           "probabilities, and one scoring moves by several units on its own."
-           + (" This early reading is provisional: nothing has been checked against the sources yet." if n == 1 else ""), ""]
+           "probabilities, and one scoring moves by several units on its own. The target is a guide for you, not a pass mark."
+           + (" This early reading is provisional: nothing has been checked against the sources yet." if n == 1 else
+              " This is the findings-level score. The final score is made later, from the witnesses, and can differ from "
+              "this one by several units; the frame ladder shows both once the run is finished."), ""]
     for aid, a in rec["axes"].items():
         pref, mean = a["preferred"], a.get("mean") or {}
         out += [f"## Axis {aid}", "",
@@ -251,7 +276,8 @@ def render_checkpoint(ctx, n: int, rec: dict) -> str:
             out += ["You are where you wanted to be. Nothing to change.", ""]
             continue
         if a["standing"] == "within noise of target":
-            out += ["At least one scoring reached your target, so this is too close to call. You can go on as you are.", ""]
+            out += [f"The mean is within {NOISE} units of your target, and one scoring moves by more than that on its own. "
+                    "This is too close to call. You can go on as you are.", ""]
         t = a.get("talk") or {}
         if a["standing"] == "no score":
             out += ["No score could be made: " + "; ".join(a.get("problems") or ["no evidence was found for this axis"]), ""]
@@ -384,36 +410,94 @@ def release(ctx) -> None:
 # --------------------------------------------------------------------------- #
 # cr rescore
 
+def record_final(ctx) -> None:
+    """After the final assessment: put the witness-level score on the ladder beside the findings-level one."""
+    prefs = preferred(ctx.project_dir, ctx.cfg)
+    for sc in ctx.scopes():
+        data = sc.load("reports", "assessment.json", default={}) or {}
+        gauge = int(data.get("gauge") or ctx.frame.get("gauge") or 64)
+        for ax in ctx.frame["axes"]:
+            ids = [h["id"] for h in ax["hypotheses"]]
+            vec = (data.get("allocations") or {}).get(ax["axis_id"])
+            pref = prefs.get(ax["axis_id"])
+            if not isinstance(vec, dict) or pref not in ids or getattr(sc, "axis_id", ax["axis_id"]) != ax["axis_id"]:
+                continue
+            res = summarize([{"allocations": vec}], ids, gauge)
+            ladder_add(ctx.project_dir, _entry(ctx.run_id, ax, pref, gauge, target_units(ctx.cfg, gauge),
+                                               "the witnesses (final assessment)", res))
+
+
+def question_check(model, ctx, axis: dict, pref: str) -> dict:
+    """What a new claim needs from the corpus that the quest never asked about.  Advice, not a gate."""
+    w = frame_gate._wording(axis)
+    user = ("THE NEW CLAIM\n" + frame_gate._frame_text(w["question"], w["statements"]) + f"\nThe researcher wants {pref} to win."
+            "\n\nQUESTIONS ALREADY PUT TO THE CORPUS (they were written for an earlier wording of this axis)\n"
+            + (_questions_asked(ctx) or "(not recorded)") + "\n\nSOURCE INDEX\n"
+            + (frame_gate.index_digest(ctx.project_dir, axis["axis_id"], cap=40_000) or "(none)") +
+            "\n\nTASK: the questions above were aimed at an earlier claim. List what this new claim needs evidence on, "
+            "say for each whether a question already asked covers it, and write the questions still to ask, each "
+            'naming the source or kind of study to ask about. Return {"needs": [{"evidence_on": "...", "covered_by": '
+            '"question ids, or the words: not asked"}], "ask_next": ["..."]}.')
+    got = model("question-check", frame_gate.SYSTEM, user, "")
+    flat = lambda t: " ".join(str(t).split())
+    return {"needs": [{"evidence_on": flat(n.get("evidence_on", "")), "covered_by": flat(n.get("covered_by", ""))}
+                      for n in (got.get("needs") or []) if isinstance(n, dict) and flat(n.get("evidence_on", ""))][:12],
+            "ask_next": [flat(x) for x in (got.get("ask_next") or []) if flat(x)][:12]}
+
+
 def rescore(ctx, header: Path | None = None, axis: str | None = None, answers: bool = False,
-            times: int | None = None, scorer=None) -> list[dict]:
+            times: int | None = None, scorer=None, model=None) -> list[dict]:
     """Score this run's evidence under the project's header as it reads now (or another header file).
-    Nothing in the run is changed; the scores go on the ladder."""
+    Nothing in the run is changed; the scores go on the ladder.  Where the claim is not the one the
+    run's questions were written for, `model` is asked what the new claim still needs."""
     from .header import normalize_hypothesis_ids, parse_header
     src = Path(header) if header else frame_gate.header_path(ctx.project_dir)
     text, _ = normalize_hypothesis_ids(frame_gate._norm(read_text(src)))
     frame = parse_header(text)
     prefs = preferred(ctx.project_dir, ctx.cfg)
-    gauge = int(ctx.frame.get("gauge") or ctx.cfg["quest"].get("gauge", 64))
+    gauge = int(frame.get("gauge") or ctx.frame.get("gauge") or ctx.cfg["quest"].get("gauge", 64))    # the header's own gauge
     target = target_units(ctx.cfg, gauge)
     have = set(ctx.axis_ids()) if ctx.axis_layout else {a["axis_id"] for a in frame["axes"]}
+    ran_on = {a["axis_id"]: _key(a) for a in ctx.frame["axes"]}
     out = []
     for ax in frame["axes"]:
         aid = ax["axis_id"]
         if (axis and aid != axis.upper()) or aid not in have:
             continue
         ids = [h["id"] for h in ax["hypotheses"]]
-        pref = prefs.get(aid) if prefs.get(aid) in ids else ids[0]
+        warning = ""
+        if prefs.get(aid) in ids:
+            pref = prefs[aid]
+        else:
+            pref = ids[0]
+            warning = (f"the coach does not know which hypothesis of {aid} you want to win"
+                       + (f" ({prefs[aid]} is not in this header)" if prefs.get(aid) else "")
+                       + f"; reporting {pref}. Go through `cr sign`, or set coach.preferred in project.json")
         rows = answer_rows(ctx, aid) if answers else frd_rows(ctx, aid)
         if not rows and not axis:
             continue                                 # this run gathered nothing for that axis
         n = 1 if answers and not times else int(times or settings(ctx.cfg)["times"])
         res = (scorer or score)(ctx, ax, rows, ctx.p("control", "model-and-human-decisions") / "rescore" / f"{aid}-{_key(ax)}",
-                                n, "answers" if answers else "frds", f"rescore-{_key(ax)}")
+                                n, "answers" if answers else "frds", f"rescore-{_key(ax)}", gauge=gauge)
         entry = _entry(ctx.run_id, ax, pref, gauge, target, BASIS[1 if answers else 2], res,
                        note=f"cr rescore, header {src.name}")
-        entry["rows"], entry["problems"] = res.get("rows", len(rows)), res.get("problems", [])
+        entry["rows"], entry["problems"], entry["warning"] = res.get("rows", len(rows)), res.get("problems", []), warning
         if res["vectors"]:
             ladder_add(ctx.project_dir, entry)
+        if model and ran_on.get(aid) != _key(ax):    # a claim the quest's questions were not written for
+            path = ctx.project_dir / "01_FRAME" / f"QUESTION-CHECK-{aid}.md"
+            try:
+                qc = question_check(model, ctx, ax, pref)
+                atomic_write_text(path, "\n".join(
+                    [f"# Question check for axis {aid}", "",
+                     f"The questions of {ctx.run_id} were written for an earlier wording of this axis. This is what the "
+                     "claim below needs from the corpus, and whether anyone asked. It is advice: nothing waits on it.", "",
+                     f"Claim ({pref}): {entry['statements'][pref]}", "", "| The claim needs evidence on | Covered by |", "|---|---|"]
+                    + [f"| {n['evidence_on']} | {n['covered_by']} |" for n in qc["needs"]]
+                    + ["", "## Questions still to ask", ""] + [f"- {q}" for q in qc["ask_next"]]) + "\n")
+                entry["question_check"] = str(path)
+            except Exception as e:  # noqa: BLE001 - advice only
+                entry["question_check"] = f"not made ({type(e).__name__}: {e})"[:200]
         out.append(entry)
     return out
 
@@ -422,7 +506,8 @@ def cmd_rescore(a) -> int:
     from .runctx import RunContext
     ctx = RunContext(a.project, a.run)
     try:
-        got = rescore(ctx, header=Path(a.header) if a.header else None, axis=a.axis, answers=a.answers, times=a.times)
+        got = rescore(ctx, header=Path(a.header) if a.header else None, axis=a.axis, answers=a.answers, times=a.times,
+                      model=_ask(ctx))
     except (ValueError, OSError) as e:
         print(f"rescore: {e}", file=sys.stderr)
         return 2
@@ -432,6 +517,8 @@ def cmd_rescore(a) -> int:
     for e in got:
         pref, mean = e["preferred"], e["mean"] or {}
         print(f"Axis {e['axis']}, scored on {e['basis']} ({e['rows']} rows) of {e['run']}:")
+        if e.get("warning"):
+            print(f"  NOTE: {e['warning']}")
         print(f"  claim ({pref}): {e['statements'][pref]}")
         if not mean:
             print("  no score: " + "; ".join(e["problems"] or ["no evidence for this axis"]))
@@ -439,7 +526,9 @@ def cmd_rescore(a) -> int:
         print(f"  {pref}: {mean[pref]} of {e['gauge']} (target {e['target']}; each scoring: "
               f"{', '.join(str(v[pref]) for v in e['vectors'])}).  All: " + ", ".join(f"{k} {v}" for k, v in mean.items()))
         print(f"  standing: {e['standing']}")
+        if e.get("question_check"):
+            print(f"  this claim is not the one the run's questions were written for. What it still needs: {e['question_check']}")
     print(f"\nEvery frame scored so far: {Path(a.project) / '01_FRAME' / LADDER_MD}")
-    print("These are evidence-level scores on the findings as they stand. To carry a new frame through witnesses and "
-          "the final report, fork the run (`cr fork`) and run it.")
+    print("These are findings-level scores; the target is a guide, not a pass mark. To carry a new frame through "
+          "witnesses and the final report, fork the run (`cr fork`) and run it.")
     return 0

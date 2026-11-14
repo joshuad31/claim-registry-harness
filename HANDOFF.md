@@ -256,3 +256,9 @@ Section 15 is superseded in part. Josh's direction: no signatures, hashes or tam
 - The checkpoints act only on axes whose preferred hypothesis is known (from the session, or `coach.preferred` in `project.json`).
 
 **Rules for agents.** Coach, do not gatekeep. Assume the researcher runs in good faith and has a valid point from their own experience; never tell them to give up; say plainly what the corpus does and does not show. Treat mechanistic evidence as evidence. `cr sign` is for the researcher at a keyboard: do not try to run it for them. Still no domain modules, and no down-ranking, excluding or re-grading of sources to move a result: the claim is the lever, and it is in the header.
+
+## 18. Fixes after DeepSeek's review of the coach (2026-11-14)
+
+Done: the session's choice of preferred hypothesis now wins over `coach.preferred`; "too close to call" is a mean within 2 units of target (`coach.NOISE`), not one high scoring; `cr rescore` uses the re-scored header's gauge and says so when the preferred hypothesis is not in that header; the ladder appends every scoring and states that the target is a guide and that scores compare only within one run and one kind of evidence; the final (witness-level) score is added to the ladder after `assess`; `cr rescore` under a claim the run's questions were not written for writes `01_FRAME/QUESTION-CHECK-<AXIS>.md` (advice, no block).
+
+Declined, by Josh's direction: a pre-registered finite ladder, caps on reframes or re-scores, and evidence-set or header hashes on ladder entries.

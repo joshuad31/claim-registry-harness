@@ -15,13 +15,15 @@ python cr.py sign "path\to\project"
 Run it yourself, in a terminal window (`cr coach` is the same command). For each axis of the header:
 
 1. **The coach asks about you.** Why you are running this. What your goal is and how the analysis can help. Which hypothesis you want to win, what experience shaped that view, what you want to be able to say, and what you would concede.
-2. **You see forecasts.** The coach writes alternative ways of framing the axis, from the strongest claim to the weakest, each against a rival that someone really holds. Each one, and the current draft, is forecast three times: how many of the 64 units your hypothesis would get. The target is two thirds, 43 of 64. These are units of evidence, not a probability that you are right.
+2. **You see forecasts.** The coach writes alternative ways of framing the axis, from the strongest claim to the weakest, each against a rival that someone really holds. Each one, and the current draft, is forecast three times: how many of the 64 units your hypothesis would get. The target is two thirds, 43 of 64. It is a guide for you, not a pass mark, and these are units of evidence, not a probability that you are right.
 3. **You type the frame by hand.** The question and every hypothesis, in your own words. Paste is not taken.
 4. **The coach restates it** so that this corpus can test it, lists every change, and forecasts it. If another frame is forecast higher for your hypothesis, it asks whether you are sure.
 5. **You read it.** Each hypothesis as it will stand, with what would count for and against it.
 6. **You accept the consequences by typing them:** the forecast, the worst likely result, what a win does and does not let you say, who holds the rival, and what the frame leaves out.
 
 The point of accepting is that you know the likely outcome before the run. A hard result is then not a shock. It is not a security measure, and the record (`01_FRAME/FRAME-CERTIFICATE.md`) is a plain file.
+
+Try the session first on a scratch project (for example `projects\DEMO`), not on your real one: it reads the keyboard directly, and that should be seen working on your computer once.
 
 A quest does not start until every axis of the header has been through this. Each axis is saved when you finish it, so you can do them in separate sittings. Allow 15 to 25 minutes an axis. To switch the requirement off, set `"coach": {"require_acceptance": false}` in `project.json`.
 
@@ -33,7 +35,9 @@ If your hypothesis is below target, the run stops and writes `COACH-CHECKPOINT-1
 
 ## 3. After the findings are validated: checkpoint 2
 
-The run scores the validated findings. If the first scoring is below target it scores twice more and takes the mean, because one scoring moves by several units on its own. If the mean is below target but one scoring reached it, the coach says it is too close to call and does not stop you.
+The run scores the validated findings. If the first scoring is below target it scores twice more and takes the mean, because one scoring moves by several units on its own. If the mean is within 2 units of target, the coach says it is too close to call and does not stop you.
+
+This is the findings-level score. The final score is made later, from the witnesses, and can differ by several units: on the first run where both exist, the findings-level scorings were 36 and 40 and the final score 42. The ladder shows both once a run is finished.
 
 If the mean is below target, the run stops and writes `COACH-CHECKPOINT-2.md`.
 
@@ -58,9 +62,11 @@ And your three moves:
 python cr.py rescore "path\to\project" --run RUN-ID [--header other-header.md] [--axis A2]
 ```
 
-The corpus, the index, the questions, the answers and the validated findings are the expensive part, and they are built once. `cr rescore` scores those same findings under the header as it reads now, or under another header file, three times. Nothing in the run changes. It costs roughly a dollar or two.
+The corpus, the index, the questions, the answers and the validated findings are the expensive part, and they are built once. `cr rescore` scores those same findings under the header as it reads now, or under another header file, three times. Nothing in the run changes. It costs roughly a dollar or two. It uses the gauge of the header it scores.
 
-Every frame scored, by a checkpoint or by `cr rescore`, is kept in `01_FRAME/FRAME-LADDER.md`. The ladder is the result of an investigation: the strongest claim this evidence supports, shown beside the stronger claims it does not. For example: "lowers TSH in refractory patients: 34. Patients should be offered the option: 42."
+When the claim is not the one the run's questions were written for, `cr rescore` also writes `01_FRAME/QUESTION-CHECK-<AXIS>.md`: what the new claim needs from the corpus, whether anyone asked, and the questions still to ask. It is advice; nothing waits on it.
+
+Every scoring, by a checkpoint, by `cr rescore` or by the final assessment, is added to `01_FRAME/FRAME-LADDER.md`; nothing is replaced. Scores can be compared only within one run and one kind of evidence. The ladder is the result of an investigation: the strongest claim this evidence supports, shown beside the stronger claims it does not. For example: "lowers TSH in refractory patients: 34. Patients should be offered the option: 42."
 
 A re-score is an evidence-level score on the validated findings. To carry a new frame through witnesses and the final report, fork the run (`cr fork`) and run it.
 
