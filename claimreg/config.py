@@ -191,7 +191,10 @@ DEFAULT_CONFIG: dict[str, Any] = {
         "exhaustive_threshold": 45,   # match every witness when there are this few
         "dispute_policy": "adjudicate",   # adjudicate | abstain
         "synonyms": [],               # e.g. [["PTX", "pentoxifylline"]]: shortlist only, never shown to the matcher
-        "one_pass_policy": "abstain",  # a pass left unanswered (cr queue skip): abstain | accept (labelled ONE_PASS_ONLY)
+        "one_pass_policy": "abstain",  # a pair only one pass judged: abstain | accept (labelled ONE_PASS_ONLY)
+        "reask_rounds": 2,            # times a pass is asked again for rows it left out of its answer
+        "reask_batch": 5,             # witnesses per re-ask call
+        "unqualified_policy": "agreed_only",  # after a failed fixture pattern: agreed_only | disclose
         "route": "auto",              # model routing of witnesses to units: auto (model matchers only) | on | off
         "route_batch": 12,            # witnesses per routing call
         "route_max_units": 8,         # units one witness may be routed to

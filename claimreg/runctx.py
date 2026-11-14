@@ -316,6 +316,7 @@ class RunContext:
         rec.update({"status": status, "updated": utcnow()})
         if status == "running":
             rec["started"] = utcnow()
+            rec.pop("stale", None)          # it is being redone with the current settings
         if summary is not None:
             rec["summary"] = summary
         st[name] = rec

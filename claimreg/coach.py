@@ -354,7 +354,10 @@ def checkpoint(ctx, n: int, model=None, scorer=None) -> dict | None:
             first = [own] if own.get("allocations") else []
             res = summarize(first, ids, gauge, rows=len(rows))
             more = max(0, int(st["times"]) - len(first))
-            if more and not (first and res["mean"][pref] >= target):       # at target on the first scoring: no need
+            # the same number of scorings whatever the first one says: scoring again only when the
+            # first is below target lets a lucky first score pass, and leaves the ladder holding
+            # means of one beside means of three
+            if more:
                 extra = scorer(ctx, ax, rows, out_base / aid, more, "frds", label)
                 res = {**extra, "vectors": res["vectors"] + extra["vectors"], "said": res["said"] + extra["said"]}
                 from .frd_assess import largest_remainder

@@ -94,7 +94,18 @@ FIXTURES = [
      "At least one study reports drug A reducing serum TNF-alpha in human subjects.",
      "In 20 patients, oral drug A 400 mg three times daily reduced serum TNF-alpha by 30% after four weeks.",
      {"WITNESS_ENTAILS_UNIT", "EQUIVALENT"}),
+    ("FX-23", "contradiction_needs_same_scope", "Drug A does not improve voiding function in men with BPH.",
+     "Drug A improved voiding function in obstructed rats.",
+     {"CONTRADICTS", "PARTIALLY_COVERS", "NO_SEMANTIC_RELATION", "ABSTAIN"}),
+    ("FX-24", "contradiction_needs_same_scope", "Drug A does not improve voiding function in men with BPH.",
+     "In men with BPH, drug A improved voiding function compared with placebo.", {"CONTRADICTS"}),
 ]
+
+# What a CONTRADICTS answer must say about scope for a fixture to pass: "SCOPE" = the contradiction
+# holds only if the finding transfers to the unit's scope, and the pass must say so; "" = the texts
+# share a scope, and the pass must not call the contradiction conditional.  Project fixtures set the
+# same thing with a "contradiction_gap" key.
+FIXTURE_CONTRADICTION_GAP = {"FX-23": "SCOPE", "FX-24": ""}
 
 
 def norm_rel(r: str) -> str:
@@ -222,46 +233,93 @@ def _hyp_brief(frame: dict, hid: str) -> str:
     return ""
 
 
+def _pass_requests(ctx, unit: dict, wids: list[str], utexts: dict, wtexts: dict, stage_tag: str,
+                   suffix: str, passes: tuple = ("a", "b")) -> list[tuple]:
+    """The request(s) that ask pass A and/or pass B to judge ``wids`` against one unit."""
+    brief = _hyp_brief(ctx.frame, unit["hypothesis_id"])
+    out = []
+    for pas in passes:
+        tmpl, order = ("match_a.md", list(wids)) if pas == "a" else ("match_b.md", list(reversed(wids)))
+        system, user, _ = ctx.prompts.render(
+            tmpl, UNIT_ID=unit["unit_id"], UNIT_TYPE=unit["type"], HID=unit["hypothesis_id"],
+            UNIT_TEXT=utexts[unit["unit_id"]], SATISFIED_BY=unit.get("satisfied_by", "") or "(not stated)",
+            HYP_BRIEF=brief, WITNESSES=_wlist(order, wtexts))
+        req = LLMRequest(role="matcher_a" if pas == "a" else "matcher_b", system=system, user=user,
+                         tag=f"{stage_tag}:{pas}:{unit['unit_id']}:{suffix}", salt=f"pass-{pas}",
+                         meta={"unit": unit, "unit_text": utexts[unit["unit_id"]],
+                               "witnesses": {w: wtexts[w] for w in order}, "pass": pas})
+        out.append((pas, unit["unit_id"], order, req))
+    return out
+
+
+def _read_pass(out: dict, pas: str, uid: str, order: list[str], res) -> None:
+    data = res.parsed if res and isinstance(res.parsed, dict) else {}
+    js = as_list(data.get("judgments") if data else (res.parsed if res else []), "judgments")
+    got = {}
+    for j in js:
+        if isinstance(j, dict) and j.get("witness_id") in order:
+            got[j["witness_id"]] = j
+    skipped = res is not None and "skipped by the queue operator" in str(res.parse_error or "")
+    for wid in order:
+        j = got.get(wid)
+        rec = out.setdefault((wid, uid), {})
+        if not j and rec.get(pas) not in (None, "MISSING"):
+            continue                                     # a re-ask that came back empty changes nothing
+        rec[pas] = norm_rel(j.get("relation")) if j else "MISSING"
+        rec["trace_" + pas] = (j.get("trace") or "") if j else "no judgment returned"
+        # a partial relation says what is missing; a contradiction says whether it holds only
+        # if the finding transfers to the unit's scope (the same transfer standard, both directions)
+        if j and (rec[pas] in PARTIAL or rec[pas] == "CONTRADICTS"):
+            rec["gap_type_" + pas] = norm_gap(j.get("gap_type"))
+            rec["gap_" + pas] = str(j.get("gap") or "").strip()
+        rec["key_" + pas] = res.key if res else ""
+        if not j and skipped:
+            rec["skipped_" + pas] = True
+
+
 def run_passes(ctx, plan: list[tuple[dict, list[str]]], utexts: dict, wtexts: dict,
                stage_tag: str) -> dict:
-    """plan: [(unit, [witness ids])].  Returns {(wid, uid): {a, trace_a, b, trace_b}}."""
-    bs = int(ctx.cfg["matching"].get("batch_size", 15))
-    reqs, index = [], []
+    """plan: [(unit, [witness ids])].  Returns {(wid, uid): {a, trace_a, b, trace_b}}.
+
+    A pass sometimes returns fewer rows than it was asked for.  Those pairs are asked again, of
+    that pass only and in small batches (``matching.reask_batch``, ``matching.reask_rounds``), so
+    that a pair is not left with one judgment because a long answer dropped a row."""
+    mcfg = ctx.cfg["matching"]
+    bs = int(mcfg.get("batch_size", 15))
+    units = {u["unit_id"]: u for u, _ in plan}
+    jobs = []
     for unit, wids in plan:
-        brief = _hyp_brief(ctx.frame, unit["hypothesis_id"])
         for bno, batch in enumerate(chunked(sorted(wids), bs)):
-            for pas, tmpl, order in (("a", "match_a.md", batch), ("b", "match_b.md", list(reversed(batch)))):
-                system, user, _ = ctx.prompts.render(
-                    tmpl, UNIT_ID=unit["unit_id"], UNIT_TYPE=unit["type"], HID=unit["hypothesis_id"],
-                    UNIT_TEXT=utexts[unit["unit_id"]], SATISFIED_BY=unit.get("satisfied_by", "") or "(not stated)",
-                    HYP_BRIEF=brief, WITNESSES=_wlist(order, wtexts))
-                role = "matcher_a" if pas == "a" else "matcher_b"
-                reqs.append(LLMRequest(role=role, system=system, user=user,
-                                       tag=f"{stage_tag}:{pas}:{unit['unit_id']}:{bno}",
-                                       salt=f"pass-{pas}",
-                                       meta={"unit": unit, "unit_text": utexts[unit["unit_id"]],
-                                             "witnesses": {w: wtexts[w] for w in order}, "pass": pas}))
-                index.append((pas, unit["unit_id"], order))
-    results = ctx.llm.call_many(reqs)
+            jobs += _pass_requests(ctx, unit, batch, utexts, wtexts, stage_tag, str(bno))
+    results = ctx.llm.call_many([j[3] for j in jobs])
     out: dict = {}
-    for (pas, uid, order), res in zip(index, results):
-        data = res.parsed if res and isinstance(res.parsed, dict) else {}
-        js = as_list(data.get("judgments") if data else (res.parsed if res else []), "judgments")
-        got = {}
-        for j in js:
-            if isinstance(j, dict) and j.get("witness_id") in order:
-                got[j["witness_id"]] = j
-        for wid in order:
-            j = got.get(wid)
-            rec = out.setdefault((wid, uid), {})
-            rec[pas] = norm_rel(j.get("relation")) if j else "MISSING"
-            rec["trace_" + pas] = (j.get("trace") or "") if j else "no judgment returned"
-            if j and rec[pas] in PARTIAL:
-                rec["gap_type_" + pas] = norm_gap(j.get("gap_type"))
-                rec["gap_" + pas] = str(j.get("gap") or "").strip()
-            rec["key_" + pas] = res.key if res else ""
-            if not j and res is not None and "skipped by the queue operator" in str(res.parse_error or ""):
-                rec["skipped_" + pas] = True
+    for (pas, uid, order, _), res in zip(jobs, results):
+        _read_pass(out, pas, uid, order, res)
+    rb = max(1, int(mcfg.get("reask_batch", 5)))
+    reasked = 0
+    for rnd in range(1, int(mcfg.get("reask_rounds", 2)) + 1):
+        todo: dict = {}
+        for (wid, uid), rec in out.items():
+            for pas in ("a", "b"):
+                if rec.get(pas) == "MISSING" and not rec.get("skipped_" + pas):
+                    todo.setdefault((pas, uid), []).append(wid)
+        if not todo:
+            break
+        jobs = []
+        for (pas, uid), wids in sorted(todo.items()):
+            for bno, batch in enumerate(chunked(sorted(wids), rb)):
+                jobs += _pass_requests(ctx, units[uid], batch, utexts, wtexts, stage_tag,
+                                       f"reask{rnd}:{bno}", (pas,))
+        results = ctx.llm.call_many([j[3] for j in jobs])
+        for (pas, uid, order, _), res in zip(jobs, results):
+            before = sum(1 for w in order if out[(w, uid)].get(pas) == "MISSING")
+            _read_pass(out, pas, uid, order, res)
+            got = before - sum(1 for w in order if out[(w, uid)].get(pas) == "MISSING")
+            reasked += got
+            for w in order:
+                out[(w, uid)]["reasked_" + pas] = rnd
+    if reasked:
+        ctx.log(f"   matching ({stage_tag}): {reasked} judgment(s) a pass had left out were obtained by asking again")
     return out
 
 
@@ -303,53 +361,102 @@ def adjudicate(ctx, pairs: dict, units: dict, utexts: dict, wtexts: dict, stage_
     return out
 
 
+def unqualified_patterns(ctx) -> list[str]:
+    """Fixture patterns the matcher failed in this run's qualification (spec 28.1), or []."""
+    q = read_json(ctx.p("matching", "02_match-fixtures", "qualification.json"), default=None) or {}
+    return list(q.get("unqualified_patterns") or [])
+
+
 def combine(ctx, raw: dict, units: dict, utexts: dict, wtexts: dict, stage_tag: str) -> list[dict]:
-    policy = ctx.cfg["matching"].get("dispute_policy", "adjudicate")
-    # when one pass's request was never answered: "abstain" (default) or "accept" the single
-    # judgment, labelled ONE_PASS_ONLY everywhere it is used
-    one_pass = ctx.cfg["matching"].get("one_pass_policy", "abstain")
-    # a pass whose request was deliberately left unanswered (cr queue skip) is not re-judged by the
-    # adjudicator: the pair keeps its single judgment for the human review packet and counts as ABSTAIN
-    disputes = {k: v for k, v in raw.items() if v.get("a") != v.get("b")
-                and not (v.get("skipped_a") or v.get("skipped_b"))}
+    mcfg = ctx.cfg["matching"]
+    policy = mcfg.get("dispute_policy", "adjudicate")
+    # a pair only one pass judged (the other pass's request was skipped in the queue, or it left the
+    # row out even after being asked again): "abstain" (default) or "accept" the single judgment,
+    # labelled ONE_PASS_ONLY everywhere it is used.  It is never sent to the adjudicator: one
+    # judgment is not a disagreement.
+    one_pass = mcfg.get("one_pass_policy", "abstain")
+
+    def single(v):
+        return (v.get("skipped_a") or v.get("skipped_b") or
+                ((v.get("a") == "MISSING") != (v.get("b") == "MISSING")))
+    disputes = {k: v for k, v in raw.items() if v.get("a") != v.get("b") and not single(v)}
     adj = adjudicate(ctx, disputes, units, utexts, wtexts, stage_tag) if (disputes and policy == "adjudicate") else {}
+    # spec 28.1: a matcher that failed a fixture pattern may not approve relations on its own.
+    # While any pattern is unqualified, only relations both passes agree on (or a human decides)
+    # create coverage, partial coverage or a contradiction; an adjudicated one is held as ABSTAIN.
+    unq = unqualified_patterns(ctx) if mcfg.get("unqualified_policy", "agreed_only") == "agreed_only" else []
     rows = []
     for (wid, uid), rec in sorted(raw.items()):
         u = units[uid]
         row = {"witness_id": wid, "unit_id": uid, "hypothesis_id": u["hypothesis_id"], "axis_id": u["axis_id"],
                "unit_type": u["type"], "a": rec.get("a"), "trace_a": rec.get("trace_a", ""),
                "b": rec.get("b"), "trace_b": rec.get("trace_b", ""), "stage": stage_tag}
+        ga, gb = rec.get("gap_type_a", ""), rec.get("gap_type_b", "")
         if rec.get("a") == rec.get("b") and rec.get("a") not in ("MISSING",):
             row.update(final=rec["a"], basis="AGREED", trace=rec.get("trace_a", ""))
             if rec["a"] in PARTIAL:
-                ga, gb = rec.get("gap_type_a", ""), rec.get("gap_type_b", "")
                 # both passes must name the same kind of gap for it to be used downstream
                 row.update(gap_type=ga if ga == gb else "", gap=rec.get("gap_a", "") or rec.get("gap_b", ""),
                            gap_type_a=ga, gap_type_b=gb)
+            elif rec["a"] == "CONTRADICTS":
+                row.update(_contradiction_gap(rec, ga, gb))
         elif rec.get("a") == "MISSING" and rec.get("b") == "MISSING":
             row.update(final="ABSTAIN", basis="MISSING", trace="neither pass returned a judgment for this pair")
-        elif rec.get("skipped_a") or rec.get("skipped_b"):
-            single = rec.get("b") if rec.get("skipped_a") else rec.get("a")
-            tr = rec.get("trace_b", "") if rec.get("skipped_a") else rec.get("trace_a", "")
-            if one_pass == "accept" and single not in ("MISSING", None):
-                row.update(final=single, basis="ONE_PASS_ONLY", single_pass_relation=single,
-                           trace=f"[one pass only; the other pass's request was not answered] {tr}")
+        elif single(rec):
+            missing_a = rec.get("skipped_a") or rec.get("a") == "MISSING"
+            answered = rec.get("b") if missing_a else rec.get("a")
+            tr = rec.get("trace_b", "") if missing_a else rec.get("trace_a", "")
+            why = ("the other pass's request was not answered" if rec.get("skipped_a") or rec.get("skipped_b")
+                   else "the other pass returned no judgment for it, also when asked again")
+            if one_pass == "accept" and answered not in ("MISSING", None):
+                row.update(final=answered, basis="ONE_PASS_ONLY", single_pass_relation=answered,
+                           trace=f"[one pass only; {why}] {tr}")
+                if answered == "CONTRADICTS":
+                    row.update(_contradiction_gap(rec, ga, gb))
             else:
-                row.update(final="ABSTAIN", basis="ONE_PASS_ONLY", single_pass_relation=single,
-                           trace=f"only one pass judged this pair ({single}); the other pass's request was not "
-                                 f"answered. Not used for coverage; a human can confirm it in human-decisions.json")
+                row.update(final="ABSTAIN", basis="ONE_PASS_ONLY", single_pass_relation=answered,
+                           trace=f"only one pass judged this pair ({answered}); {why}. Not used for "
+                                 f"coverage; a human can confirm it in human-decisions.json")
         elif (wid, uid) in adj:
             rel, tr, key, gt, gap = adj[(wid, uid)]
-            row.update(final=rel, basis="MODEL_ADJUDICATED", trace=tr, key_adj=key)
-            if rel in PARTIAL:
-                row.update(gap_type=gt, gap=gap, gap_type_a=rec.get("gap_type_a", ""),
-                           gap_type_b=rec.get("gap_type_b", ""))
+            if rel not in (rec.get("a"), rec.get("b"), "ABSTAIN"):
+                # the adjudicator chooses between the two judgments; a third answer is not a choice
+                row.update(final="ABSTAIN", basis="DISPUTED", key_adj=key, adjudicator_relation=rel,
+                           trace=f"pass A and pass B disagree and the adjudicator proposed {rel}, which "
+                                 f"neither pass gave: {tr}")
+            elif unq and rel not in ("NO_SEMANTIC_RELATION", "ABSTAIN"):
+                row.update(final="ABSTAIN", basis="UNQUALIFIED_MATCHER", key_adj=key, adjudicator_relation=rel,
+                           trace=f"the adjudicator chose {rel}, but this run's matcher failed the fixture "
+                                 f"pattern(s) {', '.join(unq)}; until it is qualified only relations both "
+                                 f"passes agree on are approved. {tr}")
+            else:
+                row.update(final=rel, basis="MODEL_ADJUDICATED", trace=tr, key_adj=key)
+                if rel in PARTIAL:
+                    row.update(gap_type=gt, gap=gap, gap_type_a=ga, gap_type_b=gb)
+                elif rel == "CONTRADICTS":
+                    row.update(_contradiction_gap(rec, ga, gb, gt, gap))
         else:
             row.update(final="ABSTAIN", basis="DISPUTED",
                        trace="pass A and pass B disagree; no adjudication" + (
                            " (the adjudication request was not answered)" if policy == "adjudicate" else ""))
+        for pas in ("a", "b"):
+            if rec.get("reasked_" + pas):
+                row["reasked_" + pas] = rec["reasked_" + pas]
         rows.append(row)
     return rows
+
+
+def _contradiction_gap(rec: dict, ga: str, gb: str, gt: str = "", gap: str = "") -> dict:
+    """A contradiction is conditional when any reviewer who called it one says it holds only if the
+    finding transfers to the unit's scope.  The transfer is kept as a named assumption, exactly as
+    it is for a finding that supports a unit from another population, species, model or dose."""
+    said = [(g, t) for g, t, r in ((ga, rec.get("gap_a", ""), rec.get("a")), (gb, rec.get("gap_b", ""), rec.get("b")),
+                                    (gt, gap, "CONTRADICTS" if gt or gap else None))
+            if r == "CONTRADICTS" and g == "SCOPE"]
+    if not said:
+        return {}
+    text = next((t for _, t in said if t), "") or "the finding transfers to the scope this unit is about"
+    return {"gap_type": "SCOPE", "gap": text, "gap_type_a": ga, "gap_type_b": gb}
 
 
 def qualify(ctx) -> dict:
@@ -359,6 +466,8 @@ def qualify(ctx) -> dict:
     fixtures = list(FIXTURES)
     if extra:
         fixtures += [(f["id"], f["pattern"], f["unit"], f["witness"], set(f["accept"])) for f in extra]
+    need_gap = dict(FIXTURE_CONTRADICTION_GAP)
+    need_gap.update({f["id"]: norm_gap(f["contradiction_gap"]) for f in (extra or []) if "contradiction_gap" in f})
     units, utexts, wtexts, plan = {}, {}, {}, []
     for fid, pat, unit, wit, acc in fixtures:
         uid = f"{fid}-U"
@@ -378,9 +487,18 @@ def qualify(ctx) -> dict:
     rows, per = [], {}
     for fid, pat, unit, wit, acc in fixtures:
         rec = raw.get((f"{fid}-W", f"{fid}-U"), {})
-        a_ok, b_ok = rec.get("a") in acc, rec.get("b") in acc
+        def ok(pas):
+            if rec.get(pas) not in acc:
+                return False
+            if rec.get(pas) == "CONTRADICTS" and fid in need_gap:
+                return (rec.get("gap_type_" + pas, "") == "SCOPE") == (need_gap[fid] == "SCOPE")
+            return True
+        a_ok, b_ok = ok("a"), ok("b")
         rows.append({"fixture": fid, "pattern": pat, "accept": sorted(acc), "pass_a": rec.get("a"),
                      "pass_b": rec.get("b"), "a_ok": a_ok, "b_ok": b_ok,
+                     **({"contradiction_must_be_conditional": need_gap[fid] == "SCOPE",
+                         "gap_type_a": rec.get("gap_type_a", ""), "gap_type_b": rec.get("gap_type_b", "")}
+                        if fid in need_gap else {}),
                      "trace_a": rec.get("trace_a", ""), "trace_b": rec.get("trace_b", "")})
         p = per.setdefault(pat, {"n": 0, "a_ok": 0, "b_ok": 0})
         p["n"] += 1
@@ -391,6 +509,11 @@ def qualify(ctx) -> dict:
            "pass_b_correct": sum(r["b_ok"] for r in rows), "per_pattern": per,
            "qualified_patterns": qualified,
            "unqualified_patterns": sorted(set(per) - set(qualified)), "rows": rows,
+           "consequence": ("" if set(per) == set(qualified) else
+                           "At least one pattern failed. While that is so, only relations both passes agree on "
+                           "(or a human decides) are approved; a relation the adjudicator would have chosen is "
+                           "held as ABSTAIN, basis UNQUALIFIED_MATCHER, and listed in the review packet "
+                           "(matching.unqualified_policy: agreed_only | disclose)."),
            "disclosure": ("Fixtures use generic 'drug A' vocabulary plus any project fixtures in "
                           "01_FRAME/match-fixtures.json. Passing them qualifies the matcher only for "
                           "these tested patterns; it does not prove general language understanding."),
@@ -438,6 +561,13 @@ def match_stage(ctx) -> dict:
                "disputed_abstain": sum(1 for r in rows if r["basis"] == "DISPUTED"),
                "missing_both_passes": sum(1 for r in rows if r["basis"] == "MISSING"),
                "one_pass_only": sum(1 for r in rows if r["basis"] == "ONE_PASS_ONLY"),
+               "held_unqualified_matcher": sum(1 for r in rows if r["basis"] == "UNQUALIFIED_MATCHER"),
+               "adjudicator_gave_a_third_answer": sum(1 for r in rows if r.get("adjudicator_relation")
+                                                      and r["basis"] == "DISPUTED"),
+               "judgments_obtained_by_asking_again": sum(bool(r.get("reasked_a")) + bool(r.get("reasked_b"))
+                                                         for r in rows if r["basis"] != "ONE_PASS_ONLY"),
+               "contradictions_conditional_on_scope": sum(1 for r in rows if r["final"] == "CONTRADICTS"
+                                                          and r.get("gap_type") == "SCOPE"),
                "complete_relations": sum(1 for r in rows if r["final"] in COMPLETE),
                "contradictions": sum(1 for r in rows if r["final"] == "CONTRADICTS"),
                "partial_relations": sum(1 for r in rows if r["final"] in PARTIAL),
@@ -553,6 +683,8 @@ def write_review_packet(ctx) -> dict:
         ("Complete relations (these build coverage sets)", [r for r in rows if r.get("final") in COMPLETE]),
         ("Contradictions (these drive crux tests)", [r for r in rows if r.get("final") == "CONTRADICTS"]),
         ("Disagreements between pass A and pass B", [r for r in rows if r.get("basis") in ("MODEL_ADJUDICATED", "DISPUTED")]),
+        ("Held because the matcher failed a qualification pattern (the adjudicator's choice is shown)",
+         [r for r in rows if r.get("basis") == "UNQUALIFIED_MATCHER"]),
         ("Judged by one pass only (needs confirmation)", [r for r in rows if r.get("basis") == "ONE_PASS_ONLY"
                                                           and r.get("single_pass_relation") in COMPLETE + ("CONTRADICTS",)]),
     ]
@@ -575,7 +707,10 @@ def write_review_packet(ctx) -> dict:
                       f"- Source: {w.get('source_file', '')} {w.get('locator', '')}".rstrip(),
                       f"- Pass A: {r.get('a', '')} - {r.get('trace_a', '')}",
                       f"- Pass B: {r.get('b', '')} - {r.get('trace_b', '')}",
-                      f"- Final: **{r.get('final')}** ({r.get('basis')}) - {r.get('trace', '')}", ""]
+                      f"- Final: **{r.get('final')}** ({r.get('basis')}) - {r.get('trace', '')}"]
+            if r.get("final") == "CONTRADICTS" and r.get("gap_type") == "SCOPE":
+                lines.append(f"- Holds only if: {r.get('gap', '')}")
+            lines.append("")
             if (r["witness_id"], r["unit_id"]) not in seen:
                 seen.add((r["witness_id"], r["unit_id"]))
                 n += 1

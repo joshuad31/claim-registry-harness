@@ -338,13 +338,156 @@ class Corpus:
         return int(self.manifest.get("bytes", 0))
 
 
+# --------------------------------------------------------------------------- #
+# quotation check
+# --------------------------------------------------------------------------- #
+# A quotation is accepted when it is in the source word for word (after the formatting
+# normalisation of ``norm_for_match``), or when every difference from the source is one that
+# cannot change what the passage says.  Finding a similar passage is not enough: "did improve"
+# is 100% contained in "did not improve".  So a near match only LOCATES the passage; each
+# difference is then examined, and a quotation that drops or changes a negation, a number, a
+# hedge or a limiting word, or that contains words the source does not have, is rejected.
+
+_LIMITER_RE = re.compile(r"\b(?:only|unless|except|if|but|however|although|though|whereas)\b", re.I)
+_DIGITS = re.compile(r"\d+(?:\.\d+)?")
+# a citation marker stuck to the word before it once superscripts are flattened: "study28", "al.32"
+_GLUED_CITE = re.compile(r"(?:(?<=[a-z])|(?<=[a-z][.)]))\d[\d,\-]*")
+_LOCATOR_RE = re.compile(r"^[(\[]?\s*(?:fig(?:ure)?|table|section|abstract|results?|methods?|discussion|"
+                         r"introduction|conclusions?|summary|opening|page|p\.|para(?:graph)?|appendix|"
+                         r"supplement|box|panel|footnote|caption|heading|title)\b", re.I)
+
+
+def _protected_words(s: str) -> list[str]:
+    from .util import MODAL_RE, NEGATION_RE
+    return [m.group(0) for rx in (NEGATION_RE, MODAL_RE, _LIMITER_RE) for m in rx.finditer(s)]
+
+
+def _difference_problem(q: str, s: str) -> str:
+    """'' when the quotation stretch ``q`` and the source stretch ``s`` it stands for differ only in
+    ways that cannot change the meaning; otherwise what is wrong, in words."""
+    import difflib
+    from collections import Counter
+    if re.sub(r"\s+", "", q) == re.sub(r"\s+", "", s):
+        return ""
+    dq, ds = Counter(_DIGITS.findall(q)), Counter(_DIGITS.findall(s))
+    if dq != ds:
+        extra_s = ds - dq
+        glued = Counter(d for m in _GLUED_CITE.finditer(s) for d in _DIGITS.findall(m.group(0)))
+        # the one tolerated case: the source carries citation markers the quotation left out
+        if (dq - ds) or (extra_s - glued):
+            return f"a number differs (quotation \"{q.strip()[:60]}\", source \"{s.strip()[:60]}\")"
+    pq, ps = Counter(w.lower() for w in _protected_words(q)), Counter(w.lower() for w in _protected_words(s))
+    if pq != ps:
+        words = sorted(((ps - pq) + (pq - ps)).elements())
+        return (f"the quotation changes or leaves out \"{', '.join(words)}\" "
+                f"(quotation \"{q.strip()[:60]}\", source \"{s.strip()[:60]}\")")
+    lq, ls = re.sub(r"[^a-z]", "", q), re.sub(r"[^a-z]", "", s)
+    same = sum(b.size for b in difflib.SequenceMatcher(None, lq, ls, autojunk=False).get_matching_blocks())
+    if len(lq) - same > 3:
+        return f"the quotation has words the source does not have here (\"{q.strip()[:60]}\")"
+    return ""
+
+
+def _checked_differences(nq: str, window: str) -> tuple[bool, str, int]:
+    """Compare a located passage with the quotation, difference by difference.
+    Returns (acceptable, first problem, number of differences examined)."""
+    import difflib
+    ops = [o for o in difflib.SequenceMatcher(None, nq, window, autojunk=False).get_opcodes() if o[0] != "equal"]
+    spans = []
+    for tag, i1, i2, j1, j2 in ops:
+        if i1 == i2 and i1 in (0, len(nq)):
+            continue                      # source text before or after the quoted passage
+        if i1 == i2 and (nq[i1 - 1] == " " or nq[i1] == " "):
+            a = b = i1                    # the source has whole words here that the quotation skips
+        else:
+            a = nq.rfind(" ", 0, i1) + 1
+            b = nq.find(" ", i2)
+            b = len(nq) if b == -1 else b
+        c = window.rfind(" ", 0, j1) + 1
+        d = window.find(" ", j2)
+        d = len(window) if d == -1 else d
+        if spans and (a <= spans[-1][1] or c <= spans[-1][3]):
+            spans[-1] = (spans[-1][0], max(b, spans[-1][1]), spans[-1][2], max(d, spans[-1][3]))
+        else:
+            spans.append((a, b, c, d))
+    for a, b, c, d in spans:
+        why = _difference_problem(nq[a:b], window[c:d])
+        if why:
+            return False, why, len(spans)
+    return True, "", len(spans)
+
+
+def _find_bounded(ns: str, text: str, pos: int) -> int:
+    """First occurrence of ``text`` in ``ns`` at or after ``pos`` that does not start or end inside a word."""
+    at = ns.find(text, pos)
+    while at != -1:
+        end = at + len(text)
+        left = at == 0 or not (ns[at - 1].isalnum() and text[0].isalnum())
+        right = end == len(ns) or not (ns[end].isalnum() and text[-1].isalnum())
+        if left and right:
+            return at
+        at = ns.find(text, at + 1)
+    return -1
+
+
+def _span_cover(ns: str, nq: str, max_spans: int = 4, min_words: int = 3, short_gap: int = 40) -> dict:
+    """A quotation the source's layout broke up (a figure, a caption or a table between two halves
+    of a sentence): every word of it must be in the source, in order, in at most a few verbatim
+    spans.  Source text skipped between two spans without an ellipsis is examined: a short skip that
+    contains a negation, a number, a hedge or a limiting word is the quotation leaving out
+    something that matters, and is rejected."""
+    words = nq.split()
+    i, pos, spans, skipped = 0, 0, [], []
+    while i < len(words):
+        if len(words) - i < min_words:
+            return {"found": False, "why": "the last words of the quotation were not found after the rest"}
+        lo, hi, hit = i + min_words, len(words), None
+        at = _find_bounded(ns, " ".join(words[i:lo]), pos)
+        if at == -1:
+            return {"found": False, "why": f"\"{' '.join(words[i:i + 6])} ...\" was not found in the source"
+                    + (" after the preceding words" if spans else "")}
+        hit = (lo, at)
+        while lo < hi:                    # longest run of words found verbatim at or after pos
+            mid = (lo + hi + 1) // 2
+            at = _find_bounded(ns, " ".join(words[i:mid]), pos)
+            if at != -1:
+                lo, hit = mid, (mid, at)
+            else:
+                hi = mid - 1
+        j, at = hit
+        if spans:
+            gap = ns[pos:at]
+            n_gap = len(gap.split())
+            if n_gap <= short_gap:
+                bad = _protected_words(gap) + [d for d in _DIGITS.findall(_GLUED_CITE.sub("", gap))]
+                if bad:
+                    return {"found": False, "why": f"the quotation skips \"{gap.strip()[:80]}\" without an ellipsis; "
+                                                   f"the skipped words include \"{bad[0]}\""}
+            skipped.append(n_gap)
+        spans.append(j - i)
+        pos = at + len(" ".join(words[i:j]))
+        i = j
+    if len(spans) > max_spans or len(spans) > 1 + len(words) // 6:
+        return {"found": False, "why": f"the quotation is stitched from {len(spans)} separate fragments of the source"}
+    return {"found": True, "method": "spans", "spans": len(spans), "skipped_source_words": skipped}
+
+
 def find_quote(source_text: str, quote: str, min_ratio: float = 0.92) -> dict:
     """Mechanical verbatim check of a quotation against its source.
 
-    Returns {"found": bool, "method": "exact"|"segments"|"fuzzy"|"none", ...}.
-    Quotations may contain ellipses ("...") joining several passages; each
-    segment of 6+ words must be present.  For long single passages a
-    character-level fuzzy match over a sliding window is the fallback.
+    Returns {"found": bool, "method": "exact"|"segments"|"segments_partial"|"fuzzy"|"spans"|"none", ...}.
+
+    * exact - the quotation is in the source word for word.
+    * segments - the quotation joins passages with ellipses ("..."); every passage is in the source.
+    * segments_partial - as above, and the few passages not found word for word are each a
+      locator label the validator added ("Table 2:", "(abstract)") or differ from the source only
+      in formatting.  A passage that is neither is a fabricated passage and the quotation fails.
+    * fuzzy - a passage at least ``min_ratio`` similar was located AND every difference from it
+      is harmless: spacing, markup residue, a citation marker.  A difference that drops or
+      changes a negation, a number, a hedge or a limiting word, or adds words, fails.
+    * spans - the source's layout split the passage; all of the quotation is in the source, in
+      order, in a few verbatim spans, and nothing protected was skipped between them.
+    A failed check says why in "why"; "located" tells a passage was found but did not pass.
     """
     ns = norm_for_match(source_text)
     nq = norm_for_match(quote)
@@ -361,14 +504,47 @@ def find_quote(source_text: str, quote: str, min_ratio: float = 0.92) -> dict:
         if long_segs and not miss:
             return {"found": True, "method": "segments", "segments": len(segs)}
         if long_segs and len(miss) <= len(segs) // 4 and all(len(m.split()) < 12 for m in miss):
-            return {"found": True, "method": "segments_partial",
-                    "segments": len(segs), "missing": miss[:3]}
-    # fuzzy: locate candidate start positions from 4-word anchors, then compare
-    # the quote with the source window at each candidate using difflib.
-    import difflib
+            alnum = re.sub(r"[^a-z0-9]", "", ns)
+            bad = [m for m in miss if not _segment_acceptable(ns, alnum, m, min_ratio)]
+            if not bad:
+                return {"found": True, "method": "segments_partial",
+                        "segments": len(segs), "missing": miss[:3]}
+            return {"found": False, "method": "none", "located": True,
+                    "why": f"a quoted passage is not in the source: \"{bad[0][:100]}\""}
     words = nq.split()
     if len(words) < 6:
         return {"found": False, "method": "none", "why": "short quote not found verbatim"}
+    ok, info = _fuzzy_checked(ns, nq, min_ratio)
+    if ok:
+        return {"found": True, "method": "fuzzy", **info}
+    sp = _span_cover(ns, nq)
+    if sp["found"]:
+        return sp
+    out = {"found": False, "method": "none", "best_ratio": info.get("ratio", 0.0)}
+    if info.get("why"):
+        out.update(located=True, why="a similar passage was located, but " + info["why"])
+    elif sp.get("why"):
+        out["why"] = sp["why"]
+    return out
+
+
+def _segment_acceptable(ns: str, ns_alnum: str, seg: str, min_ratio: float) -> bool:
+    """May a passage of an ellipsis quotation that is not in the source word for word be let through?"""
+    squeezed = re.sub(r"[^a-z0-9]", "", seg)
+    if len(squeezed) >= 8 and squeezed in ns_alnum:
+        return True                        # the same characters; only spacing or punctuation differs
+    if len(seg.split()) <= 12 and not _protected_words(seg) and (
+            _LOCATOR_RE.match(seg) or re.fullmatch(r"[(\[].*[)\]]:?", seg) or seg.endswith(":")):
+        return True                        # a locator label, not a claim about the source
+    if len(seg.split()) >= 6:
+        return _fuzzy_checked(ns, seg, min_ratio)[0] or _span_cover(ns, seg)["found"]
+    return False
+
+
+def _fuzzy_checked(ns: str, nq: str, min_ratio: float) -> tuple[bool, dict]:
+    """Locate candidate passages from 4-word anchors, then examine every difference."""
+    import difflib
+    words = nq.split()
     starts: set[int] = set()
     step = max(1, len(words) // 12)
     for i in range(0, max(1, len(words) - 3), step):
@@ -380,13 +556,17 @@ def find_quote(source_text: str, quote: str, min_ratio: float = 0.92) -> dict:
             starts.add(max(0, pos - offset))
             n_hits += 1
             pos = ns.find(g, pos + 1)
-    best = 0.0
+    best, why = 0.0, ""
     for st in sorted(starts)[:60]:
         window = ns[st: st + len(nq) + 30]
         sm = difflib.SequenceMatcher(None, nq, window, autojunk=False)
-        matched = sum(b.size for b in sm.get_matching_blocks())
-        r = matched / max(1, len(nq))
+        r = sum(b.size for b in sm.get_matching_blocks()) / max(1, len(nq))
         best = max(best, r)
-        if best >= min_ratio:
-            return {"found": True, "method": "fuzzy", "ratio": round(best, 3)}
-    return {"found": False, "method": "none", "best_ratio": round(best, 3)}
+        if r >= min_ratio:
+            # the start was estimated from the quotation's own word lengths, so it is off by the
+            # length of anything the quotation leaves out: examine a slightly wider passage
+            ok, problem, n = _checked_differences(nq, ns[max(0, st - 40): st + len(nq) + 40])
+            if ok:
+                return True, {"ratio": round(r, 3), "differences_checked": n}
+            why = why or problem
+    return False, {"ratio": round(best, 3), "why": why}

@@ -273,9 +273,52 @@ def record_config_amendments(ctx: RunContext) -> list[str]:
         "note": "configuration changed after the run was frozen; stages finished before this time used the "
                 "earlier values"})
     rc["scientific_config"] = cur
+    stale = mark_stale(ctx, {k: (fo.get(k), fn.get(k)) for k in changed})
+    if stale:
+        rc["amendments"][-1]["stages_marked_stale"] = stale
     write_json(path, rc)
     ctx.log("RUN-CONFIG amended: " + ", ".join(changed))
     return changed
+
+
+def mark_stale(ctx: RunContext, changes: dict) -> list[str]:
+    """Mark the finished stages a changed setting bears on, so their records are not read as if they
+    had used the new value.  ``changes``: {setting: (before, after)}.
+
+    The stages are found with the same table ``cr fork`` uses.  Nothing is redone here: redoing a
+    stage can cost model calls, so the run says which stages are stale and how to redo them, and
+    the researcher decides.  A setting that had no earlier value is a default that a newer version
+    of the harness introduced, not a change the researcher made, and marks nothing."""
+    from .publish import AFFECTS
+    from .util import utcnow, write_json
+    first, why = None, []
+    for key, (before, _after) in sorted(changes.items()):
+        if before is None or key.startswith(("roles.", "providers.")):
+            # which model did the work is recorded with every call; a different model for the
+            # stages still to run does not make the finished ones wrong
+            continue
+        for pre, stage in AFFECTS:
+            if key.startswith(pre) and stage in STAGE_NAMES:
+                i = STAGE_NAMES.index(stage)
+                first = i if first is None else min(first, i)
+                why.append(key)
+                break
+    if first is None:
+        return []
+    st = ctx.stage_state()
+    marked = []
+    for name in STAGE_NAMES[first:]:
+        rec = st.get(name)
+        if isinstance(rec, dict) and rec.get("status") == "done":
+            earlier = (rec.get("stale") or {}).get("because", [])
+            rec["stale"] = {"since": utcnow(), "because": sorted(set(earlier) | set(why))}
+            marked.append(name)
+    if marked:
+        write_json(ctx.p("control", "stage-state.json"), st)
+        ctx.log(f"== settings changed after these stages ran: {', '.join(why)}. Stale: {', '.join(marked)}. "
+                f"Their records still use the earlier values. To redo them: "
+                f'cr run "{ctx.project_dir}" --run {ctx.run_id} --from {marked[0]}')
+    return marked
 
 
 def run_pipeline(ctx: RunContext, start: str | None = None, stop: str | None = None,
@@ -558,7 +601,7 @@ def write_axis_navigation(ctx: RunContext, st: dict) -> str:
             if not (root / folder).exists():
                 continue
             stages = [s.name for s in STAGES if RUN_FOLDERS[s.folder] == folder]
-            status = "; ".join(f"{n}: {st.get(n, {}).get('status', 'not started')}" for n in stages) or "n/a"
+            status = "; ".join(f"{n}: {st.get(n, {}).get('status', 'not started')}{' (STALE: settings changed since)' if st.get(n, {}).get('stale') else ''}" for n in stages) or "n/a"
             atomic_write_text(root / folder / "README.md", (
                 f"# {folder} - axis {a} only\n\n## Purpose\n{purpose}\n\n## Allowed inputs\n{inputs}\n\n"
                 f"## Expected outputs\n{outputs}\n\n## Current status\n{status}\n\n## How to verify this stage\n"
@@ -621,7 +664,7 @@ def write_navigation(ctx: RunContext) -> None:
         if axis_lines is not None and folder != "01_FRAME":
             continue
         stages = [s.name for s in STAGES if RUN_FOLDERS[s.folder] == folder]
-        status = "; ".join(f"{n}: {st.get(n, {}).get('status', 'not started')}" for n in stages) or "n/a"
+        status = "; ".join(f"{n}: {st.get(n, {}).get('status', 'not started')}{' (STALE: settings changed since)' if st.get(n, {}).get('stale') else ''}" for n in stages) or "n/a"
         text = (f"# {folder}\n\n## Purpose\n{purpose}\n\n## Allowed inputs\n{inputs}\n\n## Expected outputs\n"
                 f"{outputs}\n\n## Current status\n{status}\n\n## How to verify this stage\n{verify}\n\n"
                 f"## Next handoff\n{nxt}\n\n## What this stage does not establish\n{notest}\n")

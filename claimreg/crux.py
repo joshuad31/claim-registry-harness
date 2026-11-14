@@ -14,16 +14,25 @@ open; each is stated so it can be attacked):
 * T1 (consistency) FAILS when w contradicts any unit r asserts (required,
   constraint or corroborating expectation) or realizes one of r's recorded
   falsifiers.  Certificate: the conflicting rule bundle (units + match records).
-* T2 (coverage) FAILS when, once w is established, r loses coverage it needs:
-  (a) w contradicts one of r's REQUIRED_SUPPORT units, so no option for that
-  unit can be held alongside w; or (b) every existing option for some required
-  unit of r contains a witness approved-incompatible with w.  T2 is a
-  counterfactual about what w removes: when r already lacks options for a unit
-  regardless of w, that incompleteness is reported in the certificate and is
-  not attributed to w.  PASS certificates give an example arrangement.
-* UNKNOWN is returned when a needed relation was never judged (the
-  completion-matching step exists to prevent this); it is never converted
-  into PASS or FAIL.
+* T2 (coverage) FAILS when, once w is established, r can no longer reach complete
+  coverage: (a) w contradicts one of r's REQUIRED_SUPPORT units, so no option for that
+  unit can be held alongside w; or (b) after removing every option that contains a
+  witness approved-incompatible with w, no jointly valid arrangement remains.  (b) is
+  decided by the coverage solver on the whole of B_r (options, incompatibilities and
+  constraint vetoes together), not unit by unit: options that each survive may still be
+  unable to coexist.  T2 is a counterfactual about what w removes: when r has no valid
+  arrangement regardless of w, that is reported in the certificate and is not attributed
+  to w.  PASS certificates give a valid arrangement.
+* A CONTRADICTS relation may be conditional: it holds only if the finding transfers to
+  the unit's scope (matching records this as gap_type SCOPE with the transfer named).  A
+  test that fails only through conditional contradictions still fails, and the candidate
+  is reported as a crux WITH ASSUMPTIONS, the transfers listed - the same treatment a
+  hypothesis gets when it is covered only with assumptions.
+* UNKNOWN is returned when a needed relation was never judged (the completion-matching
+  step exists to prevent this), when the option list of a required unit was cut at
+  ``coverage.max_options_per_unit`` and the cut could change a FAIL, or when the solver
+  hit its search limit without finding an arrangement.  It is never converted into PASS
+  or FAIL.
 * Crux candidate: w is in at least one deletion-minimal set of its home
   hypothesis, appears in none of the rival's formed sets (membership
   screening), and FAILS both T1 and T2 against that rival.
@@ -36,6 +45,7 @@ at least one of its required units are tested the same way and reported as
 
 from __future__ import annotations
 
+from .coverage import Option, Problem, solve
 from .matching import COMPLETE, completion_match, relations_index
 from .util import digest, utcnow
 
@@ -51,6 +61,10 @@ def compile_theory(hid: str, units: list[dict], cov: dict, incompat: list[dict])
         "corroborating": [u["unit_id"] for u in mine if u["type"] == "CORROBORATING_EXPECTATION"],
         "adverse": [u["unit_id"] for u in mine if u["type"] == "ADVERSE_TEST"],
         "options": cov.get("options", {}),
+        # units whose option list was cut at coverage.max_options_per_unit ({unit: options before the cut}):
+        # B_r does not contain every option for these, so a FAIL that rests on them is UNKNOWN
+        "options_truncated": cov.get("options_truncated", {}),
+        "constraint_violators": cov.get("constraint_violators", {}),
         "incompatibilities": sorted([sorted([r["a"], r["b"]]) for r in incompat if r.get("approved")]),
         "dependencies": [o["witnesses"] for opts in cov.get("options", {}).values() for o in opts if o.get("joint")],
     }
@@ -79,7 +93,7 @@ def test_t1(w: str, th: dict, rel: dict, missing_is_none: bool = False) -> tuple
             elif f == "CONTRADICTS":
                 r = rel[(w, u)]
                 hits.append({"unit_id": u, "unit_group": group, "relation": f, "basis": r["basis"],
-                             "trace": r.get("trace", "")})
+                             "trace": r.get("trace", ""), **_conditional(r)})
     for u in th["adverse"]:
         f = _rel(rel, w, u)
         checked.append(u)
@@ -91,6 +105,7 @@ def test_t1(w: str, th: dict, rel: dict, missing_is_none: bool = False) -> tuple
                          "basis": r["basis"], "trace": r.get("trace", "")})
     if hits:
         return FAIL, {"kind": "T1_cannot_be_accommodated", "conflicting_rule_bundle": hits,
+                      "holds_only_with_assumptions": all(h.get("conditional") for h in hits),
                       "why": "the witness contradicts content the rival asserts or realizes one of its "
                              "recorded falsifiers"}
     if unknown and not missing_is_none:
@@ -102,41 +117,112 @@ def test_t1(w: str, th: dict, rel: dict, missing_is_none: bool = False) -> tuple
                          + ("; some rival units were outside the diagnostic shortlist" if unknown else "")}
 
 
-def test_t2(w: str, th: dict, rel: dict, incompat: set, missing_is_none: bool = False) -> tuple[str, dict]:
+def _conditional(r: dict) -> dict:
+    """{'conditional': True, 'assumption': ...} for a CONTRADICTS that holds only under a transfer of scope."""
+    if r.get("final") == "CONTRADICTS" and r.get("gap_type") == "SCOPE":
+        return {"conditional": True, "assumption": r.get("gap") or "the finding transfers to the scope this unit is about"}
+    return {}
+
+
+def _arrangement(th: dict, units: list[str], options: dict, incompat: set, limits: dict) -> dict:
+    """Ask the coverage solver whether ``units`` can all be covered from ``options`` at once."""
+    pb = Problem(th.get("hypothesis_id", ""), list(units),
+                 {u: [Option(o["option_id"], u, tuple(o["witnesses"]), o.get("relation", ""), bool(o.get("joint")))
+                      for o in options.get(u, [])] for u in units},
+                 {w: list(v) for w, v in (th.get("constraint_violators") or {}).items()},
+                 {frozenset(p) for p in (th.get("incompatibilities") or [])} | set(incompat))
+    res = solve(pb, int(limits.get("max_states", 3000)), 1)
+    if res["sets"]:
+        ws = set(res["sets"][0]["witnesses"])
+        return {"found": True, "witnesses": sorted(ws),
+                "example": {u: next(o["option_id"] for o in options[u] if set(o["witnesses"]) <= ws) for u in units}}
+    # no set was found, so RESOURCE_BOUNDED here can only mean the state limit cut the search
+    return {"found": False, "bounded": res.get("search_status") == "RESOURCE_BOUNDED",
+            "rejected": res.get("rejected_candidates", [])[:5]}
+
+
+def test_t2(w: str, th: dict, rel: dict, incompat: set, missing_is_none: bool = False,
+            limits: dict | None = None) -> tuple[str, dict]:
+    limits = limits or {}
     forbidden, blocked, rival_gaps, unknown = [], [], [], []
+    truncated = th.get("options_truncated") or {}
+    surviving: dict = {}
     for u in th["required"]:
         f = _rel(rel, w, u)
         if f is None:
             unknown.append(u)
         if f == "CONTRADICTS":
             r = rel[(w, u)]
-            forbidden.append({"unit_id": u, "trace": r.get("trace", ""), "basis": r["basis"]})
+            forbidden.append({"unit_id": u, "trace": r.get("trace", ""), "basis": r["basis"], **_conditional(r)})
             continue
         opts = th["options"].get(u, [])
         if not opts:
             rival_gaps.append(u)
             continue
-        surviving = [o for o in opts if not any(frozenset((w, x)) in incompat for x in o["witnesses"])]
-        if not surviving:
+        surviving[u] = [o for o in opts if not any(frozenset((w, x)) in incompat for x in o["witnesses"])]
+        if not surviving[u]:
             blocked.append({"unit_id": u, "options_removed": [o["option_id"] for o in opts],
                             "why": "every option contains a witness approved-incompatible with this witness"})
-    if forbidden or blocked:
+    base = {"rival_units_already_without_options": rival_gaps}
+    if forbidden:
+        # a contradicted required unit cannot be covered alongside w whatever options exist, so
+        # neither the option cap nor the search limit bears on this result
         return FAIL, {"kind": "T2_cannot_be_accommodated", "required_units_forbidden": forbidden,
-                      "required_units_blocked_by_incompatibility": blocked,
-                      "rival_units_already_without_options": rival_gaps,
+                      "required_units_blocked_by_incompatibility": blocked, **base,
+                      "holds_only_with_assumptions": all(x.get("conditional") for x in forbidden) and not blocked,
                       "why": "once the witness is established the rival cannot cover these required units"}
+    covered = [u for u in th["required"] if u not in rival_gaps]
+    cut = sorted(u for u in covered if u in truncated)
+    joint = None
+    if not blocked and covered:
+        removed_any = any(len(surviving[u]) < len(th["options"][u]) for u in covered)
+        joint = _arrangement(th, covered, surviving, incompat, limits)
+        if not joint["found"] and not joint.get("bounded"):
+            # is the loss w's doing?  the rival may have had no valid arrangement to begin with
+            before = _arrangement(th, covered, {u: th["options"][u] for u in covered}, set(), limits) \
+                if removed_any else joint
+            if not before["found"]:
+                return PASS, {"kind": "T2_accommodated", "example_arrangement": None, **base,
+                              "rival_has_no_valid_arrangement_regardless": True,
+                              "why": "the rival's options cannot be combined into a valid arrangement with or "
+                                     "without this witness; the witness removes nothing the rival had"}
+    if blocked or (joint is not None and not joint["found"] and not joint.get("bounded")):
+        cert = {"kind": "T2_cannot_be_accommodated", "required_units_forbidden": [],
+                "required_units_blocked_by_incompatibility": blocked, **base,
+                "no_joint_arrangement": bool(joint is not None and not joint["found"]),
+                "rejected_arrangements": (joint or {}).get("rejected", []),
+                "why": "once the witness is established the rival cannot cover its required units together"}
+        if cut:
+            return UNKNOWN, {**cert, "kind": "T2_unknown", "options_cut_at_cap": {u: truncated[u] for u in cut},
+                             "why": "the rival's surviving options cannot cover it, but the option list of "
+                                    f"{', '.join(cut)} was cut at coverage.max_options_per_unit and an option "
+                                    "outside the cut might; raise the cap and rerun from coverage"}
+        return FAIL, cert
+    if joint is not None and joint.get("bounded"):
+        return UNKNOWN, {"kind": "T2_unknown", **base, "search_limit": int(limits.get("max_states", 3000)),
+                         "why": "the search limit (coverage.max_states) was reached before a valid arrangement "
+                                "was found or ruled out"}
     if unknown and not missing_is_none:
-        return UNKNOWN, {"kind": "T2_unknown", "unjudged_required_units": unknown,
-                         "rival_units_already_without_options": rival_gaps,
+        return UNKNOWN, {"kind": "T2_unknown", "unjudged_required_units": unknown, **base,
                          "why": "whether the witness contradicts these required units was never decided"}
-    example = {u: next((o["option_id"] for o in th["options"].get(u, [])
-                        if not any(frozenset((w, x)) in incompat for x in o["witnesses"])), None)
-               for u in th["required"]}
+    example = {u: None for u in th["required"]}
+    example.update((joint or {}).get("example", {}))
     return PASS, {"kind": "T2_accommodated", "example_arrangement": example,
-                  "rival_units_already_without_options": rival_gaps,
-                  "why": "the witness removes no option the rival needs"
+                  "arrangement_witnesses": (joint or {}).get("witnesses", []), **base,
+                  "why": "a valid arrangement of the rival's options exists alongside the witness"
                          + ("; the rival is already incomplete on the listed units, independent of this witness"
                             if rival_gaps else "")}
+
+
+def _assumptions(c1: dict, c2: dict) -> list[dict]:
+    """The transfers a crux result rests on, when it would not hold without them."""
+    out, seen = [], set()
+    if c1.get("holds_only_with_assumptions") or c2.get("holds_only_with_assumptions"):
+        for h in c1.get("conflicting_rule_bundle", []) + c2.get("required_units_forbidden", []):
+            if h.get("conditional") and h["unit_id"] not in seen:
+                seen.add(h["unit_id"])
+                out.append({"unit_id": h["unit_id"], "assumption": h["assumption"]})
+    return out
 
 
 def _home_sets(cov_all: dict) -> tuple[dict, dict]:
@@ -210,26 +296,31 @@ def crux_stage(ctx) -> dict:
     theories = {h: compile_theory(h, units, cov_all.get(h, {}), inc_recs) for h in rivals}
     ctx.save("crux", "01_frozen-rival-theories/theories.json", theories, "frozen-rival-theories")
 
+    limits = {"max_states": int(ctx.cfg["coverage"].get("max_states", 3000))}
     rival_members = {h: set(home_sets.get(h, [])) for h in rivals}
     tests, candidates, conflict_recorded, diagnostic = [], [], [], []
     for home in rivals:
         for kind, wlist in (("crux", sorted(set(home_sets.get(home, [])))),
                             ("diagnostic", partial_home.get(home, []))):
             for w in wlist:
-                defeats = []
+                defeats, needs = [], {}
                 for r in rivals[home]:
                     th = theories[r]
                     t1, c1 = test_t1(w, th, rel, missing_is_none=(kind == "diagnostic"))
-                    t2, c2 = test_t2(w, th, rel, incompat, missing_is_none=(kind == "diagnostic"))
+                    t2, c2 = test_t2(w, th, rel, incompat, missing_is_none=(kind == "diagnostic"), limits=limits)
                     member = w in rival_members.get(r, set())
                     is_crux = (kind == "crux") and (not member) and t1 == FAIL and t2 == FAIL
                     row = {"witness_id": w, "home": home, "rival": r, "axis": axis_of[home], "kind": kind,
                            "membership_screen_passes": not member, "t1": t1, "t2": t2,
                            "t1_certificate": c1, "t2_certificate": c2, "crux": is_crux,
                            "tests_failed": int(t1 == FAIL) + int(t2 == FAIL), "theory_id": th["theory_id"]}
+                    if t1 == FAIL and t2 == FAIL:
+                        row["assumptions"] = _assumptions(c1, c2)
                     tests.append(row)
                     if is_crux:
                         defeats.append(r)
+                        if row["assumptions"]:
+                            needs[r] = row["assumptions"]
                     elif kind == "crux" and not member and row["tests_failed"] == 1:
                         conflict_recorded.append(row)
                     if kind == "diagnostic" and not member and t1 == FAIL and t2 == FAIL:
@@ -237,10 +328,15 @@ def crux_stage(ctx) -> dict:
                 if defeats:
                     candidates.append({"witness_id": w, "home": home, "axis": axis_of[home],
                                        "defeats": defeats, "crux_strength": len(defeats),
+                                       # rivals it defeats only if a finding transfers to the rival
+                                       # unit's scope, with the transfers; empty = no assumption needed
+                                       "defeats_only_with_assumptions": sorted(needs),
+                                       "assumptions": needs,
                                        "home_coverage": cov_all[home].get("status"),
                                        "home_sets": [s["set_id"] for s in cov_all[home]["sets"]
                                                      if w in s["witnesses"]]})
-    candidates.sort(key=lambda c: (-c["crux_strength"], c["axis"], c["home"], c["witness_id"]))
+    candidates.sort(key=lambda c: (len(c["defeats_only_with_assumptions"]) == len(c["defeats"]),
+                                   -c["crux_strength"], c["axis"], c["home"], c["witness_id"]))
     H = {ax["axis_id"]: len(ax["hypotheses"]) for ax in frame["axes"]}
     cost = sum(2 * len(set(home_sets.get(h, []))) * (H[axis_of[h]] - 1) for h in rivals)
     ctx.save("crux", "03_portability-tests/tests.json", tests, "portability-tests")
@@ -251,6 +347,8 @@ def crux_stage(ctx) -> dict:
               "definitions": "see claimreg/crux.py module docstring", "time": utcnow()},
              "crux-candidates")
     return {"coverage_recomputed": recomputed,
-            "crux_candidates": len(candidates), "conflict_recorded": len(conflict_recorded),
+            "crux_candidates": len(candidates),
+            "crux_candidates_with_assumptions": sum(1 for c in candidates
+                                                    if len(c["defeats_only_with_assumptions"]) == len(c["defeats"])), "conflict_recorded": len(conflict_recorded),
             "diagnostic_witnesses": len(diagnostic), "tests": len(tests),
             "unknown_tests": sum(1 for t in tests if UNKNOWN in (t["t1"], t["t2"]))}

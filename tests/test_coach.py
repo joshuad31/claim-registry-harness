@@ -111,11 +111,9 @@ class CoachTest(unittest.TestCase):
         rec = read_json(coach._record_path(ctx, 2))["axes"]["A1"]
         first = read_json(ctx.run_dir / "frd-evaluation.json")["results"]["A1"]
         first = (first.get("axis-only") or first.get("combined"))["allocations"]["A1-H1"]
-        if first >= 43:
-            self.assertEqual((rec["standing"], len(rec["vectors"])), ("at target", 1))
-        else:
-            self.assertEqual([v["A1-H1"] for v in rec["vectors"]], [first, 30, 30])
-            self.assertEqual((fake.seen[-1]["evidence"], fake.seen[-1]["times"]), ("frds", 2))
+        # three scorings whatever the first one says
+        self.assertEqual([v["A1-H1"] for v in rec["vectors"]], [first, 30, 30])
+        self.assertEqual((fake.seen[-1]["evidence"], fake.seen[-1]["times"]), ("frds", 2))
         self.assertTrue((ctx.run_dir / "COACH-CHECKPOINT-2.md").exists())
 
     def checkpoint_2(self, first, *more):
@@ -130,11 +128,15 @@ class CoachTest(unittest.TestCase):
         return ctx, rec, fake
 
     def test_after_validation_three_scorings_are_averaged(self):
-        ctx, rec, fake = self.checkpoint_2(46)
+        ctx, rec, fake = self.checkpoint_2(46, 45, 47)
         a = rec["axes"]["A1"]
-        self.assertEqual((a["standing"], len(a["vectors"]), rec["hold"]), ("at target", 1, False))
-        self.assertEqual(fake.seen, [])                                    # at target on the first scoring: no more calls
+        self.assertEqual((a["standing"], len(a["vectors"]), rec["hold"]), ("at target", 3, False))
+        self.assertEqual(fake.seen[0]["times"], 2)                         # at target on the first scoring: still scored three times
         self.assertIn("You are where you wanted to be.", (ctx.run_dir / "COACH-CHECKPOINT-2.md").read_text(encoding="utf-8"))
+
+        ctx, rec, fake = self.checkpoint_2(46, 30, 30)                     # a lucky first score no longer passes on its own
+        a = rec["axes"]["A1"]
+        self.assertEqual((len(a["vectors"]), a["mean"]["A1-H1"] < 43), (3, True))
 
         ctx, rec, fake = self.checkpoint_2(40, 41, 44)                     # mean 42: within two units of 43
         a = rec["axes"]["A1"]

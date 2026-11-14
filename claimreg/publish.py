@@ -10,7 +10,8 @@ from .util import (atomic_write_text, ensure_dir, read_json, read_jsonl, sha256_
                    write_json)
 
 AFFECTS = [  # config prefix -> first stage that must rerun
-    ("frame.", "frame"), ("quest.", "quest"), ("frd.", "frd_generate"), ("retention.", "frd_retain"),
+    ("frame.", "frame"), ("quest.", "quest"), ("frd_assess.", "frd_assess"), ("frd.", "frd_generate"),
+    ("retention.", "frd_retain"),
     ("language.", "language"), ("witness.", "witnesses"), ("units.", "units"), ("matching.", "match"),
     ("coverage.", "joint"),   # joint groups and incompatibility checks read coverage.* settings too
     ("crux.", "crux"), ("assess.", "assess"), ("report.", "report"),

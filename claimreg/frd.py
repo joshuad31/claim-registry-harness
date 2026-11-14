@@ -230,6 +230,26 @@ def _jacc(a: str, b: str) -> float:
     return len(sa & sb) / len(sa | sb)
 
 
+_DIRECTION = re.compile(r"^(?:increas|decreas|rais|rose|ris|fell|fall|lower|higher|reduc|improv|worsen|"
+                        r"more|less|greater|fewer|better|worse|gain|loss|lost|elevat|declin|superior|inferior|"
+                        r"benefi|harm|effective|ineffective|significant|nonsignificant|insignificant|"
+                        r"similar|differ|equal|unequal|positive|negative|present|absent)")
+
+
+def same_finding(a: str, b: str, threshold: float = 0.72) -> bool:
+    """Two claims from one source say the same thing: near-identical wording AND the same numbers,
+    the same number of negations, and no word of direction or outcome on one side only.  Word
+    overlap alone calls "lowered TSH" and "did not lower TSH" duplicates; under a size budget
+    that would archive the adverse finding as redundant with the favourable one."""
+    from .util import negation_count, numerals
+    if _jacc(a, b) < threshold:
+        return False
+    if numerals(a) != numerals(b) or negation_count(a) != negation_count(b):
+        return False
+    only = set(tokens(a)) ^ set(tokens(b))
+    return not any(_DIRECTION.match(t) for t in only)
+
+
 def retain_frds(ctx) -> dict:
     rcfg = ctx.cfg["retention"]
     validated = ctx.load("frds", "05_validated/validated-frds.json", default=[]) or []
@@ -247,12 +267,12 @@ def retain_frds(ctx) -> dict:
             if a["vfrd_id"] in redundant:
                 continue
             for b in vs[i + 1:]:
-                if b["vfrd_id"] not in redundant and _jacc(a["claim"], b["claim"]) >= 0.72:
+                if b["vfrd_id"] not in redundant and same_finding(a["claim"], b["claim"]):
                     redundant[b["vfrd_id"]] = a["vfrd_id"]
 
     def score(v):
         s = VERDICT_RANK.get(v["verdict"], 0) * 10
-        s += {"exact": 4, "segments": 3, "segments_partial": 2, "fuzzy": 2}.get(
+        s += {"exact": 4, "segments": 3, "segments_partial": 2, "fuzzy": 2, "spans": 2}.get(
             (v.get("quote_check") or {}).get("method", ""), 0)
         s += min(5, word_count(v.get("source_text", "")) // 40)
         if v["vfrd_id"] in redundant:

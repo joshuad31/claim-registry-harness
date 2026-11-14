@@ -22,13 +22,16 @@ def verify_run(project_dir: Path, run_id: str | None = None) -> dict:
         latest[r["path"]] = r
     mism = [p for p, r in latest.items()
             if (ctx.run_dir / p).exists() and sha256_file(ctx.run_dir / p) != r["sha256"]]
+    # a file the run recorded and that is no longer there (a stage that is redone moves its earlier
+    # records to 99_superseded, so those are not counted)
+    gone = sorted(p for p in latest if not (ctx.run_dir / p).exists() and "99_superseded" not in p)
     # files the user guide invites people to edit by hand are reported, not counted as problems
     editable = ("07_MATCHING/01_hypothesis-units/units.json",)
     edited = [p for p in mism if p.endswith(editable)]
     mism = [p for p in mism if p not in edited]
     out["checks"]["artifact_registry"] = {"artifacts": len(latest), "hash_mismatches": mism,
-                                          "edited_by_hand_after_the_run": edited}
-    problems += [f"hash mismatch: {p}" for p in mism]
+                                          "edited_by_hand_after_the_run": edited, "recorded_files_missing": gone}
+    problems += [f"hash mismatch: {p}" for p in mism] + [f"recorded file is missing: {p}" for p in gone]
     # 2. validated FRD quotes.  A source file that is not present is reported as
     # unverifiable, not as a mismatch: an archive may legitimately separate a run
     # from its third-party corpus, and calling that "quote not found" is false.
@@ -167,8 +170,31 @@ def verify_run(project_dir: Path, run_id: str | None = None) -> dict:
             + ([] if ev["combined_is_disjoint_union"] in (True, None) else ["FRD evaluation: combined set is not a disjoint union"])
         warnings += ev.get("warnings", []) + [f"axis.db is out of step with the JSON records ({b}); rerun frd_assess "
                                                f"(cr run --only frd_assess --force frd_assess)" for b in db_bad]
+    # stages whose settings changed after they ran (cr run records this; see pipeline.mark_stale)
+    stale = {n: v["stale"] for n, v in ctx.stage_state().items() if isinstance(v, dict) and v.get("stale")}
+    if stale:
+        first = next(iter(stale))
+        out["checks"]["stale_stages"] = stale
+        warnings.append(f"{len(stale)} stage(s) ran before a setting they depend on was changed "
+                        f"({', '.join(stale)}); their records use the earlier values. Redo them with "
+                        f"cr run <project> --run {ctx.run_id} --from {first}")
     out["problems"] = problems
     if warnings:
         out["warnings"] = warnings
-    out["ok"] = not problems
+    # "ok" means records were found and every check on them passed.  A run with nothing recorded
+    # has nothing to check, and that is not the same as passing.
+    state = ctx.stage_state()
+    done = [n for n, v in state.items() if isinstance(v, dict) and v.get("status") in ("done", "imported")]
+    if not latest and not done:
+        out["status"] = "NOTHING TO VERIFY"
+        out["note"] = ("This run has no recorded files and no finished stage, so there was nothing to check. "
+                       "Is the run name right?  cr status <project> lists the runs.")
+    elif problems:
+        out["status"] = "PROBLEMS FOUND"
+    else:
+        unfinished = [n for n, v in state.items() if isinstance(v, dict) and v.get("status") not in ("done", "imported")]
+        out["status"] = "VERIFIED" if not unfinished else "VERIFIED SO FAR"
+        if unfinished:
+            out["note"] = "Stages not finished, so not checked: " + ", ".join(unfinished)
+    out["ok"] = out["status"] in ("VERIFIED", "VERIFIED SO FAR")
     return out

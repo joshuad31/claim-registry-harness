@@ -272,7 +272,10 @@ def norm_for_match(s: str) -> str:
     case, and whitespace around punctuation.  Two passages that differ only in
     those respects compare equal.
     """
-    s = unicodedata.normalize("NFKC", s or "")
+    # a model sometimes writes a character as a literal escape ("\\u00b2" for a superscript 2);
+    # read it as the character it stands for
+    s = re.sub(r"\\u([0-9a-fA-F]{4})", lambda m: chr(int(m.group(1), 16)), s or "")
+    s = unicodedata.normalize("NFKC", s)
     s = _fold_markup(s)
     s = "".join(_QUOTE_MAP.get(ch, ch) for ch in s)
     # _QUOTE_MAP maps curly quotes to ASCII '"' in the same pass that would have to

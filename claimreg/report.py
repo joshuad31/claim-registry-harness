@@ -8,10 +8,11 @@ from __future__ import annotations
 import html
 import json
 import re
+from pathlib import Path
 
 from .header import all_hypotheses
 from .llm.base import LLMRequest
-from .util import (atomic_write_text, read_jsonl, read_text, tokens, truncate_words, utcnow,
+from .util import (atomic_write_text, read_json, read_jsonl, read_text, tokens, truncate_words, utcnow,
                    word_count)
 
 
@@ -127,6 +128,24 @@ def _load_all(ctx) -> dict:
     return d
 
 
+def _direct(c: dict) -> str:
+    """'2 of 5 parts directly, 5 with a named transfer' - direct support and assumed support, apart."""
+    n, cov = len(c.get("required_units", [])), c.get("units_covered", 0)
+    strict = c.get("units_covered_strict", cov)
+    return (f"{strict} of {n} required parts covered directly"
+            + (f", {cov} with a named transfer" if cov != strict else ""))
+
+
+def _budget_note(r: dict) -> str:
+    if not r or "within_budget" not in r:
+        return ""
+    if r["within_budget"]:
+        return f"; within the {r.get('budget_pct')}% size budget"
+    return (f"; **over the {r.get('budget_pct')}% size budget** ({r.get('validated_db_bytes_after', 0):,} of "
+            f"{r.get('budget_bytes', 0):,} bytes) because at most {r.get('max_archivable', 0)} FRDs may be archived "
+            f"(the top 80% are kept)")
+
+
 def _skipped_requests(ctx) -> dict:
     """Queued requests the operator marked skipped, counted by role."""
     from .llm.queue_tools import queue_dir
@@ -154,6 +173,63 @@ def _held_reasons(held: list[dict]) -> list[tuple[str, int]]:
             r = r.split(" - ")[0]
         c[r] = c.get(r, 0) + 1
     return sorted(c.items(), key=lambda x: -x[1])
+
+
+_ANCESTOR = re.compile(r"DERIVED_FROM\s*\(\s*(.+?)\s*\)\s*$", re.I | re.S)
+
+
+def study_of(ctx, d, wid: str) -> dict:
+    """The study a witness's finding rests on, as far as the validated FRD's provenance label shows.
+
+    OWN_RESULT: the source file itself.  DERIVED_FROM(x): x, when x is another file of this corpus;
+    otherwise (x is the file itself, or is not in the corpus) the finding is a secondary report
+    whose original is not identified.  Witnesses are never merged; this only says which of them
+    are the same study told again, so a count of witnesses is not read as a count of studies."""
+    w = d["witnesses"].get(wid, {})
+    v = d["vfrds"].get(w.get("vfrd_id"), {})
+    src = w.get("source_file") or v.get("source_file") or "?"
+    prov = str(v.get("provenance") or "").strip()
+    m = _ANCESTOR.search(prov)
+    if m:
+        anc = ctx.corpus.resolve(m.group(1)) if ctx.corpus else None
+        if anc and anc != src:
+            return {"study": anc, "via": src, "secondary": True, "identified": True}
+        return {"study": src, "via": src, "secondary": True, "identified": False}
+    if prov.upper().startswith("DERIVATIVE_UNKNOWN"):
+        return {"study": src, "via": src, "secondary": True, "identified": False}
+    return {"study": src, "via": src, "secondary": False, "identified": True}
+
+
+def crux_groups(ctx, d) -> list[dict]:
+    """Crux candidates grouped by underlying study, direct reports first."""
+    groups: dict = {}
+    for c in d["crux"].get("candidates", []):
+        st = study_of(ctx, d, c["witness_id"])
+        key = (st["study"], st["secondary"] and not st["identified"])
+        g = groups.setdefault(key, {"study": st["study"], "unidentified_secondary": key[1], "candidates": [],
+                                    "restated_in": set()})
+        g["candidates"].append(c)
+        if st["secondary"] and st["identified"]:
+            g["restated_in"].add(st["via"])
+    out = sorted(groups.values(), key=lambda g: (g["unidentified_secondary"], -len(g["candidates"]), g["study"]))
+    for g in out:
+        g["restated_in"] = sorted(g["restated_in"])
+    return out
+
+
+def _ladder_lines(ctx, frame) -> list[str]:
+    """The frames scored for this run's axes, each with how many scorings its number rests on."""
+    log = read_json(Path(ctx.project_dir) / "01_FRAME" / "FRAME-LADDER.json", default=[]) or []
+    axes = {a["axis_id"] for a in frame.get("axes", [])}
+    rows = [e for e in log if e.get("axis") in axes and e.get("vectors")]
+    out = []
+    for e in rows[-6:]:
+        pref, vs = e.get("preferred"), e.get("vectors") or []
+        each = ", ".join(str(v.get(pref, "?")) for v in vs)
+        out.append(f"- Axis {e['axis']}, frame `{e.get('frame_key', '')}`, on {e.get('basis', '')} (run `{e.get('run', '')}`): "
+                   f"{pref} {(e.get('mean') or {}).get(pref, '?')} of {e.get('gauge', '')} over {len(vs)} "
+                   f"scoring{'s' if len(vs) != 1 else ''} ({each}); target {e.get('target', '')}; {e.get('standing', '')}")
+    return out
 
 
 def _lineage(d, wid) -> str:
@@ -360,14 +436,15 @@ def build_report(ctx, metrics: dict, summary_text: str | None, stamp: bool = Tru
           f"| Corpus | {len(ctx.corpus.filenames)} sources, {m['corpus_bytes']:,} bytes |",
           f"| Discovery | {len(d['questions'])} questions, {m['responses_usable']} usable answers "
           f"({d['closeout'].get('status', 'n/a')}) |",
-          f"| FRDs | {m['frd_candidates']} candidates → {m['frds_retained']} retained READY |",
+          f"| FRDs | {m['frd_candidates']} candidates → {m['frds_retained']} retained READY"
+          + _budget_note(d["retention"]) + " |",
           f"| Witnesses | {m['witnesses_released']} released, {len(d['held'])} held |",
           f"| Matching | {d['match_summary'].get('pairs_assessed', 0)} pairs judged "
           f"({d['match_summary'].get('agreed', 0)} agreed, {d['match_summary'].get('model_adjudicated', 0)} "
           f"model-adjudicated) |",
           f"| Coverage | " + "; ".join(f"{h}: {c['status'].replace('_', ' ').lower()} "
-                                       f"({c.get('units_covered', 0)}/{len(c.get('required_units', []))} units, "
-                                       f"{len(c.get('sets', []))} sets)" for h, c in d["coverage"].items()) + " |",
+                                       f"({_direct(c)}, {len(c.get('sets', []))} sets)"
+                                       for h, c in d["coverage"].items()) + " |",
           f"| Crux | {len(d['crux'].get('candidates', []))} candidates; "
           f"{len(d['crux'].get('diagnostic_witnesses', []))} diagnostic witnesses (extended review) |", ""]
     # premise ledger: where each required part stands
@@ -414,30 +491,60 @@ def build_report(ctx, metrics: dict, summary_text: str | None, stamp: bool = Tru
         L += ["No witness qualified as a crux candidate against any rival. A crux candidate must belong to a "
               "deletion-minimal coverage set of its home hypothesis; see the coverage section for which "
               "hypotheses reached complete coverage and which required parts remain uncovered.", ""]
-    for c in cands[:12]:
-        w = d["witnesses"].get(c["witness_id"], {})
-        L += [f"### {c['witness_id']} — home {c['home']}, defeats {', '.join(c['defeats'])}"
-              + (" (home coverage depends on named assumptions)"
-                 if c.get("home_coverage") == "COMPLETE_WITH_ASSUMPTIONS" else ""), "",
-              f"> {w.get('text', '')}", ""]
-        for r in c["defeats"]:
-            t = next((x for x in d["tests"] if x["witness_id"] == c["witness_id"] and x["rival"] == r), None)
-            if not t:
+    groups = crux_groups(ctx, d) if cands else []
+    if cands:
+        cond = [c for c in cands if c.get("defeats_only_with_assumptions")]
+        homes = sorted({c["home"] for c in cands} | {r for c in cands for r in c["defeats"]})
+        L += [f"{len(cands)} candidate witness{'es' if len(cands) != 1 else ''} from "
+              f"{len({d['witnesses'].get(c['witness_id'], {}).get('source_file') for c in cands})} source file(s). "
+              f"By the provenance labels they rest on {len(groups)} underlying "
+              f"stud{'ies' if len(groups) != 1 else 'y'}; witnesses of one study are one study told more than once, "
+              "not independent support. The labels come from validation and can be wrong: read a review that "
+              "restates a study as that study."
+              + (f" {len(cond)} of the {len(cands)} defeat a rival only if a finding transfers to the scope the "
+                 "rival's part is about; the transfer is named under each." if cond else ""), "",
+              "Coverage behind these results: " + "; ".join(
+                  f"{h} {_direct(d['coverage'].get(h, {}))}" for h in homes if d["coverage"].get(h)) + ".", ""]
+    shown = 0
+    for g in groups:
+        label = (f"`{g['study']}`" + (" (a secondary report; the original study is not identified)"
+                                      if g["unidentified_secondary"] else "")
+                 + (f", also as restated in {', '.join('`' + x + '`' for x in g['restated_in'])}"
+                    if g["restated_in"] else ""))
+        L += [f"### Study {label} — {len(g['candidates'])} candidate witness"
+              f"{'es' if len(g['candidates']) != 1 else ''}", ""]
+        for k, c in enumerate(g["candidates"]):
+            w = d["witnesses"].get(c["witness_id"], {})
+            if k or shown >= 12:
+                # the same study again: named, with its text, without repeating the test detail
+                L.append(f"- also `{c['witness_id']}` (defeats {', '.join(c['defeats'])}): "
+                         f"{truncate_words(w.get('text', ''), 30)}")
                 continue
-            hits = t["t1_certificate"].get("conflicting_rule_bundle", [])
-            for h in hits[:3]:
-                u = d["units"].get(h["unit_id"], {})
-                L.append(f"- **vs {r}** — T1 FAIL: conflicts with `{h['unit_id']}` ({h['unit_group']}): "
-                         f"\"{truncate_words(u.get('text', ''), 40)}\" — trace: {truncate_words(h.get('trace', ''), 45)} "
-                         f"[{h.get('basis', '')}]")
-            t2 = t["t2_certificate"]
-            forb = [x["unit_id"] for x in t2.get("required_units_forbidden", [])]
-            blk = [x["unit_id"] for x in t2.get("required_units_blocked_by_incompatibility", [])]
-            L.append(f"  - T2 FAIL: required units forbidden {forb or 'none'}; blocked by incompatibility "
-                     f"{blk or 'none'}")
-        L += ["", "- Lineage: " + _lineage(d, c["witness_id"]), ""]
-    if len(cands) > 12:
-        L += [f"*{len(cands) - 12} further candidates are listed in `09_CRUX/05_candidates/crux-candidates.json`.*", ""]
+            shown += 1
+            L += [f"**{c['witness_id']}** — home {c['home']}, defeats {', '.join(c['defeats'])}"
+                  + (" (home coverage depends on named assumptions)"
+                     if c.get("home_coverage") == "COMPLETE_WITH_ASSUMPTIONS" else ""), "",
+                  f"> {w.get('text', '')}", ""]
+            for r in c["defeats"]:
+                t = next((x for x in d["tests"] if x["witness_id"] == c["witness_id"] and x["rival"] == r), None)
+                if not t:
+                    continue
+                hits = t["t1_certificate"].get("conflicting_rule_bundle", [])
+                for h in hits[:3]:
+                    u = d["units"].get(h["unit_id"], {})
+                    L.append(f"- **vs {r}** — T1 FAIL: conflicts with `{h['unit_id']}` ({h['unit_group']}): "
+                             f"\"{truncate_words(u.get('text', ''), 40)}\" — trace: {truncate_words(h.get('trace', ''), 45)} "
+                             f"[{h.get('basis', '')}]")
+                t2 = t["t2_certificate"]
+                forb = [x["unit_id"] for x in t2.get("required_units_forbidden", [])]
+                blk = [x["unit_id"] for x in t2.get("required_units_blocked_by_incompatibility", [])]
+                L.append(f"  - T2 FAIL: required units forbidden {forb or 'none'}; blocked by incompatibility "
+                         f"{blk or 'none'}" + ("; no arrangement of the rival's remaining options is valid"
+                                              if t2.get("no_joint_arrangement") else ""))
+                for asm in (c.get("assumptions") or {}).get(r, [])[:3]:
+                    L.append(f"  - **only if** (`{asm['unit_id']}`): {truncate_words(asm['assumption'], 35)}")
+            L += ["", "- Lineage: " + _lineage(d, c["witness_id"]), ""]
+        L.append("")
     # coverage
     L += ["## Coverage of each hypothesis", ""]
     for ax in frame["axes"]:
@@ -505,6 +612,11 @@ def build_report(ctx, metrics: dict, summary_text: str | None, stamp: bool = Tru
             if (a.get("strongest_objection") or {}).get(ax):
                 L.append(f"  - strongest objection: {truncate_words(a['strongest_objection'][ax], 45)}")
         L.append("")
+    lad = _ladder_lines(ctx, frame) if not summary_record else []
+    if lad:
+        L += ["## Frames scored", "",
+              "Every frame scored for these axes (`01_FRAME/FRAME-LADDER.md`). A mean over one scoring and a "
+              "mean over three are not the same strength of reading.", ""] + lad + [""]
     # metrics
     L += ["## Compression against the Problems-note targets", "", "| Metric | Value | Target | Met |",
           "|---|---|---|---|"]
@@ -522,11 +634,16 @@ def build_report(ctx, metrics: dict, summary_text: str | None, stamp: bool = Tru
         f"with its basis and can be overruled.",
         f"Semantic matching is judged by the configured matcher. {ms.get('agreed', 0)} relations were approved "
         f"by agreement of two independent passes; {ms.get('model_adjudicated', 0)} disagreements were settled "
-        f"by a third independent context (not a human); {ms.get('disputed_abstain', 0)} remain ABSTAIN"
+        f"by a third independent context (not a human), which may only choose one of the two passes' answers; "
+        f"{ms.get('disputed_abstain', 0)} remain ABSTAIN"
+        + (f"; {ms.get('held_unqualified_matcher')} relations the adjudicator would have approved are held as "
+           f"ABSTAIN because the matcher failed a qualification pattern" if ms.get('held_unqualified_matcher') else "")
+        + (f"; {ms.get('contradictions_conditional_on_scope')} contradictions hold only if a finding transfers "
+           f"to the unit's scope" if ms.get('contradictions_conditional_on_scope') else "")
         + (f"; {ms.get('missing_both_passes')} pairs got no judgment from either pass"
            if ms.get('missing_both_passes') else "")
-        + ((f"; {ms.get('one_pass_only')} pairs were judged by one pass only (the other pass's batch was not "
-            f"answered) and count as ABSTAIN until a human confirms them"
+        + ((f"; {ms.get('one_pass_only')} pairs were judged by one pass only (the other pass gave no judgment, "
+            f"also when asked again) and count as ABSTAIN until a human confirms them"
             if ctx.cfg['matching'].get('one_pass_policy', 'abstain') != 'accept' else
             f"; {ms.get('one_pass_only')} pairs were judged by ONE pass only (the other pass's batch was not "
             f"answered); under the declared one_pass_policy=accept their single judgment is used and labelled "
@@ -692,7 +809,7 @@ function showP(){M((D.packets||[]).map(p=>`<div class="card"><h2>${esc(p.hypothe
 <h4>Material qualifications</h4>${p.qualifications.length?p.qualifications.map(q=>`<div><span class="k">${esc(q.unit_id)}</span> ${esc(q.unit_text)} — supported by ${q.supported_by.map(w=>wl(w.witness_id)).join(', ')||'<span class="warn">no witness</span>'}${q.contradicted_by.length?' · contradicted by '+q.contradicted_by.map(w=>wl(w.witness_id)).join(', '):''}</div>`).join(''):'<p class="mut">none stated</p>'}
 <h4>Gaps</h4>${p.gaps.length?p.gaps.map(g=>`<div><span class="k">${esc(g.unit_id)}</span> ${esc(g.unit_text)} ${g.partly.length?'— partly: '+g.partly.map(w=>wl(w.witness_id)).join(', '):'<span class="bad">— nothing addresses it</span>'}</div>`).join(''):'<p class="mut">none</p>'}</div>`).join('')||'<p class="mut">No packets.</p>')}
 function showCrux(){const c=D.crux.candidates||[];const g=D.crux.diagnostic_witnesses||[];
-M(`<h2>Crux candidates (${c.length})</h2>`+(c.length?c.map(x=>`<div class="card">${wl(x.witness_id)} <span class="tag">home ${esc(x.home)}</span> defeats ${x.defeats.map(r=>`<span class="tag bad">${esc(r)}</span>`).join('')}<blockquote>${esc((W[x.witness_id]||{}).text)}</blockquote></div>`).join(''):'<p class="mut">None. See Coverage for uncovered required units.</p>')+
+M(`<h2>Crux candidates (${c.length})</h2>`+(c.length?c.map(x=>`<div class="card">${wl(x.witness_id)} <span class="tag">home ${esc(x.home)}</span> defeats ${x.defeats.map(r=>`<span class="tag bad">${esc(r)}</span>`).join('')}${(x.defeats_only_with_assumptions||[]).length?' <span class="tag">only if a transfer holds: '+esc(Object.values(x.assumptions||{}).flat().map(a=>a.assumption).join(' | '))+'</span>':''}<blockquote>${esc((W[x.witness_id]||{}).text)}</blockquote></div>`).join(''):'<p class="mut">None. See Coverage for uncovered required units.</p>')+
 `<h2>Diagnostic witnesses — extended review (${g.length})</h2>`+g.slice(0,80).map(x=>`<div class="card">${wl(x.witness_id)} <span class="tag">supports ${esc(x.home)}</span><span class="tag bad">vs ${esc(x.rival)}</span><div class="mut">T1: ${(x.t1_certificate.conflicting_rule_bundle||[]).map(h=>esc(h.unit_id+' '+h.relation)).join('; ')}</div><blockquote>${esc((W[x.witness_id]||{}).text)}</blockquote></div>`).join(''))}
 function showCov(){let h='';for(const ax of D.frame.axes){h+=`<h2>Axis ${esc(ax.axis_id)} <small class="mut">${esc(ax.approval)}</small></h2><p>${esc(ax.question)}</p>`;for(const hy of ax.hypotheses){const c=D.coverage[hy.id]||{};h+=`<div class="card"><b>${esc(hy.id)}</b> — <span class="${c.status=='COMPLETE'?'ok':'bad'}">${esc(c.status)}</span> · ${c.units_covered||0}/${(c.required_units||[]).length} required units covered · ${(c.sets||[]).length} sets <small>${esc(c.search_status||'')}</small><p class="mut">${esc(hy.statement)}</p><table><tr><th>unit</th><th>type</th><th>options</th></tr>`;for(const u of D.units.filter(u=>u.hypothesis_id==hy.id)){const o=(c.options||{})[u.unit_id]||[];h+=`<tr><td><span class="k">${esc(u.unit_id)}</span><br>${esc(u.text)}${u.active?'':' <span class="warn">(inactive: '+esc(u.inactive_reason)+')</span>'}</td><td class="k">${esc(u.type)}</td><td>${u.type=='REQUIRED_SUPPORT'?(o.length?o.map(x=>x.witnesses.map(wl).join(' + ')).join('<br>'):'<span class="bad">uncovered</span>'):''}</td></tr>`}h+=`</table>`+((c.sets||[]).slice(0,5).map(s=>`<div class="mut">set ${esc(s.set_id)}: ${s.witnesses.map(wl).join(', ')}</div>`).join(''))+`</div>`}}M(h)}
 function showW(){M(`<input id="f" placeholder="filter witnesses…" oninput="fw()"><div id="wl"></div>`);fw()}

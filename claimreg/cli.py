@@ -130,7 +130,8 @@ def cmd_status(a) -> int:
     ctx = RunContext(a.project, a.run, quiet=True)
     st = ctx.stage_state()
     _print({"run": ctx.run_id, "runs": list_runs(Path(a.project)),
-            "stages": {k: {"status": v.get("status"), "summary": v.get("summary")} for k, v in st.items()},
+            "stages": {k: {"status": v.get("status"), **({"stale": v["stale"]} if v.get("stale") else {}),
+                           "summary": v.get("summary")} for k, v in st.items()},
             "usage": ctx.llm.usage_summary()})
     return 0
 

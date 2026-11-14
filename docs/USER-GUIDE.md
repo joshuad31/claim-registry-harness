@@ -255,7 +255,9 @@ the stages those changes affect. Some useful variants:
 | No adjudication: disagreements become ABSTAIN | `matching.dispute_policy=abstain` |
 | Wider matching | `matching.shortlist_k=45` |
 | Witnesses from the best question in their cluster | `witness.cluster_best=true` |
-| When one matching pass was never answered: use the other pass's judgment, labelled | `matching.one_pass_policy=accept` (the default is `abstain`) |
+| When only one matching pass judged a pair: use that judgment, labelled | `matching.one_pass_policy=accept` (the default is `abstain`) |
+| How often a pass is asked again for rows it left out, and how many at a time | `matching.reask_rounds` (2), `matching.reask_batch` (5) |
+| After the matcher fails a qualification pattern: report it but let adjudicated relations stand | `matching.unqualified_policy=disclose` (the default, `agreed_only`, holds them as ABSTAIN) |
 | Synonyms for the matching shortlist only | `matching.synonyms` in project.json, e.g. `[["PTX", "pentoxifylline"]]` |
 
 ## 7. Publishing and checking

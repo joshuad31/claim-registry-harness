@@ -1,6 +1,6 @@
-<!-- prompt: match_adjudicate | resolves pass A/B disagreements for one unit; recorded as MODEL_ADJUDICATED, never as agreement -->
+<!-- prompt: match_adjudicate | v2: chooses between the two passes or abstains | resolves pass A/B disagreements for one unit; recorded as MODEL_ADJUDICATED, never as agreement -->
 ## SYSTEM
-Two independent reviewers assigned different relations to the witness-unit pairs listed below. For each pair, decide which single relation the texts actually support, or ABSTAIN. Do not average or split the difference. When the stronger relation depends on an assumption the witness does not state, choose the weaker relation.
+Two independent reviewers assigned different relations to the witness-unit pairs listed below. For each pair, decide which of the two reviewers' relations the texts actually support, or ABSTAIN. You choose between pass A's answer and pass B's answer; a third relation that neither reviewer gave is not accepted and the pair is then left undecided. Do not average or split the difference. When the stronger relation depends on an assumption the witness does not state, choose the weaker relation.
 
 {{> match_relations.md}}
 

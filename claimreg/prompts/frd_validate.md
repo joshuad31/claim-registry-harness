@@ -20,7 +20,7 @@ Check the provisional label against the source; correct a mistaken label in the 
 2. claim - corrected, supported wording; otherwise state that support is unestablished.
 3. source_text - EXACT supporting or contradicting text copied character-for-character from the source (whole sentences or paragraphs where needed; table rows with their labels and units). Several passages may be joined with " ... ". Never paraphrase, silently repair, or reconstruct a quotation: this text is mechanically checked against the source file.
 4. verdict - RIGHT / MOSTLY RIGHT / PARTLY RIGHT / WRONG / NOT FOUND / SOURCE UNAVAILABLE, with a brief explanation. Evaluate the ORIGINAL candidate; preserve its wording when changed and explain material repairs.
-5. provenance - OWN_RESULT / DERIVED_FROM(ancestor) / DERIVATIVE_UNKNOWN, as confirmed or corrected against the source.
+5. provenance - OWN_RESULT / DERIVED_FROM(ancestor) / DERIVATIVE_UNKNOWN, as confirmed or corrected against the source. OWN_RESULT only when this source produced the finding itself (its own data, measurement or analysis). When this source is reporting another study's finding (a review, a guideline, an introduction or discussion citing earlier work), use DERIVED_FROM(<the earlier study as this source cites it: first author and year, or its filename if you know it>). The ancestor is never this source's own filename. Use DERIVATIVE_UNKNOWN when the finding is clearly not this source's own but the earlier study cannot be identified.
 
 ## Deliverable
 

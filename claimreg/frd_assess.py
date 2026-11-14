@@ -174,7 +174,10 @@ def _parse(res, ids: list[str], gauge: int, axis_id: str, label: str) -> tuple[d
         vec = {i: int(vec.get(i, 0)) for i in ids}
     except (TypeError, ValueError):
         return {}, [f"{label}: non-integer units"]
-    problems = [] if sum(vec.values()) == gauge else [f"{label}: units sum to {sum(vec.values())}, not {gauge}"]
+    problems = [f"{label}: {i} has {v} units; each hypothesis takes 0 to {gauge}" for i, v in vec.items()
+                if not 0 <= v <= gauge]
+    if not problems and sum(vec.values()) != gauge:
+        problems.append(f"{label}: units sum to {sum(vec.values())}, not {gauge}")
     for k in ("basis_confidence", "strongest_objection", "reversal_finding"):
         if isinstance(data.get(k), dict):
             data[k] = data[k].get(axis_id, "")

@@ -38,7 +38,9 @@ def coverage_summary_text(ctx, axis_id: str | None = None) -> str:
     if not axis_id:
         for cand in crux.get("candidates", []):
             lines.append(f"CRUX CANDIDATE {cand['witness_id']} (home {cand['home']}) defeats "
-                         f"{', '.join(cand['defeats'])}")
+                         f"{', '.join(cand['defeats'])}"
+                         + ("".join(f" [vs {r}: only if {a['assumption']}]"
+                                    for r, asm in (cand.get("assumptions") or {}).items() for a in asm[:2])))
     for d in (crux.get("diagnostic_witnesses", []) or [])[:20]:
         if axis_id and not str(d.get("home", "")).startswith(str(axis_id) + "-"):
             continue
@@ -58,7 +60,36 @@ def _axis_context(axis: dict) -> str:
     return head + ("\n\n" + body if body else "")
 
 
-def _parse_assessment(res, gauge: int, axis_id: str) -> tuple[dict, list[str]]:
+def check_vector(vec, ids: list[str], gauge: int, label: str) -> tuple[dict, list[str]]:
+    """An allocation is usable when it names exactly this axis's hypotheses, gives each a whole
+    number from 0 to the gauge, and sums to the gauge.  Returns (vector, problems); the vector is
+    empty when any problem was found, so a broken allocation is never carried into a report."""
+    if not isinstance(vec, dict) or not vec:
+        return {}, [f"{label}: no allocation for this axis"]
+    problems = []
+    unknown = sorted(k for k in vec if k not in ids)
+    if unknown:
+        problems.append(f"{label}: units given to {', '.join(map(str, unknown))}, which this axis does not have")
+    missing = [i for i in ids if i not in vec]
+    if missing:
+        problems.append(f"{label}: no units stated for {', '.join(missing)}")
+    out = {}
+    for i in ids:
+        if i not in vec:
+            continue
+        v = vec[i]
+        if isinstance(v, bool) or not isinstance(v, (int, float)) or int(v) != v:
+            problems.append(f"{label}: {i} is not a whole number ({v!r})")
+            continue
+        if not 0 <= int(v) <= gauge:
+            problems.append(f"{label}: {i} has {int(v)} units; each hypothesis takes 0 to {gauge}")
+        out[i] = int(v)
+    if not problems and sum(out.values()) != gauge:
+        problems.append(f"{label}: units sum to {sum(out.values())}, not {gauge}")
+    return ({} if problems else out), problems
+
+
+def _parse_assessment(res, gauge: int, axis_id: str, ids: list[str] | None = None) -> tuple[dict, list[str]]:
     """The fenced JSON block from one axis's assessment, plus any problems with its vector."""
     data: dict = {}
     for block in reversed(re.findall(r"```json\s*\n(.*?)\n?```", res.text or "", re.S)):
@@ -69,17 +100,15 @@ def _parse_assessment(res, gauge: int, axis_id: str) -> tuple[dict, list[str]]:
                 break
         except JSONExtractError:
             continue
-    problems: list[str] = []
     if not data:
-        problems.append(f"{axis_id}: no allocation JSON block in the assessment")
-        return {}, problems
+        return {}, [f"{axis_id}: no allocation JSON block in the assessment"]
     vec = (data.get("allocations") or {}).get(axis_id) or {}
-    try:
-        total = sum(int(v) for v in vec.values())
-        if total != gauge:
-            problems.append(f"{axis_id}: units sum to {total}, not {gauge}")
-    except (TypeError, ValueError):
-        problems.append(f"{axis_id}: non-integer units")
+    if ids is None:                       # no frame to check against: range and sum only
+        ids = list(vec) if isinstance(vec, dict) else []
+    good, problems = check_vector(vec, ids, gauge, axis_id)
+    if problems:
+        data = {**data, "rejected_allocations": {axis_id: vec},
+                "allocations": {k: v for k, v in (data.get("allocations") or {}).items() if k != axis_id}}
     return data, problems
 
 
@@ -102,6 +131,8 @@ def assess_stage(ctx) -> dict:
     models: dict[str, str] = {}
     requests: list[LLMRequest] = []
     axis_order: list[str] = []
+    ids_of = {a["axis_id"]: [h["id"] for h in a.get("hypotheses", [])] for a in axes}
+    rejected: dict = {}
     for axis in axes:
         ax_id = axis["axis_id"]
         system, user, _ = ctx.prompts.render(
@@ -130,15 +161,18 @@ def assess_stage(ctx) -> dict:
             continue
         fragments.append(f"<!-- axis {ax_id} -->\n{res.text}")
         call_keys[ax_id], models[ax_id] = res.key, res.model
-        data, axis_problems = _parse_assessment(res, gauge, ax_id)
+        data, axis_problems = _parse_assessment(res, gauge, ax_id, ids_of[ax_id])
         problems.extend(axis_problems)
+        if (data or {}).get("rejected_allocations"):
+            rejected.update(data["rejected_allocations"])
         for key in merged:
             value = (data or {}).get(key) or {}
             if isinstance(value, dict) and value.get(ax_id) not in (None, ""):
                 merged[key][ax_id] = value[ax_id]
     atomic_write_text(ctx.p("reports", "assessment-fragment.md"),
                       "\n\n".join(fragments) or "(no assessment fragment was produced)")
-    out = {"gauge": gauge, **merged, "problems": problems, "call_keys": call_keys, "models": models,
+    out = {"gauge": gauge, **merged, "problems": problems,
+           **({"rejected_allocations": rejected} if rejected else {}), "call_keys": call_keys, "models": models,
            "time": utcnow(),
            "caveat": "Uncalibrated working judgments about what this run's validated record warrants; "
                      "not probabilities of truth and not validated by the crux result."}

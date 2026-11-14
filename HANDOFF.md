@@ -262,3 +262,42 @@ Section 15 is superseded in part. Josh's direction: no signatures, hashes or tam
 Done: the session's choice of preferred hypothesis now wins over `coach.preferred`; "too close to call" is a mean within 2 units of target (`coach.NOISE`), not one high scoring; `cr rescore` uses the re-scored header's gauge and says so when the preferred hypothesis is not in that header; the ladder appends every scoring and states that the target is a guide and that scores compare only within one run and one kind of evidence; the final (witness-level) score is added to the ladder after `assess`; `cr rescore` under a claim the run's questions were not written for writes `01_FRAME/QUESTION-CHECK-<AXIS>.md` (advice, no block).
 
 Declined, by Josh's direction: a pre-registered finite ladder, caps on reframes or re-scores, and evidence-set or header hashes on ladder entries.
+
+## 19. Repairs after the 2026-11-14 review (Claude Fable 5.2 session)
+
+ChatGPT reviewed revision `3cc3016` and found six defects; Claude reproduced all six and measured four more on `RUN-LEVO-A2-v7` (project doc `CLAUDE-REVIEW-OF-CHATGPT-ASSESSMENT-2026-11-14.md`). All are repaired here. Every repair is topic-neutral: nothing knows what a run is about, and none can be tuned toward a hypothesis. Tests: `tests/test_review_fixes.py`.
+
+**Matching (`matching.py`, prompts `match_*.md`)**
+- A pass that leaves rows out of its answer is asked again for those rows only, in small batches (`matching.reask_rounds`, `matching.reask_batch`).
+- A pair that still has one judgment is `ONE_PASS_ONLY` under `matching.one_pass_policy` (default ABSTAIN). It is not sent to the adjudicator: one judgment is not a disagreement.
+- The adjudicator chooses between the two passes' answers or abstains. A third answer leaves the pair ABSTAIN, basis `DISPUTED`, with `adjudicator_relation` kept.
+- Qualification now controls something (spec 28.1): while any fixture pattern is failed, only relations both passes agree on are approved. A relation the adjudicator would have approved is ABSTAIN, basis `UNQUALIFIED_MATCHER`, and is listed in the review packet (`matching.unqualified_policy`).
+- One transfer standard in both directions. A finding from another population, species, model or dose could already only partly cover a unit, with the transfer named. Now a CONTRADICTS from another scope carries `gap_type: SCOPE` and the transfer in `gap`. Fixtures FX-23 and FX-24 test it. This is a matching rule for every run; there is no topic rule behind it.
+
+**Crux (`crux.py`)**
+- T2 is decided by the coverage solver on the whole rival (options, incompatibilities and constraint vetoes together). The old test asked unit by unit and could return PASS with an "example arrangement" that contained an incompatible pair.
+- A required unit whose option list was cut at `coverage.max_options_per_unit` cannot produce a T2 FAIL; the result is UNKNOWN and says so.
+- A crux that fails its tests only through scope-conditional contradictions is still a candidate, with `defeats_only_with_assumptions` and the transfers in `assumptions`. The report prints them under the candidate.
+
+**Quotation check (`corpus.find_quote`)**
+- A similar passage only locates the quotation. Every difference is then examined: a dropped or changed negation, number, hedge or limiting word fails, and so do words the source does not have. Spacing, markup residue and citation markers pass.
+- New method `spans`: a sentence the Markdown conversion split around a figure or table passes when all of it is in the source, in order, and nothing protected was skipped in a short gap.
+- A passage of an ellipsis quotation that is not in the source fails unless it is a locator label or differs only in formatting.
+- On the 16 quotations of v7 that had used the weak paths, 12 still pass and 4 fail (garbled citation numbers, a rewritten table row).
+
+**Smaller repairs**
+- `cr verify`: a run with nothing recorded reports `NOTHING TO VERIFY` and is not `ok`; a recorded file that is gone is a problem. No new proof machinery.
+- Assessment parsers: an allocation must name exactly the axis's hypotheses, each 0 to the gauge, summing to the gauge. A rejected vector is kept under `rejected_allocations` and not carried into the report.
+- A setting changed after a stage ran marks that stage and the later ones `stale` in `stage-state.json` (same table as `cr fork`). Nothing is redone unasked; the log, `cr status` and `cr verify` say what to redo. Model and provider changes mark nothing. A setting with no earlier value (a new default) marks nothing.
+- Retention: two claims are redundant only with the same numbers, the same negations and no direction word on one side only.
+- Coach checkpoint 2 scores `coach.times` times whatever the first score is.
+
+**Report (`report.py`)**
+- Crux candidates are grouped by underlying study from the validated FRDs' provenance labels. Witnesses are not merged; the grouping stops eight witnesses reading as eight studies. The validator prompt now says a review restating a study is `DERIVED_FROM` that study and never names itself.
+- Coverage is shown as "n of m required parts covered directly, k with a named transfer".
+- The glance table says whether the FRD database is within its size budget, and the frames scored are listed with the number of scorings behind each.
+
+**Not done:** the language-layer test fork (needs model calls on the PC); showing each hypothesis's compilation into units before coverage; a veto by a scope-conditional contradiction of a CONTEXTUAL_CONSTRAINT still vetoes a set unconditionally.
+
+**To get these into a result:** an existing run keeps its records. Matching prompts changed, so `cr run <project> --run <RUN> --from qualify` asks the matcher again (model calls).
+
