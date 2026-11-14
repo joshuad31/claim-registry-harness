@@ -96,8 +96,8 @@ def stage_frame(ctx: RunContext) -> dict:
     if ap and ap.exists():
         shutil.copyfile(ap, fdir / "archivist-custom-prompt.txt")
     from . import frame_gate
-    signed, signed_why = frame_gate.verify(ctx.project_dir)
-    for name in (frame_gate.CERT_MD, frame_gate.CERT_JSON):       # the signed frame certificate travels with the run
+    signed, signed_why = frame_gate.accepted(ctx.project_dir)
+    for name in (frame_gate.CERT_MD, frame_gate.CERT_JSON):       # what the researcher accepted travels with the run
         src = ctx.project_dir / "01_FRAME" / name
         if signed and src.exists():
             shutil.copyfile(src, fdir / name)
@@ -107,7 +107,7 @@ def stage_frame(ctx: RunContext) -> dict:
     ctx.freeze_run_config(frame.get("header_sha256", ""), man["manifest_id"] if man else "",
                           {"approval": {ax["axis_id"]: ax.get("approval") for ax in frame["axes"]},
                            "approval_note": ctx.cfg["frame"].get("approval_note", ""),
-                           "frame_signed": signed, "frame_signature": signed_why})
+                           "frame_accepted": signed, "frame_acceptance": signed_why})
     return {"axes": len(frame["axes"]), "hypotheses": sum(len(a["hypotheses"]) for a in frame["axes"]),
             "decisive_tests": len(frame.get("decisive_tests", [])), "gauge": frame.get("gauge"),
             "approval": {ax["axis_id"]: ax.get("approval") for ax in frame["axes"]}}
@@ -283,6 +283,9 @@ def run_pipeline(ctx: RunContext, start: str | None = None, stop: str | None = N
                  release: bool = False) -> dict:
     force = set(force or [])
     gate = (ctx.cfg.get("pipeline", {}) or {}).get("stop_after") or ""
+    from . import coach
+    if release:
+        coach.release(ctx)
     if release and gate in STAGE_NAMES and ctx.stage_state().get(gate, {}).get("status") == "done":
         from .util import utcnow, write_json
         if not release_path(ctx, gate).exists():
@@ -320,6 +323,13 @@ def run_pipeline(ctx: RunContext, start: str | None = None, stop: str | None = N
         if prev.get("status") == "imported" and st.name not in force:
             outcome["skipped"].append(st.name)
             continue
+        # the coach's checkpoints: after the quest, and after the findings are validated
+        hold = coach.hold_before(ctx, st.name) if not start and not only else None
+        if hold:
+            ctx.log(f"== halted for researcher decision: the coach has a reading for you. Read {hold['read']}, then "
+                    f"continue with: {hold['continue_with']}")
+            outcome.update(status="halted", stage=st.name, **hold)
+            break
         ctx.log(f"== stage {st.name}: {st.title}")
         # redo from scratch unless this is a resume (waiting for answers, interrupted, failed, partial)
         if st.reset and prev.get("status") in (None, "not started", "done"):
@@ -366,6 +376,11 @@ def run_pipeline(ctx: RunContext, start: str | None = None, stop: str | None = N
         else:
             ctx.set_stage(st.name, "done", summary)
             ctx.log(f"   {st.name}: {summary}")
+            if st.name == "frd_assess":
+                try:
+                    coach.checkpoint(ctx, 2)
+                except Exception as e:  # noqa: BLE001 - the coach never fails a stage
+                    ctx.log(f"   coach checkpoint 2 could not be made ({type(e).__name__}: {e})")
         if st.name not in READ_ONLY_STAGES:
             dirty = True
         outcome["ran"].append(st.name)
@@ -590,9 +605,12 @@ def write_navigation(ctx: RunContext) -> None:
     st = ctx.stage_state()
     qdb = write_question_db(ctx)
     qdb_line = f"- {qdb}\n" if qdb else ""
-    qdb_line += ("- [Frame certificate](01_FRAME/FRAME-CERTIFICATE.md): what the signer typed, read and accepted "
-                 "before this run\n" if ctx.p("frame", "FRAME-CERTIFICATE.md").exists()
-                 else "- Frame certificate: none. Nobody signed the frame of this run.\n")
+    if ctx.p("frame", "FRAME-CERTIFICATE.md").exists():
+        qdb_line += ("- [Frame record](01_FRAME/FRAME-CERTIFICATE.md): what the researcher told the coach, typed and "
+                     "accepted before this run\n")
+    for n, when in ((1, "after the quest"), (2, "after the findings were validated")):
+        if (ctx.run_dir / f"COACH-CHECKPOINT-{n}.md").exists():
+            qdb_line += f"- [Coach checkpoint {n}](COACH-CHECKPOINT-{n}.md): where the researcher stood {when}, and the next move\n"
     axis_lines = None
     if ctx.axis_layout:
         try:

@@ -1,30 +1,27 @@
-"""The frame gate: a person signs the header before anything is run on it.
+"""The frame coach: the researcher sets the frame knowingly, with a coach in their corner.
 
-The header is the frame, and the frame decides what a run can find.  A researcher is allowed to
-shape the frame toward the hypothesis they prefer; this module makes that happen in one place, in
-the open, and on the record.  Before a quest or a model-backed run may start, a person at a keyboard
+Nobody runs an Analysis of Competing Hypotheses for fun.  The researcher wants a hypothesis to
+win, runs in good faith, and often knows things first-hand that the published record does not
+show.  The header is the frame, and the frame decides what a run can find.  So before a quest the
+harness sits the researcher down with a coach (`cr sign`).  The coach
 
-1. types what they want to be able to say and what they would concede;
-2. sees a forecast for the draft frame and for alternative frames, and which is best for the
-   hypothesis they prefer;
-3. types the question and every hypothesis by hand, in their own words (paste is rejected);
-4. reads the model's restatement of each hypothesis (a reading check, not a checkbox);
-5. accepts each spelled-out consequence by typing it, including the forecast number and the worst
-   likely result;
-6. signs with a passphrase.  Each axis is signed when it is finished, so the work can be spread
-   over several sittings.
+1. asks why they are running this, what they want it for, and what experience makes them think
+   their hypothesis is right;
+2. forecasts the draft frame and alternative frames, and says which is best for the hypothesis
+   they want (the weakest claim that still means something, against a rival someone really holds);
+3. has them type the question and every hypothesis by hand, in their own words;
+4. restates the wording so the corpus can test it, and has them read it;
+5. spells out the consequences (the forecast, the worst likely result, what a win does and does
+   not mean) and has them accept each one by typing it.
 
-The result is a signed frame certificate (``01_FRAME/frame-certificate.json`` and
-``FRAME-CERTIFICATE.md``).  The signature is Ed25519 with a key derived from the passphrase, so the
-certificate can be checked at launch without the passphrase and cannot be produced without it.
-Nothing here judges whether a frame is self-serving.  It refuses only a frame nobody has typed,
-read and signed.
+Acceptance exists for one purpose: the researcher knows the likely outcome before the run, so a
+hard result is not a shock that makes them walk away.  It is not a security measure.  The record
+(``01_FRAME/frame-certificate.json`` and ``FRAME-CERTIFICATE.md``) is a plain file.
 """
 
 from __future__ import annotations
 
 import difflib
-import hashlib
 import math
 import os
 import re
@@ -38,13 +35,8 @@ from .util import atomic_write_text, canonical_json, read_json, read_text, sha25
 
 CERT_JSON = "frame-certificate.json"
 CERT_MD = "FRAME-CERTIFICATE.md"
-SIGNER_FILE = Path.home() / ".claimreg" / "signer.json"
-# The block on unsigned frames switches itself on the first time a frame is fully signed on this
-# computer (that is the proof that signing works here).  There is no command that switches it off.
-LOCK_FILE = Path.home() / ".claimreg" / "FRAME-GATE-LOCKED"
-TARGET_SHARE = 2 / 3            # the preferred hypothesis should be forecast at two thirds of the gauge
+TARGET_SHARE = 2 / 3            # the preferred hypothesis should reach two thirds of the gauge
 FORECAST_CALLS = 3
-PBKDF2_ROUNDS = 200_000
 ROLE = "frame_gate"
 
 
@@ -54,128 +46,6 @@ class NotAPerson(Exception):
 
 class Changed(Exception):
     """The person chose to stop and change the frame; nothing is signed."""
-
-
-# --------------------------------------------------------------------------- #
-# Ed25519 (RFC 8032), pure Python.  One signature per signing; speed does not matter.
-
-_P = 2 ** 255 - 19
-_L = 2 ** 252 + 27742317777372353535851937790883648493
-_D = -121665 * pow(121666, _P - 2, _P) % _P
-_I = pow(2, (_P - 1) // 4, _P)
-
-
-def _add(p, q):
-    a = (p[1] - p[0]) * (q[1] - q[0]) % _P
-    b = (p[1] + p[0]) * (q[1] + q[0]) % _P
-    c = 2 * p[3] * q[3] * _D % _P
-    d = 2 * p[2] * q[2] % _P
-    e, f, g, h = b - a, d - c, d + c, b + a
-    return (e * f % _P, g * h % _P, f * g % _P, e * h % _P)
-
-
-def _mul(s, p):
-    q = (0, 1, 1, 0)
-    while s > 0:
-        if s & 1:
-            q = _add(q, p)
-        p = _add(p, p)
-        s >>= 1
-    return q
-
-
-def _recover_x(y, sign):
-    if y >= _P:
-        return None
-    x2 = (y * y - 1) * pow(_D * y * y + 1, _P - 2, _P) % _P
-    if x2 == 0:
-        return None if sign else 0
-    x = pow(x2, (_P + 3) // 8, _P)
-    if (x * x - x2) % _P != 0:
-        x = x * _I % _P
-    if (x * x - x2) % _P != 0:
-        return None
-    return _P - x if (x & 1) != sign else x
-
-
-_GY = 4 * pow(5, _P - 2, _P) % _P
-_GX = _recover_x(_GY, 0)
-_G = (_GX, _GY, 1, _GX * _GY % _P)
-
-
-def _compress(p):
-    zinv = pow(p[2], _P - 2, _P)
-    x, y = p[0] * zinv % _P, p[1] * zinv % _P
-    return int.to_bytes(y | ((x & 1) << 255), 32, "little")
-
-
-def _decompress(s):
-    if len(s) != 32:
-        return None
-    y = int.from_bytes(s, "little")
-    sign, y = y >> 255, y & ((1 << 255) - 1)
-    x = _recover_x(y, sign)
-    return None if x is None else (x, y, 1, x * y % _P)
-
-
-def _expand(seed):
-    h = hashlib.sha512(seed).digest()
-    a = int.from_bytes(h[:32], "little")
-    a &= (1 << 254) - 8
-    a |= 1 << 254
-    return a, h[32:]
-
-
-def ed_public(seed: bytes) -> bytes:
-    return _compress(_mul(_expand(seed)[0], _G))
-
-
-def ed_sign(seed: bytes, msg: bytes) -> bytes:
-    a, prefix = _expand(seed)
-    pub = _compress(_mul(a, _G))
-    r = int.from_bytes(hashlib.sha512(prefix + msg).digest(), "little") % _L
-    rs = _compress(_mul(r, _G))
-    h = int.from_bytes(hashlib.sha512(rs + pub + msg).digest(), "little") % _L
-    return rs + int.to_bytes((r + h * a) % _L, 32, "little")
-
-
-def ed_verify(public: bytes, msg: bytes, sig: bytes) -> bool:
-    if len(public) != 32 or len(sig) != 64:
-        return False
-    a, r = _decompress(public), _decompress(sig[:32])
-    s = int.from_bytes(sig[32:], "little")
-    if a is None or r is None or s >= _L:
-        return False
-    h = int.from_bytes(hashlib.sha512(sig[:32] + public + msg).digest(), "little") % _L
-    left, right = _mul(s, _G), _add(r, _mul(h, a))
-    return ((left[0] * right[2] - right[0] * left[2]) % _P == 0
-            and (left[1] * right[2] - right[1] * left[2]) % _P == 0)
-
-
-# --------------------------------------------------------------------------- #
-# The signer: one person's key, derived from a passphrase that is stored nowhere.
-
-def _seed(passphrase: str, salt_hex: str) -> bytes:
-    return hashlib.pbkdf2_hmac("sha256", passphrase.encode("utf-8"), bytes.fromhex(salt_hex), PBKDF2_ROUNDS, 32)
-
-
-def fingerprint(public_hex: str) -> str:
-    h = hashlib.sha256(bytes.fromhex(public_hex)).hexdigest()[:16].upper()
-    return "-".join(h[i:i + 4] for i in range(0, 16, 4))
-
-
-def load_signer(path: Path | None = None) -> dict | None:
-    s = read_json(path or SIGNER_FILE, default=None)
-    return s if isinstance(s, dict) and s.get("public_key") and s.get("salt") else None
-
-
-def create_signer(name: str, passphrase: str, path: Path | None = None) -> dict:
-    path = Path(path or SIGNER_FILE)
-    salt = os.urandom(16).hex()
-    signer = {"name": name, "salt": salt, "public_key": ed_public(_seed(passphrase, salt)).hex(), "created": utcnow()}
-    path.parent.mkdir(parents=True, exist_ok=True)
-    write_json(path, signer)
-    return signer
 
 
 # --------------------------------------------------------------------------- #
@@ -194,8 +64,8 @@ class Terminal:
 
     def __init__(self):
         if not (sys.stdin.isatty() and sys.stdout.isatty()):
-            raise NotAPerson("The frame is signed by a person at a keyboard, in a terminal window. It cannot be "
-                             "run by a script, through a pipe, or by an agent's command tool.")
+            raise NotAPerson("The coaching session is for a person at a keyboard, in a terminal window. It cannot "
+                             "be run by a script, through a pipe, or by an agent's command tool.")
 
     def say(self, text: str = "") -> None:
         print(text, flush=True)
@@ -205,10 +75,6 @@ class Terminal:
 
     def sleep(self, seconds: float) -> None:
         time.sleep(seconds)
-
-    def secret(self, prompt: str) -> str:
-        import getpass
-        return getpass.getpass(prompt)
 
     def line(self, prompt: str) -> tuple[str, list[float], bool]:
         """(text, time of each keystroke, whether the keystrokes could be timed)."""
@@ -418,14 +284,6 @@ def axis_spans(text: str) -> dict[str, tuple[int, int]]:
     return out
 
 
-def block_sha(text: str, axis_id: str) -> str:
-    spans = axis_spans(text)
-    if axis_id not in spans:
-        return ""
-    s, e = spans[axis_id]
-    return sha256_text(text[s:e].strip())
-
-
 def replace_axis(text: str, axis_id: str, question: str, statements: dict[str, str]) -> str:
     """The header with this axis's question and hypothesis statements replaced.  Nothing else moves."""
     text = _norm(text)
@@ -498,9 +356,27 @@ def frd_digest(project: Path, axis_id: str, cap: int = 70_000) -> tuple[str, str
 # --------------------------------------------------------------------------- #
 # The model's part.  `model(tag, system, user, salt)` returns a parsed JSON object or raises.
 
-SYSTEM = ("You help a researcher fix the frame of an Analysis of Competing Hypotheses (ACH) run before any evidence "
-          "is scored. The frame decides what the run can find. Be exact and plain. Return one JSON object and "
-          "nothing else.")
+SYSTEM = ("You are the coach in the corner of a researcher who is running an Analysis of Competing Hypotheses (ACH). "
+          "The frame decides what a run can find, and your job is to help them choose a frame they can win on "
+          "honestly. Assume they act in good faith and that their own experience gives them a valid point, even "
+          "where the published record leans the other way: published cohorts are often healthier and less confounded "
+          "than the people the researcher knows. First-hand knowledge cannot be scored as evidence, but it can shape "
+          "which claim is tested. Mechanistic evidence counts as evidence. Tell them plainly what the corpus does "
+          "and does not show; never tell them to give up. Be exact and plain. Return one JSON object and nothing else.")
+
+# How a claim is calibrated to the evidence.  Given to the model wherever it proposes a frame.
+CALIBRATION = (
+    "HOW TO CALIBRATE A FRAME. A score measures the fit between a claim and the evidence, so the same corpus can "
+    "support a modest claim strongly and a strong claim weakly. (1) Make the preferred hypothesis the weakest claim "
+    "that still means something to the researcher and that this corpus can support: for example step down from "
+    "'is superior' to 'works in the target group' to 'helps some identifiable patients' to 'is worth offering as a "
+    "monitored, reversible trial' to 'should be discussed'. Never go so weak that no result could count against it. "
+    "(2) Make the rival the strongest position that real people actually hold (a guideline, a group of clinicians, "
+    "a body of literature), and name who holds it. Never propose a rival nobody holds. (3) Make the undecided "
+    "hypothesis mean real balance between the two, not merely that a perfect study is missing. (4) Use the same "
+    "evidence rules for both sides; absence of evidence supports neither. (5) You may also adjust the population, "
+    "the comparison (usual care or ideal care), and which outcomes count, when the evidence speaks to them."
+)
 
 
 def _frame_text(question: str, statements: dict[str, str]) -> str:
@@ -539,37 +415,55 @@ def forecast(model, question: str, statements: dict[str, str], gauge: int, evide
     return out
 
 
-def ladder(model, intent: str, concede: str, preferred: str, question: str, statements: dict[str, str],
-           evidence: str) -> list[dict]:
+def _own(who: dict) -> str:
+    """What the researcher told the coach about themselves, for the model."""
+    rows = [("WHY THEY ARE RUNNING THIS", who.get("motivation")), ("WHAT THEY WANT IT FOR", who.get("goal")),
+            ("THE EXPERIENCE BEHIND THEIR VIEW (first-hand; not scoreable evidence, but a reason to test the right claim)",
+             who.get("experience")),
+            ("WHAT THEY WANT TO BE ABLE TO SAY", who.get("intent")), ("WHAT THEY WOULD CONCEDE IF THEY LOSE", who.get("concede"))]
+    return "\n".join(f"{k}: {v}" for k, v in rows if v)
+
+
+def no_holder(text: str) -> bool:
+    return not str(text).strip() or bool(re.search(r"\b(no identifiable holder|nobody|no one|unknown)\b", str(text), re.I))
+
+
+def ladder(model, who: dict, preferred: str, question: str, statements: dict[str, str], evidence: str,
+           tag: str = "ladder", result: str = "") -> list[dict]:
+    """Alternative frames for the axis, strongest claim first.  A frame whose rival nobody holds is dropped."""
     ids = list(statements)
-    user = ("WHAT THE RESEARCHER WANTS TO BE ABLE TO SAY: " + intent + "\nWHAT THEY WOULD CONCEDE IF THEY LOSE: "
-            + concede + f"\nTHE HYPOTHESIS THEY WANT TO WIN: {preferred}\n\nTHE DRAFT FRAME\n"
-            + _frame_text(question, statements) + "\n\nEVIDENCE AVAILABLE TO THE RUN\n" + evidence +
+    user = (_own(who) + f"\nTHE HYPOTHESIS THEY WANT TO WIN: {preferred}\n\nTHE CURRENT FRAME\n"
+            + _frame_text(question, statements) + (("\n\nHOW THE CURRENT FRAME SCORED\n" + result) if result else "")
+            + "\n\nEVIDENCE AVAILABLE TO THE RUN\n" + evidence + "\n\n" + CALIBRATION +
             "\n\nTASK: write three alternative frames for this axis, ordered from the strongest claim to the "
-            f"weakest. Each must serve what the researcher wants to say, keep the hypothesis ids {', '.join(ids)}, "
+            f"weakest. Each must serve what the researcher wants, keep the hypothesis ids {', '.join(ids)}, "
             f"and keep {preferred} as the hypothesis they want to win. Do not write a frame the corpus cannot test. "
             'Return {"rungs": [{"label": "six words at most", "question": "...", "statements": {'
-            + ", ".join(f'"{i}": "..."' for i in ids) + '}, "win_lets_you_say": "one sentence: what a win for '
-            + preferred + ' would let the researcher say", "leaves_out": "one sentence: what this frame leaves '
-            'outside the question"}]}.')
-    got = model("ladder", SYSTEM, user, "")
+            + ", ".join(f'"{i}": "..."' for i in ids) + '}, "rival_held_by": "who really holds the main rival as '
+            'worded", "win_lets_you_say": "one sentence: what a win for ' + preferred + ' would let the researcher '
+            'say", "leaves_out": "one sentence: what this frame gives up or leaves outside the question"}]}.')
+    got = model(tag, SYSTEM, user, "")
     rungs = []
     for r in (got.get("rungs") or [])[:4]:
         st = r.get("statements") or {}
-        if isinstance(r, dict) and all(str(st.get(i, "")).strip() for i in ids) and str(r.get("question", "")).strip():
-            rungs.append({"label": " ".join(str(r.get("label", "")).split())[:60] or "alternative",
-                          "question": " ".join(str(r["question"]).split()),
-                          "statements": {i: " ".join(str(st[i]).split()) for i in ids},
-                          "win_lets_you_say": " ".join(str(r.get("win_lets_you_say", "")).split()),
-                          "leaves_out": " ".join(str(r.get("leaves_out", "")).split())})
+        if not (isinstance(r, dict) and all(str(st.get(i, "")).strip() for i in ids) and str(r.get("question", "")).strip()):
+            continue
+        if no_holder(r.get("rival_held_by", "")):
+            continue
+        rungs.append({"label": " ".join(str(r.get("label", "")).split())[:60] or "alternative",
+                      "question": " ".join(str(r["question"]).split()),
+                      "statements": {i: " ".join(str(st[i]).split()) for i in ids},
+                      "rival_held_by": " ".join(str(r["rival_held_by"]).split()),
+                      "win_lets_you_say": " ".join(str(r.get("win_lets_you_say", "")).split()),
+                      "leaves_out": " ".join(str(r.get("leaves_out", "")).split())})
     if not rungs:
-        raise ValueError("no alternative frames came back")
+        raise ValueError("no usable alternative frames came back")
     return rungs
 
 
 def restate(model, intent: str, question: str, statements: dict[str, str], evidence: str) -> dict:
     ids = list(statements)
-    user = ("WHAT THE RESEARCHER WANTS TO BE ABLE TO SAY: " + intent + "\n\nTHE FRAME AS THE RESEARCHER TYPED IT\n"
+    user = (intent + "\n\nTHE FRAME AS THE RESEARCHER TYPED IT\n"
             + _frame_text(question, statements) + "\n\nEVIDENCE AVAILABLE TO THE RUN\n" + evidence +
             "\n\nTASK: restate the question and each hypothesis so that the grammar is correct and each statement "
             "can be tested against this corpus: name the population, the intervention, the comparison and the "
@@ -641,10 +535,11 @@ def _fc_line(fc: dict, hid: str, gauge: int) -> str:
     return f"{fc['mean'][hid]} of {gauge}   (calls: {', '.join(str(x) for x in spread)})"
 
 
-def certify_axis(con, model, project: Path, text: str, axis: dict, gauge: int, prior: dict | None = None) -> tuple[str, dict]:
-    """Take one axis through the gate.  Returns the header text with the signed wording, and the record.
-    `prior` is this person's earlier signed record of the axis, if any: wording that is already their
-    own may be typed again; a draft's wording may not."""
+def certify_axis(con, model, project: Path, text: str, axis: dict, gauge: int, prior: dict | None = None,
+                 who: dict | None = None) -> tuple[str, dict]:
+    """Coach one axis.  Returns the header text with the accepted wording, and the record.
+    `prior` is this person's earlier record of the axis, if any: wording that is already their own
+    may be typed again; a draft's wording may not.  `who` holds why they are running this."""
     aid = axis["axis_id"]
     ids = [h["id"] for h in axis["hypotheses"]]
     draft = {h["id"]: h["statement"] for h in axis["hypotheses"]}
@@ -661,17 +556,17 @@ def certify_axis(con, model, project: Path, text: str, axis: dict, gauge: int, p
             return out
         except Exception as e:
             steps[name] = f"failed: {type(e).__name__}: {e}"[:300]
-            con.say(f"  (The model could not do this step: {steps[name]}. The certificate will say so.)")
+            con.say(f"  (The model could not do this step: {steps[name]}. The record will say so.)")
             return fallback
 
     con.say("")
     con.say("=" * 96)
     con.say(f"AXIS {aid}: {axis.get('name', '')}")
     con.say("=" * 96)
-    con.say("The header is the frame. What this run can find follows from the words you sign here.")
+    con.say("The header is the frame. What this run can find follows from the words you settle on here.")
     con.say("")
-    rec["intent"] = hand_typed(con, "In your own words: what do you want to be able to say when this run is done?", 8)
-    rec["concede"] = hand_typed(con, "If the result goes against you, what will you concede?", 4)
+    for h in axis["hypotheses"]:
+        _show(con, f"{h['id']}: {h['statement']}")
     while True:
         con.say(f"Which hypothesis do you want to win? Type its id ({', '.join(ids)}).")
         got, _, _ = con.line("> ")
@@ -679,7 +574,13 @@ def certify_axis(con, model, project: Path, text: str, axis: dict, gauge: int, p
             preferred = next(i for i in ids if i.upper() == got.strip().upper())
             break
     rec["preferred"] = preferred
+    rec["experience"] = hand_typed(
+        con, f"What experience shaped your view? Why do you think {preferred} is right, even where published "
+             "evidence points the other way? What you know first-hand counts here.", 8)
+    rec["intent"] = hand_typed(con, "On this axis, what do you want to be able to say when the run is done?", 8)
+    rec["concede"] = hand_typed(con, "If the result goes against you, what will you concede?", 4)
     intent, concede = rec["intent"]["text"], rec["concede"]["text"]
+    me = {**(who or {}), "experience": rec["experience"]["text"], "intent": intent, "concede": concede}
 
     evidence = index_digest(project, aid)
     findings, basis = frd_digest(project, aid)
@@ -690,8 +591,8 @@ def certify_axis(con, model, project: Path, text: str, axis: dict, gauge: int, p
     con.say("")
     con.say(f"Forecasting the draft frame and alternatives ({FORECAST_CALLS} calls each). This takes a few minutes.")
     rungs = [{"label": "the draft as written", "question": axis.get("question", ""), "statements": draft,
-              "win_lets_you_say": "", "leaves_out": ""}]
-    rungs += try_model("ladder", lambda: ladder(model, intent, concede, preferred, axis.get("question", ""), draft, evidence), [])
+              "rival_held_by": "", "win_lets_you_say": "", "leaves_out": ""}]
+    rungs += try_model("ladder", lambda: ladder(model, me, preferred, axis.get("question", ""), draft, evidence), [])
     with ThreadPoolExecutor(max_workers=len(rungs)) as pool:
         made = list(pool.map(lambda nr: forecast(model, nr[1]["question"], nr[1]["statements"], gauge, evidence,
                                                  f"{aid}:rung{nr[0]}"), enumerate(rungs)))
@@ -701,12 +602,15 @@ def certify_axis(con, model, project: Path, text: str, axis: dict, gauge: int, p
         f"{sum(r['forecast']['ok'] for r in rungs)} of {FORECAST_CALLS * len(rungs)} forecast calls answered"
     rec["ladder"] = rungs
     con.say("")
-    con.say(f"FORECASTS for {preferred}. Your target is {target} of {gauge}. A forecast is a guess, not a result.")
+    con.say(f"FORECASTS for {preferred}, in units of the {gauge}-unit gauge. Your target is {target}. A forecast is "
+            "a guess at how the evidence would be divided. It is not a probability that you are right.")
     for n, r in enumerate(rungs):
         con.say("")
         con.say(f"  [{n}] {r['label']}:  {_fc_line(r['forecast'], preferred, gauge)}")
         for hid in ids:
             _show(con, f"{hid}: {r['statements'][hid]}", "        ")
+        if r["rival_held_by"]:
+            _show(con, "The rival is held by: " + r["rival_held_by"], "        ")
         if r["win_lets_you_say"]:
             _show(con, "A win lets you say: " + r["win_lets_you_say"], "        ")
         if r["leaves_out"]:
@@ -729,7 +633,7 @@ def certify_axis(con, model, project: Path, text: str, axis: dict, gauge: int, p
         mine = {h: t["text"] for h, t in typed.items()}
         con.say("")
         con.say("Restating your wording against the source index, then forecasting it. This takes a few minutes.")
-        rs = try_model("restate", lambda: restate(model, intent, typed_q["text"], mine, evidence),
+        rs = try_model("restate", lambda: restate(model, _own(me), typed_q["text"], mine, evidence),
                        {"question": typed_q["text"], "statements": mine, "changes": [], "cannot_be_tested": [],
                         "not_restated": True})
         try:
@@ -799,7 +703,8 @@ def certify_axis(con, model, project: Path, text: str, axis: dict, gauge: int, p
 
     con.say("")
     con.say("=" * 96)
-    con.say("THE CONSEQUENCES OF THIS FRAME. Accept each one by typing it, or type CHANGE to stop without signing.")
+    con.say("THE CONSEQUENCES OF THIS FRAME. Accept each one by typing it, or type CHANGE to stop and rework it.")
+    con.say("Whatever the run finds, you will have seen it coming, and there is a next move either way.")
     con.say("=" * 96)
     accepted = []
 
@@ -813,13 +718,15 @@ def certify_axis(con, model, project: Path, text: str, axis: dict, gauge: int, p
         accepted.append({"item": title, "shown": lines, "typed": phrase, "at": utcnow()})
 
     if mean is None:
-        item("THE FORECAST", ["No forecast could be made. You are signing without one."], "I accept no forecast")
+        item("THE FORECAST", ["No forecast could be made. You are going ahead without one."], "I accept no forecast")
     else:
         lines = [f"{preferred} is forecast at {mean} of {gauge}. The calls gave " +
                  ", ".join(str(c["allocations"][preferred]) for c in fc["calls"] if "allocations" in c) +
-                 f". Your target is {target}. Basis: {rec['forecast_basis']}."]
+                 f". Your target is {target}. Basis: {rec['forecast_basis']}. These are units of evidence, not a "
+                 "probability of being right."]
         if mean < target:
-            lines.append("That is BELOW your target. If the run agrees with the forecast, you will not get the result you want.")
+            lines.append("That is BELOW your target. If the run agrees with the forecast, the coach will stop after the "
+                         "quest and again after the findings are validated, and show you a claim this evidence does support.")
         item("THE FORECAST", lines, f"I accept {mean} of {gauge}")
     wc = bt["worst_case"]
     item("THE WORST LIKELY RESULT",
@@ -836,7 +743,7 @@ def certify_axis(con, model, project: Path, text: str, axis: dict, gauge: int, p
     held = bt["rival_is_held_by"]
     lines = ["The main rival is held by: " + (held or "(the model did not say)")]
     if re.search(r"no identifiable holder", held, re.I):
-        lines.append("Nobody holds the rival as you worded it. A critic will call it a strawman, and the certificate says so.")
+        lines.append("Nobody holds the rival as you worded it. A critic will call it a strawman, and the record says so.")
     item("THE RIVAL YOU ARE TESTING AGAINST", lines, "I accept the rival")
     item("WHAT THIS FRAME LEAVES OUT, AND WHAT A CRITIC WILL SAY",
          ["Left out: " + x for x in bt["left_out"]] + ["A critic will say: " + x for x in bt["a_critic_will_say"]]
@@ -845,41 +752,12 @@ def certify_axis(con, model, project: Path, text: str, axis: dict, gauge: int, p
         item("THE REST OF THE AXIS TEXT DISAGREES WITH YOUR WORDING",
              bt["conflicts"] + ["To have these fixed, type CHANGE, have the header corrected, and run this again."],
              "I accept the conflicts")
-    rec.update({"accepted": accepted, "model_steps": steps, "certified": utcnow(), "block_sha256": block_sha(new_text, aid)})
+    rec.update({"accepted": accepted, "model_steps": steps, "accepted_at": utcnow()})
     return new_text, rec
 
 
 # --------------------------------------------------------------------------- #
-# The certificate.
-
-def _frame_files(project: Path) -> dict[str, str]:
-    """Every file besides the header that shapes the result: the source index, the Archivist prompt,
-    the matcher's fixtures, any prompt the project overrides, and the settings that exclude sources."""
-    project = Path(project)
-    where = _configured(project)
-    files = [where["index"], where["archivist_prompt"], project / "01_FRAME" / "match-fixtures.json"]
-    over = project / "90_METHOD" / "prompts"
-    if over.is_dir():
-        files += sorted(p for p in over.rglob("*") if p.is_file())
-    digest = lambda p: hashlib.sha256(p.read_bytes().replace(b"\r\n", b"\n")).hexdigest()
-    out = {}
-    for p in files:
-        if p and p.exists():
-            try:
-                key = p.resolve().relative_to(project.resolve()).as_posix()
-            except ValueError:
-                key = str(p)
-            out[key] = digest(p)
-    cfg = read_json(project / "project.json", default={}) or {}
-    for key in ("frd_assess", "corpus"):
-        if key in cfg:
-            out[f"project.json#{key}"] = sha256_text(canonical_json(cfg[key]))
-    return out
-
-
-def _body(cert: dict) -> bytes:
-    return canonical_json({k: v for k, v in cert.items() if k != "signature"}).encode("utf-8")
-
+# The record of what was accepted.  A plain file: it is there for the researcher and the coach.
 
 def load_certificate(project: Path) -> dict | None:
     try:
@@ -889,79 +767,62 @@ def load_certificate(project: Path) -> dict | None:
     return c if isinstance(c, dict) else None
 
 
-def _unsigned_axes(text: str, cert: dict) -> list[str]:
-    """Axes of the header that the certificate does not cover as they now stand."""
+def _wording(axis: dict) -> dict:
+    flat = lambda t: " ".join(str(t).split())
+    return {"question": flat(axis.get("question", "")),
+            "statements": {h["id"]: flat(h["statement"]) for h in axis["hypotheses"]}}
+
+
+def unaccepted_axes(text: str, cert: dict) -> list[str]:
+    """Axes of the header whose wording is not the wording the researcher accepted."""
     from .header import parse_header
-    try:
-        ids = [a["axis_id"] for a in parse_header(text)["axes"]]
-    except ValueError:
-        ids = list(axis_spans(text))
-    axes = cert.get("axes") or {}
-    return [a for a in ids if not axes.get(a, {}).get("block_sha256") or axes[a]["block_sha256"] != block_sha(text, a)]
+    done = cert.get("axes") or {}
+    out = []
+    for ax in parse_header(text)["axes"]:
+        r = (done.get(ax["axis_id"]) or {}).get("restated") or {}
+        now = _wording(ax)
+        if now["question"] != " ".join(str(r.get("question", "")).split()) or now["statements"] != {
+                k: " ".join(str(v).split()) for k, v in (r.get("statements") or {}).items()}:
+            out.append(ax["axis_id"])
+    return out
 
 
-def verify(project: Path, signer_file: Path | None = None) -> tuple[bool, str]:
-    """(valid, reason).  Valid means: a certificate signed by this computer's signer covers the header
-    exactly as it stands, every axis in it, and every other file that shapes the result."""
+def accepted(project: Path) -> tuple[bool, str]:
+    """(yes, why).  Yes when the researcher has been through the session for every axis of the header
+    as it now reads."""
     project = Path(project)
     hp = header_path(project)
     if not hp.exists():
         return False, f"there is no header ({hp.name})"
-    if (project / "01_FRAME" / "frame.json").exists():
-        return False, "01_FRAME/frame.json overrides the header; remove it so that the signed header governs"
     cert = load_certificate(project)
     if not cert:
-        return False, "nobody has signed the frame (there is no frame certificate)"
-    signer = load_signer(signer_file)
-    if not signer:
-        return False, "this computer has no signer; run `cr signer`"
-    pub = str((cert.get("signer") or {}).get("public_key", ""))
-    if pub != signer["public_key"]:
-        return False, "the frame certificate was not signed by this computer's signer"
+        return False, "nobody has been through the frame with the coach yet"
     try:
-        good = ed_verify(bytes.fromhex(pub), _body(cert), bytes.fromhex(str(cert.get("signature", ""))))
-    except ValueError:
-        good = False
-    if not good:
-        return False, "the frame certificate's signature is not valid (the certificate was edited after signing)"
-    text = _norm(read_text(hp))
-    unsigned = _unsigned_axes(text, cert)
-    never = [a for a in unsigned if a not in (cert.get("axes") or {})]
-    if never:
-        return False, "nobody has signed axis " + ", ".join(never)
-    if unsigned:
-        return False, "the wording of axis " + ", ".join(unsigned) + " changed after it was signed"
-    if sha256_text(text) != cert.get("header_sha256"):
-        return False, "the header changed after it was signed (outside the axes)"
-    now, then = _frame_files(project), cert.get("frame_files") or {}
-    drift = sorted(k for k in set(now) | set(then) if now.get(k) != then.get(k))
-    if drift:
-        return False, "changed since signing: " + ", ".join(drift[:6]) + (" ..." if len(drift) > 6 else "")
-    return True, (f"frame signed by {cert['signer'].get('name', '?')} on {str(cert.get('signed', ''))[:10]} "
-                  f"(signer {cert['signer'].get('fingerprint', '?')})")
-
-
-def locked() -> bool:
-    return LOCK_FILE.exists()
-
-
-def lock(signer: dict) -> None:
-    LOCK_FILE.parent.mkdir(parents=True, exist_ok=True)
-    atomic_write_text(LOCK_FILE, f"The frame gate was locked on {utcnow()} after the first complete signing by "
-                                 f"{signer.get('name', '?')} (signer {fingerprint(signer['public_key'])}).\n")
+        left = unaccepted_axes(_norm(read_text(hp)), cert)
+    except ValueError as e:
+        return False, f"the header cannot be read: {e}"
+    if left:
+        never = [a for a in left if a not in (cert.get("axes") or {})]
+        return False, ((f"axes {', '.join(never)} have" if len(never) > 1 else f"axis {never[0]} has")
+                       + " not been through the coach" if never else
+                       "the wording of axis " + ", ".join(left) + " changed since it was accepted")
+    return True, f"frame accepted by {cert.get('name') or 'the researcher'} on {str(cert.get('accepted', ''))[:10]}"
 
 
 def gate(project: Path, action: str) -> tuple[bool, str]:
-    """(may proceed, message).  Once the gate is locked, nothing runs on a frame that is not signed."""
-    ok, why = verify(project)
+    """(may proceed, message).  A quest does not start until the researcher has been through the
+    frame with the coach (set coach.require_acceptance to false in project.json to switch that off).
+    Everything else gets a reminder."""
+    from .config import load_config
+    ok, why = accepted(project)
     if ok:
         return True, why
-    if not locked():
-        return True, ("=" * 96 + f"\nFRAME GATE NOT YET LOCKED. Nobody has completed a signing on this computer.\n"
-                      f"Once someone has, this {action} would be refused: {why}.\n"
-                      f"Sign the frame:  cr sign \"{project}\"\n" + "=" * 96)
-    return False, (f"{action} refused: {why}.\nA person must sign the frame first:  cr sign \"{project}\"\n"
-                   "There is no override.")
+    need = bool((load_config(project).get("coach") or {}).get("require_acceptance", True))
+    if action == "quest" and need:
+        return False, (f"quest not started: {why}.\nGo through the frame with the coach first, in a terminal window:  "
+                       f"cr sign \"{project}\"\nIt asks what you want from this run, shows how each way of framing the "
+                       "question is likely to score, and has you accept the likely outcome before the quest spends anything.")
+    return True, f"Reminder: {why}. The coach is at:  cr sign \"{project}\""
 
 
 def uses_models(cfg: dict) -> bool:
@@ -974,21 +835,24 @@ def uses_models(cfg: dict) -> bool:
 
 
 def render(cert: dict) -> str:
-    s = cert.get("signer") or {}
-    out = ["# Frame certificate", "",
-           f"Signed by **{s.get('name', '?')}** on {str(cert.get('signed', ''))[:10]} (signer {s.get('fingerprint', '?')}).",
+    who = cert.get("who") or {}
+    out = ["# Frame record", "",
+           f"Accepted by **{cert.get('name') or 'the researcher'}** on {str(cert.get('accepted', ''))[:10]}.",
            "", "The header is the frame, and the frame decides what a run can find. This page records what the "
-           "signer typed, read and accepted before any evidence was scored. A different frame can be scored on "
-           "the same evidence; this is the one the signer chose.", ""]
+           "researcher told the coach, typed, read and accepted before the quest. A different frame can be scored on "
+           "the same evidence (`cr rescore`); this is the one they chose.", ""]
+    if who:
+        out += ["## Why this run", "", f"- **Motivation:** {who.get('motivation', '')}", f"- **Goal:** {who.get('goal', '')}", ""]
     cell = lambda t: " ".join(str(t).split()).replace("|", "\\|")
     for aid, r in (cert.get("axes") or {}).items():
         g, pref = r.get("gauge", 64), r.get("preferred", "")
         fc = r.get("forecast") or {}
         out += [f"## Axis {aid}: {r.get('name', '')}", "",
+                f"- **Wants to win:** {pref}",
+                f"- **Experience behind that view:** {(r.get('experience') or {}).get('text', '')}",
                 f"- **Wants to be able to say:** {r['intent']['text']}",
-                f"- **Would concede:** {r['concede']['text']}",
-                f"- **Wants to win:** {pref}", ""]
-        out += ["### The hypotheses", "", "| | As the signer typed it | As it stands in the header |", "|---|---|---|",
+                f"- **Would concede:** {r['concede']['text']}", ""]
+        out += ["### The hypotheses", "", "| | As typed | As it stands in the header |", "|---|---|---|",
                 f"| Question | {cell(r['typed']['question']['text'])} | {cell(r['restated']['question'])} |"]
         out += [f"| {h} | {cell(t['text'])} | {cell(r['restated']['statements'][h])} |" for h, t in r["typed"]["statements"].items()]
         out.append("")
@@ -997,108 +861,86 @@ def render(cert: dict) -> str:
         for c in r["restated"].get("cannot_be_tested", []):
             out.append(f"- This corpus cannot test: {c}")
         if r["restated"].get("not_restated"):
-            out.append("- The model did not restate the wording; the header carries what the signer typed.")
+            out.append("- The model did not restate the wording; the header carries what was typed.")
         out += ["", "### Forecast", ""]
         if fc.get("ok"):
-            out.append(f"{pref} was forecast at **{fc['mean'][pref]} of {g}** (calls: " +
+            out.append(f"{pref} was forecast at **{fc['mean'][pref]} of {g}** units (calls: " +
                        ", ".join(str(c["allocations"][pref]) for c in fc["calls"] if "allocations" in c) +
-                       f"; target {r.get('target')}). Basis: {r.get('forecast_basis', '')}. A forecast is a guess, not a result.")
+                       f"; target {r.get('target')}). Basis: {r.get('forecast_basis', '')}. A forecast is a guess at how "
+                       "the evidence would be divided, not a probability of being right.")
         else:
             out.append("No forecast could be made.")
-        out += ["", "| Frame considered | Forecast for " + pref + " | Leaves out |", "|---|---|---|"]
+        out += ["", "| Frame considered | Forecast for " + pref + " | Rival held by | Gives up |", "|---|---|---|---|"]
         for rung in r.get("ladder", []):
             f = rung.get("forecast") or {}
-            out.append(f"| {cell(rung['label'])} | {f['mean'][pref] if f.get('ok') else 'none'} | {cell(rung.get('leaves_out', ''))} |")
+            out.append(f"| {cell(rung['label'])} | {f['mean'][pref] if f.get('ok') else 'none'} | "
+                       f"{cell(rung.get('rival_held_by', ''))} | {cell(rung.get('leaves_out', ''))} |")
         bt = r.get("back_translation") or {}
         out += ["", "### What a win means", ""]
         out += [f"- May say: {x}" for x in bt.get("if_it_wins_you_may_say", [])]
         out += [f"- May **not** say: {x}" for x in bt.get("you_may_not_say", [])]
         if (r.get("judge") or {}).get("match") is False:
-            out.append(f"- **A win would not let the signer say what they want to say:** {r['judge'].get('gap', '')}")
+            out.append(f"- **A win would not let the researcher say what they want to say:** {r['judge'].get('gap', '')}")
         wc = bt.get("worst_case") or {}
         if wc.get("allocations"):
             out.append("- Worst likely result: " + ", ".join(f"{k} {v}" for k, v in wc["allocations"].items()) +
-                       f". Then the signer would have to say: {wc.get('then_you_would_have_to_say', '')}")
+                       f". Then the researcher would have to say: {wc.get('then_you_would_have_to_say', '')}")
         out += ["", "### What the frame leaves out", ""]
         out += [f"- {x}" for x in bt.get("left_out", [])] + [f"- A critic will say: {x}" for x in bt.get("a_critic_will_say", [])]
         held = bt.get("rival_is_held_by", "")
         out.append(f"- The main rival is held by: {held or 'not stated'}" +
                    (" **(a rival nobody holds)**" if re.search("no identifiable holder", held, re.I) else ""))
         out += [f"- The axis text disagrees with the wording: {x}" for x in bt.get("conflicts", [])]
-        out += ["", "### What the signer accepted, by typing it", ""]
+        out += ["", "### What the researcher accepted, by typing it", ""]
         out += [f"- {a['item']}: \"{a['typed']}\"" for a in r.get("accepted", [])]
         out += [f"- Read {x['label']}: {x['words']} words, {x['seconds_on_screen']} seconds, {len(x['blanks'])} missing-word checks."
                 for x in r.get("read", [])]
-        untimed = [k for k, t in {"question": r["typed"]["question"], **r["typed"]["statements"]}.items() if not t.get("timed")]
-        if untimed:
-            out.append(f"- Typing could not be timed on this console for: {', '.join(untimed)}.")
         bad = {k: v for k, v in (r.get("model_steps") or {}).items() if v != "ok"}
         out += [f"- Model step `{k}`: {v}" for k, v in bad.items()]
         out.append("")
-    if cert.get("unsigned_axes"):
-        out += [f"**Not yet signed: axis {', '.join(cert['unsigned_axes'])}.** Nothing runs on this header until they are.", ""]
-    out += ["## Locked at signature", "", f"- Header: `{cert.get('header_sha256', '')[:16]}`"]
-    out += [f"- {k}: `{v[:16]}`" for k, v in (cert.get("frame_files") or {}).items()]
-    for n in cert.get("resigned", []):
-        out.append(f"- Signed again on {n['at'][:10]} after changes to: {', '.join(n['changed'])}")
+    if cert.get("unaccepted_axes"):
+        out += [f"**Not yet done: axis {', '.join(cert['unaccepted_axes'])}.**", ""]
     return "\n".join(out) + "\n"
 
 
-def _unlock(con, signer: dict) -> bytes:
-    """Ask for the passphrase until it matches the signer's key."""
-    while True:
-        seed = _seed(con.secret(f"Passphrase for {signer['name']}: "), signer["salt"])
-        if ed_public(seed).hex() == signer["public_key"]:
-            return seed
-        con.say("That is not the passphrase.")
-
-
 def _mark(text: str, name: str) -> str:
-    """The parser's approval marker, set by a complete signature."""
+    """The header parser's approval marker, set when every axis has been accepted."""
     text = re.sub(r"<!--\s*APPROVED[:\s].*?-->\n?", "", text, flags=re.S | re.I)
     lines = text.split("\n")
     lines.insert(1 if lines and lines[0].startswith("#") else 0,
-                 f"<!-- APPROVED: {name} on {utcnow()[:10]} (signed frame certificate) -->")
+                 f"<!-- APPROVED: {name} on {utcnow()[:10]} (frame accepted with the coach) -->")
     return "\n".join(lines)
 
 
-def _sign_and_write(project: Path, cert: dict, text: str, seed: bytes, signer: dict, crlf: bool) -> dict:
+def _write(project: Path, cert: dict, text: str, crlf: bool) -> dict:
     project = Path(project)
-    cert["unsigned_axes"] = [a for a in _unsigned_axes(text, cert) if a not in cert["axes"]]
-    if not cert["unsigned_axes"]:
-        text = _mark(text, signer["name"])          # the marker sits outside the axis blocks
-    cert["header_sha256"] = sha256_text(text)
-    cert["header_text"] = text
-    cert["frame_files"] = _frame_files(project)
-    cert["signer"] = {"name": signer["name"], "public_key": signer["public_key"], "fingerprint": fingerprint(signer["public_key"])}
-    cert["signed"] = utcnow()
-    cert.pop("signature", None)
-    cert["signature"] = ed_sign(seed, _body(cert)).hex()
+    cert["unaccepted_axes"] = unaccepted_axes(text, cert)
+    if not cert["unaccepted_axes"]:
+        text = _mark(text, cert.get("name") or "the researcher")       # the marker sits outside the axis blocks
+    cert["accepted"] = utcnow()
     hp = header_path(project)
     hp.parent.mkdir(parents=True, exist_ok=True)
     hp.write_bytes((text.replace("\n", "\r\n") if crlf else text).encode("utf-8"))
     write_json(project / "01_FRAME" / CERT_JSON, cert)
     atomic_write_text(project / "01_FRAME" / CERT_MD, render(cert))
     cfg = read_json(project / "project.json", default={}) or {}
-    cfg.setdefault("frame", {})["approval_note"] = (f"Frame signed by {signer['name']} on {cert['signed'][:10]} "
-                                                    f"(signer {fingerprint(signer['public_key'])}).")
+    cfg.setdefault("frame", {})["approval_note"] = (f"Frame accepted by {cert.get('name') or 'the researcher'} on "
+                                                    f"{cert['accepted'][:10]} (cr sign).")
     write_json(project / "project.json", cfg)
     return cert
 
 
 def sign_frame(con, model, project: Path, header: Path | None = None, only: str | None = None,
-               signer_file: Path | None = None) -> dict:
-    """Take every unsigned axis (or `only`) through the gate.  Each axis is signed as it is finished."""
+               name: str | None = None) -> dict:
+    """Coach the researcher through every axis not yet accepted (or `only`).  Each axis is saved as
+    it is finished."""
     from .header import normalize_hypothesis_ids, parse_header
     project = Path(project)
-    signer = load_signer(signer_file)
-    if not signer:
-        raise ValueError("this computer has no signer yet; run `cr signer --name \"Your Name\"` first")
     src = Path(header) if header else header_path(project)
     if not src.exists():
-        raise ValueError(f"there is no header to sign: {src}")
+        raise ValueError(f"there is no header to work on: {src}")
     if (project / "01_FRAME" / "frame.json").exists():
-        raise ValueError("01_FRAME/frame.json overrides the header; remove it so that the signed header governs")
+        raise ValueError("01_FRAME/frame.json overrides the header; remove it so that the header you accept governs")
     where = _configured(project)
     if not where["index"].exists():
         raise ValueError(f"there is no source index ({where['index'].name}); the forecasts and the restatement are made "
@@ -1110,86 +952,54 @@ def sign_frame(con, model, project: Path, header: Path | None = None, only: str 
     order = [a["axis_id"] for a in frame["axes"]]
     headless = [a for a in order if a not in axis_spans(text)]
     if headless:
-        raise ValueError(f"the header has no \"Axis ...\" heading for {', '.join(headless)}; each axis needs its own "
-                         "heading so that it can be signed")
+        raise ValueError(f"the header has no \"Axis ...\" heading for {', '.join(headless)}; each axis needs its own heading")
     short = [h["id"] for a in frame["axes"] for h in a["hypotheses"] if not h["statement"]]
     if short:
         raise ValueError(f"the header's hypothesis table has no statement for {', '.join(short)}")
     old = load_certificate(project) or {}
-    if old and (old.get("signer") or {}).get("public_key") != signer["public_key"]:
-        old = {}                                     # another signer's certificate carries nothing over
     before = old.get("axes") or {}
-    axes = {a: r for a, r in before.items() if a in order and a != only and r.get("block_sha256") == block_sha(text, a)}
+    stale = unaccepted_axes(text, old)
+    axes = {a: r for a, r in before.items() if a in order and a != only and a not in stale}
     todo = [a for a in order if (a == only if only else a not in axes)]
     if only and not todo:
         raise ValueError(f"the header has no axis {only}")
     if not todo:
-        raise ValueError("every axis is already signed and unchanged; use `cr sign --resign` if other files changed")
-    con.say(f"Signing the frame of {project.name} as {signer['name']} (signer {fingerprint(signer['public_key'])}).")
-    con.say(f"To sign now: axis {', '.join(todo)}." + (f" Already signed and unchanged: {', '.join(axes)}." if axes else ""))
-    con.say("Each axis is signed when you finish it. Ctrl+C stops; finished axes stay signed.")
-    if not where["archivist_prompt"].exists():
-        con.say("Note: there is no Archivist prompt file yet. When one is written it becomes part of the frame, and "
-                "you will be asked to sign again (cr sign --resign).")
+        raise ValueError("every axis is already accepted as it reads; name one to go through it again:  --axis A1")
+
+    con.say(f"Frame coaching for {project.name}.")
+    con.say(f"To do now: axis {', '.join(todo)}." + (f" Already accepted and unchanged: {', '.join(axes)}." if axes else ""))
+    con.say("Each axis is saved when you finish it. Ctrl+C stops; finished axes stay finished.")
+    con.say("Answers are typed by hand; paste is not taken. There are no wrong answers to the first questions.")
+    con.say("")
+    name = " ".join((name or old.get("name") or "").split())
+    while not name:
+        name = " ".join(con.line("Your name: ")[0].split())
+    who = dict(old.get("who") or {})
+    if who.get("motivation") and who.get("goal"):
+        con.say("You told the coach earlier:")
+        _show(con, "Why you are running this: " + who["motivation"])
+        _show(con, "What you want it for: " + who["goal"])
+    else:
+        who["motivation"] = hand_typed(con, "What is your motivation? Why are you running this analysis?", 6)["text"]
+        who["goal"] = hand_typed(con, "What is your goal, and how do you hope this analysis will help you reach it?", 6)["text"]
     cert = old
     for aid in todo:
         ax = next(a for a in parse_header(text)["axes"] if a["axis_id"] == aid)
-        text, rec = certify_axis(con, model, project, text, ax, int(frame.get("gauge", 64)), prior=before.get(aid))
+        text, rec = certify_axis(con, model, project, text, ax, int(frame.get("gauge", 64)), prior=before.get(aid), who=who)
         axes[aid] = rec
+        cert = {"version": 2, "project": project.name, "name": name, "who": who,
+                "axes": {a: axes[a] for a in order if a in axes}}
+        cert = _write(project, cert, text, crlf)
+        text = _norm(read_text(header_path(project)))
         con.say("")
-        con.say(f"Sign axis {aid} with your passphrase. Nothing is written until you do.")
-        seed = _unlock(con, signer)
-        cert = {"version": 1, "project": project.name, "axes": {a: axes[a] for a in order if a in axes},
-                "resigned": old.get("resigned", [])}
-        cert = _sign_and_write(project, cert, text, seed, signer, crlf)
-        text = cert["header_text"]
-        con.say(f"Axis {aid} is signed.")
+        con.say(f"Axis {aid} is accepted and saved.")
     con.say("")
-    con.say(f"Certificate: {project / '01_FRAME' / CERT_MD}")
-    if cert["unsigned_axes"]:
-        con.say(f"Still unsigned: axis {', '.join(cert['unsigned_axes'])}. Nothing runs on this header until they "
-                f"are signed too:  cr sign \"{project}\"")
-    return cert
-
-
-def resign(con, project: Path, signer_file: Path | None = None) -> dict:
-    """Sign again after something other than the axis wording changed.  The person sees what changed
-    and accepts it by typing."""
-    project = Path(project)
-    signer = load_signer(signer_file)
-    cert = load_certificate(project)
-    if not signer or not cert:
-        raise ValueError(f"there is nothing to sign again; run `cr sign \"{project}\"` first")
-    raw = read_text(header_path(project))
-    text = _norm(raw)
-    moved = _unsigned_axes(text, cert)
-    if moved:
-        raise ValueError(f"axis {', '.join(moved)} changed or was never signed; that takes a full signing:  "
-                         f"cr sign \"{project}\" --axis {moved[0]}")
-    now, then = _frame_files(project), cert.get("frame_files") or {}
-    changed = sorted(k for k in set(now) | set(then) if now.get(k) != then.get(k))
-    if (cert.get("signer") or {}).get("public_key") != signer["public_key"]:
-        changed.insert(0, f"the signer (was {(cert.get('signer') or {}).get('fingerprint', '?')}, "
-                          f"now {fingerprint(signer['public_key'])})")
-    if sha256_text(text) != cert.get("header_sha256"):
-        changed.insert(0, "the header, outside the axes")
-        diff = [ln for ln in difflib.unified_diff(str(cert.get("header_text", "")).split("\n"), text.split("\n"), lineterm="", n=0)
-                if ln[:1] in "+-" and ln[:3] not in ("+++", "---")]
-        con.say("The header changed outside the axes:")
-        for ln in diff[:60]:
-            con.say("  " + ln[:200])
-    if not changed:
-        raise ValueError("nothing changed since the frame was signed")
-    con.say("Changed since signing:")
-    for c in changed:
-        con.say(f"  - {c}")
-    con.say("These shape the result. To accept them as part of your frame:")
-    con.say("Type: I accept the changed files")
-    accept(con, "I accept the changed files")
-    seed = _unlock(con, signer)
-    cert.setdefault("resigned", []).append({"at": utcnow(), "changed": changed})
-    cert = _sign_and_write(project, cert, text, seed, signer, "\r\n" in raw)
-    con.say(f"Signed again. Certificate: {project / '01_FRAME' / CERT_MD}")
+    con.say(f"Record: {project / '01_FRAME' / CERT_MD}")
+    if cert["unaccepted_axes"]:
+        con.say(f"Still to do: axis {', '.join(cert['unaccepted_axes'])}:  cr sign \"{project}\"")
+    else:
+        con.say("Every axis is accepted. After the quest, and again after the findings are validated, the coach "
+                "scores the evidence against this frame and tells you where you stand and what your next move is.")
     return cert
 
 
@@ -1197,13 +1007,13 @@ def resign(con, project: Path, signer_file: Path | None = None) -> dict:
 # Commands.
 
 def model_for(project: Path):
-    """The model the gate consults, as `model(tag, system, user, salt) -> dict`."""
+    """The model the coach consults, as `model(tag, system, user, salt) -> dict`."""
     from .config import load_config
     from .llm.base import LLMRequest
     from .llm.router import LLM
     try:
         llm = LLM(load_config(project))
-    except Exception as e:                           # no model is no reason to stop a person signing
+    except Exception as e:                           # no model is no reason to stop the session
         problem = f"{type(e).__name__}: {e}"
 
         def none(tag: str, system: str, user: str, salt: str = "") -> dict:
@@ -1218,58 +1028,11 @@ def model_for(project: Path):
     return ask
 
 
-def cmd_signer(a) -> int:
-    signer = load_signer()
-    if signer and not a.new:
-        print(f"Signer on this computer: {signer['name']} (signer {fingerprint(signer['public_key'])}), "
-              f"created {str(signer.get('created', ''))[:10]}.")
-        print("The frame gate is locked: nothing runs on a frame that is not signed." if locked() else
-              "The frame gate locks itself the first time a frame is fully signed on this computer.")
-        return 0
-    try:
-        con = Terminal()
-    except NotAPerson as e:
-        print(f"signer: {e}", file=sys.stderr)
-        return 2
-    try:
-        if signer:
-            con.say(f"This replaces the signer {signer['name']} ({fingerprint(signer['public_key'])}). Every frame "
-                    "signed with it must then be signed again (`cr sign <project> --resign`).")
-            con.say("Replacing a signer takes its present passphrase. If you have forgotten it, delete this file "
-                    f"yourself and run `cr signer` again: {SIGNER_FILE}")
-            _unlock(con, signer)
-            con.say("Type: REPLACE MY SIGNER")
-            accept(con, "REPLACE MY SIGNER")
-        name = " ".join((a.name or con.line("Your name, as it will stand on certificates: ")[0]).split())
-        if not name:
-            print("signer: a name is needed", file=sys.stderr)
-            return 2
-        con.say("Choose a passphrase of 8 characters or more. It is stored nowhere, and a frame cannot be signed as "
-                "you without it. Keep it in your head or on paper: not in a file, and never in a chat with a model.")
-        while True:
-            first = con.secret("Passphrase: ")
-            if len(first) < 8:
-                con.say("8 characters or more.")
-            elif con.secret("Again: ") != first:
-                con.say("Those did not match.")
-            else:
-                break
-    except (Changed, KeyboardInterrupt, EOFError):
-        print("Stopped. No signer was created.")
-        return 1
-    signer = create_signer(name, first)
-    con.say(f"Signer created: {name} (signer {fingerprint(signer['public_key'])}). Next:  cr sign <project>")
-    return 0
-
-
 def cmd_sign(a) -> int:
     project = Path(a.project).resolve()
     if a.check:
-        ok, why = verify(project)
-        print(("SIGNED: " if ok else "NOT SIGNED: ") + why)
-        if not ok:
-            print("The frame gate is locked: no quest or model-backed run will start on this project." if locked() else
-                  "The frame gate is not yet locked on this computer; it locks at the first complete signing.")
+        ok, why = accepted(project)
+        print(("ACCEPTED: " if ok else "NOT YET: ") + why)
         return 0 if ok else 2
     try:
         con = Terminal()
@@ -1277,25 +1040,16 @@ def cmd_sign(a) -> int:
         print(f"sign: {e}", file=sys.stderr)
         return 2
     try:
-        if a.resign:
-            resign(con, project)
-        else:
-            sign_frame(con, model_for(project), project, header=Path(a.header) if a.header else None,
-                       only=a.axis.upper() if a.axis else None)
+        sign_frame(con, model_for(project), project, header=Path(a.header) if a.header else None,
+                   only=a.axis.upper() if a.axis else None, name=a.name)
     except Changed:
-        con.say("Stopped. Nothing was signed. Have the header changed, then run `cr sign` again.")
+        con.say("Stopped. Nothing was saved for this axis. Rework the header, then run `cr sign` again.")
         return 1
     except (KeyboardInterrupt, EOFError):
         con.say("")
-        con.say("Stopped. Axes already signed stay signed; the one in progress was not.")
+        con.say("Stopped. Axes already finished stay finished; the one in progress was not saved.")
         return 1
     except ValueError as e:
         print(f"sign: {e}", file=sys.stderr)
         return 2
-    ok, why = verify(project)
-    if ok and not locked():
-        lock(load_signer())
-        con.say("")
-        con.say("THE FRAME GATE IS NOW LOCKED ON THIS COMPUTER. From now on no quest and no model-backed run starts "
-                "on a frame that is not signed, in any project. There is no override.")
     return 0

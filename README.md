@@ -30,8 +30,7 @@ python cr.py new     projects\MyTopic --corpus "D:\my sources" --keys "D:\my key
    (write your question in projects\MyTopic\01_FRAME\question.md)
 python cr.py frame   projects\MyTopic     # drafts the source index, the NotebookLM prompt and the quest header
    (read and edit 01_FRAME\header-DRAFT.md; paste archivist-custom-prompt.txt into NotebookLM: Configure Chat -> Custom + Longer)
-python cr.py signer  --name "Your Name"   # once per computer: your signing key and its passphrase
-python cr.py sign    projects\MyTopic     # you type, read and sign the frame yourself (docs/FRAME-GATE.md)
+python cr.py sign    projects\MyTopic     # go through the frame with the coach (docs/FRAME-GATE.md)
 python cr.py doctor  projects\MyTopic     # checks everything, including each model key
 python cr.py quest   projects\MyTopic     # the discovery quest: up to 3 hours, unattended
 python cr.py run     projects\MyTopic     # claims, validation, matching, coverage, report
@@ -57,7 +56,7 @@ Each axis of your header gets its **own database**: a folder `AXIS-A1__<name>` i
 ## Things worth knowing
 
 - **Models are interchangeable, and a refusal cannot stop a run.** Each role has an ordered list of providers. If one refuses, filters, errors or times out, the next is asked, and the switch is recorded with its reason. DeepSeek, OpenAI, Gemini, Anthropic and any OpenAI-compatible endpoint work.
-- **A person signs the frame.** `cr frame` only drafts. In `cr sign` you say which hypothesis you want to win, see a forecast for each way of framing the question, type the question and every hypothesis by hand, read the restated wording, accept each consequence by typing it, and sign with a passphrase. No quest and no model-backed run starts on a frame that is not signed; there is no override. See `docs/FRAME-GATE.md`.
+- **A coach in your corner.** Nobody runs this for fun: you want a hypothesis to win. `cr sign` asks why you are running this and what experience is behind your view, forecasts how each way of framing the question is likely to score, has you type the hypotheses yourself and accept the likely outcome. After the quest, and again after the findings are validated, the run scores the evidence against your hypothesis. If it is short of target the run stops and the coach tells you why, what the evidence does support, and your next move. `cr rescore` scores the same findings under a different frame for a dollar or two. See `docs/FRAME-GATE.md`.
 - **Nothing is accepted on a model's word.** Quotations are checked mechanically against the source files. Matching is done twice, independently, and disagreements are labelled.
 - **Mechanistic and animal evidence counts, with its assumptions shown.** When a finding shows the right effect in another species, model, tissue or dose, it can cover a part of a hypothesis only with the transfer it relies on written beside it. Such coverage is reported as `COMPLETE_WITH_ASSUMPTIONS`, never as `COMPLETE`.
 - **It also runs with no key and no network.** The default offline engine (`docs/LOCAL-ENGINE.md`) finishes every stage by fixed rules. It is a floor for testing the machinery, not a substitute for a model.
@@ -68,7 +67,8 @@ Each axis of your header gets its **own database**: a folder `AXIS-A1__<name>` i
 | Command | What it does |
 |---|---|
 | `cr new`, `cr frame` | Start a project, draft its frame |
-| `cr signer`, `cr sign` | Create your signing key; type, read and sign the frame (`--check` says whether it is signed, `--resign` after the index or settings change) |
+| `cr sign` (or `cr coach`) | Go through the frame with the coach before a quest (`--axis A2` for one axis, `--check` to see whether it is done) |
+| `cr rescore` | Score a run's validated findings under the header as it reads now, or under another header; every frame tried is kept in `01_FRAME/FRAME-LADDER.md` |
 | `cr doctor` | Check Python, Chrome, the corpus, the header, the notebooks and each model key (`--fix` repairs model names) |
 | `cr quest` | Run the NotebookLM quest unattended, score it, and import it (`--then-run` continues into the report) |
 | `cr run` | Run or resume the evidence pipeline (`--from <stage>` redoes a stage and everything after it) |

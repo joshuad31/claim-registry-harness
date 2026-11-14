@@ -327,12 +327,6 @@ def check_header(text: str) -> tuple[bool, str]:
 
 def cmd_approve(a) -> int:
     proj = Path(a.project)
-    from . import frame_gate
-    if frame_gate.locked():
-        # an approval any command line can issue is not a person's approval
-        print(f"approve: refused. On this computer a frame is approved by signing it:  cr sign \"{proj}\"\n"
-              "There is no override.", file=sys.stderr)
-        return 2
     frame = proj / "01_FRAME"
     src = Path(a.header) if a.header else frame / "header-DRAFT.md"
     dst = frame / "header.md"
@@ -584,9 +578,9 @@ def cmd_doctor(a) -> int:
         ok, msg = check_header(read_text(frame / "header.md"))
         add("PASS" if ok else "FAIL", "Header " + ("approved and parsed" if ok else "does not parse"), msg)
         from . import frame_gate
-        signed, why = frame_gate.verify(proj)
-        add("PASS" if signed else ("FAIL" if frame_gate.locked() else "WARN"),
-            "Frame signed" if signed else "Frame not signed", why if signed else f"{why}; run `cr sign \"{proj}\"`")
+        signed, why = frame_gate.accepted(proj)
+        add("PASS" if signed else "WARN", "Frame accepted with the coach" if signed else "Frame not yet through the coach",
+            why if signed else f"{why}; run `cr sign \"{proj}\"`")
     else:
         add("FAIL", "No approved header (01_FRAME/header.md)", "run `cr frame`, review the draft, then `cr approve`")
     add("PASS" if (frame / "index.md").exists() else "FAIL", "Index " + ("present" if (frame / "index.md").exists() else "missing"),
@@ -832,7 +826,7 @@ def cmd_quest(a) -> int:
     from . import frame_gate
     ok, msg = frame_gate.gate(proj, "quest")
     if msg:
-        print(msg if ok else f"quest: {msg}", file=sys.stderr if not ok or "NOT YET LOCKED" in msg else sys.stdout)
+        print(msg if ok else f"quest: {msg}", file=sys.stderr if not ok else sys.stdout)
     if not ok:
         return 2
     q = _quest_dir(proj, a.id, a.new)

@@ -42,7 +42,7 @@ ROLES = [
 
 # A role the user did not route follows another role's routing instead of the global default.
 ROLE_FOLLOWS = {"frd_assessor": "assessor", "match_router": "matcher_a", "quest_manager": "coordinator", "quest_investigator": "investigator",
-                "frame_gate": "assessor"}   # the frame gate (cr sign) consults the model that will score the run
+                "frame_gate": "assessor"}   # the coach (cr sign, the checkpoints) consults the model that scores the run
 
 DEFAULT_CONFIG: dict[str, Any] = {
     "project": {
@@ -205,6 +205,13 @@ DEFAULT_CONFIG: dict[str, Any] = {
         "partition_words": 30000,     # registry words per ACH_Eval call; a larger set is split
         "max_output_tokens": 32000,   # per call; a cut-off answer is asked for once more with a larger budget
         "axis_only": [],              # axes that get no combined reading (other axes' FRDs are kept out)
+    },
+    "coach": {
+        "enabled": True,              # score the evidence after the quest and after FRD validation, and coach
+        "target_share": 2 / 3,        # where the researcher's preferred hypothesis should stand, as a share of the gauge
+        "times": 3,                   # scorings averaged at the second checkpoint and by `cr rescore`
+        "require_acceptance": True,   # a quest waits until the researcher has been through `cr sign`
+        "preferred": {},              # {"A2": "A2-H1"}: the hypothesis the researcher wants, where there was no session
     },
     "pipeline": {
         # the run halts after this stage until the researcher releases it with `cr run --continue`

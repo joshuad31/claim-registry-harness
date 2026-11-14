@@ -237,3 +237,22 @@ Josh rejected the A2 null results (prior FRD ACH_Eval A2 12/18/34; harness run A
 ## 16. Domain modules removed (2026-11-12)
 
 Section 14 is obsolete. `claimreg/domains/` (the levothyroxine bedtime rules R1 to R22 and their gate), `tests/test_domain_levo.py` and `docs/DOMAIN-MODULES.md` are removed, with the three hooks in `frd_assess.py` and the `domain_modules` setting. Josh's decision: a topic-specific rule set is a tilt outside the header, however openly it is done. Do not add one back. A rule that matters belongs in the header's governing boundary, which a person signs. RUN-LEVO-A2-v3 to v6 were scored with the module on; their numbers carry that.
+
+## 17. The gate became a coach (2026-11-14, Claude Fable 5.2 session)
+
+Section 15 is superseded in part. Josh's direction: no signatures, hashes or tamper checks while the system is still being made to work; acceptance exists only so that the researcher knows the likely outcome before the run and does not walk away when it is hard. The harness should make the model a coach in the researcher's corner.
+
+**Removed:** `cr signer`, the passphrase, the Ed25519 signature, the lock file, `--resign`, and the checks that voided a certificate when the index or settings changed. `cr approve` works again.
+
+**Kept (`claimreg/frame_gate.py`, `cr sign` / `cr coach`):** the session before a quest. It now asks the researcher's motivation, goal and the experience behind their view, and gives those to the model that proposes frames. Frames are proposed by the calibration method in `CALIBRATION` (weakest meaningful claim the corpus supports; the strongest rival that someone really holds; a rival nobody holds is never offered; same evidence rules both sides). The record is a plain file. A quest waits for it unless `coach.require_acceptance` is false.
+
+**Added (`claimreg/coach.py`, tests `tests/test_coach.py`, guide `docs/FRAME-GATE.md`):**
+
+- Checkpoint 1, in front of `frd_generate`: scores the quest's answers once (the Manager's private ACH_Eval files are not imported, so the run makes its own reading).
+- Checkpoint 2, after `frd_assess`: if the stage's vector is below target, two more scorings, then the mean.
+- Below target: the run halts (`cr run --continue` releases it) and `COACH-CHECKPOINT-<n>.md` gives the corner talk: why, what the evidence does show, openings, questions to ask next, and the three moves.
+- `cr rescore <project> --run RUN [--header FILE] [--axis A2] [--answers] [--times N]`: scores the run's findings under another frame without changing the run.
+- `01_FRAME/FRAME-LADDER.md`: every frame scored and its score.
+- The checkpoints act only on axes whose preferred hypothesis is known (from the session, or `coach.preferred` in `project.json`).
+
+**Rules for agents.** Coach, do not gatekeep. Assume the researcher runs in good faith and has a valid point from their own experience; never tell them to give up; say plainly what the corpus does and does not show. Treat mechanistic evidence as evidence. `cr sign` is for the researcher at a keyboard: do not try to run it for them. Still no domain modules, and no down-ranking, excluding or re-grading of sources to move a result: the claim is the lever, and it is in the header.

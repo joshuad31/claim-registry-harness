@@ -194,8 +194,12 @@ def _parse(res, ids: list[str], gauge: int, axis_id: str, label: str) -> tuple[d
 class _Job:
     """One assessment of one axis's hypotheses over one FRD set."""
 
-    def __init__(self, ctx, axis: dict, frds: list[dict], scope: str, out_dir: Path, gauge: int, words: int):
+    def __init__(self, ctx, axis: dict, frds: list[dict], scope: str, out_dir: Path, gauge: int, words: int,
+                 label: str = "", evidence: str = "frds"):
+        # `label` tells repeat scorings of the same evidence apart (the coach scores more than once);
+        # `evidence="answers"` says the rows are the quest's unvalidated answers, not validated FRDs
         self.ctx, self.axis, self.frds, self.scope, self.out, self.gauge = ctx, axis, frds, scope, out_dir, gauge
+        self.label, self.evidence = label, evidence
         self.combined = scope == "combined"
         self.aid = axis["axis_id"]
         self.ids = [h["id"] for h in axis.get("hypotheses", [])]
@@ -218,6 +222,12 @@ class _Job:
                 "another axis only where it really bears on this axis's hypotheses."
                 if self.combined else
                 "SCOPE OF THIS PASS: the registry holds only the validated FRDs filed under the axis named below.")
+        if self.evidence == "answers":
+            note = ("EXCEPTION FOR THIS PASS: the registry rows are NOT validated FRDs. Each row is the notebook's whole "
+                    "answer to one quest question, before any claim was extracted or any quotation checked. Treat every "
+                    "row as unverified (provenance N) and read this as a provisional early reading. The row id is the "
+                    "question id; use it where a driver's FRD id is asked for.")
+        tag = f"{tag}-{self.label}" if self.label else tag
         system, user, _ = self.ctx.prompts.render(
             "frd_assess.md", GAUGE=self.gauge, GOAL=self.axis.get("question", ""), SCOPE_NOTE=note,
             AXIS_RULES=rules, GATE_CONTRACT=contract,

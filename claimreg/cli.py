@@ -86,15 +86,15 @@ def cmd_new_run(a) -> int:
 
 
 def _frame_gate(project, action: str, always: bool = False) -> bool:
-    """False when the frame gate refuses.  A run that uses no model (the offline engine, the tests)
-    spends nothing and is not gated; everything else needs a frame a person has signed."""
+    """Remind the researcher of the coach when the frame has not been through `cr sign`.  A run that
+    uses no model (the offline engine, the tests) gets no reminder.  Only a quest waits for it."""
     from . import frame_gate
     from .config import load_config
     if not always and not frame_gate.uses_models(load_config(project)):
         return True
     ok, msg = frame_gate.gate(Path(project), action)
-    if msg:
-        print(msg, file=sys.stderr if not ok or "NOT YET LOCKED" in msg else sys.stdout)
+    if msg and not frame_gate.accepted(Path(project))[0]:
+        print(msg, file=sys.stderr)
     return ok
 
 
@@ -111,6 +111,9 @@ def cmd_run(a) -> int:
     if out["status"] == "halted":
         print(f"\nHalted for your decision after {out['gate']}. Read {ctx.run_dir / out['read']}\n"
               f"To run the later stages:\n  {out['continue_with']}")
+        for n in (1, 2):
+            if (ctx.run_dir / f"COACH-CHECKPOINT-{n}.md").exists() and out["read"] != f"COACH-CHECKPOINT-{n}.md":
+                print(f"The coach's reading of where you stand: {ctx.run_dir / f'COACH-CHECKPOINT-{n}.md'}")
         if (ctx.run_dir / "QUESTIONS.md").exists():
             print(f"Before you continue: {ctx.run_dir / 'QUESTIONS.md'} lists every question this run asked. Give it "
                   f"and the source index to another model to check whether the questioning was thorough enough.")
@@ -458,7 +461,7 @@ def main(argv=None) -> int:
     s.add_argument("--run")
     s.set_defaults(fn=cmd_verify)
 
-    from . import frame_gate, onramp
+    from . import coach, frame_gate, onramp
     s = sub.add_parser("new", help="start a project: copy sources in, find your model keys, write the question template")
     s.add_argument("project")
     s.add_argument("--name")
@@ -478,21 +481,27 @@ def main(argv=None) -> int:
     s.add_argument("--force", action="store_true", help="redo files that already exist")
     s.set_defaults(fn=onramp.cmd_frame)
 
-    s = sub.add_parser("signer", help="create or show the key a person signs frames with (once per computer)")
-    s.add_argument("--name", help="your name, as it will stand on certificates")
-    s.add_argument("--new", action="store_true", help="replace the signer (frames signed with the old one must be signed again)")
-    s.set_defaults(fn=frame_gate.cmd_signer)
-
-    s = sub.add_parser("sign", help="a person types, reads and signs the frame; required before a quest or a model-backed run")
+    s = sub.add_parser("sign", aliases=["coach"],
+                       help="go through the frame with the coach: say what you want, see how each framing is likely to "
+                            "score, type the hypotheses yourself and accept the likely outcome (before a quest)")
     s.add_argument("project")
-    s.add_argument("--axis", help="sign this axis only (for example A2); default: every axis not yet signed")
-    s.add_argument("--header", help="sign this draft instead of the project's header")
-    s.add_argument("--resign", action="store_true",
-                   help="sign again after the index, the settings or another frame file changed (not the axis wording)")
-    s.add_argument("--check", action="store_true", help="only say whether the frame is signed")
+    s.add_argument("--axis", help="this axis only (for example A2); default: every axis not yet accepted")
+    s.add_argument("--header", help="work on this draft instead of the project's header")
+    s.add_argument("--name", help="your name, for the record")
+    s.add_argument("--check", action="store_true", help="only say whether the frame has been accepted")
     s.set_defaults(fn=frame_gate.cmd_sign)
 
-    s = sub.add_parser("approve", help="(superseded by `cr sign`) mark the header draft approved; refused once the frame gate is locked")
+    s = sub.add_parser("rescore", help="score a run's validated findings under the header as it reads now (or another "
+                                       "header); nothing in the run changes, and the score goes on the frame ladder")
+    s.add_argument("project")
+    s.add_argument("--run", required=True)
+    s.add_argument("--header", help="score under this header file instead of the project's header")
+    s.add_argument("--axis", help="this axis only (for example A2)")
+    s.add_argument("--answers", action="store_true", help="score the quest's answers instead of the validated findings")
+    s.add_argument("--times", type=int, help="scorings to average (default 3; 1 with --answers)")
+    s.set_defaults(fn=coach.cmd_rescore)
+
+    s = sub.add_parser("approve", help="mark the header draft approved without the coach (`cr sign` is the usual way)")
     s.add_argument("project")
     s.add_argument("--by", required=True, help="who approves it")
     s.add_argument("--header", help="approve this file instead of 01_FRAME/header-DRAFT.md")
