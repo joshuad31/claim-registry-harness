@@ -35,7 +35,7 @@ If your hypothesis is below target, the run stops and writes `COACH-CHECKPOINT-1
 
 ## 3. After the findings are validated: checkpoint 2
 
-The run scores the validated findings. If the first scoring is below target it scores twice more and takes the mean, because one scoring moves by several units on its own. If the mean is within 2 units of target, the coach says it is too close to call and does not stop you.
+The run scores the validated findings three times, whatever the first score is, and takes the mean, because one scoring moves by several units on its own (measured: 3 to 5 units of a 64-unit gauge for one scoring, 2 to 3 for a mean of three). If the mean is within 3 units of target, the coach says it is too close to call and does not stop you. Every ladder entry names the model that scored it; scores from different models are not comparable.
 
 This is the findings-level score. The final score is made later, from the witnesses, and can differ by several units: on the first run where both exist, the findings-level scorings were 36 and 40 and the final score 42. The ladder shows both once a run is finished.
 

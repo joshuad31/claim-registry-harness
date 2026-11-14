@@ -228,7 +228,7 @@ def _ladder_lines(ctx, frame) -> list[str]:
         each = ", ".join(str(v.get(pref, "?")) for v in vs)
         out.append(f"- Axis {e['axis']}, frame `{e.get('frame_key', '')}`, on {e.get('basis', '')} (run `{e.get('run', '')}`): "
                    f"{pref} {(e.get('mean') or {}).get(pref, '?')} of {e.get('gauge', '')} over {len(vs)} "
-                   f"scoring{'s' if len(vs) != 1 else ''} ({each}); target {e.get('target', '')}; {e.get('standing', '')}")
+                   f"scoring{'s' if len(vs) != 1 else ''} ({each}) by {e.get('scored_by', 'a model not recorded')}; target {e.get('target', '')}; {e.get('standing', '')}")
     return out
 
 

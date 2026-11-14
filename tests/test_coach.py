@@ -138,7 +138,7 @@ class CoachTest(unittest.TestCase):
         a = rec["axes"]["A1"]
         self.assertEqual((len(a["vectors"]), a["mean"]["A1-H1"] < 43), (3, True))
 
-        ctx, rec, fake = self.checkpoint_2(40, 41, 44)                     # mean 42: within two units of 43
+        ctx, rec, fake = self.checkpoint_2(40, 41, 44)                     # mean 42: within three units of 43
         a = rec["axes"]["A1"]
         self.assertEqual(([v["A1-H1"] for v in a["vectors"]], a["mean"]["A1-H1"]), ([40, 41, 44], 42))
         self.assertEqual((a["standing"], rec["hold"]), ("within noise of target", False))
@@ -146,6 +146,10 @@ class CoachTest(unittest.TestCase):
         self.assertIn("too close to call", talk)
         self.assertIn("The target is a guide for you, not a pass mark.", talk)
         self.assertIn("This is the findings-level score. The final score is made later, from the witnesses", talk)
+
+        self.assertEqual(coach.standing([], {"A1-H1": 40}, "A1-H1", 43), "within noise of target")   # three under
+        self.assertEqual(coach.standing([], {"A1-H1": 39}, "A1-H1", 43), "below target")
+        self.assertEqual(coach.scored_by(ctx), "mock/mock-deterministic")                           # kept on every ladder entry
 
         ctx, rec, fake = self.checkpoint_2(34, 35, 45)                     # one lucky scoring does not excuse a mean of 38
         a = rec["axes"]["A1"]
@@ -190,7 +194,7 @@ class CoachTest(unittest.TestCase):
         self.assertTrue(any(new in ln and "**49** of 64" in ln and "47, 49, 51" in ln and "at target" in ln for ln in rows), ladder)
         self.assertTrue(any(old[:40] in ln and "**34** of 64" in ln and "below target" in ln for ln in rows), ladder)
         self.assertIn("The target is a guide for the researcher, not a pass mark.", ladder)
-        self.assertIn("Scores can be compared only within one run and one kind of evidence.", ladder)
+        self.assertIn("Scores can be compared only within one run, one kind of evidence and one scoring model.", ladder)
         self.assertIn(f'On RUN-C, scored on the validated findings: at or near target: "{new}" (49). Fell short: "', ladder)
         coach.rescore(ctx, scorer=scorer(40, 40, 40))                      # scored again: the earlier scoring is kept
         ladder = (self.proj / "01_FRAME" / coach.LADDER_MD).read_text(encoding="utf-8")

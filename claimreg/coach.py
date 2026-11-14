@@ -32,7 +32,9 @@ LADDER_JSON = "FRAME-LADDER.json"
 LADDER_MD = "FRAME-LADDER.md"
 DEFAULTS = {"enabled": True, "target_share": frame_gate.TARGET_SHARE, "times": 3, "require_acceptance": True,
             "preferred": {}}
-NOISE = 2                     # a mean this many units under the target is too close to call
+NOISE = 3                     # a mean this many units under the target is too close to call. Measured on
+                              # 2026-11-14: one scoring varies by 3 to 5 units of a 64-unit gauge, a mean of
+                              # three by 2 to 3 (ACH-Eval-Study-2026-11-14, 219 readings, two models)
 HOLD_BEFORE = {"frd_generate": 1, "language": 2}      # the stage a checkpoint is decided in front of
 BASIS = {1: "the quest's answers (not yet validated)", 2: "the validated findings"}
 
@@ -147,17 +149,18 @@ def ladder_render(log: list[dict]) -> str:
            "- Scores are units of a gauge divided among the hypotheses. They are not probabilities.",
            "- One scoring moves by several units on its own, so each scoring is listed.",
            "- The target is a guide for the researcher, not a pass mark.",
-           "- Scores can be compared only within one run and one kind of evidence. Findings-level and final "
-           "(witness-level) scores of the same run differ by several units.", ""]
+           "- Scores can be compared only within one run, one kind of evidence and one scoring model. Findings-level "
+           "and final (witness-level) scores of the same run differ by several units, and two models have been "
+           "measured about ten units apart on the same evidence.", ""]
     cell = lambda t: " ".join(str(t).split()).replace("|", "\\|")
     for axis in sorted({e["axis"] for e in log}):
         rows = [e for e in log if e["axis"] == axis]
-        out += [f"## Axis {axis}", "", "| When | Run | Scored on | The claim (hypothesis the researcher wants) | Score | Each scoring | Standing |",
-                "|---|---|---|---|---|---|---|"]
+        out += [f"## Axis {axis}", "", "| When | Run | Scored on | Scored by | The claim (hypothesis the researcher wants) | Score | Each scoring | Standing |",
+                "|---|---|---|---|---|---|---|---|"]
         for e in rows:
             pref = e.get("preferred", "")
             mean = e.get("mean") or {}
-            out.append(f"| {str(e.get('time', ''))[:16].replace('T', ' ')} | {e.get('run', '')} | {e.get('basis', '')} | "
+            out.append(f"| {str(e.get('time', ''))[:16].replace('T', ' ')} | {e.get('run', '')} | {e.get('basis', '')} | {cell(e.get('scored_by', 'not recorded'))} | "
                        f"{cell((e.get('statements') or {}).get(pref, ''))} | "
                        f"**{mean.get(pref, '-')}** of {e.get('gauge', 64)} ({', '.join(f'{k} {v}' for k, v in mean.items())}) | "
                        f"{', '.join(str(v.get(pref)) for v in e.get('vectors', []))} | {e.get('standing', '')} |")
@@ -182,9 +185,21 @@ def ladder_render(log: list[dict]) -> str:
     return "\n".join(out) + "\n"
 
 
-def _entry(ctx_run: str, axis: dict, pref: str, gauge: int, target: int, basis: str, res: dict, note: str = "") -> dict:
+def scored_by(ctx, role: str = "frd_assessor") -> str:
+    """The model the scoring role is set to.  Two models can sit ten units apart on the same
+    evidence, so a score means something only beside the model that gave it."""
+    try:
+        prov = ctx.llm.provider_for(role)
+        return f"{prov.name}/{prov.model}"
+    except Exception:  # noqa: BLE001 - a missing provider must not stop a scoring from being recorded
+        return "not recorded"
+
+
+def _entry(ctx_run: str, axis: dict, pref: str, gauge: int, target: int, basis: str, res: dict, note: str = "",
+           model: str = "not recorded") -> dict:
     w = frame_gate._wording(axis)
     return {"time": utcnow(), "run": ctx_run, "axis": axis["axis_id"], "frame_key": _key(axis), "basis": basis,
+            "scored_by": model,
             "question": w["question"], "statements": w["statements"], "preferred": pref, "gauge": gauge,
             "target": target, "vectors": res["vectors"], "mean": res["mean"],
             "standing": standing(res["vectors"], res["mean"], pref, target), "note": note}
@@ -362,7 +377,7 @@ def checkpoint(ctx, n: int, model=None, scorer=None) -> dict | None:
                 res = {**extra, "vectors": res["vectors"] + extra["vectors"], "said": res["said"] + extra["said"]}
                 from .frd_assess import largest_remainder
                 res["mean"] = largest_remainder({i: sum(v[i] for v in res["vectors"]) for i in ids}, gauge) if res["vectors"] else None
-        entry = _entry(ctx.run_id, ax, pref, gauge, target, BASIS[n], res)
+        entry = _entry(ctx.run_id, ax, pref, gauge, target, BASIS[n], res, model=scored_by(ctx))
         a = {k: entry[k] for k in ("preferred", "gauge", "target", "vectors", "mean", "standing", "statements", "question")}
         a["problems"] = res.get("problems", [])
         if a["standing"] in ("below target", "within noise of target"):
@@ -427,7 +442,9 @@ def record_final(ctx) -> None:
                 continue
             res = summarize([{"allocations": vec}], ids, gauge)
             ladder_add(ctx.project_dir, _entry(ctx.run_id, ax, pref, gauge, target_units(ctx.cfg, gauge),
-                                               "the witnesses (final assessment)", res))
+                                               "the witnesses (final assessment)", res,
+                                               model=(data.get("models") or {}).get(ax["axis_id"])
+                                               or scored_by(ctx, "assessor")))
 
 
 def question_check(model, ctx, axis: dict, pref: str) -> dict:
@@ -483,7 +500,7 @@ def rescore(ctx, header: Path | None = None, axis: str | None = None, answers: b
         res = (scorer or score)(ctx, ax, rows, ctx.p("control", "model-and-human-decisions") / "rescore" / f"{aid}-{_key(ax)}",
                                 n, "answers" if answers else "frds", f"rescore-{_key(ax)}", gauge=gauge)
         entry = _entry(ctx.run_id, ax, pref, gauge, target, BASIS[1 if answers else 2], res,
-                       note=f"cr rescore, header {src.name}")
+                       note=f"cr rescore, header {src.name}", model=scored_by(ctx))
         entry["rows"], entry["problems"], entry["warning"] = res.get("rows", len(rows)), res.get("problems", []), warning
         if res["vectors"]:
             ladder_add(ctx.project_dir, entry)

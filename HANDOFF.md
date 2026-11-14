@@ -291,6 +291,7 @@ ChatGPT reviewed revision `3cc3016` and found six defects; Claude reproduced all
 - A setting changed after a stage ran marks that stage and the later ones `stale` in `stage-state.json` (same table as `cr fork`). Nothing is redone unasked; the log, `cr status` and `cr verify` say what to redo. Model and provider changes mark nothing. A setting with no earlier value (a new default) marks nothing.
 - Retention: two claims are redundant only with the same numbers, the same negations and no direction word on one side only.
 - Coach checkpoint 2 scores `coach.times` times whatever the first score is.
+- From ChatGPT's ACH_Eval study (`ACH-Eval-Study-2026-11-14`, 219 readings): the ACH_Eval prompt and the 64 gauge are unchanged. `coach.NOISE` is 3 (was 2), and every ladder entry records `scored_by`, because two models scored the same evidence about ten units apart.
 
 **Report (`report.py`)**
 - Crux candidates are grouped by underlying study from the validated FRDs' provenance labels. Witnesses are not merged; the grouping stops eight witnesses reading as eight studies. The validator prompt now says a review restating a study is `DERIVED_FROM` that study and never names itself.
