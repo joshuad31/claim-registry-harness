@@ -308,3 +308,23 @@ budget exposure at all. The counts above matter only when you route roles to a p
 | A stage says `error` and mentions a skipped request | That stage cannot go on without that answer. Delete the request's `queue\done\<key>.skip.json` to have it asked again. |
 | Windows shows strange characters | The harness writes UTF-8. JSON files saved by Notepad or PowerShell with a byte-order mark are read correctly. A source file that is not UTF-8 is read as Windows-1252 and flagged `NOT_UTF8_DECODED_AS_CP1252` by `cr corpus`. |
 | You changed a prompt | Prompts in `90_METHOD\prompts\` of the project override the built-in ones. Changing a prompt changes its cache key, so the affected calls are asked again. |
+
+## Which findings are the same study (`cr studies`)
+
+`python cr.py studies <project> --run <RUN>` writes `01_FRAME\STUDY-MAP.md` and `.json`: every source file with its
+study and its kind (primary, review, meta-analysis, guideline, commentary, label, regulatory, synthesis). The kind is
+a guess from the title. Read the table once and correct what is wrong under `overrides` in `STUDY-MAP.json`, for
+example `"files": {"Geer2015.pdf.md": {"kind": "review"}}`, then run the command again. The report then says how many
+studies stand behind the witnesses and the crux candidates. This is shown beside the results; it does not change a
+coverage set, a crux test or a score.
+
+## An optional control run (`cr control`)
+
+Everything measured so far comes from questions you cared about. A control asks one you have no stake in, with the
+coach off, so you can see whether the method behaves the same way. It is optional: it costs a quest and a pipeline run
+for an answer you did not ask for, and nothing else depends on it.
+
+`python cr.py control <project> <new folder>` sets one up beside a project (same corpus, index and study map; blank
+question; no notebook links, because the parent's notebooks hold its conversation, so make new ones from the same
+sources). Its `README.md` lists the steps. Afterwards `python cr.py structure <control> --against <project>` sets the
+two runs side by side by shape, not by score.

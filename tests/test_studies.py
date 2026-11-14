@@ -127,7 +127,29 @@ class StudyMapTest(unittest.TestCase):
                                    {"frd_id": "W-A-10", "favors": "H1", "why": "y"}, "W-B-1: supports H1"], attrs)
         self.assertEqual((au["rows_cited"], au["effective_studies"]), (3, 2))
         self.assertEqual(au["one_study_cited_as_several_drivers"],
-                         [{"study": "STUDY-smith2010", "favors": "H1", "rows": ["W-A-1", "W-A-10"]}])
+                         [{"study": "STUDY-smith2010", "favors": "H1", "drivers": 2, "rows": ["W-A-1", "W-A-10"]}])
+
+    def test_drivers_that_name_studies_instead_of_rows_are_audited_too(self):
+        attrs = {"W-A-1": self.attr(1, "smith2010.pdf.md", "a"), "W-A-10": self.attr(2, "smith2010.pdf.md", "b"),
+                 "W-B-1": self.attr(3, "smith2006.pdf.md", "c")}
+        au = studies.driver_audit([{"study": "STUDY-smith2010", "favors": "H1", "why": "the crossover"},
+                                   {"study": "STUDY-smith2010", "favors": "H1", "why": "its TSH result"},
+                                   {"study": "STUDY-smith2006", "favors": "H1", "why": "x"},
+                                   {"favors": "H2", "why": "general clinical experience"}], attrs)
+        self.assertTrue(au["checked"])
+        self.assertEqual((au["rows_cited"], au["effective_studies"], au["drivers_naming_no_row_or_study"]), (0, 2, [4]))
+        self.assertEqual(au["one_study_cited_as_several_drivers"],
+                         [{"study": "STUDY-smith2010", "favors": "H1", "drivers": 2, "rows": []}])
+        # one driver that cites two rows of one study is one driver, and is not flagged
+        self.assertEqual(studies.driver_audit(["W-A-1 and W-A-10 agree"], attrs)["one_study_cited_as_several_drivers"], [])
+        # drivers that name nothing are reported as unchecked, never as clean
+        self.assertFalse(studies.driver_audit(["the weight of the evidence"], attrs)["checked"])
+
+    def test_a_label_or_a_regulators_document_is_not_a_study(self):
+        self.assertEqual(studies.guess_kind("# HIGHLIGHTS OF PRESCRIBING INFORMATION\nSynthroid tablets"), "label")
+        self.assertEqual(studies.guess_kind("# FDA Clinical Pharmacology Review\nNDA 021402"), "regulatory")
+        self.assertEqual(studies.guess_kind("# An open-label crossover trial of bedtime dosing"), "primary")
+        self.assertIn("label", studies.SECONDARY_KINDS)
 
 
 class SecondReaderTest(unittest.TestCase):
@@ -157,7 +179,9 @@ class SecondReaderTest(unittest.TestCase):
 
     def test_no_second_reading_when_no_second_model_is_set_up(self):
         ctx, asked = self.ctx(same=True)
-        self.assertEqual((self.read(ctx), asked), ({}, []))
+        out = self.read(ctx)
+        self.assertEqual((asked, list(out)), ([], ["skipped"]))            # one reader, and it says so
+        self.assertIn("same model", out["skipped"])
         ctx, asked = self.ctx(same=False, mode="off")
         self.assertEqual((self.read(ctx), asked), ({}, []))
         ctx, asked = self.ctx(same=True, mode="on")                       # asked for explicitly: the same model twice
@@ -224,8 +248,17 @@ class RunLevelTest(unittest.TestCase):
 
     def test_a_control_has_the_same_corpus_and_no_one_to_root_for(self):
         dst = self.tmp / "control"
+        parent = read_json(self.proj / "project.json")
+        parent["notebooklm"] = {"notebooks": ["https://notebooklm.google.com/notebook/parent-conversation-0001"],
+                                "profile_dir": "p"}
+        write_json(self.proj / "project.json", parent)
         out = control.make_control(self.proj, dst)
         cfg = read_json(dst / "project.json")
+        # the parent's notebooks hold the parent's conversation, so the control starts without them
+        self.assertEqual((cfg["notebooklm"], out["notebook_links_not_carried_over"]), ({"notebooks": [], "profile_dir": "p"}, 1))
+        self.assertEqual(len(read_json(self.proj / "project.json")["notebooklm"]["notebooks"]), 1)
+        # `cr frame` needs a question file, and must refuse until the researcher has written one
+        self.assertIn("REPLACE", (dst / "01_FRAME" / "question.md").read_text(encoding="utf-8"))
         self.assertEqual((cfg["coach"]["enabled"], cfg["coach"]["preferred"], cfg["coach"]["require_acceptance"]),
                          (False, {}, False))
         self.assertEqual(Path(cfg["corpus"]["source_dir"]), (self.proj / "01_CORPUS" / "source-files").resolve())

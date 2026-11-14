@@ -13,7 +13,8 @@ Two layers
   paper belongs to the first copy's study (``corpus.duplicates``).  The kind of source is a first
   guess from the file's title ("... : a review") and is there to be corrected.
 * Per finding, computed from the run's own records: a finding from a primary source is that study.
-  A finding from a secondary source (a review, a guideline, or a finding the validator labelled
+  A finding from a secondary source (a review, a guideline, a product label, a regulator's document,
+  or a finding the validator labelled
   DERIVED_FROM / DERIVATIVE_UNKNOWN) that names exactly one other study of this corpus, by author
   and year, is that study restated.  One that names several is a summary; one that names none is a
   secondary report whose original is not identified.  Neither is counted as a study of its own.
@@ -42,8 +43,16 @@ MAP_MD = "STUDY-MAP.md"
 
 PRIMARY = "primary"
 # kinds of source that report other people's results; a finding from one is not a study of its own
-SECONDARY_KINDS = ("review", "meta-analysis", "guideline", "commentary", "synthesis")
+SECONDARY_KINDS = ("review", "meta-analysis", "guideline", "commentary", "synthesis", "label", "regulatory")
 _KIND_WORDS = [
+    # a product label or a regulator's document reports and summarises studies; it is not one.
+    # ("open-label" is a trial design, so the bare word "label" is deliberately not matched.)
+    ("label", r"prescribing information|package (?:insert|leaflet)|summary of product characteristics|"
+              r"product monograph|patient information leaflet|medication guide|\b(?:drug|product) label(?:ing)?\b"),
+    ("regulatory", r"federal register|guidance for industry|citizen petition|approval (?:package|letter)|"
+                   r"\b(?:fda|ema|mhra|tga)\b.{0,60}\b(?:review|memorandum|letter|assessment report|briefing)|"
+                   r"(?:medical|clinical pharmacology|statistical) review\(s\)|public assessment report|"
+                   r"drug safety communication"),
     ("meta-analysis", r"meta-?analys[ie]s|pooled analysis|network meta"),
     ("review", r"\breview\b|\boverview\b|state of the art|narrative synthesis"),
     ("guideline", r"guidelines?\b|consensus statement|position statement|recommendations? of the|practice bulletin"),
@@ -310,20 +319,35 @@ STUDY_NOTE = ("STUDY IDENTITY: the rows of the registry are not independent of o
 def driver_audit(drivers, attrs: dict) -> dict:
     """After an assessment: do its drivers lean on one study more than once?
 
-    ``drivers``: the assessment's drivers for one axis (strings or dicts that mention row ids)."""
-    ids = sorted(attrs, key=len, reverse=True)
-    seen: dict = {}
-    for d in drivers or []:
+    ``drivers``: the assessment's drivers for one axis (strings or dicts).  A driver may name rows
+    (witness or FRD ids) or, as the assessor is asked to, studies (``STUDY-...``); both are read.
+    ``checked`` is False when the drivers name neither, so that "nothing found" is never read as
+    "nothing wrong"."""
+    rows = sorted(attrs, key=len, reverse=True)
+    study_ids = sorted({a["study"] for a in attrs.values()}, key=len, reverse=True)
+    uses: dict = {}                                    # (study, favors) -> {"drivers": set, "rows": set}
+    unnamed, cited_rows, cited_studies = [], set(), set()
+    for n, d in enumerate(drivers or [], 1):
         text = d if isinstance(d, str) else " ".join(str(x) for x in d.values())
         favors = (d.get("favors") if isinstance(d, dict) else "") or ""
-        for wid in ids:
-            if wid in text:
-                a = attrs[wid]
-                seen.setdefault((a["study"], favors), []).append(wid)
-                text = text.replace(wid, " ")
-    repeated = [{"study": s, "favors": f, "rows": sorted(set(w))} for (s, f), w in sorted(seen.items())
-                if len(set(w)) > 1]
-    cited = sorted({w for ws in seen.values() for w in ws})
-    return {"drivers": len(drivers or []), "rows_cited": len(cited),
-            "effective_studies": len({s for s, _ in seen}),
+        found: dict = {}
+        for wid in rows:
+            if re.search(rf"(?<![\w-]){re.escape(wid)}(?![\w-])", text):
+                found.setdefault(attrs[wid]["study"], set()).add(wid)
+        for sid in study_ids:
+            if re.search(rf"(?<![\w-]){re.escape(sid)}(?![\w-])", text, re.I):
+                found.setdefault(sid, set())
+        if not found:
+            unnamed.append(n)
+        for sid, ws in found.items():
+            u = uses.setdefault((sid, favors), {"drivers": set(), "rows": set()})
+            u["drivers"].add(n)
+            u["rows"] |= ws
+            cited_rows |= ws
+            cited_studies.add(sid)
+    repeated = [{"study": s, "favors": f, "drivers": len(u["drivers"]), "rows": sorted(u["rows"])}
+                for (s, f), u in sorted(uses.items()) if len(u["drivers"]) > 1]
+    return {"drivers": len(drivers or []), "checked": bool(uses), "rows_cited": len(cited_rows),
+            "studies_cited": sorted(cited_studies), "effective_studies": len(cited_studies),
+            "drivers_naming_no_row_or_study": unnamed,
             "one_study_cited_as_several_drivers": repeated}

@@ -513,7 +513,8 @@ def build_report(ctx, metrics: dict, summary_text: str | None, stamp: bool = Tru
               f"{_study_phrase(ctx, d, [c['witness_id'] for c in cands])}. Witnesses of one study are one study "
               "told more than once, not independent support. Which finding is which study is in "
               "`01_FRAME/STUDY-MAP.md`; it is worked out from file names, titles, provenance labels and "
-              "author-year citations, and can be corrected there."
+              "author-year citations, and can be corrected there. Study identity is shown beside these results; "
+              "it changes no coverage set, no crux test and no score, which are decided from the text alone."
               + (f" {len(cond)} of the {len(cands)} defeat a rival only if a finding transfers to the scope the "
                  "rival's part is about; the transfer is named under each." if cond else ""), "",
               "Coverage behind these results: " + "; ".join(
@@ -635,8 +636,20 @@ def build_report(ctx, metrics: dict, summary_text: str | None, stamp: bool = Tru
                            "correct one; the gap is how much the reader matters.")
             au = ((a.get("study_identity") or {}).get("driver_audit") or {}).get(ax) or {}
             for rpt in au.get("one_study_cited_as_several_drivers", [])[:3]:
-                L.append(f"  - note: {len(rpt['rows'])} drivers rest on one study (`{rpt['study']}`): "
-                         + ", ".join(f"`{w}`" for w in rpt["rows"][:4]))
+                L.append(f"  - note: {rpt.get('drivers') or len(rpt['rows'])} drivers"
+                         + (f" for {rpt['favors']}" if rpt.get("favors") else "")
+                         + f" rest on one study (`{rpt['study']}`)"
+                         + (": " + ", ".join(f"`{w}`" for w in rpt["rows"][:4]) if rpt["rows"] else ""))
+            if au and au.get("drivers") and au.get("checked") is False:
+                L.append("  - note: the drivers name no row and no study, so whether one study was counted more "
+                         "than once could not be checked.")
+            elif au.get("checked") and not au.get("one_study_cited_as_several_drivers"):
+                L.append(f"  - the drivers rest on {au['effective_studies']} different "
+                         f"stud{'y' if au['effective_studies'] == 1 else 'ies'}; none is cited as more than one driver"
+                         + (f" ({len(au['drivers_naming_no_row_or_study'])} driver(s) name no row or study)"
+                            if au.get("drivers_naming_no_row_or_study") else "") + ".")
+        if a.get("second_reader_note"):
+            L.append(f"- One reader: {a['second_reader_note']}")
         L.append("")
     lad = _ladder_lines(ctx, frame) if not summary_record else []
     if lad:

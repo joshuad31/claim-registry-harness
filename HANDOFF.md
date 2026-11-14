@@ -322,5 +322,14 @@ Built from DeepSeek's plan for two of the upgrades in the review. Tests: `tests/
 
 **To apply to an existing run** (no new quest, FRDs or matching): `cr studies <project> --run <RUN>`, read `STUDY-MAP.md`, then fork and redo from coverage: `cr fork <project> --from <RUN> --name <RUN>-STUDIES`, `cr run <project> --run <RUN>-STUDIES --from coverage`. The assessment and the report summary are asked again (a few model calls).
 
-**Open:** which question the control asks is Josh's to choose. The preference-symmetry arm of DeepSeek's plan (a randomly assigned preferred hypothesis) is not built.
+**Repairs after DeepSeek's review of this section (same day)**
+- Driver audit: it read only witness ids, and the assessor (as asked) names studies, so it reported clean having read nothing. It now reads row ids and study ids, counts drivers per study and direction, lists drivers that name neither, and sets `checked: false` when no driver names anything. The report says "could not be checked" in that case.
+- Source kinds: `label` and `regulatory` added and treated as secondary. The bare word "label" is not matched ("open-label" is a trial design). A review whose title does not say so (Geer 2015) is still guessed primary: correct it under `overrides` in `STUDY-MAP.json`.
+- `cr control`: writes a blank `01_FRAME/question.md` (without it `cr frame` refused to run) and removes the parent's notebook links, because those notebooks hold the parent's conversation. The control needs new notebooks made from the same sources.
+- Second reader: when `assessor_b` is the same model as `assessor`, `assessment.json` gets `second_reader_note` and the report says there was one reader.
+- Report: states that study identity is shown beside the results and changes no coverage set, crux test or score.
+- Declined: recording a hash of the control note (no proof machinery yet; the commit dates the note). The 44/8/12 of RUN-LEVO-A2-v7-STUDIES against v7's 42/8/14 is inside run-to-run noise and is not an effect of study identity.
+- The control is optional. It costs a quest and a run on a question the researcher has no stake in; nothing else depends on it.
+
+**Open:** which question the control asks, and whether to run one at all, is Josh's to choose. The preference-symmetry arm of DeepSeek's plan (a randomly assigned preferred hypothesis) is not built.
 

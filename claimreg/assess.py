@@ -124,7 +124,9 @@ def _second_reading(ctx, requests, axis_order, ids_of, gauge, first: dict, probl
             problems.append(f"second reader: {e}")
         return {}
     if mode != "on" and (a.name, a.model) == (b.name, b.model):
-        return {}
+        # the same model twice is a repeat, not a second reader; say so instead of saying nothing
+        return {"skipped": f"`roles.assessor_b` is the same model as the first reader ({a.name}/{a.model}), so "
+                           "there was one reader. Route it to a different model for a second reading."}
     reqs = [LLMRequest(role="assessor_b", system=r.system, user=r.user, expect_json=False,
                        tag=r.tag.replace("final-assessment-", "final-assessment-second-reader-"),
                        salt="second-reader", max_output_tokens=r.max_output_tokens, meta=r.meta) for r in requests]
@@ -222,7 +224,8 @@ def assess_stage(ctx) -> dict:
                       "\n\n".join(fragments) or "(no assessment fragment was produced)")
     out = {"gauge": gauge, **merged, "problems": problems,
            **({"rejected_allocations": rejected} if rejected else {}), "call_keys": call_keys, "models": models,
-           **({"second_reading": second} if second else {}),
+           **({"second_reading": second} if second.get("allocations") is not None else {}),
+           **({"second_reader_note": second["skipped"]} if second.get("skipped") else {}),
            **({"study_identity": {"given_to_assessor": True, "driver_audit": audit}} if study_of else {}),
            "time": utcnow(),
            "caveat": "Uncalibrated working judgments about what this run's validated record warrants; "

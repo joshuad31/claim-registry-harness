@@ -6,7 +6,8 @@ what is seen is the pipeline and not the preference.  Two commands:
 
 * ``cr control <project> <new project folder>`` sets the control up beside an existing project:
   the same corpus (by reference, not copied), the same index, Archivist prompt and study map, the
-  coach off, no preferred hypothesis, and a dated note of what was decided before any evidence
+  coach off, no preferred hypothesis, a blank question file, no notebook links (the parent's
+  notebooks hold the parent's conversation), and a dated note of what was decided before any evidence
   was seen.  The header is NOT copied: a control needs its own question, written by the researcher.
 * ``cr structure <project> --run RUN [--against <project> --against-run RUN]`` reports the shape of
   a run - how much survives each stage, how many studies stand behind the witnesses, how often the
@@ -53,7 +54,15 @@ def make_control(src: Path, dst: Path, name: str | None = None) -> dict:
             v = p.get(key)
             if v and not Path(v).is_absolute():
                 p[key] = str((src / v).resolve())
+    # the parent's notebooks hold the parent's conversation: an Archivist that has already been asked
+    # about the parent's question is not a fresh reader, so the control starts with no notebook saved
+    nb = cfg.get("notebooklm") or {}
+    dropped = len(nb.get("notebooks") or [])
+    if "notebooks" in nb:
+        nb["notebooks"] = []
     write_json(dst / "project.json", cfg)
+    from .onramp import QUESTION_TEMPLATE
+    atomic_write_text(dst / "01_FRAME" / "question.md", QUESTION_TEMPLATE)
     copied = []
     for f in ("index.md", "archivist-custom-prompt.txt", "STUDY-MAP.json", "STUDY-MAP.md", "match-fixtures.json"):
         if (src / "01_FRAME" / f).exists():
@@ -94,21 +103,36 @@ the final assessment land near each other.
 - No preferred hypothesis, and the coach is off (`coach.enabled: false` in `project.json`).
 - The corpus is the parent project's, read in place: `{cfg["corpus"]["source_dir"]}`.
 - The stop rule for the quest:
+- The notebook(s): new ones, made for this control from the same sources. The parent project's notebooks
+  hold its conversation and were not carried over.
 - The second reader of the final assessment (`roles.assessor_b` in `project.json`):
 """)
     atomic_write_text(dst / "README.md", f"""# {cfg["project"]["name"]}
 
 A control for `{src}`: the same corpus and index, a different question, and nobody rooting for an answer.
 
+A control is optional. It costs a quest and a pipeline run on a question you have no stake in, and it
+buys one thing: evidence that the method behaves the same way when nobody wants a particular answer.
+Run it if that is worth the cost to you; nothing in the parent project depends on it.
+
 1. Fill in `01_FRAME/{NOTE}`.
-2. Write the header for your control question: `cr frame "{dst}"`, edit the draft, then `cr approve "{dst}"`.
-   The parent project's header was deliberately not copied.
-3. Run the quest and the pipeline as usual. The coach will not stop the run.
-4. Compare the shape of the two runs (not their scores):
+2. Write your control question in `01_FRAME/question.md` (it starts as the blank template).
+3. Draft the header: `cr frame "{dst}"`, edit the draft, then `cr approve "{dst}"`.
+   The parent project's header was deliberately not copied; its index and Archivist prompt were, and are kept.
+4. Make NEW NotebookLM notebook(s) with the same sources and pass them to the quest:
+   `cr quest "{dst}" --notebook <link>`. The parent's notebook links were removed from this project because
+   those notebooks hold the parent's conversation.
+5. Run the pipeline as usual. The coach will not stop the run.
+6. Compare the shape of the two runs (not their scores):
    `cr structure "{dst}" --against "{src}"`
+
+A control on a different topic needs its own corpus, so it is an ordinary new project (`cr new`) with
+`coach.enabled` set to false, compared with `cr structure` in the same way.
 """)
     return {"control": str(dst), "of": str(src), "corpus": cfg["corpus"]["source_dir"], "copied": copied,
-            "next": f'fill in {dst / "01_FRAME" / NOTE}, then cr frame "{dst}"'}
+            "notebook_links_not_carried_over": dropped,
+            "notebooks": "make new notebook(s) from the same sources for the control; the parent's hold its conversation",
+            "next": f'fill in {dst / "01_FRAME" / NOTE} and {dst / "01_FRAME" / "question.md"}, then cr frame "{dst}"'}
 
 
 # --------------------------------------------------------------------------- #
