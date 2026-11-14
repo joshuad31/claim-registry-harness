@@ -195,6 +195,32 @@ def scored_by(ctx, role: str = "frd_assessor") -> str:
         return "not recorded"
 
 
+def as_read_now(ctx, axis: dict) -> dict:
+    """The run's axis with its question read from the run's own header by the current reader.
+
+    A run keeps the frame it froze.  A frame frozen by an earlier reader can hold the whole axis
+    block where today's reader holds the question sentence, so the same wording would look like two
+    claims.  Reading the run's header again makes one wording one claim; when the header is not
+    there, the frozen frame is used as it is."""
+    cache = getattr(ctx, "_coach_questions", None)
+    if cache is None:
+        cache = {}
+        try:
+            from .header import normalize_hypothesis_ids, parse_header
+            text, _ = normalize_hypothesis_ids(frame_gate._norm(read_text(ctx.p("frame", "header.md"))))
+            cache = {a["axis_id"]: a for a in parse_header(text)["axes"]}
+        except Exception:  # noqa: BLE001 - no header to read: keep the frozen wording
+            cache = {}
+        try:
+            ctx._coach_questions = cache
+        except Exception:  # noqa: BLE001
+            pass
+    now = cache.get(axis.get("axis_id"))
+    same = now and [h["id"] for h in now["hypotheses"]] == [h["id"] for h in axis["hypotheses"]] and \
+        frame_gate._wording(now)["statements"] == frame_gate._wording(axis)["statements"]
+    return {**axis, "question": now["question"]} if same and now.get("question") else axis
+
+
 def _entry(ctx_run: str, axis: dict, pref: str, gauge: int, target: int, basis: str, res: dict, note: str = "",
            model: str = "not recorded") -> dict:
     w = frame_gate._wording(axis)
@@ -377,7 +403,7 @@ def checkpoint(ctx, n: int, model=None, scorer=None) -> dict | None:
                 res = {**extra, "vectors": res["vectors"] + extra["vectors"], "said": res["said"] + extra["said"]}
                 from .frd_assess import largest_remainder
                 res["mean"] = largest_remainder({i: sum(v[i] for v in res["vectors"]) for i in ids}, gauge) if res["vectors"] else None
-        entry = _entry(ctx.run_id, ax, pref, gauge, target, BASIS[n], res, model=scored_by(ctx))
+        entry = _entry(ctx.run_id, as_read_now(ctx, ax), pref, gauge, target, BASIS[n], res, model=scored_by(ctx))
         a = {k: entry[k] for k in ("preferred", "gauge", "target", "vectors", "mean", "standing", "statements", "question")}
         a["problems"] = res.get("problems", [])
         if a["standing"] in ("below target", "within noise of target"):
@@ -441,7 +467,7 @@ def record_final(ctx) -> None:
             if not isinstance(vec, dict) or pref not in ids or getattr(sc, "axis_id", ax["axis_id"]) != ax["axis_id"]:
                 continue
             res = summarize([{"allocations": vec}], ids, gauge)
-            ladder_add(ctx.project_dir, _entry(ctx.run_id, ax, pref, gauge, target_units(ctx.cfg, gauge),
+            ladder_add(ctx.project_dir, _entry(ctx.run_id, as_read_now(ctx, ax), pref, gauge, target_units(ctx.cfg, gauge),
                                                "the witnesses (final assessment)", res,
                                                model=(data.get("models") or {}).get(ax["axis_id"])
                                                or scored_by(ctx, "assessor")))
@@ -478,7 +504,7 @@ def rescore(ctx, header: Path | None = None, axis: str | None = None, answers: b
     gauge = int(frame.get("gauge") or ctx.frame.get("gauge") or ctx.cfg["quest"].get("gauge", 64))    # the header's own gauge
     target = target_units(ctx.cfg, gauge)
     have = set(ctx.axis_ids()) if ctx.axis_layout else {a["axis_id"] for a in frame["axes"]}
-    ran_on = {a["axis_id"]: _key(a) for a in ctx.frame["axes"]}
+    ran_on = {a["axis_id"]: _key(as_read_now(ctx, a)) for a in ctx.frame["axes"]}
     out = []
     for ax in frame["axes"]:
         aid = ax["axis_id"]

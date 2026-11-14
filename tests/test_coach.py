@@ -168,6 +168,28 @@ class CoachTest(unittest.TestCase):
         coach.release(ctx)
         self.assertIsNone(coach.hold_before(ctx, "language"))
 
+    def test_a_frame_frozen_by_an_older_reader_is_still_the_same_claim(self):
+        # the run's frozen frame holds the whole axis block as its "question"; the header has not changed
+        ctx, out = self.run_it(scorer(60), stop="frd_assess")
+        fp = ctx.p("frame", "frame.json")
+        frame = read_json(fp)
+        sentence = frame["axes"][0]["question"]
+        frame["axes"][0]["question"] = sentence + " Frame ID: `A1-X` (`gauge`: `64`). **Governing boundary.** Adult men only."
+        write_json(fp, frame)
+        ctx = RunContext(self.proj, "RUN-C", quiet=True)
+        self.assertNotEqual(coach._key(ctx.frame["axes"][0]), coach._key(coach.as_read_now(ctx, ctx.frame["axes"][0])))
+        self.assertEqual(coach.as_read_now(ctx, ctx.frame["axes"][0])["question"], sentence)
+        asked = []
+        e = coach.rescore(ctx, scorer=scorer(50), times=1, model=lambda *a: asked.append(a[0]) or {})[0]
+        self.assertNotIn("question_check", e)                     # same wording: no question check, no model call
+        self.assertEqual(asked, [])
+        self.assertFalse(list((self.proj / "01_FRAME").glob("QUESTION-CHECK-*")))
+        self.assertEqual(e["frame_key"], coach._key(coach.as_read_now(ctx, ctx.frame["axes"][0])))
+        # a hypothesis reworded since the run froze is NOT read back as the same claim
+        changed = {**ctx.frame["axes"][0], "hypotheses": [{**h, "statement": h["statement"] + " Always."}
+                                                          for h in ctx.frame["axes"][0]["hypotheses"]]}
+        self.assertEqual(coach.as_read_now(ctx, changed)["question"], changed["question"])
+
     def test_the_same_findings_can_be_scored_under_another_frame(self):
         ctx, out = self.run_it(scorer(60), stop="frd_assess")
         self.assertEqual(out["status"], "complete", out)
