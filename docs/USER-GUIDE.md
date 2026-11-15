@@ -260,6 +260,9 @@ the stages those changes affect. Some useful variants:
 | After the matcher fails a qualification pattern: report it but let adjudicated relations stand | `matching.unqualified_policy=disclose` (the default, `agreed_only`, holds them as ABSTAIN) |
 | A second model reads the final assessment and both readings are reported | `roles.assessor_b` set to a different provider than `roles.assessor` (`assess.second_reader`: `auto`, `on`, `off`) |
 | Do not give the assessors the list of which rows are the same study | `assess.study_identity=false`, `frd_assess.study_identity=false` |
+| Say that a constraint only states what the hypothesis is about, so a study of something else is out of scope and not a contradiction | `coverage.constraint_kinds={"<unit id>": "BOUNDARY"}` |
+| A finding that would support under a transfer of scope and count against a premise under one: list both for a reader instead of refusing the option | `coverage.transfer_conflict=flag` (the default is `reject`) |
+| With your language tools on, hold a witness whose question did not transcode cleanly instead of building it from the raw question | `language.question_fallback=hold` (the default is `raw`) |
 | Synonyms for the matching shortlist only | `matching.synonyms` in project.json, e.g. `[["PTX", "pentoxifylline"]]` |
 
 ## 7. Publishing and checking

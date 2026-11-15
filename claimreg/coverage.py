@@ -22,9 +22,22 @@ tests/test_coverage.py.
 
 Validity
 --------
-* contextual constraints: a set is invalid if a member has an approved
-  CONTRADICTS relation to one of the hypothesis's CONTEXTUAL_CONSTRAINT units
-  (``coverage.constraint_veto``);
+* contextual constraints (``coverage.constraint_veto``).  What a member's approved CONTRADICTS
+  relation to one of the hypothesis's CONTEXTUAL_CONSTRAINT units does depends on the constraint
+  and on the relation:
+  - a PREMISE contradicted outright (same scope): the set is invalid;
+  - a PREMISE contradicted only if the finding transfers from another scope (gap_type SCOPE): the
+    set stays valid and names the assumption "this contrary finding does not transfer"; a set that
+    has one is never reported as COMPLETE without assumptions;
+  - a BOUNDARY (what the hypothesis is about): no effect on the set.  A study from outside the
+    boundary is out of scope, not a contradiction; it is recorded as such.
+  One finding cannot both transfer and not transfer.  A witness that would cover a required unit
+  only under a transfer of scope, and whose contrary finding against a premise depends on a
+  transfer of scope too, is a TRANSFER CONFLICT: granted, it contradicts the premise; denied, it
+  covers nothing.  Its conditional option is therefore not offered (``coverage.transfer_conflict:
+  reject``, the default) or is offered and marked for a reader (``flag``).  This is decided when
+  the options are built, for the witness, whatever set it might join, so validity stays monotone.
+  The comparison is by witness: the two transfers are free text and are not compared;
 * approved incompatibilities: a set containing both members of an approved
   incompatible pair is invalid;
 * necessary dependencies: only those of jointly-sufficient groups (all
@@ -62,18 +75,47 @@ class Problem:
     hypothesis_id: str
     required: list[str]
     options: dict[str, list[Option]]
-    constraint_violators: dict[str, list[str]] = field(default_factory=dict)   # witness -> constraint ids
+    constraint_violators: dict[str, list[str]] = field(default_factory=dict)   # witness -> premise ids (hard)
     incompatible: set = field(default_factory=set)                             # frozenset({a,b})
+    # witness -> contrary findings against a premise that hold only under a transfer of scope; these
+    # never invalidate a set, they become an assumption of every set the witness is in
+    conditional_hits: dict[str, list[dict]] = field(default_factory=dict)
+
+
+NO_TRANSFER_TEXT = "the finding transfers to the scope this constraint is about"
 
 
 def build_problem(hid: str, units: list[dict], rel: dict, groups: list[dict], incompat: list[dict],
-                  veto: bool = True, max_options: int = 12, assume_gaps: tuple = ()) -> tuple[Problem, dict]:
-    req = [u["unit_id"] for u in units if u["hypothesis_id"] == hid and u.get("active")
-           and u["type"] == "REQUIRED_SUPPORT"]
-    cons = [u["unit_id"] for u in units if u["hypothesis_id"] == hid and u.get("active")
-            and u["type"] == "CONTEXTUAL_CONSTRAINT"]
+                  veto: bool = True, max_options: int = 12, assume_gaps: tuple = (),
+                  constraint_kinds: dict | None = None, transfer_conflict: str = "reject"
+                  ) -> tuple[Problem, dict]:
+    from .units import constraint_kind
+    mine = [u for u in units if u["hypothesis_id"] == hid and u.get("active")]
+    req = [u["unit_id"] for u in mine if u["type"] == "REQUIRED_SUPPORT"]
+    cons = [u["unit_id"] for u in mine if u["type"] == "CONTEXTUAL_CONSTRAINT"]
+    boundaries = [u["unit_id"] for u in mine if constraint_kind(u, constraint_kinds) == "BOUNDARY"]
+    premises = [c for c in cons if c not in boundaries]
+    # contradictions of constraints, sorted into: hard (premise, same scope), conditional (premise,
+    # only if the finding transfers) and out of scope (boundary)
+    violators: dict[str, list[str]] = {}
+    conditional: dict[str, list[dict]] = {}
+    outside: dict[str, list[str]] = {}
+    if veto:
+        for (w, x), r in rel.items():
+            if r["final"] != "CONTRADICTS":
+                continue
+            if x in boundaries:
+                outside.setdefault(w, []).append(x)
+            elif x in premises and r.get("gap_type") == "SCOPE":
+                gap = (r.get("gap") or "").strip()
+                conditional.setdefault(w, []).append({
+                    "constraint_id": x, "witness_id": w, "gap_type": "SCOPE", "basis": r.get("basis", ""),
+                    "transfer": gap or NO_TRANSFER_TEXT, **({} if gap else {"assumption_text_missing": True})})
+            elif x in premises:
+                violators.setdefault(w, []).append(x)
     opts: dict[str, list[Option]] = {}
     truncated = {}
+    conflicts = []
     for uid in req:
         lst = []
         for (w, x), r in sorted(rel.items()):
@@ -88,23 +130,28 @@ def build_problem(hid: str, units: list[dict], rel: dict, groups: list[dict], in
             cond = [(brank.get(r.get("basis"), 3), w, r) for (w, x), r in rel.items()
                     if x == uid and r["final"] == "PARTIALLY_COVERS" and r.get("gap_type") in assume_gaps]
             for _, w, r in sorted(cond, key=lambda t: (t[0], t[1])):
+                asm = (r.get("gap") or r.get("trace") or "the finding transfers to the "
+                       "scope this unit requires").strip()
+                if w in conditional and r.get("gap_type") == "SCOPE":
+                    conflicts.append({"reason": "TRANSFER_CONFLICT", "unit_id": uid, "witness_id": w,
+                                      "support_transfer": asm,
+                                      "contrary": [{"constraint_id": h["constraint_id"], "transfer": h["transfer"]}
+                                                   for h in conditional[w]],
+                                      "option_offered": transfer_conflict == "flag"})
+                    if transfer_conflict != "flag":
+                        continue
                 lst.append(Option(make_id("OPT", {"u": uid, "w": [w], "c": 1}), uid, (w,), "PARTIALLY_COVERS",
-                                  assumption=(r.get("gap") or r.get("trace") or "the finding transfers to the "
-                                              "scope this unit requires").strip()))
+                                  assumption=asm))
         if len(lst) > max_options:
             rank = {"EQUIVALENT": 0, "WITNESS_ENTAILS_UNIT": 1, "JOINTLY_SUFFICIENT": 2}
             lst = sorted(lst, key=lambda o: (rank.get(o.relation, 3), len(o.witnesses), o.witnesses))
             truncated[uid] = len(lst)
             lst = lst[:max_options]
         opts[uid] = lst
-    violators: dict[str, list[str]] = {}
-    if veto:
-        for (w, x), r in rel.items():
-            if x in cons and r["final"] == "CONTRADICTS":
-                violators.setdefault(w, []).append(x)
     inc = {frozenset((r["a"], r["b"])) for r in incompat if r.get("approved")}
-    return Problem(hid, req, opts, violators, inc), {"options_truncated": truncated,
-                                                     "constraints": cons}
+    return Problem(hid, req, opts, violators, inc, conditional), {
+        "options_truncated": truncated, "constraints": cons, "boundaries": boundaries,
+        "outside_scope": outside, "transfer_conflicts": conflicts}
 
 
 def _valid(ws: set, pb: Problem) -> tuple[bool, str]:
@@ -232,6 +279,74 @@ def _set_assumptions(pb: Problem, ws: set) -> list[dict]:
     return out
 
 
+def _set_contrary(pb: Problem, ws: set) -> list[dict]:
+    """The contrary findings a set assumes do NOT transfer: one entry per conditional contradiction of
+    a premise by a member.  Computed for the final set, never inherited from a candidate."""
+    return [{"constraint_id": h["constraint_id"], "witness_id": w, "transfer": h["transfer"],
+             **({"assumption_text_missing": True} if h.get("assumption_text_missing") else {})}
+            for w in sorted(ws) for h in pb.conditional_hits.get(w, [])]
+
+
+def annotate_sets(pb: Problem, res: dict, conflicts: list[dict]) -> None:
+    """Write onto every set what it assumes, in two groups: transfers granted for support
+    (``assumptions``) and contrary findings assumed not to transfer."""
+    flagged = {(c["unit_id"], c["witness_id"]): c for c in conflicts if c.get("option_offered")}
+    for s in res.get("sets", []):
+        ws = set(s["witnesses"])
+        sup = _set_assumptions(pb, ws)
+        if sup or "assumptions" in s:
+            s["assumptions"] = sup
+        con = _set_contrary(pb, ws)
+        if con:
+            s["contrary_assumed_not_to_transfer"] = con
+        both = [flagged[(a["unit_id"], a["witness_id"])] for a in sup if (a["unit_id"], a["witness_id"]) in flagged]
+        if both:
+            s["transfer_conflicts"] = both
+        s["needs_assumptions"] = bool(sup or con)
+
+
+def cover_hypothesis(hid: str, units: list[dict], rel: dict, groups: list[dict], inc: list[dict],
+                     ccfg: dict) -> tuple[Problem, dict, dict, int, list[dict]]:
+    """Coverage of one hypothesis from the saved records and the ``coverage`` settings alone:
+    (problem, info, result, required units with a complete option, transfer conflicts)."""
+    assume = tuple(g for g in (ccfg.get("assume_gaps") or []) if g)
+    tc = str(ccfg.get("transfer_conflict", "reject")).lower()
+    kw = dict(veto=bool(ccfg.get("constraint_veto", True)), max_options=int(ccfg.get("max_options_per_unit", 12)),
+              constraint_kinds=dict(ccfg.get("constraint_kinds") or {}), transfer_conflict=tc)
+    limits = (int(ccfg.get("max_states", 3000)), int(ccfg.get("max_sets", 200)))
+    pb, info = build_problem(hid, units, rel, groups, inc, **kw)
+    res = solve(pb, *limits)
+    strict_covered = sum(1 for u in pb.required if pb.options.get(u))
+    conflicts: list[dict] = []
+    if res["status"] == "NO_COMPLETE_COVERAGE" and assume:
+        pb2, info2 = build_problem(hid, units, rel, groups, inc, assume_gaps=assume, **kw)
+        conflicts = info2["transfer_conflicts"]
+        if any(o.assumption for opts in pb2.options.values() for o in opts):
+            res2 = solve(pb2, *limits)
+            pb, info = pb2, info2       # the conditional options are shown either way
+            if res2["sets"]:
+                res = res2
+                res["status"] = "COMPLETE_WITH_ASSUMPTIONS"
+                res["note"] = ("No set of complete matches covers every required unit. The sets listed "
+                               "cover the remaining units with findings from another population, species, "
+                               "model or dose; each set names the transfer it assumes.")
+            else:
+                res["uncovered_units"] = [u for u in pb.required if not pb.options.get(u)]
+        dropped = [c for c in conflicts if not c["option_offered"]]
+        if dropped and not res["sets"]:
+            res["note"] = ((res.get("note") or "") + f" {len(dropped)} conditional option(s) were not "
+                           "offered (TRANSFER_CONFLICT): the same witness's contrary finding against a "
+                           "premise would transfer with it. Set coverage.transfer_conflict to \"flag\" "
+                           "to list them for a reader instead.").strip()
+    annotate_sets(pb, res, conflicts)
+    if res["status"] == "COMPLETE" and res["sets"] and all(s["needs_assumptions"] for s in res["sets"]):
+        res["status"] = "COMPLETE_WITH_ASSUMPTIONS"
+        res["note"] = ("Every required unit has a complete match, but every set includes a witness whose "
+                       "contrary finding against a premise, made in another scope, is assumed not to "
+                       "transfer; each set names it.")
+    return pb, info, res, strict_covered, conflicts
+
+
 def coverage_stage(ctx) -> dict:
     ccfg = ctx.cfg["coverage"]
     from .matching import relations_index
@@ -240,31 +355,11 @@ def coverage_stage(ctx) -> dict:
     groups = ctx.load("matching", "03_match-records/joint-groups.json", default=[]) or []
     from .joint import incompatibility_records
     inc = incompatibility_records(ctx)
-    assume = tuple(g for g in (ccfg.get("assume_gaps") or []) if g)
-    veto = bool(ccfg.get("constraint_veto", True))
-    max_opt = int(ccfg.get("max_options_per_unit", 12))
+    tc = str(ccfg.get("transfer_conflict", "reject")).lower()
     out = {}
     for ax in ctx.frame["axes"]:
         for h in ax["hypotheses"]:
-            pb, info = build_problem(h["id"], units, rel, groups, inc, veto=veto, max_options=max_opt)
-            res = solve(pb, int(ccfg.get("max_states", 3000)), int(ccfg.get("max_sets", 200)))
-            strict_covered = sum(1 for u in pb.required if pb.options.get(u))
-            if res["status"] == "NO_COMPLETE_COVERAGE" and assume:
-                pb2, info2 = build_problem(h["id"], units, rel, groups, inc, veto=veto, max_options=max_opt,
-                                           assume_gaps=assume)
-                if any(o.assumption for opts in pb2.options.values() for o in opts):
-                    res2 = solve(pb2, int(ccfg.get("max_states", 3000)), int(ccfg.get("max_sets", 200)))
-                    pb, info = pb2, info2       # the conditional options are shown either way
-                    if res2["sets"]:
-                        res = res2
-                        res["status"] = "COMPLETE_WITH_ASSUMPTIONS"
-                        for s in res["sets"]:
-                            s["assumptions"] = _set_assumptions(pb, set(s["witnesses"]))
-                        res["note"] = ("No set of complete matches covers every required unit. The sets listed "
-                                       "cover the remaining units with findings from another population, species, "
-                                       "model or dose; each set names the transfer it assumes.")
-                    else:
-                        res["uncovered_units"] = [u for u in pb.required if not pb.options.get(u)]
+            pb, info, res, strict_covered, conflicts = cover_hypothesis(h["id"], units, rel, groups, inc, ccfg)
             if info["options_truncated"] and res.get("search_status") == "EXHAUSTIVE":
                 res["search_status"] = "RESOURCE_BOUNDED"
             evaluative = [u["unit_id"] for u in units if u["hypothesis_id"] == h["id"]
@@ -282,7 +377,10 @@ def coverage_stage(ctx) -> dict:
                                  **({"assumption": o.assumption} if o.assumption else {})}
                                 for o in pb.options[u]]
                             for u in pb.required},
-                "constraint_violators": pb.constraint_violators,
+                "constraint_violators": pb.constraint_violators,      # hard: a premise contradicted outright
+                "conditional_constraint_hits": pb.conditional_hits,   # a premise contradicted only if it transfers
+                "boundaries": info["boundaries"], "outside_scope": info["outside_scope"],
+                "transfer_conflicts": conflicts, "transfer_conflict_policy": tc,
                 "units_covered": sum(1 for u in pb.required if pb.options.get(u)),
                 "units_covered_strict": strict_covered,
                 "evaluative_units": evaluative,
@@ -311,6 +409,13 @@ def coverage_stage(ctx) -> dict:
     ctx.save("coverage", "coverage.json", {"hypotheses": out, "time": utcnow()}, "coverage-sets")
     from .ledger import write_ledger
     led = write_ledger(ctx, out)
+    # how each hypothesis was compiled into the units these sets cover: read from saved records, no
+    # model call, not a gate
+    try:
+        from .requirements import write_view
+        write_view(ctx, out)
+    except Exception as e:  # noqa: BLE001 - never let a reading aid stop coverage
+        ctx.log(f"   coverage: requirements view not written ({type(e).__name__}: {e})")
     return {**{h: {"status": r["status"], "sets": len(r["sets"]), "search": r["search_status"],
                    "covered_units": f"{r['units_covered']}/{len(r['required_units'])}"} for h, r in out.items()},
             "ledger": led}

@@ -12,8 +12,12 @@ open; each is stated so it can be attacked):
   (w, X).  "w realizes a falsifier of r" means EQUIVALENT/WITNESS_ENTAILS_UNIT
   for (w, an ADVERSE_TEST unit of r).
 * T1 (consistency) FAILS when w contradicts any unit r asserts (required,
-  constraint or corroborating expectation) or realizes one of r's recorded
+  premise constraint or corroborating expectation) or realizes one of r's recorded
   falsifiers.  Certificate: the conflicting rule bundle (units + match records).
+  A BOUNDARY constraint (what r is about: its population, intervention, comparator ...)
+  asserts nothing a finding could refute, so it is not part of T1: a study from outside
+  r's boundary is out of r's scope, not in conflict with r.  The certificate lists such
+  units under ``outside_rival_scope``.
 * T2 (coverage) FAILS when, once w is established, r can no longer reach complete
   coverage: (a) w contradicts one of r's REQUIRED_SUPPORT units, so no option for that
   unit can be held alongside w; or (b) after removing every option that contains a
@@ -52,12 +56,17 @@ from .util import digest, utcnow
 PASS, FAIL, UNKNOWN = "PASS", "FAIL", "UNKNOWN"
 
 
-def compile_theory(hid: str, units: list[dict], cov: dict, incompat: list[dict]) -> dict:
+def compile_theory(hid: str, units: list[dict], cov: dict, incompat: list[dict],
+                   constraint_kinds: dict | None = None) -> dict:
+    from .units import constraint_kind
     mine = [u for u in units if u["hypothesis_id"] == hid and u.get("active")]
+    boundaries = [u["unit_id"] for u in mine if constraint_kind(u, constraint_kinds) == "BOUNDARY"]
     body = {
         "hypothesis_id": hid,
         "required": [u["unit_id"] for u in mine if u["type"] == "REQUIRED_SUPPORT"],
-        "constraints": [u["unit_id"] for u in mine if u["type"] == "CONTEXTUAL_CONSTRAINT"],
+        # premise constraints only: what r assumes about the world.  Boundaries are listed apart.
+        "constraints": [u["unit_id"] for u in mine if u["type"] == "CONTEXTUAL_CONSTRAINT"
+                        and u["unit_id"] not in boundaries],
         "corroborating": [u["unit_id"] for u in mine if u["type"] == "CORROBORATING_EXPECTATION"],
         "adverse": [u["unit_id"] for u in mine if u["type"] == "ADVERSE_TEST"],
         "options": cov.get("options", {}),
@@ -68,6 +77,8 @@ def compile_theory(hid: str, units: list[dict], cov: dict, incompat: list[dict])
         "incompatibilities": sorted([sorted([r["a"], r["b"]]) for r in incompat if r.get("approved")]),
         "dependencies": [o["witnesses"] for opts in cov.get("options", {}).values() for o in opts if o.get("joint")],
     }
+    if boundaries:      # added only when there are any, so a theory without boundaries keeps its id
+        body["boundaries"] = boundaries
     body["theory_id"] = "BTHEORY-" + digest(body)
     return body
 
@@ -103,15 +114,18 @@ def test_t1(w: str, th: dict, rel: dict, missing_is_none: bool = False) -> tuple
             r = rel[(w, u)]
             hits.append({"unit_id": u, "unit_group": "adverse_test_realized", "relation": f,
                          "basis": r["basis"], "trace": r.get("trace", "")})
+    # a contrary relation to a boundary of r: the witness is about something r is not about
+    outside = [u for u in th.get("boundaries", []) if _rel(rel, w, u) == "CONTRADICTS"]
+    scope = {"outside_rival_scope": outside} if outside else {}
     if hits:
-        return FAIL, {"kind": "T1_cannot_be_accommodated", "conflicting_rule_bundle": hits,
+        return FAIL, {"kind": "T1_cannot_be_accommodated", "conflicting_rule_bundle": hits, **scope,
                       "holds_only_with_assumptions": all(h.get("conditional") for h in hits),
                       "why": "the witness contradicts content the rival asserts or realizes one of its "
                              "recorded falsifiers"}
     if unknown and not missing_is_none:
-        return UNKNOWN, {"kind": "T1_unknown", "unjudged_units": unknown,
+        return UNKNOWN, {"kind": "T1_unknown", "unjudged_units": unknown, **scope,
                          "why": "relations needed for this test were never judged"}
-    return PASS, {"kind": "T1_accommodated", "units_checked": checked,
+    return PASS, {"kind": "T1_accommodated", "units_checked": checked, **scope,
                   "unjudged_treated_as_no_relation": unknown,
                   "why": "no CONTRADICTS relation with any asserted unit and no realized falsifier"
                          + ("; some rival units were outside the diagnostic shortlist" if unknown else "")}
@@ -293,7 +307,8 @@ def crux_stage(ctx) -> dict:
     home_sets, partial_home = _home_sets(cov_all)
     rel = relations_index(ctx)
 
-    theories = {h: compile_theory(h, units, cov_all.get(h, {}), inc_recs) for h in rivals}
+    kinds = dict(ctx.cfg["coverage"].get("constraint_kinds") or {})
+    theories = {h: compile_theory(h, units, cov_all.get(h, {}), inc_recs, kinds) for h in rivals}
     ctx.save("crux", "01_frozen-rival-theories/theories.json", theories, "frozen-rival-theories")
 
     limits = {"max_states": int(ctx.cfg["coverage"].get("max_states", 3000))}

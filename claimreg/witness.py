@@ -4,6 +4,13 @@ Steps (each a batch of independent model calls, all cached):
 
 1. Applications: the origin question for every retained validated FRD (required
    origin reuse); optionally the cluster-best question (spec 24.4 experiment).
+   Every question that will be applied is transcoded first (technical
+   specification 1, step 11).  The constructor and the auditor read the
+   transcoded question when its transcoding passed and the raw question
+   otherwise (``language.question_fallback: raw``, a declared variant), and each
+   witness records which (``question_form``).  With ``question_fallback: hold``
+   an application whose question did not pass is held for review instead.  With
+   the language layer off the transcoded question is the raw question.
 2. Construct v1 at the raw ceiling (60 words).
 3. Ceiling exception: a constructor ABSTAIN at 60 words is retried once at the
    exception ceiling (80 words) and recorded as CEILING_EXCEPTION.  This is a
@@ -165,13 +172,26 @@ def build_witnesses(ctx) -> dict:
     questions = {q["qid"]: q for q in ctx.load("discovery", "01_issued-questions/questions.json",
                                                  default=[]) or []}
     apps = build_applications(ctx, retained, questions)
+    # the question each application is read through: transcoded when that passed, raw otherwise
+    from .language import transcode_questions
+    qrec = transcode_questions(ctx, questions, [a["qid"] for a in apps])
+    lang_on = ctx.cfg["language"].get("mode", "off") != "off"
+    hold = lang_on and str(ctx.cfg["language"].get("question_fallback", "raw")).lower() == "hold"
+    raw_questions = questions
+    questions = {q: ({**raw_questions.get(q, {}), "text": r["transcoded"]} if r.get("status") == "PASS"
+                     else raw_questions.get(q, {})) for q, r in qrec.items()}
+    qform = {q: ("transcoded" if r.get("status") == "PASS" else "raw") for q, r in qrec.items()}
+    held_for_question = [a for a in apps if hold and qform.get(a["qid"]) == "raw"]
+    if held_for_question:
+        apps = [a for a in apps if qform.get(a["qid"]) != "raw"]
 
     def head(a):
         try:
             return ctx.corpus.text(vmap[a["vfrd_id"]]["source_file"])[:3000]
         except Exception:
             return ""
-    ctx.save("witnesses", "01_question-applications/applications.json", apps, "question-applications")
+    ctx.save("witnesses", "01_question-applications/applications.json", apps + held_for_question,
+             "question-applications")
     versions: dict[str, list[dict]] = {a["witness_id"]: [] for a in apps}
 
     # step 1: construct at the raw ceiling
@@ -290,7 +310,10 @@ def build_witnesses(ctx) -> dict:
                "text": last["text"], "words": word_count(last["text"]), "version": last["version"],
                "ceiling": last["ceiling"], "ceiling_exception": bool(last.get("ceiling_exception")),
                "constructor_status": last["status"], "audit_verdict": la["verdict"] if la else None,
-               "audit_reason": la["reason"] if la else "", "mechanical": last.get("mechanical", {})}
+               "audit_reason": la["reason"] if la else "", "mechanical": last.get("mechanical", {}),
+               # which form of the producing question the constructor and the auditor read
+               "question_form": qform.get(a["qid"], "raw"),
+               "question_transcode_status": (qrec.get(a["qid"]) or {}).get("status", "")}
         if last["status"] == "WITNESS" and la and la["verdict"] == "PASS" and last["mechanical"].get("ok"):
             rec["status"] = "RELEASED"
             released.append(rec)
@@ -303,11 +326,23 @@ def build_witnesses(ctx) -> dict:
             rec["status"] = "HELD"
             rec["held_reason"] = why
             held.append(rec)
+    for a in held_for_question:
+        v = vmap[a["vfrd_id"]]
+        held.append({"witness_id": a["witness_id"], "app_id": a["app_id"], "application": a["kind"],
+                     "vfrd_id": a["vfrd_id"], "frd_id": v.get("frd_id", a["vfrd_id"]), "qid": a["qid"],
+                     "source_file": v["source_file"], "locator": v.get("citation", {}).get("locator", ""),
+                     "text": "", "words": 0, "status": "HELD", "question_form": "none",
+                     "question_transcode_status": (qrec.get(a["qid"]) or {}).get("status", ""),
+                     "held_reason": "the producing question's transcoding needs review "
+                                    "(language.question_fallback: hold); no witness was constructed"})
     ctx.save("witnesses", "02_raw-witnesses/witness-versions.json", all_versions, "witness-versions")
     ctx.save("witnesses", "03_fidelity-reviews/audits.json", all_audits, "fidelity-audits")
     ctx.save("witnesses", "04_repaired-or-held/held.json", held, "held-witnesses")
     ctx.save("witnesses", "05_released/witnesses.json", released, "released-witnesses")
-    return {"applications": len(apps), "released": len(released), "held": len(held),
+    return {"applications": len(apps) + len(held_for_question), "released": len(released), "held": len(held),
+            **({"question_forms": {"transcoded": sum(1 for r in released if r["question_form"] == "transcoded"),
+                                   "raw_fallback": sum(1 for r in released if r["question_form"] == "raw"),
+                                   "held_for_question": len(held_for_question)}} if lang_on else {}),
             "ceiling_exceptions": sum(1 for r in released if r["ceiling_exception"]),
             "audit_pass_first_round": sum(1 for a in all_audits if a["round"] == 1 and a["verdict"] == "PASS"),
             "time": utcnow()}

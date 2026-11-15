@@ -490,7 +490,8 @@ README_TEXT = {
     "08_COVERAGE": ("Deletion-minimal hypothesis coverage sets with removal certificates and search status, and "
                     "the premise ledger: where every required part of every hypothesis stands.",
                     "The approved matching record, joint groups, incompatibilities.",
-                    "coverage.json, premise-ledger.json, PREMISE-LEDGER.md",
+                    "coverage.json, premise-ledger.json, PREMISE-LEDGER.md, HYPOTHESIS-REQUIREMENTS.md "
+                    "(how each hypothesis was compiled into the units the sets cover; read it first)",
                     "Recheck any set by deleting each witness: every deletion must break coverage. A set marked "
                     "COMPLETE_WITH_ASSUMPTIONS lists each transfer it relies on.",
                     "Crux identification (09).",
@@ -525,6 +526,8 @@ AXIS_CONTENTS = [   # what a reader looks for -> where it is inside an axis fold
     ("Coverage units of this axis's hypotheses", "07_MATCHING/01_hypothesis-units/units.json"),
     ("Match records (this axis's witnesses against this axis's units)", "07_MATCHING/03_match-records/relations.json"),
     ("Coverage sets", "08_COVERAGE/coverage.json"),
+    ("How each hypothesis was compiled into requirements (read before coverage and crux)",
+     "08_COVERAGE/HYPOTHESIS-REQUIREMENTS.md"),
     ("Premise ledger", "08_COVERAGE/PREMISE-LEDGER.md"),
     ("Crux candidates", "09_CRUX/05_candidates/crux-candidates.json"),
     ("Assessment", "10_REPORTS/assessment.json"),

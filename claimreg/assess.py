@@ -35,6 +35,17 @@ def coverage_summary_text(ctx, axis_id: str | None = None) -> str:
                      f"({c.get('search_status')})")
         for u in c.get("uncovered_units", []):
             lines.append(f"   uncovered: {u} - {units.get(u, {}).get('text', '')}")
+        # contrary findings from another scope that a set assumes do not transfer: stated to the
+        # assessor in the same way as the transfers a crux candidate depends on (lines added only
+        # when there are any, so a run without them sends the same text as before)
+        for a in ((c.get("sets") or [{}])[0].get("contrary_assumed_not_to_transfer") or [])[:4]:
+            lines.append(f"   example set assumes the contrary finding of {a['witness_id']} against "
+                         f"{a['constraint_id']} does not transfer: {a['transfer']}")
+        for a in (c.get("transfer_conflicts") or [])[:4]:
+            lines.append(f"   transfer conflict: {a['witness_id']} could cover {a['unit_id']} only under a transfer "
+                         "of scope, while its contrary finding against "
+                         + ", ".join(x["constraint_id"] for x in a["contrary"]) + " depends on one too ("
+                         + ("offered, for a reader to judge" if a.get("option_offered") else "not offered") + ")")
     if not axis_id:
         for cand in crux.get("candidates", []):
             lines.append(f"CRUX CANDIDATE {cand['witness_id']} (home {cand['home']}) defeats "

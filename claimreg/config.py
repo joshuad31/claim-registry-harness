@@ -185,6 +185,9 @@ DEFAULT_CONFIG: dict[str, Any] = {
         "min_sentences": 3,           # three distinct example sentences per active sense
         "max_candidates": 40,
         "dictionary_file": None,      # optional frozen dictionary to reuse (spec 22.2)
+        # a question whose transcoding did not pass: raw (the witness is built from the raw question and
+        # says so; a declared variant) | hold (that question's applications are held for review)
+        "question_fallback": "raw",
     },
     "matching": {
         "shortlist_k": 30,             # REQUIRED_SUPPORT and CONTEXTUAL_CONSTRAINT units
@@ -243,6 +246,13 @@ DEFAULT_CONFIG: dict[str, Any] = {
         # population / species / model / dose, with the transfer recorded as a named assumption
         # (status COMPLETE_WITH_ASSUMPTIONS).  [] turns the tier off.
         "assume_gaps": ["SCOPE"],
+        # A witness that would cover a required unit only under a transfer of scope, while its contrary
+        # finding against a premise also depends on a transfer of scope: reject (its conditional option
+        # is not offered) | flag (it is offered, and both transfers are listed for a reader).
+        "transfer_conflict": "reject",
+        # manual override of the unit compiler: {unit_id: "BOUNDARY" | "PREMISE"} for CONTEXTUAL_CONSTRAINT
+        # units.  A BOUNDARY says what the hypothesis is about and is never a veto or a T1 conflict.
+        "constraint_kinds": {},
     },
     "crux": {
         "diagnostic_top_n": 15,

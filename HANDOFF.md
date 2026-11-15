@@ -333,3 +333,31 @@ Built from DeepSeek's plan for two of the upgrades in the review. Tests: `tests/
 
 **Open:** which question the control asks, and whether to run one at all, is Josh's to choose. The preference-symmetry arm of DeepSeek's plan (a randomly assigned preferred hypothesis) is not built.
 
+## 21. Conditional contradictions, the requirements view, question transcoding (2026-11-14, Claude Fable 5.2 session)
+
+Built from `HANDOFF-SPEC-UPGRADES-2026-11-14.md`, after DeepSeek's design and ChatGPT's corrections of it. Tests: `tests/test_conditional_contradictions.py`, `tests/test_requirements.py`, `tests/test_question_transcoding.py`. Nothing here has been run against a live model.
+
+**One standard for support and contradiction from another scope (`coverage.py`, `ledger.py`, `crux.py`, `report.py`)**
+- A CONTEXTUAL_CONSTRAINT is a BOUNDARY (what the hypothesis is about; nothing refutes it) or a PREMISE (an assumption a finding could show false). The unit compiler records `constraint_kind` (prompt `units_derive.md` v3); `coverage.constraint_kinds` ({unit_id: kind}) overrides it by hand for one run. A constraint nobody classified is a PREMISE, which is the old rule. A project that keeps its own `90_METHOD/prompts/units_derive.md` does not get the new instruction until that copy is updated.
+- A set member's CONTRADICTS against a PREMISE: outright (no `gap_type`) invalidates the set, as before. With `gap_type: SCOPE` the set stays valid and names it under `contrary_assumed_not_to_transfer`; a hypothesis whose every set has one is COMPLETE_WITH_ASSUMPTIONS, even when all its support is direct. This does not depend on `coverage.assume_gaps`.
+- Against a BOUNDARY: no veto and no T1 conflict. The witness is listed as outside the hypothesis's scope (`outside_scope` in `coverage.json`, `outside_rival_scope` in a T1 certificate).
+- Transfer conflict: a witness that would cover a required unit only under a transfer of scope, while its contrary finding against a premise also depends on one. Its conditional option is not offered (`coverage.transfer_conflict: reject`, default) or is offered and marked (`flag`). It is decided when options are built, per witness, so the solver's validity stays monotone. The two transfers are free text and are not compared, so this can refuse an option whose two transfers differ in kind (dose versus population); `flag` is for that case.
+- Ledger: `contradicted_by` now lists outright contradictions only; conditional ones are in `contradicted_if_transferred`. New statuses CONTESTED_IF_TRANSFERRED, CONTRADICTED_IF_TRANSFERRED and BOUNDARY.
+- Report, evidence packets and the final assessor's coverage summary say "counts against this if the finding transfers" with the transfer, and each example set lists both groups of assumptions.
+- On RUN-LEVO-A2-v7's saved records: old and new code give the same sets and the same 144 test results. With `A2-H1-C1` and `A2-H1-C2` marked BOUNDARY the one hard veto (`W-FRD-Q0024-01-Q0024`) becomes "outside scope", no set changes, and one T1 result goes from UNKNOWN to PASS. The eight candidates are unchanged. v7 has no CONTRADICTS with a scope gap, so the conditional rule does nothing there until matching is redone.
+- Found on the way: v7's saved `coverage.json` (120 sets for A2-H1) is older than its `relations.json`. Re-deciding from the saved relations gives 102, with old code and new alike, because two complete matches for `A2-H1-R1` were judged during crux completion after coverage was written.
+
+**Hypothesis-to-requirements view (`claimreg/requirements.py`)**
+- Written by the coverage stage: `08_COVERAGE/HYPOTHESIS-REQUIREMENTS.md` and `.json`. Also a short section at the top of `CRUX-REPORT.md` and a Requirements tab in `report.html`. Saved records only, no model call, not a gate.
+- Per hypothesis: every sentence with the units anchored on it; sentences with no unit ("written by you, checked by nothing"); each unit's role, state and options; which sentences were read as ALL of several units and which unit as ANY ONE of its alternatives; what is not a requirement; what complete coverage does and does not let a reader conclude.
+- Where the record holds nothing (why a sentence was divided as it was; which of two identical passages licensed a unit) it prints NOT RECORDED.
+- Hints, shown and never enforced: a required unit with no option; two required units on the same words; an anchor that occurs twice; a required unit anchored only on corroboration or falsification text; an anchor under six words.
+- On v7: A2-H1 has 5 required, 3 constraint, 4 adverse, 4 expected and 1 evaluative unit. Its sentences 3 (the two patient groups) and 5 (all of its assumptions) have no unit, and three of its five required units (R1, R2, R5) are anchored on "Potential corroboration" text. A2-H2's second sentence has no unit.
+
+**Questions transcoded before witnesses (`language.transcode_questions`, `witness.py`)**
+- The witness stage transcodes every applied question first and saves `05_WITNESSES/01_question-applications/transcoded-questions.json`. The constructor and the auditor read the transcoded question when it passed, the raw one otherwise; each witness records `question_form`. `language.question_fallback: hold` holds that question's applications instead. The matcher is never given a question.
+- With `language.mode: off` (every run so far) the records are the identity and no prompt changes.
+
+**Not built:** independent binding passes, protected-property review, deterministic vocabulary and sense accounting (stages 3b to 3d of the spec). They wait for the off-versus-labels comparison on a real run (3e), which costs model calls.
+
+**To see these on an existing run** (no model call for coverage; the report summary is asked again): fork and redo from coverage, `cr fork <project> --from <RUN> --name <RUN>-REQ`, then `cr run <project> --run <RUN>-REQ --from coverage`. To mark boundaries by hand, put `"coverage": {"constraint_kinds": {"<unit id>": "BOUNDARY"}}` in `project.json` first.

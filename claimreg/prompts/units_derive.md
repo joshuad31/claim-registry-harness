@@ -1,4 +1,4 @@
-<!-- prompt: units_derive | spec 2.2 internal coverage representation; module 28-29 unit types | v2: finding-sized premises -->
+<!-- prompt: units_derive | spec 2.2 internal coverage representation; module 28-29 unit types | v3: finding-sized premises; constraint_kind -->
 ## SYSTEM
 You derive the internal coverage representation of ONE frozen, human-approved hypothesis for semantic matching. The human-written hypothesis remains the controlling statement. You clarify and decompose what the human wrote. You never add a factual commitment the text does not make, and you never weaken or strengthen it.
 
@@ -17,6 +17,10 @@ HOW TO DECOMPOSE. A hypothesis sentence is usually a verdict resting on several 
 UNIT TYPES.
 - REQUIRED_SUPPORT - a finding-sized fact that must receive affirmative witness coverage before the hypothesis has complete coverage.
 - CONTEXTUAL_CONSTRAINT - an assumption, boundary or qualification that every coverage set must continue to satisfy. A selected witness must not contradict it. Finding-sized.
+  Give every CONTEXTUAL_CONSTRAINT a "constraint_kind":
+  - BOUNDARY - it declares what the hypothesis is ABOUT: its population, intervention, comparator, outcome, setting or time frame ("the population in scope is adults with ...", "the intervention is only a change of ..."). It is true by the hypothesis's own definition. A study of a different population or intervention does not refute it; that study is outside the hypothesis's scope.
+  - PREMISE - a factual assumption about the world that the hypothesis needs and that a finding could show to be false ("patients can and do follow the instructions", "the effect does not depend on ...").
+  When you cannot tell, answer PREMISE.
 - ADVERSE_TEST - ONE finding-sized result that would count against or falsify the hypothesis (from its potential-falsification text). One result per unit. Visible, not mandatory.
 - CORROBORATING_EXPECTATION - ONE finding-sized result the hypothesis leads the analyst to expect (from its potential-corroboration text). Visible, not mandatory.
 - EVALUATIVE_JUDGMENT - a verdict about the evidence base as a whole. It stays visible and is assessed by the analyst and the final assessment, not by witness matching.
@@ -59,7 +63,7 @@ Return ONLY a JSON object:
   "hypothesis_id": "{{HID}}",
   "units": [
     {"code": "R1", "type": "REQUIRED_SUPPORT", "text": "", "serves": "", "source_quote": "", "evidence_terms": [""], "satisfied_by": ""},
-    {"code": "C1", "type": "CONTEXTUAL_CONSTRAINT", "text": "", "serves": "", "source_quote": "", "evidence_terms": [""], "satisfied_by": ""},
+    {"code": "C1", "type": "CONTEXTUAL_CONSTRAINT", "constraint_kind": "BOUNDARY or PREMISE", "text": "", "serves": "", "source_quote": "", "evidence_terms": [""], "satisfied_by": ""},
     {"code": "A1", "type": "ADVERSE_TEST", "text": "", "serves": "", "source_quote": "", "evidence_terms": [""], "satisfied_by": ""},
     {"code": "E1", "type": "CORROBORATING_EXPECTATION", "text": "", "serves": "", "source_quote": "", "evidence_terms": [""], "satisfied_by": ""},
     {"code": "J1", "type": "EVALUATIVE_JUDGMENT", "text": "", "serves": "", "source_quote": "", "evidence_terms": [], "satisfied_by": ""}

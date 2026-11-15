@@ -141,6 +141,20 @@ def _load_all(ctx) -> dict:
     d["joint"] = ctx.load("matching", "03_match-records/joint-groups.json", default=[]) or []
     from .joint import incompatibility_records
     d["incompat"] = {"records": incompatibility_records(ctx)}
+    d["constraint_kinds"] = dict((ctx.cfg.get("coverage") or {}).get("constraint_kinds") or {})
+    # how each hypothesis was compiled into units; a run whose coverage stage predates the view
+    # gets it built here from the same saved records
+    req = ctx.load("coverage", "HYPOTHESIS-REQUIREMENTS.json", default=None)
+    if not req:
+        try:
+            from .requirements import build_view
+            from .util import read_text
+            hp = ctx.p("frame", "header.md")
+            req = build_view(ctx.frame, list(d["units"].values()), d["coverage"], d["ledger"],
+                             read_text(hp) if hp.exists() else "", d["constraint_kinds"])
+        except Exception:  # noqa: BLE001 - a reading aid
+            req = {}
+    d["requirements"] = req or {}
     return d
 
 
@@ -154,7 +168,17 @@ def _direct(c: dict) -> str:
     n, cov = len(c.get("required_units", [])), c.get("units_covered", 0)
     strict = c.get("units_covered_strict", cov)
     return (f"{strict} of {n} required parts covered directly"
-            + (f", {cov} with a named transfer" if cov != strict else ""))
+            + (f", {cov} with a named transfer" if cov != strict else "") + _assumed(c))
+
+
+def _assumed(c: dict) -> str:
+    """For a hypothesis covered only with assumptions: how many of each kind its first set makes."""
+    s = (c.get("sets") or [{}])[0]
+    con = len(s.get("contrary_assumed_not_to_transfer", []))
+    if not con:
+        return ""
+    return (f"; its example set grants {len(s.get('assumptions', []))} transfer(s) for support and assumes "
+            f"{con} contrary finding(s) do not transfer")
 
 
 def _budget_note(r: dict) -> str:
@@ -299,6 +323,16 @@ def evidence_packets(d: dict) -> list[dict]:
         return [{**wref(r["witness_id"]), "relation": r["final"], "basis": r.get("basis"),
                  "overlap": round(ov, 2)} for ov, r, w in scored[:k]]
 
+    from .units import constraint_kind
+    kinds = d.get("constraint_kinds") or {}
+
+    def con(r, kind):
+        """An objection row; one that holds only under a transfer of scope says so, as support does."""
+        if r.get("gap_type") == "SCOPE":
+            return {"kind": kind + " if the finding transfers", "conditional": True,
+                    "transfer": r.get("gap") or "the finding transfers to the scope this part is about"}
+        return {"kind": kind}
+
     out = []
     for ax in d["frame"]["axes"]:
         for h in ax["hypotheses"]:
@@ -331,7 +365,7 @@ def evidence_packets(d: dict) -> list[dict]:
                             {**wref(r["witness_id"]), "relation": r["final"], "basis": r.get("basis")} for r in part[:2]],
                             "nearest": nearest(rs, u["text"]) if not part else []})
                     for r in contra[:2]:
-                        pk["objections"].append({**base, "kind": "contradicts a required part", "rank": 0,
+                        pk["objections"].append({**base, **con(r, "contradicts a required part"), "rank": 0,
                                                  **wref(r["witness_id"]), "basis": r.get("basis"),
                                                  "trace": r.get("trace", "")})
                 elif u["type"] == "ADVERSE_TEST":
@@ -340,14 +374,21 @@ def evidence_packets(d: dict) -> list[dict]:
                                                  **wref(r["witness_id"]), "basis": r.get("basis"),
                                                  "trace": r.get("trace", "")})
                 elif u["type"] == "CONTEXTUAL_CONSTRAINT":
-                    pk["qualifications"].append({**base, "supported_by": [wref(r["witness_id"]) for r in full[:2]],
-                                                 "contradicted_by": [wref(r["witness_id"]) for r in contra[:2]]})
+                    boundary = constraint_kind(u, kinds) == "BOUNDARY"
+                    hard = [r for r in contra if r.get("gap_type") != "SCOPE" and not boundary]
+                    cond = [r for r in contra if r.get("gap_type") == "SCOPE" and not boundary]
+                    pk["qualifications"].append({
+                        **base, "boundary": boundary, "supported_by": [wref(r["witness_id"]) for r in full[:2]],
+                        "contradicted_by": [wref(r["witness_id"]) for r in hard[:2]],
+                        "contradicted_if_transferred": [{**wref(r["witness_id"]), "transfer": r.get("gap", "")}
+                                                        for r in cond[:2]],
+                        "outside_scope": [wref(r["witness_id"]) for r in contra[:2]] if boundary else []})
                 elif u["type"] == "CORROBORATING_EXPECTATION":
                     if full or contra:
                         pk["corroboration"].append({**base, "met_by": [wref(r["witness_id"]) for r in full[:2]],
                                                     "contradicted_by": [wref(r["witness_id"]) for r in contra[:2]]})
                     for r in contra[:1]:
-                        pk["objections"].append({**base, "kind": "contradicts an expected corollary", "rank": 2,
+                        pk["objections"].append({**base, **con(r, "contradicts an expected corollary"), "rank": 2,
                                                  **wref(r["witness_id"]), "basis": r.get("basis"),
                                                  "trace": r.get("trace", "")})
             pk["objections"].sort(key=lambda o: (o["rank"], _BASIS_RANK.get(o.get("basis"), 3), o["unit_id"]))
@@ -390,14 +431,24 @@ def render_packets(ctx, packets: list[dict]) -> str:
         for o in pk["objections"][:5]:
             L.append(f"- `{o['witness_id']}` {o['kind']} `{o['unit_id']}` ({truncate_words(o['unit_text'], 22)}) "
                      f"[{o['basis']}]: {o['text']} — {src(o)}")
+            if o.get("conditional"):
+                L.append(f"  - counts against this if the finding transfers: {truncate_words(o['transfer'], 40)}")
         L += ["", "**Material qualifications** — conditions the hypothesis depends on"]
         if not pk["qualifications"]:
             L.append("- none stated")
         for q in pk["qualifications"]:
             sup = ", ".join(f"`{w['witness_id']}`" for w in q["supported_by"]) or "no witness"
             con = ", ".join(f"`{w['witness_id']}`" for w in q["contradicted_by"])
+            if q.get("boundary"):
+                out_ = ", ".join(f"`{w['witness_id']}`" for w in q["outside_scope"])
+                L.append(f"- `{q['unit_id']}` *the hypothesis is about:* {truncate_words(q['unit_text'], 30)}"
+                         + (f" — outside this hypothesis's scope: {out_}" if out_ else ""))
+                continue
             L.append(f"- `{q['unit_id']}` {truncate_words(q['unit_text'], 30)} — supported by {sup}"
                      + (f"; contradicted by {con}" if con else ""))
+            for w in q.get("contradicted_if_transferred", []):
+                L.append(f"  - counts against this if the finding transfers: `{w['witness_id']}` "
+                         f"({truncate_words(w['transfer'], 35)})")
         if pk["corroboration"]:
             L += ["", "**Expected corollaries**"]
             for c in pk["corroboration"]:
@@ -460,12 +511,37 @@ def build_report(ctx, metrics: dict, summary_text: str | None, stamp: bool = Tru
                                        for h, c in d["coverage"].items()) + " |",
           f"| Crux | {len(d['crux'].get('candidates', []))} candidates; "
           f"{len(d['crux'].get('diagnostic_witnesses', []))} diagnostic witnesses (extended review) |", ""]
+    # how the hypotheses were compiled: the short form, before any coverage or crux result
+    rq = (d.get("requirements") or {}).get("hypotheses", {})
+    if rq:
+        L += ["## How each hypothesis was compiled", "",
+              "Coverage and the crux tests are run against the units each hypothesis was compiled into, not "
+              "against its sentences. `08_COVERAGE/HYPOTHESIS-REQUIREMENTS.md` shows the compilation sentence by "
+              "sentence; read it before the results below.", ""]
+        for ax in frame["axes"]:
+            for h in ax["hypotheses"]:
+                v = rq.get(h["id"])
+                if not v:
+                    continue
+                c = v["counts"]
+                un = v["unmapped_sentences"]
+                off = v["diagnostics"].get("required_units_anchored_only_on_corroboration_or_falsification_text", [])
+                L.append(f"- **{h['id']}** - {c['REQUIRED_SUPPORT']} required, {c['CONTEXTUAL_CONSTRAINT']} "
+                         f"constraint, {c['ADVERSE_TEST']} adverse-test, {c['CORROBORATING_EXPECTATION']} expected, "
+                         f"{c['EVALUATIVE_JUDGMENT']} evaluative unit(s) from {len(v['sentences'])} sentences; "
+                         + (f"{len(un)} sentence(s) have no unit and are checked by nothing "
+                            f"({', '.join(map(str, un))})" if un else "every sentence has a unit")
+                         + (f"; {len(off)} required unit(s) are anchored only on corroboration or falsification "
+                            "text" if off else "") + ".")
+        L.append("")
     # premise ledger: where each required part stands
     led = d.get("ledger", {}).get("hypotheses", {})
     if led:
         name = {"ESTABLISHED": "established", "CONTESTED": "contested", "SUPPORTED_WITH_ASSUMPTION":
                 "supported if a transfer is granted", "PARTIAL_ONLY": "partly supported",
-                "CONTRADICTED": "contradicted", "UNADDRESSED": "not addressed"}
+                "CONTRADICTED": "contradicted", "UNADDRESSED": "not addressed",
+                "CONTESTED_IF_TRANSFERRED": "established, contested only if a finding transfers",
+                "CONTRADICTED_IF_TRANSFERRED": "contradicted only if a finding transfers"}
         L += ["## What each hypothesis rests on", "",
               "Each hypothesis is broken into required parts that one published finding could establish. "
               "`08_COVERAGE/PREMISE-LEDGER.md` lists every part with its witnesses; this is the short form.", ""]
@@ -495,6 +571,10 @@ def build_report(ctx, metrics: dict, summary_text: str | None, stamp: bool = Tru
                         extra = f" (`{a['witness_id']}`, if: {truncate_words(a['assumption'], 22)})"
                     elif r["status"] == "CONTRADICTED":
                         extra = f" (against: {', '.join('`' + w + '`' for w in r['contradicted_by'][:2])})"
+                    elif r["status"] in ("CONTESTED_IF_TRANSFERRED", "CONTRADICTED_IF_TRANSFERRED"):
+                        a = r["contradicted_if_transferred"][0]
+                        extra = (f" (against, if the finding transfers: `{a['witness_id']}`: "
+                                 f"{truncate_words(a['transfer'], 22)})")
                     L.append(f"  - {name[r['status']]} `{r['unit_id']}`: {truncate_words(r['text'], 28)}{extra}")
         L.append("")
     # crux candidates
@@ -586,9 +666,29 @@ def build_report(ctx, metrics: dict, summary_text: str | None, stamp: bool = Tru
             if c.get("sets"):
                 s = c["sets"][0]
                 L.append(f"  - example set `{s['set_id']}`: " + ", ".join(f"`{w}`" for w in s["witnesses"]))
-                for a in s.get("assumptions", [])[:4]:
+                sup, con_ = s.get("assumptions", []), s.get("contrary_assumed_not_to_transfer", [])
+                if con_:
+                    L.append(f"    - this set relies on {len(sup)} transfer(s) granted for support and {len(con_)} "
+                             "contrary finding(s) assumed not to transfer:")
+                for a in sup[:4]:
                     L.append(f"    - assumes for `{a['unit_id']}` (from `{a['witness_id']}`): "
                              f"{truncate_words(a['assumption'], 30)}")
+                for a in con_[:4]:
+                    L.append(f"    - assumes the contrary finding of `{a['witness_id']}` against "
+                             f"`{a['constraint_id']}` does not transfer: {truncate_words(a['transfer'], 30)}")
+                for a in s.get("transfer_conflicts", [])[:4]:
+                    L.append(f"    - **transfer conflict, for a reader to judge:** `{a['witness_id']}` is granted a "
+                             f"transfer to cover `{a['unit_id']}` ({truncate_words(a['support_transfer'], 22)}) and "
+                             "denied one against " + ", ".join(
+                                 f"`{x['constraint_id']}` ({truncate_words(x['transfer'], 22)})" for x in a["contrary"]))
+            for a in [x for x in c.get("transfer_conflicts", []) if not x.get("option_offered")][:4]:
+                L.append(f"  - not offered (TRANSFER_CONFLICT): `{a['witness_id']}` could cover `{a['unit_id']}` only "
+                         "under a transfer of scope, and its contrary finding against "
+                         + ", ".join(f"`{x['constraint_id']}`" for x in a["contrary"])
+                         + " would transfer with it")
+            for w, cs in sorted((c.get("outside_scope") or {}).items())[:4]:
+                L.append(f"  - outside this hypothesis's scope: `{w}` (against the boundary "
+                         + ", ".join(f"`{x}`" for x in cs) + "); not an objection")
             ev = [u for u in d["units"].values() if u["hypothesis_id"] == h["id"] and u["type"] == "EVALUATIVE_JUDGMENT"]
             if ev:
                 L.append(f"  - evaluative judgments left to the analyst: " +
@@ -697,7 +797,13 @@ def build_report(ctx, metrics: dict, summary_text: str | None, stamp: bool = Tru
         f"{', '.join(q.get('unqualified_patterns', [])) or 'none'}.",
         f"Language layer: {d['transcoding'].get('mode', 'off')}"
         + (" (identity transcoder: matching used raw witness and unit text)." if d['transcoding'].get('mode', 'off') == 'off'
-           else f"; {sum(1 for i in d['transcoding'].get('items', []) if i.get('status') == 'REVIEW')} items withheld as REVIEW."),
+           else f"; {sum(1 for i in d['transcoding'].get('items', []) if i.get('status') == 'REVIEW')} items withheld as REVIEW."
+           + (lambda ws: (f" Questions were transcoded before the witnesses were built: "
+                          f"{sum(1 for w in ws if w.get('question_form') == 'transcoded')} released witnesses were "
+                          f"built from a transcoded question and "
+                          f"{sum(1 for w in ws if w.get('question_form') == 'raw')} from the raw question, because "
+                          "its transcoding did not pass (a declared variant).")
+              if any(w.get("question_form") for w in ws) else "")(list(d["witnesses"].values()))),
         f"Witness ceiling: {ctx.cfg['witness']['raw_ceiling']} words, with "
         f"{sum(1 for w in d['witnesses'].values() if w.get('ceiling_exception'))} recorded per-witness "
         f"exceptions up to {ctx.cfg['witness']['exception_ceiling']} words; {len(d['held'])} witnesses held"
@@ -762,6 +868,7 @@ def _html(ctx, d, report_md: str, metrics: dict) -> str:
         "coverage": d["coverage"], "crux": d["crux"], "relations": rel,
         "tests": [t for t in d["tests"] if t.get("tests_failed")], "metrics": metrics,
         "assessment": d["assessment"], "report": report_md, "packets": d.get("packets", []),
+        "requirements": (d.get("requirements") or {}).get("hypotheses", {}),
     }
     payload = json.dumps(data, ensure_ascii=False).replace("</", "<\\/")
     return HTML_TEMPLATE.replace("__TITLE__", html.escape(d["frame"].get("title", "Claim Registry run"))) \
@@ -834,18 +941,30 @@ const W=Object.fromEntries(D.witnesses.concat(D.held).map(w=>[w.witness_id,w]));
 const Q=Object.fromEntries(D.questions.map(q=>[q.qid,q]));const R=Object.fromEntries(D.responses.map(r=>[r.qid,r]));const U=Object.fromEntries(D.units.map(u=>[u.unit_id,u]));
 const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 document.getElementById('sub').textContent=`Run ${D.run} · ${D.witnesses.length} released witnesses · ${D.vfrds.length} validated FRDs · ${D.questions.length} questions`;
-const tabs={Report:showReport,Evidence:showP,Cruxes:showCrux,Coverage:showCov,Witnesses:showW,FRDs:showF,Questions:showQ,Metrics:showM};
+const tabs={Report:showReport,Requirements:showReq,Evidence:showP,Cruxes:showCrux,Coverage:showCov,Witnesses:showW,FRDs:showF,Questions:showQ,Metrics:showM};
 const nav=document.getElementById('nav');for(const t in tabs){const b=document.createElement('button');b.textContent=t;b.onclick=()=>{[...nav.children].forEach(x=>x.classList.remove('on'));b.classList.add('on');tabs[t]()};nav.appendChild(b)}nav.children[0].click();
 function M(h){document.getElementById('main').innerHTML=h}
 function hide(){document.getElementById('detail').style.display='none'}
 function detail(h){document.getElementById('dbody').innerHTML=h;document.getElementById('detail').style.display='block'}
 function wl(id){return `<a onclick="openW('${id}')" class="k">${esc(id)}</a>`}
 function showReport(){M(`<div class="card"><pre>${esc(REPORT)}</pre></div>`)}
+function showReq(){const RQ=D.requirements||{};let h='<p class="mut">Coverage sets and crux tests are decided against the units below, not against the hypothesis sentences. Read this before the coverage and crux results. It is computed from saved records: no model call, not an approval step, no effect on any result.</p>';
+for(const ax of D.frame.axes){for(const hy of ax.hypotheses){const v=RQ[hy.id];if(!v)continue;const by=Object.fromEntries(v.units.map(u=>[u.unit_id,u]));const c=v.counts;
+h+=`<div class="card"><h2>${esc(v.hypothesis_id)} <small class="mut">${esc(v.title)}</small></h2><p class="mut">${c.REQUIRED_SUPPORT} required · ${c.CONTEXTUAL_CONSTRAINT} constraint · ${c.ADVERSE_TEST} adverse-test · ${c.CORROBORATING_EXPECTATION} expected · ${c.EVALUATIVE_JUDGMENT} evaluative${v.rivals.length?' · the compiled theory the crux tests are run against when a witness of '+esc(v.rivals.join(', '))+' is tested':''}</p>
+<h4>The hypothesis as written, and what each sentence produced</h4>${v.sentences.map(s=>`<div><span class="k">${s.n}</span> <small class="mut">${esc(s.part_label)}</small> ${esc(s.text)}${s.units.length?s.units.map(id=>`<div style="margin-left:22px"><span class="k">${esc(id)}</span> <span class="tag">${esc(by[id].role)}</span> <small class="mut">anchored on: “${esc(by[id].anchor_quote)}”</small></div>`).join(''):'<div style="margin-left:22px" class="'+(v.unmapped_sentences.includes(s.n)?'bad':'mut')+'">no unit</div>'}</div>`).join('')}
+${v.unmapped_sentences.length?`<p class="bad"><b>Written by you, checked by nothing:</b> sentence ${v.unmapped_sentences.join(', ')}. No unit is anchored there, so neither coverage nor the crux tests see it.</p>`:'<p class="ok">Every sentence has at least one unit anchored on it.</p>'}
+${v.header_anchored_units.length?`<p class="mut">Anchored on header passages or another hypothesis, not on this text: ${esc(v.header_anchored_units.join(', '))}</p>`:''}
+<h4>Requirements</h4><table><tr><th>unit</th><th>role</th><th>text</th><th>satisfied by</th><th>state</th><th>options</th></tr>${v.units.filter(u=>u.type!='EVALUATIVE_JUDGMENT').map(u=>`<tr><td class="k">${esc(u.unit_id)}</td><td>${esc(u.role)}</td><td>${esc(u.text)}<br><small class="mut">serves: ${esc(u.serves)}</small></td><td>${esc(u.satisfied_by)}</td><td>${u.active?esc(String(u.status).replace(/_/g,' ').toLowerCase()):'<span class="warn">not used: '+esc(u.inactive_reason)+'</span>'}</td><td>${u.coverage?u.coverage.strict_options+' direct, '+u.coverage.conditional_options+' with a transfer':'–'}</td></tr>`).join('')}</table>
+<h4>How the text was read</h4><p>${esc(v.how_read.solver_rule)} That is ${esc(v.how_read.this_is)}.</p>${v.how_read.conjunctions.map(x=>`<div>Sentence ${x.sentence} was read as requiring ALL of: <span class="k">${esc(x.units.join(', '))}</span></div>`).join('')}${v.how_read.alternatives.map(a=>`<div><span class="k">${esc(a.unit_id)}</span> was read as requiring ANY ONE of: ${a.alternatives.map(x=>'('+esc(x.label)+') '+esc(x.text)).join('; ')}</div>`).join('')}${v.how_read.alternatives_unclear.map(x=>`<div class="warn"><span class="k">${esc(x)}</span> may list alternatives in another form; for a person to check</div>`).join('')}<div class="mut">Why each sentence was divided as it was: ${esc(v.how_read.why_divided_this_way)}</div>
+${(v.not_requirements.evaluative.length||v.not_requirements.inactive.length)?`<h4>Not requirements</h4><p class="mut">Judged in the final assessment, not by witness matching.</p>${v.not_requirements.evaluative.map(e=>`<div><span class="k">${esc(e.unit_id)}</span> ${esc(e.text)}${e.derived_type?' <span class="warn">demoted: '+esc(e.reason)+'</span>':''}</div>`).join('')}${v.not_requirements.inactive.map(e=>`<div><span class="k">${esc(e.unit_id)}</span> ${esc(e.text)} <span class="warn">${esc(e.reason)}</span></div>`).join('')}`:''}
+<h4>What complete coverage would let a reader conclude</h4><p>State in this run: <b>${esc(v.coverage.status||'n/a')}</b>${v.coverage.required?` · ${v.coverage.covered_directly} of ${v.coverage.required} required parts matched directly, ${v.coverage.covered_only_with_a_transfer} only with a transfer`:''}</p><b>It means</b><ul>${v.complete_coverage.means.map(m=>`<li>${esc(m)}</li>`).join('')}</ul><b>It does not mean</b><ul>${v.complete_coverage.does_not_mean.map(m=>`<li>${esc(m)}</li>`).join('')}</ul>
+${(()=>{const g=v.diagnostics;const l=[];(g.required_units_without_an_option||[]).forEach(x=>l.push(esc(x)+' has no coverage option'));(g.required_units_anchored_on_the_same_words||[]).forEach(x=>l.push(esc(x.join(', '))+' are anchored on the same words'));(g.anchor_occurs_more_than_once||[]).forEach(a=>l.push('the anchor of '+esc(a.unit_id)+' occurs '+a.occurrences+' times; which one licensed the unit is NOT RECORDED'));(g.required_units_anchored_only_on_corroboration_or_falsification_text||[]).forEach(a=>l.push(esc(a.unit_id)+' is a requirement anchored only on “'+esc(a.part)+'” text'));(g.required_units_with_an_anchor_under_six_words||[]).forEach(a=>l.push(esc(a.unit_id)+' is anchored on '+a.words+' words'));return l.length?'<h4>Worth a look</h4><p class="mut">Mechanical hints; none changes a result.</p><ul>'+l.map(x=>'<li>'+x+'</li>').join('')+'</ul>':''})()}</div>`}}
+M(h||'<p class="mut">No requirements record.</p>')}
 function wit(w){return `${wl(w.witness_id)}${w.relation?` <small class="mut">${esc(w.relation)} · ${esc(w.basis)}</small>`:''}<blockquote>${esc(w.text)}</blockquote><small class="mut">${esc(w.source_file)}${w.locator?' · '+esc(w.locator):''}</small>`}
 function showP(){M((D.packets||[]).map(p=>`<div class="card"><h2>${esc(p.hypothesis_id)} <small class="mut">${esc(p.title)}</small></h2><p class="mut">Axis ${esc(p.axis_id)} (${esc(p.approval)}) · coverage ${esc(p.coverage_status)} · required parts established ${esc(p.required_covered)}${p.allocation!=null?' · allocation '+esc(p.allocation):''}</p><p>${esc(p.statement)}</p>
 <h4>Controlling claims</h4>${p.controlling.length?p.controlling.map(c=>`<div><span class="k">${esc(c.unit_id)}</span> ${esc(c.unit_text)}${c.witnesses.map(wit).join('')}</div>`).join(''):'<p class="mut">none</p>'}
-<h4>Strongest objections</h4>${p.objections.length?p.objections.slice(0,5).map(o=>`<div><span class="tag bad">${esc(o.kind)}</span> <span class="k">${esc(o.unit_id)}</span> ${esc(o.unit_text)}${wit(o)}</div>`).join(''):'<p class="mut">none found among judged pairs</p>'}
-<h4>Material qualifications</h4>${p.qualifications.length?p.qualifications.map(q=>`<div><span class="k">${esc(q.unit_id)}</span> ${esc(q.unit_text)} — supported by ${q.supported_by.map(w=>wl(w.witness_id)).join(', ')||'<span class="warn">no witness</span>'}${q.contradicted_by.length?' · contradicted by '+q.contradicted_by.map(w=>wl(w.witness_id)).join(', '):''}</div>`).join(''):'<p class="mut">none stated</p>'}
+<h4>Strongest objections</h4>${p.objections.length?p.objections.slice(0,5).map(o=>`<div><span class="tag bad">${esc(o.kind)}</span> <span class="k">${esc(o.unit_id)}</span> ${esc(o.unit_text)}${o.conditional?' <span class="mut">counts against this if the finding transfers: '+esc(o.transfer)+'</span>':''}${wit(o)}</div>`).join(''):'<p class="mut">none found among judged pairs</p>'}
+<h4>Material qualifications</h4>${p.qualifications.length?p.qualifications.map(q=>`<div><span class="k">${esc(q.unit_id)}</span> ${esc(q.unit_text)} — supported by ${q.supported_by.map(w=>wl(w.witness_id)).join(', ')||'<span class="warn">no witness</span>'}${q.contradicted_by.length?' · contradicted by '+q.contradicted_by.map(w=>wl(w.witness_id)).join(', '):''}${(q.contradicted_if_transferred||[]).length?' · counts against this if the finding transfers: '+q.contradicted_if_transferred.map(w=>wl(w.witness_id)+' ('+esc(w.transfer)+')').join(', '):''}${(q.outside_scope||[]).length?' · outside the scope of this hypothesis: '+q.outside_scope.map(w=>wl(w.witness_id)).join(', '):''}</div>`).join(''):'<p class="mut">none stated</p>'}
 <h4>Gaps</h4>${p.gaps.length?p.gaps.map(g=>`<div><span class="k">${esc(g.unit_id)}</span> ${esc(g.unit_text)} ${g.partly.length?'— partly: '+g.partly.map(w=>wl(w.witness_id)).join(', '):'<span class="bad">— nothing addresses it</span>'}</div>`).join(''):'<p class="mut">none</p>'}</div>`).join('')||'<p class="mut">No packets.</p>')}
 function showCrux(){const c=D.crux.candidates||[];const g=D.crux.diagnostic_witnesses||[];
 M(`<h2>Crux candidates (${c.length})</h2>`+(c.length?c.map(x=>`<div class="card">${wl(x.witness_id)} <span class="tag">home ${esc(x.home)}</span> defeats ${x.defeats.map(r=>`<span class="tag bad">${esc(r)}</span>`).join('')}${(x.defeats_only_with_assumptions||[]).length?' <span class="tag">only if a transfer holds: '+esc(Object.values(x.assumptions||{}).flat().map(a=>a.assumption).join(' | '))+'</span>':''}<blockquote>${esc((W[x.witness_id]||{}).text)}</blockquote></div>`).join(''):'<p class="mut">None. See Coverage for uncovered required units.</p>')+

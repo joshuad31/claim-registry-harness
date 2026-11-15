@@ -10,9 +10,12 @@
        v5.1 for up to ``language.dictionary_passes`` passes;
     2. rulebook: imported (``language.rulebook_file``) or built with
        Mr. Canonicalizer v1.1 (one pass);
-    3. Mr. Transcoder v1.0 on every released witness and every active
-       coverage unit, in small batches, with only the relevant dictionary
-       entries supplied.
+    3. Mr. Transcoder v1.0 on every question that will be applied to an FRD
+       (before witness construction: the witness constructor and the fidelity
+       audit read the transcoded question when it passed, and the raw question
+       otherwise, and each witness records which), then on every released
+       witness and every active coverage unit, in small batches, with only the
+       relevant dictionary entries supplied.
   A mechanical check then compares raw and transcoded text (numbers, negation,
   modality, length).  Anything that fails is REVIEW and is withheld from
   matching (the raw witness is kept and reported).
@@ -217,18 +220,10 @@ def mechanical_conformance(raw: str, new: str, ceiling: int | None) -> dict:
     return {"ok": not issues, "issues": issues}
 
 
-def transcode_stage(ctx) -> dict:
+def _run_transcoder(ctx, items: list[dict], ceiling_of, tag: str = "transcode") -> None:
+    """Send ``items`` ({item_id, type, raw}) through the transcoder and the mechanical checks, in
+    place: each gets transcoded, status (PASS | REVIEW), bindings, rules, check."""
     lcfg = ctx.cfg["language"]
-    mode = lcfg.get("mode", "off")
-    witnesses = ctx.load("witnesses", "05_released/witnesses.json", default=[]) or []
-    units = [u for u in (ctx.load("matching", "01_hypothesis-units/units.json", default=[]) or []) if u.get("active")]
-    items = ([{"item_id": w["witness_id"], "type": "WITNESS", "raw": w["text"]} for w in witnesses]
-             + [{"item_id": u["unit_id"], "type": "HYPOTHESIS", "raw": u["text"]} for u in units])
-    if mode == "off":
-        for it in items:
-            it.update(transcoded=it["raw"], status="IDENTITY", bindings="", rules="", check="identity transcoder")
-        ctx.save("transcoding", "transcoded.json", {"mode": "off", "items": items, "time": utcnow()}, "transcoded")
-        return {"mode": "off", "items": len(items)}
     dic = ctx.load("language", "02_dictionary/dictionary-entries.json", default={}) or {}
     entries = dic.get("entries", [])
     rule_text = read_text(ctx.p("language", "03_canonicalizer/rulebook.md"))
@@ -244,10 +239,9 @@ def transcode_stage(ctx) -> dict:
                                              DICTIONARY=dtext, RULEBOOK_ID=status.get("rulebook_id", ""),
                                              RULEBOOK=rule_text_short, ITEMS=itxt)
         reqs.append(LLMRequest(role="transcoder", system=system, user=user, expect_json=False,
-                               tag=f"transcode:{bno}", meta={"items": batch}))
+                               tag=f"{tag}:{bno}", meta={"items": batch}))
         idx.append(batch)
     results = ctx.llm.call_many(reqs)
-    wc = int(ctx.cfg["witness"].get("transcoded_ceiling", 80))
     for batch, res in zip(idx, results):
         parsed = parse_transcoder(res.text if res else "")
         for it in batch:
@@ -256,13 +250,64 @@ def transcode_stage(ctx) -> dict:
                 it.update(transcoded=it["raw"], status="REVIEW", bindings="", rules="",
                           check="transcoder returned no block for this item", call_key=res.key if res else "")
                 continue
-            mc = mechanical_conformance(it["raw"], p["transcoded"], wc if it["type"] == "WITNESS" else None)
+            mc = mechanical_conformance(it["raw"], p["transcoded"], ceiling_of(it))
             st = p["status"] if mc["ok"] else "REVIEW"
             it.update(transcoded=p["transcoded"], status=st, bindings=p["bindings"], rules=p["rules"],
                       check=p["check"] + ("" if mc["ok"] else " | mechanical: " + "; ".join(mc["issues"])),
                       mechanical=mc, call_key=res.key if res else "")
+
+
+def transcode_questions(ctx, questions: dict, qids: list[str]) -> dict:
+    """Transcode the questions that will be applied to FRDs, before witnesses are built
+    (technical specification 1, step 11).  Returns {qid: record} and saves the records.
+
+    The raw question stays the question of record; the transcoded text is a derived form of the
+    same question under the same QID.  With ``language.mode: off`` every record is the identity
+    (status IDENTITY) and nothing downstream changes."""
+    mode = ctx.cfg["language"].get("mode", "off")
+    items = [{"item_id": q, "type": "QUESTION", "raw": (questions.get(q) or {}).get("text", "")}
+             for q in sorted(set(qids))]
+    todo = [it for it in items if it["raw"].strip()]
+    if mode == "off":
+        for it in items:
+            it.update(transcoded=it["raw"], status="IDENTITY", bindings="", rules="", check="identity transcoder")
+    else:
+        for it in items:
+            if not it["raw"].strip():
+                it.update(transcoded="", status="REVIEW", bindings="", rules="", check="the question has no text")
+        _run_transcoder(ctx, todo, lambda it: None, tag="transcode-question")
+    status = ctx.load("language", "LANGUAGE-STATUS.json", default={}) or {}
+    ctx.save("witnesses", "01_question-applications/transcoded-questions.json",
+             {"mode": mode, "dictionary_id": status.get("dictionary_id"), "rulebook_id": status.get("rulebook_id"),
+              "note": "the raw question is the question of record; the transcoded text is a derived form of it "
+                      "under the same QID", "items": items, "time": utcnow()}, "transcoded-questions")
+    return {it["item_id"]: it for it in items}
+
+
+def transcode_stage(ctx) -> dict:
+    lcfg = ctx.cfg["language"]
+    mode = lcfg.get("mode", "off")
+    witnesses = ctx.load("witnesses", "05_released/witnesses.json", default=[]) or []
+    units = [u for u in (ctx.load("matching", "01_hypothesis-units/units.json", default=[]) or []) if u.get("active")]
+    items = ([{"item_id": w["witness_id"], "type": "WITNESS", "raw": w["text"]} for w in witnesses]
+             + [{"item_id": u["unit_id"], "type": "HYPOTHESIS", "raw": u["text"]} for u in units])
+    # the questions were transcoded before the witnesses were built; they are listed here, apart from
+    # the items that go to matching, so that one file shows everything the transcoder produced.  A
+    # question is never given to the matcher: matching reads witness and unit texts only.
+    questions = (ctx.load("witnesses", "01_question-applications/transcoded-questions.json", default={})
+                 or {}).get("items", [])
+    if mode == "off":
+        for it in items:
+            it.update(transcoded=it["raw"], status="IDENTITY", bindings="", rules="", check="identity transcoder")
+        ctx.save("transcoding", "transcoded.json", {"mode": "off", "items": items, "questions": questions,
+                                                    "time": utcnow()}, "transcoded")
+        return {"mode": "off", "items": len(items)}
+    status = ctx.load("language", "LANGUAGE-STATUS.json", default={}) or {}
+    wc = int(ctx.cfg["witness"].get("transcoded_ceiling", 80))
+    _run_transcoder(ctx, items, lambda it: wc if it["type"] == "WITNESS" else None)
     ctx.save("transcoding", "transcoded.json",
              {"mode": mode, "dictionary_id": status.get("dictionary_id"), "rulebook_id": status.get("rulebook_id"),
-              "items": items, "time": utcnow()}, "transcoded")
+              "items": items, "questions": questions, "time": utcnow()}, "transcoded")
     return {"mode": mode, "items": len(items), "pass": sum(1 for i in items if i["status"] == "PASS"),
-            "review": sum(1 for i in items if i["status"] == "REVIEW")}
+            "review": sum(1 for i in items if i["status"] == "REVIEW"),
+            "questions": len(questions), "questions_pass": sum(1 for i in questions if i.get("status") == "PASS")}

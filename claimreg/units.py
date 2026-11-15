@@ -20,6 +20,23 @@ from .util import read_text, truncate_words
 TYPES = ("REQUIRED_SUPPORT", "CONTEXTUAL_CONSTRAINT", "ADVERSE_TEST",
          "CORROBORATING_EXPECTATION", "EVALUATIVE_JUDGMENT")
 MATCHABLE = ("REQUIRED_SUPPORT", "CONTEXTUAL_CONSTRAINT", "ADVERSE_TEST", "CORROBORATING_EXPECTATION")
+# A CONTEXTUAL_CONSTRAINT is one of two things.  A BOUNDARY declares what the hypothesis is about (its
+# population, intervention, comparator, outcome, setting or time frame): it is true by the hypothesis's
+# own definition, so no finding can refute it, and a study from outside it is out of scope, not a
+# contradiction.  A PREMISE is a factual assumption about the world that a finding could show false.
+CONSTRAINT_KINDS = ("BOUNDARY", "PREMISE")
+
+
+def constraint_kind(u: dict, overrides: dict | None = None) -> str:
+    """BOUNDARY or PREMISE for a CONTEXTUAL_CONSTRAINT unit, "" for any other unit.
+
+    The kind comes from the unit compiler (``constraint_kind`` on the unit) or from the run's recorded
+    manual override ``coverage.constraint_kinds`` ({unit_id: kind}), which wins.  A constraint nobody
+    classified is a PREMISE: that keeps the rule every earlier run used."""
+    if (u or {}).get("type") != "CONTEXTUAL_CONSTRAINT":
+        return ""
+    k = str((overrides or {}).get(u.get("unit_id")) or u.get("constraint_kind") or "").strip().upper()
+    return "BOUNDARY" if k.startswith("BOUND") else "PREMISE"
 
 
 def _norm_type(t: str) -> str:
@@ -90,13 +107,16 @@ def _parse_units(h: dict, res, anchor_text: str) -> list[dict]:
         seen.add(uid)
         quote = (u.get("source_quote") or "").strip()
         qc = find_quote(anchor_text, quote, 0.9) if quote else {"found": False, "method": "none"}
-        out.append({
+        rec = {
             "unit_id": uid, "hypothesis_id": h["id"], "axis_id": h["axis_id"], "type": typ,
             "text": u["text"].strip(), "serves": str(u.get("serves") or "").strip(),
             "source_quote": quote, "quote_check": qc,
             "evidence_terms": [t for t in (u.get("evidence_terms") or []) if isinstance(t, str)],
             "satisfied_by": u.get("satisfied_by", ""),
-            "call_key": res.key if res else ""})
+            "call_key": res.key if res else ""}
+        if typ == "CONTEXTUAL_CONSTRAINT":
+            rec["constraint_kind"] = constraint_kind({"type": typ, "constraint_kind": u.get("constraint_kind")})
+        out.append(rec)
     return out
 
 

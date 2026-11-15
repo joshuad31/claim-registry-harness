@@ -46,6 +46,7 @@ Each axis of your header gets its **own database**: a folder `AXIS-A1__<name>` i
 
 | File | What it tells you |
 |---|---|
+| `08_COVERAGE\HYPOTHESIS-REQUIREMENTS.md` | Read this first: each sentence of each hypothesis and the units it was compiled into, which sentences nothing checks, and what complete coverage would and would not show |
 | `08_COVERAGE\PREMISE-LEDGER.md` | Each hypothesis, part by part: established, contested, supported only if a named transfer is granted, or not addressed by any source |
 | `10_REPORTS\CRUX-REPORT.md` | The run at a glance, the crux candidates, coverage of each hypothesis, limits |
 | `10_REPORTS\report.html` | Click any finding to see its claim, its word-for-word source quotation and the question that found it |
