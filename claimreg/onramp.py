@@ -294,14 +294,21 @@ def cmd_frame(a) -> int:
         if id_map:
             print("header: normalised axis ids for parsing: "
                   + ", ".join(f"{k} -> {v}" for k, v in id_map.items()))
+        from .chat_coach import normalize_draft, _question
+        try:
+            inv = normalize_draft(inv, _question(proj))
+        except ValueError:
+            # Keep the generated draft for repair, without implying it is ready for approval.
+            print("The draft needs a format repair before review. Your assistant will handle it; no manual file editing is needed.")
         hd.write_text(inv, encoding="utf-8")
         if coord.strip():
             (frame / "coordinator-handoff-DRAFT.md").write_text(coord.strip() + "\n", encoding="utf-8")
         ok, msg = check_header(inv)
         print(f"header: DRAFT written -> {hd}\n        {msg}")
     print("\nNext:")
-    print(f"  1. Read {hd}. Edit it until the hypotheses say what you mean. It is a draft until you approve it.")
-    print(f"  2. python cr.py approve \"{proj}\" --by \"Your Name\"")
+    print("  1. Continue in your assistant conversation to review the wording and what it means.")
+    print(f"     Assistant: python cr.py coach \"{proj}\". Follow docs/CHAT-COACH.md; do not open a terminal interview.")
+    print("  2. Approval is saved only after you review the explanations and limits and choose to proceed.")
     print(f"  3. In each NotebookLM notebook copy: Configure Chat -> Custom, paste {ap.name}, choose Longer, Save.")
     print(f"  4. python cr.py doctor \"{proj}\"   then   python cr.py quest \"{proj}\"")
     return 0
@@ -319,6 +326,10 @@ def check_header(text: str) -> tuple[bool, str]:
     thin = [ax["axis_id"] for ax in axes if len(ax.get("hypotheses", [])) < 2]
     if thin:
         return False, f"axis {', '.join(thin)} has fewer than two hypotheses"
+    from .frame_gate import axis_spans
+    if any(a["axis_id"] not in axis_spans(text) or not a.get("question") or
+           any(not h.get("statement") for h in a["hypotheses"]) for a in axes):
+        return False, "The saved draft needs its research-question sections and complete explanations before review. Your assistant can repair the formatting."
     return True, ("parsed: " + "; ".join(f"axis {ax['axis_id']} with {len(ax['hypotheses'])} hypotheses "
                                            f"({str(ax.get('approval') or 'approval not stated').lower()})"
                                            for ax in axes) + f"; gauge {fr.get('gauge')}; "

@@ -272,15 +272,14 @@ def header_path(project: Path) -> Path:
 
 def axis_spans(text: str) -> dict[str, tuple[int, int]]:
     """{axis id: (start, end)} of each axis block, found the way the header parser finds them."""
-    from .header import _sections
-    word_num = {"one": 1, "two": 2, "three": 3, "four": 4, "1": 1, "2": 2, "3": 3, "4": 4}
+    from .header import _sections, axis_heading_id
     heads = [(s, e, h) for lvl, h, s, e in _sections(text) if re.search(r"\baxis\b", h, re.I)]
     out = {}
     for s, e, h in heads:
-        m = re.search(r"axis\s*(one|two|three|four|\d)", h, re.I)
-        if m:
+        aid = axis_heading_id(h)
+        if aid:
             nxt = [s2 for s2, _, _ in heads if s2 > s]
-            out[f"A{word_num[m.group(1).lower()]}"] = (s, min(nxt) if nxt else e)
+            out[aid] = (s, min(nxt) if nxt else e)
     return out
 
 
@@ -773,13 +772,29 @@ def _wording(axis: dict) -> dict:
             "statements": {h["id"]: flat(h["statement"]) for h in axis["hypotheses"]}}
 
 
+def reviewed_context(axis: dict) -> dict:
+    """The complete meaning reviewed in chat, including assumptions and scope."""
+    flat = lambda text: " ".join(str(text or "").split())
+    return {"question": flat(axis.get("question")), "boundary": flat(axis.get("boundary")),
+            "scope": flat(axis.get("scope")),
+            "hypotheses": [{key: flat(h.get(key)) for key in
+                            ("id", "title", "statement", "assumptions", "falsification", "corroboration")}
+                           for h in axis["hypotheses"]]}
+
+
 def unaccepted_axes(text: str, cert: dict) -> list[str]:
     """Axes of the header whose wording is not the wording the researcher accepted."""
     from .header import parse_header
     done = cert.get("axes") or {}
     out = []
-    for ax in parse_header(text)["axes"]:
-        r = (done.get(ax["axis_id"]) or {}).get("restated") or {}
+    frame = parse_header(text)
+    for ax in frame["axes"]:
+        record = done.get(ax["axis_id"]) or {}
+        r = record.get("restated") or {}
+        if record.get("channel") == "chat" and (record.get("reviewed_context") != reviewed_context(ax)
+                                                 or record.get("gauge") != frame["gauge"]):
+            out.append(ax["axis_id"])
+            continue
         now = _wording(ax)
         if now["question"] != " ".join(str(r.get("question", "")).split()) or now["statements"] != {
                 k: " ".join(str(v).split()) for k, v in (r.get("statements") or {}).items()}:
@@ -819,10 +834,10 @@ def gate(project: Path, action: str) -> tuple[bool, str]:
         return True, why
     need = bool((load_config(project).get("coach") or {}).get("require_acceptance", True))
     if action == "quest" and need:
-        return False, (f"quest not started: {why}.\nGo through the frame with the coach first, in a terminal window:  "
-                       f"cr sign \"{project}\"\nIt asks what you want from this run, shows how each way of framing the "
-                       "question is likely to score, and has you accept the likely outcome before the quest spends anything.")
-    return True, f"Reminder: {why}. The coach is at:  cr sign \"{project}\""
+        return False, (f"The research run is waiting for your wording review: {why}.\n"
+                       "Continue the review in your assistant conversation. Your assistant can resume it with "
+                       f"cr coach \"{project}\". No terminal interview is needed.")
+    return True, f"Reminder: {why}. Continue the wording review in chat with your assistant (cr coach \"{project}\")."
 
 
 def uses_models(cfg: dict) -> bool:
@@ -839,7 +854,7 @@ def render(cert: dict) -> str:
     out = ["# Frame record", "",
            f"Accepted by **{cert.get('name') or 'the researcher'}** on {str(cert.get('accepted', ''))[:10]}.",
            "", "The header is the frame, and the frame decides what a run can find. This page records what the "
-           "researcher told the coach, typed, read and accepted before the quest. A different frame can be scored on "
+           "researcher shared, reviewed and accepted before the quest. A different frame can be scored on "
            "the same evidence (`cr rescore`); this is the one they chose.", ""]
     if who:
         out += ["## Why this run", "", f"- **Motivation:** {who.get('motivation', '')}", f"- **Goal:** {who.get('goal', '')}", ""]
@@ -848,11 +863,12 @@ def render(cert: dict) -> str:
         g, pref = r.get("gauge", 64), r.get("preferred", "")
         fc = r.get("forecast") or {}
         out += [f"## Axis {aid}: {r.get('name', '')}", "",
-                f"- **Wants to win:** {pref}",
+                f"- **Preferred explanation:** {pref or 'Open mind; no preferred explanation'}",
                 f"- **Experience behind that view:** {(r.get('experience') or {}).get('text', '')}",
                 f"- **Wants to be able to say:** {r['intent']['text']}",
                 f"- **Would concede:** {r['concede']['text']}", ""]
-        out += ["### The hypotheses", "", "| | As typed | As it stands in the header |", "|---|---|---|",
+        original_label = "Original draft" if r.get("channel") == "chat" else "As typed"
+        out += ["### The hypotheses", "", f"| | {original_label} | As it stands in the header |", "|---|---|---|",
                 f"| Question | {cell(r['typed']['question']['text'])} | {cell(r['restated']['question'])} |"]
         out += [f"| {h} | {cell(t['text'])} | {cell(r['restated']['statements'][h])} |" for h, t in r["typed"]["statements"].items()]
         out.append("")
@@ -863,17 +879,21 @@ def render(cert: dict) -> str:
         if r["restated"].get("not_restated"):
             out.append("- The model did not restate the wording; the header carries what was typed.")
         out += ["", "### Forecast", ""]
-        if fc.get("ok"):
+        if fc.get("ok") and pref in fc.get("mean", {}):
             out.append(f"{pref} was forecast at **{fc['mean'][pref]} of {g}** units (calls: " +
                        ", ".join(str(c["allocations"][pref]) for c in fc["calls"] if "allocations" in c) +
                        f"; target {r.get('target')}). Basis: {r.get('forecast_basis', '')}. A forecast is a guess at how "
                        "the evidence would be divided, not a probability of being right.")
+        elif fc.get("ok"):
+            out.append("Forecast allocations: " + ", ".join(f"{h}: {v} of {g}" for h, v in fc["mean"].items()) +
+                       ". This is an advisory forecast, not a research finding.")
         else:
             out.append("No forecast could be made.")
         out += ["", "| Frame considered | Forecast for " + pref + " | Rival held by | Gives up |", "|---|---|---|---|"]
         for rung in r.get("ladder", []):
             f = rung.get("forecast") or {}
-            out.append(f"| {cell(rung['label'])} | {f['mean'][pref] if f.get('ok') else 'none'} | "
+            value = f.get("mean", {}).get(pref, "see allocations") if f.get("ok") else "none"
+            out.append(f"| {cell(rung['label'])} | {value} | "
                        f"{cell(rung.get('rival_held_by', ''))} | {cell(rung.get('leaves_out', ''))} |")
         bt = r.get("back_translation") or {}
         out += ["", "### What a win means", ""]
@@ -891,7 +911,7 @@ def render(cert: dict) -> str:
         out.append(f"- The main rival is held by: {held or 'not stated'}" +
                    (" **(a rival nobody holds)**" if re.search("no identifiable holder", held, re.I) else ""))
         out += [f"- The axis text disagrees with the wording: {x}" for x in bt.get("conflicts", [])]
-        out += ["", "### What the researcher accepted, by typing it", ""]
+        out += ["", "### What the researcher reviewed and accepted" + (" in chat" if r.get("channel") == "chat" else ", by typing it"), ""]
         out += [f"- {a['item']}: \"{a['typed']}\"" for a in r.get("accepted", [])]
         out += [f"- Read {x['label']}: {x['words']} words, {x['seconds_on_screen']} seconds, {len(x['blanks'])} missing-word checks."
                 for x in r.get("read", [])]
@@ -925,7 +945,7 @@ def _write(project: Path, cert: dict, text: str, crlf: bool) -> dict:
     atomic_write_text(project / "01_FRAME" / CERT_MD, render(cert))
     cfg = read_json(project / "project.json", default={}) or {}
     cfg.setdefault("frame", {})["approval_note"] = (f"Frame accepted by {cert.get('name') or 'the researcher'} on "
-                                                    f"{cert['accepted'][:10]} (cr sign).")
+                                                    f"{cert['accepted'][:10]} (" + ("chat coaching" if cert.get("channel") == "chat" else "cr sign") + ").")
     write_json(project / "project.json", cfg)
     return cert
 
@@ -1034,6 +1054,9 @@ def cmd_sign(a) -> int:
         ok, why = accepted(project)
         print(("ACCEPTED: " if ok else "NOT YET: ") + why)
         return 0 if ok else 2
+    if not getattr(a, "terminal", False):
+        from .chat_coach import cmd_coach
+        return cmd_coach(a)
     try:
         con = Terminal()
     except NotAPerson as e:

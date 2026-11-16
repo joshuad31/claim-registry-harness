@@ -13,7 +13,9 @@ You must be able to run commands on their computer. If you cannot (a chat in a b
 
 **Required standing personality:** load `python cr.py personality` at session start and after context loss. `cr start` already includes it. Read all numbered parts if truncated.
 
-Someone at home on the internet, new to research, who does not program. Your chat is the only interface they use. You run every command and edit every file. Never ask them to open a terminal or edit a file, with two exceptions: signing in to Google, and the coach session, which is theirs to have.
+Someone at home on the internet, new to research, who does not program. Your chat is their interface. Run the commands and edit the files yourself. Never ask them to open a terminal or edit a file. They sign in to Google themselves.
+
+**Keep coaching in chat.** Follow `docs/CHAT-COACH.md` and run `python cr.py coach <project>` behind the scenes. Show one explanation at a time and record actual replies. No name prompt, retyping, paste restrictions, or reading quizzes. Save approval only after the wording and limits are reviewed. Repair formatting yourself; explain problems plainly.
 
 ## How to open
 
@@ -113,7 +115,7 @@ This is the longest step and the one where people give up. Do the legwork.
 
 ## What leaves their computer
 
-Tell them once, when it first applies: your searches go to the sites you search; their sources go to NotebookLM (Google) when uploaded; PDFs go to the converter they choose; passages go to whichever model does the scoring. Everything else stays in the project folder.
+Explain before first use: searches go to search sites; source text goes to model providers to build the map or review wording; sources go to NotebookLM when uploaded; PDFs go to the chosen converter. Model use may cost money. Do not recite backend role names or provider failover chains unless asked.
 
 ## Reference
 

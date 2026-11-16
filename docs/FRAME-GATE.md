@@ -6,26 +6,21 @@ A score measures the fit between a claim and the evidence. The same corpus can s
 
 There are three points where the coach works with you.
 
-## 1. Before the quest: `cr sign`
+## 1. Before the quest: review the wording in chat
 
-```
-python cr.py sign "path\to\project"
-```
+Your assistant runs `cr coach <project>` behind the scenes and continues the conversation with you. `cr sign` uses the same chat flow by default. You do not need a terminal, a name prompt, or any file editing. For each research question:
 
-Run it yourself, in a terminal window (`cr coach` is the same command). For each axis of the header:
+1. **Discuss the purpose.** What you want the research to help you understand or do, the experience behind your interest, and what you would reconsider. You may favor an explanation or keep an open mind. The assistant uses relevant answers you already gave.
+2. **Consider wording choices.** Keep your current wording or discuss a change. Optional model-assisted preparation can propose clearer wording, stronger/weaker alternatives, and three independent forecasts per candidate. This can incur model usage. A forecast is advisory, never a research result or a probability of being right; unavailable forecasts are labeled as such.
+3. **Review each explanation.** See the exact statement, assumptions, and what evidence would count for and against it. You can keep the wording or request changes. There is no forced retyping, paste restriction, timed reading, or missing-word quiz.
+4. **Review the scope and consequences.** Who and what the research covers, what a favorable result would support, what it would not, and the possibility of an inconclusive or unfavorable result.
+5. **Choose whether to proceed.** A normal reply in the conversation can approve the exact wording you reviewed. A request merely to open the coach does not approve the wording. Changes return to review.
 
-1. **The coach asks about you.** Why you are running this. What your goal is and how the analysis can help. Which hypothesis you want to win, what experience shaped that view, what you want to be able to say, and what you would concede.
-2. **You see forecasts.** The coach writes alternative ways of framing the axis, from the strongest claim to the weakest, each against a rival that someone really holds. Each one, and the current draft, is forecast three times: how many of the 64 units your hypothesis would get. The target is two thirds, 43 of 64. It is a guide for you, not a pass mark, and these are units of evidence, not a probability that you are right.
-3. **You type the frame by hand.** The question and every hypothesis, in your own words. Paste is not taken.
-4. **The coach restates it** so that this corpus can test it, lists every change, and forecasts it. If another frame is forecast higher for your hypothesis, it asks whether you are sure.
-5. **You read it.** Each hypothesis as it will stand, with what would count for and against it.
-6. **You accept the consequences by typing them:** the forecast, the worst likely result, what a win does and does not let you say, who holds the rival, and what the frame leaves out.
+The point of accepting is that you understand what the comparison means and its limitations before the run. It is not a security measure. The harness saves your actual replies in its coaching session and writes the existing frame record (`01_FRAME/FRAME-CERTIFICATE.md`) when you approve.
 
-The point of accepting is that you know the likely outcome before the run. A hard result is then not a shock. It is not a security measure, and the record (`01_FRAME/FRAME-CERTIFICATE.md`) is a plain file.
+Missing drafts and formatting problems are handled by the assistant. A saved draft is used automatically when no finalized header exists. If the question or source map changes during review, the assistant refreshes the review rather than approving an old version. The previous keyboard interview is retained only as an explicit `--terminal` compatibility option.
 
-Try the session first on a scratch project (for example `projects\DEMO`), not on your real one: it reads the keyboard directly, and that should be seen working on your computer once.
-
-A quest does not start until every axis of the header has been through this. Each axis is saved when you finish it, so you can do them in separate sittings. Allow 15 to 25 minutes an axis. To switch the requirement off, set `"coach": {"require_acceptance": false}` in `project.json`.
+A quest does not start until every research question has been reviewed. Progress is saved between replies, so you can stop and return. The assistant adapter and response-file contract are documented in [CHAT-COACH.md](CHAT-COACH.md). The existing configurable acceptance requirement is unchanged.
 
 ## 2. After the quest: checkpoint 1
 
@@ -52,7 +47,7 @@ If the mean is below target, the run stops and writes `COACH-CHECKPOINT-2.md`.
 
 And your three moves:
 
-- **Take an opening.** `cr sign <project> --axis A2`, type the new claim, then `cr rescore <project> --run <RUN>` (add `--answers` at checkpoint 1).
+- **Take an opening.** `cr coach <project> --axis A2 --action restart`, review the new wording in chat, then `cr rescore <project> --run <RUN>` (add `--answers` at checkpoint 1).
 - **Ask more.** Put the suggested questions to the corpus and run again.
 - **Go on as you are.** `cr run <project> --run <RUN> --continue`. A result below target is still a result.
 

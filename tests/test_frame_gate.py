@@ -370,7 +370,8 @@ class GateTest(unittest.TestCase):
         write_json(self.proj / "project.json", cfg)
         ok, msg = fg.gate(self.proj, "quest")
         self.assertFalse(ok)
-        self.assertIn("quest not started: nobody has been through the frame with the coach yet", msg)
+        self.assertIn("research run is waiting for your wording review", msg)
+        self.assertNotIn("in a terminal window", msg)
         self.assertEqual(fg.gate(self.proj, "run")[0], True)
         self.assertEqual(fg.gate(self.proj, "import")[0], True)
 
@@ -379,12 +380,13 @@ class GateTest(unittest.TestCase):
         err = io.StringIO()
         with redirect_stderr(err), redirect_stdout(io.StringIO()):
             self.assertEqual(onramp.cmd_quest(args), 2)
-        self.assertIn("quest not started", err.getvalue())
+        self.assertIn("wording review", err.getvalue())
         self.assertFalse((self.proj / "quest").exists())
 
-        rc, out = run(["sign", str(self.proj)])                       # the tests have no keyboard
-        self.assertEqual(rc, 2)
-        self.assertIn("person at a keyboard", out)
+        rc, out = run(["sign", str(self.proj)])                       # default coaching works without a keyboard
+        self.assertEqual(rc, 0, out)
+        self.assertIn('"step": "purpose"', out)
+        self.assertNotIn("person at a keyboard", out)
         rc, out = run(["sign", str(self.proj), "--check"])
         self.assertEqual(rc, 2)
         self.assertIn("NOT YET", out)

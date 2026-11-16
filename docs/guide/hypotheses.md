@@ -4,7 +4,7 @@ A hypothesis is one possible answer to your question, worded so that evidence co
 
 You need at least:
 
-- **The answer you think is right.** It is fine to have one, and to say so.
+- **An explanation to test.** You may favor it or keep an open mind.
 - **A serious rival:** what an informed person who disagrees would say. If nobody really holds it, beating it shows little.
 - **"The evidence cannot decide."** A real possibility, not a place to hide.
 

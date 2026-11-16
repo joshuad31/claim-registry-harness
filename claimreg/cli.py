@@ -590,14 +590,17 @@ def main(argv=None) -> int:
     s.add_argument("--force", action="store_true", help="redo files that already exist")
     s.set_defaults(fn=onramp.cmd_frame)
 
-    s = sub.add_parser("sign", aliases=["coach"],
-                       help="go through the frame with the coach: say what you want, see how each framing is likely to "
-                            "score, type the hypotheses yourself and accept the likely outcome (before a quest)")
+    s = sub.add_parser("coach", aliases=["sign"],
+                       help="resume the wording review in your assistant's chat (no terminal interview)")
     s.add_argument("project")
     s.add_argument("--axis", help="this axis only (for example A2); default: every axis not yet accepted")
     s.add_argument("--header", help="work on this draft instead of the project's header")
-    s.add_argument("--name", help="your name, for the record")
+    s.add_argument("--name", help="optional record label; never required for chat coaching")
     s.add_argument("--check", action="store_true", help="only say whether the frame has been accepted")
+    s.add_argument("--action", choices=("status", "reply", "prepare", "select", "revise", "accept", "restart"), default="status")
+    s.add_argument("--response-file", help="assistant-supplied JSON with the current revision and the user's actual reply")
+    s.add_argument("--model-review", action="store_true", help="use configured models for alternatives/forecasts (may incur usage)")
+    s.add_argument("--terminal", action="store_true", help="explicitly use the legacy keyboard interview")
     s.set_defaults(fn=frame_gate.cmd_sign)
 
     s = sub.add_parser("rescore", help="score a run's validated findings under the header as it reads now (or another "

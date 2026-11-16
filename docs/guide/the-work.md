@@ -5,7 +5,7 @@ Expect real work before the first result. The thinking is yours; your assistant 
 1. **Say what you want to find out, and draft the rival answers.** A conversation of 30 to 60 minutes.
 2. **Collect the sources.** The longest step: hours to days, depending on how many you need. Your assistant searches and downloads what is free to read; you fetch the rest.
 3. **Convert them to text and check them.** Minutes per batch with a converter. Checking the tables takes longer.
-4. **Settle the wording of your claim with the coach.** 20 to 40 minutes for each question.
+4. **Review the wording with your assistant in chat.** Check each explanation and its limits, ask for changes, then choose whether to proceed. No terminal interview or retyping.
 5. **Set up NotebookLM.** About 15 minutes.
 6. **Run the quest.** Up to three hours. It runs by itself.
 7. **Build and read the evidence.** Mostly automatic. Reading the result properly takes an hour or more.

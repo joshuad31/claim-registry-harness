@@ -30,6 +30,7 @@ This is the longest step. Your assistant does most of the legwork.
 ### But what if you still can't find the paper you need?
 
 **Youtube may be able to advise you further:**
+
 https://www.youtube.com/watch?v=lKXPPafXUD0
 https://www.youtube.com/watch?v=6EmQ66ayQvg
 https://www.youtube.com/watch?v=C-hHQ5shJLk

@@ -341,12 +341,13 @@ def build(project: str | Path | None) -> dict:
         "frame", parts,
         ("accepted with the coach" if acc else "approved; not yet through the coach") if header_ok
         else ("draft written; not yet approved" if draft else "no header yet"),
-        "Read your hypotheses as they will be tested, change the wording until it says what you mean, then go "
-        "through them with the coach.",
-        f"Walk them through {frame / ('header.md' if header_ok else 'header-DRAFT.md')} one hypothesis at a time, in "
-        f"short pieces. Try the claim ladder (docs/guide/hypotheses.md). Edit to their wording. Only when they say "
-        f"they accept it: `{cr} approve {P} --by \"<their name>\"`. The coach session is a terminal conversation "
-        f"they have themselves: `{cr} sign {P}`. Do not answer it for them.",
+        "Review the explanations with your assistant here in the conversation. Ask for any wording changes, "
+        "then decide whether the comparison and its limits match what you want to research.",
+        f"Read docs/CHAT-COACH.md, then `{cr} coach {P}`. Keep the coaching in chat; the command resumes its saved "
+        f"step and uses the draft automatically. Show one explanation at a time. Submit the person's actual "
+        f"replies with the current revision. Do not answer it for them. Use accept only after the complete "
+        f"wording/limits review and their explicit choice to proceed. Never open a terminal interview, require "
+        f"hand typing, or call approve to bypass the conversation. Fix format errors without handing them to the user.",
         force_done=launched and header_ok))
 
     # 7 notebook

@@ -21,6 +21,14 @@ Be encouraging through useful action: a source found, a citation corrected, a di
 
 ## Behaviors learned from actual research
 
+### Review the wording in the conversation
+
+The coach is part of the current assistant conversation, operated by the harness's resumable `cr coach` command. Read `docs/CHAT-COACH.md`. Never open a PowerShell/terminal interview for the user, ask them to type a name, retype existing hypotheses, refuse pasted text, or quiz them on missing words. These historical terminal requirements are superseded. Preserve all the original experience files; apply the current chat workflow.
+
+Use the user's existing answers when relevant, and ask the next unanswered question in plain language. Discuss their purpose and experience without forcing them to favor one explanation. Show proposed changes as choices, then review each explanation, its assumptions, scope, what a favorable result would mean, and what it would leave unresolved. Explain forecasts as advisory estimates when available; never turn an index summary or forecast into a verified source finding. A normal conversational reply can confirm wording. The harness records the actual reply and approves only the exact reviewed version after the final decision. It is not a test of typing speed or memory.
+
+Handle missing drafts and formatting repairs yourself. The user should hear what the research needs next, not cryptic messages about headers or axes. Keep output from agent commands behind the scenes; do not paste JSON, IDs, revision numbers, or provider fallback chains into the user conversation.
+
 ### Corpus size and the decision to run
 
 Claim Registry is intended for challenging research with a recommended minimum of **50 relevant, distinct sources**. Actively help the user build toward that scale. A batch of three or five papers can be a manageable next step; never describe it as a sufficient corpus or quietly stop acquisition there.

@@ -88,6 +88,16 @@ def _clean(s: str) -> str:
     return norm_ws(s)
 
 
+def axis_heading_id(heading: str) -> str | None:
+    """One heading convention for parsing and coaching, including 'Axis A1' and 'Axis 10'."""
+    match = re.search(r"\baxis\s*(?:a\s*)?(\d+|one|two|three|four)\b", _clean(heading), re.I)
+    if not match:
+        return None
+    token = match.group(1).lower()
+    number = {"one": "1", "two": "2", "three": "3", "four": "4"}.get(token, token)
+    return "A" + str(int(number)) if int(number) > 0 else None
+
+
 def _sections(text: str) -> list[tuple[int, str, int, int]]:
     """(level, heading text, start, end) for every Markdown heading."""
     heads = [(len(m.group(1)), m.group(2).strip(), m.start(), m.end())
@@ -168,17 +178,15 @@ def parse_header(text: str, default_gauge: int = 64) -> dict:
     axis_blocks: dict[str, str] = {}
     axis_names: dict[str, str] = {}
     axis_heads = [(lvl, h, s, e) for lvl, h, s, e in secs if re.search(r"\baxis\b", h, re.I)]
-    word_num = {"one": 1, "two": 2, "three": 3, "four": 4, "1": 1, "2": 2, "3": 3, "4": 4}
     for lvl, h, s, e in axis_heads:
-        m = re.search(r"axis\s*(one|two|three|four|\d)", h, re.I)
-        if m:
-            n = word_num[m.group(1).lower()]
+        aid = axis_heading_id(h)
+        if aid:
             # the block runs to the next axis heading (they are siblings)
             nxt = [s2 for _, _, s2, _ in axis_heads if s2 > s]
             end = min(nxt) if nxt else e
-            axis_blocks[f"A{n}"] = text[s:end]
+            axis_blocks[aid] = text[s:end]
             # "Axis two — bedtime dosing" -> "bedtime dosing": the label used for the axis's own database
-            axis_names[f"A{n}"] = _clean(re.sub(r"^.*?axis\s*(?:one|two|three|four|\d)\s*[-\u2013\u2014:.]*\s*", "", h,
+            axis_names[aid] = _clean(re.sub(r"^.*?axis\s*(?:a\s*)?(?:one|two|three|four|\d+)\s*[-\u2013\u2014:.]*\s*", "", h,
                                                 flags=re.I))
     # a machine-readable approval marker written by `cr approve` beats anything the model wrote:
     # a drafting model's prose must never be able to claim human approval
