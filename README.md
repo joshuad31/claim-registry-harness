@@ -8,7 +8,7 @@ It is intended for challenging research with at least **50 relevant sources**. B
 
 It is for people who can download peer-reviewed research, convert it to Markdown and upload it to NotebookLM. It implements Josh Davis's Claim Registry (ACH 2.0) specification.
 
-## Start here: use it through your own AI assistant
+## Start here: use it through your own AI assistant (Deepseek preset included)
 
 You do not need to learn these commands. Open this folder with an AI assistant that is installed on your computer and can run commands (Codex, Cursor, Claude and others), and say what you want to research. The assistant reads `AGENTS.md`, asks you questions, runs everything, and tells you the next step and why it matters.
 
