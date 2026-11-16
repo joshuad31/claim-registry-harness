@@ -61,6 +61,11 @@ def convert_one(source, relative, output, key, mode, force, factory, sleep=time.
             record = json.loads(state_path.read_text(encoding="utf-8"))
         fingerprint = sha(source)
         same = record.get("source_sha256") == fingerprint and record.get("mode") == mode
+        outputs = record.get("outputs", [])
+        if outputs and not force:
+            verified = same and record.get("status") == "complete" and all(
+                (output / row["filename"]).is_file() and sha(output / row["filename"]) == row["sha256"] for row in outputs)
+            return {"source": relative.as_posix(), "status": "skipped" if verified else "existing_unverified"}
         if dest.exists() and not force:
             verified = (same and record.get("status") == "complete" and dest.stat().st_size > 0
                         and record.get("output_sha256") == sha(dest))
@@ -102,8 +107,17 @@ def convert_one(source, relative, output, key, mode, force, factory, sleep=time.
                     if sha(source) != fingerprint:
                         raise ValueError("Source changed during conversion; output not written")
                     # Keep the document clean; provenance belongs in its JSON sidecar.
-                    write(dest, md.rstrip() + "\n")
-                    record.update(status="complete", output_sha256=sha(dest), pages=result.get("page_count"))
+                    if __package__:
+                        from .corpus_intake import admit_bytes
+                    else:
+                        import sys
+                        sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+                        from claimreg.corpus_intake import admit_bytes
+                    paths = admit_bytes(output, dest.relative_to(output), (md.rstrip() + "\n").encode("utf-8"))
+                    record.update(status="complete",
+                                  outputs=[{"filename": p.relative_to(output).as_posix(), "sha256": sha(p)} for p in paths],
+                                  output_sha256=sha(paths[0]) if len(paths) == 1 else None,
+                                  pages=result.get("page_count"))
                     save(state_path, record)
                     return {"source": relative.as_posix(), "status": "converted", "pages": record["pages"]}
                 sleep(5)

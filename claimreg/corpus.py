@@ -104,6 +104,9 @@ def ingest(project_dir: Path, source_dir: Path, extensions=(".md", ".markdown", 
     """Hash every admitted source and write a versioned manifest."""
     if not Path(source_dir).is_dir():
         raise FileNotFoundError(f"corpus folder not found: {source_dir}")
+    from .corpus_intake import normalize_corpus, part_map, logical_count
+    normalize_corpus(source_dir)
+    parts = part_map(source_dir)
     files = sorted(p for p in Path(source_dir).rglob("*")
                    if p.is_file() and p.suffix.lower() in extensions
                    and not p.name.startswith("."))
@@ -138,9 +141,10 @@ def ingest(project_dir: Path, source_dir: Path, extensions=(".md", ".markdown", 
             "source_id": f"SRC-{h[:12]}", "filename": rel, "bytes": b,
             "words": word_count(text), "sha256": h, "title_guess": title[:200],
             "flags": flags,
+            **({"split_origin": parts[rel], "logical_source_id": parts[rel]["logical_source_id"]} if rel in parts else {}),
         })
     body = {"source_dir": str(source_dir), "files": len(sources), "bytes": total_bytes,
-            "sources": sources}
+            "sources": sources, "logical_sources": logical_count(Path(source_dir), files)}
     mid = "MANIFEST-" + digest([(s["filename"], s["sha256"]) for s in sources])
     manifest = {"manifest_id": mid, "created": utcnow(), **body}
     mdir = ensure_dir(Path(project_dir) / "01_CORPUS" / "manifests")
@@ -162,6 +166,11 @@ class Corpus:
     """In-memory view of the manifest's sources with a BM25 index over chunks."""
 
     def __init__(self, manifest: dict, chunk_words: int = 320, overlap: int = 40):
+        from .corpus_intake import MAX_SOURCE_BYTES
+        for source in manifest["sources"]:
+            path = Path(manifest["source_dir"]) / source["filename"]
+            if path.is_file() and path.stat().st_size > MAX_SOURCE_BYTES:
+                raise ValueError("Corpus file exceeds 210,000 bytes; run cr corpus before continuing: " + source["filename"])
         self.manifest = manifest
         self.source_dir = Path(manifest["source_dir"])
         self.by_name = {s["filename"]: s for s in manifest["sources"]}

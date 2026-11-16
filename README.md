@@ -19,6 +19,8 @@ You do not need to learn these commands. Open this folder with an AI assistant t
 
 ## What it does
 
+Corpus Markdown/text files are limited to **210,000 bytes**. Imports and conversion split larger documents before admission, preserving originals, provenance, and source identity. The assistant uses `cr corpus <project> --add <staged-file-or-folder>`; see [corpus intake](docs/CORPUS-INTAKE.md).
+
 1. **NotebookLM holds your sources** and answers one narrow, source-cited question at a time. It never sees your hypotheses.
 2. **An Investigator model writes the questions.** A separate **Manager model** grades the answers against your hypotheses and steers the next questions. The Investigator never sees the grades.
 3. **Every answer is broken into claims, and every claim is checked against its source file.** A claim goes forward only if its quotation is found word for word in the source.

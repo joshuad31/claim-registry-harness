@@ -108,19 +108,24 @@ def build_map(project_dir, corpus, cfg: dict, existing: dict | None = None) -> d
     f_over = over.get("files") or {}
     files: dict = {}
     for fn in sorted(corpus.filenames):
-        target = corpus.resolve(dups[fn]) if fn in dups else None
+        origin = getattr(corpus, "by_name", {}).get(fn, {}).get("split_origin", {}).get("original_filename", fn)
+        duplicate = dups.get(fn, dups.get(origin))
+        target = (corpus.resolve(duplicate) or duplicate) if duplicate else None
+        first = next((name for name, row in getattr(corpus, "by_name", {}).items()
+                      if row.get("split_origin", {}).get("original_filename") == origin
+                      and row.get("split_origin", {}).get("part") == 1), fn)
         kind, basis = PRIMARY, "title"
-        if any(fnmatch.fnmatch(fn, pat) or fn == pat for pat in synth):
+        if any(fnmatch.fnmatch(origin, pat) or fnmatch.fnmatch(fn, pat) for pat in synth):
             kind, basis = "synthesis", "corpus.synthesis_sources"
         else:
             try:
-                kind = guess_kind(corpus.text(fn))
+                kind = guess_kind(corpus.text(first))
             except Exception:  # noqa: BLE001 - an unreadable file is still a source
                 kind = PRIMARY
-        rec = {"study": study_id_for(target or fn), "kind": kind, "basis": basis}
+        rec = {"study": study_id_for(target or origin), "kind": kind, "basis": basis}
         if target and target != fn:
             rec.update(duplicate_of=target, basis="corpus.duplicates")
-        o = f_over.get(fn)
+        o = f_over.get(fn, f_over.get(origin))
         if isinstance(o, str):
             o = {"study": o}
         if isinstance(o, dict):

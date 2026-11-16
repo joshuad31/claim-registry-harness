@@ -20,7 +20,7 @@ When conversion is requested, use `DATALAB_API_KEY` from the environment or an e
 python cr.py convert "projects/MyResearch" --key-file "<external-key-file>"
 ```
 
-Accurate mode and three workers are the defaults. `--mode balanced` or `--mode fast` changes the mode; `--folder` selects a different input folder. Original filenames and subfolders are preserved: `article.pdf` becomes `article.pdf.md` in the configured source folder. Conversion does not register the corpus or alter existing runs. Review the text and then use `cr corpus` to register it.
+Accurate mode and three workers are the defaults. `--mode balanced` or `--mode fast` changes the mode; `--folder` selects a different input folder. Subfolders are preserved: a small `article.pdf` becomes `article.pdf.md`. Output exceeding 210,000 bytes is split into named pieces before admission; the unsplit original is retained outside the corpus. Retries verify every piece before skipping the conversion. See [corpus intake](../../docs/CORPUS-INTAKE.md). Conversion does not register the corpus or alter existing runs. Review the text and then use `cr corpus` to register it.
 
 This uploads documents to Datalab and can incur charges. A dry run does neither. Converted Markdown contains the conversion text only; provenance and pending job records are JSON sidecars under `.conversion-state`. Nonempty, unchanged outputs with matching records are skipped. Unverified existing outputs are preserved and reported; `--force` explicitly permits replacement and can incur another charge. A timeout after submission can have an unknown billing outcome: inspect provider jobs before forcing another submission.
 

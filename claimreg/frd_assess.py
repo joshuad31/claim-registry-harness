@@ -110,16 +110,21 @@ def max_diff(a: dict | None, b: dict | None) -> int | None:
     return max(abs(int(a.get(i, 0)) - int(b.get(i, 0))) for i in set(a) | set(b))
 
 
+def _original_source(ctx, source_file):
+    record = getattr(getattr(ctx, "corpus", None), "by_name", {}).get(str(source_file), {})
+    return record.get("split_origin", {}).get("original_filename", str(source_file))
+
+
 def citable(ctx, frds: list[dict]) -> tuple[list[dict], dict]:
     """Drop FRDs drawn from non-citable synthesis files and from duplicate copies of a source."""
     c = ctx.cfg.get("corpus", {}) or {}
     synth, dups = list(c.get("synthesis_sources") or []), dict(c.get("duplicates") or {})
     keep, out = [], {"synthesis": [], "duplicate_copy": []}
     for f in frds:
-        src = str(f.get("source_file", ""))
-        if any(fnmatch.fnmatch(src, p) for p in synth):
+        names = {str(f.get("source_file", "")), _original_source(ctx, f.get("source_file", ""))}
+        if any(fnmatch.fnmatch(src, p) for src in names for p in synth):
             out["synthesis"].append(frd_id(f))
-        elif src in dups:
+        elif any(src in dups for src in names):
             out["duplicate_copy"].append(frd_id(f))
         else:
             keep.append(f)
@@ -127,7 +132,9 @@ def citable(ctx, frds: list[dict]) -> tuple[list[dict], dict]:
 
 
 def is_synthesis(ctx, source_file) -> bool:
-    return any(fnmatch.fnmatch(str(source_file), p) for p in ((ctx.cfg.get("corpus", {}) or {}).get("synthesis_sources") or []))
+    names = {str(source_file), _original_source(ctx, source_file)}
+    return any(fnmatch.fnmatch(src, p) for src in names
+               for p in ((ctx.cfg.get("corpus", {}) or {}).get("synthesis_sources") or []))
 
 
 def combined_rows(per_axis: dict[str, list[dict]]) -> list[dict]:

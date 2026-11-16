@@ -174,7 +174,9 @@ def _corpus(proj: Path, cfg: dict) -> dict:
              and not p.name.startswith(".")] if src.is_dir() else []
     roots = {proj / "01_CORPUS"} | ({src} if src.is_dir() else set())
     pdfs = {p.resolve() for r in roots if r.is_dir() for p in r.rglob("*.pdf") if p.is_file()}
+    from .corpus_intake import logical_count, part_map
     have = {_stem(p.name) for p in texts}
+    have.update(_stem(entry["original_filename"].rsplit("/", 1)[-1]) for entry in part_map(src).values())
     waiting = sorted(p.name for p in pdfs if _stem(p.name) not in have)
     man = None
     try:
@@ -183,7 +185,7 @@ def _corpus(proj: Path, cfg: dict) -> dict:
     except Exception:  # noqa: BLE001
         man = None
     flagged = [s["filename"] for s in (man or {}).get("sources", []) if s.get("flags")]
-    return {"texts": len(texts), "pdfs_waiting": waiting, "manifest_files": (man or {}).get("files"),
+    return {"texts": logical_count(src, texts), "pdfs_waiting": waiting, "manifest_files": (man or {}).get("files"),
             "flagged": flagged, "source_dir": str(src)}
 
 

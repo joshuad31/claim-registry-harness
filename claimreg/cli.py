@@ -31,7 +31,8 @@ def cmd_init(a) -> int:
                 if p.is_file() and p.suffix.lower() in (".md", ".markdown", ".txt"):
                     dest = proj / "01_CORPUS" / "source-files" / p.relative_to(src)
                     ensure_dir(dest.parent)
-                    shutil.copyfile(p, dest)
+                    from .corpus_intake import admit_file
+                    admit_file(proj / "01_CORPUS" / "source-files", p, p.relative_to(src))
         else:
             cfg.setdefault("corpus", {})["source_dir"] = str(src.resolve())
     for flag, target in ((a.header, "header.md"), (a.index, "index.md"), (a.archivist, "archivist-custom-prompt.txt")):
@@ -69,6 +70,17 @@ def cmd_corpus(a) -> int:
     from .corpus import ingest
     cfg = load_config(a.project)
     src = resolve_path(cfg, cfg["corpus"]["source_dir"])
+    if getattr(a, "add", None):
+        from .corpus_intake import admit_file, EXTENSIONS
+        incoming = Path(a.add).resolve()
+        if incoming.is_dir():
+            for path in sorted(incoming.rglob("*")):
+                if path.is_file() and path.suffix.lower() in EXTENSIONS:
+                    admit_file(src, path, path.relative_to(incoming))
+        elif incoming.is_file() and incoming.suffix.lower() in EXTENSIONS:
+            admit_file(src, incoming)
+        else:
+            raise ValueError("Choose a Markdown/text file or a folder of sources")
     man = ingest(Path(a.project), src, tuple(cfg["corpus"].get("extensions", [".md"])))
     _print({k: man[k] for k in ("manifest_id", "files", "bytes")} |
            {"flagged": [(s["filename"], s["flags"]) for s in man["sources"] if s["flags"]]})
@@ -297,7 +309,8 @@ def cmd_demo(a) -> int:
     for sub in ("01_CORPUS/source-files", "01_FRAME", "02_RUNS", "04_RELEASES"):
         ensure_dir(dst / sub)
     for p in sorted((src / "sources").glob("*.md")):
-        shutil.copyfile(p, dst / "01_CORPUS" / "source-files" / p.name)
+        from .corpus_intake import admit_file
+        admit_file(dst / "01_CORPUS" / "source-files", p)
     shutil.copyfile(src / "header.md", dst / "01_FRAME" / "header.md")
     shutil.copyfile(src / "README.md", dst / "README.md")
     write_json(dst / "project.json", {
@@ -454,6 +467,7 @@ def main(argv=None) -> int:
 
     s = sub.add_parser("corpus", help="hash the corpus and write a manifest")
     s.add_argument("project")
+    s.add_argument("--add", help="admit a staged Markdown/text file or folder, splitting before writing")
     s.set_defaults(fn=cmd_corpus)
 
     from .conversion import cmd_convert

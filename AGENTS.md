@@ -95,6 +95,8 @@ This is most of your job early on.
 
 This is the longest step and the one where people give up. Do the legwork.
 
+**File limit:** no admitted Markdown/text file may exceed **210,000 bytes**. Download or edit large documents in staging outside the source folder; use `cr corpus <project> --add <file-or-folder>` to split before admission. Conversion splits automatically. After an external copy, run `cr corpus` before using the corpus. Parts remain one source; originals and split provenance are preserved.
+
 **Corpus size:** aim for at least **50 relevant, distinct sources**. Five papers is an acquisition batch, not a sufficient stopping point. Below **20**, recommend converting to Markdown and uploading directly to an LLM. At **20-49**, encourage more acquisition. Explain the limitation once; if the user still wants a smaller Claim Registry run, comply without repeated pressure. Access gaps stay explicit; never pad the count.
 
 - **Search.** From the rival answers, look for what would support and what would hurt each one, with your own search tools (PubMed, Europe PMC, Semantic Scholar, OpenAlex). Propose a short list with one line on why each matters. They decide what goes in. Look as hard for sources against the answer they prefer.

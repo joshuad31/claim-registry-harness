@@ -161,7 +161,8 @@ def cmd_new(a) -> int:
             if p.is_file() and p.suffix.lower() in (".md", ".markdown", ".txt") and not p.name.startswith("."):
                 dest = proj / "01_CORPUS" / "source-files" / p.relative_to(src)
                 ensure_dir(dest.parent)
-                shutil.copyfile(p, dest)
+                from .corpus_intake import admit_file
+                admit_file(proj / "01_CORPUS" / "source-files", p, p.relative_to(src))
                 copied += 1
     names, blocks = choose_providers(a.keys, a.key, (a.prefer or "").split(","))
     if names:
