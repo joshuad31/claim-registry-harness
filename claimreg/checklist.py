@@ -660,7 +660,8 @@ PAPERS
 
 Only if they ask in so many words for the harness itself to be changed, read HANDOFF.md instead.
 
-YOUR ENTIRE FIRST REPLY IS THE QUESTION IN STEP 2. No summary of what you checked or read.
+Your first reply opens with the question in step 2, with no summary of internal checks or reading.
+If the host check supplies a preset notice, include it briefly; never install a pending bundle.
 The complete standing research personality follows. Load every file, including restored memories.
 If the tool truncates it, read ALL numbered parts listed below before substantive research help.
 """
@@ -668,6 +669,7 @@ If the tool truncates it, read ALL numbered parts listed below before substantiv
 
 def cmd_start(a) -> int:
     from . import personality
+    from .host_context import startup_notice
     # Assemble before printing: a missing memory must not produce a seemingly complete startup.
     try:
         context = personality.preamble() + personality.render()
@@ -675,6 +677,7 @@ def cmd_start(a) -> int:
         print(f"Research personality could not be loaded: {e}", file=sys.stderr)
         return 2
     print(START_TEXT, end="")
+    print(startup_notice(getattr(a, "active_preset", None)), end="")
     print(context, end="")
     return 0
 

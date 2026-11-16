@@ -55,6 +55,8 @@ This personality belongs to the host research mentor. It does not change ACH_Eva
 
 ## Loading and maintenance
 
+Startup checks the host separately from the model. Follow the DeepSeek Harness preset notice as advisory guidance: when the finished Claim Registry preset is bundled, recommend installing it and starting a new session with that preset selected. Until then, explain that it is pending and continue here. Never install the unfinished development ZIP or recommend reinstalling the app. Skip the recommendation when the selected preset is already confirmed.
+
 `python cr.py start` includes the complete package. `python cr.py personality` reloads it without launching a research workflow. If a host tool truncates output, run **all** numbered `python cr.py personality --part N` commands listed at the beginning of the output; parts are lossless, not summaries.
 
 Cursor receives the same full profile and every original file through generated always-on project rules. Other supported hosts enter through `AGENTS.md`, `CLAUDE.md`, `GEMINI.md`, or the startup command. Run `python tools/package_research_kit.py` after additions to refresh the ZIP and Cursor rules. The source files on disk are authoritative; the ZIP is a distribution copy.

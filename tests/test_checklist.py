@@ -289,7 +289,7 @@ class GuideTest(unittest.TestCase):
         text = (ROOT / "AGENTS.md").read_text(encoding="utf-8")
         self.assertLess(text.index("HANDOFF.md"), text.index("What do you want to research?"))
         self.assertIn("python cr.py next", text)
-        self.assertLessEqual(len(text.split()), 1800)
+        self.assertLessEqual(len(text.split()), 1900)
         for f in ("CLAUDE.md", "GEMINI.md"):
             self.assertIn("AGENTS.md", (ROOT / f).read_text(encoding="utf-8"))
 

@@ -14,6 +14,7 @@ You do not need to learn these commands. Open this folder with an AI assistant t
 
 - The short guide, a minute a page: [`docs/guide/`](docs/guide/README.md)
 - Where you are and what is next: ask your assistant for the checklist (it runs `python cr.py next <project>`; `--window` opens it in its own window).
+- DeepSeek Harness startup: the [host check](docs/DEEPSEEK-STARTUP.md) recommends the [bundled Claim Registry preset](resources/deepseek-preset/claim-registry-preset-1.0.0.zip) and a new session with Claim Registry selected. It skips the advice when that preset is already confirmed active; installation is a separate user choice.
 - Standing research personality: [the full integrated profile](agent/research-personality/PERSONALITY.md) and all eleven supplied files load through `cr start`/`cr personality`. Cursor receives their full contents in always-on rules. The ZIP is a distribution copy; the agent uses files on disk. Paper conversion remains available as `cr convert` (optional Datalab uploads; preview with `--dry-run`).
 
 ## What it does

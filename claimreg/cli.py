@@ -431,6 +431,11 @@ def main(argv=None) -> int:
     p = argparse.ArgumentParser(prog="cr", description=f"Claim Registry harness {__version__}")
     sub = p.add_subparsers(dest="cmd", required=True)
 
+    from .host_context import cmd_host
+    s = sub.add_parser("host", help="check the host and preset recommendation without starting or installing anything")
+    s.add_argument("--active-preset", help="selected preset from session metadata or explicit user confirmation")
+    s.set_defaults(fn=cmd_host)
+
     from .personality import cmd_personality
     s = sub.add_parser("personality", help="load the complete standing research personality and memories")
     s.add_argument("--part", type=int, help="read one lossless part if the host truncates long output")
@@ -568,6 +573,7 @@ def main(argv=None) -> int:
 
     s = sub.add_parser("start", aliases=["launch"],
                        help="asked to launch Claim Registry? prints what an AI assistant should do first")
+    s.add_argument("--active-preset", help="selected preset from session metadata; suppresses redundant setup advice")
     s.set_defaults(fn=checklist.cmd_start)
 
     s = sub.add_parser("next", aliases=["checklist"],
