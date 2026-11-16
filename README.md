@@ -4,6 +4,8 @@
 
 Claim Registry is a method for testing competing answers to a question against a body of published sources, in a way that anyone can audit. This harness runs it. You bring the sources; it produces a report in which every claim traces back to a word-for-word quotation from a named source.
 
+It is intended for challenging research with at least **50 relevant sources**. Below **20**, the assistant recommends converting the sources to Markdown and uploading them directly to an LLM; with **20-49**, it recommends further acquisition. If you understand the limitation and still want a smaller Claim Registry run, it will proceed. Five papers is a batch toward the corpus, not its normal stopping point.
+
 It is for people who can download peer-reviewed research, convert it to Markdown and upload it to NotebookLM. It implements Josh Davis's Claim Registry (ACH 2.0) specification.
 
 ## Start here: use it through your own AI assistant

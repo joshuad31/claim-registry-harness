@@ -23,3 +23,5 @@ When web access is available, verify uncertain citations against publisher, PubM
 For a shortlist, use the user's research brief, include potentially contrary results, distinguish primary research from reviews, and flag likely papers already acquired. A filename or title match suggests a duplicate; do not silently merge records or infer independent studies. Give a reason for each recommended acquisition and preserve excluded/deferred candidates for inspection.
 
 Report input/output record counts, parse errors, checked identifiers, repairs, likely duplicates, and output path. This is a planning artifact; do not include it as primary evidence or infer research results from citation metadata alone.
+
+<!-- End of complete source file. -->

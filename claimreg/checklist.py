@@ -40,6 +40,40 @@ GUIDE_PAGES = ("what-it-does", "how-it-differs", "the-work", "what-you-get", "wo
 CONFIRMABLE = ("sources", "notebook")
 STATE_FILE = "CHECKLIST.json"
 PAGE_FILE = "CHECKLIST.html"
+RECOMMENDED_MIN_SOURCES = 50
+DIRECT_REVIEW_BELOW = 20
+
+
+def corpus_size_guidance(count: int) -> dict:
+    """Host-mentor advice, never a scientific sufficiency test or an execution gate."""
+    remaining = max(0, RECOMMENDED_MIN_SOURCES - count)
+    if count == 0:
+        band = "building"
+        message = "Plan for at least 50 relevant sources for Claim Registry's challenging research workflow."
+    elif count < DIRECT_REVIEW_BELOW:
+        band = "direct_review_recommended"
+        message = (f"{count} sources collected. With fewer than 20 sources, we recommend converting them to "
+                   "Markdown and uploading them directly to an LLM. Claim Registry is intended for challenging "
+                   "research with a recommended minimum of 50 sources. We can still run it if you prefer.")
+    elif count < RECOMMENDED_MIN_SOURCES:
+        band = "expand_corpus_recommended"
+        message = (f"{count} sources collected, below Claim Registry's recommended minimum of 50. "
+                   f"Aim to acquire at least {remaining} more relevant sources, including contrary evidence. "
+                   "We can still run the smaller corpus if you prefer.")
+    else:
+        band = "recommended_size_reached"
+        message = (f"{count} sources collected; the recommended minimum of 50 is reached. "
+                   "Check relevance, duplicates, contrary evidence, and access gaps before calling the collection ready.")
+    return {"count": count, "band": band, "minimum_recommended": RECOMMENDED_MIN_SOURCES,
+            "direct_review_below": DIRECT_REVIEW_BELOW, "additional_sources_recommended": remaining,
+            "advisory_only": True, "message": message,
+            "count_basis": "File inventory estimate; PDF/Markdown pairs matched by name count once. "
+                           "Review duplicate papers and relevance; metadata-only candidates do not count.",
+            "for_the_assistant": "Build toward 50 relevant distinct source documents; a batch of five is only "
+                                 "an acquisition step. Below 20, recommend direct LLM review; at 20-49, recommend "
+                                 "more acquisition. Explain the limitation once. If the informed user still wants "
+                                 "a smaller run, comply without a new gate or repeated pressure. Record access "
+                                 "gaps; never pad the count with duplicates, citations, abstracts, or irrelevant files."}
 
 # id, title, why (the motivation), guide page
 STEPS = (
@@ -246,21 +280,23 @@ def build(project: str | Path | None) -> dict:
     # 3 sources
     c = _corpus(proj, cfg)
     total = c["texts"] + len(c["pdfs_waiting"])
+    size = corpus_size_guidance(total)
     src_confirmed = bool(confirmed.get("sources")) or launched
     items.append(_item(
         "sources", [(total > 0, "at least one source"), (src_confirmed, "your word that the collection is complete")],
-        (_n(total, "source") + " collected" if total else "none yet")
+        (_n(total, "source") + " collected" if total else "none yet") + "; aim for at least 50 relevant sources"
         + (f"; you said the collection is complete on {confirmed['sources']}" if confirmed.get("sources") else
            ("" if launched or not total else "; not yet confirmed complete")),
-        "Decide with your assistant which sources belong in the pile, including the ones that disagree with you. "
-        "It downloads the ones that are free to read and gives you a link for each of the others. Say when the "
-        "collection is complete.",
+        "Build a collection of at least 50 relevant sources with your assistant, including contrary evidence. "
+        "Below 20, direct LLM review is usually the better route. You may choose a smaller Claim Registry run "
+        "after discussing the limitation; say when you are ready to proceed.",
         f"Do the legwork (AGENTS.md, \"Helping them get the papers\"). From their rival answers, search for sources "
         f"for and against each one and propose a short list; they decide what goes in. Download every paper that has "
         f"a free, lawful copy into {proj / '01_CORPUS' / 'pdf'}; text files go in {c['source_dir']}. For each one you "
         f"cannot download, tell them the exact reason and the way round it, and keep the list in {proj / 'SOURCES.md'}. "
-        f"Never a pirate site. Keep search notes and reference lists out of both corpus folders. When they say "
-        f"the collection is complete: `{cr} next {P} --done sources`.",
+        f"Never a pirate site. Keep search notes and reference lists out of both corpus folders. "
+        f"{size['for_the_assistant']} When they choose to proceed with the collection: "
+        f"`{cr} next {P} --done sources`.",
         basis="files counted; completeness is your own confirmation" if not launched else "checked from files"))
 
     # 4 convert
@@ -365,7 +401,7 @@ def build(project: str | Path | None) -> dict:
         # What each one found stays in its detail line.
         for i in items:
             i.update(state="done", progress=100, missing=[])
-    return _finish(proj, cfg, items, {"launched": launched})
+    return _finish(proj, cfg, items, {"launched": launched, "corpus_size": size})
 
 
 def _keys(cfg: dict) -> list[str]:
@@ -428,6 +464,8 @@ def render_text(st: dict) -> str:
     L += ["", f"Next: {n['title']}", f"Why:  {n['why']}", f"You:  {n['do']}"]
     if any(n.get("missing") or []):
         L.append("Still needed: " + "; ".join(m for m in n["missing"] if m))
+    if (size := st.get("corpus_size")) and size["count"]:
+        L.append("Corpus size: " + size["message"])
     L += [f"More: {n['guide']}"]
     return "\n".join(L) + "\n"
 
@@ -441,6 +479,8 @@ def render_markdown(st: dict) -> str:
     L += ["", f"**Next:** {n['title']}", "", f"**Why:** {n['why']}", "", f"**What you do:** {n['do']}"]
     if any(n.get("missing") or []):
         L += ["", "**Still needed:** " + "; ".join(m for m in n["missing"] if m)]
+    if (size := st.get("corpus_size")) and size["count"]:
+        L += ["", "**Corpus size:** " + size["message"]]
     L += ["", f"More: [{Path(n['guide']).stem.replace('-', ' ')}]({n['guide']})"]
     return "\n".join(L) + "\n"
 
@@ -554,6 +594,8 @@ def render_html(st: dict) -> str:
     missing = "; ".join(m for m in n.get("missing", []) if m)
     who = e(st["name"] or "Getting started")
     page = n["guide"].rsplit("/", 1)[-1][:-3]
+    size = st.get("corpus_size")
+    size_note = ('<div class="card"><b>Corpus size:</b> ' + e(size["message"]) + '</div>') if size and size["count"] else ""
     return f"""<!doctype html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1"><title>Claim Registry checklist</title>
 <style>{_CSS}</style></head><body><main>
@@ -564,6 +606,7 @@ def render_html(st: dict) -> str:
 <p><b>Why:</b> {e(n["why"])}</p><p><b>What you do:</b> {e(n["do"])}</p>
 {f'<p class="mut small">Still needed: {e(missing)}</p>' if missing else ''}
 <p class="small"><a href="#g-{page}" data-open="{page}">Read more about this step</a></p></div>
+{size_note}
 <div class="card">{''.join(rows)}</div>
 <h2 id="g-index">The short guide</h2>
 <div class="mut small">Each page takes about a minute. This checklist stops refreshing while a page is open.</div>
@@ -610,6 +653,9 @@ EVERY REPLY
 PAPERS
   You search for them and download the ones that are free to read, by lawful routes only. When you
   cannot download one, say exactly why and what to do instead (AGENTS.md).
+  Aim for at least 50 relevant sources. Below 20, recommend converting to Markdown and uploading
+  directly to an LLM; at 20-49, recommend more acquisition. Five papers is a batch, not a corpus target.
+  Explain the limitation, then comply if the user still wants a smaller Claim Registry run.
 
 Only if they ask in so many words for the harness itself to be changed, read HANDOFF.md instead.
 

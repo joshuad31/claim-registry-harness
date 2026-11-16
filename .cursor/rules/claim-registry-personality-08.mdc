@@ -30,3 +30,5 @@ Complete source file: memory/04-lessons-learned.md
 - Some journals (e.g. J Nucl Med 2003) have no DOI; give the free journal page instead.
 - Check for duplicates: the same paper often arrives under a DOI-style name and an authorYear name.
 - When a "missing paper" list arrives, compare it against the folder first and report which are already present.
+
+<!-- End of complete source file. -->

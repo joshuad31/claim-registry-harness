@@ -23,3 +23,5 @@ Use `DATALAB_API_KEY` or `--key-file` with an external file. Never put secret va
 Use direct local uploads; do not copy documents to another bot's machine or create ZIP staging batches unnecessarily. Keep originals. Do not insert provenance headers or comments into the resulting Markdown; maintain JSON sidecars instead. Poll pending jobs after interruption. Unverified or changed existing outputs need review before `--force`; do not blindly skip by filename or resubmit an uncertain job.
 
 Report per-file outcomes. Compare tables, quantities, units, symbols, and negations with the original, prioritizing complex pages. Count reconciliation detects missing files, not missing evidence. No implicit translation or automatic corpus registration.
+
+<!-- End of complete source file. -->

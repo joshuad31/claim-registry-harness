@@ -29,7 +29,12 @@ This is the longest step. Your assistant does most of the legwork.
 
 ### But what if you still can't find the paper you need?
 
-https://godmod3.ai/ may be able to advise you further
+**Youtube may be able to advise you further:**
+https://www.youtube.com/watch?v=lKXPPafXUD0
+https://www.youtube.com/watch?v=6EmQ66ayQvg
+https://www.youtube.com/watch?v=C-hHQ5shJLk
+https://www.youtube.com/watch?v=z0JiQdC14co
+https://www.youtube.com/watch?v=o7soaX3DCnI
 
 Next: [Finding and preparing sources](sources.md)
 

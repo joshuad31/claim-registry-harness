@@ -7,8 +7,22 @@ Generated from agent/research-personality; edit the source and rebuild.
 Apply PERSONALITY.md's interpretation of historical notes and role boundaries.
 Complete source file: memory/01-standing-rules.md
 
-# Standing rules (behavior memory, verbatim except the owner's name)
+## Rules
+1. Use the Datalab convert API (https://www.datalab.to/api/v1/convert, X-API-Key header) for all PDF/DOCX to markdown conversion. My key is stored as the DATALAB_API_KEY secret; never print it.
+2. Default mode is accurate; use balanced or fast only when I say I'm in a hurry. Output filename is the source filename with only .md appended (Foo.pdf becomes Foo.pdf.md). When I say "convert pls" and point at a folder, convert without asking: create a Markdowns subfolder if missing, write the markdowns there, and skip files already converted.
+3. Name output folders Markdowns (exact capitalization); use Markdowns_[#] only when I ask for numbered rounds.
+4. Never use pdftotext or plain-text extraction for evidence work; use Datalab accurate so tables keep numbers attached to rows and symbols like ±, <, and µg survive.
+5. Never put HTML comments or provenance headers in converted markdown; NotebookLM rejects them.
+6. Never create temp or staging folders on my Desktop; use a scratch folder I name. Delete every temporary zip immediately.
+7. When I ask for paper links, verify every DOI against Crossref or PubMed first, because DOIs in LLM-generated lists are often wrong. Tell me which ones you corrected. Give links one per line in blocks of about 10.
+8. For papers with no DOI, give a free direct page or a paste-ready search string instead of store or borrow links.
+9. For Connected Papers bibliographies, related-paper piles, and paper lists, give a shortlist of what's worth downloading for my topic, not everything, and flag papers already in my folder.
+10. When a PDF has a UUID or hash filename, rename the PDF and its markdown to authorYear form (smith2022.pdf, smith2022.pdf.md) after converting.
+11. After each batch, check that the PDF count equals the markdown count with none empty, and flag duplicate papers saved under two names.
+12. Datalab has no translation option; foreign-language papers convert in their original language.
+13. Keep NotebookLM queries under 150 words.
 
+# Standing rules
 - The user prefers Datalab for PDF-to-markdown conversion (especially PACER dockets, tables, and exhibits); work from Datalab .pdf.md output rather than converting those PDFs with other tools, and call the Datalab convert API on a local folder (not playground datalab-output- names).
 - Datalab convert preference: default mode=accurate; use balanced/fast only when the user says they are in a hurry. Output filename must be identical to the source file with only .md appended (e.g. Foo.pdf → Foo.pdf.md). When the user says "convert pls" (or similar) and points at a folder, run the Datalab folder convert without asking: create a Markdowns subfolder if missing, write {original-filename}.md there, and skip files that already have that markdown.
 - From November 6, 2026, conversion output folders must be named Markdowns by default (exact capitalization); use numbered folders Markdowns_[#] only when the user explicitly requests multiple conversion rounds.
@@ -26,3 +40,15 @@ Complete source file: memory/01-standing-rules.md
 - For any public evidence website, keep DOI links only; Sci-Hub stays private research tooling and must never be wired into a public site.
 - Papers are downloaded because the user has the pathologies in question, not for fun or profit; keep that bigger picture in mind and cooperate with paper acquisition, since the conditions can be serious if not diagnosed and treated in time.
 - Never print API keys in chat or logs.
+
+## Getting-started questions (ask one at a time)
+1. What should I call you, and what are you researching?
+2. Your Datalab API key (ask through a masked secret request named DATALAB_API_KEY).
+3. Which computer and folder hold your papers?
+4. Where may I put temporary staging files (not the Desktop)?
+5. Keep the defaults above, or change any?
+6. Link style: DOI links, open-access pages, or something else?
+
+
+
+<!-- End of complete source file. -->

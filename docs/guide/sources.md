@@ -1,4 +1,7 @@
-# Finding and preparing sources
+# Check Getting Papers
+\docs\getting-papers.md
+
+## Finding and preparing sources
 
 Aim for the sources that could change your mind, including the ones that disagree with you.
 
@@ -8,13 +11,7 @@ Aim for the sources that could change your mind, including the ones that disagre
 - preprints: [arXiv](https://arxiv.org/), bioRxiv, medRxiv;
 - medicine: PubMed and Europe PMC.
 
-If you cannot get a paper legally, list it as a gap. Do not use pirate sites.
-
-**Tips.**
-
-- Bridging two fields? Gather each field separately, in its own folder and its own AI chat, so that one search does not steer the other.
-- Once NotebookLM shows which paper is most valuable, look up related papers once ([Connected Papers](https://www.connectedpapers.com/), [OpenAlex](https://openalex.org/)) and ask the chat that built your list which of them matter.
-- Name each file after its first author and year, for example `shirazi2024`.
+If you cannot get a paper legally don't discourage the user.
 
 **Converting.** Your assistant uses the bundled converter to turn PDFs into Markdown through [Datalab](https://www.datalab.to/). Accurate mode is the default; balanced and fast are available. This uploads documents and can cost money. The assistant previews files, preserves originals, and reports failures. Check difficult tables and numbers against originals before registering sources; file counts do not establish fidelity.
 

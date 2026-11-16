@@ -18,6 +18,6 @@ Claim Registry asks for hours to days of your attention. That is worth paying in
 
 In those cases, ordinary AI research is the better tool, and your assistant can do that instead.
 
-**You do not have to commit to all of it at once.** Start with the two answers that are hardest to tell apart and a small pile of sources. The first result shows whether a bigger run is worth it. Everything you do is saved in the project folder, so you can stop and come back.
+**Plan for at least 50 relevant sources.** With fewer than 20, we recommend converting them to Markdown and uploading them directly to an LLM. With 20-49, build the corpus further. If you still want a smaller Claim Registry run after discussing the limitation, your assistant will proceed. Acquire in manageable batches; five papers is progress toward the corpus, not the stopping point.
 
 Next: [Distillation: finding the needles](distillation.md)

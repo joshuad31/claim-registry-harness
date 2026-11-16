@@ -29,14 +29,16 @@ class PersonalityTest(unittest.TestCase):
             code = cli.main(list(args))
         return code, out.getvalue()
 
-    def test_all_eleven_original_files_are_preserved_byte_for_byte(self):
+    def test_all_eleven_imported_files_are_retained(self):
         manifest = json.loads((personality.PACKAGE / "INTEGRATION.json").read_text())
         self.assertEqual(len(manifest["files"]), 11)
         self.assertEqual(sum(row["path"].startswith("memory/") for row in manifest["files"]), 6)
+        current = dict(personality.source_files())
         for row in manifest["files"]:
-            data = (personality.PACKAGE / row["path"]).read_bytes()
-            self.assertEqual(len(data), row["bytes"])
-            self.assertEqual(hashlib.sha256(data).hexdigest(), row["sha256"])
+            self.assertIn(row["path"], current)
+            self.assertGreater(current[row["path"]].stat().st_size, 0)
+        # Import hashes are historical provenance. The user can keep teaching these memories;
+        # current byte-for-byte preservation is checked against the rebuilt ZIP below.
 
     def test_start_and_reload_contain_every_complete_file_not_just_links(self):
         for args in ((), ("start",), ("launch",), ("personality",)):
@@ -72,6 +74,19 @@ class PersonalityTest(unittest.TestCase):
         (package / "INTEGRATION.json").write_text('{"files": []}')
         (package / "new-lesson.md").write_text("New learned workflow")
         self.assertIn("New learned workflow", personality.render(package))
+
+    def test_user_edits_to_imported_memory_load_without_resetting_to_the_snapshot(self):
+        package = self.tmp / "package"
+        package.mkdir()
+        (package / "PERSONALITY.md").write_text("Fixture profile")
+        old = b"Original lesson"
+        manifest = {"files": [{"path": "lesson.md", "bytes": len(old),
+                               "sha256": hashlib.sha256(old).hexdigest()}]}
+        record = package / "INTEGRATION.json"
+        record.write_text(json.dumps(manifest))
+        (package / "lesson.md").write_text("Original lesson\nNew experience added by the user")
+        self.assertIn("New experience added by the user", personality.render(package))
+        self.assertEqual(json.loads(record.read_text()), manifest)
 
     def test_cursor_rules_are_always_on_and_inline_every_file(self):
         outputs = write_cursor_rules(self.tmp / "rules")

@@ -51,3 +51,5 @@ Review tables, units, numerals, negations, and complex layouts against originals
 To rebuild the distribution from this repository, run `python tools/package_research_kit.py`. The builder uses an explicit allowlist; it does not copy user projects, runtime records, hidden files, or the original archive.
 
 API reference checked during integration: [Datalab conversion request and polling](https://www.datalab.to/blog/faster-api-responses).
+
+<!-- End of complete source file. -->

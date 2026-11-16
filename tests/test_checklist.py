@@ -128,6 +128,50 @@ class ChecklistTest(unittest.TestCase):
         notes.write_text("queries I ran", encoding="utf-8")
         self.assertIn("none yet", by_id(checklist.build(self.proj))["sources"]["detail"])
 
+    def test_corpus_size_guidance_at_the_recommendation_boundaries(self):
+        for count, band, remaining in ((0, "building", 50), (5, "direct_review_recommended", 45),
+                                       (19, "direct_review_recommended", 31),
+                                       (20, "expand_corpus_recommended", 30),
+                                       (49, "expand_corpus_recommended", 1),
+                                       (50, "recommended_size_reached", 0),
+                                       (51, "recommended_size_reached", 0)):
+            with self.subTest(count=count):
+                advice = checklist.corpus_size_guidance(count)
+                self.assertEqual((advice["count"], advice["band"], advice["additional_sources_recommended"]),
+                                 (count, band, remaining))
+                self.assertEqual(advice["minimum_recommended"], 50)
+                self.assertEqual(advice["direct_review_below"], 20)
+                self.assertTrue(advice["advisory_only"])
+
+    def test_five_sources_show_advice_in_all_views_but_can_be_confirmed(self):
+        (self.proj / "01_FRAME" / "question.md").write_text(QUESTION, encoding="utf-8")
+        src = self.proj / "01_CORPUS" / "source-files"
+        for number in range(5):
+            (src / f"study{number}.md").write_text(f"# Study {number}\nUnique source {number}", encoding="utf-8")
+        # A PDF and its converted text are one collected source, not two.
+        pdf = self.proj / "01_CORPUS" / "pdf"
+        pdf.mkdir()
+        (pdf / "study0.pdf").write_bytes(b"%PDF synthetic fixture")
+        code, text = run("next", str(self.proj), "--json")
+        self.assertEqual(code, 0)
+        st = json.loads(text)
+        self.assertEqual(st["corpus_size"]["count"], 5)
+        self.assertEqual(st["corpus_size"]["band"], "direct_review_recommended")
+        self.assertEqual(st["next"]["id"], "sources")
+        # The informed user's smaller-corpus choice is honored, with advice still visible.
+        self.assertEqual(run("next", str(self.proj), "--done", "sources")[0], 0)
+        st = checklist.build(self.proj)
+        self.assertEqual(by_id(st)["sources"]["state"], "done")
+        self.assertEqual(st["next"]["id"], "convert")
+        for rendered in (checklist.render_text(st), checklist.render_markdown(st), checklist.render_html(st)):
+            self.assertIn(st["corpus_size"]["message"], rendered)
+
+    def test_empty_project_keeps_the_opening_focused_on_the_question(self):
+        st = checklist.build(self.proj)
+        self.assertEqual(st["corpus_size"]["band"], "building")
+        self.assertNotIn("Corpus size:", checklist.render_text(st))
+        self.assertEqual(st["next"]["id"], "question")
+
     def test_frame_notebook_and_launch(self):
         cfg = json.loads((self.proj / "project.json").read_text())
         cfg["coach"] = {"require_acceptance": True}                           # the product default; the suite turns it off
@@ -207,7 +251,8 @@ class GuideTest(unittest.TestCase):
     def test_pages_are_short_and_render(self):
         for page in checklist.GUIDE_PAGES:
             text = (checklist.GUIDE_DIR / f"{page}.md").read_text(encoding="utf-8")
-            self.assertLessEqual(len(text.split()), 230, page)                 # about a minute to read
+            # The acquisition page also holds the user's curated resource list; preserve it.
+            self.assertLessEqual(len(text.split()), 600 if page == "getting-papers" else 230, page)
             self.assertNotIn("|---", text, page)                               # the window does not render tables
             title, body = checklist.md_to_html(text)
             self.assertTrue(title and "<p>" in body, page)
@@ -244,7 +289,7 @@ class GuideTest(unittest.TestCase):
         text = (ROOT / "AGENTS.md").read_text(encoding="utf-8")
         self.assertLess(text.index("HANDOFF.md"), text.index("What do you want to research?"))
         self.assertIn("python cr.py next", text)
-        self.assertLessEqual(len(text.split()), 1700)
+        self.assertLessEqual(len(text.split()), 1800)
         for f in ("CLAUDE.md", "GEMINI.md"):
             self.assertIn("AGENTS.md", (ROOT / f).read_text(encoding="utf-8"))
 

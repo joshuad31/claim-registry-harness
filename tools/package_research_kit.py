@@ -31,7 +31,9 @@ def write_cursor_rules(output=None):
                   "Generated from agent/research-personality; edit the source and rebuild.\n"
                   "Apply PERSONALITY.md's interpretation of historical notes and role boundaries.\n"
                   f"Complete source file: {name}\n\n")
-        dest.write_text(header + body, encoding="utf-8")
+        # Keep the complete body, including its trailing whitespace, without leaving generated
+        # rules with a whitespace-only end of file when the user expands a memory.
+        dest.write_text(header + body + "\n<!-- End of complete source file. -->\n", encoding="utf-8")
         outputs.append(dest)
     return outputs
 
