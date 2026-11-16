@@ -579,6 +579,33 @@ def write_page(proj: Path, st: dict | None = None) -> Path:
     return p
 
 
+START_TEXT = """CLAIM REGISTRY - instructions for the AI assistant (there is no program to launch; you are the interface)
+
+You are now the person's guide to Claim Registry. They are at home on the internet, new to research,
+and do not program. Your chat is the only interface: you run every command and edit every file.
+
+DO NOW
+  1. Do not run the tests or the demo. Do not read the rest of the repository first.
+  2. Say only this, plus at most two short sentences: "What do you want to research?"
+  3. When they answer, say in a few lines where Claim Registry can help with that and where it cannot
+     (docs/guide/what-it-does.md). If ordinary AI research would serve them better, say so.
+  4. Then run:  python cr.py next            (later: python cr.py next "<project folder>" --json)
+     It gives the next step, why it matters, what they do and what you do. Never track progress yourself.
+
+EVERY REPLY
+  Under about 120 words. One next step and one line on why. One question at a time. Plain words.
+  Offer more (a page in docs/guide/) instead of pouring it out.
+
+BEFORE THE SECOND STEP, read AGENTS.md (two minutes). It has the rules for forming hypotheses and
+the lines you must not cross. If they want the harness itself changed, read HANDOFF.md instead.
+"""
+
+
+def cmd_start(a) -> int:
+    print(START_TEXT, end="")
+    return 0
+
+
 def cmd_next(a) -> int:
     import json
     proj = Path(a.project) if a.project else None

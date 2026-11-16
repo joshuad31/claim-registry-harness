@@ -382,3 +382,6 @@ Josh's decision: no separate application. The person already has an AI assistant
 - Slice 3: the coach drivable from a chat. Today `cr sign` is still a terminal session the person has themselves, and the checklist says so.
 - Slice 4: a source list and a Datalab conversion command. Slice 5: a no-key quest where the host assistant plays Investigator and Manager through one command; today that route is the manual one in `claimreg/notebooklm/INVESTIGATOR.md` and `MANAGER.md`, and `cr quest` needs a model key.
 - Nothing has been tried from a second assistant yet. That is the test that matters: different assistants follow `AGENTS.md` differently.
+
+
+**Launch fix (same day).** DeepSeek, told "Launch claim registry" and given the folder path, spent two minutes lost: nothing said what launching means, and `START HERE.md` was the old build record. Now `python cr.py start` (also `launch`, and `cr.py` with no arguments) prints about twenty lines telling an assistant to ask the opening question and not to run tests or read the repository first. `START HERE.md` is a ten-line pointer to it, the first lines of `README.md` and `AGENTS.md` say the same, and the build record moved to `docs/BUILD-RECORD.md`.

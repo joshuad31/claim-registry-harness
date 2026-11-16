@@ -1,5 +1,7 @@
 # Claim Registry (ACH 2.0) harness
 
+> **AI assistant asked to launch, start or use this?** Run `python cr.py start` and follow it. Do not run the tests or the demo, and do not read the rest of the repository first.
+
 Claim Registry is a method for testing competing answers to a question against a body of published sources, in a way that anyone can audit. This harness runs it. You bring the sources; it produces a report in which every claim traces back to a word-for-word quotation from a named source.
 
 It is for people who can download peer-reviewed research, convert it to Markdown and upload it to NotebookLM. It implements Josh Davis's Claim Registry (ACH 2.0) specification.

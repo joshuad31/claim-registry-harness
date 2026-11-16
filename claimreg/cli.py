@@ -422,6 +422,12 @@ def main(argv=None) -> int:
             stream.reconfigure(encoding="utf-8", errors="replace")
         except (AttributeError, ValueError):
             pass
+    if argv is None:
+        argv = sys.argv[1:]
+    if not argv:
+        # nothing asked for: someone (usually an AI assistant) is trying to launch it
+        from . import checklist as _checklist
+        return _checklist.cmd_start(None)
     p = argparse.ArgumentParser(prog="cr", description=f"Claim Registry harness {__version__}")
     sub = p.add_subparsers(dest="cmd", required=True)
 
@@ -543,6 +549,10 @@ def main(argv=None) -> int:
     s.add_argument("--notebook", action="append", default=[], help="NotebookLM notebook link (repeat for each copy)")
     s.add_argument("--force", action="store_true")
     s.set_defaults(fn=onramp.cmd_new)
+
+    s = sub.add_parser("start", aliases=["launch"],
+                       help="asked to launch Claim Registry? prints what an AI assistant should do first")
+    s.set_defaults(fn=checklist.cmd_start)
 
     s = sub.add_parser("next", aliases=["checklist"],
                        help="where a project stands before its first quest: checklist, the next step and why")

@@ -223,6 +223,21 @@ class GuideTest(unittest.TestCase):
         for name in ("sci-hub", "scihub", "libgen", "library genesis", "z-library", "anna's archive"):
             self.assertNotIn(name, text)
 
+    def test_launching_reaches_the_opening_question_from_any_door(self):
+        # whichever thing a lost assistant tries first, it is told the same few lines
+        outs = [run(*argv) for argv in ([], ["start"], ["launch"])]
+        self.assertTrue(all(code == 0 for code, _ in outs))
+        self.assertEqual(len({text for _, text in outs}), 1)
+        text = outs[0][1]
+        self.assertIn("What do you want to research?", text)
+        self.assertIn("Do not run the tests or the demo", text)
+        self.assertLessEqual(len(text.splitlines()), 22)
+        for f in ("START HERE.md", "README.md", "AGENTS.md"):
+            head = "\n".join((ROOT / f).read_text(encoding="utf-8").splitlines()[:16])
+            self.assertIn("python cr.py start", head, f)
+        self.assertLessEqual(len((ROOT / "START HERE.md").read_text(encoding="utf-8").split()), 160)
+        self.assertTrue((ROOT / "docs" / "BUILD-RECORD.md").exists())
+
     def test_the_assistant_file_separates_the_two_jobs_and_sets_the_opening(self):
         text = (ROOT / "AGENTS.md").read_text(encoding="utf-8")
         self.assertLess(text.index("HANDOFF.md"), text.index("What do you want to research?"))

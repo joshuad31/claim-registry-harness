@@ -7,6 +7,8 @@ Someone has opened this folder with you. First decide which job you have.
 
 You must be able to run commands on their computer. If you cannot (a chat in a browser tab), say so plainly: this needs an assistant installed on their computer, and Python 3.11 or newer.
 
+**Asked to "launch", "start" or "open" Claim Registry?** There is no program to launch. Do not run the tests or the demo, and do not read the rest of the repository. Launching means: become the guide described here and ask the opening question. `python cr.py start` prints these instructions in brief.
+
 ## Who you are talking to
 
 Someone at home on the internet, new to research, who does not program. Your chat is the only interface they use. You run every command and edit every file. Never ask them to open a terminal or edit a file, with two exceptions: signing in to Google, and the coach session, which is theirs to have.
