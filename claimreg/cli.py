@@ -531,7 +531,7 @@ def main(argv=None) -> int:
     s.add_argument("--run")
     s.set_defaults(fn=cmd_verify)
 
-    from . import coach, frame_gate, onramp
+    from . import checklist, coach, frame_gate, onramp
     s = sub.add_parser("new", help="start a project: copy sources in, find your model keys, write the question template")
     s.add_argument("project")
     s.add_argument("--name")
@@ -543,6 +543,19 @@ def main(argv=None) -> int:
     s.add_argument("--notebook", action="append", default=[], help="NotebookLM notebook link (repeat for each copy)")
     s.add_argument("--force", action="store_true")
     s.set_defaults(fn=onramp.cmd_new)
+
+    s = sub.add_parser("next", aliases=["checklist"],
+                       help="where a project stands before its first quest: checklist, the next step and why")
+    s.add_argument("project", nargs="?", help="project folder (omit it before there is one)")
+    s.add_argument("--json", action="store_true", help="machine-readable, for an AI assistant")
+    s.add_argument("--md", action="store_true", help="a Markdown table, for an AI assistant to show")
+    s.add_argument("--window", action="store_true", help="write CHECKLIST.html in the project and open it")
+    s.add_argument("--watch", action="store_true", help="keep CHECKLIST.html current until interrupted")
+    s.add_argument("--every", default=5, help="seconds between refreshes with --watch")
+    s.add_argument("--done", action="append", metavar="STEP",
+                   help="record what only the person can confirm: sources | notebook")
+    s.add_argument("--undo", action="append", metavar="STEP", help="take such a confirmation back")
+    s.set_defaults(fn=checklist.cmd_next)
 
     s = sub.add_parser("frame", help="draft the index, the Archivist prompt and the quest header from 01_FRAME/question.md")
     s.add_argument("project")

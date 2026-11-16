@@ -4,6 +4,13 @@ Claim Registry is a method for testing competing answers to a question against a
 
 It is for people who can download peer-reviewed research, convert it to Markdown and upload it to NotebookLM. It implements Josh Davis's Claim Registry (ACH 2.0) specification.
 
+## Start here: use it through your own AI assistant
+
+You do not need to learn these commands. Open this folder with an AI assistant that is installed on your computer and can run commands (Codex, Cursor, Claude and others), and say what you want to research. The assistant reads `AGENTS.md`, asks you questions, runs everything, and tells you the next step and why it matters.
+
+- The short guide, a minute a page: [`docs/guide/`](docs/guide/README.md)
+- Where you are and what is next: ask your assistant for the checklist (it runs `python cr.py next <project>`; `--window` opens it in its own window).
+
 ## What it does
 
 1. **NotebookLM holds your sources** and answers one narrow, source-cited question at a time. It never sees your hypotheses.

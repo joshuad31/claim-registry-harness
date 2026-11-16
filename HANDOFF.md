@@ -361,3 +361,24 @@ Built from `HANDOFF-SPEC-UPGRADES-2026-11-14.md`, after DeepSeek's design and Ch
 **Not built:** independent binding passes, protected-property review, deterministic vocabulary and sense accounting (stages 3b to 3d of the spec). They wait for the off-versus-labels comparison on a real run (3e), which costs model calls.
 
 **To see these on an existing run** (no model call for coverage; the report summary is asked again): fork and redo from coverage, `cr fork <project> --from <RUN> --name <RUN>-REQ`, then `cr run <project> --run <RUN>-REQ --from coverage`. To mark boundaries by hand, put `"coverage": {"constraint_kinds": {"<unit id>": "BOUNDARY"}}` in `project.json` first.
+
+## 22. The interface is the person's own assistant (2026-11-15, Claude Fable 5.2 session)
+
+Josh's decision: no separate application. The person already has an AI assistant installed on their computer (Codex, Cursor, Claude, ...). It downloads this repository and is the interface. A separate window exists only for what a chat cannot give: a steady checklist. The intended user is at home on the internet, new to research, and does not program. DeepSeek's wizard design and ChatGPT's React/FastAPI plan (`docs/UI-IMPLEMENTATION-PLAN-2026-11-15.md`) are superseded by this; what survives from them is readiness read from files, the requirements view, lawful source routes, and keeping search notes out of the corpus folder.
+
+**Built (slices 1 and 2). Tests: `tests/test_checklist.py`.**
+- `cr next [project]` (`claimreg/checklist.py`, alias `cr checklist`): nine steps up to the first quest, each with a bar, read from the project's files; the one next step; why it matters; what the person does; what the assistant does. `--json` for assistants, `--md` for a chat reply, `--window` writes and opens `<project>/CHECKLIST.html` (the checklist plus the guide; it reloads itself and is rewritten on every `cr next`), `--watch` keeps it current.
+- Two things files cannot show are the person's own confirmation, stored in `<project>/CHECKLIST.json` and labelled as such: `--done sources` (the collection is complete) and `--done notebook` (every copy is set to Custom and Longer). Everything else is computed. A project that already ran a quest counts those as done.
+- It makes no model call, contacts nothing and is not a gate. `cr quest` still decides for itself what it needs.
+- `AGENTS.md` (with `CLAUDE.md` and `GEMINI.md` pointing to it): how any host assistant behaves. It first separates the two jobs: someone changing the harness goes to this file; anyone else is a researcher and gets the guide behaviour. Opening line "What do you want to research?", short answers, one next step with its reason, more only on request, progress always from `cr next --json`.
+- `docs/guide/`: nine pages of about 150 to 200 words. What it does and does not; how it differs from asking an AI; the work; what you get; distillation; roles; hypotheses; sources (legal routes only, Josh's conversion batching); NotebookLM. The checklist window renders them, so keep them to headings, paragraphs, lists, bold, italic, code and links: no tables.
+- PDFs waiting for conversion go in `<project>/01_CORPUS/pdf/`. Only `source-files` is ingested, so notes and reference lists must stay out of it.
+
+**Rules for agents here**
+- Wording a novice reads (step titles, reasons, guide pages) is product. Keep it plain and short; do not add steps without Josh.
+- The checklist must never claim more than the files show. A new step needs a file-based test or an explicit confirmation.
+
+**Not built yet**
+- Slice 3: the coach drivable from a chat. Today `cr sign` is still a terminal session the person has themselves, and the checklist says so.
+- Slice 4: a source list and a Datalab conversion command. Slice 5: a no-key quest where the host assistant plays Investigator and Manager through one command; today that route is the manual one in `claimreg/notebooklm/INVESTIGATOR.md` and `MANAGER.md`, and `cr quest` needs a model key.
+- Nothing has been tried from a second assistant yet. That is the test that matters: different assistants follow `AGENTS.md` differently.
