@@ -1,3 +1,16 @@
+# **Acquiring sources**
+
+Acquire sources through publisher access, institutional libraries, open-access repositories, author manuscripts, preprint servers, government repositories, court databases, books, public records, and licensed databases. Here are a few resources to help you:
+
+1. [Unpaywall](https://unpaywall.org/) – A browser extension that finds free, legal versions of research papers by searching open-access repositories.  
+2. [DOAJ](https://doaj.org/) – A massive directory of peer-reviewed, high-quality open-access journals in all fields of science, technology, medicine, social science, and humanities.  
+3. [CORE](http://core.ac.uk) – Aggregates millions of open-access research papers from university repositories and journals around the world.  
+4. [Semantic Scholar](http://semanticscholar.org) – An AI-powered research tool that indexes scholarly articles and helps find relevant open-access content.  
+5. [Open Access Button](https://blog.oa.works/sunsetting-the-open-access-button-instantill/) – Service ended but the blog post as some good insights  
+6. [ScienceOpen](https://www.scienceopen.com/) – A discovery platform offering open-access research content, citation tracking, and publishing tools.  
+7. [OA.mg](http://oa.mg) – A minimalist academic search engine that focuses on delivering direct links to open-access versions of papers  
+8. [ArXiv](http://arXiv.org) \-  A preprint repository for fields such as physics, mathematics, computer science, and more.
+
 # Getting the papers
 
 This is the longest step. Your assistant does most of the legwork.
@@ -14,4 +27,9 @@ This is the longest step. Your assistant does most of the legwork.
 
 **A paper you cannot get is recorded as a gap.** The result then shows what is missing, which is better than pretending. Do not use pirate sites.
 
+### But what if you still can't find the paper you need?
+
+https://godmod3.ai/ may be able to advise you further
+
 Next: [Finding and preparing sources](sources.md)
+
