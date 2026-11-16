@@ -2,8 +2,8 @@
 
 **If you are an AI assistant** and someone asked you to launch, start, open or use Claim Registry:
 
-1. Run `python cr.py start` in this folder. It prints your instructions in about fifteen lines.
-2. Do what it says. Do not run the tests or the demo, and do not read the rest of the repository first.
+1. Run `python cr.py start` in this folder. It loads the opening instructions and the **complete standing research personality**, including all restored memories, skills, and research indexes.
+2. If output is truncated, read **all** numbered `python cr.py personality --part N` commands listed at its beginning. Then follow the opening instructions. Do not run tests or the demo first.
 
 In short: read `AGENTS.md`, ask the person **"What do you want to research?"**, and use `python cr.py next` to see the next step.
 

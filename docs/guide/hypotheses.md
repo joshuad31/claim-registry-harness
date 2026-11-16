@@ -18,4 +18,4 @@ Then try the **claim ladder**: write your claim at its strongest, in a middle fo
 
 This is the one place where you may lean toward the answer you want. You do it in the open, and after it the evidence steps cannot be steered.
 
-Next: [Finding and preparing sources](sources.md)
+Next: [Getting the papers](getting-papers.md)

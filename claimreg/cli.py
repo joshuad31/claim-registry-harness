@@ -431,6 +431,11 @@ def main(argv=None) -> int:
     p = argparse.ArgumentParser(prog="cr", description=f"Claim Registry harness {__version__}")
     sub = p.add_subparsers(dest="cmd", required=True)
 
+    from .personality import cmd_personality
+    s = sub.add_parser("personality", help="load the complete standing research personality and memories")
+    s.add_argument("--part", type=int, help="read one lossless part if the host truncates long output")
+    s.set_defaults(fn=cmd_personality)
+
     s = sub.add_parser("init", help="create a project folder")
     s.add_argument("project")
     s.add_argument("--name")
@@ -445,6 +450,17 @@ def main(argv=None) -> int:
     s = sub.add_parser("corpus", help="hash the corpus and write a manifest")
     s.add_argument("project")
     s.set_defaults(fn=cmd_corpus)
+
+    from .conversion import cmd_convert
+    s = sub.add_parser("convert", help="convert project papers with Datalab (external, potentially paid upload)")
+    s.add_argument("project")
+    s.add_argument("--folder", help="input folder; defaults to the project's 01_CORPUS/pdf")
+    s.add_argument("--mode", choices=("accurate", "balanced", "fast"), default="accurate")
+    s.add_argument("--key-file", help="path to an external Datalab key file")
+    s.add_argument("--dry-run", action="store_true", help="list files without uploading or requiring a key")
+    s.add_argument("--force", action="store_true", help="reconvert/replace output; can incur another charge")
+    s.add_argument("--workers", type=int, default=3)
+    s.set_defaults(fn=cmd_convert)
 
     s = sub.add_parser("new-run", help="create a new run")
     s.add_argument("project")

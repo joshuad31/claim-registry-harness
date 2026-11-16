@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "source_archive_sha256": "d385656498fc399d47003a8ea40400c526b6c2c25a2bf9644bb97c4849d2d8b0",
+  "note": "All supplied files retained without filtering or rewriting. Historical statements retain their original context.",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 3454,
+      "sha256": "1e7fb65da41be7dd6dda1e2133bfe3e1c325181a1ae147f5e64b7b4b12188f3c"
+    },
+    {
+      "path": "AGENT-GUIDE.md",
+      "bytes": 2707,
+      "sha256": "fda66a546d49b3a17b5532c3ad121fb4859d7a091550428c0b681491fea418a6"
+    },
+    {
+      "path": "skills/datalab-folder-convert/SKILL.md",
+      "bytes": 1828,
+      "sha256": "484e946d7cca433bdcf73a53dc89aee90ecd95b3661a637f91d051e13b4d8b01"
+    },
+    {
+      "path": "skills/connected-papers-bib-to-markdown/SKILL.md",
+      "bytes": 1831,
+      "sha256": "78e4c5ba9e1955b967a78e4c0b47f19ade6222e28c7d3e8ab31e4c0673ca9560"
+    },
+    {
+      "path": "datalab_convert.py",
+      "bytes": 9101,
+      "sha256": "9b84da91d83c65833e340089f98c84ea881f7d78e96872c752dd929dfe0192a7"
+    },
+    {
+      "path": "memory/01-standing-rules.md",
+      "bytes": 4297,
+      "sha256": "a7419a5057958df1f26f64f4043b131a3e6a41388499b921b3dad161ba99f42e"
+    },
+    {
+      "path": "memory/03-workstreams.md",
+      "bytes": 4637,
+      "sha256": "decb29a37f507a105809bbf5cd360c7e3b6a3316cdaa77cea37a4b8709e8c0f0"
+    },
+    {
+      "path": "memory/04-lessons-learned.md",
+      "bytes": 2679,
+      "sha256": "48c9f9d35c73fdc41753c41a4aae2f50decbc2a51ebf5690a2e9cfd44931f8d6"
+    },
+    {
+      "path": "memory/FETCH-QUESTS.md",
+      "bytes": 9660,
+      "sha256": "fc1e1f051a6c67e4bf447f699996e1b87980c041709eb0c96b14f87272e45de5"
+    },
+    {
+      "path": "memory/paper-index.md",
+      "bytes": 14733,
+      "sha256": "991bda859b5cb1fb15e86d66f56380832e9a2efe58747c8febc4620c6fcf10e3"
+    },
+    {
+      "path": "memory/scihub-links.md",
+      "bytes": 697,
+      "sha256": "959d6110e9aeb2ca261d64d1eec6d7e29eb78dedb468a01a4e16b2e1bc73e76f"
+    }
+  ]
+}

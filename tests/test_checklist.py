@@ -224,14 +224,16 @@ class GuideTest(unittest.TestCase):
             self.assertNotIn(name, text)
 
     def test_launching_reaches_the_opening_question_from_any_door(self):
-        # whichever thing a lost assistant tries first, it is told the same few lines
+        # Every launch entry point includes both the opening and the complete research personality.
         outs = [run(*argv) for argv in ([], ["start"], ["launch"])]
         self.assertTrue(all(code == 0 for code, _ in outs))
         self.assertEqual(len({text for _, text in outs}), 1)
         text = outs[0][1]
         self.assertIn("What do you want to research?", text)
         self.assertIn("Do not run the tests or the demo", text)
-        self.assertLessEqual(len(text.splitlines()), 22)
+        from claimreg import personality
+        self.assertTrue(text.startswith(checklist.START_TEXT))
+        self.assertIn(personality.render(), text)
         for f in ("START HERE.md", "README.md", "AGENTS.md"):
             head = "\n".join((ROOT / f).read_text(encoding="utf-8").splitlines()[:16])
             self.assertIn("python cr.py start", head, f)
@@ -242,9 +244,34 @@ class GuideTest(unittest.TestCase):
         text = (ROOT / "AGENTS.md").read_text(encoding="utf-8")
         self.assertLess(text.index("HANDOFF.md"), text.index("What do you want to research?"))
         self.assertIn("python cr.py next", text)
-        self.assertLessEqual(len(text.split()), 900)
+        self.assertLessEqual(len(text.split()), 1700)
         for f in ("CLAUDE.md", "GEMINI.md"):
             self.assertIn("AGENTS.md", (ROOT / f).read_text(encoding="utf-8"))
+
+    def test_the_assistant_is_told_to_mentor_and_to_help_with_papers(self):
+        agents = (ROOT / "AGENTS.md").read_text(encoding="utf-8")
+        start = checklist.START_TEXT
+        # the second reply leads with the person's question and the value, not with a list of limits
+        self.assertLess(agents.index("Take the question seriously"), agents.index("Mention a limit only if"))
+        self.assertIn("Never open with what it cannot do", agents)
+        self.assertIn("Never open with what it cannot do", start)
+        self.assertNotIn("do not sell", agents.lower())
+        # papers: the assistant does the legwork, and a failed download comes with its reason
+        self.assertIn("say exactly why", agents)
+        self.assertIn("say exactly why", start)
+        st = checklist.build(None)
+        self.assertEqual(by_id(st)["sources"]["guide"], "docs/guide/getting-papers.md")
+        page = (checklist.GUIDE_DIR / "what-it-does.md").read_text(encoding="utf-8")
+        self.assertNotIn("find sources for you", page)
+
+    def test_the_developer_handoff_does_not_capture_a_lost_assistant(self):
+        # HANDOFF.md is 50 KB of build record.  An assistant that opens it first must still be
+        # sent to the opening question before it is told to read this file.
+        text = (ROOT / "HANDOFF.md").read_text(encoding="utf-8")
+        head = "\n".join(text.splitlines()[:12])
+        self.assertIn("python cr.py start", head)
+        self.assertIn("There is no program to launch", head)
+        self.assertLess(head.index("python cr.py start"), head.index("read this file first"))
 
 
 if __name__ == "__main__":

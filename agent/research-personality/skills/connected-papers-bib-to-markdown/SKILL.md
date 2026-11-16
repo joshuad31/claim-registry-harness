@@ -1,0 +1,16 @@
+---
+name: connected-papers-bib-to-markdown
+description: Turn a Connected Papers or other BibTeX export into a readable bibliography and research-specific shortlist. Use for citation lists, not for converting full papers or treating abstracts as primary evidence.
+---
+
+# Bibliography preparation
+
+Parse the original `.bib` with a real BibTeX parser available in the host environment. Renaming it to `.md` does not convert it. Preserve the original export and source order; handle nested braces, multiline fields, and author lists. Report unsupported or garbled records rather than silently dropping them.
+
+Write a Markdown bibliography containing available title, authors, year, journal/volume/pages, DOI, PMID, and abstract. Use one section per record. Missing metadata remains missing. Keep this file outside Claim Registry's admitted source directory.
+
+When web access is available, verify uncertain citations against publisher, PubMed, or Crossref records. Mark checked versus unchecked metadata and explain any repairs with their source links. Never invent missing abstracts. DOI links use `https://doi.org/<doi>`; if no DOI is verified, provide a verified source page or a clearly labeled search query.
+
+For a shortlist, use the user's research brief, include potentially contrary results, distinguish primary research from reviews, and flag likely papers already acquired. A filename or title match suggests a duplicate; do not silently merge records or infer independent studies. Give a reason for each recommended acquisition and preserve excluded/deferred candidates for inspection.
+
+Report input/output record counts, parse errors, checked identifiers, repairs, likely duplicates, and output path. This is a planning artifact; do not include it as primary evidence or infer research results from citation metadata alone.

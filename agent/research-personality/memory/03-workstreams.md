@@ -1,0 +1,41 @@
+# Research workstreams (paths use %USERPROFILE% in place of the original user folder)
+
+## Levothyroxine bedtime-dosing claim registry
+- The advocacy effort that led the user to use the models. Folders include %USERPROFILE%\Desktop\FINAL SPECIFICATION DOCUMENTS\Claude output\LEVO\01_CORPUS\Bedtime Sources and %USERPROFILE%\Desktop\Levothyroxine DEEPSEEK\FOUND FILES, where FETCH-QUESTS.md is the master list: convert any file in the folder that matches a paper on it (accurate, into FOUND FILES\Markdowns).
+- Combination Therapy Patient provider gap (under Levothyroxine DEEPSEEK): after converting New sources, MOVE (not copy) PDFs into parent pdfs\ and markdowns into parent markdowns\; leave New sources empty of processed files.
+- High-priority target: Lain et al. 2020, Matern Child Health J, "Neonatal Thyroxine, Maternal Thyroid Function, and Cognition in Mid-childhood in a US Cohort" (Project Viva); the user aims to show its conclusions are unsupported.
+- ACH rebuild (Sept 2026): %USERPROFILE%\Desktop\levothyroxine lawsuit all is the untouched archive (~1180 PDFs/~706 markdowns); primary sources selectively imported into %USERPROFILE%\Desktop\grokbot project\Levothyroxine New (ACH-Generic-Workflow-Kit layout): peer-reviewed pubs in PDF sources\publications, NDA/FDA FOIA material in PDF sources\NDA-FDA. Drug-label folders were converted in balanced (cheaper, least important); everything else accurate. Powered thyroidevidence.com.
+- `000 NEW research` (iodine/cognition, levothyroxine lawsuit) is organized as PDF, markdowns, LLM output (Perplexity reports, paper-index.md, scihub-links.md), and scripts (YouTube scripts). Fetch and convert downloadable papers first; sci-hub links for the rest afterward.
+
+## PTX (pentoxifylline) / urinary research
+- Desktop\PTX stuff with Markdowns_Round_N folders (legacy numbered rounds). ICanUrinate ACH project at Desktop\PTX stuff\ICanUrinate ACH (methodology PDFs like Dhami et al. 2019 ACH, Stanford Imprecise Probabilities).
+- Cushing-PTX NotebookLM checklist: PTX stuff\Cushing-PTX-notebook-checklist.md. NotebookLM custom prompts live in Desktop\NotebookLM custom prompt generator (role/WORKFLOW/EVIDENCE DISCIPLINE/CORPUS-SPECIFIC GUARDRAILS/CITATION/LANGUAGE/OUTPUT skeleton).
+- NAD+ corpus in a "nad plus" folder with its own NotebookLM notebook.
+
+## Bertolotti syndrome (for a friend)
+- Desktop\friends\bertolotti syndrome, accurate conversions in Markdowns (111 PDFs/111 markdowns as of Nov 15, 2026).
+- Connected Papers seeds: Zhu et al. 2023, Int J Surg (10.1097/JS9.0000000000000541), then Desai et al. 2023, J Neurosurg Spine (10.3171/2023.2.SPINE221071).
+- Wide topic coverage: far-out syndrome/extraforaminal L5 entrapment, facet and SI joint pain diagnostics, asymptomatic imaging baselines.
+
+## Defecation syncope
+- Desktop\Defecation syncope: PDFs in PDFs\, markdowns at root markdowns\, extracts only in extractions\. Extract rule: each extract at most half the source markdown length, focused on plausible pathways for immediate post-defecation malaise with formed stools; no filler.
+
+## Neupulse (wrist median-nerve stimulation) open-source research
+- Goal: the device design being open source because it may help people; no grudge against patent holders, no personal gain.
+- Desktop\RESEARCH TOPICS\Neupulse patent with markdowns (incl. US12186548B2 file wrapper and prior art). Building an open-source design-around (evenly spaced pulses, standalone offline wearable).
+
+## Gut health (spicy food / TRPV1)
+- Desktop\Gut health; connected papers subfolder holds Sci-Hub similar-article lists for shortlisting verified DOIs not already owned.
+
+## Ezekiel prince research (Ezekiel 44–48)
+- Desktop\NEW Ezekiel Sources\ (Origen, Analysis\images, etc.). Acquisition sheets use only direct PDFs, sci-hub, or Anna's Archive/LibGen/open-slum search strings. Witness Lee and Watchman Nee ministry markdowns combined into single files.
+
+## Olaf Dreyer YouTube script
+- Desktop\youtube scripts folder\olaf dreyer, accurate conversions in markdowns. Compared Dreyer's "The world is discrete" with a Brian Keating claim that the CMB black-body spectrum requires condensed matter: parallel analogies, not the same argument.
+
+## Other
+- Desktop\New ACH research (accurate into markdowns).
+- Pump.fun vs Akerlof lemon-markets ACH: stopping artifact ACH-DOMAIN-CONTENT-PROFILE_pumpfun-lemon.md; no question bank.
+- Aguilar v. Baton docket 138 exhibits: already converted; never re-send that folder.
+- Phang v. Blanche (D.D.C. 1:26-cv-1417) court PDFs converted fast into ACH 2.0 OLD\epstine\Markdowns_Round_2.
+- Copies of protocol notes are kept in Documents\Grok Bot.

@@ -39,3 +39,6 @@ projects/PTX-NLM-MODEL/01_CORPUS/source-files/
 
 # The checklist window `cr next --window` writes; it is rebuilt from the project's files.
 **/CHECKLIST.html
+
+# Rebuildable research-personality distribution; runtime records belong to user projects.
+dist/research-paper-converter-kit.zip

@@ -13,7 +13,7 @@ It can:
 It cannot:
 
 - prove that something is true. It reports what this set of sources supports;
-- find sources for you, or get past a paywall;
+- get past a paywall. Your assistant does help you find papers and downloads the ones that are free to read ([Getting the papers](getting-papers.md));
 - make up for sources you did not include;
 - replace an expert's judgment of whether a study was done well.
 

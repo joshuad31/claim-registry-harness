@@ -16,6 +16,6 @@ If you cannot get a paper legally, list it as a gap. Do not use pirate sites.
 - Once NotebookLM shows which paper is most valuable, look up related papers once ([Connected Papers](https://www.connectedpapers.com/), [OpenAlex](https://openalex.org/)) and ask the chat that built your list which of them matter.
 - Name each file after its first author and year, for example `shirazi2024`.
 
-**Converting.** The tool reads text, not PDFs. A converter such as [datalab.to](https://www.datalab.to/) turns PDFs into Markdown. Convert about 30 at a time: highest quality for files with complex tables, "balanced" above 4 MB, "fast" above 10 MB. Then open a few and check that the tables survived.
+**Converting.** Your assistant uses the bundled converter to turn PDFs into Markdown through [Datalab](https://www.datalab.to/). Accurate mode is the default; balanced and fast are available. This uploads documents and can cost money. The assistant previews files, preserves originals, and reports failures. Check difficult tables and numbers against originals before registering sources; file counts do not establish fidelity.
 
 Next: [Setting up NotebookLM](notebooklm.md)

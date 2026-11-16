@@ -1,0 +1,131 @@
+# Fetch quests: missing levothyroxine papers
+
+Two prompts. Paste the first into Gemini (with Google Drive enabled) and the second into the Grok bot.
+Both look for the same list of papers.
+
+---
+
+## Prompt 1: Gemini, search my Google Drive
+
+You are helping me find research papers I already downloaded. Search my Google Drive only. Do not search
+the web and do not summarise the papers. I only need to know whether each file exists and where it is.
+
+For each paper below, search Drive by author surname, by distinctive title words, and by DOI where
+given. Look at PDFs, Markdown files, Google Docs and anything inside folders or zip files. A paper
+counts as found only if the file is the paper itself. A summary, an AI analysis or a document that
+merely cites the paper does not count; list those separately.
+
+Return one table with these columns:
+
+| # | Paper (as listed) | Found? (YES / NO / ONLY CITED ELSEWHERE) | Exact file name | Folder path in Drive | File type | Drive link |
+
+After the table, list any other primary studies you came across on these four topics that are not on
+my list: levothyroxine bedtime or evening dosing; liquid or soft-gel levothyroxine; coffee, calcium,
+iron, milk, multivitamin or proton-pump-inhibitor effects on levothyroxine absorption; patients whose
+TSH stays high on levothyroxine.
+
+### The papers
+
+**Bedtime versus morning dosing**
+1. Bolk N, Visser TJ, Nijman J, et al. Effects of evening vs morning levothyroxine intake: a randomized double-blind crossover trial. Arch Intern Med. 2010;170(22):1996–2003.
+2. Bolk N, Visser TJ, Kalsbeek A, et al. Effects of evening vs morning thyroxine ingestion on serum thyroid hormone profiles in hypothyroid patients. Clin Endocrinol. 2007.
+3. Bach-Huynh TG, Nayak B, Loh J, Soldin S, Jonklaas J. Timing of levothyroxine administration affects serum thyrotropin concentration. J Clin Endocrinol Metab. 2009;94:3905–3912.
+4. Rajput R, Chatterjee S, Rajput M. Can levothyroxine be taken as evening dose? Comparative evaluation of morning versus evening dose of levothyroxine in treatment of hypothyroidism. J Thyroid Res. 2011.
+5. Skelin M, Lucijanić T, et al. Effect of timing of levothyroxine administration on the treatment of hypothyroidism: a three-period crossover randomized study. Endocrine. 2018.
+6. de Mello (or similar first author), 2022, Frontiers in Medicine, 9:828762 — levothyroxine timing.
+7. Any meta-analysis or systematic review of bedtime versus morning levothyroxine (search "bedtime levothyroxine meta-analysis", "evening levothyroxine systematic review").
+
+**Liquid and soft-gel levothyroxine**
+8. Vita R, Saraceno G, Trimarchi F, Benvenga S. Switching levothyroxine from the tablet to the oral solution formulation corrects the impaired absorption of levothyroxine induced by proton-pump inhibitors. J Clin Endocrinol Metab. 2014.
+9. Fallahi P, Ferrari SM, Antonelli A. Oral L-thyroxine liquid versus tablet in patients with hypothyroidism without malabsorption: a prospective study. Endocrine. 2016.
+10. Cappelli C, et al. Studies of liquid levothyroxine taken at breakfast (any year).
+11. Brancato D, et al. Liquid versus tablet levothyroxine, TSH comparison (any year).
+12. Virili C, et al. Review of liquid and soft-gel levothyroxine formulations (any year).
+13. Laurent I, et al. Liquid versus tablet levothyroxine, systematic review or meta-analysis (any year).
+14. Any other study where patients were switched from levothyroxine tablets to liquid or soft-gel and TSH was reported.
+
+**Absorption interference**
+15. Benvenga S, et al. Altered intestinal absorption of L-thyroxine caused by coffee. Thyroid. 2008;18:293–301.
+16. Singh N, Singh PN, Hershman JM. Effect of calcium carbonate on the absorption of levothyroxine. JAMA. 2000;283:2822–2825.
+17. Campbell NR, et al. Ferrous sulfate reduces thyroxine efficacy in patients with hypothyroidism. Ann Intern Med. 1992.
+18. Chon DA, et al. Concurrent milk ingestion decreases absorption of levothyroxine. Thyroid. 2018.
+19. Centanni M, et al. Thyroxine in goiter, Helicobacter pylori infection, and chronic gastritis. N Engl J Med. 2006.
+20. Any study that tested a multivitamin or prenatal vitamin with levothyroxine.
+
+Some citation details above may be slightly off. Match on author and topic even if the year or journal
+differs, and tell me when you do.
+
+---
+
+## Prompt 2: Grok bot, search my local folder
+
+Search this folder and every subfolder on my Windows PC:
+
+`C:\Users\joshu\Desktop\levothyroxine lawsuit all`
+
+I am looking for research papers I already downloaded. Do not download anything and do not change, move
+or delete any file. Search file names first, then file contents (PDF, .md, .txt, .docx). A paper counts
+as found only if the file is the paper itself, not an AI summary or a document that cites it.
+
+Also tell me, for each paper found, whether a copy is already inside this subfolder (that subfolder is what
+is loaded into NotebookLM):
+
+`C:\Users\joshu\Desktop\levothyroxine lawsuit all\all levothyroxine markdowns in NotebookLM`
+
+If you can run PowerShell, this does the file-name and content search and writes the result where my
+other assistant can read it:
+
+```powershell
+$root = "C:\Users\joshu\Desktop\levothyroxine lawsuit all"
+$out  = "C:\Users\joshu\Desktop\FINAL SPECIFICATION DOCUMENTS\Claude output\fable-live\logs\levo-fetch-local.txt"
+$terms = "Bolk","Bach-Huynh","Rajput","Skelin","de Mello","828762","bedtime","evening dose","evening vs morning",
+         "Vita R","Fallahi","Cappelli","Brancato","Virili","Laurent","oral solution","liquid formulation","soft-gel","softgel",
+         "Benvenga","coffee","Singh N","calcium carbonate","Campbell","ferrous sulfate","Chon","milk ingestion",
+         "Helicobacter","gastritis","multivitamin","prenatal vitamin"
+$files = Get-ChildItem -LiteralPath $root -Recurse -File -Include *.pdf,*.md,*.txt,*.docx
+"== FILE NAME MATCHES ==" | Out-File $out -Encoding utf8
+foreach ($t in $terms) { $files | Where-Object { $_.Name -like "*$t*" } | ForEach-Object { "$t`t$($_.FullName)" } | Out-File $out -Append -Encoding utf8 }
+"== CONTENT MATCHES (.md / .txt, first 3 lines) ==" | Out-File $out -Append -Encoding utf8
+foreach ($t in $terms) {
+  $files | Where-Object { $_.Extension -in ".md",".txt" } |
+    Select-String -SimpleMatch -Pattern $t -List | Select-Object -First 40 |
+    ForEach-Object { "$t`t$($_.Path)`t$($_.Line.Trim().Substring(0,[Math]::Min(160,$_.Line.Trim().Length)))" } |
+    Out-File $out -Append -Encoding utf8
+}
+"Done: $out"
+```
+
+Then return one table:
+
+| # | Paper (as listed) | Found? (YES / NO / ONLY CITED ELSEWHERE) | Full file path | Already in the NotebookLM subfolder? (YES / NO) |
+
+### The papers
+
+**Bedtime versus morning dosing**
+1. Bolk N, Visser TJ, Nijman J, et al. Effects of evening vs morning levothyroxine intake: a randomized double-blind crossover trial. Arch Intern Med. 2010;170(22):1996–2003.
+2. Bolk N, Visser TJ, Kalsbeek A, et al. Effects of evening vs morning thyroxine ingestion on serum thyroid hormone profiles in hypothyroid patients. Clin Endocrinol. 2007.
+3. Bach-Huynh TG, Nayak B, Loh J, Soldin S, Jonklaas J. Timing of levothyroxine administration affects serum thyrotropin concentration. J Clin Endocrinol Metab. 2009;94:3905–3912.
+4. Rajput R, Chatterjee S, Rajput M. Can levothyroxine be taken as evening dose? Comparative evaluation of morning versus evening dose of levothyroxine in treatment of hypothyroidism. J Thyroid Res. 2011.
+5. Skelin M, Lucijanić T, et al. Effect of timing of levothyroxine administration on the treatment of hypothyroidism: a three-period crossover randomized study. Endocrine. 2018.
+6. de Mello (or similar first author), 2022, Frontiers in Medicine, 9:828762 — levothyroxine timing.
+7. Any meta-analysis or systematic review of bedtime versus morning levothyroxine (search "bedtime levothyroxine meta-analysis", "evening levothyroxine systematic review").
+
+**Liquid and soft-gel levothyroxine**
+8. Vita R, Saraceno G, Trimarchi F, Benvenga S. Switching levothyroxine from the tablet to the oral solution formulation corrects the impaired absorption of levothyroxine induced by proton-pump inhibitors. J Clin Endocrinol Metab. 2014.
+9. Fallahi P, Ferrari SM, Antonelli A. Oral L-thyroxine liquid versus tablet in patients with hypothyroidism without malabsorption: a prospective study. Endocrine. 2016.
+10. Cappelli C, et al. Studies of liquid levothyroxine taken at breakfast (any year).
+11. Brancato D, et al. Liquid versus tablet levothyroxine, TSH comparison (any year).
+12. Virili C, et al. Review of liquid and soft-gel levothyroxine formulations (any year).
+13. Laurent I, et al. Liquid versus tablet levothyroxine, systematic review or meta-analysis (any year).
+14. Any other study where patients were switched from levothyroxine tablets to liquid or soft-gel and TSH was reported.
+
+**Absorption interference**
+15. Benvenga S, et al. Altered intestinal absorption of L-thyroxine caused by coffee. Thyroid. 2008;18:293–301.
+16. Singh N, Singh PN, Hershman JM. Effect of calcium carbonate on the absorption of levothyroxine. JAMA. 2000;283:2822–2825.
+17. Campbell NR, et al. Ferrous sulfate reduces thyroxine efficacy in patients with hypothyroidism. Ann Intern Med. 1992.
+18. Chon DA, et al. Concurrent milk ingestion decreases absorption of levothyroxine. Thyroid. 2018.
+19. Centanni M, et al. Thyroxine in goiter, Helicobacter pylori infection, and chronic gastritis. N Engl J Med. 2006.
+20. Any study that tested a multivitamin or prenatal vitamin with levothyroxine.
+
+Some citation details above may be slightly off. Match on author and topic even if the year or journal
+differs, and tell me when you do.

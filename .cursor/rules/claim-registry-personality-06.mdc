@@ -1,0 +1,28 @@
+---
+description: Standing Claim Registry research personality and complete supplied experience
+alwaysApply: true
+---
+
+Generated from agent/research-personality; edit the source and rebuild.
+Apply PERSONALITY.md's interpretation of historical notes and role boundaries.
+Complete source file: memory/01-standing-rules.md
+
+# Standing rules (behavior memory, verbatim except the owner's name)
+
+- The user prefers Datalab for PDF-to-markdown conversion (especially PACER dockets, tables, and exhibits); work from Datalab .pdf.md output rather than converting those PDFs with other tools, and call the Datalab convert API on a local folder (not playground datalab-output- names).
+- Datalab convert preference: default mode=accurate; use balanced/fast only when the user says they are in a hurry. Output filename must be identical to the source file with only .md appended (e.g. Foo.pdf → Foo.pdf.md). When the user says "convert pls" (or similar) and points at a folder, run the Datalab folder convert without asking: create a Markdowns subfolder if missing, write {original-filename}.md there, and skip files that already have that markdown.
+- From November 6, 2026, conversion output folders must be named Markdowns by default (exact capitalization); use numbered folders Markdowns_[#] only when the user explicitly requests multiple conversion rounds.
+- Never put leading HTML comment headers on converted markdown/txt (e.g. <!-- source: ... -->, <!-- sha256_12: ... -->, <!-- converted: datalab marker ... -->); NotebookLM rejects files that start that way. Deliver clean document body only.
+- For evidence and NotebookLM work, reject pdftotext or plain-text PDF extraction; require Datalab accurate conversions so tables keep numbers attached to their rows and symbols such as ±, <, and µg are preserved, because quote checks would otherwise accept corrupted figures.
+- NotebookLM queries must be less than 150 words.
+- Never create temp/staging/scratch folders on the Desktop; put them under %USERPROFILE%\AgentScratch\ (AgentScratch\temp\ for short-lived work, or a named subfolder for multi-day staging). No zip files left on the Desktop or in research folders; delete every temporary zip immediately (or copy files individually).
+- When downloading papers or other files, copy each finished file into the user's target folder as soon as it completes so they can see progress; do not leave downloads only on the bot's machine while their folder stays empty. (The user gets upset when the folder stays empty.)
+- When a PDF arrives with a UUID or hash filename, rename both the PDF and its Datalab markdown to authorYear form (e.g. mostafa-hedeab2022.pdf and mostafa-hedeab2022.pdf.md) after conversion.
+- Sci-Hub links: just the bare URLs (sci-hub.box/{DOI}), one per line with nothing else on the line, so they can be double-click selected. DOIs must be verified (Crossref/PubMed) before they are given, especially ones from Perplexity or other LLM tables, since those are often wrong. Tell the user which DOIs were corrected.
+- Large lists of acquisition links: chunk into blocks of about 10. For non-Sci-Hub links (publisher/OA/registry), add a short list of search terms such as "Supplementary", "Supplement", "Appendix", "Additional files", "Supporting information", "Download PDF", "Protocol", or "Questionnaire". When acquiring papers, check publisher sites for appendices/supplements too.
+- For acquisition sheets: never give Archive.org borrow, HathiTrust, publisher store, or Google Books "about" links. Only (1) direct downloadable PDFs, (2) sci-hub.box/{DOI}, or (3) paste-ready Anna's Archive / LibGen / open-slum search strings, because files are converted for LLMs/ACH, not human browser reading.
+- For Sci-Hub similar-result piles, Connected Papers bibliographies, and paper lists, give a shortlist of papers worth downloading based on topical fit to the research topic at hand, not bulk acquisition, and flag ones already in the folder.
+- Connected Papers bibliographies go to markdown, not raw .bib. Retained fields only: title, authors, year, journal (+vol/pages), DOI, PMID, abstract. Drop Semantic Scholar URLs. Repair garbled exports when possible and note the repair.
+- For any public evidence website, keep DOI links only; Sci-Hub stays private research tooling and must never be wired into a public site.
+- Papers are downloaded because the user has the pathologies in question, not for fun or profit; keep that bigger picture in mind and cooperate with paper acquisition, since the conditions can be serious if not diagnosed and treated in time.
+- Never print API keys in chat or logs.

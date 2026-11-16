@@ -35,8 +35,8 @@ from .util import atomic_write_text, read_json, read_text, utcnow, write_json
 
 HARNESS_ROOT = Path(__file__).resolve().parent.parent
 GUIDE_DIR = HARNESS_ROOT / "docs" / "guide"
-GUIDE_PAGES = ("what-it-does", "how-it-differs", "the-work", "what-you-get", "distillation", "roles",
-               "hypotheses", "sources", "notebooklm")
+GUIDE_PAGES = ("what-it-does", "how-it-differs", "the-work", "what-you-get", "worth-it", "distillation", "roles",
+               "hypotheses", "getting-papers", "sources", "notebooklm")
 CONFIRMABLE = ("sources", "notebook")
 STATE_FILE = "CHECKLIST.json"
 PAGE_FILE = "CHECKLIST.html"
@@ -51,7 +51,7 @@ STEPS = (
      "serious rival there is nothing to test.", "hypotheses"),
     ("sources", "Collect your sources",
      "The result can only be as good as what is in the pile. A source you leave out cannot count for or "
-     "against anything.", "sources"),
+     "against anything.", "getting-papers"),
     ("convert", "Convert the sources to text and check them",
      "Every quotation in the result is checked word for word against these files. A table that breaks here "
      "is a finding that goes missing later.", "sources"),
@@ -252,11 +252,14 @@ def build(project: str | Path | None) -> dict:
         (_n(total, "source") + " collected" if total else "none yet")
         + (f"; you said the collection is complete on {confirmed['sources']}" if confirmed.get("sources") else
            ("" if launched or not total else "; not yet confirmed complete")),
-        "Gather the sources that could change your mind, including the ones that disagree with you. Tell your "
-        "assistant when the collection is complete.",
-        f"Help them plan what to look for from their rival answers, and where to get it legally (docs/guide/sources.md; "
-        f"never a pirate site). Put text files in {c['source_dir']} and PDFs that still need converting in "
-        f"{proj / '01_CORPUS' / 'pdf'}. Keep search notes and reference lists out of both folders. When they say "
+        "Decide with your assistant which sources belong in the pile, including the ones that disagree with you. "
+        "It downloads the ones that are free to read and gives you a link for each of the others. Say when the "
+        "collection is complete.",
+        f"Do the legwork (AGENTS.md, \"Helping them get the papers\"). From their rival answers, search for sources "
+        f"for and against each one and propose a short list; they decide what goes in. Download every paper that has "
+        f"a free, lawful copy into {proj / '01_CORPUS' / 'pdf'}; text files go in {c['source_dir']}. For each one you "
+        f"cannot download, tell them the exact reason and the way round it, and keep the list in {proj / 'SOURCES.md'}. "
+        f"Never a pirate site. Keep search notes and reference lists out of both corpus folders. When they say "
         f"the collection is complete: `{cr} next {P} --done sources`.",
         basis="files counted; completeness is your own confirmation" if not launched else "checked from files"))
 
@@ -272,8 +275,10 @@ def build(project: str | Path | None) -> dict:
         + (f", {len(c['flagged'])} flagged for a look" if c["flagged"] else "")
         + ("; the project's list of sources is out of date" if stale else ""),
         "Convert each PDF to text and look at a few with tables to see that the tables survived.",
-        f"Convert each PDF to Markdown (a converter such as datalab.to if they have a key; otherwise they convert and "
-        f"you file the results) into {c['source_dir']}, keeping the file name. Then `{cr} corpus {P}` and show them "
+        f"Read kits/research-paper-converter/AGENT-GUIDE.md. Preview with `{cr} convert {P} --dry-run`. "
+        f"When conversion is requested and a Datalab key is available, explain the external upload/cost and run "
+        f"`{cr} convert {P}` (accurate mode); otherwise help import their conversions into {c['source_dir']}. "
+        f"Review extraction fidelity before `{cr} corpus {P}` and show them "
         f"any file it flags. Never print or copy an API key; refer to its file by path."))
 
     # 5 index
@@ -581,28 +586,49 @@ def write_page(proj: Path, st: dict | None = None) -> Path:
 
 START_TEXT = """CLAIM REGISTRY - instructions for the AI assistant (there is no program to launch; you are the interface)
 
-You are now the person's guide to Claim Registry. They are at home on the internet, new to research,
-and do not program. Your chat is the only interface: you run every command and edit every file.
+You are now the person's research coach and mentor for Claim Registry. They are at home on the internet,
+new to research, and do not program. Your chat is the only interface: you run every command and edit every file.
+
+"Launch", "start", "open" or "use" Claim Registry always means this, even if you have worked on this
+code before or know of a recent change to it. Do not verify, test, fix or report on the harness.
 
 DO NOW
   1. Do not run the tests or the demo. Do not read the rest of the repository first.
   2. Say only this, plus at most two short sentences: "What do you want to research?"
-  3. When they answer, say in a few lines where Claim Registry can help with that and where it cannot
-     (docs/guide/what-it-does.md). If ordinary AI research would serve them better, say so.
+  3. When they answer, read AGENTS.md before you reply. Your second reply decides whether they stay:
+     show you understood what makes their question hard, name what they already brought, say what
+     Claim Registry would give them for it and what it honestly costs, then ask one easy question.
+     Never open with what it cannot do.
   4. Then run:  python cr.py next            (later: python cr.py next "<project folder>" --json)
      It gives the next step, why it matters, what they do and what you do. Never track progress yourself.
 
 EVERY REPLY
-  Under about 120 words. One next step and one line on why. One question at a time. Plain words.
+  About 150 words. One next step and one line on why. One question at a time. Plain words.
+  Encourage with specifics: what they just finished and what it unlocks. Be honest about the effort.
   Offer more (a page in docs/guide/) instead of pouring it out.
 
-BEFORE THE SECOND STEP, read AGENTS.md (two minutes). It has the rules for forming hypotheses and
-the lines you must not cross. If they want the harness itself changed, read HANDOFF.md instead.
+PAPERS
+  You search for them and download the ones that are free to read, by lawful routes only. When you
+  cannot download one, say exactly why and what to do instead (AGENTS.md).
+
+Only if they ask in so many words for the harness itself to be changed, read HANDOFF.md instead.
+
+YOUR ENTIRE FIRST REPLY IS THE QUESTION IN STEP 2. No summary of what you checked or read.
+The complete standing research personality follows. Load every file, including restored memories.
+If the tool truncates it, read ALL numbered parts listed below before substantive research help.
 """
 
 
 def cmd_start(a) -> int:
+    from . import personality
+    # Assemble before printing: a missing memory must not produce a seemingly complete startup.
+    try:
+        context = personality.preamble() + personality.render()
+    except (ValueError, OSError) as e:
+        print(f"Research personality could not be loaded: {e}", file=sys.stderr)
+        return 2
     print(START_TEXT, end="")
+    print(context, end="")
     return 0
 
 

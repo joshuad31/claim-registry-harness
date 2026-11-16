@@ -9,4 +9,4 @@
 
 Ordinary AI research gives you an answer. This gives you the evidence for and against each answer, in a form other people can inspect.
 
-Next: [Distillation: finding the needles](distillation.md)
+Next: [Is it worth the work?](worth-it.md)
