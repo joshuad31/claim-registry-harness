@@ -274,6 +274,11 @@ def packet(state):
     if phase != "completed":
         out["next_request"] = {"action": action, "base_payload": {"session_id": state["id"], "revision": state["revision"]},
                                "requires_actual_user_reply": phase != "prepare"}
+        from .json_files import json_folder
+        project = next(Path(p).parent for p in state["inputs"] if Path(p).name == "project.json")
+        folder = json_folder(project / "01_FRAME")
+        out["next_request"]["response_file"] = str(folder / f'coach-{state["id"]}-{state["revision"]}.json')
+        out["for_the_assistant"] += " Write the response at next_request.response_file inside the json folder; create its parent if needed."
     if phase == "prepare":
         out["for_the_assistant"] += (" Run coach --action prepare to use the saved draft; add --model-review only for "
                                      "configured model-assisted alternatives/forecasts (may incur usage). Never represent "

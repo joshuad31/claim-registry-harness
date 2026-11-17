@@ -20,6 +20,16 @@ FIX = Path(__file__).parent / "fixtures" / "mini"
 
 
 class ChatCoachTest(unittest.TestCase):
+    def test_response_payload_path_uses_existing_json_folder(self):
+        folder = self.frame / 'JSON'
+        folder.mkdir()
+        packet = cc.act(self.project)
+        path = Path(packet['next_request']['response_file'])
+        self.assertEqual(path.parent, folder)
+        self.assertIn(packet['session_id'], path.name)
+        self.assertIn(str(packet['revision']), path.stem)
+        self.assertEqual(packet['next_request']['base_payload']['revision'], packet['revision'])
+
     def setUp(self):
         self.tmp = scratch_dir("chat-coach")
         self.project = self.tmp / "research"

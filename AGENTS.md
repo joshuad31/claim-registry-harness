@@ -57,6 +57,8 @@ This is real work and most people have never done it. They need to understand th
 
 ## Where things stand
 
+**JSON housekeeping:** use `json/` (reuse `JSON/`); leave at most two parent JSON files. Coaching replies use `next_request.response_file`. Preserve backend paths/conflicts.
+
 Do not keep progress in your head. Before you say what is next, and after each step, run:
 
 ```

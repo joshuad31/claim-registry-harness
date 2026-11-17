@@ -14,7 +14,7 @@ Use relevant answers the user has already given, copied faithfully. Ask only for
 
 ## Record a reply
 
-Write a response JSON file in the project's coaching workspace or a permitted scratch directory, then run:
+Write each response at the returned `next_request.response_file`, under `01_FRAME/json/` (reuse an existing `JSON/` folder). Create its parent if needed. Keep payloads there, not beside the header. Then run:
 
 ```text
 python cr.py coach "<project>" --action reply --response-file "<response.json>"
@@ -24,7 +24,7 @@ A response includes the returned `session_id`, `revision`, and `text` copied fro
 
 For wording, scope, and consequence review, include `confirmed: true` only when the person's reply actually confirms the displayed material. Pasting is allowed. There are no minimum word counts. A request to open the coach is not acceptance of the research wording.
 
-Read the command's next step after every submission. Files on disk, not the assistant's remembered place in the dialogue, determine progress. `coaching-session.json` stores the session and the user's recorded replies.
+Read the command's next step after every submission. Files on disk, not the assistant's remembered place in the dialogue, determine progress. `coaching-session.json` stores the session and the user's recorded replies. The session and certificate may remain at their fixed root paths as the two JSON exceptions. Do not move fixed-path backend files without updating their readers. When organizing an existing folder, preserve conflicting names and stop rather than overwrite different content. Never create nested json/json folders.
 
 ## Prepare and choose wording
 
