@@ -335,6 +335,7 @@ def run_pipeline(ctx: RunContext, start: str | None = None, stop: str | None = N
             write_json(release_path(ctx, gate), {"gate": gate, "released": utcnow(), "by": "cr run --continue",
                                                  "meaning": "the researcher read the results and asked for the later stages"})
             ctx.log(f"released after {gate}: the later stages may run")
+        safe_navigation(ctx)
     # an explicit --from or --only is itself the researcher's decision; a plain run or resume halts at the gate
     gated = bool(gate) and not start and not only
     record_config_amendments(ctx)
@@ -358,6 +359,7 @@ def run_pipeline(ctx: RunContext, start: str | None = None, stop: str | None = N
             ctx.log(f"== halted for researcher decision after {gate}. Read {halt['read']}, then continue with: "
                     f"{halt['continue_with']}")
             outcome.update(status="halted", stage=gate, **halt)
+            safe_navigation(ctx)
             break
         prev = state.get(st.name, {})
         if prev.get("status") in ("done", "imported") and not dirty and st.name not in force:
@@ -372,6 +374,7 @@ def run_pipeline(ctx: RunContext, start: str | None = None, stop: str | None = N
             ctx.log(f"== halted for researcher decision: the coach has a reading for you. Read {hold['read']}, then "
                     f"continue with: {hold['continue_with']}")
             outcome.update(status="halted", stage=st.name, **hold)
+            safe_navigation(ctx)
             break
         ctx.log(f"== stage {st.name}: {st.title}")
         # redo from scratch unless this is a resume (waiting for answers, interrupted, failed, partial)
@@ -407,6 +410,7 @@ def run_pipeline(ctx: RunContext, start: str | None = None, stop: str | None = N
             ctx.set_stage(st.name, "error", {"error": msg, "trace": traceback.format_exc()[-3000:]})
             ctx.log(f"stage {st.name}: ERROR {msg}")
             outcome.update(status="error", stage=st.name, error=msg)
+            safe_navigation(ctx)
             break
         failed = ctx.llm.error_count - errors_before
         if failed:
@@ -645,6 +649,14 @@ def write_question_db(ctx: RunContext) -> str:
     return (f"[{QUESTIONS_MD}]({QUESTIONS_MD}): all {db['totals']['questions']} questions this run asked, the sources "
             f"they named and what each yielded. Give it and `01_FRAME/index.md` to another model to check whether "
             f"the questioning was thorough enough")
+
+
+def safe_navigation(ctx: RunContext) -> None:
+    """Rewrite the run's navigation files after a halt, release or error; never fail the run for it."""
+    try:
+        write_navigation(ctx)
+    except Exception:  # noqa: BLE001 - navigation must not hide the stage result
+        pass
 
 
 def write_navigation(ctx: RunContext) -> None:

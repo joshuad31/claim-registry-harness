@@ -59,6 +59,7 @@ _KIND_WORDS = [
     ("commentary", r"\beditorial\b|\bcommentary\b|letter to the editor|\bperspective\b|\bviewpoint\b"),
 ]
 _STEM = re.compile(r"^([A-Za-z][A-Za-z\-']+?)[\s_\-]*((?:19|20)\d{2})[a-z]?(?![0-9])")
+_SPLIT_PART = re.compile(r"^(?P<base>.+)-p(?P<part>\d{1,3})$")
 _PROV = re.compile(r"^\s*(OWN_RESULT|DERIVED_FROM|DERIVATIVE_UNKNOWN)\s*(?:\(\s*(.*?)\s*\))?", re.I | re.S)
 
 
@@ -106,14 +107,37 @@ def build_map(project_dir, corpus, cfg: dict, existing: dict | None = None) -> d
     synth = list(ccfg.get("synthesis_sources") or [])
     over = (existing or {}).get("overrides") or {}
     f_over = over.get("files") or {}
+
+    def logical(fn: str) -> tuple[str, int, str]:
+        """The whole source a file belongs to, its part number, and how that was established.
+
+        Split metadata recorded by ``cr corpus --add`` wins.  A corpus split outside the harness has
+        no metadata, so pieces named ``...-p01``, ``...-p02`` are grouped by the file name and the map
+        says so; a hand correction goes in ``overrides``.
+        """
+        row = (getattr(corpus, "by_name", {}) or {}).get(fn) or {}
+        so = row.get("split_origin") or {}
+        if so.get("original_filename"):
+            return so["original_filename"], int(so.get("part") or 1), "split metadata"
+        stem = re.sub(r"(\.pdf)?\.(md|markdown|txt)$", "", fn, flags=re.I)
+        m = _SPLIT_PART.match(stem)
+        if m:
+            return m.group("base"), int(m.group("part")), "file name"
+        return fn, 1, ""
+
+    origin_of = {fn: logical(fn) for fn in sorted(corpus.filenames)}
+    first_of: dict = {}
+    for fn, (origin, part, _b) in origin_of.items():
+        cur = first_of.get(origin)
+        if cur is None or (part, fn) < cur:
+            first_of[origin] = (part, fn)
+
     files: dict = {}
     for fn in sorted(corpus.filenames):
-        origin = getattr(corpus, "by_name", {}).get(fn, {}).get("split_origin", {}).get("original_filename", fn)
+        origin, _part, origin_basis = origin_of[fn]
         duplicate = dups.get(fn, dups.get(origin))
         target = (corpus.resolve(duplicate) or duplicate) if duplicate else None
-        first = next((name for name, row in getattr(corpus, "by_name", {}).items()
-                      if row.get("split_origin", {}).get("original_filename") == origin
-                      and row.get("split_origin", {}).get("part") == 1), fn)
+        first = first_of[origin][1]
         kind, basis = PRIMARY, "title"
         if any(fnmatch.fnmatch(origin, pat) or fnmatch.fnmatch(fn, pat) for pat in synth):
             kind, basis = "synthesis", "corpus.synthesis_sources"
@@ -125,6 +149,8 @@ def build_map(project_dir, corpus, cfg: dict, existing: dict | None = None) -> d
         rec = {"study": study_id_for(target or origin), "kind": kind, "basis": basis}
         if target and target != fn:
             rec.update(duplicate_of=target, basis="corpus.duplicates")
+        if origin_basis:
+            rec["study_basis"] = origin_basis
         o = f_over.get(fn, f_over.get(origin))
         if isinstance(o, str):
             o = {"study": o}

@@ -49,7 +49,7 @@ at least one of its required units are tested the same way and reported as
 
 from __future__ import annotations
 
-from .coverage import Option, Problem, solve
+from .coverage import Option, Problem
 from .matching import COMPLETE, completion_match, relations_index
 from .util import digest, utcnow
 
@@ -139,20 +139,71 @@ def _conditional(r: dict) -> dict:
 
 
 def _arrangement(th: dict, units: list[str], options: dict, incompat: set, limits: dict) -> dict:
-    """Ask the coverage solver whether ``units`` can all be covered from ``options`` at once."""
+    """Find one jointly valid arrangement of ``units`` from ``options`` by depth-first search.
+
+    The search takes one option per required unit and drops a branch as soon as the witnesses chosen
+    so far violate a premise constraint or complete an approved incompatibility.  ``bounded`` is set
+    only when the node budget (``coverage.max_states``) is reached; an exhausted search that found
+    nothing is a definite "no arrangement", which T2 needs in order to return FAIL rather than
+    UNKNOWN.  Asking the coverage solver for its first set was exponential: it built every
+    transversal before returning the first one.
+    """
+    if not units:
+        return {"found": False, "bounded": False, "rejected": []}
     pb = Problem(th.get("hypothesis_id", ""), list(units),
                  {u: [Option(o["option_id"], u, tuple(o["witnesses"]), o.get("relation", ""), bool(o.get("joint")))
                       for o in options.get(u, [])] for u in units},
                  {w: list(v) for w, v in (th.get("constraint_violators") or {}).items()},
                  {frozenset(p) for p in (th.get("incompatibilities") or [])} | set(incompat))
-    res = solve(pb, int(limits.get("max_states", 3000)), 1)
-    if res["sets"]:
-        ws = set(res["sets"][0]["witnesses"])
+    budget = int(limits.get("max_states", 3000))
+    # smallest option lists first: they prune the most and are cheapest to try
+    order = sorted(units, key=lambda u: (len(options.get(u, [])), units.index(u)))
+    chosen: dict = {}
+    ws: set = set()
+    rejected: list = []
+    nodes = 0
+    bounded = False
+
+    def _conflict(extra) -> bool:
+        for w in extra:
+            if w in pb.constraint_violators:
+                return True
+            for x in ws:
+                if frozenset((w, x)) in pb.incompatible:
+                    return True
+        return False
+
+    def _dfs(i: int) -> bool:
+        nonlocal nodes, bounded
+        if i == len(order):
+            return True
+        u = order[i]
+        opts = sorted(options.get(u, []), key=lambda o: (len(o["witnesses"]), o["option_id"]))
+        for o in opts:
+            nodes += 1
+            if nodes > budget:
+                bounded = True
+                return False
+            add = set(o["witnesses"])
+            if _conflict(add):
+                if len(rejected) < 5:
+                    rejected.append({"witnesses": sorted(ws | add),
+                                     "reason": "premise constraint or approved incompatibility"})
+                continue
+            chosen[u] = o
+            ws.update(add)
+            if _dfs(i + 1):
+                return True
+            for w in add:
+                ws.discard(w)
+            chosen.pop(u, None)
+        return False
+
+    found = _dfs(0)
+    if found:
         return {"found": True, "witnesses": sorted(ws),
-                "example": {u: next(o["option_id"] for o in options[u] if set(o["witnesses"]) <= ws) for u in units}}
-    # no set was found, so RESOURCE_BOUNDED here can only mean the state limit cut the search
-    return {"found": False, "bounded": res.get("search_status") == "RESOURCE_BOUNDED",
-            "rejected": res.get("rejected_candidates", [])[:5]}
+                "example": {u: chosen[u]["option_id"] for u in units}}
+    return {"found": False, "bounded": bounded, "rejected": rejected}
 
 
 def test_t2(w: str, th: dict, rel: dict, incompat: set, missing_is_none: bool = False,

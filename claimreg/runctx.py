@@ -204,9 +204,14 @@ class RunContext:
 
     def log(self, msg: str) -> None:
         line = f"[{utcnow()}] {msg}"
-        if not self.quiet:
-            print(msg, flush=True)
+        # the file is the record; the console is a convenience.  A closed or detached console
+        # used to raise OSError here and kill the stage that was only trying to report progress.
         append_text(self.p("control", "run-log.txt"), line + "\n")
+        if not self.quiet:
+            try:
+                print(msg, flush=True)
+            except (OSError, ValueError):
+                pass
 
     # ------------------------------------------------------------------ #
     @property

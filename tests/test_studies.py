@@ -280,5 +280,32 @@ class RunLevelTest(unittest.TestCase):
         self.assertIn("Scores for different questions cannot be compared", text)
 
 
+class SplitPiecesTest(unittest.TestCase):
+    """A source split into ``-pNN`` pieces is one study, with or without the harness's split metadata."""
+
+    def test_pieces_group_by_file_name_when_metadata_is_absent(self):
+        texts = {"briggs2008-p01.md": "# Alpha\n\n...", "briggs2008-p02.md": "# Alpha\n\n...",
+                 "briggs2008-p03.md": "# Alpha\n\n...", "solo2011.md": "# Beta\n\n..."}
+        corpus = types.SimpleNamespace(filenames=sorted(texts), text=lambda f: texts[f],
+                                       resolve=lambda name: None)
+        smap = studies.build_map("unused", corpus, {})
+        self.assertEqual(smap["files"]["briggs2008-p02.md"]["study"], "STUDY-briggs2008")
+        self.assertEqual(smap["files"]["briggs2008-p02.md"]["study_basis"], "file name")
+        self.assertEqual(smap["files"]["solo2011.md"]["study"], "STUDY-solo2011")
+        self.assertNotIn("study_basis", smap["files"]["solo2011.md"])
+        self.assertIn("STUDY-briggs2008", smap["studies"])
+        self.assertEqual(len(smap["studies"]["STUDY-briggs2008"]["files"]), 3)
+
+    def test_split_metadata_wins_over_the_name(self):
+        texts = {"a-part-p01.md": "# Gamma\n\n...", "a-part-p02.md": "# Gamma\n\n..."}
+        by_name = {"a-part-p01.md": {"split_origin": {"original_filename": "a-part.md", "part": 1}},
+                   "a-part-p02.md": {"split_origin": {"original_filename": "a-part.md", "part": 2}}}
+        corpus = types.SimpleNamespace(filenames=sorted(texts), text=lambda f: texts[f],
+                                       resolve=lambda name: None, by_name=by_name)
+        smap = studies.build_map("unused", corpus, {})
+        self.assertEqual({v["study"] for v in smap["files"].values()}, {"STUDY-a-part"})
+        self.assertEqual(smap["files"]["a-part-p02.md"]["study_basis"], "split metadata")
+
+
 if __name__ == "__main__":
     unittest.main()
